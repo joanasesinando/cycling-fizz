@@ -1,0 +1,94 @@
+/* =================================================================== 
+ *
+ *  Cycling Fizz v1.0 Fonts
+ *  27-05-2019 #FIXME
+ *
+ * =================================================================== */
+
+
+/* ===================================================================
+ *  Martel
+ *
+ * ------------------------------------------------------------------- */
+
+ @font-face {
+    font-family: "martel-bold";
+    src: url("../assets/fonts/Martel/Martel-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "martel-demiBold";
+    src: url("../assets/fonts/Martel//Martel-DemiBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "martel-extraBold";
+    src: url("../assets/fonts/Martel/Martel-ExtraBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "martel-heavy";
+    src: url("../assets/fonts/Martel/Martel-Heavy.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "martel-light";
+    src: url("../assets/fonts/Martel/Martel-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "martel-regular";
+    src: url("../assets/fonts/Martel/Martel-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "martel-ultraLight";
+    src: url("../assets/fonts/Martel/Martel-UltraLight.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  /* ===================================================================
+   *  Quicksand
+   *
+   * ------------------------------------------------------------------- */
+  
+   @font-face {
+    font-family: "quicksand-bold";
+    src: url("../assets/fonts/Quicksand/Quicksand-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "quicksand-light";
+    src: url("../assets/fonts/Quicksand/Quicksand-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "quicksand-medium";
+    src: url("../assets/fonts/Quicksand/Quicksand-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }
+  
+  @font-face {
+    font-family: "quicksand-regular";
+    src: url("../assets/fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+  }

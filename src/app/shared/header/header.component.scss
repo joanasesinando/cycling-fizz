@@ -1,0 +1,142 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Header Stylesheet
+ *  27-05-2019 #FIXME
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  01. colors
+ *  02. mixins
+ *  03. main navigation
+ *
+ * =================================================================== */
+
+ //@import "../../../../node_modules/bootstrap/scss/functions";
+ //@import "../../../../node_modules/bootstrap/scss/variables";
+
+/* ===================================================================
+ *  01. colors
+ *
+ * ------------------------------------------------------------------- */
+
+/** general **/
+$orange: #FF9F3C;
+$green: #32BE8E;
+$lightGray: #F2F6F8;
+$darkGray: #57565C;
+$header: #2F373D;
+
+
+/* ===================================================================
+ *  02. mixins
+ *
+ * ------------------------------------------------------------------- */
+ 
+ //@import "../../../../node_modules/bootstrap/scss/mixins";
+ 
+ @mixin transition($property) {
+  -moz-transition: $property;
+  -o-transition: $property;
+  -webkit-transition: $property;
+  -ms-transition: $property;
+  transition: $property;
+ }
+
+
+/* ===================================================================
+ *  03. main navigation
+ *
+ * ------------------------------------------------------------------- */
+
+ nav {
+  height: 4em;
+  top: 0.7em;
+  z-index: 600;
+  background: transparent;
+  @include transition(all 0.3s ease-in-out);
+
+  .navbar-brand {
+    color: transparent;
+		width: 17rem;
+		height: 4rem;
+		background: url("../../../assets/images/logo.svg") no-repeat center;
+		background-size: 17rem 4rem;
+    @include transition(all 0.3s ease-in-out);
+  }
+}
+
+nav.navbar-shrink {
+  top: 0;
+  background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
+  box-shadow: 0px 2px 13px 0px #a5a5a57a;
+
+  .navbar-brand {
+    width: 15rem;
+    height: 3rem;
+    background-size: 15rem 3rem;
+  }
+
+}
+
+#navbarResponsive {
+  font-family: "quicksand-medium", sans-serif;
+  font-size: 1.2em;
+
+  .nav-item {
+    padding-left: 1.5em;
+
+    .nav-link {
+      color: $header;
+      @include transition(color 0.1s ease-in-out);
+
+      &:hover {
+        color: $orange;
+      }
+
+      img:hover {
+        color: $orange;
+      }
+    }
+  }
+}
+
+.dropdown-menu {
+  padding: 1rem 0;
+  border: none;
+  font-size: 1.1rem;
+  border-radius: 0.4rem;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  font-family: 'quicksand-regular';
+  line-height: 2rem;
+  min-width: 5rem;
+
+  .dropdown-item {
+    color: $header;
+  }
+
+  fa-icon {
+    margin-right: 1rem;
+    font-size: 1.3rem;
+  }
+
+  img {
+    margin-right: 1rem;
+    height: 1.3rem;
+  }
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 0; // remove the gap so it doesn't close
+ 
+}
+
+@media only screen and (max-width:1024px) {
+  .navbar-brand {
+    width: 13rem;
+    height: 3rem;
+    background-size: 13rem 3rem;
+  }
+}
+
+//@import '../../../../node_modules/bootstrap/scss/bootstrap.scss'

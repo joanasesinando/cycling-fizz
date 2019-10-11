@@ -1,0 +1,89 @@
+<header>
+
+  <!-- Header -->
+  <nav class="navbar navbar-expand-lg fixed-top" id="mainNav">
+    <div class="container-fluid">
+
+      <!-- logo -->
+      <a class="navbar-brand js-scroll-trigger" href="index.html">Cycling Fizz</a>
+
+      <!-- mobile menu -->
+      <button aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation" class="navbar-toggler navbar-toggler-right collapsed" data-target="#navbarResponsive" data-toggle="collapse" type="button">
+        Menu
+        <i class="fas fa-bars"></i>
+      </button>
+      
+      <!-- navigation -->
+      <div class="navbar-collapse collapse" id="navbarResponsive">
+        <ul class="navbar-nav ml-auto mr-4">
+          <li class="nav-item">
+            <a class="nav-link" routerLink="">Início</a>
+          </li>
+
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/map">Mapa</a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownUtilLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Útil
+              <fa-icon [icon]="faChevronDown" class="fa-xs"></fa-icon>
+            </a>
+            <div class="dropdown-menu ml-4" aria-labelledby="navbarDropdownUtilLink">
+              <a class="dropdown-item" href="#"><fa-icon [icon]="faTrafficLight"></fa-icon>Regras de Transito</a>
+              <a class="dropdown-item" href="#"><fa-icon [icon]="faRoute"></fa-icon>Percursos</a>
+              <a class="dropdown-item" href="#"><fa-icon [icon]="faQuestion"></fa-icon>Principiantes</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownComunidadeLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+              Comunidade
+              <fa-icon [icon]="faChevronDown" class="fa-xs"></fa-icon>
+            </a>
+            <div class="dropdown-menu ml-4" aria-labelledby="navbarDropdownComunidadeLink">
+              <a class="dropdown-item" href="#"><fa-icon [icon]="faComments"></fa-icon>Fórum</a>
+              <a class="dropdown-item" href="#"><img src="../../../assets/images/blog.svg">Blog</a>
+              <a class="dropdown-item" href="#"><img src="../../../assets/images/calendar.svg">Eventos</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a class="nav-link" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="100, 100, 200, 200">
+              Sobre
+              <fa-icon [icon]="faChevronDown" class="fa-xs"></fa-icon>
+            </a>
+            <div class="dropdown-menu ml-4" aria-labelledby="navbarDropdownMenuLink">
+              <a class="dropdown-item" href="#"><img src="../../../assets/images/idea.svg">O projeto</a>
+              <a class="dropdown-item" href="#"><fa-icon [icon]="faUsers"></fa-icon>Quem somos</a>
+              <a class="dropdown-item" href="#"><img src="../../../assets/images/envelope.svg">Contactar</a>
+            </div>
+          </li>
+
+          <li class="nav-item dropdown">
+              <a class="nav-link" href="#" id="navbarDropdownIdiomaLink" data-toggle="dropdown">
+                  <fa-icon [icon]="faGlobeEurope" class="fa-lg"></fa-icon>
+              </a>
+              <div class="dropdown-menu ml-4" aria-labelledby="navbarDropdownMenuLink">
+                <a class="dropdown-item" href="#"><img src="../../../assets/images/portugues.svg">PT</a>
+                <a class="dropdown-item" href="#"><img src="../../../assets/images/english.svg">EN</a>
+                <a class="dropdown-item" href="#"><img src="../../../assets/images/français.svg">FR</a>
+              </div>
+          </li>
+
+        </ul>
+
+        <!-- login -->
+        <button class="btn btn-primary" type="button">Login</button>
+
+      </div> <!-- /navigation -->
+
+    </div> <!-- /container -->
+  </nav>
+
+
+
+  <div style="background-color: silver; height: 200vh"></div>
+
+</header>
+
