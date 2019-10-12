@@ -24,6 +24,7 @@ export class HeaderComponent implements OnInit {
   faUsers = faUsers;
   faEnvelope = faEnvelope;
 
+
   constructor() { }
 
   ngOnInit() { }

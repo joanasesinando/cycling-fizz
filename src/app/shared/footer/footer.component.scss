@@ -26,6 +26,12 @@ $lightGray: #F2F6F8;
 $darkGray: #57565C;
 $header: #2F373D;
 
+/** social-list **/
+$facebook: #3b68c6;
+$instagram: #ce2f89;
+$twitter: #0cbbff;
+$youtube: #e5241d;
+
 
 /* ===================================================================
  *  02. mixins
@@ -116,13 +122,17 @@ footer {
         background: #cecbc630;
         border-radius: 100%;
         line-height: 3rem;
-        color: rgba(255,255,255,.3);
+        color: $darkGray;
 
         img {
             width: 1.3rem;
         } #fb { width: 0.8rem; }
 
         &:hover {
+            #fb { color: $facebook; }
+            #tt { color: $twitter; }
+            #ig { color: $instagram; }
+            #yt { color: $youtube; }
             @include transform(translateY(-0.5rem));
         }
     }

@@ -10,9 +10,7 @@
  *  03. main navigation
  *
  * =================================================================== */
-
- //@import "../../../../node_modules/bootstrap/scss/functions";
- //@import "../../../../node_modules/bootstrap/scss/variables";
+ 
 
 /* ===================================================================
  *  01. colors
@@ -83,7 +81,7 @@ nav.navbar-shrink {
   font-size: 1.2em;
 
   .nav-item {
-    padding-left: 1.5em;
+    padding-left: 1em;
 
     .nav-link {
       color: $header;
