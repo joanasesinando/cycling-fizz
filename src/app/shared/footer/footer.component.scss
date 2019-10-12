@@ -1,0 +1,145 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Footer Stylesheet
+ *  11-10-2019 #FIXME
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  01. colors
+ *  02. mixins
+ *  03. footer styles
+ *  04. responsive
+ *
+ * =================================================================== */
+
+
+/* ===================================================================
+ *  01. colors
+ *
+ * ------------------------------------------------------------------- */
+
+/** general **/
+$orange: #FF9F3C;
+$green: #32BE8E;
+$bege: #F7F7F7;
+$lightGray: #F2F6F8;
+$darkGray: #57565C;
+$header: #2F373D;
+
+
+/* ===================================================================
+ *  02. mixins
+ *
+ * ------------------------------------------------------------------- */
+ 
+@import "../../../../node_modules/bootstrap/scss/functions/";
+@import "../../../../node_modules/bootstrap/scss/variables/";
+@import "../../../../node_modules/bootstrap/scss/mixins/";
+ 
+@mixin transition($property) {
+    -moz-transition: $property;
+    -o-transition: $property;
+    -webkit-transition: $property;
+    -ms-transition: $property;
+    transition: $property;
+}
+
+@mixin transform($property) {
+    -moz-transform: $property;
+    -o-transform: $property;
+    -webkit-transform: $property;
+    -ms-transform: $property;
+    transform: $property;
+}
+
+
+/* ===================================================================
+ *  03. footer styles
+ *
+ * ------------------------------------------------------------------- */
+
+footer {
+    color: $darkGray;
+    font-family: 'quicksand-regular';
+    overflow-x: hidden;
+    background: $bege;
+
+    section {
+        width: 100%;
+    }
+
+    h5 {
+        font-family: 'quicksand-bold';
+    }
+
+    p {
+        margin-top: 1.5rem;
+        text-align: justify;
+        line-height: 1.9rem;
+
+        a {
+            color: $darkGray;
+        }
+    } #contactar { text-align: left; }
+
+    .sub-heading-icon {
+        display: inline-flex;
+    }
+
+    .form-control {
+        padding: 1.5rem;
+        border-radius: 3rem;
+        border: 0 none;
+        //box-shadow: 0px 2px 8px 0px #a5a5a57a;
+
+        &:focus {
+            box-shadow: 0 0 0 0.2rem #ffb1002e;
+        }
+    }
+
+    #subscribeBtn {
+        display: inline-block;
+        position: relative;
+        bottom: 4.2rem;
+        left: 20.7rem;
+    }
+
+    #emailHelp {
+        position: relative;
+        left: 1rem;
+    }
+
+    .social a {
+        text-align: center;
+        height: 3rem;
+        width: 3rem;
+        background: #cecbc630;
+        border-radius: 100%;
+        line-height: 3rem;
+        color: rgba(255,255,255,.3);
+
+        img {
+            width: 1.3rem;
+        } #fb { width: 0.8rem; }
+
+        &:hover {
+            @include transform(translateY(-0.5rem));
+        }
+    }
+}
+
+#sticky-footer {
+  flex-shrink: none;
+}
+
+
+/* ===================================================================
+ *  04. responsive
+ *
+ * ------------------------------------------------------------------- */
+
+@include media-breakpoint-down(lg) {
+    footer {
+        //background: red;
+    }    
+}

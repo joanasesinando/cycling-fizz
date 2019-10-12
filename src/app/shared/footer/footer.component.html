@@ -1,1 +1,59 @@
-<p>footer works!</p>
+<footer id="sticky-footer">
+    
+    <div class="row justify-content-around px-5 pt-5">
+        <div class="col-xl-4 col-lg-12 col-md-12 col-sm-12 pb-5">
+            <img src="../../../assets/images/logo_dark.png" alt="Cycling Fizz logo" class="logo">
+            <p>
+                Cycling Fizz é um espaço digital para ciclistas que agrupa de forma simples todo o tipo de informações úteis. 
+                Dispõe de um mapa informativo, regras de trânsito para ciclistas, percursos de bicicleta, e muito mais.
+            </p>
+            <div class="social d-flex justify-content-left">
+                    <a href="#" class="mx-2">
+                      <img id="fb" src="../../../assets/images/facebook.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="mx-2">
+                        <img src="../../../assets/images/twitter.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="mx-2">
+                        <img src="../../../assets/images/instagram.svg" alt="Twitter">
+                    </a>
+                    <a href="#" class="mx-2">
+                        <img src="../../../assets/images/youtube.svg" alt="Twitter">
+                    </a>
+                </div>
+        </div>
+        <div class="col-xl-3 col-lg-5 col-md-5 col-sm-12 pb-5">
+            <span class="sub-heading-icon">
+                <h5>Contactar</h5>
+                <fa-icon [icon]="faEnvelope" class="fa-md ml-2"></fa-icon>
+            </span>
+            <p id="contactar">
+                Gostavas de falar connosco?
+                <br>Envia-nos uma mensagem para <a href="#"><b>contacto@cyclingfizz.pt</b></a>.
+            </p>
+        </div>
+        <div class="col-xl-4 col-lg-7 col-md-7 col-sm-12">
+            <span class="sub-heading-icon">
+                <h5>Newsletter</h5>
+                <fa-icon [icon]="faPaperPlane" class="fa-md ml-2"></fa-icon>
+            </span>
+            <p>
+                Queres estar a par das novidades?
+                <br>Deixa o teu e-mail em baixo. Prometemos não encher a tua caixa de correio!
+            </p>
+            <form>
+                <div class="form-group">
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Introduz o teu e-mail...">
+                    <small id="emailHelp" class="form-text text-muted">*Nunca partilharemos os teus dados com mais ninguém.</small>
+                    <button id ="subscribeBtn" type="submit" class="btn btn-primary px-3">Subscrever</button>
+                </div>                
+            </form>
+        </div>
+    </div>
+
+    <div class="pb-4 text-center">
+        <small>&copy; Cycling Fizz, 2019</small>
+    </div>
+
+
+</footer>
