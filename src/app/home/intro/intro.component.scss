@@ -6,10 +6,11 @@
  *
  *  TOC:
  *  01. colors
- *  02. intro & intro-content
- *  03. social-list
- *  04. scrolldown
- *  05. jumping balls
+ *  02. mixins
+ *  03. intro & intro-content
+ *  04. social-list
+ *  05. scrolldown
+ *  06. jumping balls
  *
  * =================================================================== */
 
@@ -23,6 +24,7 @@
 $orange: #FF9F3C;
 $header: #2F373D;
 $green: #32BE8E;
+$darkBlue: #008C97;
 $darkGray: #57565C;
 
 /** social-list **/
@@ -33,7 +35,33 @@ $youtube: #e5241d;
 
 
 /* ===================================================================
- *  02. intro & intro-content
+ *  02. mixins
+ *
+ * ------------------------------------------------------------------- */
+ 
+ @import "../../../../node_modules/bootstrap/scss/functions/";
+ @import "../../../../node_modules/bootstrap/scss/variables/";
+ @import "../../../../node_modules/bootstrap/scss/mixins/";
+  
+ @mixin transition($property) {
+     -moz-transition: $property;
+     -o-transition: $property;
+     -webkit-transition: $property;
+     -ms-transition: $property;
+     transition: $property;
+ }
+ 
+ @mixin transform($property) {
+     -moz-transform: $property;
+     -o-transform: $property;
+     -webkit-transform: $property;
+     -ms-transform: $property;
+     transform: $property;
+ }
+
+
+/* ===================================================================
+ *  03. intro & intro-content
  *
  * ------------------------------------------------------------------- */
 
@@ -49,10 +77,8 @@ $youtube: #e5241d;
 .intro-content {
 	display: table-cell;
 	vertical-align: middle;
-	text-align: center;
-	-webkit-transform: translateY(-1.2rem);
-	-ms-transform: translateY(-1.2rem);
-  transform: translateY(-1.2rem);
+  text-align: center;
+  @include transform(translateY(-1.2rem));
   
   .col-eleven {
     margin-left: 8%;
@@ -76,46 +102,39 @@ $youtube: #e5241d;
     margin-top: 15px;
   }
 
-  .button.button-primary {
-    height: 47px;
-    line-height: 47px;
+  .btn.btn-primary {
     display: table;
-    margin-top: 30px;
-    margin-left: 20px;
     box-shadow: 0px 4px 15px rgba(255, 195, 64, 0.46);
   }
 
-  .video_popup {
+  .video-popup {
     z-index: 99 !important;
     color: #57565C;
+    font-family: 'quicksand-medium';
     font-size: 17px;
     display: table;
     font-weight: 500;
     position: relative;
-    left: 180px;
-    bottom: 60px;
+    left: 10%;
     text-decoration: none;
 
-    span {
-      width: 50px;
-      height: 50px;
-      background-color: #fff;
-      display: inline-block;
-      border-radius: 50%;
+    .btn-video {
       text-align: center;
-      line-height: 50px;
-      font-size: 20px;
-      color: #fff;
-      box-shadow: 0px 10px 30px 0px rgba(1, 84, 85, 0.2);
-      margin-left: 37px;
-      margin-right: 18px;
-      padding-left: 5px;
-      transition: all 0.2s ease-in-out;
+      height: 3rem;
+      width: 3rem;
+      box-shadow: 0px 2px 13px 0px #a5a5a57a;
+      border-radius: 100%;
+      line-height: 3rem;
+      color: #57565C;
+      display: inline-block;
+      @include transition(all 0.2s ease-in-out);
+
+      fa-icon { color: $orange; }
+
+      &:hover { @include transform(translateY(-0.25rem)); }
     }
 
-    span:hover {
-      transform: translateY(-0.25rem);
-    }
+    &:hover { color: $orange; }
   }
 }
 
@@ -228,58 +247,37 @@ $youtube: #e5241d;
 
 
 /* ===================================================================
- *  03. social-list
+ *  04. social-list
  *
  * ------------------------------------------------------------------- */
 
 .social-list {
     position: absolute;
-    right: 42px;
-    top: 50%;
+    right: 2%;
+    top: 32%;
     margin: 0;
     padding: 0;
     list-style: none;
     font-size: 2.2rem;
-    line-height: 1.75;
+    line-height: 2.1rem;
     text-align: center;
-    -webkit-transform: translateY(-55%);
-    -ms-transform: translateY(-55%);
-    transform: translateY(-55%);
 
     li {
       padding-left: 0;
 
-      a, 
-      a:visited {
+      fa-icon {
+        font-size: 1.4rem;
+      }
+
+      a {
         color: #FFFFFF;
-      }
 
-      a:hover .fa-facebook-square,
-      a:focus .fa-facebook-square,
-      a:active .fa-facebook-square {
-        color: $facebook;
-      }
-
-      a:hover .fa-twitter,
-      a:focus .fa-twitter,
-      a:active .fa-twitter {
-        color: $twitter;
-      }
-
-      a:hover .fa-instagram,
-      a:focus .fa-instagram,
-      a:active .fa-instagram {
-        color: $instagram;
-      }
-
-      a:hover .fa-youtube,
-      a:focus .fa-youtube,
-      a:active .fa-youtube {
-        color: $youtube;
-      }
-
-      a i {
-        font-size: 22px;
+        &:hover {
+          #fb { color: $facebook; }
+          #tt { color: $twitter; }
+          #ig { color: $instagram; }
+          #yt { color: $youtube; }
+        }
       }
     }
   }
@@ -319,14 +317,14 @@ $youtube: #e5241d;
   
   
  /* ===================================================================
- *  04. scrolldown
+ *  05. scrolldown
  *
  * ------------------------------------------------------------------- */
   
   .scrolldown {
     position: absolute;
     top: 87%;
-    right: 46px;
+    right: 1.9%;
     -webkit-transform: rotate(90deg);
     -ms-transform: rotate(90deg);
     transform: rotate(90deg);
@@ -341,13 +339,13 @@ $youtube: #e5241d;
 
     a:hover,
     a:focus {
-      color: $header !important;
+      color: $darkBlue !important;
     }
   }
   .scroll-icon {
     display: inline-block;
     font-family: "quicksand-medium", sans-serif;
-    font-size: 1.2rem;
+    font-size: 0.8rem;
     text-transform: uppercase;
     text-decoration: none;
     letter-spacing: 0.3rem;
@@ -444,7 +442,7 @@ $youtube: #e5241d;
 
 
 /* ===================================================================
- *  05. jumping balls
+ *  06. jumping balls
  *
  * ------------------------------------------------------------------- */
 

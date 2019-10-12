@@ -1,41 +1,50 @@
 <section id="intro">
 
-        <div class="intro-content">
-            <div class="row">
-      
-              <div class="col-eleven">        
-                <h1>O Ponto <br>De Encontro Do <br>Ciclismo</h1>
-                <h5>Descobre o nosso mapa com todas as informações relevantes ao ciclista, e explora as restantes secções!</h5>
-                <div class="row">
-                  <a href="#" class="button button-primary cta">Ver mapa</a> <!-- #FIXME routerLink-->
-                  <a href="https://www.youtube.com/watch?v=pBFQdxA-apI" class="popup-youtube video_popup">
-                    <span><img src="../../../assets/images/play.svg" alt=""></span> Intro Video</a>
-                </div>
-              </div>  
-      
-            </div>   		 		
-        </div>
-        
-        <ul class="social-list">
-            <!-- <li> <a href="#"><fa-icon [icon]="faFacebookF" id="fb" class="fa-md"></fa-icon></a> </li>
-            <li> <a href="#"><fa-icon [icon]="faTwitter" id="tt" class="fa-md"></fa-icon></a> </li>
-            <li> <a href="#"><fa-icon [icon]="faInstagram" id="ig" class="fa-md"></fa-icon></a> </li>
-            <li> <a href="#"><fa-icon [icon]="faYoutube" id="yt" class="fa-md"></fa-icon></a> </li> --> <!--FIXME não funciona -->
-        </ul>
-      
-        <div class="scrolldown">
-            <a href="#about" class="scroll-icon smoothscroll"> <!-- FIXME mudar o href para a section features -->
-                <span>Scroll Down</span>
-                <i class="fas fa-arrow-down"></i>
+  <!-- Intro content -->
+  <div class="intro-content">
+      <div class="row">
+
+        <div class="col-eleven">        
+          <h1>O Ponto <br>De Encontro Do <br>Ciclismo</h1>
+          <h5>Descobre o nosso mapa com todas as informações relevantes ao ciclista, e explora as restantes secções!</h5>
+          <div class="row pl-3 pt-4">
+            <a href="#" class="btn btn-primary cta mt-1">Ver mapa</a> <!-- #FIXME routerLink-->
+            <a href="https://www.youtube.com/watch?v=pBFQdxA-apI" class="video-popup mx-2">
+              <div class="btn-video mr-2"><fa-icon [icon]="faPlay" class="fa-sm"></fa-icon></div> Intro Vídeo
             </a>
-        </div>
+          </div>
+        </div>  
+
+      </div>   		 		
+  </div>
+        
+  <!-- Side navigation -->
+  <div class="side-container">
+  
+    <!-- social list -->
+    <ul class="social-list">
+        <li> <a href="#"><fa-icon [icon]="faFacebookF" id="fb"></fa-icon></a> </li>
+        <li> <a href="#"><fa-icon [icon]="faTwitter" id="tt"></fa-icon></a> </li>
+        <li> <a href="#"><fa-icon [icon]="faInstagram" id="ig"></fa-icon></a> </li>
+        <li> <a href="#"><fa-icon [icon]="faYoutube" id="yt"></fa-icon></a> </li>
+    </ul>
+
+    <!-- scrolldown -->
+    <div class="scrolldown">
+        <a href="#about" class="scroll-icon smoothscroll"> <!-- FIXME mudar o href para a section features -->
+            <span>Scroll Down</span>
+            <fa-icon [icon]=" faArrowRight" class="pl-2 fa-lg"></fa-icon>
+        </a>
+    </div>
+  </div>
       
-        <div class="jumping-balls">
-          <div class="ball-1 jumping-animation"><img src="../../../assets/images/yellow-ball.png"></div>
-          <div class="ball-2 jumping-animation2"><img src="../../../assets/images/green-ball.png"></div>
-          <div class="ball-3 jumping-animation2"><img src="../../../assets/images/green-ball.png"></div>
-          <div class="ball-4 jumping-animation3"><img src="../../../assets/images/blue-ball.png"></div>
-          <div class="ball-5 jumping-animation4"><img src="../../../assets/images/yellow-ball.png"></div>
-        </div>
+  <!-- Jumping balls -->
+  <div class="jumping-balls">
+    <div class="ball-1 jumping-animation"><img src="../../../assets/images/yellow-ball.png"></div>
+    <div class="ball-2 jumping-animation2"><img src="../../../assets/images/green-ball.png"></div>
+    <div class="ball-3 jumping-animation2"><img src="../../../assets/images/green-ball.png"></div>
+    <div class="ball-4 jumping-animation3"><img src="../../../assets/images/blue-ball.png"></div>
+    <div class="ball-5 jumping-animation4"><img src="../../../assets/images/yellow-ball.png"></div>
+  </div>
       
-      </section>      
+</section>      
