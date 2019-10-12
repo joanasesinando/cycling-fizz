@@ -94,6 +94,7 @@ footer {
 
     .form-control {
         padding: 1.5rem;
+        padding-right: 9rem;
         border-radius: 3rem;
         border: 0 none;
         //box-shadow: 0px 2px 8px 0px #a5a5a57a;
@@ -123,6 +124,7 @@ footer {
         border-radius: 100%;
         line-height: 3rem;
         color: $darkGray;
+        @include transition(all 0.2s ease-in-out);
 
         img {
             width: 1.3rem;
@@ -151,5 +153,33 @@ footer {
 @include media-breakpoint-down(lg) {
     footer {
         //background: red;
+
+        #subscribeBtn {
+            left: 25.5rem;
+        }
+
+    }    
+}
+
+@include media-breakpoint-down(md) {
+    footer {
+        //background: blue;
+
+        #subscribeBtn {
+            left: 23.5rem;
+        }
+
+    }    
+}
+
+@include media-breakpoint-down(sm) {
+    footer {
+        //background: green;
+
+        #subscribeBtn {
+            left: 13rem;
+            bottom: 5.4rem;
+        }
+
     }    
 }
