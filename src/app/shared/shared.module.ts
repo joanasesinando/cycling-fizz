@@ -6,6 +6,7 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { LoginModule } from './login/login.module';
 
 
 @NgModule({
@@ -13,7 +14,8 @@ import { FooterComponent } from './footer/footer.component';
   imports: [
     CommonModule,
     SharedRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    LoginModule
   ],
   exports: [
     HeaderComponent,

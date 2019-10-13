@@ -8,6 +8,7 @@
  *  01. colors
  *  02. mixins
  *  03. main navigation
+ *  04. modal
  *
  * =================================================================== */
  
@@ -110,6 +111,10 @@ nav.navbar-shrink {
 
   .dropdown-item {
     color: $header;
+
+    &:active {
+      background-color: rgba(255, 159, 60, 0.25);
+    }
   }
 
   fa-icon {
@@ -136,5 +141,46 @@ nav.navbar-shrink {
     background-size: 13rem 3rem;
   }
 }
+
+
+/* ===================================================================
+ *  04. modal
+ *
+ * ------------------------------------------------------------------- */
+
+ .modal-header {
+   border-bottom: none;
+ }
+
+ .modal-footer {
+   border-top: none;
+ }
+
+ .modal-content {
+   border: none;
+   border-radius: 1rem;
+ }
+
+ .modal-body {
+  .login {
+    height: 37rem;
+  }
+  
+  img {
+    width: 40rem;
+    border-radius: 1rem;
+  }
+ }
+
+ .modal-popout-bg {
+  background: url(../../../assets/images/sign-inImg.svg) top left no-repeat;
+  background-color: white;
+  background-size: 40rem;
+ }
+
+ .flex-row {
+  margin-left: 60%;
+ }
+
 
 //@import '../../../../node_modules/bootstrap/scss/bootstrap.scss'

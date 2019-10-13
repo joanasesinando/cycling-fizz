@@ -74,12 +74,55 @@
         </ul>
 
         <!-- login -->
-        <button class="btn btn-primary" type="button">Login</button>
+        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
 
       </div> <!-- /navigation -->
 
     </div> <!-- /container -->
   </nav>
+
+  <!-- sign-in modal -->
+  <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
+        <div class="modal-content modal-popout-bg">
+
+          <!-- body -->
+          <div class="modal-body">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+            <div class="login d-flex-inline align-items-center justify-content-end py-5">
+                    <div class="flex-row">
+                          <div class="col-md-9 col-lg-9">
+                            <h3 class="login-heading mb-4">Welcome back!</h3>
+                            <form>
+                              <div class="form-label-group">
+                                <input type="email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+                                <label for="inputEmail">Email address</label>
+                              </div>
+              
+                              <div class="form-label-group">
+                                <input type="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                                <label for="inputPassword">Password</label>
+                              </div>
+              
+                              <div class="custom-control custom-checkbox mb-3">
+                                <input type="checkbox" class="custom-control-input" id="customCheck1">
+                                <label class="custom-control-label" for="customCheck1">Remember password</label>
+                              </div>
+                              <button class="btn btn-lg btn-primary btn-block btn-login text-uppercase font-weight-bold mb-2" type="submit">Sign in</button>
+                              <div class="text-center">
+                                <a class="small" href="#">Forgot password?</a></div>
+                            </form>
+                          </div>
+                        </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+  </div> <!-- </sign-in modal> -->
 
 </header>
 
