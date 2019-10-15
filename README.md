@@ -1,3 +1,1 @@
 # cycling-fizz
-
-Olá

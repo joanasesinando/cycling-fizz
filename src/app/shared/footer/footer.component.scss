@@ -141,10 +141,6 @@ footer {
     }
 }
 
-#sticky-footer {
-  flex-shrink: none;
-}
-
 
 /* ===================================================================
  *  04. responsive
@@ -174,13 +170,15 @@ footer {
 }
 
 @include media-breakpoint-down(sm) {
-    footer {
-        //background: green;
-
-        #subscribeBtn {
-            //left: 13rem;
-            //bottom: 5.4rem;
-        }
-
-    }    
+    //.social {
+    //    justify-content: center;
+    //}  
+//
+    //.row p {
+    //    text-align: center;
+    //}
+//
+    //img {
+    //    display: block;
+    //}
 }
