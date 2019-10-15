@@ -38,9 +38,9 @@ $youtube: #e5241d;
  *
  * ------------------------------------------------------------------- */
  
-@import "../../../../node_modules/bootstrap/scss/functions/";
-@import "../../../../node_modules/bootstrap/scss/variables/";
-@import "../../../../node_modules/bootstrap/scss/mixins/";
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
  
 @mixin transition($property) {
     -moz-transition: $property;
@@ -66,7 +66,7 @@ $youtube: #e5241d;
 
 footer {
     color: $darkGray;
-    font-family: 'quicksand-regular';
+    font-family: 'quicksand-regular', serif;
     overflow-x: hidden;
     background: $bege;
 
@@ -75,7 +75,7 @@ footer {
     }
 
     h5 {
-        font-family: 'quicksand-bold';
+        font-family: 'quicksand-bold', serif;
     }
 
     p {
@@ -93,8 +93,7 @@ footer {
     }
 
     .form-control {
-        padding: 1.5rem;
-        padding-right: 9rem;
+        padding: 1.5rem 9rem 1.5rem 1.5rem;
         border-radius: 3rem;
         border: 0 none;
         //box-shadow: 0px 2px 8px 0px #a5a5a57a;
@@ -147,38 +146,8 @@ footer {
  *
  * ------------------------------------------------------------------- */
 
-@include media-breakpoint-down(lg) {
-    footer {
-        //background: red;
-
-        //#subscribeBtn {
-        //    left: 25.5rem;
-        //}
-
-    }    
-}
-
-@include media-breakpoint-down(md) {
-    footer {
-        //background: blue;
-
-        //#subscribeBtn {
-        //    left: 23.5rem;
-        //}
-
-    }    
-}
-
-@include media-breakpoint-down(sm) {
-    //.social {
-    //    justify-content: center;
-    //}  
-//
-    //.row p {
-    //    text-align: center;
-    //}
-//
-    //img {
-    //    display: block;
-    //}
+@include  media-breakpoint-down(md) {
+    .row p {
+        text-align: center;
+    }
 }
