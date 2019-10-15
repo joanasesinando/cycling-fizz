@@ -24,6 +24,10 @@ export class HeaderComponent implements OnInit {
   faUsers = faUsers;
   faEnvelope = faEnvelope;
 
+  const favicon = require('./img/favicon.png');
+
+
+  logoSrc =
 
   constructor() { }
 
@@ -39,10 +43,15 @@ export class HeaderComponent implements OnInit {
 
     // Collapse Navbar on scroll
     function navbarCollapse() {
-      if ($('#mainNav').offset().top > 100) {
-        $('#mainNav').addClass('navbar-shrink');
+      let mainNav = $('#mainNav');
+
+
+      if (mainNav.offset().top > 100) {
+        mainNav.addClass('navbar-shrink');
+        this.logoSrc = "../../../assets/images/logo.svg";
       } else {
-        $('#mainNav').removeClass('navbar-shrink');
+        mainNav.removeClass('navbar-shrink');
+        this.logoSrc = "../../../assets/images/logo_dark.svg";
       }
     }
 

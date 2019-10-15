@@ -9,6 +9,7 @@
  *  02. mixins
  *  03. main navigation
  *  04. modal
+ *  05. responsive
  *
  * =================================================================== */
  
@@ -30,8 +31,10 @@ $header: #2F373D;
  *  02. mixins
  *
  * ------------------------------------------------------------------- */
- 
- //@import "../../../../node_modules/bootstrap/scss/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
  
  @mixin transition($property) {
   -moz-transition: $property;
@@ -54,12 +57,10 @@ $header: #2F373D;
   background: transparent;
   @include transition(all 0.3s ease-in-out);
 
-  .navbar-brand {
-    color: transparent;
-		width: 17rem;
-		height: 4rem;
-		background: url("../../../assets/images/logo.svg") no-repeat center;
-		background-size: 17rem 4rem;
+  .navbar-logo {
+    //color: transparent;
+    //width: 17rem;
+    height: 3rem;
     @include transition(all 0.3s ease-in-out);
   }
 }
@@ -69,10 +70,9 @@ nav.navbar-shrink {
   background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
   box-shadow: 0px 2px 13px 0px #a5a5a57a;
 
-  .navbar-brand {
-    width: 15rem;
-    height: 3rem;
-    background-size: 15rem 3rem;
+  .navbar-logo {
+    //width: 15rem;
+    height: 2.5rem;
   }
 
 }
@@ -104,8 +104,8 @@ nav.navbar-shrink {
   border: none;
   font-size: 1.1rem;
   border-radius: 0.4rem;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  font-family: 'quicksand-regular';
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  font-family: 'quicksand-regular', serif;
   line-height: 2rem;
   min-width: 5rem;
 
@@ -117,15 +117,12 @@ nav.navbar-shrink {
     }
   }
 
-  fa-icon {
+  fa-icon,
+  img {
     margin-right: 1rem;
     font-size: 1.3rem;
   }
 
-  img {
-    margin-right: 1rem;
-    height: 1.3rem;
-  }
 }
 
 .dropdown:hover .dropdown-menu {
@@ -134,13 +131,6 @@ nav.navbar-shrink {
  
 }
 
-@media only screen and (max-width:1024px) {
-  .navbar-brand {
-    width: 13rem;
-    height: 3rem;
-    background-size: 13rem 3rem;
-  }
-}
 
 
 /* ===================================================================
@@ -173,9 +163,8 @@ nav.navbar-shrink {
  }
 
  .modal-popout-bg {
-  background: url(../../../assets/images/sign-inImg.svg) top left no-repeat;
-  background-color: white;
-  background-size: 40rem;
+   background: white url(../../../assets/images/sign-inImg.svg) no-repeat top left;
+   background-size: 40rem;
  }
 
  .flex-row {
@@ -183,4 +172,28 @@ nav.navbar-shrink {
  }
 
 
+/* ===================================================================
+ *  05. responsive
+ *
+ * ------------------------------------------------------------------- */
+
+@include media-breakpoint-down(md) {
+  nav {
+    .navbar-logo {
+      //width: 10rem;
+      height: 2.5rem;
+    }
+  }
+
+  nav.navbar-shrink {
+    .navbar-logo {
+      //width: 15rem;
+      height: 2.5rem;
+    }
+
+  }
+}
+
 //@import '../../../../node_modules/bootstrap/scss/bootstrap.scss'
+
+
