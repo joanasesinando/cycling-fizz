@@ -58,9 +58,11 @@ $header: #2F373D;
   @include transition(all 0.3s ease-in-out);
 
   .navbar-logo {
-    //color: transparent;
-    //width: 17rem;
-    height: 3rem;
+    color: transparent;
+    width: 17rem;
+    height: 4rem;
+    background: url("../../../assets/images/logo.svg") no-repeat center;
+    background-size: 17rem 4rem;
     @include transition(all 0.3s ease-in-out);
   }
 }
@@ -71,8 +73,9 @@ nav.navbar-shrink {
   box-shadow: 0px 2px 13px 0px #a5a5a57a;
 
   .navbar-logo {
-    //width: 15rem;
+    width: 15rem;
     height: 2.5rem;
+    background-size: 15rem 2.5rem;
   }
 
 }
@@ -180,15 +183,19 @@ nav.navbar-shrink {
 @include media-breakpoint-down(md) {
   nav {
     .navbar-logo {
-      //width: 10rem;
+      width: 15rem;
       height: 2.5rem;
+      background-size: 15rem 2.5rem;
+      background: url("../../../assets/images/logo-black.svg") no-repeat center;
     }
   }
 
   nav.navbar-shrink {
     .navbar-logo {
-      //width: 15rem;
+      width: 15rem;
       height: 2.5rem;
+      background-size: 15rem 2.5rem;
+      background: url("../../../assets/images/logo-orange.svg") no-repeat center;
     }
 
   }

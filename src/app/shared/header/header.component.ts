@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 
 import { faGlobeEurope, faChevronDown, faTrafficLight, 
         faRoute, faQuestion, faComments, faBlog, faCalendarAlt,
-        faLightbulb, faUsers, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+        faLightbulb, faUsers, faEnvelope, faBars} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -23,11 +23,10 @@ export class HeaderComponent implements OnInit {
   faLightbulb = faLightbulb;
   faUsers = faUsers;
   faEnvelope = faEnvelope;
+  faBars = faBars;
 
-  const favicon = require('./img/favicon.png');
 
 
-  logoSrc =
 
   constructor() { }
 
@@ -48,10 +47,8 @@ export class HeaderComponent implements OnInit {
 
       if (mainNav.offset().top > 100) {
         mainNav.addClass('navbar-shrink');
-        this.logoSrc = "../../../assets/images/logo.svg";
       } else {
         mainNav.removeClass('navbar-shrink');
-        this.logoSrc = "../../../assets/images/logo_dark.svg";
       }
     }
 
