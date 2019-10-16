@@ -18,25 +18,36 @@ export class FooterComponent implements OnInit {
   faFacebookF = faFacebookF;
   faYoutube = faYoutube;
 
+  subEmailInput;
+  subscribeBtn;
+  emailHelp;
+
+
+
+
   constructor() { }
 
-  ngOnInit() {
-    let subEmailInput = document.getElementById('subEmailInput') as HTMLElement;
-    let subscribeBtn = document.getElementById('subscribeBtn') as HTMLElement;
-    let emailHelp = document.getElementById('emailHelp') as HTMLElement;
 
-    subscribeBtn.style.bottom = emailHelp.offsetHeight + subEmailInput.offsetHeight + "px";
+  changeSubBtnSize() {
+
+
+    this.subscribeBtn.style.bottom = this.emailHelp.offsetHeight + this.subEmailInput.offsetHeight + "px";
+  }
+
+
+
+
+  ngOnInit() {
+    this.subEmailInput = document.getElementById('subEmailInput') as HTMLElement;
+    this.subscribeBtn = document.getElementById('subscribeBtn') as HTMLElement;
+    this.emailHelp = document.getElementById('emailHelp') as HTMLElement;
+
+    this.changeSubBtnSize();
   }
 
   @HostListener('window:resize', ['$event'])
   onResize(event) {
-
-    let subEmailInput = document.getElementById('subEmailInput') as HTMLElement;
-    let subscribeBtn = document.getElementById('subscribeBtn') as HTMLElement;
-    let emailHelp = document.getElementById('emailHelp') as HTMLElement;
-
-    subscribeBtn.style.bottom = emailHelp.offsetHeight + subEmailInput.offsetHeight + "px";
-
+    this.changeSubBtnSize();
   }
 
 }
