@@ -149,3 +149,9 @@ footer {
         text-align: center;
     }
 }
+
+@include  media-breakpoint-down(sm) {
+    #subEmailInput {
+        font-size: 0.9rem;
+    }
+}
