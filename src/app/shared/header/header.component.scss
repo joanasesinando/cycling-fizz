@@ -8,8 +8,9 @@
  *  01. colors
  *  02. mixins
  *  03. main navigation
- *  04. modal
- *  05. responsive
+ *  04. hambuger button
+ *  05. modal
+ *  06. responsive
  *
  * =================================================================== */
 
@@ -51,7 +52,7 @@ $header: #2F373D;
  * ------------------------------------------------------------------- */
 
  nav {
-  height: 4em;
+  min-height: 4em;
   top: 0.7em;
   z-index: 600;
   background-color: transparent;
@@ -67,7 +68,7 @@ $header: #2F373D;
   }
 }
 
-nav.navbar-shrink {
+nav.navbar-top {
   top: 0;
   background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
   box-shadow: 0px 2px 13px 0px #a5a5a57a;
@@ -78,6 +79,12 @@ nav.navbar-shrink {
     background-size: 15rem 2.5rem;
   }
 
+} 
+
+nav.bg-white {
+    top: 0;
+    background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
+    box-shadow: 0px 2px 13px 0px #a5a5a57a;
 }
 
 #navbarResponsive {
@@ -138,9 +145,31 @@ nav.navbar-shrink {
 }
 
 
+/* ===================================================================
+ *  04. hamburger button
+ *
+ * ------------------------------------------------------------------- */
+
+$hamburger-padding-x           : 0;
+$hamburger-padding-y           : 0;
+$hamburger-layer-width         : 1.7rem;
+$hamburger-layer-height        : 0.25rem;
+$hamburger-layer-spacing       : 0.3rem;
+$hamburger-layer-color         : $header;
+$hamburger-layer-border-radius : 2rem;
+$hamburger-hover-opacity       : 1;
+$hamburger-active-layer-color  : $hamburger-layer-color;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;
+
+@import "../../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+.hamburger {
+  display: none;
+}
+
 
 /* ===================================================================
- *  04. modal
+ *  05. modal
  *
  * ------------------------------------------------------------------- */
 
@@ -179,35 +208,49 @@ nav.navbar-shrink {
 
 
 /* ===================================================================
- *  05. responsive
+ *  06. responsive
  *
  * ------------------------------------------------------------------- */
 
-@include media-breakpoint-down(md) {
-
-  #navbarResponsive {
-    background-color: #F2F6F8;
-  }
-
-
-    nav {
+@include media-breakpoint-down(lg) { // phones & tablets
+  nav {
     .navbar-logo {
       width: 15rem;
       height: 2.5rem;
       background-size: 15rem 2.5rem;
+    }
+  }
+}
+
+@include media-breakpoint-down(md) { // phones & tablets
+
+  nav {
+    .navbar-logo {
+      width: 11rem;
+      height: 1.7rem;
       background: url("../../../assets/images/logo-black.svg") no-repeat center;
+      background-size: 11rem 1.7rem;
     }
   }
 
-  nav.navbar-shrink {
+  nav.navbar-top {
     .navbar-logo {
-      width: 15rem;
-      height: 2.5rem;
-      background-size: 15rem 2.5rem;
+      width: 11rem;
+      height: 1.7rem;
       background: url("../../../assets/images/logo-orange.svg") no-repeat center;
+      background-size: 11rem 1.7rem;
     }
 
   }
+
+  .hamburger {
+    display: inline-block;
+  }
+}
+
+@include media-breakpoint-down(sm) { // phones
+
+  
 }
 
 //@import '../../../../node_modules/bootstrap/scss/bootstrap.scss'

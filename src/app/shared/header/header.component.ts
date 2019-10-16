@@ -2,7 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 
 import { faGlobeEurope, faChevronDown, faTrafficLight, 
         faRoute, faQuestion, faComments, faBlog, faCalendarAlt,
-        faLightbulb, faUsers, faEnvelope, faBars} from '@fortawesome/free-solid-svg-icons';
+        faLightbulb, faUsers, faEnvelope} from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -23,14 +23,27 @@ export class HeaderComponent implements OnInit {
   faLightbulb = faLightbulb;
   faUsers = faUsers;
   faEnvelope = faEnvelope;
-  faBars = faBars;
-
-
 
 
   constructor() { }
 
-  ngOnInit() { }
+  ngOnInit() { 
+    let navbarToggler = $('.navbar-toggler');
+    let navbar = $('.navbar');
+
+    // Toggle hamburger btn spin
+    $(navbarToggler).on('click', () => {
+      if(navbarToggler.hasClass('is-active')) { 
+        navbarToggler.removeClass('is-active'); 
+        navbar.removeClass('bg-white');
+
+      } else {
+        navbarToggler.addClass('is-active');
+        navbar.addClass('bg-white');
+      }
+    });
+    
+  }
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
@@ -40,20 +53,19 @@ export class HeaderComponent implements OnInit {
       // $('.navbar-collapse').collapse();
     // });
 
-    // Collapse Navbar on scroll
-    function navbarCollapse() {
+    // Glue navbar to top on scroll
+    function navbarGlue() {
       let mainNav = $('#mainNav');
 
-
       if (mainNav.offset().top > 100) {
-        mainNav.addClass('navbar-shrink');
+        mainNav.addClass('navbar-top');
       } else {
-        mainNav.removeClass('navbar-shrink');
+        mainNav.removeClass('navbar-top');
       }
     }
 
-    // Collapse now if page is not at top
-    navbarCollapse();
+    // Glue now if page is not at top
+    navbarGlue();
   }
 
 }
