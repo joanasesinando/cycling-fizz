@@ -48,14 +48,10 @@ export class HeaderComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
 
-    // Closes responsive menu when a scroll trigger link is clicked
-    // $('.js-scroll-trigger').on('click', () => {
-      // $('.navbar-collapse').collapse();
-    // });
-
     // Glue navbar to top on scroll
     function navbarGlue() {
       let mainNav = $('#mainNav');
+
 
       if (mainNav.offset().top > 100) {
         mainNav.addClass('navbar-top');
