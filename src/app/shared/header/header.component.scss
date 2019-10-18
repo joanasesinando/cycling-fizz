@@ -309,6 +309,10 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
   .hamburger {
     display: inline-block;
   }
+
+  .hamburger:focus {
+    outline: none;
+  }
 }
 
 @include media-breakpoint-down(sm) { // phones
