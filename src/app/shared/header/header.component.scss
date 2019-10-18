@@ -212,6 +212,33 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
   margin-left: 60%;
  }
 
+ .login {
+   .login-heading {
+     font-family: 'martel-bold';
+     text-align: center;
+   }
+
+   .form-control {
+     padding: 1.5rem 9rem 1.5rem 1.5rem;
+     margin-bottom: 1rem;
+     border-radius: 3rem;
+   }
+
+   button {
+     padding: 0 3rem;
+   }
+
+   .fgt-pass {
+     color: $orange;
+     font-family: 'quicksand-regular';
+   }
+
+   .gray-label {
+     font-family: quicksand-regular;
+     color: $darkGray;
+   }
+ }
+
 
 /* ===================================================================
  *  06. responsive
