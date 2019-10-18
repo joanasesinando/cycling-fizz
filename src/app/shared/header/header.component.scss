@@ -192,7 +192,9 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
  *  05. modal
  *
  * ------------------------------------------------------------------- */
-
+.modal {
+  font-family: 'quicksand-regular';
+}
  .modal-header {
    border-bottom: none;
  }
@@ -223,12 +225,13 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
  }
 
  .flex-row {
-  margin-left: 60%;
+  margin-left: 63%;
  }
 
  .login {
    .login-heading {
      font-family: 'martel-bold';
+     font-size: 2.1rem;
      text-align: center;
    }
 
@@ -254,22 +257,30 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
    }
 
    .form-control {
-     padding: 1.5rem 9rem 1.5rem 1.5rem;
+     padding: 1.5rem 1.5rem;
      margin-bottom: 1rem;
      border-radius: 3rem;
+
+     &:focus {
+       box-shadow: 0 0 0 0.2rem rgba(89, 59, 254, 0.25);
+       border-color: #8280ff;
+     }
    }
 
-   button {
+   .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+     border-color: #706dfe;
+     background-color: #706dfe;
+   }
+
+   button.btn-login {
      padding: 0 3rem;
    }
 
    .fgt-pass {
      color: $orange;
-     font-family: 'quicksand-regular';
    }
 
    .gray-label {
-     font-family: quicksand-regular;
      color: $darkGray;
    }
  }

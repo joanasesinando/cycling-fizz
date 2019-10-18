@@ -66,18 +66,23 @@
  *
  * ------------------------------------------------------------------- */
 
+$height: 2.5rem;
+$padding: 0 2rem;
+$border-radius: 3rem;
+$gradient: linear-gradient(131deg, #FFd340, #FF923C, #FF923C, #FF923C);
+
 .btn.btn-primary,
 button.btn-primary,
 input[type="submit"].btn-primary,
 input[type="reset"].btn-primary,
 input[type="button"].btn-primary {
     font-family: quicksand-bold;
-    height: 2.5rem;
-    line-height: 2.5rem;
-    padding: 0 2rem;
+    height: $height;
+    line-height: $height;
+    padding: $padding;
     border: 0;
-    border-radius: 3rem;
-    background-image: linear-gradient(131deg, #FFd340, #FF923C, #FF923C, #FF923C);
+    border-radius: $border-radius;
+    background-image: $gradient;
     background-size: 300% 100%;
     @include transition(all 0.3s ease-in-out);  
 }
@@ -95,6 +100,31 @@ input[type="button"].btn-primary:focus {
   box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
   background-size: 100% 100%;
   @include transform(translateY(-0.15em));  
+}
+
+.btn.btn-outline-primary,
+button.btn-outline-primary{
+  font-family: quicksand-bold;
+  height: $height;
+  line-height: $height;
+  padding: $padding;
+  color: $orange;
+  border-radius: $border-radius;
+  border: solid 0.1rem transparent;
+  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to bottom, $orange, #febf49);
+  background-size: 300% 100%;
+  background-origin: border-box;
+  background-clip: content-box, border-box;
+  box-shadow: 2px 1000px 1px #fff inset;
+  @include transition(all 0.3s ease-in-out);
+}
+
+.btn.btn-outline-primary:hover,
+button.btn-outline-primary:hover {
+  border: none;
+  color: white;
+  box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+  @include transform(translateY(-0.15em));
 }
 
 
