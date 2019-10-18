@@ -251,6 +251,10 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
   .navbar-nav {
     .nav-item {
       border-top: 0.1rem solid $lightGray;
+
+      fa-icon.faChevronDown {
+        display: none;
+      }
     }
 
     .nav-link {
