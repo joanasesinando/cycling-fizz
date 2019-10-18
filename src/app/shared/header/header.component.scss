@@ -27,6 +27,11 @@ $lightGray: #F2F6F8;
 $darkGray: #57565C;
 $header: #2F373D;
 
+/** social-list **/
+$facebook: #3b68c6;
+$google: #FB3B2E;
+$twitter: #0cbbff;
+
 
 /* ===================================================================
  *  02. mixins
@@ -44,6 +49,14 @@ $header: #2F373D;
   -ms-transition: $property;
   transition: $property;
  }
+
+@mixin transform($property) {
+  -moz-transform: $property;
+  -o-transform: $property;
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
 
 
 /* ===================================================================
@@ -217,6 +230,27 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
    .login-heading {
      font-family: 'martel-bold';
      text-align: center;
+   }
+
+   .social a {
+     text-align: center;
+     height: 2.5rem;
+     width: 2.5rem;
+     border: solid $lightGray;
+     border-radius: 100%;
+     line-height: 2.5rem;
+     @include transition(all 0.2s ease-in-out);
+
+     fa-icon {
+       font-size: 1.1rem;
+       line-height: 0;
+     }
+
+     #fb { color: $facebook; }
+     #gg { color: $google; }
+     #tt { color: $twitter; }
+
+     &:hover { @include transform(translateY(-0.5rem)); }
    }
 
    .form-control {

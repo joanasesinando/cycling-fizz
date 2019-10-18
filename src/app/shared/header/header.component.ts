@@ -1,8 +1,9 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
 import { faGlobeEurope, faChevronDown, faTrafficLight, 
-        faRoute, faQuestion, faComments, faBlog, faCalendarAlt,
-        faLightbulb, faUsers, faEnvelope} from '@fortawesome/free-solid-svg-icons';
+        faRoute, faQuestion, faComments, faUsers } from '@fortawesome/free-solid-svg-icons';
+
+import { faTwitter, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-header',
@@ -18,12 +19,10 @@ export class HeaderComponent implements OnInit {
   faRoute = faRoute;
   faQuestion = faQuestion;
   faComments = faComments;
-  faBlog = faBlog;
-  faCalendarAlt = faCalendarAlt;
-  faLightbulb = faLightbulb;
   faUsers = faUsers;
-  faEnvelope = faEnvelope;
-
+  faTwitter = faTwitter;
+  faFacebookF = faFacebookF;
+  faGooglePlusG = faGooglePlusG;
 
   constructor() { }
 

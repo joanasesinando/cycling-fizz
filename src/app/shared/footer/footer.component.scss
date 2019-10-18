@@ -124,10 +124,6 @@ footer {
         color: $darkGray;
         @include transition(all 0.2s ease-in-out);
 
-        img {
-            width: 1.3rem;
-        } #fb { width: 0.8rem; }
-
         &:hover {
             #fb { color: $facebook; }
             #tt { color: $twitter; }
