@@ -52,7 +52,6 @@ export class HeaderComponent implements OnInit {
     function navbarGlue() {
       let mainNav = $('#mainNav');
 
-
       if (mainNav.offset().top > 100) {
         mainNav.addClass('navbar-top');
       } else {
