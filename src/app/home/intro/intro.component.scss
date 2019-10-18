@@ -39,9 +39,9 @@ $youtube: #e5241d;
  *
  * ------------------------------------------------------------------- */
  
- @import "../../../../node_modules/bootstrap/scss/functions/";
- @import "../../../../node_modules/bootstrap/scss/variables/";
- @import "../../../../node_modules/bootstrap/scss/mixins/";
+ @import "../../../../node_modules/bootstrap/scss/functions";
+ @import "../../../../node_modules/bootstrap/scss/variables";
+ @import "../../../../node_modules/bootstrap/scss/mixins";
   
  @mixin transition($property) {
      -moz-transition: $property;
