@@ -24,6 +24,8 @@ export class HeaderComponent implements OnInit {
   faFacebookF = faFacebookF;
   faGooglePlusG = faGooglePlusG;
 
+  mobileView;
+
   constructor() { }
 
   ngOnInit() { 
@@ -80,5 +82,11 @@ export class HeaderComponent implements OnInit {
     // Glue now if page is not at top
     navbarGlue();
   }
+
+    @HostListener('window:resize', [])
+    onWindowResize(){
+      if(window.innerWidth <= 991.98){ this.mobileView = true;}
+      else { this.mobileView = false; }
+    }
 
 }

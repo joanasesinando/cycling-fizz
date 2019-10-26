@@ -96,21 +96,51 @@
             </div>
           </li>
 
-          <li class="nav-item dropdown">
-              <a class="nav-link" href="#" id="navbarDropdownIdiomaLink" data-toggle="dropdown">
-                  <fa-icon [icon]="faGlobeEurope" class="fa-lg"></fa-icon>
-              </a>
-              <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownIdiomaLink">
-                <a class="dropdown-item" href="#"><img src="../../../assets/images/portugues.svg">PT</a>
-                <a class="dropdown-item" href="#"><img src="../../../assets/images/english.svg">EN</a>
-                <a class="dropdown-item" href="#"><img src="../../../assets/images/français.svg">FR</a>
-              </div>
-          </li>
+          <!-- idioma -->
+            <div [ngSwitch]="mobileView">
+                <div *ngSwitchCase="false">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link" href="#" id="navbarDropdownIdiomaLink" data-toggle="dropdown">
+                            <fa-icon [icon]="faGlobeEurope" class="fa-lg"></fa-icon>
+                        </a>
+                        <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownIdiomaLink">
+                            <a class="dropdown-item" href="#"><img src="../../../assets/images/portugues.svg">PT</a>
+                            <a class="dropdown-item" href="#"><img src="../../../assets/images/english.svg">EN</a>
+                            <a class="dropdown-item" href="#"><img src="../../../assets/images/français.svg">FR</a>
+                        </div>
+                    </li>
+                </div>
+
+                <div *ngSwitchCase="true">
+                    <div class="last-mobile-row row justify-content-between py-3">
+                        <div class="col-sm-auto pb-sm-0 pb-4">
+                            <div class="row justify-content-sm-start justify-content-around">
+                                <div class="col-3">
+                                    <a class="dropdown-item" href="#"><img src="../../../assets/images/portugues.svg">PT</a>
+                                </div>
+                                <div class="col-3">
+                                    <a class="dropdown-item" href="#"><img src="../../../assets/images/english.svg">EN</a>
+                                </div>
+                                <div class="col-3">
+                                    <a class="dropdown-item" href="#"><img src="../../../assets/images/français.svg">FR</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-sm-auto text-center">
+                            <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
         </ul>
 
         <!-- login -->
-        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
+        <div [ngSwitch]="mobileView">
+            <div *ngSwitchCase="false">
+                <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
+            </div>
+        </div>
 
       </div> <!-- /navigation -->
 
