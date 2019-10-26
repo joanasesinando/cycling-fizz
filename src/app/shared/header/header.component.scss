@@ -24,6 +24,7 @@
 $orange: #FF9F3C;
 $green: #32BE8E;
 $lightGray: #F2F6F8;
+$gray: #838788;
 $darkGray: #57565C;
 $header: #2F373D;
 
@@ -193,7 +194,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
  *
  * ------------------------------------------------------------------- */
 .modal {
-  font-family: 'quicksand-regular';
+  font-family: 'quicksand-regular', sans-serif;
 }
  .modal-header {
    border-bottom: none;
@@ -230,7 +231,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
  .login {
    .login-heading {
-     font-family: 'martel-bold';
+     font-family: 'martel-bold', sans-serif;
      font-size: 2.1rem;
      text-align: center;
    }
@@ -357,6 +358,21 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
   .hamburger:focus {
     outline: none;
+  }
+
+  .ddHamburguers .hamburger-box {
+    width: 1.5rem;
+    height: 1rem;
+  }
+
+  .ddHamburguers .hamburger-inner,
+  .ddHamburguers .hamburger-inner::before,
+  .ddHamburguers .hamburger-inner::after,
+  .ddHamburguers.is-active .hamburger-inner::before,
+  .ddHamburguers.is-active .hamburger-inner::after {
+    background-color: $gray;
+    width: 1.5rem;
+    height: 0.15rem;
   }
 }
 

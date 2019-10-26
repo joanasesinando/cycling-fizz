@@ -1,8 +1,7 @@
 <header>
 
-  <!-- Header -->
+  <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top px-4" id="mainNav">
-    <!--<div class="container-fluid">-->
 
       <!-- logo -->
       <a class="navbar-brand" href="#">Cycling Fizz</a>
@@ -18,34 +17,51 @@
       <!-- navigation -->
       <div class="navbar-collapse collapse" id="navbarResponsive">
         <ul class="navbar-nav ml-lg-auto mr-4">
+
+          <!-- início -->
           <li class="nav-item">
             <a class="nav-link" routerLink="">Início</a>
           </li>
 
+          <!-- mapa -->
           <li class="nav-item">
             <a class="nav-link" routerLink="/map">Mapa</a>
           </li>
 
+          <!-- útil -->
           <li class="nav-item dropdown">
-            <a class="nav-link d-lg-none" href="#" id="navbarDropdownUtilLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link d-lg-none d-flex justify-content-between" href="#" id="navbarDropdownUtilLink" role="button" data-toggle="dropdown"
+               aria-haspopup="true" aria-expanded="false">
               Útil
-                <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
+
+                <button id="hmbg1" class="hamburger hamburger--spring ddHamburguers" type="button" data-toggle="collapse" data-target="#navbarDropdownUtil"
+                        aria-controls="navbarDropdownUtil" aria-expanded="false" aria-label="Toggle dropdown menu">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+                </button>
             </a>
             <a class="nav-link d-none d-lg-block" href="#" id="navbarDropdownUtilLinkLarge" role="button" aria-haspopup="true" aria-expanded="false">
               Útil
               <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
             </a>
-            <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownUtilLink">
+            <div id="navbarDropdownUtil" class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownUtilLink">
               <a class="dropdown-item" href="#"><fa-icon [icon]="faTrafficLight"></fa-icon>Regras de Transito</a>
               <a class="dropdown-item" href="#"><fa-icon [icon]="faRoute"></fa-icon>Percursos</a>
               <a class="dropdown-item" href="#"><fa-icon [icon]="faQuestion"></fa-icon>Principiantes</a>
             </div>
           </li>
 
+          <!-- comunidade -->
           <li class="nav-item dropdown">
-            <a class="nav-link d-lg-none" href="#" id="navbarDropdownComunidadeLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+            <a class="nav-link d-lg-none d-flex justify-content-between" href="#" id="navbarDropdownComunidadeLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
               Comunidade
-              <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
+              <button id="hmbg2" class="hamburger hamburger--spring ddHamburguers" type="button" data-toggle="collapse" data-target="#navbarDropdownUtil"
+                      aria-controls="navbarDropdownUtil" aria-expanded="false" aria-label="Toggle dropdown menu">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+              </button>
             </a>
             <a class="nav-link d-none d-lg-block" href="#" id="navbarDropdownComunidadeLinkLarge" role="button" aria-haspopup="true" aria-expanded="false">
               Comunidade
@@ -58,16 +74,22 @@
             </div>
           </li>
 
+          <!-- sobre -->
           <li class="nav-item dropdown">
-            <a class="nav-link d-lg-none" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="100, 100, 200, 200">
+            <a class="nav-link d-lg-none d-flex justify-content-between" href="#" id="navbarDropdownSobreLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" data-offset="100, 100, 200, 200">
+              Sobre
+              <button id="hmbg3" class="hamburger hamburger--spring ddHamburguers" type="button" data-toggle="collapse" data-target="#navbarDropdownUtil"
+                      aria-controls="navbarDropdownUtil" aria-expanded="false" aria-label="Toggle dropdown menu">
+                  <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                  </span>
+              </button>
+            </a>
+            <a class="nav-link d-none d-lg-block" href="#" id="navbarDropdownSobreLinkLarge" role="button" aria-haspopup="true" aria-expanded="false" data-offset="100, 100, 200, 200">
               Sobre
               <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
             </a>
-            <a class="nav-link d-none d-lg-block" href="#" id="navbarDropdownMenuLinkLarge" role="button" aria-haspopup="true" aria-expanded="false" data-offset="100, 100, 200, 200">
-              Sobre
-              <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
-            </a>
-            <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownMenuLink">
+            <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownSobreLink">
               <a class="dropdown-item" href="#"><img src="../../../assets/images/idea.svg">O projeto</a>
               <a class="dropdown-item" href="#"><fa-icon [icon]="faUsers"></fa-icon>Quem somos</a>
               <a class="dropdown-item" href="#"><img src="../../../assets/images/envelope.svg">Contactar</a>
@@ -78,7 +100,7 @@
               <a class="nav-link" href="#" id="navbarDropdownIdiomaLink" data-toggle="dropdown">
                   <fa-icon [icon]="faGlobeEurope" class="fa-lg"></fa-icon>
               </a>
-              <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownMenuLink">
+              <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownIdiomaLink">
                 <a class="dropdown-item" href="#"><img src="../../../assets/images/portugues.svg">PT</a>
                 <a class="dropdown-item" href="#"><img src="../../../assets/images/english.svg">EN</a>
                 <a class="dropdown-item" href="#"><img src="../../../assets/images/français.svg">FR</a>
@@ -92,10 +114,9 @@
 
       </div> <!-- /navigation -->
 
-    <!--</div> &lt;!&ndash; /container &ndash;&gt;-->
   </nav>
 
-  <!-- sign-in modal -->
+  <!-- Sign-In Modal -->
   <div class="modal fade" id="sign-in" tabindex="-1" role="dialog" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered modal-xl" role="document">
         <div class="modal-content modal-popout-bg">
@@ -171,7 +192,7 @@
 
         </div>
       </div>
-  </div> <!-- </sign-in modal> -->
+  </div> <!-- </Sign-In Modal> -->
 
 </header>
 

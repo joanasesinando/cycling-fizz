@@ -29,9 +29,12 @@ export class HeaderComponent implements OnInit {
   ngOnInit() { 
     let navbarToggler = $('.navbar-toggler');
     let navbar = $('.navbar');
+    let dropdowns = ['#navbarDropdownUtilLink', '#navbarDropdownComunidadeLink', '#navbarDropdownSobreLink'];
+    let hmbgrs = ['#hmbg1', '#hmbg2', '#hmbg3'];
+    let currentActiveDropdown = null;
 
-    // Toggle hamburger btn spin
-    $(navbarToggler).on('click', () => {
+    // Toggle mobile menu hamburger btn
+    navbarToggler.on('click', () => {
       if(navbarToggler.hasClass('is-active')) { 
         navbarToggler.removeClass('is-active'); 
         navbar.removeClass('bg-white');
@@ -41,7 +44,23 @@ export class HeaderComponent implements OnInit {
         navbar.addClass('bg-white');
       }
     });
-    
+
+    // Toggle dropdowns hamburger btns
+    for(let i=0; i < dropdowns.length; i++){
+      $(dropdowns[i]).on('click', () => {
+        if($(hmbgrs[i]).hasClass('is-active')) {
+          $(hmbgrs[i]).removeClass('is-active');
+          currentActiveDropdown = null;
+        } else {
+          if(currentActiveDropdown != null){
+            $(hmbgrs[currentActiveDropdown]).removeClass('is-active');
+          }
+          $(hmbgrs[i]).addClass('is-active');
+          currentActiveDropdown = i;
+        }
+      });
+    }
+
   }
 
   @HostListener('window:scroll', [])
