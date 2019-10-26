@@ -79,10 +79,6 @@ $youtube: #e5241d;
 	vertical-align: middle;
   text-align: center;
   @include transform(translateY(-1.2rem));
-  
-  .col-eleven {
-    margin-left: 8%;
-  }
 
   h1 {
     color: #2F373D;
@@ -136,113 +132,6 @@ $youtube: #e5241d;
 
     &:hover { color: $orange; }
   }
-}
-
-/**
- * RESPONSIVE:
- * intro & intro-content
- * -
- */
-
-@media only screen and (max-width:1024px) {
-  #intro {
-    background-size: 650px;
-    background-position: 100% 0;
-  }
-	.intro-content {
-		-webkit-transform: translateY(0);
-		-ms-transform: translateY(0);
-    transform: translateY(0);
-
-    .col-eleven {
-      margin-left: 2%;
-      margin-bottom: 12%;
-      margin-top: 0;
-    }
-    
-    h1 {
-      font-size: 3.8rem;
-		  max-width: 700px;
-    }
-
-    h5 {
-      font-size: 1.4rem;
-      max-width: 450px;
-    }
-
-    .video-link a {
-      width: 72px;
-		  height: 72px;
-		  margin-bottom: 3rem;
-    }
-	}
-}
-@media only screen and (max-width:768px) {
-	#intro {
-    min-height: 660px;
-    height: 100vh;
-    background-size: 800px;
-	}
-	.intro-content {
-    h1 {
-      font-size: 4.2rem;
-		max-width: 550px;
-    }
-    
-    h5 {
-      font-size: 1.5rem;
-	letter-spacing: .15rem;
-    }
-	}
-}
-@media only screen and (max-width:600px) {
-	#intro {
-		min-height: 600px;
-	}
-	.intro-content {
-    h1 {
-      font-size: 3.5rem;
-      margin-bottom: .9rem;
-    }
-
-    h5 {
-      font-size: 1.4rem;
-      letter-spacing: .15rem;
-    }
-
-    .video-link a {
-      width: 66px;
-      height: 66px;
-      margin-bottom: 1.5rem;
-    }
-	}
-}
-@media only screen and (max-width:500px) {
-	.intro-content h1 {
-		font-size: 3.2rem;
-		padding: 0;
-	}
-}
-@media only screen and (max-width:400px) {
-	#intro {
-		min-height: 550px;
-	}
-	.intro-content {
-    h1 {
-      font-size: 3rem;
-      padding-left: 0px;
-    }
-
-    h5 {
-      font-size: 1.4rem;
-      letter-spacing: .15rem;
-    }
-
-    .video-link a {
-      width: 60px;
-		height: 60px;
-    }
-	}
 }
 
 
@@ -663,4 +552,48 @@ $youtube: #e5241d;
     bottom: 21%;
     left: 30%;
   }
+}
+
+/* ===================================================================
+ *  07. Responsive
+ *
+ * ------------------------------------------------------------------- */
+
+
+@include  media-breakpoint-down(md) {
+
+  #intro {
+    background-size: 650px;
+    background-position: 100% 0;
+  }
+  .intro-content {
+    -webkit-transform: translateY(0);
+    -ms-transform: translateY(0);
+    transform: translateY(0);
+
+    h1 {
+      font-size: 1.8rem;
+      max-width: 700px;
+      text-align: center;
+    }
+
+    h5 {
+      font-size: 1.2rem;
+      max-width: 450px;
+      text-align: center;
+    }
+
+    .video-link a {
+      width: 72px;
+      height: 72px;
+      margin-bottom: 3rem;
+    }
+  }
+
+
+
+  #intro-div {
+    margin-top: 75vh;
+  }
+
 }
