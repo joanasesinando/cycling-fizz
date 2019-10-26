@@ -532,25 +532,30 @@ $youtube: #e5241d;
  * -
  */
 
-@media only screen and (max-width:1024px) {
-  .ball-1 {
-    left: 4%;
-    top: 17%;
+@include  media-breakpoint-down(sm) {
+  .ball-1 { //done
+    left: 80%;
+    top: 48%;
   }
 
-  .ball-3 {
-    bottom: 20%;
+  .ball-2 {
+    bottom: 9%;
     left: 10%;
   }
 
-  .ball-4 {
-    bottom: 30%;
-    left: 35%;
+  .ball-3 {
+    bottom: 13%;
+    left: 80%;
+  }
+
+  .ball-4 { //done
+    bottom: 38%;
+    left: 10%;
   }
 
   .ball-5 {
-    bottom: 21%;
-    left: 30%;
+    bottom: 5%;
+    left: 63%;
   }
 }
 
@@ -560,7 +565,7 @@ $youtube: #e5241d;
  * ------------------------------------------------------------------- */
 
 
-@include  media-breakpoint-down(md) {
+@include  media-breakpoint-down(sm) {
 
   #intro {
     background-size: 650px;
@@ -583,13 +588,11 @@ $youtube: #e5241d;
       text-align: center;
     }
 
-    .video-link a {
-      width: 72px;
-      height: 72px;
-      margin-bottom: 3rem;
-    }
   }
 
+  #intro-btns {
+    margin-bottom: 15rem;
+  }
 
 
   #intro-div {
