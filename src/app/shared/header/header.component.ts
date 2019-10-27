@@ -12,7 +12,7 @@ import { faTwitter, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-
 })
 export class HeaderComponent implements OnInit {
 
-  //FontAwesome icons
+  // FontAwesome icons
   faGlobeEurope = faGlobeEurope;
   faChevronDown = faChevronDown;
   faTrafficLight = faTrafficLight;
@@ -24,16 +24,23 @@ export class HeaderComponent implements OnInit {
   faFacebookF = faFacebookF;
   faGooglePlusG = faGooglePlusG;
 
-  mobileView;
+  mobileView: boolean;
 
   constructor() { }
 
-  ngOnInit() { 
+  ngOnInit() {
     let navbarToggler = $('.navbar-toggler');
     let navbar = $('.navbar');
     let dropdowns = ['#navbarDropdownUtilLink', '#navbarDropdownComunidadeLink', '#navbarDropdownSobreLink'];
     let hmbgrs = ['#hmbg1', '#hmbg2', '#hmbg3'];
     let currentActiveDropdown = null;
+
+    // Sets the initial view either for desktop or mobile
+    if(window.innerWidth <= 991.98) {
+      this.mobileView = true;
+    } else {
+      this.mobileView = false;
+    }
 
     // Toggle mobile menu hamburger btn
     navbarToggler.on('click', () => {
@@ -85,8 +92,11 @@ export class HeaderComponent implements OnInit {
 
     @HostListener('window:resize', [])
     onWindowResize(){
-      if(window.innerWidth <= 991.98){ this.mobileView = true;}
-      else { this.mobileView = false; }
+      if(window.innerWidth <= 991.98) {
+        this.mobileView = true;
+      } else {
+        this.mobileView = false;
+      }
     }
 
 }
