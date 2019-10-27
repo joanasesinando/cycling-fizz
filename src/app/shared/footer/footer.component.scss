@@ -147,7 +147,7 @@ footer {
 }
 
 @include  media-breakpoint-down(sm) {
-    #subEmailInput {
+    #subEmailInput, #subscribeBtn {
         font-size: 0.9rem;
     }
 }

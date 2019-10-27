@@ -67,13 +67,14 @@ $youtube: #e5241d;
 
 #intro {
     background: url(../../../assets/images/hero.svg) no-repeat top right;
-    background-size: 50%;
+    //background-size: 50%;
     width: 100vw;
     height: 100vh;
-    min-height: 750px;
+    //min-height: 750px;
     display: table;
     position: relative;
 }
+
 .intro-content {
 	display: table-cell;
 	vertical-align: middle;
@@ -565,10 +566,10 @@ $youtube: #e5241d;
  * ------------------------------------------------------------------- */
 
 
-@include  media-breakpoint-down(sm) {
+@include  media-breakpoint-down(md) {
 
   #intro {
-    background-size: 650px;
+    background-size: 75vh;
     background-position: 100% 0;
   }
   .intro-content {
@@ -578,13 +579,11 @@ $youtube: #e5241d;
 
     h1 {
       font-size: 1.8rem;
-      max-width: 700px;
       text-align: center;
     }
 
     h5 {
       font-size: 1.2rem;
-      max-width: 450px;
       text-align: center;
     }
 
