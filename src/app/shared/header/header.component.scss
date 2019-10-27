@@ -233,19 +233,20 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
      text-align: center;
      height: 2.5rem;
      width: 2.5rem;
-     border: solid $lightGray;
-     border-radius: 100%;
+     border-radius: 50%;
      line-height: 2.5rem;
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
      @include transition(all 0.2s ease-in-out);
 
      fa-icon {
        font-size: 1.1rem;
        line-height: 0;
+       color: white;
      }
 
-     #fb { color: $facebook; }
-     #gg { color: $google; }
-     #tt { color: $twitter; }
+     &#fb { background: $facebook; }
+     &#gg { background: $google; }
+     &#tt { background: $twitter; }
 
      &:hover { @include transform(translateY(-0.5rem)); }
    }
@@ -268,6 +269,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
    button.btn-login {
      padding: 0 3rem;
+     box-shadow: 0px 4px 15px rgba(255, 195, 64, 0.46);
    }
 
    .fgt-pass {
