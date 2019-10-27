@@ -109,10 +109,13 @@ footer {
         margin-right: 1%;
     }
 
-    #emailHelp {
-        position: relative;
-        left: 1rem;
+    @include media-breakpoint-up(lg) {
+        #emailHelp {
+            position: relative;
+            left: 1rem;
+        }
     }
+
 
     .social a {
         text-align: center;
@@ -140,6 +143,8 @@ footer {
  *
  * ------------------------------------------------------------------- */
 
+
+
 @include  media-breakpoint-down(md) {
     .row p {
         text-align: center;
@@ -147,7 +152,7 @@ footer {
 }
 
 @include  media-breakpoint-down(sm) {
-    #subEmailInput, #subscribeBtn {
+    #subEmailInput {
         font-size: 0.9rem;
     }
 }
