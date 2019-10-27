@@ -82,7 +82,7 @@ $twitter: #0cbbff;
   }
 
   .navbar-toggler {
-    // needed for the dropdown to work seemlessly
+    // needed for the dropdown on mobile to work seamlessly
     margin-top: 0.7rem;
     margin-bottom: 0.7rem;
   }
@@ -130,7 +130,6 @@ nav.bg-white {
 }
 
 .dropdown-menu {
-  padding: 1rem 0;
   border: none;
   font-size: 1.1rem;
   border-radius: 0.4rem;
@@ -193,32 +192,26 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
  *  05. modal
  *
  * ------------------------------------------------------------------- */
+
 .modal {
   font-family: 'quicksand-regular', sans-serif;
-}
- .modal-header {
-   border-bottom: none;
- }
 
- .modal-footer {
-   border-top: none;
- }
-
- .modal-content {
-   border: none;
-   border-radius: 1rem;
- }
-
- .modal-body {
-  .login {
-    height: 37rem;
-  }
-
-  img {
-    width: 40rem;
+  .modal-content {
+    border: none;
     border-radius: 1rem;
+
+    .modal-body {
+      .login {
+        height: 37rem;
+      }
+
+      img {
+        width: 40rem;
+        border-radius: 1rem;
+      }
+    }
   }
- }
+}
 
  .modal-popout-bg {
    background: white url(../../../assets/images/sign-inImg.svg) no-repeat top left;
@@ -240,19 +233,20 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
      text-align: center;
      height: 2.5rem;
      width: 2.5rem;
-     border: solid $lightGray;
-     border-radius: 100%;
+     border-radius: 50%;
      line-height: 2.5rem;
+     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
      @include transition(all 0.2s ease-in-out);
 
      fa-icon {
        font-size: 1.1rem;
        line-height: 0;
+       color: white;
      }
 
-     #fb { color: $facebook; }
-     #gg { color: $google; }
-     #tt { color: $twitter; }
+     &#fb { background: $facebook; }
+     &#gg { background: $google; }
+     &#tt { background: $twitter; }
 
      &:hover { @include transform(translateY(-0.5rem)); }
    }
@@ -275,6 +269,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
    button.btn-login {
      padding: 0 3rem;
+     box-shadow: 0px 4px 15px rgba(255, 195, 64, 0.46);
    }
 
    .fgt-pass {
