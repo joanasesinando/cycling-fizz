@@ -65,17 +65,18 @@
  * ------------------------------------------------------------------- */
 
 #intro {
-    background: url(../../../assets/images/hero.svg) no-repeat top right;
-    background-size: 50%;
-    width: 100vw;
-    height: 100vh;
-    min-height: 750px;
-    display: table;
-    position: relative;
+  background: url(../../../assets/images/hero.svg) no-repeat top right;
+  //background-size: 50%;
+  width: 100vw;
+  height: 100vh;
+  min-height: 750px;
+  display: table;
+  position: relative;
 }
+
 .intro-content {
-	display: table-cell;
-	vertical-align: middle;
+  display: table-cell;
+  vertical-align: middle;
   text-align: center;
   @include transform(translateY(-1.2rem));
 
@@ -99,25 +100,26 @@
 
   .btn.btn-primary {
     display: table;
-    box-shadow: 0px 4px 15px rgba(255, 195, 64, 0.46);
+    box-shadow: 0 4px 15px rgba(255, 195, 64, 0.46);
   }
 
   .video-popup {
-    z-index: 99 !important;
+    //z-index: 99 !important;
     color: #57565C;
-    font-family: 'quicksand-medium';
-    font-size: 17px;
+    font-family: 'quicksand-medium', serif;
+    font-size: 1rem;
     display: table;
-    font-weight: 500;
+    //font-weight: 500;
     position: relative;
-    left: 10%;
-    text-decoration: none;
+    //left: 10%;
+    //text-decoration: none;
+    margin-left: 5rem;
 
     .btn-video {
       text-align: center;
       height: 3rem;
       width: 3rem;
-      box-shadow: 0px 2px 13px 0px #a5a5a57a;
+      box-shadow: 0 2px 13px 0 #a5a5a57a;
       border-radius: 100%;
       line-height: 3rem;
       color: #57565C;
@@ -564,10 +566,10 @@
  * ------------------------------------------------------------------- */
 
 
-@include  media-breakpoint-down(sm) {
+@include  media-breakpoint-down(md) {
 
   #intro {
-    background-size: 650px;
+    background-size: 75vh;
     background-position: 100% 0;
   }
   .intro-content {
@@ -577,16 +579,23 @@
 
     h1 {
       font-size: 1.8rem;
-      max-width: 700px;
       text-align: center;
     }
 
     h5 {
       font-size: 1.2rem;
-      max-width: 450px;
       text-align: center;
     }
 
+    .btn.btn-primary {
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .video-popup {
+      margin-left: auto;
+      margin-right: auto;
+    }
   }
 
   #intro-btns {
