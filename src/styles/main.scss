@@ -103,31 +103,50 @@ input[type="button"].btn-primary:focus {
 }
 
 .btn.btn-outline-primary,
-button.btn-outline-primary{
-  font-family: quicksand-bold;
-  height: $height;
-  line-height: $height;
-  padding: $padding;
-  color: $orange;
-  border-radius: $border-radius;
-  border: solid 0.1rem transparent;
-  background-image: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0)), linear-gradient(to bottom, $orange, #febf49);
-  background-size: 300% 100%;
-  background-origin: border-box;
-  background-clip: content-box, border-box;
-  box-shadow: 2px 1000px 1px #fff inset;
-  @include transition(all 0.3s ease-in-out);
+button.btn-outline-primary {
+  font-family: 'quicksand-bold', sans-serif;
+  position: relative;
+  width: 151px;
+  height: 40px;
+  line-height: 50px;
+  background-color: transparent;
+  color: transparent;
+  border: none transparent;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    rect {
+      stroke-width: 2;
+      stroke-dasharray: 180, 0;
+      stroke-dashoffset: 0;
+      @include transition(all 600ms ease);
+    }
+  }
+
+  span {
+    background: linear-gradient(to right,  #FFd340 -30%,#FF923C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
 }
 
-.btn.btn-outline-primary:hover,
-button.btn-outline-primary:hover {
+.btn-outline-primary:hover,
+button.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+button.btn-outline-primary:focus{
   border: none;
-  color: white;
-  box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
-  @include transform(translateY(-0.15em));
+  background-color: transparent;
+  box-shadow: none;
 }
 
-
- //@import '../../node_modules/bootstrap/scss/bootstrap.scss'
+.btn.btn-outline-primary:hover svg rect,
+button.btn-outline-primary:hover svg rect {
+    stroke-width: 2;
+    stroke-dasharray: 96, 543;
+    stroke-dashoffset: 475;
+}
 
 

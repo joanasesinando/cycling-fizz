@@ -231,10 +231,10 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
    .social a {
      text-align: center;
-     height: 2.5rem;
-     width: 2.5rem;
+     height: 2.3rem;
+     width: 2.3rem;
      border-radius: 50%;
-     line-height: 2.5rem;
+     line-height: 2.3rem;
      box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
      @include transition(all 0.2s ease-in-out);
 
@@ -270,6 +270,11 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
    button.btn-login {
      padding: 0 3rem;
      box-shadow: 0px 4px 15px rgba(255, 195, 64, 0.46);
+   }
+
+   button.btn-register {
+     position: relative;
+     bottom: 0.3rem;
    }
 
    .fgt-pass {
