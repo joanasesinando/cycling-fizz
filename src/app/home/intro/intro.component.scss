@@ -105,15 +105,12 @@
   }
 
   .video-popup {
-    //z-index: 99 !important;
     color: #57565C;
     font-family: 'quicksand-medium', serif;
     font-size: 1rem;
     display: table;
-    //font-weight: 500;
     position: relative;
-    //left: 10%;
-    //text-decoration: none;
+    text-decoration: none;
     margin-left: 5rem;
 
     .btn-video {
@@ -127,7 +124,11 @@
       display: inline-block;
       @include transition(all 0.2s ease-in-out);
 
-      fa-icon { color: $orange; }
+      img {
+        position: relative;
+        left: 3%;
+        bottom: 3%;
+      }
 
       &:hover { @include transform(translateY(-0.25rem)); }
     }
