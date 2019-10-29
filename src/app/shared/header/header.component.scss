@@ -76,7 +76,7 @@ $twitter: #0cbbff;
     color: transparent;
     width: 17rem;
     height: 4rem;
-    background: url("../../../assets/images/logo.svg") no-repeat center;
+    background: url("../../../assets/images/header/logo.svg") no-repeat center;
     background-size: 17rem 4rem;
     @include transition(all 0.3s ease-in-out);
   }
@@ -214,7 +214,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 }
 
  .modal-popout-bg {
-   background: white url(../../../assets/images/sign-inImg.svg) no-repeat top left;
+   background: white url(../../../assets/images/header/modal/ilustrations/green-girl.svg) no-repeat top left;
    background-size: 40rem;
  }
 
@@ -308,7 +308,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     .navbar-brand {
       width: 11rem;
       height: 1.7rem;
-      background: url("../../../assets/images/logo-dark.svg") no-repeat center;
+      background: url("../../../assets/images/header/logo-dark.svg") no-repeat center;
       background-size: 11rem 1.7rem;
     }
   }
@@ -317,7 +317,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
     .navbar-brand {
       width: 11rem;
       height: 1.7rem;
-      background: url("../../../assets/images/logo-orange.svg") no-repeat center;
+      background: url("../../../assets/images/header/logo-orange.svg") no-repeat center;
       background-size: 11rem 1.7rem;
     }
   }
