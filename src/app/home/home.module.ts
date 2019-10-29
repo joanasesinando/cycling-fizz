@@ -6,10 +6,11 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
+import { FeaturesComponent } from './features/features.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, IntroComponent],
+  declarations: [HomeComponent, IntroComponent, FeaturesComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,

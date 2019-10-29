@@ -11,6 +11,7 @@
  *  04. social-list
  *  05. scrolldown
  *  06. jumping balls
+ *  07. responsive
  *
  * =================================================================== */
 
@@ -66,7 +67,6 @@
 
 #intro {
   background: url(../../../assets/images/hero.svg) no-repeat top right;
-  //background-size: 50%;
   width: 100vw;
   height: 100vh;
   min-height: 750px;
@@ -325,9 +325,7 @@
 }
 
 @media only screen and (max-width:768px) {
-  .scrolldown {
-    display: none;
-  }
+
 }
 
 
@@ -534,29 +532,33 @@
  */
 
 @include  media-breakpoint-down(sm) {
-  .ball-1 { //done
-    left: 80%;
+  .ball-1 {
+    left: 95%;
     top: 48%;
   }
 
   .ball-2 {
     bottom: 9%;
-    left: 10%;
+    left: 18%;
   }
 
   .ball-3 {
-    bottom: 13%;
-    left: 80%;
+    bottom: 40%;
+    left: 4%;
+
+    img {
+      height: 1.5rem;
+    }
   }
 
-  .ball-4 { //done
-    bottom: 38%;
-    left: 10%;
+  .ball-4 {
+    bottom: 13%;
+    left: 78%;
   }
 
   .ball-5 {
-    bottom: 5%;
-    left: 63%;
+    bottom: 7%;
+    left: 58%;
   }
 }
 
@@ -566,7 +568,7 @@
  * ------------------------------------------------------------------- */
 
 
-@include  media-breakpoint-down(md) {
+@include  media-breakpoint-down(md) { // phones & tablets
 
   #intro {
     background-size: 75vh;
@@ -578,7 +580,7 @@
     transform: translateY(0);
 
     h1 {
-      font-size: 1.8rem;
+      font-size: 1.6rem;
       text-align: center;
     }
 
@@ -608,4 +610,11 @@
     margin-top: 75vh;
   }
 
+  .scrolldown {
+    display: none;
+  }
+
+}
+
+@include media-breakpoint-down(sm) { // phones
 }
