@@ -1,0 +1,276 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Quote Stylesheet
+ *  27-05-2019 #FIXME
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  01. colors
+ *  02. mixins
+ *  03. quote
+ *  04. jumping balls
+ *
+ * =================================================================== */
+
+
+/* ===================================================================
+ *  01. colors
+ *
+ * ------------------------------------------------------------------- */
+
+  /** general **/
+  $darkGray: #57565C;
+
+
+/* ===================================================================
+ *  02. mixins
+ *
+ * ------------------------------------------------------------------- */
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+  @mixin transition($property) {
+    -moz-transition: $property;
+    -o-transition: $property;
+    -webkit-transition: $property;
+    -ms-transition: $property;
+    transition: $property;
+  }
+
+  @mixin jumping-animation($animation-property, $transition-property) {
+    backface-visibility: hidden;
+    animation: $animation-property;
+    animation-delay: 1s;
+    @include transition($transition-property);
+    user-select: none;
+  }
+
+
+/* ===================================================================
+ *  03. quote
+ *
+ * ------------------------------------------------------------------- */
+
+  #quote {
+    font-family: 'nycdo-regular', sans-serif;
+    background: url("../../../assets/images/homepage/quote/blob.svg") no-repeat center center;
+    background-size: 38%;
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+
+
+    p {
+      font-size: 2.8rem;
+
+      &::after {
+        content: "John F. Kennedy";
+        display: block;
+        font-size: 1.3rem;
+        color: $darkGray;
+        text-align: end;
+        margin-top: 1rem;
+      }
+    }
+  }
+
+@include  media-breakpoint-down(lg) { // desktops, tablets & phones
+  #quote {
+    background-size: 50%;
+  }
+}
+
+@include  media-breakpoint-down(md) { // tablets & phones
+  #quote {
+    background-size: 53%;
+  }
+}
+
+@include  media-breakpoint-down(sm) { // phones
+  #quote {
+    background-size: 60%;
+
+    p {
+      font-size: 1.3rem;
+
+      &::after {
+        font-size: 0.7rem;
+      }
+    }
+  }
+}
+
+
+/* ===================================================================
+ *  04. jumping balls
+ *
+ * ------------------------------------------------------------------- */
+
+.jumping-animation {
+  @include jumping-animation(jumping 9s ease-in-out 2s infinite alternate, all .9s ease 5s);
+}
+.jumping-animation2 {
+  @include jumping-animation(jumping2 9s ease-in-out 2s infinite alternate, all 1s ease 3s);
+}
+.jumping-animation3 {
+  @include jumping-animation(jumping3 9s ease-in-out 2s infinite alternate, all 7s ease 2s);
+}
+.jumping-animation4 {
+  @include jumping-animation(jumping4 9s ease-in-out 2s infinite alternate, all 8s ease 4s);
+}
+.jumping-animation10 {
+  @include jumping-animation(jumping10 9s ease-in-out 2s infinite alternate, all 8s ease 4s);
+}
+.jumping-animation11 {
+  @include jumping-animation(jumping11 9s ease-in-out 2s infinite alternate, all 8s ease 4s);
+}
+
+@keyframes jumping {
+  0% {
+    transform: translateY(0px) translateX(0) rotate(0) scale(1);
+    opacity: .8;
+  }
+  25% {
+    transform: translateY(-10px) translateX(-10px) rotate(20deg) scale(0.8);
+    opacity: .9;
+  }
+  50% {
+    transform: translateY(-15px) translateX(-15px) rotate(10deg) scale(0.9);
+    opacity: .8;
+  }
+  75% {
+    transform: translateY(-20px) translateX(-20px) rotate(20deg) scale(0.75);
+    opacity: .6;
+  }
+  85% {
+    transform: translateY(-25px) translateX(-25px) rotate(20deg) scale(0.9);
+    opacity: .7;
+  }
+  100% {
+    transform: translateY(-15px) translateX(-15px) rotate(0) scale(0.95);
+    opacity: .85;
+  }
+}
+
+@keyframes jumping2 {
+  0% {
+    transform: translateY(0px) translateX(0) rotate(0) scale(1);
+    opacity: .5;
+  }
+  25% {
+    transform: translateY(-30px) translateX(10px) rotate(20deg) scale(0.8);
+    opacity: .8;
+  }
+  50% {
+    transform: translateY(15px) translateX(-15px) rotate(10deg) scale(0.7);
+    opacity: .8;
+  }
+  75% {
+    transform: translateY(30px) translateX(20px) rotate(20deg) scale(0.75);
+    opacity: .7;
+  }
+  100% {
+    transform: translateY(-15px) translateX(15px) rotate(0) scale(0.75);
+    opacity: .9;
+  }
+}
+
+@keyframes jumping3 {
+  0% {
+    transform: translateY(10px) translateX(0) rotate(0) scale(1);
+    opacity: .9;
+  }
+  20% {
+    transform: translateY(20px) translateX(10px) rotate(-20deg) scale(0.8);
+    opacity: .8;
+  }
+  40% {
+    transform: translateY(15px) translateX(-15px) rotate(10deg) scale(0.75);
+    opacity: .8;
+  }
+  40% {
+    transform: translateY(-15px) translateX(-25px) rotate(10deg) scale(0.5);
+    opacity: 1;
+  }
+  80% {
+    transform: translateY(-30px) translateX(20px) rotate(-20deg) scale(0.75);
+    opacity: .6;
+  }
+  100% {
+    transform: translateY(15px) translateX(15px) rotate(0) scale(0.95);
+    opacity: .7;
+  }
+}
+
+@keyframes jumping4 {
+  0% {
+    transform: translateY(-30px) translateX(20px) rotate(0) scale(1.2);
+    opacity: .7;
+  }
+  25% {
+    transform: translateY(-20px) translateX(10px) rotate(50deg) scale(0.6);
+    opacity: .8;
+  }
+  50% {
+    transform: translateY(15px) translateX(-15px) rotate(20deg) scale(0.5);
+    opacity: .9;
+  }
+  75% {
+    transform: translateY(30px) translateX(20px) rotate(50deg) scale(0.75);
+    opacity: .7;
+  }
+  100% {
+    transform: translateY(-15px) translateX(15px) rotate(0) scale(0.5);
+    opacity: .9;
+  }
+}
+
+@keyframes jumping10 {
+  0% {
+    transform: rotate(180deg);
+    display: block;
+  }
+  100% {
+    transform: rotate(30deg);
+    display: block;
+  }
+}
+
+@keyframes jumping11 {
+  0% {
+    transform: rotate(180deg) translate(-20px, 20px);
+    display: block;
+  }
+  100% {
+    transform: rotate(30deg) translate(0px, 0px);
+    display: block;
+  }
+}
+
+.ball-1 {
+  position: absolute;
+  left: 10%;
+  bottom: 55%;
+}
+.ball-2 {
+  position: absolute;
+  left: 20%;
+  bottom: 42%;
+}
+.ball-3 {
+  position: absolute;
+  left: 16%;
+  bottom: 32%;
+}
+.ball-4 {
+  position: absolute;
+  right: 28%;
+  top: 36%;
+}
+.ball-5 {
+  position: absolute;
+  right: 15%;
+  top: 55%;
+}

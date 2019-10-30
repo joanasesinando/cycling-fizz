@@ -59,6 +59,14 @@
      transform: $property;
  }
 
+@mixin jumping-animation($animation-property, $transition-property) {
+  backface-visibility: hidden;
+  animation: $animation-property;
+  animation-delay: 1s;
+  @include transition($transition-property);
+  user-select: none;
+}
+
 
 /* ===================================================================
  *  03. intro & intro-content
@@ -337,46 +345,22 @@
  * ------------------------------------------------------------------- */
 
   .jumping-animation {
-    backface-visibility: hidden;
-    animation: jumping 9s ease-in-out 2s infinite alternate;
-    animation-delay: 1s;
-    transition: all .9s ease 5s;
-    user-select: none;
+    @include jumping-animation(jumping 9s ease-in-out 2s infinite alternate, all .9s ease 5s);
   }
   .jumping-animation2 {
-    backface-visibility: hidden;
-    animation: jumping2 9s ease-in-out 2s infinite alternate;
-    animation-delay: 1s;
-    transition: all 1s ease 3s;
-    user-select: none;
+    @include jumping-animation(jumping2 9s ease-in-out 2s infinite alternate, all 1s ease 3s);
   }
   .jumping-animation3 {
-    backface-visibility: hidden;
-    animation: jumping3 9s ease-in-out 2s infinite alternate;
-    animation-delay: 1s;
-    transition: all 7s ease 2s;
-    user-select: none;
+    @include jumping-animation(jumping3 9s ease-in-out 2s infinite alternate, all 7s ease 2s);
   }
   .jumping-animation4 {
-    backface-visibility: hidden;
-    animation: jumping4 9s ease-in-out 2s infinite alternate;
-    animation-delay: 1s;
-    transition: all 8s ease 4s;
-    user-select: none;
+    @include jumping-animation(jumping4 9s ease-in-out 2s infinite alternate, all 8s ease 4s);
   }
   .jumping-animation10 {
-    backface-visibility: hidden;
-    animation: jumping10 9s ease-in-out 2s infinite alternate;
-    animation-delay: 1s;
-    transition: all 8s ease 4s;
-    user-select: none;
+    @include jumping-animation(jumping10 9s ease-in-out 2s infinite alternate, all 8s ease 4s);
   }
   .jumping-animation11 {
-    backface-visibility: hidden;
-    animation: jumping11 9s ease-in-out 2s infinite alternate;
-    animation-delay: 1s;
-    transition: all 8s ease 4s;
-    user-select: none;
+    @include jumping-animation(jumping11 9s ease-in-out 2s infinite alternate, all 8s ease 4s);
   }
   
   @keyframes jumping {
