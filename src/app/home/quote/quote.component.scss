@@ -64,6 +64,7 @@
 
     p {
       font-size: 2.8rem;
+      z-index: 30;
 
       &::after {
         content: "John F. Kennedy";
@@ -85,19 +86,32 @@
 @include  media-breakpoint-down(md) { // tablets & phones
   #quote {
     background-size: 53%;
+
+    p {
+      font-size: 2.3rem;
+    }
+  }
+}
+
+@include  media-breakpoint-down(xs) { // phones
+  #quote {
+    background-size: 60%;
+
+    p {
+      font-size: 2rem;
+
+      &::after {
+        font-size: 0.7rem;
+      }
+    }
   }
 }
 
 @include  media-breakpoint-down(sm) { // phones
   #quote {
-    background-size: 60%;
 
     p {
-      font-size: 1.3rem;
-
-      &::after {
-        font-size: 0.7rem;
-      }
+      font-size: 1.5rem;
     }
   }
 }
@@ -251,26 +265,31 @@
 
 .ball-1 {
   position: absolute;
+  z-index: 20;
   left: 10%;
   bottom: 55%;
 }
 .ball-2 {
   position: absolute;
+  z-index: 20;
   left: 20%;
   bottom: 42%;
 }
 .ball-3 {
   position: absolute;
+  z-index: 20;
   left: 16%;
   bottom: 32%;
 }
 .ball-4 {
   position: absolute;
+  z-index: 20;
   right: 28%;
   top: 36%;
 }
 .ball-5 {
   position: absolute;
+  z-index: 20;
   right: 15%;
   top: 55%;
 }
