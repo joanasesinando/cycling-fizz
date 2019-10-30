@@ -92,3 +92,16 @@
     font-style: normal;
     font-weight: normal;
   }
+
+
+/* ===================================================================
+ *  Nothing You Could Do
+ *
+ * ------------------------------------------------------------------- */
+
+@font-face {
+    font-family: "nycdo-regular";
+    src: url("../assets/fonts/Nothing You Could Do/NothingYouCouldDo-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

@@ -8,10 +8,11 @@ import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
 import { FeaturesComponent } from './features/features.component';
 import { CardComponent } from './features/card/card.component';
+import { QuoteComponent } from './quote/quote.component';
 
 
 @NgModule({
-  declarations: [HomeComponent, IntroComponent, FeaturesComponent, CardComponent],
+  declarations: [HomeComponent, IntroComponent, FeaturesComponent, CardComponent, QuoteComponent],
   imports: [
     CommonModule,
     HomeRoutingModule,
