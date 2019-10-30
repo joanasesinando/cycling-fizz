@@ -1,54 +1,63 @@
 <section id="features" >
     <div class="container-fluid" data-aos="fade-up" data-aos-duration="1000">
         <div class="row">
-            <div class="col-2 offset-7">
-                <app-card
-                        [iconSrc]="'../../../assets/images/homepage/features/icons/map.svg'"
-                        [title]="'Mapa Informativo'"
-                        [description]="'Mapa com a localização de ciclovias, estacionamento, lojas, bicicletas partilhadas e muito mais.'" >
-                </app-card>
+            <div class="col-lg-5 offset-lg-2 text-right">
+                <h1 class="mt-lg-5 mr-lg-5">Psst, <br class="d-none d-lg-block"> explora as <br class="d-block d-lg-none"> nossas <br class="d-none d-lg-block"> secções.</h1>
             </div>
-            <div class="col-2">
-                <app-card
-                        [iconSrc]="'../../../assets/images/homepage/features/icons/traffic-light.svg'"
-                        [title]="'Regras de Trânsito'"
-                        [description]="'Compilação do código da estrada relevante para ciclistas.'" >
-                </app-card>
+            <div class="col-lg-4">
+                <div class="row my-5 justify-content-around">
+                    <div class="col-6">
+                        <app-card
+                                [iconSrc]="'../../../assets/images/homepage/features/icons/map.svg'"
+                                [title]="'Mapa Informativo'"
+                                [description]="'Mapa com a localização de ciclovias, estacionamento, lojas, bicicletas partilhadas e muito mais.'" >
+                        </app-card>
+                    </div>
+                    <div class="col-6">
+                        <app-card
+                                [iconSrc]="'../../../assets/images/homepage/features/icons/traffic-light.svg'"
+                                [title]="'Regras de Trânsito'"
+                                [description]="'Compilação do código da estrada relevante para ciclistas.'" >
+                        </app-card>
+                    </div>
+                </div>
+
+                <div class="row my-5 justify-content-around">
+                    <div class="col-6">
+                        <app-card
+                                [iconSrc]="'../../../assets/images/homepage/features/icons/route.svg'"
+                                [title]="'Percursos'"
+                                [description]="'Biblioteca de percursos turísticos e de lazer em bicicleta com vários níveis de dificuldade.'" >
+                        </app-card>
+                    </div>
+                    <div class="col-6">
+                        <app-card
+                                [iconSrc]="'../../../assets/images/homepage/features/icons/beginner.svg'"
+                                [title]="'Principiantes'"
+                                [description]="'Compilação de dicas úteis para quem está a dar os seus primeiros passos na bicicleta em meio urbano.'" >
+                        </app-card>
+                    </div>
+                </div>
+
+                <div class="row my-5 justify-content-around">
+                    <div class="col-6">
+                        <app-card
+                                [iconSrc]="'../../../assets/images/homepage/features/icons/forum.svg'"
+                                [title]="'Fórum'"
+                                [description]="'Local de partilha de ideias, opiniões, dúvidas e conselhos entre a comunidade do ciclismo.'" >
+                        </app-card>
+                    </div>
+                    <div class="col-6">
+                        <app-card
+                                [iconSrc]="'../../../assets/images/homepage/features/icons/calendar.svg'"
+                                [title]="'Eventos'"
+                                [description]="'Calendário com eventos relativos ao mundo do ciclismo.'" >
+                        </app-card>
+                    </div>
+                </div>
             </div>
         </div>
 
-        <div class="row">
-            <div class="col-2 offset-7">
-                <app-card
-                        [iconSrc]="'../../../assets/images/homepage/features/icons/route.svg'"
-                        [title]="'Percursos'"
-                        [description]="'Biblioteca de percursos turísticos e de lazer em bicicleta com vários níveis de dificuldade.'" >
-                </app-card>
-            </div>
-            <div class="col-2">
-                <app-card
-                        [iconSrc]="'../../../assets/images/homepage/features/icons/beginner.svg'"
-                        [title]="'Principiantes'"
-                        [description]="'Compilação de dicas úteis para quem está a dar os seus primeiros passos na bicicleta em meio urbano.'" >
-                </app-card>
-            </div>
-        </div>
-
-        <div class="row">
-            <div class="col-2 offset-7">
-                <app-card
-                        [iconSrc]="'../../../assets/images/homepage/features/icons/forum.svg'"
-                        [title]="'Fórum'"
-                        [description]="'Local de partilha de ideias, opiniões, dúvidas e conselhos entre a comunidade do ciclismo.'" >
-                </app-card>
-            </div>
-            <div class="col-2">
-                <app-card
-                        [iconSrc]="'../../../assets/images/homepage/features/icons/calendar.svg'"
-                        [title]="'Eventos'"
-                        [description]="'Calendário com eventos relativos ao mundo do ciclismo.'" >
-                </app-card>
-            </div>
-        </div>
     </div>
+    <div id="background"></div>
 </section>
