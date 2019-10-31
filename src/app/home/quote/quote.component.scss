@@ -268,7 +268,7 @@
 .ball-1 {
   position: absolute;
   z-index: 20;
-  left: 10%;
+  left: 15%;
   bottom: 55%;
 
   @include  media-breakpoint-down(lg) { // desktops, tablets & phones
@@ -285,7 +285,7 @@
 .ball-2 {
   position: absolute;
   z-index: 20;
-  left: 14%;
+  left: 19%;
   bottom: 42%;
 
   @include  media-breakpoint-down(lg) { // desktops, tablets & phones
@@ -305,7 +305,7 @@
 .ball-3 {
   position: absolute;
   z-index: 20;
-  left: 11%;
+  left: 16%;
   bottom: 32%;
 
   @include  media-breakpoint-down(lg) { // desktops, tablets & phones
