@@ -44,12 +44,14 @@ $darkGray: #57565C;
   width: 100vw;
   height: 100vh;
   min-height: 750px;
-  margin: 10rem 0;
+  margin-top: 10rem;
   display: table;
   position: relative;
 
-  h1 {
+  h3 {
     font-family: "martel-extraBold", serif;
+    font-size: 2rem;
+    line-height: 3rem;
   }
 
   #background {
