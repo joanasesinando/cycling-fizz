@@ -1,0 +1,34 @@
+<section id="blog" data-aos="fade-up" data-aos-duration="1000">
+    <h1 class="text-center">Visita o nosso <span>blog</span>!</h1>
+    <p class="text-center mb-5">Não percas os nossos artigos sobre ciclismo e outros assuntos relevantes <br class="d-none d-sm-block">como mobilidade, a vida urbana e muito mais.</p>
+
+    <div class="card-deck justify-content-center">
+        <app-b-card
+                [photoSrc]="'../../../assets/images/homepage/blog/photos/blog1.png'"
+                [topic]="'Ciclismo'"
+                [date]="'05/21/2019'"
+                [title]="'Lorem ipsum dolor sit amet consectetuer'"
+                class="mb-lg-none mb-5">
+        </app-b-card>
+        <app-b-card
+                [photoSrc]="'../../../assets/images/homepage/blog/photos/blog2.png'"
+                [topic]="'Mobilidade'"
+                [date]="'12/27/2019'"
+                [title]="'Lorem ipsum dolor sit amet consectetuer'"
+                class="mb-lg-none mb-5">
+        </app-b-card>
+        <app-b-card
+                [photoSrc]="'../../../assets/images/homepage/blog/photos/blog3.png'"
+                [topic]="'Vida urbana'"
+                [date]="'11/30/2019'"
+                [title]="'Lorem ipsum dolor sit amet consectetuer'"
+                class="mb-lg-none mb-4">
+        </app-b-card>
+    </div>
+
+    <span class="see-more d-flex justify-content-center justify-content-lg-start" >
+        <a href="">Ver mais <fa-icon [icon]="faArrowRight" class="ml-1"></fa-icon></a>
+    </span>
+
+    <div id="background"></div>
+</section>

@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import {faTwitter, faInstagram, faFacebookF, faYoutube} from '@fortawesome/free-brands-svg-icons';
-import { faArrowRight, faPlay } from '@fortawesome/free-solid-svg-icons';
+import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-intro',
@@ -16,7 +16,6 @@ export class IntroComponent implements OnInit {
   faFacebookF = faFacebookF;
   faYoutube = faYoutube;
   faArrowRight = faArrowRight;
-  faPlay = faPlay;
 
   constructor() { }
 
