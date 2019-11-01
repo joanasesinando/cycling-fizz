@@ -61,7 +61,6 @@
     height: 100vh;
     position: relative;
 
-
     p {
       font-size: 2.8rem;
       z-index: 30;
@@ -86,32 +85,34 @@
 @include  media-breakpoint-down(md) { // tablets & phones
   #quote {
     background-size: 53%;
+    height: 50vw;
 
     p {
-      font-size: 2.3rem;
-    }
-  }
-}
-
-@include  media-breakpoint-down(xs) { // phones
-  #quote {
-    background-size: 60%;
-
-    p {
-      font-size: 2rem;
-
-      &::after {
-        font-size: 0.7rem;
-      }
+      font-size: 2.5rem;
     }
   }
 }
 
 @include  media-breakpoint-down(sm) { // phones
   #quote {
+    height: 70vw;
 
     p {
-      font-size: 1.5rem;
+      font-size: 1.8rem;
+    }
+  }
+}
+
+@include  media-breakpoint-down(xs) { // portrait phones
+  #quote {
+    background-size: 85%;
+
+    p {
+      font-size: 1.6rem;
+
+      &::after {
+        font-size: .9rem;
+      }
     }
   }
 }
@@ -266,30 +267,96 @@
 .ball-1 {
   position: absolute;
   z-index: 20;
-  left: 10%;
+  left: 15%;
   bottom: 55%;
+
+  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+    left: 8%;
+  }
+  @include  media-breakpoint-down(md) { // tablets & phones
+    bottom: 40%;
+  }
+
+  @include  media-breakpoint-down(sm) { // phones
+    top: 10%;
+  }
 }
 .ball-2 {
   position: absolute;
   z-index: 20;
-  left: 20%;
+  left: 19%;
   bottom: 42%;
+
+  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+    left: 18%;
+  }
+
+  @include  media-breakpoint-down(md) { // tablets & phones
+    bottom: 20%;
+  }
+
+  @include  media-breakpoint-down(sm) { // phones
+    img {
+      height: 1.5rem;
+    }
+  }
 }
 .ball-3 {
   position: absolute;
   z-index: 20;
   left: 16%;
   bottom: 32%;
+
+  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+    left: 14%;
+  }
+
+  @include  media-breakpoint-down(md) { // tablets & phones
+    bottom: 10%;
+  }
+
+  @include  media-breakpoint-down(sm) { // phones
+    left: 8%;
+  }
 }
 .ball-4 {
   position: absolute;
   z-index: 20;
   right: 28%;
   top: 36%;
+
+  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+      right: 20%;
+  }
+
+  @include media-breakpoint-down(sm) { // phones
+    top: 20%;
+    right: 15%;
+
+    img {
+      height: 2rem;
+    }
+  }
 }
 .ball-5 {
   position: absolute;
   z-index: 20;
   right: 15%;
   top: 55%;
+
+  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+    right: 10%;
+  }
+
+  @include media-breakpoint-down(sm) { // phones
+    top: 70%;
+  }
+}
+
+@include media-breakpoint-down(sm) { // tablets & phones
+  .yellow-ball {
+    img {
+      height: 0.6rem;
+    }
+  }
 }

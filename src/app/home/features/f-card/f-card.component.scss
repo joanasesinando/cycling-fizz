@@ -1,0 +1,26 @@
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+.card {
+  //height: 13rem;
+  border: none;
+  border-radius: 1rem;
+
+  img {
+    height: 2rem;
+  }
+
+  .card-title {
+    font-family: 'quicksand-bold', sans-serif;
+    font-size: 1.2rem;
+
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
+  }
+
+  .card-body {
+    font-size: 0.9rem;
+  }
+}

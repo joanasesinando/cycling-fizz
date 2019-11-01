@@ -1,0 +1,38 @@
+/** general **/
+$red: #ef5350;
+$orange: #FF9F3C;
+$header: #2F373D;
+$gray: #838788;
+$lightGray: #E0E0E0;
+
+.card {
+  font-family: 'quicksand-regular', sans-serif;
+  border: none;
+  border-radius: 1rem;
+
+  .card-subtitle {
+    font-family: 'quicksand-bold', sans-serif;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color: $orange;
+
+    &::after {
+      content: attr(data-after-content);
+      font-family: 'quicksand-light', sans-serif;
+      font-size: .8rem;
+      color: $gray;
+      text-transform: none;
+    }
+  }
+
+  .card-title {
+    font-family: 'quicksand-bold', sans-serif;
+  }
+
+  .engagement {
+    font-size: 0.8rem;
+  }
+
+  #comments { color: $lightGray; }
+  #likes { color: $red; }
+}

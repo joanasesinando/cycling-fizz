@@ -1,0 +1,62 @@
+$orange: #FF9F3C;
+$header: #2F373D;
+$darkGray: #57565C;
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+#blog {
+  margin-top: 10rem;
+  font-family: 'quicksand-regular', sans-serif;
+
+  h1 {
+    font-family: 'martel-extraBold', sans-serif;
+    color: $header;
+
+    span {
+      background: linear-gradient(0deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    @include media-breakpoint-down(xs) { //phones
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    line-height: 1.6rem;
+  }
+
+  .card-deck {
+    flex-flow: row wrap;
+  }
+
+  .see-more {
+    @include media-breakpoint-up(lg) { //desktops, tablets & phones
+      position: relative;
+      left: 77%;
+    }
+
+    a {
+      color: $darkGray;
+      text-decoration: underline;
+
+      &:hover {
+        color: $orange;
+      }
+    }
+  }
+
+  #background {
+    background: url("../../../assets/images/homepage/blog/b-blob.svg") no-repeat center right;
+    background-size: contain;
+    width: 90vw;
+    height: 100vh;
+    top: 10%;
+    bottom: 0;
+    z-index: -1;
+    position: absolute;
+  }
+}
