@@ -42,8 +42,9 @@ export class FCardComponent implements OnInit {
   @Input() img : any;
   @Input() title : string;
   @Input() description: string;
+  @Input() href: string = "#";   //FIXME mudar default p/ algo melhor (404 page?)
 
-  constructor(private sanitizer: DomSanitizer) { }
+    constructor(private sanitizer: DomSanitizer) { }
 
   getDay() : string {
     let day = (new Date()).getDate().toString();
@@ -52,5 +53,5 @@ export class FCardComponent implements OnInit {
 
   ngOnInit() {
   }
-v
+
 }
