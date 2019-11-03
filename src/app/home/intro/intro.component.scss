@@ -5,71 +5,25 @@
  *  ------------------------------------------------------------------
  *
  *  TOC:
- *  01. colors
- *  02. mixins
- *  03. intro & intro-content
- *  04. social-list
- *  05. scrolldown
- *  06. jumping balls
- *  07. responsive
+ *  01. intro & intro-content
+ *  02. social-list
+ *  03. scrolldown
+ *  04. jumping balls
+ *  05. responsive
  *
  * =================================================================== */
 
-
-/* ===================================================================
- *  01. colors
- *
- * ------------------------------------------------------------------- */
-
-  /** general **/
-  $orange: #FF9F3C;
-  $header: #2F373D;
-  $darkBlue: #008C97;
-  $darkGray: #57565C;
-
-  /** social-list **/
-  $facebook: #3b68c6;
-  $instagram: #ce2f89;
-  $twitter: #0cbbff;
-  $youtube: #e5241d;
-
-
-/* ===================================================================
- *  02. mixins
- *
- * ------------------------------------------------------------------- */
+ @import "~styles/_colors";
+ @import "~styles/mixins";
  
  @import "../../../../node_modules/bootstrap/scss/functions";
  @import "../../../../node_modules/bootstrap/scss/variables";
  @import "../../../../node_modules/bootstrap/scss/mixins";
-  
- @mixin transition($property) {
-     -moz-transition: $property;
-     -o-transition: $property;
-     -webkit-transition: $property;
-     -ms-transition: $property;
-     transition: $property;
- }
- 
- @mixin transform($property) {
-     -moz-transform: $property;
-     -o-transform: $property;
-     -webkit-transform: $property;
-     -ms-transform: $property;
-     transform: $property;
- }
 
-@mixin jumping-animation($animation-property, $transition-property) {
-  backface-visibility: hidden;
-  animation: $animation-property;
-  animation-delay: 1s;
-  @include transition($transition-property);
-  user-select: none;
-}
 
 
 /* ===================================================================
- *  03. intro & intro-content
+ *  01. intro & intro-content
  *
  * ------------------------------------------------------------------- */
 
@@ -147,7 +101,7 @@
 
 
 /* ===================================================================
- *  04. social-list
+ *  02. social-list
  *
  * ------------------------------------------------------------------- */
 
@@ -217,7 +171,7 @@
   
   
  /* ===================================================================
- *  05. scrolldown
+ *  03. scrolldown
  *
  * ------------------------------------------------------------------- */
   
@@ -340,7 +294,7 @@
 
 
 /* ===================================================================
- *  06. jumping balls
+ *  04. jumping balls
  *
  * ------------------------------------------------------------------- */
 
@@ -549,7 +503,7 @@
 }
 
 /* ===================================================================
- *  07. Responsive
+ *  05. Responsive
  *
  * ------------------------------------------------------------------- */
 

@@ -1,31 +1,27 @@
-$orange: #FF9F3C;
-$header: #2F373D;
-$darkGray: #57565C;
-
 /* ===================================================================
- *  02. mixins
  *
- * ------------------------------------------------------------------- */
+ *  Cycling Fizz v1.0 Blog Stylesheet
+ *  03-11-2019 #FIXME
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  01. blog
+ *  02. jumping balls
+ *
+ * =================================================================== */
+
+@import "~styles/colors";
+@import "~styles/mixins";
 
 @import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
-@mixin transition($property) {
-  -moz-transition: $property;
-  -o-transition: $property;
-  -webkit-transition: $property;
-  -ms-transition: $property;
-  transition: $property;
-}
 
-@mixin jumping-animation($animation-property, $transition-property) {
-  backface-visibility: hidden;
-  animation: $animation-property;
-  animation-delay: 1s;
-  @include transition($transition-property);
-  user-select: none;
-}
+/* ===================================================================
+ *  01. blog
+ *
+ * ------------------------------------------------------------------- */
 
 #blog {
   margin-top: 10rem;
@@ -84,7 +80,7 @@ $darkGray: #57565C;
 
 
 /* ===================================================================
- *  04. jumping balls
+ *  02. jumping balls
  *
  * ------------------------------------------------------------------- */
 

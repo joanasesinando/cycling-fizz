@@ -1,68 +1,23 @@
 /* =================================================================== 
  *
- *  Cycling Fizz v1.0 Main Stylesheet
+ *  Cycling Fizz v1.0 Global Stylesheet
  *  27-05-2019 #FIXME
  *  ------------------------------------------------------------------
  *
  *  TOC:
- *  01. webfonts and iconfonts
- *  02. colors
- *  03. base style overrides
- *  04. typography & general theme styles
- *  05. forms
- *  06. buttons
- *  07. other components
- *  08. common and reusable theme styles
+ *  01. buttons
  *
  * =================================================================== */
 
+@import 'fonts.css';
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
 
- //@import '../../node_modules/bootstrap/scss/functions';
- //@import '../../node_modules/bootstrap/scss/variables';
-
-
-/* ===================================================================
- *  01. webfonts and iconfonts
- *
- * ------------------------------------------------------------------- */
-
- @import 'fonts.css';
- @import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+@import "~styles/colors";
+@import "~styles/mixins";
 
 
 /* ===================================================================
- *  02. colors
- *
- * ------------------------------------------------------------------- */
-
- $orange: #FF923C;
- $header: #2F373D;
-
-
- /* ===================================================================
- *  02. mixins
- *
- * ------------------------------------------------------------------- */
-
- @mixin transition($property) {
-    -moz-transition: $property;
-    -o-transition: $property;
-    -webkit-transition: $property;
-    -ms-transition: $property;
-    transition: $property;
-}
-
-@mixin transform($property) {
-    -moz-transform: $property;
-    -o-transform: $property;
-    -webkit-transform: $property;
-    -ms-transform: $property;
-    transform: $property;
-}
-
-
-/* ===================================================================
- *  06. buttons
+ *  01. buttons
  *
  * ------------------------------------------------------------------- */
 
@@ -76,7 +31,7 @@ button.btn-primary,
 input[type="submit"].btn-primary,
 input[type="reset"].btn-primary,
 input[type="button"].btn-primary {
-    font-family: quicksand-bold;
+    font-family: quicksand-bold, sans-serif;
     height: $height;
     line-height: $height;
     padding: $padding;

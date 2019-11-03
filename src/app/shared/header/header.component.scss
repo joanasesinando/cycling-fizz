@@ -5,63 +5,24 @@
  *  ------------------------------------------------------------------
  *
  *  TOC:
- *  01. colors
- *  02. mixins
- *  03. main navigation
- *  04. hamburger button
- *  05. modal
- *  06. responsive
+ *  01. main navigation
+ *  02. hamburger button
+ *  03. modal
+ *  04. responsive
  *
  * =================================================================== */
 
-
-/* ===================================================================
- *  01. colors
- *
- * ------------------------------------------------------------------- */
-
-/** general **/
-$orange: #FF9F3C;
-$green: #32BE8E;
-$lightGray: #F2F6F8;
-$gray: #838788;
-$darkGray: #57565C;
-$header: #2F373D;
-
-/** social-list **/
-$facebook: #3b68c6;
-$google: #FB3B2E;
-$twitter: #0cbbff;
-
-
-/* ===================================================================
- *  02. mixins
- *
- * ------------------------------------------------------------------- */
+@import "~styles/colors";
+@import "~styles/mixins";
 
 @import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
- @mixin transition($property) {
-  -moz-transition: $property;
-  -o-transition: $property;
-  -webkit-transition: $property;
-  -ms-transition: $property;
-  transition: $property;
- }
-
-@mixin transform($property) {
-  -moz-transform: $property;
-  -o-transform: $property;
-  -webkit-transform: $property;
-  -ms-transform: $property;
-  transform: $property;
-}
 
 
 /* ===================================================================
- *  03. main navigation
+ *  01. main navigation
  *
  * ------------------------------------------------------------------- */
 
@@ -166,7 +127,7 @@ nav.bg-white {
 
 
 /* ===================================================================
- *  04. hamburger button
+ *  02. hamburger button
  *
  * ------------------------------------------------------------------- */
 
@@ -189,7 +150,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 
 /* ===================================================================
- *  05. modal
+ *  03. modal
  *
  * ------------------------------------------------------------------- */
 
@@ -235,7 +196,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
      width: 2.3rem;
      border-radius: 50%;
      line-height: 2.3rem;
-     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.25);
+     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
      @include transition(all 0.2s ease-in-out);
 
      fa-icon {
@@ -269,7 +230,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
    button.btn-login {
      padding: 0 3rem;
-     box-shadow: 0px 4px 15px rgba(255, 195, 64, 0.46);
+     box-shadow: 0 4px 15px rgba(255, 195, 64, 0.46);
    }
 
    button.btn-register {
@@ -288,7 +249,7 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 
 /* ===================================================================
- *  06. responsive
+ *  04. responsive
  *
  * ------------------------------------------------------------------- */
 
@@ -408,7 +369,5 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
   }
 
 }
-
-//@import '../../../../node_modules/bootstrap/scss/bootstrap.scss'
 
 
