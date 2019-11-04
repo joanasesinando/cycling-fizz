@@ -11,6 +11,7 @@ import localePt from '@angular/common/locales/pt-PT';
 
 registerLocaleData(localePt, 'pt');
 
+
 @NgModule({
   declarations: [
     AppComponent
