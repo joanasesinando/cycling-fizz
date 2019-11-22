@@ -6,10 +6,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
+import { ModalLoginRegisterComponent } from './header/modal-login-register/modal-login-register.component';
+import { ModalLoginComponent } from './header/modal-login/modal-login.component';
+import { ModalRegisterComponent } from './header/modal-register/modal-register.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent],
+  declarations: [HeaderComponent, FooterComponent, ModalLoginRegisterComponent, ModalLoginComponent, ModalRegisterComponent],
   imports: [
     CommonModule,
     SharedRoutingModule,

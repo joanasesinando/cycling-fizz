@@ -1,0 +1,34 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+
+.modal {
+  font-family: 'quicksand-regular', sans-serif;
+
+  .modal-content {
+    border: none;
+    border-radius: 1rem;
+
+    .modal-body {
+      .login {
+        height: 37rem;
+      }
+
+      img {
+        width: 40rem;
+        border-radius: 1rem;
+      }
+    }
+  }
+}
+
+.modal-popout-bg {
+  background: white url(../../../../assets/images/header/modal/ilustrations/green-girl.svg) no-repeat top left;
+  background-size: 40rem;
+}
+
+

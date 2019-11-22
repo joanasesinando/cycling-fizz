@@ -7,8 +7,7 @@
  *  TOC:
  *  01. main navigation
  *  02. hamburger button
- *  03. modal
- *  04. responsive
+ *  03. responsive
  *
  * =================================================================== */
 
@@ -149,107 +148,9 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 }
 
 
-/* ===================================================================
- *  03. modal
- *
- * ------------------------------------------------------------------- */
-
-.modal {
-  font-family: 'quicksand-regular', sans-serif;
-
-  .modal-content {
-    border: none;
-    border-radius: 1rem;
-
-    .modal-body {
-      .login {
-        height: 37rem;
-      }
-
-      img {
-        width: 40rem;
-        border-radius: 1rem;
-      }
-    }
-  }
-}
-
- .modal-popout-bg {
-   background: white url(../../../assets/images/header/modal/ilustrations/green-girl.svg) no-repeat top left;
-   background-size: 40rem;
- }
-
- .flex-row {
-  margin-left: 63%;
- }
-
- .login {
-   .login-heading {
-     font-family: 'martel-bold', sans-serif;
-     font-size: 2.1rem;
-     text-align: center;
-   }
-
-   .social a {
-     text-align: center;
-     height: 2.3rem;
-     width: 2.3rem;
-     border-radius: 50%;
-     line-height: 2.3rem;
-     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
-     @include transition(all 0.2s ease-in-out);
-
-     fa-icon {
-       font-size: 1.1rem;
-       line-height: 0;
-       color: white;
-     }
-
-     &#fb { background: $facebook; }
-     &#gg { background: $google; }
-     &#tt { background: $twitter; }
-
-     &:hover { @include transform(translateY(-0.5rem)); }
-   }
-
-   .form-control {
-     padding: 1.5rem 1.5rem;
-     margin-bottom: 1rem;
-     border-radius: 3rem;
-
-     &:focus {
-       box-shadow: 0 0 0 0.2rem rgba(89, 59, 254, 0.25);
-       border-color: #8280ff;
-     }
-   }
-
-   .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
-     border-color: #706dfe;
-     background-color: #706dfe;
-   }
-
-   button.btn-login {
-     padding: 0 3rem;
-     box-shadow: 0 4px 15px rgba(255, 195, 64, 0.46);
-   }
-
-   button.btn-register {
-     position: relative;
-     bottom: 0.3rem;
-   }
-
-   .fgt-pass {
-     color: $orange;
-   }
-
-   .gray-label {
-     color: $darkGray;
-   }
- }
-
 
 /* ===================================================================
- *  04. responsive
+ *  03. responsive
  *
  * ------------------------------------------------------------------- */
 

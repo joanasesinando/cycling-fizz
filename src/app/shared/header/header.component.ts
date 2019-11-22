@@ -3,8 +3,6 @@ import { Component, OnInit, HostListener } from '@angular/core';
 import { faGlobeEurope, faChevronDown, faTrafficLight, 
         faRoute, faQuestion, faComments, faUsers } from '@fortawesome/free-solid-svg-icons';
 
-import { faTwitter, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
-
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -20,9 +18,6 @@ export class HeaderComponent implements OnInit {
   faQuestion = faQuestion;
   faComments = faComments;
   faUsers = faUsers;
-  faTwitter = faTwitter;
-  faFacebookF = faFacebookF;
-  faGooglePlusG = faGooglePlusG;
 
   mobileView: boolean;
 

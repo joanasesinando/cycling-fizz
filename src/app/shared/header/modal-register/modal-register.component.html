@@ -1,0 +1,78 @@
+<div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+
+    <div class="login d-flex-inline align-items-center justify-content-end py-5">
+        <div class="flex-row">
+            <div class="col-10">
+                <!-- Heading -->
+                <h3 class="login-heading mb-2">Criar conta</h3>
+
+                <div class="text-center">
+                    <label class="gray-label">cria conta com:</label>
+                </div>
+
+                <!-- Sign-in alternatives -->
+                <div class="social d-flex justify-content-center mb-4">
+                    <a href="#" class="mx-2" id="fb">
+                        <fa-icon [icon]="faFacebookF"></fa-icon>
+                    </a>
+                    <a href="#" class="mx-2" id="gg">
+                        <fa-icon [icon]="faGooglePlusG"></fa-icon>
+                    </a>
+                    <a href="#" class="mx-2" id="tt">
+                        <fa-icon [icon]="faTwitter"></fa-icon>
+                    </a>
+                </div>
+
+                <form>
+                    <div class="text-center">
+                        <label class="gray-label">ou usa a tua conta de e-mail:</label>
+                    </div>
+
+                    <!-- Username -->
+                    <div class="form-label-group">
+                        <input type="text" id="inputUsername" class="form-control" placeholder="Nome de utilizador" required autofocus>
+                    </div>
+
+                    <!-- E-mail address -->
+                    <div class="form-label-group">
+                        <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de e-mail" required autofocus>
+                    </div>
+
+                    <hr>
+
+                    <!-- Password -->
+                    <div class="form-label-group">
+                        <input type="password" id="inputPassword" class="form-control" placeholder="Palavra-passe" required>
+                    </div>
+
+                    <!-- Confirm password -->
+                    <div class="form-label-group">
+                        <input type="password" id="inputConfirmPassword" class="form-control" placeholder="Confirmar palavra-passe" required>
+                    </div>
+
+                    <!-- Remember password checkbox -->
+                    <div class="custom-control custom-checkbox mb-3">
+                        <input type="checkbox" class="custom-control-input" id="customCheck1">
+                        <label class="custom-control-label" for="customCheck1">Li e aceito os Termos de Utilização</label>
+                    </div>
+
+                    <!-- Register btn -->
+                    <div class="text-center">
+                        <button class="btn btn-primary btn-login font-weight-bold mb-2" type="submit">Registar</button>
+                    </div>
+
+                </form>
+            </div>
+            <!-- Register -->
+            <div class="register d-flex justify-content-end mt-5">
+                <label class="mr-3 my-auto">Já és membro?</label>
+                <a href="#" (click)="signInClicked()">Login</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+
