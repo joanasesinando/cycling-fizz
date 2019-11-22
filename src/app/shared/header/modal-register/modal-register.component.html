@@ -3,11 +3,11 @@
         <span aria-hidden="true">&times;</span>
     </button>
 
-    <div class="login d-flex-inline align-items-center justify-content-end py-5">
+    <div class="register d-flex-inline align-items-center justify-content-end py-5">
         <div class="flex-row">
             <div class="col-10">
                 <!-- Heading -->
-                <h3 class="login-heading mb-2">Criar conta</h3>
+                <h3 class="register-heading mb-2">Criar conta</h3>
 
                 <div class="text-center">
                     <label class="gray-label">cria conta com:</label>
@@ -61,15 +61,16 @@
 
                     <!-- Register btn -->
                     <div class="text-center">
-                        <button class="btn btn-primary btn-login font-weight-bold mb-2" type="submit">Registar</button>
+                        <button class="btn btn-primary btn-register font-weight-bold mb-2" type="submit">Registar</button>
                     </div>
 
                 </form>
-            </div>
-            <!-- Register -->
-            <div class="register d-flex justify-content-end mt-5">
-                <label class="mr-3 my-auto">Já és membro?</label>
-                <a href="#" (click)="signInClicked()">Login</a>
+
+                <!-- Register -->
+                <div class="signIn d-flex justify-content-end mt-5">
+                    <label class="mr-3 my-auto">Já és membro do Cycling Fizz?</label> <!-- FIXME change name -->
+                    <a href="#" (click)="signInClicked()">Login</a>
+                </div>
             </div>
         </div>
     </div>
