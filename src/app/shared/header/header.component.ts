@@ -19,7 +19,7 @@ export class HeaderComponent implements OnInit {
   faComments = faComments;
   faUsers = faUsers;
 
-  mobileView: boolean;
+  mobileView: boolean = false;
 
   constructor() { }
 
@@ -29,13 +29,6 @@ export class HeaderComponent implements OnInit {
     let dropdowns = ['#navbarDropdownUtilLink', '#navbarDropdownComunidadeLink', '#navbarDropdownSobreLink'];
     let hmbgrs = ['#hmbg1', '#hmbg2', '#hmbg3'];
     let currentActiveDropdown = null;
-
-    // Sets the initial view either for desktop or mobile
-    if(window.innerWidth <= 991.98) {
-      this.mobileView = true;
-    } else {
-      this.mobileView = false;
-    }
 
     // Toggle mobile menu hamburger btn
     navbarToggler.on('click', () => {
@@ -74,11 +67,8 @@ export class HeaderComponent implements OnInit {
     function navbarGlue() {
       let mainNav = $('#mainNav');
 
-      if (mainNav.offset().top > 100) {
-        mainNav.addClass('navbar-top');
-      } else {
-        mainNav.removeClass('navbar-top');
-      }
+      if (mainNav.offset().top > 100) mainNav.addClass('navbar-top');
+      else mainNav.removeClass('navbar-top');
     }
 
     // Glue now if page is not at top
@@ -86,12 +76,9 @@ export class HeaderComponent implements OnInit {
   }
 
     @HostListener('window:resize', [])
-    onWindowResize(){
-      if(window.innerWidth <= 991.98) {
-        this.mobileView = true;
-      } else {
-        this.mobileView = false;
-      }
+    onWindowResize() {
+      if(window.innerWidth <= 991.98) this.mobileView = true;
+      else this.mobileView = false;
     }
 
 }
