@@ -77,8 +77,7 @@ export class HeaderComponent implements OnInit {
 
     @HostListener('window:resize', [])
     onWindowResize() {
-      if(window.innerWidth <= 991.98) this.mobileView = true;
-      else this.mobileView = false;
+      this.mobileView = window.innerWidth <= 991.98;
     }
 
 }
