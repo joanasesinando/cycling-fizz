@@ -20,26 +20,22 @@ export class FooterComponent implements OnInit {
 
   subEmailInput;
   subscribeBtn;
+  subscribeBtnMobile;
   emailHelp;
-
-
-
 
   constructor() { }
 
 
   changeSubBtnSize() {
-
-
     this.subscribeBtn.style.bottom = this.emailHelp.offsetHeight + this.subEmailInput.offsetHeight + "px";
+    this.subscribeBtnMobile.style.bottom = this.emailHelp.offsetHeight + this.subEmailInput.offsetHeight + "px";
   }
-
-
 
 
   ngOnInit() {
     this.subEmailInput = document.getElementById('subEmailInput') as HTMLElement;
     this.subscribeBtn = document.getElementById('subscribeBtn') as HTMLElement;
+    this.subscribeBtnMobile = document.getElementById('subscribeBtnMobile') as HTMLElement;
     this.emailHelp = document.getElementById('emailHelp') as HTMLElement;
 
     this.changeSubBtnSize();
