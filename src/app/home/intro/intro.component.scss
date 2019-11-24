@@ -44,19 +44,11 @@
   @include transform(translateY(-1.2rem));
 
   h1 {
-    color: #2F373D;
-    font-family: "martel-extraBold", serif;
-    font-size: 2.8rem;
     text-align: left;
-    line-height: 1.4em;
   }
 
   h5 {
-    color: #57565C;
-    font-family: "quicksand-light", sans-serif;
-    font-size: 1.2rem;
     max-width: 600px;
-    line-height: 1.8;
     text-align: left;
     margin-top: 15px;
   }
@@ -520,12 +512,10 @@
     transform: translateY(0);
 
     h1 {
-      font-size: 1.6rem;
       text-align: center;
     }
 
     h5 {
-      font-size: 1.2rem;
       max-width: none;
       text-align: center;
     }

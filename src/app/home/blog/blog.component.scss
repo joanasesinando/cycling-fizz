@@ -27,18 +27,11 @@
   margin-top: 10rem;
   font-family: 'quicksand-regular', sans-serif;
 
-  h1 {
-    font-family: 'martel-extraBold', sans-serif;
-    color: $header;
-
+  h2 {
     span {
       background: linear-gradient(0deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 50%);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
-    }
-
-    @include media-breakpoint-down(xs) { //phones
-      font-size: 2rem;
     }
   }
 

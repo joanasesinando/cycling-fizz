@@ -5,7 +5,8 @@
  *  ------------------------------------------------------------------
  *
  *  TOC:
- *  01. buttons
+ *  01. basic styles
+ *  02. buttons
  *
  * =================================================================== */
 
@@ -15,9 +16,75 @@
 @import "~styles/colors";
 @import "~styles/mixins";
 
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
 
 /* ===================================================================
- *  01. buttons
+ *  01. basic styles
+ *
+ * ------------------------------------------------------------------- */
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  color: $header;
+  font-family: "martel-extraBold", serif;
+}
+
+h1, .h1 {
+  font-size: 2.8rem;
+  line-height: 1.4em;
+
+  @include media-breakpoint-down(md){
+    font-size: 2.3rem;
+  }
+
+  @include media-breakpoint-down(sm){
+    font-size: 1.7rem;
+  }
+}
+
+h2, .h2 {
+  font-size: 2.5rem;
+
+  @include media-breakpoint-down(md){
+    font-size: 2rem;
+  }
+
+  @include media-breakpoint-down(sm){
+    font-size: 1.6rem;
+  }
+}
+
+h3, .h3 {
+  font-size: 2rem;
+  line-height: 3rem;
+
+  @include media-breakpoint-down(md){
+    font-size: 1.7rem;
+  }
+
+  @include media-breakpoint-down(sm){
+    font-size: 1.4rem;
+  }
+}
+
+h5, .h5 {
+  color: $darkGray;
+  font-family: "quicksand-light", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5em;
+
+  @include media-breakpoint-down(md){
+    font-size: 1.1rem;
+  }
+}
+
+
+/* ===================================================================
+ *  02. buttons
  *
  * ------------------------------------------------------------------- */
 

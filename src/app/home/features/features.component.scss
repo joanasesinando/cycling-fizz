@@ -23,12 +23,6 @@
   display: table;
   position: relative;
 
-  h3 {
-    font-family: "martel-extraBold", serif;
-    font-size: 2rem;
-    line-height: 3rem;
-  }
-
   #background {
     background: url(../../../assets/images/homepage/features/ilustrations/girl.svg) no-repeat center left;
     background-size: contain;
@@ -48,11 +42,9 @@
 
 @include  media-breakpoint-down(md) { // phones & tablets
   #features {
-
     margin: 0;
 
     h3 {
-      font-size: 1.5rem;
       text-align: center;
     }
 
