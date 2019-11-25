@@ -21,9 +21,11 @@
 }
 
 .modal-popout-bg {
-  background: white url(../../../../assets/images/header/modal/ilustrations/green-girl.svg) no-repeat top left;
-  background-size: auto 100%;
-  background-position-x: -20%;
+  @include media-breakpoint-up(lg) {
+    background: white url(../../../../assets/images/header/modal/ilustrations/green-girl.svg) no-repeat top left;
+    background-size: auto 100%;
+    background-position-x: -20%;
+  }
 
   @include media-breakpoint-down(lg) {
     background-image: url(../../../../assets/images/header/modal/ilustrations/green-girl-mobile.svg);
