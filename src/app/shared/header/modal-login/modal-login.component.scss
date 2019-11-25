@@ -70,4 +70,13 @@
   .gray-label {
     color: $darkGray;
   }
+
+  .register {
+    @include media-breakpoint-up(md) {
+      app-btn-outline {
+        position: relative;
+        bottom: 0.3rem;
+      }
+    }
+  }
 }

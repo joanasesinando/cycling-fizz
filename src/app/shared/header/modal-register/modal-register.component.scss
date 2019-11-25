@@ -58,6 +58,12 @@
     background-color: #706dfe;
   }
 
+  .custom-control-label {
+    a {
+      color: $text;
+    }
+  }
+
   button.btn-register {
     padding: 0 3rem;
     box-shadow: 0 4px 15px rgba(255, 195, 64, 0.46);
