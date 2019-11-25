@@ -6,11 +6,16 @@
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
 
-//.flex-row {
-//  margin-left: 63%;
-//}
-
 .register {
+  @include media-breakpoint-down(lg) {
+    height: 48rem;
+  }
+
+  .register-content {
+    background-color: white;
+    border-radius: 1rem;
+  }
+
   .register-heading {
     font-family: 'martel-bold', sans-serif;
     font-size: 2.1rem;

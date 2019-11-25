@@ -12,16 +12,10 @@
   .modal-content {
     border: none;
     border-radius: 1rem;
+    height: 45rem;
 
-    .modal-body {
-      .login {
-        height: 37rem;
-      }
-
-      img {
-        width: 40rem;
-        border-radius: 1rem;
-      }
+    @include media-breakpoint-down(lg) {
+      height: 50rem;
     }
   }
 }
@@ -30,4 +24,11 @@
   background: white url(../../../../assets/images/header/modal/ilustrations/green-girl.svg) no-repeat top left;
   background-size: auto 100%;
   background-position-x: -20%;
+
+  @include media-breakpoint-down(lg) {
+    background-image: url(../../../../assets/images/header/modal/ilustrations/green-girl-mobile.svg);
+    background-size: auto 150%;
+    background-position-y: 40%;
+    background-position-x: 40%;
+  }
 }

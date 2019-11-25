@@ -6,11 +6,16 @@
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
 
-//.flex-row {
-//  margin-left: 63%;
-//}
-
 .login {
+  @include media-breakpoint-down(lg) {
+    height: 48rem;
+  }
+
+  .login-content {
+    background-color: white;
+    border-radius: 1rem;
+  }
+
   .login-heading {
     font-family: 'martel-bold', sans-serif;
     font-size: 2.1rem;
