@@ -17,8 +17,6 @@
   }
 
   .register-heading {
-    font-family: 'martel-bold', sans-serif;
-    font-size: 2.1rem;
     text-align: center;
   }
 
@@ -70,6 +68,10 @@
   }
 
   .signIn {
+    label {
+      text-align: center;
+    }
+
     a {
       font-family: 'quicksand-medium', sans-serif;
       color: $orange;

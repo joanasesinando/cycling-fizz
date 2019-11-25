@@ -33,4 +33,13 @@
     background-position-y: 40%;
     background-position-x: 40%;
   }
+
+  @include media-breakpoint-down(md) {
+    background-size: auto 130%;
+    background-position-x: 58%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-position-x: 63%;
+  }
 }
