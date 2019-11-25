@@ -6,9 +6,9 @@
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
 
-.flex-row {
-  margin-left: 63%;
-}
+//.flex-row {
+//  margin-left: 63%;
+//}
 
 .login {
   .login-heading {
@@ -58,17 +58,6 @@
   button.btn-login {
     padding: 0 3rem;
     box-shadow: 0 4px 15px rgba(255, 195, 64, 0.46);
-  }
-
-  button.btn-register {
-    position: relative;
-    bottom: 0.3rem;
-  }
-
-  button.btn-register:focus:active {
-    background-color: transparent;
-    outline: none;
-    box-shadow: none;
   }
 
   .fgt-pass {

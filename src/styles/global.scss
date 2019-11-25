@@ -93,6 +93,10 @@ $padding: 0 2rem;
 $border-radius: 3rem;
 $gradient: linear-gradient(131deg, #FFd340, #FF923C, #FF923C, #FF923C);
 
+/* -------------------------------------------------------------------
+ * btn-primary
+/* ------------------------------------------------------------------- */
+
 .btn.btn-primary,
 button.btn-primary,
 input[type="submit"].btn-primary,
@@ -123,6 +127,11 @@ input[type="button"].btn-primary:focus {
   background-size: 100% 100%;
   @include transform(translateY(-0.15em));  
 }
+
+
+/* -------------------------------------------------------------------
+ * btn-outline-primary
+/* ------------------------------------------------------------------- */
 
 .btn.btn-outline-primary,
 button.btn-outline-primary {
@@ -157,11 +166,24 @@ button.btn-outline-primary {
 
 .btn-outline-primary:hover,
 button.btn-outline-primary:hover,
+
 .btn-outline-primary:focus,
-button.btn-outline-primary:focus{
-  border: none;
+button.btn-outline-primary:focus,
+
+.btn-outline-primary:active,
+button.btn-outline-primary:active,
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle,
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  border: none transparent;
   background-color: transparent;
   box-shadow: none;
+  outline: none;
 }
 
 .btn.btn-outline-primary:hover svg rect,
@@ -171,6 +193,10 @@ button.btn-outline-primary:hover svg rect {
     stroke-dashoffset: 475;
 }
 
+
+/* -------------------------------------------------------------------
+ * button.read
+/* ------------------------------------------------------------------- */
 
 button.read {
   position: relative;

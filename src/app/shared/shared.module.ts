@@ -9,10 +9,11 @@ import { FooterComponent } from './footer/footer.component';
 import { ModalLoginRegisterComponent } from './header/modal-login-register/modal-login-register.component';
 import { ModalLoginComponent } from './header/modal-login/modal-login.component';
 import { ModalRegisterComponent } from './header/modal-register/modal-register.component';
+import { BtnOutlineComponent } from './btn-outline/btn-outline.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, ModalLoginRegisterComponent, ModalLoginComponent, ModalRegisterComponent],
+  declarations: [HeaderComponent, FooterComponent, ModalLoginRegisterComponent, ModalLoginComponent, ModalRegisterComponent, BtnOutlineComponent],
   imports: [
     CommonModule,
     SharedRoutingModule,

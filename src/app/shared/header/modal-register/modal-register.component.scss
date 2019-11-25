@@ -6,9 +6,9 @@
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
 
-.flex-row {
-  margin-left: 63%;
-}
+//.flex-row {
+//  margin-left: 63%;
+//}
 
 .register {
   .register-heading {
@@ -66,9 +66,10 @@
 
   .signIn {
     a {
-      font-family: 'quicksand-medium';
+      font-family: 'quicksand-medium', sans-serif;
       color: $orange;
       text-decoration: underline;
+      cursor: pointer;
     }
   }
 }

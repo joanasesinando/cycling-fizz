@@ -3,76 +3,67 @@
         <span aria-hidden="true">&times;</span>
     </button>
 
-    <div class="login d-flex-inline align-items-center justify-content-end py-5">
-        <div class="flex-row">
-            <div class="col-11">
-                <!-- Heading -->
-                <h3 class="login-heading mb-2">Bem-vindo!</h3>
+    <div class="login d-flex flex-row align-items-center justify-content-end py-5">
 
+        <div class="col-4 mr-4">
+
+            <!-- Heading -->
+            <h3 class="login-heading mb-2">Bem-vindo!</h3>
+            <div class="text-center">
+                <label class="gray-label">faz login com:</label>
+            </div>
+
+            <!-- Sign-in alternatives -->
+            <div class="social d-flex justify-content-center mb-4">
+                <a href="#" class="mx-2" id="fb">
+                    <fa-icon [icon]="faFacebookF"></fa-icon>
+                </a>
+                <a href="#" class="mx-2" id="gg">
+                    <fa-icon [icon]="faGooglePlusG"></fa-icon>
+                </a>
+                <a href="#" class="mx-2" id="tt">
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                </a>
+            </div>
+
+            <form>
                 <div class="text-center">
-                    <label class="gray-label">faz login com:</label>
+                    <label class="gray-label">ou usa a tua conta de e-mail:</label>
                 </div>
 
-                <!-- Sign-in alternatives -->
-                <div class="social d-flex justify-content-center mb-4">
-                    <a href="#" class="mx-2" id="fb">
-                        <fa-icon [icon]="faFacebookF"></fa-icon>
-                    </a>
-                    <a href="#" class="mx-2" id="gg">
-                        <fa-icon [icon]="faGooglePlusG"></fa-icon>
-                    </a>
-                    <a href="#" class="mx-2" id="tt">
-                        <fa-icon [icon]="faTwitter"></fa-icon>
-                    </a>
+                <!-- E-mail address -->
+                <div class="form-label-group">
+                    <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de e-mail" required autofocus>
                 </div>
 
-                <form>
-                    <div class="text-center">
-                        <label class="gray-label">ou usa a tua conta de e-mail:</label>
-                    </div>
+                <!-- Password -->
+                <div class="form-label-group">
+                    <input type="password" id="inputPassword" class="form-control" placeholder="Palavra-passe" required>
+                </div>
 
-                    <!-- E-mail address -->
-                    <div class="form-label-group">
-                        <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de e-mail" required autofocus>
-                    </div>
+                <!-- Remember password checkbox -->
+                <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <label class="custom-control-label" for="customCheck1">Lembrar palavra-passe</label>
+                </div>
 
-                    <!-- Password -->
-                    <div class="form-label-group">
-                        <input type="password" id="inputPassword" class="form-control" placeholder="Palavra-passe" required>
-                    </div>
+                <!-- Sign-in btn & forgot password -->
+                <div class="text-center">
+                    <button class="btn btn-primary btn-login font-weight-bold mb-2" type="submit">Login</button>
+                </div>
+                <div class="text-center">
+                    <a class="fgt-pass small" href="#">Esqueci-me da palavra-passe</a>
+                </div>
+            </form>
 
-                    <!-- Remember password checkbox -->
-                    <div class="custom-control custom-checkbox mb-3">
-                        <input type="checkbox" class="custom-control-input" id="customCheck1">
-                        <label class="custom-control-label" for="customCheck1">Lembrar palavra-passe</label>
-                    </div>
-
-                    <!-- Sign-in btn & forgot password -->
-                    <div class="text-center">
-                        <button class="btn btn-primary btn-login font-weight-bold mb-2" type="submit">Login</button>
-                    </div>
-                    <div class="text-center">
-                        <a class="fgt-pass small" href="#">Esqueci-me da palavra-passe</a>
-                    </div>
-                </form>
-            </div>
             <!-- Register -->
-            <div class="register d-flex mt-5">
+            <div class="register mt-5">
                 <label class="mr-3 my-auto">Ainda não tens conta?</label>
-                <button class="btn-outline-primary btn-register" type="submit" (click)="registerClicked()">
-                    <svg width="150" height="50">
-                        <defs>
-                            <linearGradient id="grad1">
-                                <stop offset="0%" stop-color="#FFd340"/>
-                                <stop offset="100%" stop-color="#FF923C" />
-                            </linearGradient>
-                        </defs>
-                        <rect x="5" y="5" rx="20" fill="none" stroke="url(#grad1)" width="140" height="40"></rect>
-                    </svg>
-                    <span>Registar</span>
-                </button>
+                <app-btn-outline btnText="Registar" (click)="registerClicked()"></app-btn-outline>
             </div>
-        </div>
-    </div>
+
+        </div> <!-- /col -->
+
+    </div> <!-- /d-flex -->
 
 </div>
