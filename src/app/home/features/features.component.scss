@@ -2,42 +2,17 @@
  *
  *  Cycling Fizz v1.0 Features Stylesheet
  *  27-05-2019 #FIXME
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  01. colors
- *  02. mixins
- *  03.
- *
+
  * =================================================================== */
 
-
-/* ===================================================================
- *  01. colors
- *
- * ------------------------------------------------------------------- */
-
-/** general **/
-$orange: #FF9F3C;
-$header: #2F373D;
-$darkBlue: #008C97;
-$darkGray: #57565C;
-
-
-/* ===================================================================
- *  02. mixins
- *
- * ------------------------------------------------------------------- */
+@import "~styles/colors";
+@import "~styles/mixins";
 
 @import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
 
-/* ===================================================================
- *  03.
- *
- * ------------------------------------------------------------------- */
 
 #features {
   font-family: 'quicksand-regular', sans-serif;
@@ -47,12 +22,6 @@ $darkGray: #57565C;
   margin-top: 10rem;
   display: table;
   position: relative;
-
-  h3 {
-    font-family: "martel-extraBold", serif;
-    font-size: 2rem;
-    line-height: 3rem;
-  }
 
   #background {
     background: url(../../../assets/images/homepage/features/ilustrations/girl.svg) no-repeat center left;
@@ -67,17 +36,15 @@ $darkGray: #57565C;
 }
 
 /* ===================================================================
- *  04. Responsive
+ *  Responsive
  *
  * ------------------------------------------------------------------- */
 
 @include  media-breakpoint-down(md) { // phones & tablets
   #features {
-
     margin: 0;
 
     h3 {
-      font-size: 1.5rem;
       text-align: center;
     }
 

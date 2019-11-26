@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { IconsFeaturesEnum } from './f-card/f-card.component';
+
+
 
 @Component({
   selector: 'app-features',
@@ -7,9 +10,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FeaturesComponent implements OnInit {
 
+  IconsFeatures = IconsFeaturesEnum;
+
   constructor() { }
 
   ngOnInit() {
   }
 
+  public getDay() {
+    return (new Date()).getDate();
+  }
 }

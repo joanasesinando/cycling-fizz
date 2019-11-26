@@ -5,61 +5,31 @@
  *  ------------------------------------------------------------------
  *
  *  TOC:
- *  01. colors
- *  02. mixins
- *  03. quote
- *  04. jumping balls
+ *  01. quote
+ *  02. jumping balls
  *
  * =================================================================== */
 
-
-/* ===================================================================
- *  01. colors
- *
- * ------------------------------------------------------------------- */
-
-  /** general **/
-  $darkGray: #57565C;
-
-
-/* ===================================================================
- *  02. mixins
- *
- * ------------------------------------------------------------------- */
+@import "~styles/colors";
+@import "~styles/mixins";
 
 @import "../../../../node_modules/bootstrap/scss/functions";
 @import "../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
-  @mixin transition($property) {
-    -moz-transition: $property;
-    -o-transition: $property;
-    -webkit-transition: $property;
-    -ms-transition: $property;
-    transition: $property;
-  }
-
-  @mixin jumping-animation($animation-property, $transition-property) {
-    backface-visibility: hidden;
-    animation: $animation-property;
-    animation-delay: 1s;
-    @include transition($transition-property);
-    user-select: none;
-  }
 
 
 /* ===================================================================
- *  03. quote
+ *  01. quote
  *
  * ------------------------------------------------------------------- */
 
   #quote {
     font-family: 'nycdo-regular', sans-serif;
-    background: url("../../../assets/images/homepage/quote/blob.svg") no-repeat center center;
-    background-size: 38%;
     width: 100vw;
     height: 100vh;
     position: relative;
+    margin-top: 7rem;
 
     p {
       font-size: 2.8rem;
@@ -75,6 +45,17 @@
       }
     }
   }
+
+#background {
+  background: url("../../../assets/images/homepage/quote/blob.svg") no-repeat center center;
+  background-size: 35%;
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  bottom: 0;
+  z-index: -1;
+  position: absolute;
+}
 
 @include  media-breakpoint-down(lg) { // desktops, tablets & phones
   #quote {
@@ -119,7 +100,7 @@
 
 
 /* ===================================================================
- *  04. jumping balls
+ *  02. jumping balls
  *
  * ------------------------------------------------------------------- */
 

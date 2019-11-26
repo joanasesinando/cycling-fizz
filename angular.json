@@ -29,8 +29,8 @@
             ],
             "styles": [
               "node_modules/aos/dist/aos.css",
-              "src/styles/main.scss",
-              "node_modules/bootstrap/dist/css/bootstrap.min.css"
+              "node_modules/bootstrap/dist/css/bootstrap.min.css",
+              "src/styles/global.scss"
             ],
             "scripts": [
               "node_modules/jquery/dist/jquery.min.js",

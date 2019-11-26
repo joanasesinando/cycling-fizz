@@ -1,0 +1,30 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Mixins Partial
+ *  03-11-2019 #FIXME
+ *
+ * =================================================================== */
+
+@mixin transition($property) {
+  -moz-transition: $property;
+  -o-transition: $property;
+  -webkit-transition: $property;
+  -ms-transition: $property;
+  transition: $property;
+}
+
+@mixin transform($property) {
+  -moz-transform: $property;
+  -o-transform: $property;
+  -webkit-transform: $property;
+  -ms-transform: $property;
+  transform: $property;
+}
+
+@mixin jumping-animation($animation-property, $transition-property) {
+  backface-visibility: hidden;
+  animation: $animation-property;
+  animation-delay: 1s;
+  @include transition($transition-property);
+  user-select: none;
+}

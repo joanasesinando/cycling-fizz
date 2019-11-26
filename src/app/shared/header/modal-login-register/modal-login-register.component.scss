@@ -1,0 +1,52 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Login/Register Stylesheet
+ *  27-05-2019 #FIXME
+ *
+ * =================================================================== */
+
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+
+.modal {
+  font-family: 'quicksand-regular', sans-serif;
+
+  .modal-content {
+    border: none;
+    border-radius: 1rem;
+    height: 45rem;
+
+    @include media-breakpoint-down(lg) {
+      height: 50rem;
+    }
+  }
+}
+
+.modal-popout-bg {
+  @include media-breakpoint-up(lg) {
+    background: white url(../../../../assets/images/header/modal/ilustrations/green-girl.svg) no-repeat top left;
+    background-size: auto 100%;
+    background-position-x: -20%;
+  }
+
+  @include media-breakpoint-down(lg) {
+    background-image: url(../../../../assets/images/header/modal/ilustrations/green-girl-mobile.svg);
+    background-size: auto 150%;
+    background-position-y: 40%;
+    background-position-x: 40%;
+  }
+
+  @include media-breakpoint-down(md) {
+    background-size: auto 130%;
+    background-position-x: 58%;
+  }
+
+  @include media-breakpoint-down(sm) {
+    background-position-x: 63%;
+  }
+}

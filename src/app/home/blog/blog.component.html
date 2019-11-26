@@ -1,34 +1,23 @@
 <section id="blog" data-aos="fade-up" data-aos-duration="1000">
-    <h1 class="text-center">Visita o nosso <span>blog</span>!</h1>
-    <p class="text-center mb-5">Não percas os nossos artigos sobre ciclismo e outros assuntos relevantes <br class="d-none d-sm-block">como mobilidade, a vida urbana e muito mais.</p>
+    <h2 class="text-center">Visita o nosso <span>blog</span>!</h2>
+    <h5 class="text-center mb-5 mx-3">Não percas os nossos artigos sobre ciclismo e outros assuntos relevantes <br class="d-none d-sm-block">como mobilidade, a vida urbana e muito mais.</h5>
 
-    <div class="card-deck justify-content-center">
-        <app-b-card
-                [photoSrc]="'../../../assets/images/homepage/blog/photos/blog1.png'"
-                [topic]="'Ciclismo'"
-                [date]="'05/21/2019'"
-                [title]="'Lorem ipsum dolor sit amet consectetuer'"
-                class="mb-lg-none mb-5">
-        </app-b-card>
-        <app-b-card
-                [photoSrc]="'../../../assets/images/homepage/blog/photos/blog2.png'"
-                [topic]="'Mobilidade'"
-                [date]="'12/27/2019'"
-                [title]="'Lorem ipsum dolor sit amet consectetuer'"
-                class="mb-lg-none mb-5">
-        </app-b-card>
-        <app-b-card
-                [photoSrc]="'../../../assets/images/homepage/blog/photos/blog3.png'"
-                [topic]="'Vida urbana'"
-                [date]="'11/30/2019'"
-                [title]="'Lorem ipsum dolor sit amet consectetuer'"
-                class="mb-lg-none mb-4">
-        </app-b-card>
-    </div>
+    <app-carousel3 *ngIf="!carouselMobile" [deckArray]="cardArray"></app-carousel3>
+    <app-carousel1 *ngIf="carouselMobile" [cardArray]="cardArray"></app-carousel1>
 
     <span class="see-more d-flex justify-content-center justify-content-lg-start" >
-        <a href="">Ver mais <fa-icon [icon]="faArrowRight" class="ml-1"></fa-icon></a>
+        <a href="#">Ver mais <fa-icon [icon]="faArrowRight" class="ml-1"></fa-icon></a>
     </span>
+
+    <!-- Jumping balls -->
+    <div class="jumping-balls">
+        <div class="ball-1 jumping-animation"><img src="../../../assets/images/homepage/green-ball.png"></div>
+        <div class="ball-2 jumping-animation2"><img src="../../../assets/images/homepage/blue-ball.png"></div>
+        <div class="ball-3 yellow-ball jumping-animation4"><img src="../../../assets/images/homepage/yellow-ball.png"></div>
+        <div class="ball-4 jumping-animation3"><img src="../../../assets/images/homepage/blue-ball.png"></div>
+        <div class="ball-5 yellow-ball jumping-animation4"><img src="../../../assets/images/homepage/yellow-ball.png"></div>
+        <div class="ball-6 yellow-ball jumping-animation2"><img src="../../../assets/images/homepage/yellow-ball.png"></div>
+    </div>
 
     <div id="background"></div>
 </section>

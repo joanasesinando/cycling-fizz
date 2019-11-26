@@ -1,0 +1,89 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Login Stylesheet
+ *  27-05-2019 #FIXME
+ *
+ * =================================================================== */
+
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+
+.login {
+  @include media-breakpoint-down(lg) {
+    height: 48rem;
+  }
+
+  .login-content {
+    background-color: white;
+    border-radius: 1rem;
+  }
+
+  .login-heading {
+    text-align: center;
+  }
+
+  .social a {
+    text-align: center;
+    height: 2.3rem;
+    width: 2.3rem;
+    border-radius: 50%;
+    line-height: 2.3rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    @include transition(all 0.2s ease-in-out);
+
+    fa-icon {
+      font-size: 1.1rem;
+      line-height: 0;
+      color: white;
+    }
+
+    &#fb { background: $facebook; }
+    &#gg { background: $google; }
+    &#tt { background: $twitter; }
+
+    &:hover { @include transform(translateY(-0.5rem)); }
+  }
+
+  .form-control {
+    padding: 1.5rem 1.5rem;
+    margin-bottom: 1rem;
+    border-radius: 3rem;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(89, 59, 254, 0.25);
+      border-color: #8280ff;
+    }
+  }
+
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    border-color: #706dfe;
+    background-color: #706dfe;
+  }
+
+  button.btn-login {
+    padding: 0 3rem;
+    box-shadow: 0 4px 15px rgba(255, 195, 64, 0.46);
+  }
+
+  .fgt-pass {
+    color: $orange;
+  }
+
+  .gray-label {
+    color: $darkGray;
+  }
+
+  .register {
+    @include media-breakpoint-up(md) {
+      app-btn-outline {
+        position: relative;
+        bottom: 0.3rem;
+      }
+    }
+  }
+}

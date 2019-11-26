@@ -1,0 +1,289 @@
+/* =================================================================== 
+ *
+ *  Cycling Fizz v1.0 Global Stylesheet
+ *  27-05-2019 #FIXME
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  01. basic styles
+ *  02. buttons
+ *
+ * =================================================================== */
+
+@import 'fonts.css';
+@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../node_modules/bootstrap/scss/functions";
+@import "../../node_modules/bootstrap/scss/variables";
+@import "../../node_modules/bootstrap/scss/mixins";
+
+
+/* ===================================================================
+ *  01. basic styles
+ *
+ * ------------------------------------------------------------------- */
+
+h1, .h1,
+h2, .h2,
+h3, .h3 {
+  color: $header;
+  font-family: "martel-extraBold", serif;
+}
+
+h1, .h1 {
+  font-size: 2.8rem;
+  line-height: 1.4em;
+
+  @include media-breakpoint-down(md){
+    font-size: 2.3rem;
+  }
+
+  @include media-breakpoint-down(sm){
+    font-size: 1.7rem;
+  }
+}
+
+h2, .h2 {
+  font-size: 2.5rem;
+
+  @include media-breakpoint-down(md){
+    font-size: 2rem;
+  }
+
+  @include media-breakpoint-down(sm){
+    font-size: 1.6rem;
+  }
+}
+
+h3, .h3 {
+  font-size: 2rem;
+  line-height: 3rem;
+
+  @include media-breakpoint-down(md){
+    font-size: 1.7rem;
+  }
+
+  @include media-breakpoint-down(sm){
+    font-size: 1.4rem;
+  }
+}
+
+h5, .h5 {
+  color: $darkGray;
+  font-family: "quicksand-light", sans-serif;
+  font-size: 1.2rem;
+  line-height: 1.5em;
+
+  @include media-breakpoint-down(md){
+    font-size: 1.1rem;
+  }
+}
+
+
+/* ===================================================================
+ *  02. buttons
+ *
+ * ------------------------------------------------------------------- */
+
+$height: 2.5rem;
+$padding: 0 2rem;
+$border-radius: 3rem;
+$gradient: linear-gradient(131deg, #FFd340, #FF923C, #FF923C, #FF923C);
+
+/* -------------------------------------------------------------------
+ * btn-primary
+/* ------------------------------------------------------------------- */
+
+.btn.btn-primary,
+button.btn-primary,
+input[type="submit"].btn-primary,
+input[type="reset"].btn-primary,
+input[type="button"].btn-primary {
+    font-family: quicksand-bold, sans-serif;
+    height: $height;
+    line-height: $height;
+    padding: $padding;
+    border: 0;
+    border-radius: $border-radius;
+    background-image: $gradient;
+    background-size: 300% 100%;
+    @include transition(all 0.3s ease-in-out);  
+}
+
+.btn.btn-primary:hover,
+button.btn-primary:hover,
+input[type="submit"].btn-primary:hover,
+input[type="reset"].btn-primary:hover,
+input[type="button"].btn-primary:hover,
+.btn.btn-primary:focus,
+button.btn-primary:focus,
+input[type="submit"].btn-primary:focus,
+input[type="reset"].btn-primary:focus,
+input[type="button"].btn-primary:focus {
+  box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
+  background-size: 100% 100%;
+  @include transform(translateY(-0.15em));  
+}
+
+
+/* -------------------------------------------------------------------
+ * btn-outline-primary
+/* ------------------------------------------------------------------- */
+
+.btn.btn-outline-primary,
+button.btn-outline-primary {
+  font-family: 'quicksand-bold', sans-serif;
+  position: relative;
+  width: 151px;
+  height: 40px;
+  line-height: 50px;
+  background-color: transparent;
+  color: transparent;
+  border: none transparent;
+
+  svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    rect {
+      stroke-width: 2;
+      stroke-dasharray: 180, 0;
+      stroke-dashoffset: 0;
+      @include transition(all 600ms ease);
+    }
+  }
+
+  span {
+    background: linear-gradient(to right,  #FFd340 -30%,#FF923C 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+}
+
+.btn-outline-primary:hover,
+button.btn-outline-primary:hover,
+
+.btn-outline-primary:focus,
+button.btn-outline-primary:focus,
+
+.btn-outline-primary:active,
+button.btn-outline-primary:active,
+
+.btn-outline-primary:not(:disabled):not(.disabled).active,
+.btn-outline-primary:not(:disabled):not(.disabled):active,
+.show > .btn-outline-primary.dropdown-toggle,
+
+.btn-outline-primary:not(:disabled):not(.disabled):active:focus,
+.btn-outline-primary:not(:disabled):not(.disabled).active:focus,
+.show > .btn-outline-primary.dropdown-toggle:focus {
+  border: none transparent;
+  background-color: transparent;
+  box-shadow: none;
+  outline: none;
+}
+
+.btn.btn-outline-primary:hover svg rect,
+button.btn-outline-primary:hover svg rect {
+    stroke-width: 2;
+    stroke-dasharray: 96, 543;
+    stroke-dashoffset: 475;
+}
+
+
+/* -------------------------------------------------------------------
+ * button.read
+/* ------------------------------------------------------------------- */
+
+button.read {
+  position: relative;
+  display: inline-block;
+  outline: none;
+  border: 0;
+  vertical-align: middle;
+  text-decoration: none;
+  background: transparent;
+  padding: 0;
+  font-size: inherit;
+  font-family: inherit;
+
+  width: 12rem;
+  height: auto;
+
+  .circle {
+    @include transition(all 0.45s cubic-bezier(0.65,0,.076,1));
+    position: relative;
+    margin: 0;
+    width: 2.3rem;
+    height: 2.3rem;
+    background: linear-gradient(131deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 47%);
+    border-radius: 1.625rem;
+
+    .icon {
+      @include transition(all 0.45s cubic-bezier(0.65,0,.076,1));
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      margin: auto;
+      background: white;
+
+      &.arrow {
+        @include transition(all 0.45s cubic-bezier(0.65,0,.076,1));
+        left: 0.325rem;
+        width: 1.125rem;
+        height: 0.125rem;
+        background: none;
+
+        &::before {
+          position: absolute;
+          content: '';
+          top: -0.25rem;
+          right: 0.0625rem;
+          width: 0.625rem;
+          height: 0.625rem;
+          border-top: 0.125rem solid #fff;
+          border-right: 0.125rem solid #fff;
+          transform: rotate(45deg);
+        }
+      }
+    }
+  }
+
+  .button-text {
+    @include transition(all 0.45s cubic-bezier(0.65,0,.076,1));
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 0.35rem 0;
+    color: $header;
+    font-weight: 700;
+    line-height: 1.6;
+    text-align: center;
+  }
+}
+
+button.read:hover {
+  .circle {
+    width: 85%;
+    .icon {
+      &.arrow {
+        background: white;
+        transform: translate(1rem, 0);
+      }
+    }
+  }
+
+  .button-text {
+    color: white;
+  }
+}
+
+button.read:focus {
+  outline:none;
+}
+

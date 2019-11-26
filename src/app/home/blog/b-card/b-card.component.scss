@@ -1,14 +1,22 @@
-/** general **/
-$red: #ef5350;
-$orange: #FF9F3C;
-$header: #2F373D;
-$gray: #838788;
-$lightGray: #E0E0E0;
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Blog Card Stylesheet
+ *  03-11-2019 #FIXME
+ *
+ * =================================================================== */
+
+@import "~styles/colors";
+
 
 .card {
   font-family: 'quicksand-regular', sans-serif;
   border: none;
   border-radius: 1rem;
+
+  .card-img-top {
+    height: 13rem;
+    //object-fit: cover; //FIXME isto atrasa a transição no carousel
+  }
 
   .card-subtitle {
     font-family: 'quicksand-bold', sans-serif;
@@ -33,6 +41,6 @@ $lightGray: #E0E0E0;
     font-size: 0.8rem;
   }
 
-  #comments { color: $lightGray; }
-  #likes { color: $red; }
+  #comments { color: $gray; }
+  #likes { color: $likes; }
 }
