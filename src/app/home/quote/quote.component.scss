@@ -31,9 +31,18 @@
     position: relative;
     margin-top: 7rem;
 
+    @include media-breakpoint-down(md) {
+      height: 80vh;
+      margin-top: 0;
+    }
+
     p {
       font-size: 2.8rem;
       z-index: 30;
+
+      @include media-breakpoint-down(md) { font-size: 2.5rem; }
+      @include media-breakpoint-down(sm) { font-size: 2rem; }
+      @include media-breakpoint-down(xs) { font-size: 1.8rem; }
 
       &::after {
         content: "John F. Kennedy";
@@ -42,6 +51,8 @@
         color: $darkGray;
         text-align: end;
         margin-top: 1rem;
+
+        @include media-breakpoint-down(xs) { font-size: 1rem; }
       }
     }
   }
@@ -49,52 +60,20 @@
 #background {
   background: url("../../../assets/images/homepage/quote/blob.svg") no-repeat center center;
   background-size: 35%;
-  width: 100vw;
-  height: 100vh;
+  width: 100%;
+  height: 100%;
   top: 0;
   bottom: 0;
   z-index: -1;
   position: absolute;
-}
 
-@include  media-breakpoint-down(lg) { // desktops, tablets & phones
-  #quote {
-    background-size: 50%;
+  @include media-breakpoint-down(lg) {
+    background-size: 55%;
   }
-}
 
-@include  media-breakpoint-down(md) { // tablets & phones
-  #quote {
-    background-size: 53%;
-    height: 50vw;
-
-    p {
-      font-size: 2.5rem;
-    }
-  }
-}
-
-@include  media-breakpoint-down(sm) { // phones
-  #quote {
-    height: 70vw;
-
-    p {
-      font-size: 1.8rem;
-    }
-  }
-}
-
-@include  media-breakpoint-down(xs) { // portrait phones
-  #quote {
-    background-size: 85%;
-
-    p {
-      font-size: 1.6rem;
-
-      &::after {
-        font-size: .9rem;
-      }
-    }
+  @include media-breakpoint-down(xs) {
+    background: url("../../../assets/images/homepage/quote/blob2.svg") no-repeat center center;
+    background-size: 95%;
   }
 }
 
@@ -251,15 +230,8 @@
   left: 15%;
   bottom: 55%;
 
-  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+  @include  media-breakpoint-down(lg) {
     left: 8%;
-  }
-  @include  media-breakpoint-down(md) { // tablets & phones
-    bottom: 40%;
-  }
-
-  @include  media-breakpoint-down(sm) { // phones
-    top: 10%;
   }
 }
 .ball-2 {
@@ -268,15 +240,11 @@
   left: 19%;
   bottom: 42%;
 
-  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+  @include  media-breakpoint-down(lg) {
     left: 18%;
   }
 
-  @include  media-breakpoint-down(md) { // tablets & phones
-    bottom: 20%;
-  }
-
-  @include  media-breakpoint-down(sm) { // phones
+  @include  media-breakpoint-down(sm) {
     img {
       height: 1.5rem;
     }
@@ -288,16 +256,13 @@
   left: 16%;
   bottom: 32%;
 
-  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+  @include  media-breakpoint-down(lg) {
     left: 14%;
   }
 
-  @include  media-breakpoint-down(md) { // tablets & phones
-    bottom: 10%;
-  }
-
-  @include  media-breakpoint-down(sm) { // phones
-    left: 8%;
+  @include media-breakpoint-down(sm) {
+    left: 10%;
+    bottom: 35%;
   }
 }
 .ball-4 {
@@ -306,14 +271,11 @@
   right: 28%;
   top: 36%;
 
-  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+  @include  media-breakpoint-down(lg) {
       right: 20%;
   }
 
-  @include media-breakpoint-down(sm) { // phones
-    top: 20%;
-    right: 15%;
-
+  @include media-breakpoint-down(sm) {
     img {
       height: 2rem;
     }
@@ -325,16 +287,12 @@
   right: 15%;
   top: 55%;
 
-  @include  media-breakpoint-down(lg) { // desktops, tablets & phones
+  @include  media-breakpoint-down(lg) {
     right: 10%;
-  }
-
-  @include media-breakpoint-down(sm) { // phones
-    top: 70%;
   }
 }
 
-@include media-breakpoint-down(sm) { // tablets & phones
+@include media-breakpoint-down(sm) {
   .yellow-ball {
     img {
       height: 0.6rem;
