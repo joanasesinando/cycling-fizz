@@ -98,8 +98,7 @@ export class BlogComponent implements OnInit {
 
   @HostListener('window:resize', ['$event'])
   setCarouselMode(event?) {
-    if(window.innerWidth <= 680) { this.carouselMobile = true; }
-    else { this.carouselMobile = false; }
+      this.carouselMobile = window.innerWidth <= 680;
   }
 
 
