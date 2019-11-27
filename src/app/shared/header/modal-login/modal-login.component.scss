@@ -19,8 +19,10 @@
   }
 
   .login-content {
-    background-color: white;
-    border-radius: 1rem;
+    @include media-breakpoint-down(lg) {
+      background-color: white;
+      border-radius: 1rem;
+    }
   }
 
   .login-heading {
@@ -29,10 +31,10 @@
 
   .social a {
     text-align: center;
-    height: 2.3rem;
-    width: 2.3rem;
+    height: 2.5rem;
+    width: 2.5rem;
     border-radius: 50%;
-    line-height: 2.3rem;
+    line-height: 2.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     @include transition(all 0.2s ease-in-out);
 

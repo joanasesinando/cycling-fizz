@@ -27,6 +27,10 @@
   margin-top: 10rem;
   font-family: 'quicksand-regular', sans-serif;
 
+  @include media-breakpoint-down(sm) {
+    margin-top: 5rem;
+  }
+
   h2 {
     span {
       background: linear-gradient(0deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 50%);
