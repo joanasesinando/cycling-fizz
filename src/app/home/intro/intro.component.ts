@@ -22,4 +22,12 @@ export class IntroComponent implements OnInit {
   ngOnInit() {
   }
 
+  smoothScroll(event){
+    event.preventDefault();
+
+    document.querySelector(event.currentTarget.getAttribute('href')).scrollIntoView({
+      behavior: 'smooth',
+    });
+  };
+
 }
