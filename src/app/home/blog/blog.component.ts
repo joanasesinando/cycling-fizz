@@ -34,7 +34,7 @@ export class BlogComponent implements OnInit {
       {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog3.jpg",
         topic: "Vida urbana",
-        date: new Date(1996, 2, 11),
+        date: new Date(1996, 2-1, 11),
         title: "Lorem ipsum dolor sit amet consectetuer",
         nrComments: 3,
         nrLikes: 11
@@ -42,7 +42,7 @@ export class BlogComponent implements OnInit {
       {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog4.jpg",
         topic: "Mobilidade",
-        date: new Date(1996, 4, 15),
+        date: new Date(1996, 4-1, 15),
         title: "Lorem ipsum dolor sit amet consectetuer",
         nrComments: 34,
         nrLikes: 12
@@ -50,7 +50,7 @@ export class BlogComponent implements OnInit {
       {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog5.jpg",
         topic: "Vida urbana",
-        date: new Date(1996, 3, 20),
+        date: new Date(1996, 3-1, 20),
         title: "Lorem ipsum dolor sit amet consectetuer",
         nrComments: 3,
         nrLikes: 100
@@ -58,7 +58,7 @@ export class BlogComponent implements OnInit {
       {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog6.jpg",
         topic: "Ciclismo",
-        date: new Date(1996, 3, 11),
+        date: new Date(1996, 3-1, 11),
         title: "Lorem ipsum dolor sit amet consectetuer",
         nrComments: 3,
         nrLikes: 11
@@ -66,7 +66,7 @@ export class BlogComponent implements OnInit {
       {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog7.jpg",
         topic: "Vida urbana",
-        date: new Date(1996, 3, 11),
+        date: new Date(1996, 3-1, 11),
         title: "Lorem ipsum dolor sit amet consectetuer",
         nrComments: 3,
         nrLikes: 11
@@ -74,7 +74,7 @@ export class BlogComponent implements OnInit {
       {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog8.jpg",
         topic: "Mobilidade",
-        date: new Date(1996, 3, 11),
+        date: new Date(1996, 3-1, 11),
         title: "Lorem ipsum dolor sit amet consectetuer",
         nrComments: 3,
         nrLikes: 11
@@ -82,7 +82,7 @@ export class BlogComponent implements OnInit {
       {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog9.jpg",
         topic: "Ciclismo",
-        date: new Date(1996, 3, 11),
+        date: new Date(1996, 3-1, 11),
         title: "Lorem ipsum dolor sit amet consectetuer",
         nrComments: 3,
         nrLikes: 200
