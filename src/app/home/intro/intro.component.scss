@@ -471,6 +471,10 @@
   .ball-2 {
     bottom: 9%;
     left: 18%;
+
+    @include media-breakpoint-down(md) {
+      bottom: 6%;
+    }
   }
 
   .ball-3 {
@@ -485,11 +489,19 @@
   .ball-4 {
     bottom: 13%;
     left: 78%;
+
+    @include media-breakpoint-down(md) {
+      bottom: 10%;
+    }
   }
 
   .ball-5 {
     bottom: 7%;
     left: 58%;
+
+    @include media-breakpoint-down(md) {
+      bottom: 4%;
+    }
   }
 }
 
@@ -532,6 +544,10 @@
 
   #intro-btns {
     margin-bottom: 15rem;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 10rem;
+    }
   }
 
 

@@ -233,6 +233,10 @@
   @include  media-breakpoint-down(lg) {
     left: 8%;
   }
+
+  @include  media-breakpoint-down(sm) {
+    bottom: 45%;
+  }
 }
 .ball-2 {
   position: absolute;
@@ -245,6 +249,7 @@
   }
 
   @include  media-breakpoint-down(sm) {
+    bottom: 30%;
     img {
       height: 1.5rem;
     }
@@ -262,7 +267,7 @@
 
   @include media-breakpoint-down(sm) {
     left: 10%;
-    bottom: 35%;
+    bottom: 20%;
   }
 }
 .ball-4 {
@@ -276,6 +281,7 @@
   }
 
   @include media-breakpoint-down(sm) {
+    top: 15%;
     img {
       height: 2rem;
     }
@@ -289,6 +295,10 @@
 
   @include  media-breakpoint-down(lg) {
     right: 10%;
+  }
+
+  @include media-breakpoint-down(sm){
+    top: 20%;
   }
 }
 
