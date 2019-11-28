@@ -1,8 +1,7 @@
 import { Component, OnInit, HostListener } from '@angular/core';
 
-import { faGlobeEurope, faChevronDown, faTrafficLight, 
+import { faGlobeEurope, faChevronDown,  faChevronUp, faTrafficLight,
         faRoute, faQuestion, faComments, faUsers } from '@fortawesome/free-solid-svg-icons';
-import {element} from 'protractor';
 
 @Component({
   selector: 'app-header',
@@ -14,6 +13,7 @@ export class HeaderComponent implements OnInit {
   // FontAwesome icons
   faGlobeEurope = faGlobeEurope;
   faChevronDown = faChevronDown;
+  faChevronUp = faChevronUp;
   faTrafficLight = faTrafficLight;
   faRoute = faRoute;
   faQuestion = faQuestion;
@@ -21,13 +21,12 @@ export class HeaderComponent implements OnInit {
   faUsers = faUsers;
 
   mobileView: boolean = false;
+  dropdownsOpen: boolean[] = [false, false, false];
 
   navbarToggler;
   navbar;
   navigation;
-  dropdowns;
-  hmbgrs;
-  currentActiveDropdown;
+  currentActiveDropdown  = null;
 
   constructor() {
     this.onWindowResize();
@@ -39,15 +38,6 @@ export class HeaderComponent implements OnInit {
     this.navbar = $('.navbar');
     this.navigation = $('.navbar-collapse');
 
-    this.dropdowns = [$('#navbarDropdownUtilLink'), $('#navbarDropdownComunidadeLink'), $('#navbarDropdownSobreLink')];
-    this.hmbgrs = [$('#hmbg1'), $('#hmbg2'), $('#hmbg3')];
-    this.currentActiveDropdown = null;
-
-    // Create event listeners for hamburger btns
-    for(let i = 0; i < this.dropdowns.length; i++) {
-      this.dropdowns[i].on('click', () => this.toggleMobileDropdownHamburgerBtn(this.hmbgrs[i]));
-    }
-
     this.hideMobileMenuWhenLinkClicked();
   }
 
@@ -58,18 +48,33 @@ export class HeaderComponent implements OnInit {
   }
 
   hideNavbar() {
-    this.navbarToggler.removeClass('is-active');
-    this.navbar.removeClass('bg-white');
     this.navigation.slideUp();
+    this.navbarToggler.removeClass('is-active');
+    setTimeout(() => this.navbar.removeClass('bg-white'), 300); //gives time for the slideUp to execute
 
-    //reset aos hamburger btns
-    this.hmbgrs.forEach(element => element.removeClass('is-active'));
+    //reset arrows
+    for(let i in this.dropdownsOpen) this.dropdownsOpen[i] = false;
   }
 
   toggleMobileMenu() {
-    if(this.navbarToggler.hasClass('is-active')) this.hideNavbar();
-    else this.showNavbar();
+    this.navbarToggler.hasClass('is-active') ? this.hideNavbar() : this.showNavbar();
   };
+
+  toggleDropdownMenu(i) {
+    if(this.currentActiveDropdown === null){
+      this.dropdownsOpen[i] = true;
+      this.currentActiveDropdown = i;
+
+    } else if(this.currentActiveDropdown === i) {
+      this.dropdownsOpen[i] = false;
+      this.currentActiveDropdown = null;
+
+    } else {
+      this.dropdownsOpen[this.currentActiveDropdown] = false;
+      this.dropdownsOpen[i] = true;
+      this.currentActiveDropdown = i;
+    }
+  }
 
   hideMobileMenuWhenClickedOutside() {
     $("html").on('click', (event) => {
@@ -86,20 +91,6 @@ export class HeaderComponent implements OnInit {
     $('.clickable-nav-link').on('click', () => {
       if(this.navbarToggler.hasClass('is-active')) this.hideNavbar();
     });
-  }
-
-  toggleMobileDropdownHamburgerBtn(btn) {
-    if(btn.hasClass('is-active')) {
-      btn.removeClass('is-active');
-      this.currentActiveDropdown = null;
-
-    } else {
-      if(this.currentActiveDropdown != null){
-        this.currentActiveDropdown.removeClass('is-active');
-      }
-      btn.addClass('is-active');
-      this.currentActiveDropdown = btn;
-    }
   }
 
   @HostListener('window:scroll', [])

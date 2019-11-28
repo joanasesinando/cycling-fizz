@@ -7,7 +7,6 @@
  *  TOC:
  *  01. main navigation
  *  02. hamburger button
- *  03. responsive
  *
  * =================================================================== */
 
@@ -39,6 +38,19 @@
     background: url("../../../assets/images/header/logo.svg") no-repeat center;
     background-size: 17rem 4rem;
     @include transition(all 0.3s ease-in-out);
+
+    @include media-breakpoint-down(lg) {
+      width: 15rem;
+      height: 2.5rem;
+      background-size: 15rem 2.5rem;
+    }
+
+    @include media-breakpoint-down(md) {
+      width: 11rem;
+      height: 1.7rem;
+      background: url("../../../assets/images/header/logo-dark.svg") no-repeat center;
+      background-size: 11rem 1.7rem;
+    }
   }
 
   .navbar-toggler {
@@ -57,14 +69,27 @@ nav.navbar-top {
     width: 15rem;
     height: 2.5rem;
     background-size: 15rem 2.5rem;
-  }
 
+   @include media-breakpoint-down(md) {
+     width: 11rem;
+     height: 1.7rem;
+     background: url("../../../assets/images/header/logo-orange.svg") no-repeat center;
+     background-size: 11rem 1.7rem;
+   }
+  }
 } 
 
 nav.bg-white {
     top: 0;
     background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
     box-shadow: 0 2px 13px 0 #a5a5a57a;
+}
+
+#navbarResponsive {
+  @include media-breakpoint-down(md) {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  }
 }
 
 .navbar-nav {
@@ -74,53 +99,88 @@ nav.bg-white {
   .nav-item {
     padding-left: 1em;
 
+    @include media-breakpoint-down(md) { border-top: 0.1rem solid $lightGray; }
+
     .nav-link {
       color: $header;
       @include transition(color 0.1s ease-in-out);
 
-      &:hover {
-        color: $orange;
+      @include media-breakpoint-up(lg) {
+        &:hover, img:hover {
+          color: $orange;
+        }
       }
 
-      img:hover {
-        color: $orange;
+      @include media-breakpoint-down(md) {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
       }
     }
   }
 }
 
 .dropdown-menu {
-  border: none;
+  font-family: 'quicksand-regular', serif;
   font-size: 1.1rem;
+  line-height: 2rem;
+  border: none;
   border-radius: 0.4rem;
   box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
-  font-family: 'quicksand-regular', serif;
-  line-height: 2rem;
   min-width: 5rem;
+
+  @include media-breakpoint-down(md){
+    padding: 0;
+    box-shadow: none;
+  }
 
   .dropdown-item {
     color: $header;
+    @include media-breakpoint-down(md){
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
 
     &:active {
       background-color: rgba(47, 55, 61, 0.08);
     }
   }
 
-  fa-icon {
-    margin-right: 1rem;
-    font-size: 1.3rem;
-  }
+  fa-icon, img { margin-right: 1rem; }
+  fa-icon { font-size: 1.3rem; }
+  img { height: 1.3rem; }
+}
 
-  img {
-    margin-right: 1rem;
-    height: 1.3rem;
+.dropdown:hover .dropdown-menu {
+  @include media-breakpoint-up(lg) {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
   }
 }
 
-@include media-breakpoint-up(lg) {
-  .dropdown:hover .dropdown-menu {
-    display: block;
-    margin-top: 0; // remove the gap so it doesn't close
+.last-mobile-row {
+  @include media-breakpoint-down(md) {
+    border-top: 0.1rem solid $lightGray;
+
+    img {
+      height: 1.3rem;
+      padding-right: 1rem;
+    }
+
+    button {
+      padding: 0 4rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    button {
+      padding: 0 40%;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .dropdown-item {
+      padding: 0;
+    }
   }
 }
 
@@ -143,132 +203,8 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 @import "../../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
-.hamburger {
-  display: none;
-}
-
-
-
-/* ===================================================================
- *  03. responsive
- *
- * ------------------------------------------------------------------- */
-
-@include media-breakpoint-down(lg) { // desktops
-  nav {
-    .navbar-brand {
-      width: 15rem;
-      height: 2.5rem;
-      background-size: 15rem 2.5rem;
-    }
-  }
-}
-
-@include media-breakpoint-down(md) { // phones & tablets
-
-  nav {
-    .navbar-brand {
-      width: 11rem;
-      height: 1.7rem;
-      background: url("../../../assets/images/header/logo-dark.svg") no-repeat center;
-      background-size: 11rem 1.7rem;
-    }
-  }
-
-  nav.navbar-top {
-    .navbar-brand {
-      width: 11rem;
-      height: 1.7rem;
-      background: url("../../../assets/images/header/logo-orange.svg") no-repeat center;
-      background-size: 11rem 1.7rem;
-    }
-  }
-
-  .navbar-nav {
-    .nav-item {
-      border-top: 0.1rem solid $lightGray;
-
-      fa-icon.faChevronDown {
-        display: none;
-      }
-    }
-
-    .nav-link {
-      padding-top: 0.8rem;
-      padding-bottom: 0.8rem;
-    }
-  }
-
-  #navbarResponsive {
-    margin-left: 1.5rem;
-    margin-top: 1rem;
-  }
-
-  .dropdown-menu {
-    padding: 0;
-    box-shadow: none;
-
-    .dropdown-item {
-      padding-bottom: 0.5rem;
-      padding-top: 0.5rem;
-    }
-  }
-
-  .last-mobile-row {
-    border-top: 0.1rem solid $lightGray;
-
-    img {
-      height: 1.3rem;
-      padding-right: 1rem;
-    }
-
-    button {
-      padding: 0 4rem;
-    }
-  }
-
-  .hamburger {
-    display: inline-block;
-  }
-
+@include media-breakpoint-down(md) {
   .hamburger:focus {
     outline: none;
   }
-
-  .ddHamburguers .hamburger-box {
-    width: 1.5rem;
-    height: 1rem;
-  }
-
-  .ddHamburguers .hamburger-inner,
-  .ddHamburguers .hamburger-inner::before,
-  .ddHamburguers .hamburger-inner::after,
-  .ddHamburguers.is-active .hamburger-inner::before,
-  .ddHamburguers.is-active .hamburger-inner::after {
-    background-color: $gray;
-    width: 1.5rem;
-    height: 0.15rem;
-  }
 }
-
-@include media-breakpoint-down(sm) { // phones
-
-  .last-mobile-row {
-    button {
-      padding: 0 40%;
-    }
-  }
-
-}
-
-@include media-breakpoint-down(xs) { // portrait phones
-
-  .last-mobile-row {
-    .dropdown-item {
-      padding: 0;
-    }
-  }
-
-}
-
-
