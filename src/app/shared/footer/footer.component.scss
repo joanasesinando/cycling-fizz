@@ -79,12 +79,14 @@ footer {
         color: $darkGray;
         @include transition(all 0.2s ease-in-out);
 
-        &:hover {
-            #fb { color: $facebook; }
-            #tt { color: $twitter; }
-            #ig { color: $instagram; }
-            #yt { color: $youtube; }
-            @include transform(translateY(-0.5rem));
+        @include media-breakpoint-up(lg){
+            &:hover {
+                #fb { color: $facebook; }
+                #tt { color: $twitter; }
+                #ig { color: $instagram; }
+                #yt { color: $youtube; }
+                @include transform(translateY(-0.5rem));
+            }
         }
     }
 }
