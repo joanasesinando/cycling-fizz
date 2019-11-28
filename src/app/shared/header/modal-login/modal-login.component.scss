@@ -48,7 +48,9 @@
     &#gg { background: $google; }
     &#tt { background: $twitter; }
 
-    &:hover { @include transform(translateY(-0.5rem)); }
+    @include media-breakpoint-up(lg){
+      &:hover { @include transform(translateY(-0.5rem)); }
+    }
   }
 
   .form-control {

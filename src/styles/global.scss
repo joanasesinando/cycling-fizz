@@ -295,34 +295,36 @@ button.read:focus {
  *
  * ------------------------------------------------------------------- */
 
-::-webkit-scrollbar {
-  width: 12px;
-  background-color: #F5F5F5;
-}
+@include media-breakpoint-up(lg){
+  ::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-  background-color: #F5F5F5;
-  border-radius: 12px;
-}
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    background-color: #F5F5F5;
+    border-radius: 12px;
+  }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 12px;
-  background-color: $scrollbar;
-  //background-image: -webkit-gradient(linear,
-  //        40% 0%,
-  //        85% 84%,
-  //        from(#ffd340),
-  //        to(#ff9f3c),
-  //        color-stop(.6,#ffbe3d));
-
-  &:hover {
-    background-color:darken($scrollbar, 10%);
+  ::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: $scrollbar;
     //background-image: -webkit-gradient(linear,
     //        40% 0%,
     //        85% 84%,
-    //        from(#f6cc40),
-    //        to(#f79d40),
-    //        color-stop(.6,#e6ac3b));
+    //        from(#ffd340),
+    //        to(#ff9f3c),
+    //        color-stop(.6,#ffbe3d));
+
+    &:hover {
+      background-color:darken($scrollbar, 10%);
+      //background-image: -webkit-gradient(linear,
+      //        40% 0%,
+      //        85% 84%,
+      //        from(#f6cc40),
+      //        to(#f79d40),
+      //        color-stop(.6,#e6ac3b));
+    }
   }
 }
