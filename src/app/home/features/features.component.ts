@@ -21,7 +21,9 @@ export class FeaturesComponent implements OnInit {
     this.doChangeFading = true;
   }
 
-  ngOnInit() { }
+  ngOnInit() {
+    this.changeFading();
+  }
 
   changeFading(){
     let features = document.getElementById("features-container");
