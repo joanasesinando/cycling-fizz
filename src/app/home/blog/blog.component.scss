@@ -27,6 +27,10 @@
   margin-top: 10rem;
   font-family: 'quicksand-regular', sans-serif;
 
+  @include media-breakpoint-down(sm) {
+    margin-top: 5rem;
+  }
+
   h2 {
     span {
       background: linear-gradient(0deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 50%);
@@ -56,14 +60,33 @@
   }
 
   #background {
-    background: url("../../../assets/images/homepage/blog/b-blob.svg") no-repeat center right;
+    background: url("../../../assets/images/homepage/blog/blog-blob.svg") no-repeat center right;
     background-size: contain;
     width: 90vw;
     height: 100vh;
-    top: 10%;
+    top: 5%;
     bottom: 0;
     z-index: -1;
     position: absolute;
+
+    @include media-breakpoint-down(lg) {
+      background-size: 80%;
+      right: 2%;
+      top: -10%;
+    }
+
+    @include media-breakpoint-down(md) {
+      background-size: 90%;
+      top: -10%;
+      right: 10%;
+    }
+
+    @include media-breakpoint-down(xs) {
+      background-size: 100%;
+      width: 100vw;
+      top: 5%;
+      right: 0;
+    }
   }
 }
 
@@ -308,6 +331,16 @@
   z-index: 20;
   right: 15%;
   bottom: 13%;
+
+  @include media-breakpoint-down(md) {
+    left: 0;
+    bottom: 85%;
+    right: 0;
+  }
+
+  @include media-breakpoint-down(sm) {
+    bottom: 74%;
+  }
 }
 @include media-breakpoint-down(sm) { // tablets & phones
   .yellow-ball {
