@@ -10,10 +10,23 @@ import { ModalLoginRegisterComponent } from './header/modal-login-register/modal
 import { ModalLoginComponent } from './header/modal-login/modal-login.component';
 import { ModalRegisterComponent } from './header/modal-register/modal-register.component';
 import { BtnOutlineComponent } from './btn-outline/btn-outline.component';
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import { Svg404Component } from './page-not-found/svg404/svg404.component';
+import { Text404Component } from './page-not-found/text404/text404.component';
 
 
 @NgModule({
-  declarations: [HeaderComponent, FooterComponent, ModalLoginRegisterComponent, ModalLoginComponent, ModalRegisterComponent, BtnOutlineComponent],
+  declarations: [
+    HeaderComponent,
+    FooterComponent,
+    ModalLoginRegisterComponent,
+    ModalLoginComponent,
+    ModalRegisterComponent,
+    BtnOutlineComponent,
+    PageNotFoundComponent,
+    Svg404Component,
+    Text404Component
+  ],
   imports: [
     CommonModule,
     SharedRoutingModule,

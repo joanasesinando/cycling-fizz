@@ -1,0 +1,27 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 404 Stylesheet
+ *  27-05-2019 #FIXME
+ *
+ * =================================================================== */
+
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+#page-not-found {
+  height: 100vh;
+  width: 100vw;
+  background-color: $header;
+
+  button {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    text-transform: uppercase;
+    padding: 0 3rem;
+  }
+}

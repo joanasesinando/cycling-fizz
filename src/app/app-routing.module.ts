@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
+import {PageNotFoundComponent} from './shared/page-not-found/page-not-found.component';
 
 
 const routes: Routes = [
@@ -10,6 +11,15 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule)
+  },
+  {
+    path: '404',
+    component: PageNotFoundComponent
+  },
+  {
+    path: '**',
+    redirectTo: "/404",
+    pathMatch: "full"
   }
 ];
 

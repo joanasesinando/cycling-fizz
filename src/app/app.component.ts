@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {Router} from '@angular/router';
 import * as $ from 'jquery';
 import * as AOS from 'aos';
 
@@ -10,6 +11,8 @@ import * as AOS from 'aos';
 
 export class AppComponent implements OnInit {
   title = 'cycling-fizz';
+
+  constructor(private _router: Router){ }
 
   ngOnInit() {
     AOS.init();
