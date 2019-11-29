@@ -1,0 +1,20 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+label {
+  font-family: quicksand-medium, sans-serif;
+  color: $lightGray;
+}
+
+.custom-control-input:checked~.custom-control-label::before {
+  border-color: $orange;
+  background-color: $orange;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(255, 146, 60, 0.25);
+}

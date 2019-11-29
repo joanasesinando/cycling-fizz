@@ -2,6 +2,7 @@ import { Component, OnInit, HostListener } from '@angular/core';
 
 import { faGlobeEurope, faChevronDown,  faChevronUp, faTrafficLight,
         faRoute, faQuestion, faComments, faUsers } from '@fortawesome/free-solid-svg-icons';
+import {NavigationEnd, Router} from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -20,20 +21,30 @@ export class HeaderComponent implements OnInit {
   faComments = faComments;
   faUsers = faUsers;
 
+  router;
   mobileView: boolean = false;
   dropdownsOpen: boolean[] = [false, false, false];
 
+  nav;
   navbarToggler;
   navbar;
   navigation;
   currentActiveDropdown  = null;
 
-  constructor() {
+  constructor(private _router: Router) {
+    this.router = _router;
     this.onWindowResize();
     this.hideMobileMenuWhenClickedOutside();
+
+    // subscribe to router
+    _router.events.subscribe(() => {
+      if(_router.url != '/') this.nav.addClass("navbar-top");
+      else if (this.nav.hasClass("navbar-top")) this.nav.removeClass("navbar-top");
+    });
   }
 
   ngOnInit() {
+    this.nav = $('#mainNav');
     this.navbarToggler = $('.navbar-toggler');
     this.navbar = $('.navbar');
     this.navigation = $('.navbar-collapse');
@@ -104,8 +115,8 @@ export class HeaderComponent implements OnInit {
       else mainNav.removeClass('navbar-top');
     }
 
-    // Glue now if page is not at top
-    navbarGlue();
+    // Glue now if page is not at top & is homepage
+    if(this.router.url === '/') navbarGlue();
   }
 
   @HostListener('window:resize', [])

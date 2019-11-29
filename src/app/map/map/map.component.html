@@ -1,1 +1,13 @@
-<p>map works!</p>
+<section>
+    <div class="contents">
+        <div id="darkBar" class="container-fluid d-flex align-items-center justify-content-between">
+            <a href=""><img src="../../../assets/images/map/icons/filter.svg" alt=""></a>
+            <div id="quick-filters" class="d-none d-lg-flex justify-content-between">
+                <app-filter-switch *ngFor="let filter of quickFilters" [switchId]="filter.id" [filterText]="filter.text"></app-filter-switch>
+            </div>
+            <app-search></app-search>
+        </div>
+
+        <div id="map"></div>
+    </div>
+</section>
