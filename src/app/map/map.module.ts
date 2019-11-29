@@ -6,13 +6,15 @@ import { MapComponent } from './map/map.component';
 import { FilterSwitchComponent } from './filter-switch/filter-switch.component';
 import { SearchComponent } from './search/search.component';
 import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   declarations: [MapComponent, FilterSwitchComponent, SearchComponent],
     imports: [
         CommonModule,
         MapRoutingModule,
-        FontAwesomeModule
+        FontAwesomeModule,
+        SharedModule
     ]
 })
 export class MapModule { }

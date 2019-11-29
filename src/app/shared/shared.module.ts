@@ -13,6 +13,7 @@ import { BtnOutlineComponent } from './btn-outline/btn-outline.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { Svg404Component } from './page-not-found/svg404/svg404.component';
 import { Text404Component } from './page-not-found/text404/text404.component';
+import { BtnFloatingComponent } from './btn-floating/btn-floating.component';
 
 
 @NgModule({
@@ -25,7 +26,8 @@ import { Text404Component } from './page-not-found/text404/text404.component';
     BtnOutlineComponent,
     PageNotFoundComponent,
     Svg404Component,
-    Text404Component
+    Text404Component,
+    BtnFloatingComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,9 @@ import { Text404Component } from './page-not-found/text404/text404.component';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    BtnOutlineComponent,
+    BtnFloatingComponent
   ]
 })
 export class SharedModule { }

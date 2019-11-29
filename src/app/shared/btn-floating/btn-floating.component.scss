@@ -1,0 +1,121 @@
+/* ===================================================================
+ *
+ *  Vendor content by: Valery Alikin
+ *  URL: https://codepen.io/AlikinVV/pen/JORbvO
+ *
+ * =================================================================== */
+
+
+$gradient: linear-gradient(180deg, #FF923C 0%, #FFC340 100%);
+$darkGradient: linear-gradient(180deg, darken(#FF923C, 10%) 0%, darken(#FFC340, 10%) 100%);
+
+.action-button {
+  position: absolute;
+  .ab-link {
+    font-family: solway-regular, sans-serif;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: $gradient;
+    color: white;
+    margin: 0;
+    padding: 0;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 50px;
+    font-weight: 100;
+    cursor: pointer;
+    transition: all .2s;
+    box-shadow: 0px 6px 24px -2px rgba(0, 0, 0, 0.3);
+    z-index: 3;
+    line-height: 1;
+    &:hover {
+      transform: scale(1.1) translateZ(0) translateY(0);
+      background: $darkGradient;
+    }
+    &:focus, &::selection {
+      outline: none;
+      background: none;
+    }
+  }
+  &.open {
+    .ab-link {
+      transform: rotate(45deg);
+      background: $darkGradient;
+      &:hover {
+        transform: scale(1.1) rotate(45deg) translateZ(0) translateY(0);
+      }
+    }
+  }
+  .action-list {
+    list-style-type: none;
+    margin: 0;
+    position: absolute;
+    padding: 0;
+    transition: all .2s;
+    li {
+      background: white;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-bottom: 15px;
+      box-shadow: 0px 6px 24px -2px rgba(0, 0, 0, 0.3);
+      cursor: pointer;
+      transition: all .2s;
+      position: absolute;
+      z-index: 1;
+      &:hover {
+        transform: scale(1.1) translateZ(0) translateY(0);
+      }
+    }
+  }
+}
+
+
+.action-button.bottom-right {
+  bottom: 50px;
+  right: 50px;
+
+  li {bottom: 0;}
+}
+
+.action-button.triangle {
+  ul {
+    margin-top: -55px;
+    margin-left: 10px;
+    li {
+      width: 40px;
+      height: 40px;
+      font-size: 18px;
+    }
+  }
+}
+
+.action-button.triangle.bottom-right {
+  ul {
+    margin-top: 5px;
+  }
+  &.open ul li {
+    &:nth-child(1) {
+      transform: translateX(-70px);
+      &:hover {
+      transform: scale(1.1) translateZ(0) translateY(0) translateX(-70px);
+      }
+    }
+    &:nth-child(2) {
+      transform: translateX(-50px) translateY(-50px);
+      &:hover {
+        transform: scale(1.1) translateZ(0) translateY(-50px) translateX(-50px);
+      }
+    }
+    &:nth-child(3) {
+      transform: translateY(-70px);
+      &:hover {
+        transform: scale(1.1) translateZ(0) translateY(-70px);
+      }
+    }
+  }
+}

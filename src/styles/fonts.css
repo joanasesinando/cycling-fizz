@@ -105,3 +105,44 @@
     font-style: normal;
     font-weight: normal;
 }
+
+
+/* ===================================================================
+ *  Solway
+ *
+ * ------------------------------------------------------------------- */
+
+@font-face {
+    font-family: "solway-bold";
+    src: url("../assets/fonts/Solway/Solway-Bold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "solway-extraBold";
+    src: url("../assets/fonts/Solway/Solway-ExtraBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "solway-light";
+    src: url("../assets/fonts/Solway/Solway-Light.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "solway-medium";
+    src: url("../assets/fonts/Solway/Solway-Medium.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+
+@font-face {
+    font-family: "solway-regular";
+    src: url("../assets/fonts/Solway/Solway-Regular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}

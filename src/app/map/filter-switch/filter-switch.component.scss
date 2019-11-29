@@ -8,6 +8,11 @@
 label {
   font-family: quicksand-medium, sans-serif;
   color: $lightGray;
+
+  &:focus, &::selection {
+    outline: none;
+    background-color: transparent;
+  }
 }
 
 .custom-control-input:checked~.custom-control-label::before {
