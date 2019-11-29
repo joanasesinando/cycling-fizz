@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 
 @Component({
   selector: 'app-btn-floating',
@@ -30,6 +30,22 @@ export class BtnFloatingComponent implements OnInit {
         this.toggleFloatingBtn();
       }
     });
+  }
+
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+
+    // Glue btn to bottom of map on scroll
+    function btnGlue() {
+      let actionBtn = $('.action-button');
+
+      if(actionBtn.offset().top > 740) {
+        actionBtn.addClass('glue-bottom');
+      }
+    }
+
+    // Glue now if page is not at top
+    btnGlue();
   }
 
 }
