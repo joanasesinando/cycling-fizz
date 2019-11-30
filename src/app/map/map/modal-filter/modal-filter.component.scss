@@ -5,7 +5,8 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-$modal-width: 280px;
+$modal-width: 300px;
+$modal-width-mobile: 280px;
 
 .modal.left {
   .modal-dialog {
@@ -15,6 +16,10 @@ $modal-width: 280px;
     width: $modal-width;
     height: 100%;
     @include transform(translate3d(0%, 0, 0));
+
+    @include media-breakpoint-down(sm) {
+      width: $modal-width-mobile;
+    }
   }
 
   .modal-content {
@@ -36,6 +41,10 @@ $modal-width: 280px;
       font-family: quicksand-bold, sans-serif;
       line-height: 1.5rem;
       color: $darkGray;
+
+      @include media-breakpoint-down(md) {
+        font-size: 1.3rem;
+      }
     }
 
     img { margin-bottom: .5rem; }
@@ -54,6 +63,10 @@ $modal-width: 280px;
     -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
     -o-transition: opacity 0.3s linear, left 0.3s ease-out;
     transition: opacity 0.3s linear, left 0.3s ease-out;
+
+    @include media-breakpoint-down(sm) {
+      left: -$modal-width-mobile;
+    }
   }
 }
 

@@ -13,11 +13,11 @@ export class MapComponent implements OnInit {
           filterGroups: [
               {
                   category:"Tipologia",
-                  options: ["pista unidirecional", "pista unidirecional", "trilho"]
+                  options: ["pista unidirecional", "pista bidirecional", "trilho", "outro"]
               },
               {
                   category:"Estado do piso",
-                  options: ["bom estado", "mau estado"]
+                  options: ["maioritariamente liso", "ligeiramente abrupto", "muito abrupto"]
               },
               {
                   category:"",
@@ -29,16 +29,25 @@ export class MapComponent implements OnInit {
           category:"Estacionamento",
           filterGroups: [
               {
-                  category:"Tipologia2",
-                  options: ["U invertido ou semelhante", "entorta-rodas"]
+                  category:"Tipologia",
+                  options: ["U invertido ou semelhante", "entorta-rodas", "poste", "outro"]
               },
               {
-                  category:"Estado do piso2",
-                  options: ["bom estado", "mau estado"]
+                  category:"Nº de lugares",
+                  options: ["menos de 3", "4 - 8", "9 - 12", "mais de 12"]
+              },
+              {
+                  category:"Segurança",
+                  options: ["muito seguro", "seguro", "inseguro", "muito inseguro"]
+              },
+              {
+                  category:"Ambiente",
+                  options: ["sempre movimentado", "movimentado seg-sex", "movimentado sab-dom",
+                            "deserto seg-sex", "deserto sab-dom", "sempre deserto"]
               },
               {
                   category:"",
-                  options: ["segregada", "iluminação", "cargo bike friendly", "partilhada com peões"]
+                  options: ["coberto", "iluminação", "supervisão"]
               }
           ]
       },
@@ -46,16 +55,8 @@ export class MapComponent implements OnInit {
           category:"Lojas & Oficinas",
           filterGroups: [
               {
-                  category:"Tipologia3",
-                  options: ["U invertido ou semelhante", "entorta-rodas"]
-              },
-              {
-                  category:"Estado do piso3",
-                  options: ["bom estado", "mau estado"]
-              },
-              {
                   category:"",
-                  options: ["segregada", "iluminação", "cargo bike friendly", "partilhada com peões"]
+                  options: ["abertas agora"]
               }
           ]
       },
@@ -63,16 +64,12 @@ export class MapComponent implements OnInit {
           category:"Bikesharing",
           filterGroups: [
               {
-                  category:"Tipologia4",
-                  options: ["U invertido ou semelhante", "entorta-rodas"]
-              },
-              {
-                  category:"Estado do piso4",
-                  options: ["bom estado", "mau estado"]
+                  category:"Companhia",
+                  options: ["Gira", "Uber Jump", "Hive Bikes", "Moobi Cascais"]
               },
               {
                   category:"",
-                  options: ["segregada", "iluminação", "cargo bike friendly", "partilhada com peões"]
+                  options: ["com bicicletas", "com lugares livres"]
               }
           ]
       }

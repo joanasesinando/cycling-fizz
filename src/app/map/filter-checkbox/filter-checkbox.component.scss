@@ -13,6 +13,15 @@ label {
   }
 }
 
+.custom-control-input:checked~.custom-control-label::before {
+  border-color: $orange;
+  background-color: $orange;
+}
+
+.custom-control-input:focus ~ .custom-control-label::before {
+  box-shadow: 0 0 0 0.2rem rgba(255, 146, 60, 0.25);
+}
+
 .custom-control-label::before {
     @include media-breakpoint-down(md) {
     height: 1.3rem;

@@ -1,9 +1,9 @@
-@import "../../../../../styles/colors";
-@import "../../../../../styles/mixins";
+@import "../../../styles/colors";
+@import "../../../styles/mixins";
 
-@import "../../../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../../../node_modules/bootstrap/scss/variables";
-@import "../../../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
 
 
 label {
@@ -96,8 +96,4 @@ label {
     right: -.6rem;
     @include media-breakpoint-down(md) { right: -.5rem; top: .3rem; }
   }
-}
-
-#switch-0-4.custom-control-input.show:checked~.custom-control-label::before {
-  background-color: red;
 }
