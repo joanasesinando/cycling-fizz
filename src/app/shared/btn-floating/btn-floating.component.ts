@@ -15,6 +15,11 @@ export class BtnFloatingComponent implements OnInit {
 
   ngOnInit() {
     this.actionBtn = $(".action-button");
+
+    $(function () {
+      // @ts-ignore
+      $('[data-toggle="tooltip"]').tooltip()
+    })
   }
 
   toggleFloatingBtn(){

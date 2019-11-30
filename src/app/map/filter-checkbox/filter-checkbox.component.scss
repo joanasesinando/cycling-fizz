@@ -5,8 +5,10 @@
 @import "../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
+
 label {
   font-family: quicksand-regular, sans-serif;
+
   &:focus, &::selection {
     outline: none;
     background-color: transparent;
