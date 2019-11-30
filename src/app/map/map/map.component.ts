@@ -7,11 +7,75 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  quickFilters = [
-      {text:"Ciclovias", id: "switch1"},
-      {text:"Estacionamento", id: "switch2"},
-      {text:"Lojas & Oficinas", id: "switch3"},
-      {text:"Bikesharing", id: "switch4"}
+  filters = [ //FIXME completar && usar serviço para esta informação na BD?
+      {
+          category:"Ciclovias",
+          filterGroups: [
+              {
+                  category:"Tipologia",
+                  options: ["pista unidirecional", "pista unidirecional", "trilho"]
+              },
+              {
+                  category:"Estado do piso",
+                  options: ["bom estado", "mau estado"]
+              },
+              {
+                  category:"",
+                  options: ["segregada", "iluminação", "cargo bike friendly", "partilhada com peões"]
+              }
+          ]
+      },
+      {
+          category:"Estacionamento",
+          filterGroups: [
+              {
+                  category:"Tipologia2",
+                  options: ["U invertido ou semelhante", "entorta-rodas"]
+              },
+              {
+                  category:"Estado do piso2",
+                  options: ["bom estado", "mau estado"]
+              },
+              {
+                  category:"",
+                  options: ["segregada", "iluminação", "cargo bike friendly", "partilhada com peões"]
+              }
+          ]
+      },
+      {
+          category:"Lojas & Oficinas",
+          filterGroups: [
+              {
+                  category:"Tipologia3",
+                  options: ["U invertido ou semelhante", "entorta-rodas"]
+              },
+              {
+                  category:"Estado do piso3",
+                  options: ["bom estado", "mau estado"]
+              },
+              {
+                  category:"",
+                  options: ["segregada", "iluminação", "cargo bike friendly", "partilhada com peões"]
+              }
+          ]
+      },
+      {
+          category:"Bikesharing",
+          filterGroups: [
+              {
+                  category:"Tipologia4",
+                  options: ["U invertido ou semelhante", "entorta-rodas"]
+              },
+              {
+                  category:"Estado do piso4",
+                  options: ["bom estado", "mau estado"]
+              },
+              {
+                  category:"",
+                  options: ["segregada", "iluminação", "cargo bike friendly", "partilhada com peões"]
+              }
+          ]
+      }
   ];
 
   constructor() { }

@@ -1,0 +1,53 @@
+@import "../../../styles/colors";
+@import "../../../styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+label {
+  font-family: quicksand-regular, sans-serif;
+  &:focus, &::selection {
+    outline: none;
+    background-color: transparent;
+  }
+}
+
+.custom-control-label::before {
+    @include media-breakpoint-down(md) {
+    height: 1.3rem;
+    width: 1.3rem;
+  }
+}
+
+.custom-checkbox .custom-control-input:checked~.custom-control-label::after {
+  @include media-breakpoint-down(md) {
+    background-size: .6rem;
+  }
+}
+
+/* ------------------------------------------------------------------
+ *  custom-control-right
+ *  ------------------------------------------------------------------ */
+
+.custom-control-right {
+  padding-left: 0;
+
+  label {
+    display: flex;
+    color: $darkGray;
+    font-size: 1.1rem;
+  }
+  .custom-control-label::before,
+  .custom-control-label::after {
+    right: -1.5rem;
+    left: initial;
+    margin-right: 1.5rem;
+    @include media-breakpoint-down(md) { top: .1rem; }
+  }
+
+  .custom-control-label::after {
+    right: -1.5rem;
+    @include media-breakpoint-down(md) { right: -1.35rem; top: .3rem; }
+  }
+}

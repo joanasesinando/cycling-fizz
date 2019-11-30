@@ -1,0 +1,68 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+$modal-width: 280px;
+
+.modal.left {
+  .modal-dialog {
+    position: fixed;
+    top: calc(4rem + 3.5rem); //header + darkBar
+    margin: auto;
+    width: $modal-width;
+    height: 100%;
+    @include transform(translate3d(0%, 0, 0));
+  }
+
+  .modal-content {
+    height: calc(100% - 4rem - 3.5rem);
+    border: none;
+    border-radius: 0;
+    box-shadow: 6px 1px 10px 0 #21252994;
+  }
+
+  .modal-header {
+    height: 3.5rem;
+    background-color: $lightGray;
+    padding-left: 1.5rem;
+    padding-right: 1.5rem;
+    border: none;
+    border-radius: 0;
+
+    .modal-title {
+      font-family: quicksand-bold, sans-serif;
+      line-height: 1.5rem;
+      color: $darkGray;
+    }
+
+    img { margin-bottom: .5rem; }
+  }
+
+  .modal-body {
+    padding: 1rem 1.5rem 1rem 1.5rem;
+    overflow-y: auto;
+  }
+}
+
+.modal.left.fade {
+  .modal-dialog {
+    left: -$modal-width;
+    -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -moz-transition: opacity 0.3s linear, left 0.3s ease-out;
+    -o-transition: opacity 0.3s linear, left 0.3s ease-out;
+    transition: opacity 0.3s linear, left 0.3s ease-out;
+  }
+}
+
+.modal.left.fade.show {
+  .modal-dialog {
+    left: 0;
+  }
+}
+
+app-filter-group {
+  display: none;
+}
