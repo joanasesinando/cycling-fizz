@@ -38,8 +38,14 @@ export class HeaderComponent implements OnInit {
 
     // subscribe to router
     _router.events.subscribe(() => {
-      if(_router.url != '/') this.nav.addClass("navbar-top");
-      else if (this.nav.hasClass("navbar-top")) this.nav.removeClass("navbar-top");
+      if(_router.url != '/') {
+        this.nav.addClass("navbar-top");
+        this.nav.addClass("navbar-white");
+      }
+      else if (this.nav.hasClass("navbar-top")) {
+        this.nav.removeClass("navbar-top");
+        this.nav.removeClass("navbar-white");
+      }
     });
   }
 

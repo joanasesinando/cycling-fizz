@@ -77,7 +77,11 @@ nav.navbar-top {
      background-size: 11rem 1.7rem;
    }
   }
-} 
+}
+
+nav.navbar-top.navbar-white {
+  background: white;
+}
 
 nav.bg-white {
     top: 0;
