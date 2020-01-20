@@ -10,100 +10,89 @@
  *  Martel
  *
  * ------------------------------------------------------------------- */
-
- @font-face {
-    font-family: "martel-bold";
-    src: url("../assets/fonts/Martel/Martel-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
   
-  @font-face {
-    font-family: "martel-demiBold";
-    src: url("../assets/fonts/Martel/Martel-DemiBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  @font-face {
+@font-face {
     font-family: "martel-extraBold";
-    src: url("../assets/fonts/Martel/Martel-ExtraBold.ttf") format("truetype");
+    /* loads local fonts if present */
+    src: local('Martel-ExtraBold'),
+         url('~assets/fonts/Martel/Martel-ExtraBold.woff2') format('woff2'),
+         url('~assets/fonts/Martel/Martel-ExtraBold.woff') format('woff');
     font-style: normal;
     font-weight: normal;
-  }
+    font-display: swap;
+    unicode-range: U+000-5FF; /* load only latin glyphs */
+}
+
   
-  @font-face {
-    font-family: "martel-heavy";
-    src: url("../assets/fonts/Martel/Martel-Heavy.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
+/* ===================================================================
+*  Quicksand
+*
+* ------------------------------------------------------------------- */
   
-  @font-face {
-    font-family: "martel-light";
-    src: url("../assets/fonts/Martel/Martel-Light.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  @font-face {
-    font-family: "martel-regular";
-    src: url("../assets/fonts/Martel/Martel-Regular.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  @font-face {
-    font-family: "martel-ultraLight";
-    src: url("../assets/fonts/Martel/Martel-UltraLight.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-  }
-  
-  /* ===================================================================
-   *  Quicksand
-   *
-   * ------------------------------------------------------------------- */
-  
-   @font-face {
+@font-face {
     font-family: "quicksand-bold";
-    src: url("../assets/fonts/Quicksand/Quicksand-Bold.ttf") format("truetype");
+    /* loads local fonts if present */
+    src: local('Quicksand-Bold'),
+         url('~assets/fonts/Quicksand/Quicksand-Bold.woff2') format('woff2'),
+         url('~assets/fonts/Quicksand/Quicksand-Bold.woff') format('woff');
     font-style: normal;
     font-weight: normal;
-  }
+    font-display: swap;
+    unicode-range: U+000-5FF; /* load only latin glyphs */
+}
   
-  @font-face {
+@font-face {
     font-family: "quicksand-light";
-    src: url("../assets/fonts/Quicksand/Quicksand-Light.ttf") format("truetype");
+    /* loads local fonts if present */
+    src: local('Quicksand-Light'),
+         url('~assets/fonts/Quicksand/Quicksand-Light.woff2') format('woff2'),
+         url('~assets/fonts/Quicksand/Quicksand-Light.woff') format('woff');
     font-style: normal;
     font-weight: normal;
-  }
+    font-display: swap;
+    unicode-range: U+000-5FF; /* load only latin glyphs */
+}
   
-  @font-face {
+@font-face {
     font-family: "quicksand-medium";
-    src: url("../assets/fonts/Quicksand/Quicksand-Medium.ttf") format("truetype");
+    /* loads local fonts if present */
+    src: local('Quicksand-Medium'),
+         url('~assets/fonts/Quicksand/Quicksand-Medium.woff2') format('woff2'),
+         url('~assets/fonts/Quicksand/Quicksand-Medium.woff') format('woff');
     font-style: normal;
     font-weight: normal;
-  }
-  
-  @font-face {
+    font-display: swap;
+    unicode-range: U+000-5FF; /* load only latin glyphs */
+}
+
+@font-face {
     font-family: "quicksand-regular";
-    src: url("../assets/fonts/Quicksand/Quicksand-Regular.ttf") format("truetype");
+    /* loads local fonts if present */
+    src: local('Quicksand-Regular'),
+         url('~assets/fonts/Quicksand/Quicksand-Regular.woff2') format('woff2'),
+         url('~assets/fonts/Quicksand/Quicksand-Regular.woff') format('woff');
     font-style: normal;
     font-weight: normal;
-  }
+    font-display: swap;
+    unicode-range: U+000-5FF; /* load only latin glyphs */
+}
 
 
 /* ===================================================================
- *  Nothing You Could Do
+ *  NothingYouCouldDo
  *
  * ------------------------------------------------------------------- */
 
 @font-face {
     font-family: "nycdo-regular";
-    src: url("../assets/fonts/Nothing You Could Do/NothingYouCouldDo-Regular.ttf") format("truetype");
+    /* loads local fonts if present */
+    src: local('NothingYouCouldDo-Regular'),
+         url('../assets/fonts/NothingYouCouldDo/NothingYouCouldDo-Regular.woff2') format('woff2'),
+         url('../assets/fonts/NothingYouCouldDo/NothingYouCouldDo-Regular.woff') format('woff');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF; /* load only latin glyphs */
 }
 
 
@@ -113,36 +102,13 @@
  * ------------------------------------------------------------------- */
 
 @font-face {
-    font-family: "solway-bold";
-    src: url("../assets/fonts/Solway/Solway-Bold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "solway-extraBold";
-    src: url("../assets/fonts/Solway/Solway-ExtraBold.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "solway-light";
-    src: url("../assets/fonts/Solway/Solway-Light.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: "solway-medium";
-    src: url("../assets/fonts/Solway/Solway-Medium.ttf") format("truetype");
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
     font-family: "solway-regular";
-    src: url("../assets/fonts/Solway/Solway-Regular.ttf") format("truetype");
+    /* loads local fonts if present */
+    src: local('Solway-Regular'),
+         url('~assets/fonts/Solway/Solway-Regular.woff2') format('woff2'),
+         url('~assets/fonts/Solway/Solway-Regular.woff') format('woff');
     font-style: normal;
     font-weight: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF; /* load only latin glyphs */
 }
