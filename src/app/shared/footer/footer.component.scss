@@ -61,6 +61,14 @@ footer {
         margin-right: 1%;
     }
 
+    .credits a {
+        color: $darkGray;
+        text-decoration: underline;
+        &:hover, &:focus {
+            color: $orange;
+        }
+    }
+
     @include media-breakpoint-up(lg) {
         #emailHelp {
             position: relative;

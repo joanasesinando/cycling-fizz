@@ -462,46 +462,49 @@
  * -
  */
 
+@include media-breakpoint-down(md) {
+  .ball-1 {
+    left: 10%;
+  }
+  .ball-2 {
+    top: 30%;
+    left: 30%;
+  }
+  .ball-3 {
+    bottom: 8%;
+    left: 25%;
+  }
+  .ball-4 {
+    bottom: 9%;
+    left: 60%;
+  }
+  .ball-5 {
+    bottom: 4%;
+    left: 40%;
+  }
+}
+
 @include  media-breakpoint-down(sm) {
   .ball-1 {
     left: 95%;
     top: 48%;
   }
-
   .ball-2 {
     bottom: 9%;
     left: 18%;
-
-    @include media-breakpoint-down(md) {
-      bottom: 6%;
-    }
   }
-
   .ball-3 {
-    bottom: 40%;
-    left: 4%;
-
-    img {
-      height: 1.5rem;
-    }
+    bottom: 8%;
+    left: 25%;
+    img { height: 1.5rem; }
   }
-
   .ball-4 {
     bottom: 13%;
     left: 78%;
-
-    @include media-breakpoint-down(md) {
-      bottom: 10%;
-    }
   }
-
   .ball-5 {
     bottom: 7%;
     left: 58%;
-
-    @include media-breakpoint-down(md) {
-      bottom: 4%;
-    }
   }
 }
 

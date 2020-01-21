@@ -123,6 +123,10 @@ nav.bg-white {
   }
 }
 
+.nav-link[aria-expanded="true"]{
+  color: $orange !important;
+}
+
 .dropdown-menu {
   font-family: 'quicksand-regular', sans-serif;
   font-size: 1.1rem;
@@ -197,7 +201,7 @@ nav.bg-white {
 $hamburger-padding-x           : 0;
 $hamburger-padding-y           : 0;
 $hamburger-layer-width         : 1.7rem;
-$hamburger-layer-height        : 0.25rem;
+$hamburger-layer-height        : 0.2rem;
 $hamburger-layer-spacing       : 0.3rem;
 $hamburger-layer-color         : $header;
 $hamburger-layer-border-radius : 2rem;
