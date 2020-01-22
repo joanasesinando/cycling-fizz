@@ -7,16 +7,17 @@
 
 
 #banner-image {
-  height: 16rem;
+  height: 27rem;
   background-repeat: no-repeat;
   background-size: cover;
+  background-attachment: fixed;
   position: relative;
 }
 
 .banner-text {
   color: $lightGray;
   position: relative;
-  top: 20%;
+  top: 40%;
 
   h1:after {
     content: " ";

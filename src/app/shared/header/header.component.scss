@@ -89,6 +89,24 @@ nav.bg-white {
     box-shadow: 0 2px 13px 0 #a5a5a57a;
 }
 
+nav.light .navbar-nav .nav-item .nav-link{
+  @include media-breakpoint-up(lg) {
+    color: $lightGray;
+    &:hover, img:hover {
+      color: $yellow;
+    }
+  }
+}
+
+nav.light .navbar-brand {
+  @include media-breakpoint-down(md) {
+    width: 11rem;
+    height: 1.7rem;
+    background: url("../../../assets/images/header/logo-orange.svg") no-repeat center;
+    background-size: 11rem 1.7rem;
+  }
+}
+
 #navbarResponsive {
   @include media-breakpoint-down(md) {
     margin-left: 1.5rem;
@@ -214,5 +232,11 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 @include media-breakpoint-down(md) {
   .hamburger:focus {
     outline: none;
+  }
+}
+
+nav.light {
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: $lightGray;
   }
 }
