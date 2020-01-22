@@ -126,6 +126,9 @@ nav.light .navbar-brand {
     .nav-link {
       color: $header;
       @include transition(color 0.1s ease-in-out);
+      &:hover {
+        cursor: pointer;
+      }
 
       @include media-breakpoint-up(lg) {
         &:hover, img:hover {

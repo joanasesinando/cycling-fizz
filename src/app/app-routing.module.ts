@@ -10,6 +10,18 @@ const routes: Routes = [
     loadChildren: () => import('./map/map.module').then(mod => mod.MapModule)
   },
   {
+    path: 'traffic-rules',
+    loadChildren: () => import('./traffic-rules/traffic-rules.module').then(mod => mod.TrafficRulesModule)
+  },
+  {
+    path: 'routes',
+    loadChildren: () => import('./routes/routes.module').then(mod => mod.RoutesModule)
+  },
+  {
+    path: 'beginner',
+    loadChildren: () => import('./beginner/beginner.module').then(mod => mod.BeginnerModule)
+  },
+  {
     path: '',
     loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule)
   },

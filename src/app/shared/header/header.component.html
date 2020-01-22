@@ -32,7 +32,7 @@
 
           <!-- útil -->
           <li class="nav-item dropdown">
-              <a class="nav-link d-lg-none d-flex justify-content-between" href="#" id="navbarDropdownUtilLink" role="button"
+              <a class="nav-link d-lg-none d-flex justify-content-between" id="navbarDropdownUtilLink" role="button"
                data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleDropdownMenu(0)">
 
                   {{'navbar-links.useful.name' | translate}}
@@ -40,7 +40,7 @@
                 <fa-icon *ngIf="dropdownsOpen[0]" [icon]="faChevronUp" class="fa-xs faChevronUp"></fa-icon>
               </a>
 
-            <a class="nav-link d-none d-lg-block" href="#" id="navbarDropdownUtilLinkLarge" role="button"
+            <a class="nav-link d-none d-lg-block" id="navbarDropdownUtilLinkLarge" role="button"
                aria-haspopup="true" aria-expanded="false">
 
                 {{'navbar-links.useful.name' | translate}}
@@ -48,18 +48,21 @@
             </a>
 
             <div id="navbarDropdownUtil" class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownUtilLink">
-              <a class="dropdown-item clickable-nav-link" href="#"><fa-icon [icon]="faTrafficLight"></fa-icon>
+              <a class="dropdown-item clickable-nav-link" href="#" routerLink="/traffic-rules">
+                  <fa-icon [icon]="faTrafficLight"></fa-icon>
                   {{'navbar-links.useful.dropdown.traffic-rules' | translate}}</a>
-              <a class="dropdown-item clickable-nav-link" href="#"><fa-icon [icon]="faRoute"></fa-icon>
+              <a class="dropdown-item clickable-nav-link" href="#" routerLink="/routes">
+                  <fa-icon [icon]="faRoute"></fa-icon>
                   {{'navbar-links.useful.dropdown.routes' | translate}}</a>
-              <a class="dropdown-item clickable-nav-link" href="#"><fa-icon [icon]="faQuestion"></fa-icon>
+              <a class="dropdown-item clickable-nav-link" href="#" routerLink="/beginner">
+                  <fa-icon [icon]="faQuestion"></fa-icon>
                   {{'navbar-links.useful.dropdown.beginner' | translate}}</a>
             </div>
           </li>
 
           <!-- comunidade -->
           <li class="nav-item dropdown">
-            <a class="nav-link d-lg-none d-flex justify-content-between" href="#" id="navbarDropdownComunidadeLink"
+            <a class="nav-link d-lg-none d-flex justify-content-between" id="navbarDropdownComunidadeLink"
                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                (click)="toggleDropdownMenu(1)">
 
@@ -68,7 +71,7 @@
                 <fa-icon *ngIf="dropdownsOpen[1]" [icon]="faChevronUp" class="fa-xs faChevronUp"></fa-icon>
             </a>
 
-            <a class="nav-link d-none d-lg-block" href="#" id="navbarDropdownComunidadeLinkLarge" role="button"
+            <a class="nav-link d-none d-lg-block" id="navbarDropdownComunidadeLinkLarge" role="button"
                aria-haspopup="true" aria-expanded="false">
                 {{'navbar-links.community.name' | translate}}
               <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
@@ -86,7 +89,7 @@
 
           <!-- sobre -->
           <li class="nav-item dropdown">
-            <a class="nav-link d-lg-none d-flex justify-content-between" href="#" id="navbarDropdownSobreLink"
+            <a class="nav-link d-lg-none d-flex justify-content-between" id="navbarDropdownSobreLink"
                role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
                data-offset="100, 100, 200, 200" (click)="toggleDropdownMenu(2)">
 
@@ -95,7 +98,7 @@
                 <fa-icon *ngIf="dropdownsOpen[2]" [icon]="faChevronUp" class="fa-xs faChevronUp"></fa-icon>
             </a>
 
-            <a class="nav-link d-none d-lg-block" href="#" id="navbarDropdownSobreLinkLarge" role="button"
+            <a class="nav-link d-none d-lg-block" id="navbarDropdownSobreLinkLarge" role="button"
                aria-haspopup="true" aria-expanded="false" data-offset="100, 100, 200, 200">
                 {{'navbar-links.about.name' | translate}}
               <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>

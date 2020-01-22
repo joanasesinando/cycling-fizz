@@ -46,7 +46,10 @@ import { CreditsAccordionComponent } from './credits/credits-accordion/credits-a
     HeaderComponent,
     FooterComponent,
     BtnOutlineComponent,
-    BtnFloatingComponent
+    BtnFloatingComponent,
+    CreditsComponent,
+    BannerComponent,
+    PageNotFoundComponent
   ]
 })
 export class SharedModule { }
