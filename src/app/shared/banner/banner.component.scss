@@ -9,7 +9,6 @@
 #banner-image {
   height: 16rem;
   background-repeat: no-repeat;
-  background-position: 100% 30%;
   background-size: cover;
   position: relative;
 }
@@ -34,6 +33,7 @@
 
   p {
     font-family: quicksand-light, sans-serif;
+    font-size: 1.1rem;
     @include media-breakpoint-up(lg) {
       width: 50rem;
     }

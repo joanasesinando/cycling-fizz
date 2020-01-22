@@ -8,6 +8,7 @@ import {Component, Input, OnInit} from '@angular/core';
 export class BannerComponent implements OnInit {
 
   @Input() image: string;
+  @Input() imagePosition: string;
   @Input() title: string;
   @Input() text: string;
 

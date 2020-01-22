@@ -1,0 +1,135 @@
+<div class="accordion mt-4" id="credits-accordion">
+
+    <!-- Login -->
+    <div class="card mb-2">
+        <div class="card-header p-3" id="headingOne">
+            <div data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne"
+                 (click)="toggleIcon($event)">
+                <h4 class="title text-left mb-0">Login
+                    <img class="right-icon float-right arrow-down" src="../../../../assets/images/credits/icons/arrowDown.svg" alt=""></h4>
+            </div>
+        </div>
+        <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#credits-accordion">
+            <div class="card-body text-left pd-0 ml-4">
+                <div *ngFor="let credit of login" class="item row align-items-center">
+                    <img *ngIf="credit.circle" class="circle mr-3" src="{{credit.img}}" alt="">
+                    <img *ngIf="!credit.circle" class="mr-3" src="{{credit.img}}" alt="">
+                    <span class="text-dark-black pt-1 pt-sm-0">By <a class="text-orange" href="{{credit.byUrl}}">{{credit.by}}</a> from
+                        <a class="text-orange"href="{{credit.fromUrl}}">{{credit.from}}</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Barra de navegação -->
+    <div class="card mb-2">
+        <div class="card-header p-3" id="headingSeven">
+            <div data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven"
+                 (click)="toggleIcon($event)">
+                <h4 class="title text-left mb-0">Barra de navegação
+                    <img class="right-icon float-right arrow-down" src="../../../../assets/images/credits/icons/arrowDown.svg" alt=""></h4>
+            </div>
+        </div>
+        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#credits-accordion">
+            <div class="card-body text-left pd-0 ml-4">
+                <div *ngFor="let credit of navbar" class="item row align-items-center mb-4">
+                    <img *ngIf="credit.circle" class="circle mr-3" src="{{credit.img}}" alt="">
+                    <img *ngIf="!credit.circle" class="mr-3" src="{{credit.img}}" alt="">
+                    <span class="text-dark-black pt-1 pt-sm-0">By <a class="text-orange" href="{{credit.byUrl}}">{{credit.by}}</a> from
+                        <a class="text-orange"href="{{credit.fromUrl}}">{{credit.from}}</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Página inicial -->
+    <div class="card mb-2">
+        <div class="card-header p-3" id="headingTwo">
+            <div data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo"
+                 (click)="toggleIcon($event)">
+                <h4 class="title text-left mb-0">Página inicial
+                    <img class="right-icon float-right arrow-down" src="../../../../assets/images/credits/icons/arrowDown.svg" alt=""></h4>
+            </div>
+        </div>
+        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#credits-accordion">
+            <div class="card-body text-left pd-0 ml-4">
+                <div *ngFor="let credit of homepage" class="item row align-items-center mb-4">
+                    <img *ngIf="credit.circle" class="circle mr-3" src="{{credit.img}}" alt="">
+                    <img *ngIf="!credit.circle" class="mr-3" src="{{credit.img}}" alt="">
+                    <span class="text-dark-black pt-1 pt-sm-0">By <a class="text-orange" href="{{credit.byUrl}}">{{credit.by}}</a> from
+                        <a class="text-orange"href="{{credit.fromUrl}}">{{credit.from}}</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Mapa #TODO-->
+    <div class="card mb-2">
+        <div class="card-header p-3" id="headingThree">
+            <div data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree"
+                 (click)="toggleIcon($event)">
+                <h4 class="title text-left mb-0">Mapa
+                    <img class="right-icon float-right arrow-down" src="../../../../assets/images/credits/icons/arrowDown.svg" alt=""></h4>
+            </div>
+        </div>
+        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#credits-accordion">
+            <div class="card-body text-left pd-0 ml-4">
+                <div *ngFor="let credit of map" class="item row align-items-center mb-4">
+                    <img *ngIf="credit.circle" class="circle mr-3" src="{{credit.img}}" alt="">
+                    <img *ngIf="!credit.circle" class="mr-3" src="{{credit.img}}" alt="">
+                    <span class="text-dark-black pt-1 pt-sm-0">By <a class="text-orange" href="{{credit.byUrl}}">{{credit.by}}</a> from
+                        <a class="text-orange"href="{{credit.fromUrl}}">{{credit.from}}</a></span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Útil #TODO-->
+    <div class="card mb-2">
+        <div class="card-header p-3" id="headingFour">
+            <div data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour"
+                 (click)="toggleIcon($event)">
+                <h4 class="title text-left mb-0">Útil
+                    <img class="right-icon float-right arrow-down" src="../../../../assets/images/credits/icons/arrowDown.svg" alt=""></h4>
+            </div>
+        </div>
+        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#credits-accordion">
+            <div class="card-body text-left pd-0 ml-4">
+                Um domínio é um <b>nome de fácil memorização e que serve para localizar e identificar computadores na Internet</b>.
+            </div>
+        </div>
+    </div>
+
+    <!-- Comunidade #TODO-->
+    <div class="card mb-2">
+        <div class="card-header p-3" id="headingFive">
+            <div data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive"
+                 (click)="toggleIcon($event)">
+                <h4 class="title text-left mb-0">Comunidade
+                    <img class="right-icon float-right arrow-down" src="../../../../assets/images/credits/icons/arrowDown.svg" alt=""></h4>
+            </div>
+        </div>
+        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#credits-accordion">
+            <div class="card-body text-left pd-0 ml-4">
+                Um domínio é um <b>nome de fácil memorização e que serve para localizar e identificar computadores na Internet</b>.
+            </div>
+        </div>
+    </div>
+
+    <!-- Sobre #TODO-->
+    <div class="card mb-2">
+        <div class="card-header p-3" id="headingSix">
+            <div data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix"
+                 (click)="toggleIcon($event)">
+                <h4 class="title text-left mb-0">Sobre
+                    <img class="right-icon float-right arrow-down" src="../../../../assets/images/credits/icons/arrowDown.svg" alt=""></h4>
+            </div>
+        </div>
+        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#credits-accordion">
+            <div class="card-body text-left pd-0 ml-4">
+                Um domínio é um <b>nome de fácil memorização e que serve para localizar e identificar computadores na Internet</b>.
+            </div>
+        </div>
+    </div>
+
+</div>

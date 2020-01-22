@@ -1,7 +1,23 @@
 <section id="section-credits">
     <app-banner
         [image]="'assets/images/credits/banner.jpg'"
+        [imagePosition]="'100% 30%'"
         [title]="'Créditos'"
         [text]="'Este projeto conseguiu ganhar forma visual devido aos inúmeros recursos gráficos, feitos por terceiros,' +
-         'que existem à disposição. Deixamos aqui as devidas atribuições.'"></app-banner>
+         ' que existem à disposição. Deixamos aqui as devidas atribuições.'"></app-banner>
+
+    <div class="container">
+        <div class="d-flex flex-wrap">
+            <div class="col-12 col-sm-6 text-center col-left px-0 pr-md-3 pr-lg-4">
+                <h3>Imagens</h3>
+                <p class="text-dark-black mt-4">Todas as imagens foram retiradas de <a href="https://unsplash.com/" class="text-orange">Unsplash</a>.</p>
+                <img src="../../../assets/images/credits/unsplash.jpg" alt="">
+            </div>
+
+            <div class="col-12 col-sm-6 text-center col-right px-0 pl-md-3 pl-lg-4 pt-5 pt-md-0 mt-5 mt-md-0">
+                <h3>Ilustrações</h3>
+                <app-credits-accordion></app-credits-accordion>
+            </div>
+        </div>
+    </div>
 </section>

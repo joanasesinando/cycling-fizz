@@ -17,4 +17,9 @@ export class AppComponent implements OnInit {
   ngOnInit() {
     AOS.init();
   }
+
+  // Scroll to top after routing
+  onActivate(event) {
+    window.scroll(0,0);
+  }
 }

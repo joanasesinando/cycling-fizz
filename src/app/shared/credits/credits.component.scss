@@ -9,6 +9,20 @@
 #section-credits {
   position: relative;
   top: 4rem; //navbar height
-  height: 100vh;
 
+  .container {
+    padding-top: 6rem;
+    padding-bottom: 10rem;
+    font-family: quicksand-regular, sans-serif;
+
+    .col-left {
+      p { font-size: 1.2rem; }
+      img {
+        width: 10rem;
+        @include media-breakpoint-down(md) {
+          width: 9rem;
+        }
+      }
+    }
+  }
 }

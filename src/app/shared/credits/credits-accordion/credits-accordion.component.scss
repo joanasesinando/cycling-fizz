@@ -1,0 +1,48 @@
+@import "~styles/_colors";
+@import "~styles/mixins";
+
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+
+#credits-accordion {
+  .card {
+    background-color: $lightGray;
+    border: none;
+    border-radius: 8px;
+
+    .card-header {
+      background-color: transparent;
+      border: none;
+
+      .title {
+        font-family: quicksand-regular, sans-serif;
+        font-size: 1.2rem;
+
+        .right-icon {
+          width: 1.5rem;
+        }
+
+        &:hover {
+          cursor: pointer;
+        }
+      }
+    }
+
+    .card-body {
+      font-family: quicksand-regular, sans-serif;
+      font-size: 1rem;
+
+      .item {
+        img {
+          width: 2.5rem;
+        }
+        img.circle {
+          width: 3rem;
+          border-radius: 50%;
+        }
+      }
+    }
+  }
+}

@@ -16,6 +16,7 @@ import { Text404Component } from './page-not-found/text404/text404.component';
 import { BtnFloatingComponent } from './btn-floating/btn-floating.component';
 import { CreditsComponent } from './credits/credits.component';
 import { BannerComponent } from './banner/banner.component';
+import { CreditsAccordionComponent } from './credits/credits-accordion/credits-accordion.component';
 
 
 @NgModule({
@@ -31,7 +32,8 @@ import { BannerComponent } from './banner/banner.component';
     Text404Component,
     BtnFloatingComponent,
     CreditsComponent,
-    BannerComponent
+    BannerComponent,
+    CreditsAccordionComponent
   ],
   imports: [
     CommonModule,

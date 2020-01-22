@@ -1,7 +1,7 @@
-<div id="banner-image" class="px-3" [style.background-image]="'url(' + image + ')'">
+<div id="banner-image" class="px-3" [style.background-image]="'url(' + image + ')'" [style.background-position]="imagePosition">
     <div class="overlay"></div>
     <div class="banner-text d-flex flex-column align-items-center justify-content-center text-center">
-        <h1 class="text-light mb-3">{{ title }}</h1>
+        <h1 class="text-light mb-4">{{ title }}</h1>
         <p>{{ text }}</p>
     </div>
 </div>

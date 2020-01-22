@@ -28,6 +28,13 @@
  *
  * ------------------------------------------------------------------- */
 
+.text-dark-black { color: $text !important;}
+.text-dark-header { color: $header !important; }
+.text-dark-gray { color: $darkGray !important; }
+.text-gray { color: $gray !important; }
+.text-light-gray { color: $lightGray !important; }
+.text-orange { color: $orange !important; }
+
 h1, .h1,
 h2, .h2,
 h3, .h3 {
