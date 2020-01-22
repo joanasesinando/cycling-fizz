@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 
 import { HomeRoutingModule } from './home-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import {SharedModule} from '../shared/shared.module';
 
 import { HomeComponent } from './home/home.component';
 import { IntroComponent } from './intro/intro.component';
@@ -20,7 +21,8 @@ import { Carousel3Component } from './blog/carousel3/carousel3.component';
   imports: [
     CommonModule,
     HomeRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    SharedModule
   ]
 })
 export class HomeModule { }

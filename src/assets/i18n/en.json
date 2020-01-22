@@ -1,0 +1,30 @@
+{
+  "navbar-links": {
+    "homepage": "Homepage",
+    "map": "Map",
+    "useful": {
+      "name": "Useful",
+      "dropdown": {
+        "traffic-rules": "Traffic rules",
+        "routes": "Routes",
+        "beginner": "Beginner"
+      }
+    },
+    "community": {
+      "name": "Community",
+      "dropdown": {
+        "forum": "Forum",
+        "blog": "Blog",
+        "events": "Events"
+      }
+    },
+    "about": {
+      "name": "About",
+      "dropdown": {
+        "project": "The project",
+        "us": "Meet us",
+        "contact": "Contact"
+      }
+    }
+  }
+}

@@ -2,7 +2,8 @@ import { Component, OnInit, HostListener } from '@angular/core';
 
 import { faGlobeEurope, faChevronDown,  faChevronUp, faTrafficLight,
         faRoute, faQuestion, faComments, faUsers } from '@fortawesome/free-solid-svg-icons';
-import {NavigationEnd, Router} from '@angular/router';
+import {Router} from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-header',
@@ -31,7 +32,7 @@ export class HeaderComponent implements OnInit {
   navigation;
   currentActiveDropdown  = null;
 
-  constructor(private _router: Router) {
+  constructor(private _router: Router, public translate: TranslateService) {
     this.router = _router;
     this.onWindowResize();
     this.hideMobileMenuWhenClickedOutside();
@@ -50,6 +51,12 @@ export class HeaderComponent implements OnInit {
       else this.nav.removeClass("light");
 
     });
+
+    // translation
+    translate.addLangs(['pt', 'en', 'fr']);
+    translate.setDefaultLang('pt');
+    const browserLang = translate.getBrowserLang();
+    translate.use(browserLang.match(/pt|en|fr/) ? browserLang : 'pt');
   }
 
   ngOnInit() {

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { SharedRoutingModule } from './shared-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -38,7 +39,8 @@ import { CreditsAccordionComponent } from './credits/credits-accordion/credits-a
   imports: [
     CommonModule,
     SharedRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
+    TranslateModule
   ],
   exports: [
     HeaderComponent,
