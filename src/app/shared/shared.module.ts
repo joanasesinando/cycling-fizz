@@ -14,6 +14,8 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
 import { Svg404Component } from './page-not-found/svg404/svg404.component';
 import { Text404Component } from './page-not-found/text404/text404.component';
 import { BtnFloatingComponent } from './btn-floating/btn-floating.component';
+import { CreditsComponent } from './credits/credits.component';
+import { BannerComponent } from './banner/banner.component';
 
 
 @NgModule({
@@ -27,7 +29,9 @@ import { BtnFloatingComponent } from './btn-floating/btn-floating.component';
     PageNotFoundComponent,
     Svg404Component,
     Text404Component,
-    BtnFloatingComponent
+    BtnFloatingComponent,
+    CreditsComponent,
+    BannerComponent
   ],
   imports: [
     CommonModule,
