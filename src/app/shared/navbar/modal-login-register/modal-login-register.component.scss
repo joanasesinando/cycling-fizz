@@ -29,13 +29,13 @@
 
 .modal-popout-bg {
   @include media-breakpoint-up(lg) {
-    background: white url(../../../../assets/images/header/modal/ilustrations/green-girl.svg) no-repeat top left;
+    background: white url(../../../../assets/images/navbar/modal/ilustrations/green-girl.svg) no-repeat top left;
     background-size: auto 100%;
     background-position-x: -20%;
   }
 
   @include media-breakpoint-down(lg) {
-    background-image: url(../../../../assets/images/header/modal/ilustrations/green-girl-mobile.svg);
+    background-image: url(../../../../assets/images/navbar/modal/ilustrations/green-girl-mobile.svg);
     background-size: auto 150%;
     background-position-y: 40%;
     background-position-x: 40%;

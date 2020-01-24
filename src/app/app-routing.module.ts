@@ -23,7 +23,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule)
+    loadChildren: () => import('./homepage/homepage.module').then(mod => mod.HomepageModule)
   },
   {
     path: 'credits',

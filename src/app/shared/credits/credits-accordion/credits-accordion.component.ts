@@ -16,7 +16,7 @@ export class CreditsAccordionComponent implements OnInit {
 
   login = [
     {
-      img: '../../../../assets/images/header/modal/ilustrations/green-girl.svg',
+      img: '../../../../assets/images/navbar/modal/ilustrations/green-girl.svg',
       by: 'pikisuperstar',
       byUrl: 'https://www.freepik.com/pikisuperstar',
       from: 'www.freepik.com',
@@ -27,7 +27,7 @@ export class CreditsAccordionComponent implements OnInit {
 
   navbar = [
     {
-      img: '../../../../assets/images/header/icons/blog.svg',
+      img: '../../../../assets/images/navbar/icons/blog.svg',
       by: 'flaticon',
       byUrl: 'https://www.flaticon.com',
       from: 'www.freepik.com',
@@ -35,7 +35,7 @@ export class CreditsAccordionComponent implements OnInit {
       circle: false
     },
     {
-      img: '../../../../assets/images/header/icons/calendar.svg',
+      img: '../../../../assets/images/navbar/icons/calendar.svg',
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
@@ -43,7 +43,7 @@ export class CreditsAccordionComponent implements OnInit {
       circle: false
     },
     {
-      img: '../../../../assets/images/header/icons/idea.svg',
+      img: '../../../../assets/images/navbar/icons/idea.svg',
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
@@ -51,7 +51,7 @@ export class CreditsAccordionComponent implements OnInit {
       circle: false
     },
     {
-      img: '../../../../assets/images/header/icons/envelope.svg',
+      img: '../../../../assets/images/navbar/icons/envelope.svg',
       by: 'Those Icons',
       byUrl: 'https://www.flaticon.com/authors/those-icons',
       from: 'www.flaticon.com',
@@ -59,7 +59,7 @@ export class CreditsAccordionComponent implements OnInit {
       circle: false
     },
     {
-      img: '../../../../assets/images/header/icons/portugues.svg',
+      img: '../../../../assets/images/navbar/icons/portugues.svg',
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
@@ -67,7 +67,7 @@ export class CreditsAccordionComponent implements OnInit {
       circle: false
     },
     {
-      img: '../../../../assets/images/header/icons/english.svg',
+      img: '../../../../assets/images/navbar/icons/english.svg',
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
@@ -75,7 +75,7 @@ export class CreditsAccordionComponent implements OnInit {
       circle: false
     },
     {
-      img: '../../../../assets/images/header/icons/français.svg',
+      img: '../../../../assets/images/navbar/icons/français.svg',
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
@@ -86,7 +86,7 @@ export class CreditsAccordionComponent implements OnInit {
 
   homepage = [
     {
-      img: '../../../../assets/images/homepage/intro/ilustrations/hero.svg',
+      img: '../../../../assets/images/homepage/cover/ilustrations/hero.svg',
       by: 'pikisuperstar',
       byUrl: 'https://www.freepik.com/pikisuperstar',
       from: 'www.freepik.com',

@@ -6,11 +6,11 @@ import {Router} from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 
 @Component({
-  selector: 'app-header',
-  templateUrl: './header.component.html',
-  styleUrls: ['./header.component.scss']
+  selector: 'app-navbar',
+  templateUrl: './navbar.html',
+  styleUrls: ['./navbar.component.scss']
 })
-export class HeaderComponent implements OnInit {
+export class NavbarComponent implements OnInit {
 
   // FontAwesome icons
   faGlobeEurope = faGlobeEurope;

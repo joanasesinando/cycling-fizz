@@ -11,7 +11,7 @@ $modal-width-mobile: 280px;
 .modal.left {
   .modal-dialog {
     position: fixed;
-    top: calc(4rem + 3.5rem); //header + darkBar
+    top: calc(4rem + 3.5rem); //navbar + darkBar
     margin: auto;
     width: $modal-width;
     height: 100%;

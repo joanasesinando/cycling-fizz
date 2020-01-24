@@ -4,11 +4,11 @@ import {faTwitter, faInstagram, faFacebookF, faYoutube} from '@fortawesome/free-
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-intro',
-  templateUrl: './intro.component.html',
-  styleUrls: ['./intro.component.scss']
+  selector: 'app-cover',
+  templateUrl: './cover.component.html',
+  styleUrls: ['./cover.component.scss']
 })
-export class IntroComponent implements OnInit {
+export class CoverComponent implements OnInit {
 
   //FontAwesome icons
   faTwitter = faTwitter;

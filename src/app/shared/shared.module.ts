@@ -5,11 +5,11 @@ import { TranslateModule } from '@ngx-translate/core';
 import { SharedRoutingModule } from './shared-routing.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
-import { HeaderComponent } from './header/header.component';
+import { NavbarComponent } from './navbar/navbar.component';
 import { FooterComponent } from './footer/footer.component';
-import { ModalLoginRegisterComponent } from './header/modal-login-register/modal-login-register.component';
-import { ModalLoginComponent } from './header/modal-login/modal-login.component';
-import { ModalRegisterComponent } from './header/modal-register/modal-register.component';
+import { ModalLoginRegisterComponent } from './navbar/modal-login-register/modal-login-register.component';
+import { ModalLoginComponent } from './navbar/modal-login/modal-login.component';
+import { ModalRegisterComponent } from './navbar/modal-register/modal-register.component';
 import { BtnOutlineComponent } from './btn-outline/btn-outline.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { Svg404Component } from './page-not-found/svg404/svg404.component';
@@ -22,7 +22,7 @@ import { CreditsAccordionComponent } from './credits/credits-accordion/credits-a
 
 @NgModule({
   declarations: [
-    HeaderComponent,
+    NavbarComponent,
     FooterComponent,
     ModalLoginRegisterComponent,
     ModalLoginComponent,
@@ -43,7 +43,7 @@ import { CreditsAccordionComponent } from './credits/credits-accordion/credits-a
     TranslateModule
   ],
   exports: [
-    HeaderComponent,
+    NavbarComponent,
     FooterComponent,
     BtnOutlineComponent,
     BtnFloatingComponent,

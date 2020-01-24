@@ -1,6 +1,6 @@
 /* ===================================================================
  *
- *  Cycling Fizz v1.0 Header Stylesheet
+ *  Cycling Fizz v1.0 Navbar Stylesheet
  *  27-05-2019 #FIXME
  *  ------------------------------------------------------------------
  *
@@ -35,20 +35,14 @@
     color: transparent;
     width: 17rem;
     height: 4rem;
-    background: url("../../../assets/images/header/logo.svg") no-repeat center;
+    background: url("../../../assets/images/navbar/logo.svg") no-repeat center;
     background-size: 17rem 4rem;
     @include transition(all 0.3s ease-in-out);
-
-    @include media-breakpoint-down(lg) {
-      width: 15rem;
-      height: 2.5rem;
-      background-size: 15rem 2.5rem;
-    }
 
     @include media-breakpoint-down(md) {
       width: 11rem;
       height: 1.7rem;
-      background: url("../../../assets/images/header/logo-dark.svg") no-repeat center;
+      background: url("../../../assets/images/navbar/logo-solo-dark.svg") no-repeat center;
       background-size: 11rem 1.7rem;
     }
   }
@@ -67,13 +61,13 @@ nav.navbar-top {
 
   .navbar-brand {
     width: 15rem;
-    height: 2.5rem;
-    background-size: 15rem 2.5rem;
+    height: 3rem;
+    background-size: 15rem 3rem;
 
    @include media-breakpoint-down(md) {
      width: 11rem;
      height: 1.7rem;
-     background: url("../../../assets/images/header/logo-orange.svg") no-repeat center;
+     background: url("../../../assets/images/navbar/logo-solo-orange.svg") no-repeat center;
      background-size: 11rem 1.7rem;
    }
   }
@@ -99,10 +93,15 @@ nav.light .navbar-nav .nav-item .nav-link{
 }
 
 nav.light .navbar-brand {
+  width: 17rem;
+  height: 4rem;
+  background: url("../../../assets/images/navbar/logo-light.svg") no-repeat center;
+
+  background-size: 17rem 4rem;
   @include media-breakpoint-down(md) {
     width: 11rem;
     height: 1.7rem;
-    background: url("../../../assets/images/header/logo-orange.svg") no-repeat center;
+    background: url("../../../assets/images/navbar/logo-solo-orange.svg") no-repeat center;
     background-size: 11rem 1.7rem;
   }
 }
