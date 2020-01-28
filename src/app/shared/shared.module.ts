@@ -18,6 +18,7 @@ import { BtnFloatingComponent } from './btn-floating/btn-floating.component';
 import { CreditsComponent } from './credits/credits.component';
 import { BannerComponent } from './banner/banner.component';
 import { CreditsAccordionComponent } from './credits/credits-accordion/credits-accordion.component';
+import { BadgeComponent } from './badge/badge.component';
 
 
 @NgModule({
@@ -34,7 +35,8 @@ import { CreditsAccordionComponent } from './credits/credits-accordion/credits-a
     BtnFloatingComponent,
     CreditsComponent,
     BannerComponent,
-    CreditsAccordionComponent
+    CreditsAccordionComponent,
+    BadgeComponent
   ],
   imports: [
     CommonModule,
