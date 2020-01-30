@@ -1,6 +1,6 @@
 /* =================================================================== 
  *
- *  Cycling Fizz v1.0 Intro Stylesheet
+ *  Cycling Fizz v1.0 Cover Stylesheet
  *  27-05-2019 #FIXME
  *  ------------------------------------------------------------------
  *
@@ -27,8 +27,8 @@
  *
  * ------------------------------------------------------------------- */
 
-#intro {
-  background: url(../../../assets/images/homepage/intro/ilustrations/hero.svg) no-repeat top right;
+#cover {
+  background: url(../../../assets/images/homepage/cover/ilustrations/hero.svg) no-repeat top right;
   background-size: contain;
   width: 100vw;
   height: 100vh;
@@ -37,7 +37,7 @@
   position: relative;
 }
 
-.intro-content {
+.cover-content {
   display: table-cell;
   vertical-align: middle;
   text-align: center;
@@ -516,11 +516,11 @@
 
 @include  media-breakpoint-down(md) { // phones & tablets
 
-  #intro {
+  #cover {
     background-size: 75vh;
     background-position: 100% 0;
   }
-  .intro-content {
+  .cover-content {
     -webkit-transform: translateY(0);
     -ms-transform: translateY(0);
     transform: translateY(0);
@@ -545,7 +545,7 @@
     }
   }
 
-  #intro-btns {
+  #cover-btns {
     margin-bottom: 15rem;
 
     @include media-breakpoint-down(md) {
@@ -554,7 +554,7 @@
   }
 
 
-  #intro-div {
+  #cover-div {
     margin-top: 75vh;
   }
 

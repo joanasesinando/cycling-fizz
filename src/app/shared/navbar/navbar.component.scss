@@ -167,9 +167,8 @@ nav.light .navbar-brand {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
     }
-
-    &:active {
-      background-color: rgba(47, 55, 61, 0.08);
+    &:focus, &:hover {
+      background-color: #e9ecef;
     }
   }
 
