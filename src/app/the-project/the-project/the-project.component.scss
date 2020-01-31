@@ -1,0 +1,57 @@
+@import "~styles/_colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+#section-the-project {
+  .container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    font-family: quicksand-regular, sans-serif;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.2rem;
+      padding-top: 10rem;
+      padding-bottom: 0;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      h3 {
+        font-size: 1.6rem;
+      }
+    }
+
+    .text-section {
+      p { line-height: 35px; }
+
+      img {
+        width: 32rem;
+        @include media-breakpoint-up(lg) {
+          position: relative;
+          bottom: 13rem;
+        }
+        @include media-breakpoint-down(md) {
+          width: 20rem;
+          margin-right: 1rem;
+          margin-left: 1rem;
+        }
+        @include media-breakpoint-down(sm) {
+          width: 12rem;
+        }
+      }
+    }
+    .text-section.section-margin {
+      margin-top: 10rem;
+      @include media-breakpoint-down(md) {
+        margin-top: 6rem;
+      }
+    }
+    hr {
+      @include media-breakpoint-down(md) {
+        margin-top: 6rem;
+      }
+    }
+  }
+}

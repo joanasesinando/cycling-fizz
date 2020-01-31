@@ -6,6 +6,18 @@ import {CreditsComponent} from './shared/credits/credits.component';
 
 const routes: Routes = [
   {
+    path: 'the-project',
+    loadChildren: () => import('./the-project/the-project.module').then(mod => mod.TheProjectModule)
+  },
+  {
+    path: 'about-us',
+    loadChildren: () => import('./about-us/about-us.module').then(mod => mod.AboutUsModule)
+  },
+  {
+    path: 'contact',
+    loadChildren: () => import('./contact/contact.module').then(mod => mod.ContactModule)
+  },
+  {
     path: 'map',
     loadChildren: () => import('./map/map.module').then(mod => mod.MapModule)
   },

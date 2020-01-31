@@ -103,11 +103,11 @@
         </a>
 
         <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownSobreLink">
-          <a class="dropdown-item clickable-nav-link" href="#"><img src="../../../assets/images/navbar/icons/idea.svg">
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/the-project"><img src="../../../assets/images/navbar/icons/idea.svg">
               {{'navbar-links.about.dropdown.project' | translate}}</a>
-          <a class="dropdown-item clickable-nav-link" href="#"><fa-icon [icon]="faUsers"></fa-icon>
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/about-us"><fa-icon [icon]="faUsers"></fa-icon>
               {{'navbar-links.about.dropdown.us' | translate}}</a>
-          <a class="dropdown-item clickable-nav-link" href="#"><img src="../../../assets/images/navbar/icons/envelope.svg">
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/contact"><img src="../../../assets/images/navbar/icons/envelope.svg">
               {{'navbar-links.about.dropdown.contact' | translate}}</a>
         </div>
       </li>
@@ -120,13 +120,13 @@
                         <fa-icon [icon]="faGlobeEurope" class="fa-lg"></fa-icon>
                     </a>
                     <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownIdiomaLink">
-                        <a class="dropdown-item" href="#" (click)="translate.use('pt')">
+                        <a class="dropdown-item" (click)="translate.use('pt')">
                             <img src="../../../assets/images/navbar/icons/portugues.svg">PT
                         </a>
-                        <a class="dropdown-item" href="#" (click)="translate.use('en')">
+                        <a class="dropdown-item" (click)="translate.use('en')">
                             <img src="../../../assets/images/navbar/icons/english.svg">EN
                         </a>
-                        <a class="dropdown-item" href="#" (click)="translate.use('fr')">
+                        <a class="dropdown-item" (click)="translate.use('fr')">
                             <img src="../../../assets/images/navbar/icons/français.svg">FR
                         </a>
                     </div>
@@ -138,17 +138,17 @@
                     <div class="col-sm-auto pb-sm-0 pb-4">
                         <div class="row justify-content-sm-start justify-content-around">
                             <div class="col-3">
-                                <a class="dropdown-item" href="#" (click)="translate.use('pt')">
+                                <a class="dropdown-item" (click)="translate.use('pt')">
                                     <img src="../../../assets/images/navbar/icons/portugues.svg">PT
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a class="dropdown-item" href="#" (click)="translate.use('en')">
+                                <a class="dropdown-item" (click)="translate.use('en')">
                                     <img src="../../../assets/images/navbar/icons/english.svg">EN
                                 </a>
                             </div>
                             <div class="col-3">
-                                <a class="dropdown-item" href="#" (click)="translate.use('fr')">
+                                <a class="dropdown-item" (click)="translate.use('fr')">
                                     <img src="../../../assets/images/navbar/icons/français.svg">FR
                                 </a>
                             </div>
