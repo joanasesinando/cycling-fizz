@@ -18,27 +18,20 @@
     @include media-breakpoint-down(sm) {
       padding-top: 8rem;
       padding-bottom: 8rem;
-      h3 {
-        font-size: 1.6rem;
-      }
+      h3 { font-size: 1.6rem; }
     }
 
     .text-section {
       p { line-height: 35px; }
 
-      img {
-        width: 32rem;
+      .image {
         @include media-breakpoint-up(lg) {
           position: relative;
           bottom: 13rem;
         }
         @include media-breakpoint-down(md) {
-          width: 20rem;
           margin-right: 1rem;
           margin-left: 1rem;
-        }
-        @include media-breakpoint-down(sm) {
-          width: 12rem;
         }
       }
     }
@@ -55,3 +48,6 @@
     }
   }
 }
+
+
+
