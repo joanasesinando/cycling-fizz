@@ -1,0 +1,51 @@
+@import "~styles/_colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+.avatar {
+  width: 12rem;
+  height: 12rem;
+  background: url("../../../assets/images/about-us/avatar.jpg") no-repeat;
+  background-size: cover;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+  transition: all 300ms ease-in-out;
+
+  &:hover {
+    background-image: url("../../../assets/images/about-us/avatar-hover.jpg");
+    cursor: pointer;
+  }
+}
+
+.name {
+  font-family: quicksand-medium, sans-serif;
+  font-size: 1.4rem;
+}
+.job {
+  font-family: quicksand-bold, sans-serif;
+  font-size: .9rem;
+}
+.text {
+  font-family: quicksand-regular, sans-serif;
+  font-size: 1rem;
+}
+
+.social a {
+  text-align: center;
+  height: 2.2rem;
+  width: 2.2rem;
+  background: $gradient-orange;
+  border-radius: 50%;
+  line-height: 2.2rem;
+  color: white;
+  @include transition(all 0.2s ease-in-out);
+
+  @include media-breakpoint-up(lg){
+    &:hover {
+      @include transform(translateY(-0.3rem));
+    }
+  }
+}

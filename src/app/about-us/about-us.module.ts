@@ -6,11 +6,12 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {SharedModule} from '../shared/shared.module';
 
 import { AboutUsComponent } from './about-us/about-us.component';
+import { TeamMemberComponent } from './team-member/team-member.component';
 
 
 
 @NgModule({
-  declarations: [AboutUsComponent],
+  declarations: [AboutUsComponent, TeamMemberComponent],
   imports: [
     CommonModule,
     AboutUsRoutingModule,

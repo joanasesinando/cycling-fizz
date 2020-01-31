@@ -3,7 +3,45 @@
             [image]="'assets/images/about-us/banner.jpg'"
             [imagePosition]="'50% 100%'"
             [title]="'Quem somos'"
-            [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Volutpat pellentesque dictum quisque at ' +
-             'neque arcu. Nulla cursus condimentum tellus nunc adipiscing.'"></app-banner>
+            [text]="'A nossa equipa é composta por estudantes universitários de diferentes áreas e polivalências que ' +
+             'partilham entre si o objetivo comum de ajudar a tornar a cidade mais ciclável e sustentável. Em baixo poderás ' +
+              'conhecer-nos um pouco melhor!'">
+    </app-banner>
+
+    <div class="container">
+        <h3 class="text-center text-dark-header">A equipa do <span>Cycling Fizz</span></h3>
+
+        <div class="d-flex flex-wrap justify-content-center align-items-center">
+            <app-team-member class="pt-lg-5 mt-lg-5"
+                    [name]="'Bernardo Marques'"
+                    [job]="'Back-end Developer'"
+                    [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa nulla eget lectus nunc.'">
+            </app-team-member>
+
+            <app-team-member class="pt-lg-5 mt-lg-5"
+                    [name]="'Joana Sesinando'"
+                    [job]="'Front-end Developer'"
+                    [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa nulla eget lectus nunc.'">
+            </app-team-member>
+
+            <app-team-member class="pt-lg-5 mt-lg-5"
+                    [name]="'Mihail Brinza'"
+                    [job]="'Back-end Developer'"
+                    [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa nulla eget lectus nunc.'">
+            </app-team-member>
+
+            <app-team-member class="pt-lg-5 mt-lg-5"
+                    [name]="'Beatriz Tomaz'"
+                    [job]="'Tradução & Publicação de conteúdo'"
+                    [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa nulla eget lectus nunc.'">
+            </app-team-member>
+
+            <app-team-member class="pt-lg-5 mt-lg-5"
+                    [name]="'Adriana Afonso'"
+                    [job]="'Redes Sociais'"
+                    [text]="'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Massa nulla eget lectus nunc.'">
+            </app-team-member>
+        </div>
+    </div>
 
 </section>
