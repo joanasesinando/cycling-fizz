@@ -42,7 +42,7 @@ export class FCardComponent implements OnInit {
   @Input() img : any;
   @Input() title : string;
   @Input() description: string;
-  @Input() href: string = "#";   //FIXME mudar default p/ algo melhor (404 page?)
+  @Input() routerLink: string = "/404";
 
     constructor(private sanitizer: DomSanitizer) { }
 
