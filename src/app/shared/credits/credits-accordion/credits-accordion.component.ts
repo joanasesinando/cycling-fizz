@@ -20,7 +20,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'pikisuperstar',
       byUrl: 'https://www.freepik.com/pikisuperstar',
       from: 'www.freepik.com',
-      fromUrl: 'https://www.freepik.com/',
+      fromUrl: 'https://www.freepik.com/free-vector/outdoor-activities-landing-page-template_4862843.htm',
       circle: true
     }
   ];
@@ -31,7 +31,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'flaticon',
       byUrl: 'https://www.flaticon.com',
       from: 'www.freepik.com',
-      fromUrl: 'https://www.freepik.com/',
+      fromUrl: 'https://www.freepik.com/free-icon/blogger-logo_749187.htm#query=blog&position=6',
       circle: false
     },
     {
@@ -39,7 +39,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/calendar_833593',
       circle: false
     },
     {
@@ -47,7 +47,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/idea_107788',
       circle: false
     },
     {
@@ -55,7 +55,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'Those Icons',
       byUrl: 'https://www.flaticon.com/authors/those-icons',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/envelope_481658',
       circle: false
     },
     {
@@ -63,7 +63,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/portugal_197463',
       circle: false
     },
     {
@@ -71,7 +71,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/united-kingdom_197374',
       circle: false
     },
     {
@@ -79,7 +79,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/france_197560',
       circle: false
     }
   ];
@@ -98,7 +98,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'swayaway1',
       byUrl: 'https://www.vecteezy.com/members/swayaway1',
       from: 'www.vecteezy.com',
-      fromUrl: 'https://www.vecteezy.com/',
+      fromUrl: 'https://www.vecteezy.com/vector-art/266226-girl-cycling-around-at-beach-vector-flat-character',
       circle: true
     },
     {
@@ -106,7 +106,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/map_854878',
       circle: false
     },
     {
@@ -114,7 +114,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'DinosoftLabs',
       byUrl: 'https://www.flaticon.com/authors/dinosoftlabs',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/traffic-light_439882',
       circle: false
     },
     {
@@ -122,7 +122,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/signpost_854875',
       circle: false
     },
     {
@@ -130,7 +130,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/confused_1698558',
       circle: false
     },
     {
@@ -138,7 +138,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/chat_1989849',
       circle: false
     },
     {
@@ -146,7 +146,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'Vectors Market',
       byUrl: 'https://www.flaticon.com/authors/vectors-market',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/calendar_609409',
       circle: false
     }
   ];
@@ -157,7 +157,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/racing_383515',
       circle: false
     },
     {
@@ -165,7 +165,7 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'freepik',
       byUrl: 'https://www.freepik.com',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/bike-parking_382315',
       circle: false
     },
     {
@@ -173,7 +173,34 @@ export class CreditsAccordionComponent implements OnInit {
       by: 'Smashicons',
       byUrl: 'https://www.flaticon.com/authors/smashicons',
       from: 'www.flaticon.com',
-      fromUrl: 'https://www.flaticon.com/',
+      fromUrl: 'https://www.flaticon.com/free-icon/bike-shop_1818802',
+      circle: false
+    }
+  ];
+
+  about = [
+    {
+      img: '../../../../assets/images/the-project/idea.svg',
+      by: 'freepik',
+      byUrl: 'https://www.freepik.com',
+      from: 'www.freepik.com',
+      fromUrl: 'https://www.freepik.com/free-vector/brainstorming-concept-landing-page_5754890.htm',
+      circle: false
+    },
+    {
+      img: '../../../../assets/images/the-project/girl-working.svg',
+      by: 'pikisuperstar',
+      byUrl: 'https://www.freepik.com/pikisuperstar',
+      from: 'www.freepik.com',
+      fromUrl: 'https://www.freepik.com/free-vector/programmer-desktop-working-illustration_5694682.htm',
+      circle: false
+    },
+    {
+      img: '../../../../assets/images/the-project/guy-cycling.svg',
+      by: 'freepik',
+      byUrl: 'https://www.freepik.com',
+      from: 'www.freepik.com',
+      fromUrl: 'https://www.freepik.com/free-vector/flat-delivery-boy-bike-background_4424625.htm',
       circle: false
     }
   ];
