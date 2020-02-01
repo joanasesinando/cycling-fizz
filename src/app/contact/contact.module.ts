@@ -6,11 +6,12 @@ import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
 import {SharedModule} from '../shared/shared.module';
 
 import { ContactComponent } from './contact/contact.component';
+import { ImgEmailComponent } from './img-email/img-email.component';
 
 
 
 @NgModule({
-  declarations: [ContactComponent],
+  declarations: [ContactComponent, ImgEmailComponent],
   imports: [
     CommonModule,
     ContactRoutingModule,
