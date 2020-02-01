@@ -1,4 +1,5 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
+import { faTwitter, faInstagram, faFacebookF, faYoutube } from '@fortawesome/free-brands-svg-icons';
 import * as feather from 'feather-icons';
 
 @Component({
@@ -7,6 +8,12 @@ import * as feather from 'feather-icons';
   styleUrls: ['./contact.component.scss']
 })
 export class ContactComponent implements OnInit, AfterViewInit {
+
+  //FontAwesome icons
+  faTwitter = faTwitter;
+  faInstagram = faInstagram;
+  faFacebookF = faFacebookF;
+  faYoutube = faYoutube;
 
   constructor() { }
 

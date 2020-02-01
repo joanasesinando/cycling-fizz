@@ -1,11 +1,21 @@
 import {Component, HostListener, OnInit} from '@angular/core';
 
+import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { faTwitter, faInstagram, faFacebookF, faYoutube } from '@fortawesome/free-brands-svg-icons';
+
 @Component({
   selector: 'app-the-project',
   templateUrl: './the-project.component.html',
   styleUrls: ['./the-project.component.scss']
 })
 export class TheProjectComponent implements OnInit {
+
+  //FontAwesome icons
+  faTwitter = faTwitter;
+  faInstagram = faInstagram;
+  faFacebookF = faFacebookF;
+  faYoutube = faYoutube;
+  faPaperPlane = faPaperPlane;
 
   mobileView: boolean = false;
 

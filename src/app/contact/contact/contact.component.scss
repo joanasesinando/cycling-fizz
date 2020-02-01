@@ -72,3 +72,31 @@ form {
     }
   }
 }
+
+.extra-info {
+  margin-top: 8rem;
+
+  p {
+    width: 40%;
+    @include media-breakpoint-down(sm) {
+      width: auto;
+    }
+  }
+
+  .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: $gradient-orange;
+    border-radius: 50%;
+    line-height: 3rem;
+    color: white;
+    @include transition(all 0.2s ease-in-out);
+
+    @include media-breakpoint-up(lg){
+      &:hover {
+        @include transform(translateY(-0.5rem));
+      }
+    }
+  }
+}

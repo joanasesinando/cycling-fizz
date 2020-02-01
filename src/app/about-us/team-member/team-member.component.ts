@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { faTwitter, faInstagram, faFacebookF, faYoutube } from '@fortawesome/free-brands-svg-icons';
+import { faTwitter, faInstagram, faFacebookF } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
   selector: 'app-team-member',
@@ -12,7 +12,6 @@ export class TeamMemberComponent implements OnInit {
   faTwitter = faTwitter;
   faInstagram = faInstagram;
   faFacebookF = faFacebookF;
-  faYoutube = faYoutube;
 
   @Input() name: string;
   @Input() job: string;

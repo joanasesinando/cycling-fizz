@@ -45,6 +45,74 @@
         margin-top: 6rem;
       }
     }
+
+    .extra-info {
+      margin-top: 8rem;
+      margin-bottom: 10rem;
+
+      .text-subscribe {
+        font-size: 1.1rem;
+      }
+      form {
+        width: 50%;
+        .form-control {
+          padding: 1.5rem 9rem 1.5rem 1.5rem;
+          border-radius: 3rem;
+          border-color: #fff1e0;
+          border-width: 2px;
+
+          @include media-breakpoint-down(xs) {
+            padding: 1.5rem 4rem 1.5rem 1.5rem;
+          }
+
+          &:focus {
+            box-shadow: 0 0 0 0.1rem #ffb1002e;
+          }
+        }
+        .subscribeBtn {
+          display: inline-block;
+          position: relative;
+          margin-right: 1%;
+          bottom: 4.5rem;
+        }
+        @include media-breakpoint-up(lg) {
+          #emailHelp {
+            position: relative;
+            left: 1rem;
+          }
+        }
+        @include  media-breakpoint-down(sm) {
+          #subEmailInput {
+            font-size: 0.9rem;
+          }
+        }
+      }
+
+      .social-info {
+        p {
+          width: 40%;
+          @include media-breakpoint-down(sm) {
+            width: auto;
+          }
+        }
+      }
+      .social a {
+        text-align: center;
+        height: 3rem;
+        width: 3rem;
+        background: $gradient-orange;
+        border-radius: 50%;
+        line-height: 3rem;
+        color: white;
+        @include transition(all 0.2s ease-in-out);
+
+        @include media-breakpoint-up(lg){
+          &:hover {
+            @include transform(translateY(-0.5rem));
+          }
+        }
+      }
+    }
   }
 }
 
