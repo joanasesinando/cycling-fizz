@@ -19,6 +19,7 @@ import { CreditsComponent } from './credits/credits.component';
 import { BannerComponent } from './banner/banner.component';
 import { CreditsAccordionComponent } from './credits/credits-accordion/credits-accordion.component';
 import { BadgeComponent } from './badge/badge.component';
+import { NewsletterSubscribeComponent } from './newsletter-subscribe/newsletter-subscribe.component';
 
 
 @NgModule({
@@ -36,7 +37,8 @@ import { BadgeComponent } from './badge/badge.component';
     CreditsComponent,
     BannerComponent,
     CreditsAccordionComponent,
-    BadgeComponent
+    BadgeComponent,
+    NewsletterSubscribeComponent
   ],
   imports: [
     CommonModule,
@@ -44,14 +46,15 @@ import { BadgeComponent } from './badge/badge.component';
     FontAwesomeModule,
     TranslateModule
   ],
-  exports: [
-    NavbarComponent,
-    FooterComponent,
-    BtnOutlineComponent,
-    BtnFloatingComponent,
-    CreditsComponent,
-    BannerComponent,
-    PageNotFoundComponent
-  ]
+    exports: [
+        NavbarComponent,
+        FooterComponent,
+        BtnOutlineComponent,
+        BtnFloatingComponent,
+        CreditsComponent,
+        BannerComponent,
+        PageNotFoundComponent,
+        NewsletterSubscribeComponent
+    ]
 })
 export class SharedModule { }

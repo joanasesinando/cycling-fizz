@@ -8,15 +8,13 @@
 #section-the-project {
   .container {
     padding-top: 10rem;
-    padding-bottom: 10rem;
+    padding-bottom: 0;
     font-family: quicksand-regular, sans-serif;
     @include media-breakpoint-up(lg) {
       font-size: 1.2rem;
-      padding-bottom: 0;
     }
     @include media-breakpoint-down(sm) {
       padding-top: 8rem;
-      padding-bottom: 8rem;
       h3 { font-size: 1.6rem; }
     }
 
@@ -52,40 +50,6 @@
 
       .text-subscribe {
         font-size: 1.1rem;
-      }
-      form {
-        width: 50%;
-        .form-control {
-          padding: 1.5rem 9rem 1.5rem 1.5rem;
-          border-radius: 3rem;
-          border-color: #fff1e0;
-          border-width: 2px;
-
-          @include media-breakpoint-down(xs) {
-            padding: 1.5rem 4rem 1.5rem 1.5rem;
-          }
-
-          &:focus {
-            box-shadow: 0 0 0 0.1rem #ffb1002e;
-          }
-        }
-        .subscribeBtn {
-          display: inline-block;
-          position: relative;
-          margin-right: 1%;
-          bottom: 4.5rem;
-        }
-        @include media-breakpoint-up(lg) {
-          #emailHelp {
-            position: relative;
-            left: 1rem;
-          }
-        }
-        @include  media-breakpoint-down(sm) {
-          #subEmailInput {
-            font-size: 0.9rem;
-          }
-        }
       }
 
       .social-info {

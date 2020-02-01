@@ -134,7 +134,9 @@ input[type="reset"].btn-primary:focus,
 input[type="button"].btn-primary:focus {
   box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
   background-size: 100% 100%;
-  @include transform(translateY(-0.15em));  
+  @include media-breakpoint-up(lg) {
+    @include transform(translateY(-0.15em));
+  }
 }
 
 

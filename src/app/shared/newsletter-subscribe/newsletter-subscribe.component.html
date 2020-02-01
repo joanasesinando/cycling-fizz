@@ -1,0 +1,12 @@
+<form id="newsletterForm">
+    <div id="subForm" class="form-group">
+        <input type="email" class="form-control" id="subEmailInput" aria-describedby="emailHelp"
+               placeholder="Introduz o teu e-mail..."
+               [ngStyle]="{'border-width': border ? '1.5px' : '0', 'border-color': border ? '#f2f6f8' : ''}">
+        <small id="emailHelp" class="form-text text-muted">*Nunca partilharemos os teus dados com mais ninguém.</small>
+        <button id ="subscribeBtn" type="submit" class="subscribeBtn btn btn-primary px-3 float-right d-none d-sm-block">Subscrever</button>
+        <button id ="subscribeBtnMobile" type="submit" class="subscribeBtn btn btn-primary px-3 float-right d-sm-none">
+            <fa-icon [icon]="faPaperPlane" class="fa-md"></fa-icon>
+        </button>
+    </div>
+</form>

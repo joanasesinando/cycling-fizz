@@ -41,26 +41,6 @@ footer {
         display: inline-flex;
     }
 
-    .form-control {
-        padding: 1.5rem 9rem 1.5rem 1.5rem;
-        border-radius: 3rem;
-        border: 0 none;
-
-        @include media-breakpoint-down(xs) {
-            padding: 1.5rem 4rem 1.5rem 1.5rem;
-        }
-
-        &:focus {
-            box-shadow: 0 0 0 0.2rem #ffb1002e;
-        }
-    }
-
-    .subscribeBtn {
-        display: inline-block;
-        position: relative;
-        margin-right: 1%;
-    }
-
     .credits a {
         color: $darkGray;
         text-decoration: underline;
@@ -68,14 +48,6 @@ footer {
             color: $orange;
         }
     }
-
-    @include media-breakpoint-up(lg) {
-        #emailHelp {
-            position: relative;
-            left: 1rem;
-        }
-    }
-
 
     .social a {
         text-align: center;
@@ -103,11 +75,5 @@ footer {
 @include  media-breakpoint-down(md) {
     .row p {
         text-align: center;
-    }
-}
-
-@include  media-breakpoint-down(sm) {
-    #subEmailInput {
-        font-size: 0.9rem;
     }
 }

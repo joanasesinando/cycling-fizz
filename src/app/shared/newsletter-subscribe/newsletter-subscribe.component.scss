@@ -1,0 +1,45 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+
+#newsletterForm {
+  .form-control {
+    padding: 1.5rem 9rem 1.5rem 1.5rem;
+    border-radius: 3rem;
+    border-width: 0;
+    border-color: transparent;
+
+    @include media-breakpoint-down(xs) {
+      padding: 1.5rem 4rem 1.5rem 1.5rem;
+    }
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem #ffb1002e;
+    }
+  }
+
+  .subscribeBtn {
+    display: inline-block;
+    position: relative;
+    margin-right: 1%;
+  }
+
+  #emailHelp {
+    @include media-breakpoint-up(lg) {
+      position: relative;
+      left: 1rem;
+    }
+  }
+
+  #subEmailInput {
+    @include  media-breakpoint-down(sm) {
+      font-size: 0.9rem;
+    }
+  }
+}
+
+
