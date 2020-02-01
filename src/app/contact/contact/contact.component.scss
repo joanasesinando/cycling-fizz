@@ -19,16 +19,6 @@
   }
 }
 
-img {
-  width: 38rem;
-  @include media-breakpoint-down(md) {
-    width: 22rem;
-  }
-  @include media-breakpoint-down(sm) {
-    width: 16rem;
-  }
-}
-
 form {
   .form-group {
     position: relative;
