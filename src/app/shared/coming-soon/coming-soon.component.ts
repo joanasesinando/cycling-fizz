@@ -26,9 +26,9 @@ export class ComingSoonComponent implements OnInit {
   // ------> todo ADD RELEASE DATES HERE
   releaseDates = { //FIXME meter datas corretas
     routes: "2020/05/21",
-    forum: "",
-    blog: "",
-    events: ""
+    forum: "2020/06/21",
+    blog: "2020/07/21",
+    events: "2020/08/21"
   };
 
   constructor(private _router: ActivatedRoute) {
