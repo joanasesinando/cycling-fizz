@@ -112,3 +112,15 @@
     font-display: swap;
     unicode-range: U+000-5FF; /* load only latin glyphs */
 }
+
+@font-face {
+    font-family: "solway-bold";
+    /* loads local fonts if present */
+    src: local('Solway-Bold'),
+    url('~assets/fonts/Solway/Solway-Bold.woff2') format('woff2'),
+    url('~assets/fonts/Solway/Solway-Bold.woff') format('woff');
+    font-style: normal;
+    font-weight: normal;
+    font-display: swap;
+    unicode-range: U+000-5FF; /* load only latin glyphs */
+}

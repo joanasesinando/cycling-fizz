@@ -12,7 +12,8 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'cycling-fizz';
 
-  constructor(private _router: Router){ }
+  constructor(private _router: Router){
+  }
 
   ngOnInit() {
     AOS.init();

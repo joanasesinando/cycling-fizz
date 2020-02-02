@@ -20,6 +20,7 @@ import { BannerComponent } from './banner/banner.component';
 import { CreditsAccordionComponent } from './credits/credits-accordion/credits-accordion.component';
 import { BadgeComponent } from './badge/badge.component';
 import { NewsletterSubscribeComponent } from './newsletter-subscribe/newsletter-subscribe.component';
+import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 
 
 @NgModule({
@@ -38,7 +39,8 @@ import { NewsletterSubscribeComponent } from './newsletter-subscribe/newsletter-
     BannerComponent,
     CreditsAccordionComponent,
     BadgeComponent,
-    NewsletterSubscribeComponent
+    NewsletterSubscribeComponent,
+    ComingSoonComponent
   ],
   imports: [
     CommonModule,

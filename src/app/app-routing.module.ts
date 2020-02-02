@@ -2,6 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import {PageNotFoundComponent} from './shared/page-not-found/page-not-found.component';
 import {CreditsComponent} from './shared/credits/credits.component';
+import {ComingSoonComponent} from './shared/coming-soon/coming-soon.component';
 
 
 const routes: Routes = [
@@ -40,6 +41,10 @@ const routes: Routes = [
   {
     path: 'credits',
     component: CreditsComponent
+  },
+  {
+    path: 'coming-soon/:page',
+    component: ComingSoonComponent
   },
   {
     path: '404',
