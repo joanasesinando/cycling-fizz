@@ -25,12 +25,12 @@
         </div>
         <div class="right-side d-flex flex-column align-items-center p-3 p-lg-0">
             <a *ngIf="!mobileView" href="#" routerLink="/"><img class="logo" src="../../../assets/images/coming-soon/logo.svg" alt="Cycling Fizz logo"></a>
-            <p class="p1 text-center mb-1">Fica atento</p>
-            <p class="p2 text-center">Vem aí algo novo</p>
-            <p class="p3 text-center mt-4 mt-lg-0">Não percas o lançamento! Subscreve já e recebe <br class="d-none d-lg-block">um
+            <p class="p1 text-center mb-1" data-aos="fade-up">Fica atento</p>
+            <p class="p2 text-center" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">Vem aí algo novo</p>
+            <p class="p3 text-center mt-4 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500">Não percas o lançamento! Subscreve já e recebe <br class="d-none d-lg-block">um
                 e-mail quando estiver disponível.</p>
 
-            <div class="subscribeForm mt-4">
+            <div class="subscribeForm mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1700">
                 <app-newsletter-subscribe [border]="true"></app-newsletter-subscribe>
             </div>
 

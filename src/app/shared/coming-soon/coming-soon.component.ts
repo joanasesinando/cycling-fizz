@@ -23,19 +23,34 @@ export class ComingSoonComponent implements OnInit {
   mobileView: boolean;
   releaseDate: string;
 
-  // ------> ADD RELEASE DATES HERE
-  releaseDates = {
-    routes: "2020/05/21" //FIXME meter datas corretas
+  // ------> todo ADD RELEASE DATES HERE
+  releaseDates = { //FIXME meter datas corretas
+    routes: "2020/05/21",
+    forum: "",
+    blog: "",
+    events: ""
   };
 
   constructor(private _router: ActivatedRoute) {
     // set release date
     let page = _router.snapshot.paramMap.get("page");
 
-    // ------> ADD RELEASE DATES HERE
+    // ------> todo ADD RELEASE DATES HERE
     switch (page) {
       case "routes":
         this.releaseDate = this.releaseDates.routes;
+        break;
+
+      case "forum":
+        this.releaseDate = this.releaseDates.forum;
+        break;
+
+      case "blog":
+        this.releaseDate = this.releaseDates.blog;
+        break;
+
+      case "events":
+        this.releaseDate = this.releaseDates.events;
         break;
 
       default:
