@@ -29,7 +29,7 @@ export enum IconsFeaturesEnum {
 
 export class FCardComponent implements OnInit {
 
-  private safeIconSrc : SafeUrl;
+  safeIconSrc : SafeUrl;
   @Input()
   set icon(icon : IconsFeaturesEnum) {
     if (icon == IconsFeaturesEnum.Calendar) {
