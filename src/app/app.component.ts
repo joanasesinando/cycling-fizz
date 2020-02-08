@@ -16,7 +16,11 @@ export class AppComponent implements OnInit {
   }
 
   ngOnInit() {
-    AOS.init();
+    AOS.init({
+      duration: 1000,
+      once: true,
+      //disable: 'phone', #FIXME not really working, don't know why
+    });
   }
 
   // Scroll to top after routing
