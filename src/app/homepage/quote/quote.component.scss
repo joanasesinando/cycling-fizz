@@ -30,6 +30,7 @@
     height: 100vh;
     position: relative;
     margin-top: 7rem;
+    overflow-y: hidden; //because of AOS
 
     @include media-breakpoint-down(md) {
       height: 80vh;
