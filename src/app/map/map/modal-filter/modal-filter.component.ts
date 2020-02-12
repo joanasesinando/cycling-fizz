@@ -14,18 +14,17 @@ export class ModalFilterComponent implements OnInit {
   ngOnInit() {
   }
 
-  toggleFilterGroupsVisibility(switchId) {
-    let filterGroupId: string = "#filter-group-" + (switchId.slice(-1)-4);
-    let filterGroup = $(filterGroupId);
+  toggleFilterGroups(category) {
 
-    if(filterGroup.hasClass("d-block")) {
-      filterGroup.removeClass("d-block");
-      filterGroup.addClass("d-none");
+    let quickFilterSwitch = $( ".filter-" + category.toLowerCase() + " .toggle" );
+    let filterGroup = $(".filter-group-" + category.toLowerCase());
 
-    } else {
-      filterGroup.removeClass("d-none");
-      filterGroup.addClass("d-block");
-    }
+    // trigger a click on the corresponding switch
+    quickFilterSwitch.trigger( "click" );
+
+    // show/hide filter groups based on switch toggled
+    if(filterGroup.css('display') == 'block' || filterGroup.css('display') == 'inline') filterGroup.hide();
+    else if(filterGroup.css('display') == 'none') filterGroup.show();
   }
 
 }

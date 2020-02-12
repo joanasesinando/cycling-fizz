@@ -1,7 +1,6 @@
-<div *ngFor="let filterGroup of filterGroups; let i=index" class="container-fluid pt-3 pb-1 my-3">
+<div *ngFor="let filterGroup of filterGroups" class="container-fluid pt-3 pb-1 my-3">
     <h6 *ngIf="filterGroup.category != ''" class="mb-3">{{filterGroup.category}}</h6>
-    <app-filter-checkbox *ngFor="let option of filterGroup.options; let j=index"
-                         [checkboxText]="option"
-                         [checkboxId]="'checkbox-'+ idParent + i + j">
+    <app-filter-checkbox *ngFor="let option of filterGroup.options"
+                         [checkboxText]="option">
     </app-filter-checkbox>
 </div>

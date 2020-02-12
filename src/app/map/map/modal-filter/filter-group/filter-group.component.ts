@@ -8,7 +8,6 @@ import {Component, Input, OnInit} from '@angular/core';
 export class FilterGroupComponent implements OnInit {
 
   @Input() filterGroups;
-  @Input() idParent; //used to attribute ids to the checkboxes
 
   constructor() { }
 

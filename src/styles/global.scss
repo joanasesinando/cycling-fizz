@@ -1,4 +1,4 @@
-/* =================================================================== 
+/* ===================================================================
  *
  *  Cycling Fizz v1.0 Global Stylesheet
  *  27-05-2019 #FIXME
@@ -9,6 +9,7 @@
  *  02. buttons
  *  03. scrollbar
  *  04. tooltips
+ *  05. nebular components
  *
  * =================================================================== */
 
@@ -381,4 +382,43 @@ button.read:focus {
   content: "";
   border-width: 5px 0 5px 5px;
   border-left-color: white;
+}
+
+
+
+/* ===================================================================
+ *  05. nebular components
+ *
+ * ------------------------------------------------------------------- */
+
+@import 'nebular-themes';
+
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-toggle-theme;
+};
+
+/*** Switch ***/
+nb-toggle.map-quick-filter-toggle .toggle-label {
+  margin-bottom: 0;
+  .text {
+    font-family: quicksand-regular, sans-serif;
+    font-size: 1rem;
+    color: white;
+  }
+}
+
+nb-toggle.map-filter-toggle .toggle-label {
+  justify-content: space-between;
+  width: 16rem;
+  @include media-breakpoint-down(sm) {
+    width: 15rem;
+  }
+
+  .text {
+    font-family: quicksand-regular, sans-serif;
+    font-size: 1rem;
+    color: $darkGray;
+  }
 }

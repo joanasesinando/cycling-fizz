@@ -6,17 +6,17 @@
 
             <!-- filter -->
             <a href="" data-toggle="modal" data-target="#filters">
-                <img src="../../../assets/images/map/icons/filter.svg" alt="Filter">
+                <fa-icon [icon]="faFilter" class="filter-icon"></fa-icon>
             </a>
 
             <!-- quick filters -->
             <div id="quick-filters" class="d-none d-lg-flex justify-content-between">
-                <app-filter-switch *ngFor="let filter of filters; let i=index"
-                                   [switchBeforeText]="true"
-                                   [switchId]="'switch-'+i"
-                                   [filterText]="filter.category">
-
-                </app-filter-switch>
+                <app-map-quick-filter-toggle class="mr-5" *ngFor="let filter of filters"
+                    [label]="filter.category"
+                    [checked]="filter.checked"
+                    [name]="filter.name"
+                    (onCheckedChange)="updateFilter(filter.name)">
+                </app-map-quick-filter-toggle>
             </div>
 
             <!-- search bar -->

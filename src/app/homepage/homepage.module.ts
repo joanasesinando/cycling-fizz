@@ -18,11 +18,11 @@ import { Carousel3Component } from './blog/carousel3/carousel3.component';
 
 @NgModule({
   declarations: [HomepageComponent, CoverComponent, FeaturesComponent, FCardComponent, BlogComponent, BCardComponent, QuoteComponent, Carousel1Component, Carousel3Component],
-  imports: [
-    CommonModule,
-    HomepageRoutingModule,
-    FontAwesomeModule,
-    SharedModule
-  ]
+    imports: [
+        CommonModule,
+        HomepageRoutingModule,
+        FontAwesomeModule,
+        SharedModule,
+    ]
 })
 export class HomepageModule { }

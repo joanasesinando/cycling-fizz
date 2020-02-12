@@ -1,9 +1,0 @@
-<div *ngIf="switchBeforeText" class="custom-control custom-switch custom-control-left">
-    <input type="checkbox" class="custom-control-input" [id]="switchId">
-    <label class="custom-control-label mr-5" [for]="switchId">{{filterText}}</label>
-</div>
-
-<div *ngIf="!switchBeforeText" class="custom-control custom-switch custom-control-right mb-3 mb-lg-2">
-    <input type="checkbox" class="custom-control-input" [id]="switchId" (click)="checkboxClicked(switchId)">
-    <label class="custom-control-label" [for]="switchId">{{filterText}}</label>
-</div>

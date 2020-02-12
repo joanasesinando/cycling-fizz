@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import { faFilter } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-map',
@@ -7,9 +8,14 @@ import {Component, OnInit} from '@angular/core';
 })
 export class MapComponent implements OnInit {
 
-  filters = [ //FIXME completar && usar serviço para esta informação na BD?
+    //FontAwesome icons
+    faFilter = faFilter;
+
+  filters = [ //FIXME completar && colocar num json
       {
           category:"Ciclovias",
+          checked: true,
+          name: "bikelanes",
           filterGroups: [
               {
                   category:"Tipologia",
@@ -27,6 +33,8 @@ export class MapComponent implements OnInit {
       },
       {
           category:"Estacionamento",
+          checked: false,
+          name: "parking",
           filterGroups: [
               {
                   category:"Tipologia",
@@ -53,6 +61,8 @@ export class MapComponent implements OnInit {
       },
       {
           category:"Lojas & Oficinas",
+          checked: false,
+          name: "stores",
           filterGroups: [
               {
                   category:"",
@@ -62,6 +72,8 @@ export class MapComponent implements OnInit {
       },
       {
           category:"Bikesharing",
+          checked: false,
+          name: "bikesharing",
           filterGroups: [
               {
                   category:"Companhia",
@@ -78,6 +90,14 @@ export class MapComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
+  }
+
+  updateFilter(category) {
+
+      let quickFilterSwitch = $( ".filter-" + category.toLowerCase() + " .toggle" );
+
+      // trigger a click on the corresponding switch
+      quickFilterSwitch.trigger( "click" );
   }
 
 }

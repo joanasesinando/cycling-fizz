@@ -11,15 +11,16 @@
             </div>
 
             <div class="modal-body">
-                <div *ngFor="let filter of filters; let i=index" class="mb-3">
-                    <app-filter-switch
-                            [switchBeforeText]="false"
-                            [filterText]="filter.category"
-                            [switchId]="'switch-'+(i+4)" (onCheckboxClicked)="toggleFilterGroupsVisibility($event)">
-                    </app-filter-switch>
+                <div *ngFor="let filter of filters" class="mb-3">
+                    <app-map-filter-toggle
+                            [label]="filter.category"
+                            [checked]="filter.checked"
+                            [name]="filter.name"
+                            (onCheckedChange)="toggleFilterGroups(filter.name)">
+                    </app-map-filter-toggle>
                     <app-filter-group
                             [filterGroups]="filter.filterGroups"
-                            [idParent]="i" [id]="'filter-group-'+i">
+                            class="filter-group-{{filter.name}}">
                     </app-filter-group>
                 </div>
             </div>
