@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalFilterComponent } from './modal-filter.component';
+import { MapModalsComponent } from './map-modals.component';
 
-describe('ModalFilterComponent', () => {
-  let component: ModalFilterComponent;
-  let fixture: ComponentFixture<ModalFilterComponent>;
+describe('MapModalsComponent', () => {
+  let component: MapModalsComponent;
+  let fixture: ComponentFixture<MapModalsComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalFilterComponent ]
+      declarations: [ MapModalsComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalFilterComponent);
+    fixture = TestBed.createComponent(MapModalsComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

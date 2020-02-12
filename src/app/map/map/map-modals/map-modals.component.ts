@@ -1,17 +1,30 @@
 import {Component, Input, OnInit} from '@angular/core';
+import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
-  selector: 'app-modal-filter',
-  templateUrl: './modal-filter.component.html',
-  styleUrls: ['./modal-filter.component.scss']
+  selector: 'app-map-modals',
+  templateUrl: './map-modals.component.html',
+  styleUrls: ['./map-modals.component.scss']
 })
-export class ModalFilterComponent implements OnInit {
+export class MapModalsComponent implements OnInit {
 
+  //===== Filters Modal =====//
   @Input() filters;
+
+  // FIXME ir buscar à BD
+  name: string = "Ciclovia da Avenida Fontes Pereira de Melo";
+  lastUpdateDate: Date = new Date("2019/03/30");
+  lastUpdateUser: string = "joanasesinando";
+  type: string = "bikelane";
+  images: JSON;
+  comments: JSON;
+
+  faTrash = faTrash;
+  faEdit = faEdit;
 
   constructor() { }
 
-  ngOnInit() {
+  ngOnInit(): void {
   }
 
   toggleFilterGroups(category) {

@@ -5,10 +5,17 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
+
+/*===================================================================
+*
+*   Filters Modal
+*
+* ===================================================================*/
+
 $modal-width: 300px;
 $modal-width-mobile: 280px;
 
-.modal.left {
+#filters.modal.left {
   .modal-dialog {
     position: fixed;
     top: calc(4rem + 3.5rem); //navbar + darkBar
@@ -56,7 +63,7 @@ $modal-width-mobile: 280px;
   }
 }
 
-.modal.left.fade {
+#filters.modal.left.fade {
   .modal-dialog {
     left: -$modal-width;
     -webkit-transition: opacity 0.3s linear, left 0.3s ease-out;
@@ -70,7 +77,7 @@ $modal-width-mobile: 280px;
   }
 }
 
-.modal.left.fade.show {
+#filters.modal.left.fade.show {
   .modal-dialog {
     left: 0;
   }
@@ -78,3 +85,59 @@ $modal-width-mobile: 280px;
 
 app-filter-group { display: none; }
 app-filter-group.filter-group-bikelanes { display: block; }
+
+
+
+
+/*===================================================================
+*
+*   Map Element Modal
+*
+* ===================================================================*/
+
+#mapElementModal {
+  .modal-content {
+    border: none;
+    border-radius: 1.5rem;
+  }
+
+  .modal-header {
+    background: $gradient-orange;
+    border-top-left-radius: 1.5rem;
+    border-top-right-radius: 1.5rem;
+
+    .close {
+      float: right;
+      font-family: quicksand-regular, sans-serif;
+      font-size: 1.2rem;
+      color: white;
+      opacity: .7;
+      padding-top: 2rem;
+      padding-right: 2.2rem;
+      &:hover { opacity: 1; }
+    }
+
+    #name {
+      font-family: quicksand-bold, sans-serif;
+      color: white;
+    }
+  }
+
+  .modal-body {
+    .actions {
+      fa-icon {
+        color: $darkGray;
+        font-size: 1.2rem;
+        &:hover, &:focus {
+          cursor: pointer;
+          color: darken($darkGray, 10);
+        }
+      }
+    }
+
+    .info {
+      font-family: quicksand-regular, sans-serif;
+      color: #97959F;
+    }
+  }
+}
