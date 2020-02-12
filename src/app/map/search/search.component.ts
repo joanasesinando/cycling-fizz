@@ -31,7 +31,7 @@ export class SearchComponent implements OnInit {
 
   toggleSearchBar(event){
     event.preventDefault();
-    this.formControl.hasClass("is-focus") ? '' : this.expand();
+    if(!this.formControl.hasClass("is-focus")) this.expand();
   }
 
   shrinkWhenClickedOutside() {
@@ -43,12 +43,6 @@ export class SearchComponent implements OnInit {
         this.shrink();
       }
     });
-  }
-
-  deleteText(event){
-    event.preventDefault();
-    console.log( document.getElementById("searchInput").getAttribute("value"));
-    $("#searchinput").val('');
   }
 
 }

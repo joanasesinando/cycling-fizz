@@ -6,7 +6,9 @@
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
 form {
-  .form-group { margin: 0; }
+  .form-group {
+    margin: 0;
+  }
 
   .search-icon {
     position: relative;
@@ -28,7 +30,7 @@ form {
   }
 
   .clear {
-    position: relative;
+    position: absolute;
     right: 2.3rem;
     background: none;
     border: none;

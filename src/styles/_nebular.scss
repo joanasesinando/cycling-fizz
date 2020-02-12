@@ -1,0 +1,43 @@
+/* ===================================================================
+ *  Nebular components
+ *    - switch
+ *    - checkbox
+ *
+ * ------------------------------------------------------------------- */
+
+@import 'nebular-themes';
+
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-toggle-theme;
+  @include nb-checkbox-theme;
+};
+
+/*** General ***/
+.nb-theme-default nb-toggle .text,
+.nb-theme-default nb-checkbox .text {
+  font-family: quicksand-regular, sans-serif;
+}
+
+/*** Switch ***/
+nb-toggle.map-quick-filter-toggle .toggle-label {
+  margin-bottom: 0;
+  .text {
+    font-family: quicksand-medium, sans-serif;
+    color: white;
+  }
+}
+
+nb-toggle.map-filter-toggle .toggle-label {
+  justify-content: space-between;
+  width: 16rem;
+  @include media-breakpoint-down(sm) {
+    width: 15rem;
+  }
+
+  .text {
+    font-family: quicksand-medium, sans-serif;
+    color: $darkGray;
+  }
+}
