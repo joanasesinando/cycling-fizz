@@ -1,0 +1,12 @@
+<nb-layout>
+    <nb-layout-column class="mb-4">
+        <div class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <img src="{{ icon }}" class="mr-3">
+                <span>{{ label }}</span>
+            </div>
+            <nb-checkbox class="map-cards-checkbox" checked="{{ checked }}" disabled
+                         (checkedChange)="checkedChanged()"></nb-checkbox>
+        </div>
+    </nb-layout-column>
+</nb-layout>

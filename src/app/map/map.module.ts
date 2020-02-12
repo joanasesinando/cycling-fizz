@@ -13,7 +13,11 @@ import { MapFilterToggleComponent } from './map/map-modals/map-filter-toggle/map
 import { MapFilterCheckboxComponent } from './map/map-modals/map-filter-checkbox/map-filter-checkbox.component';
 import { MapModalsComponent } from './map/map-modals/map-modals.component';
 
-import {NbCheckboxModule, NbLayoutModule, NbToggleModule} from '@nebular/theme';
+import {NbCardModule, NbCheckboxModule, NbLayoutModule, NbToggleModule} from '@nebular/theme';
+import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/map-cards-bikelane.component';
+import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';
+import { MapCardsParkingComponent } from './map/map-modals/map-cards-parking/map-cards-parking.component';
+import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-cards-store.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +27,11 @@ import {NbCheckboxModule, NbLayoutModule, NbToggleModule} from '@nebular/theme';
       MapQuickFilterToggleComponent,
       MapFilterToggleComponent,
       MapFilterCheckboxComponent,
-      MapModalsComponent
+      MapModalsComponent,
+      MapCardsBikelaneComponent,
+      MapCardsCheckboxComponent,
+      MapCardsParkingComponent,
+      MapCardsStoreComponent
     ],
     imports: [
         CommonModule,
@@ -32,7 +40,8 @@ import {NbCheckboxModule, NbLayoutModule, NbToggleModule} from '@nebular/theme';
         SharedModule,
         NbLayoutModule,
         NbToggleModule,
-        NbCheckboxModule
+        NbCheckboxModule,
+        NbCardModule
     ]
 })
 export class MapModule { }

@@ -1,0 +1,47 @@
+<div class="map-cards p-2">
+    <div class="card-row">
+        <div class="card-col">
+            <nb-card>
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/address.svg" class="mr-3" alt="">
+                    Morada
+                </nb-card-header>
+                <nb-card-body>{{ address }}</nb-card-body>
+            </nb-card>
+            <nb-card>
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/description.svg" class="mr-3" alt="">
+                    Descrição
+                </nb-card-header>
+                <nb-card-body>{{ description }}</nb-card-body>
+            </nb-card>
+        </div>
+        <div class="card-col">
+            <nb-card style="height: 8rem">
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/hours.svg" class="mr-3" alt="">
+                    Horário
+                </nb-card-header>
+                <nb-card-body>{{ hours }}</nb-card-body>
+            </nb-card>
+            <nb-card style="height: 8rem">
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/phone.svg" class="mr-3" alt="">
+                    Contacto
+                </nb-card-header>
+                <nb-card-body>{{ phone }}</nb-card-body>
+            </nb-card>
+            <nb-card style="height: 8rem">
+                <nb-card-header>Website & Redes sociais</nb-card-header>
+                <nb-card-body>
+                    <div class="links d-flex justify-content-center align-items-center">
+                        <a *ngFor="let item of social_media" class="social-link mr-4" href="{{item.link}}" target="_blank">
+                            <img src="{{item.icon}}" alt="">
+                        </a>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+</div>
+

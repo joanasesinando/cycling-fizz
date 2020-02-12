@@ -1,0 +1,47 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.map-cards {
+  height: fit-content;
+}
+
+:host {
+  display: block;
+  overflow-x: hidden;
+  overflow-y: auto;
+}
+
+.card-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -0.5rem;
+  @include media-breakpoint-down(md) {
+    display: block;
+  }
+}
+
+.card-col {
+  flex: 1 0 calc(50% - 1rem);
+  flex-wrap: wrap;
+  margin: 0 0.5rem;
+}
+
+nb-card-header {
+  font-family: quicksand-bold, sans-serif;
+  font-size: 1.1rem;
+  color: $header;
+}
+
+nb-card-body {
+  font-family: quicksand-regular, sans-serif;
+  font-size: 1.1rem;
+  color: $text;
+}
+
+.social-link:last-of-type {
+  margin-right: 0 !important;
+}

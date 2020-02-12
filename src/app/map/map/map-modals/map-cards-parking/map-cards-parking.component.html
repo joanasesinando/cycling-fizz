@@ -1,0 +1,60 @@
+<div class="map-cards p-2">
+    <div class="card-row">
+        <div class="card-col">
+            <nb-card style="height: 8rem">
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/type.svg" class="mr-3">
+                    Tipologia
+                </nb-card-header>
+                <nb-card-body>{{ type }}</nb-card-body>
+            </nb-card>
+            <nb-card style="height: 8rem">
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/security.svg" class="mr-3">
+                    Segurança
+                </nb-card-header>
+                <nb-card-body>
+                    <div class="rating d-flex">
+                        <div *ngFor="let i of security">
+                            <fa-icon *ngIf="i === 1" [icon]="faStar" class="star checked mr-2"></fa-icon>
+                            <fa-icon *ngIf="i === 0" [icon]="faStar" class="star mr-2"></fa-icon>
+                        </div>
+                    </div>
+                </nb-card-body>
+            </nb-card>
+            <nb-card>
+                <nb-card-body style="overflow: hidden">
+                    <app-map-cards-checkbox *ngFor="let info of other_info"
+                                            [icon]="info.icon"
+                                            [label]="info.label"
+                                            [checked]="info.checked">
+                    </app-map-cards-checkbox>
+                </nb-card-body>
+            </nb-card>
+        </div>
+        <div class="card-col">
+            <nb-card style="height: 8rem">
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/parking.svg" class="mr-3">
+                    Nº de lugares
+                </nb-card-header>
+                <nb-card-body>{{ places }}</nb-card-body>
+            </nb-card>
+            <nb-card style="height: 8rem">
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/environment.svg" class="mr-3">
+                    Ambiente
+                </nb-card-header>
+                <nb-card-body>{{ environment }}</nb-card-body>
+            </nb-card>
+            <nb-card>
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/notes.svg" class="mr-3">
+                    Notas
+                </nb-card-header>
+                <nb-card-body>{{ notes }}</nb-card-body>
+            </nb-card>
+        </div>
+    </div>
+</div>
+

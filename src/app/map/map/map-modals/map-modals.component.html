@@ -51,7 +51,7 @@
     <div class="modal-dialog modal-lg modal-dialog-centered" role="document">
         <div class="modal-content">
 
-            <div class="modal-header py-0 px-1">
+            <div class="modal-header pb-0 pt-1 px-1">
                 <div class="d-flex align-items-center">
                     <img src="../../../../assets/images/map/icons/icon-{{type}}.svg">
                     <h5 class="modal-title mb-2" id="name">{{ name }}</h5>
@@ -61,11 +61,11 @@
                 </button>
             </div>
 
-            <div class="modal-body p-4">
+            <div class="modal-body py-4 px-5">
                 <div class="sub-header d-flex justify-content-between">
                     <div class="actions">
-                        <fa-icon [icon]="faEdit" class="mr-3"></fa-icon>
-                        <fa-icon [icon]="faTrash"></fa-icon>
+                        <fa-icon [icon]="faEdit" class="mr-3" data-toggle="tooltip" data-placement="top" title="Editar"></fa-icon>
+                        <fa-icon [icon]="faTrash" data-toggle="tooltip" data-placement="top" title="Apagar"></fa-icon>
                     </div>
                     <div class="info d-flex flex-column align-items-end justify-content-center">
                         <span>Última atualiação: {{ lastUpdateDate | date:'dd/MM/yyy' }}</span>
@@ -73,7 +73,14 @@
                     </div>
                 </div>
 
+                <!-- TODO cards -->
+                <app-map-cards-bikelane *ngIf="type === 'bikelane'" class="mt-5"></app-map-cards-bikelane>
+                <app-map-cards-parking *ngIf="type === 'parking'" class="mt-5"></app-map-cards-parking>
+                <app-map-cards-store *ngIf="type === 'store'" class="mt-5"></app-map-cards-store>
 
+                <!-- TODO galeria -->
+
+                <!-- TODO comentários -->
 
             </div>
 

@@ -15,7 +15,7 @@ export class MapModalsComponent implements OnInit {
   name: string = "Ciclovia da Avenida Fontes Pereira de Melo";
   lastUpdateDate: Date = new Date("2019/03/30");
   lastUpdateUser: string = "joanasesinando";
-  type: string = "bikelane";
+  type: string = "store";
   images: JSON;
   comments: JSON;
 
@@ -25,6 +25,10 @@ export class MapModalsComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    $(function () {
+      // @ts-ignore
+      $('[data-toggle="tooltip"]').tooltip()
+    })
   }
 
   toggleFilterGroups(category) {
