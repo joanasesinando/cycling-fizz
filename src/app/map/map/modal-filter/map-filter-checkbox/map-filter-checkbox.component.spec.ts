@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { FilterCheckboxComponent } from './filter-checkbox.component';
+import { MapFilterCheckboxComponent } from './map-filter-checkbox.component';
 
-describe('FilterCheckboxComponent', () => {
-  let component: FilterCheckboxComponent;
-  let fixture: ComponentFixture<FilterCheckboxComponent>;
+describe('MapFilterCheckboxComponent', () => {
+  let component: MapFilterCheckboxComponent;
+  let fixture: ComponentFixture<MapFilterCheckboxComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ FilterCheckboxComponent ]
+      declarations: [ MapFilterCheckboxComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(FilterCheckboxComponent);
+    fixture = TestBed.createComponent(MapFilterCheckboxComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

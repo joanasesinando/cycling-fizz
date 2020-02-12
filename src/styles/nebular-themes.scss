@@ -20,8 +20,15 @@ $nb-themes: nb-register-theme((
     color-primary-transparent-500: rgba(255, 141, 51, 0.4),
     color-primary-transparent-600: rgba(255, 141, 51, 0.48),
 
+    // Switch
     toggle-height: 1.3rem,
     toggle-width: 2.5rem,
     toggle-switcher-size: 1.19rem,
+    toggle-text-font-size: 1rem,
+    toggle-text-font-weight: normal,
+
+    // Checkbox
+    checkbox-text-font-size: 1rem,
+    checkbox-text-font-weight: normal,
 
 ), default, default);

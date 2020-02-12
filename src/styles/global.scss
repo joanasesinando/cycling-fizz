@@ -388,6 +388,8 @@ button.read:focus {
 
 /* ===================================================================
  *  05. nebular components
+ *      - switch
+ *      - checkbox
  *
  * ------------------------------------------------------------------- */
 
@@ -397,14 +399,20 @@ button.read:focus {
 
 @include nb-install() {
   @include nb-toggle-theme;
+  @include nb-checkbox-theme;
 };
+
+/*** General ***/
+.nb-theme-default nb-toggle .text,
+.nb-theme-default nb-checkbox .text {
+  font-family: quicksand-regular, sans-serif;
+}
 
 /*** Switch ***/
 nb-toggle.map-quick-filter-toggle .toggle-label {
   margin-bottom: 0;
   .text {
-    font-family: quicksand-regular, sans-serif;
-    font-size: 1rem;
+    font-family: quicksand-medium, sans-serif;
     color: white;
   }
 }
@@ -417,8 +425,7 @@ nb-toggle.map-filter-toggle .toggle-label {
   }
 
   .text {
-    font-family: quicksand-regular, sans-serif;
-    font-size: 1rem;
+    font-family: quicksand-medium, sans-serif;
     color: $darkGray;
   }
 }
