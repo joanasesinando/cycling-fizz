@@ -1,4 +1,4 @@
-<div class="d-flex align-items-center mb-3 mt-5">
+<div class="d-flex justify-content-center justify-content-lg-start align-items-center mb-3 mt-5">
     <span class="section-title mr-2">Galeria</span>
     <span class="badge badge-primary">{{ slides.length }}</span>
 </div>
@@ -17,3 +17,8 @@
         <img src="{{ slide.img }}" alt="" width="100%">
     </div>
 </ngx-slick-carousel>
+
+<div class="upload-btn-wrapper float-right">
+    <button class="btn btn-primary"><fa-icon [icon]="faUpload" class="mr-2"></fa-icon>Upload</button>
+    <input type="file" name="myfile" />
+</div>

@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-map-gallery',
@@ -36,6 +37,8 @@ export class MapGalleryComponent implements OnInit {
     autoplay: true,
     autoplaySpeed: 2000,
   };
+
+  faUpload = faUpload;
 
   constructor() { }
 
