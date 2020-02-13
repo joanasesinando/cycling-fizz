@@ -15,6 +15,9 @@
   position: relative;
   overflow: hidden;
   display: inline-block;
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
 }
 
 .upload-btn-wrapper input[type=file] {

@@ -159,6 +159,9 @@ app-filter-group.filter-group-bikelanes { display: block; }
     .info {
       font-family: quicksand-regular, sans-serif;
       color: #97959F;
+      @include media-breakpoint-down(sm) {
+        font-size: .8rem;
+      }
     }
   }
 }
