@@ -15,6 +15,7 @@
   @include nb-toggle-theme;
   @include nb-checkbox-theme;
   @include nb-card-theme;
+  @include nb-user-theme;
 };
 
 /*** General ***/
@@ -55,4 +56,10 @@ nb-toggle.map-filter-toggle .toggle-label {
 
 .nb-theme-default nb-checkbox.status-basic .native-input:disabled ~ .text {
   color: $text;
+}
+
+.nb-theme-default nb-user.map-gallery-user .user-name {
+  font-family: quicksand-regular, sans-serif;
+  font-weight: normal;
+  color: white;
 }

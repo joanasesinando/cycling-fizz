@@ -24,3 +24,19 @@
   top: 0;
   opacity: 0;
 }
+
+img {
+  border-radius: .2rem;
+}
+
+nb-user {
+  position: absolute;
+  bottom: 1rem;
+  left: 1rem;
+
+  &.smaller {
+    position: absolute;
+    margin-left: .5rem;
+    left: unset;
+  }
+}

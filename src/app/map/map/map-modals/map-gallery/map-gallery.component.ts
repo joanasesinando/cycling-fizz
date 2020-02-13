@@ -8,15 +8,48 @@ import { faUpload } from '@fortawesome/free-solid-svg-icons';
 })
 export class MapGalleryComponent implements OnInit {
 
+  //FIXME ir buscar à BD
   slides = [
-    { img: "../../../../../assets/images/map/gallery/img1.jpg" },
-    { img: "../../../../../assets/images/map/gallery/img2.jpg" },
-    { img: "../../../../../assets/images/map/gallery/img4.jpg" },
-    { img: "../../../../../assets/images/map/gallery/img5.jpg" },
-    { img: "../../../../../assets/images/map/gallery/img6.jpg" },
-    { img: "../../../../../assets/images/map/gallery/img7.jpg" },
-    { img: "../../../../../assets/images/map/gallery/img9.jpg" },
-    { img: "../../../../../assets/images/map/gallery/img10.jpg" },
+    {
+      img: "../../../../../assets/images/map/gallery/img1.jpg",
+      user: "username1",
+      avatar: "../../../../../assets/images/map/avatars/avatar1.jpg"
+    },
+    {
+      img: "../../../../../assets/images/map/gallery/img2.jpg",
+      user: "username2",
+      avatar: "../../../../../assets/images/map/avatars/avatar2.jpg"
+    },
+    {
+      img: "../../../../../assets/images/map/gallery/img4.jpg",
+      user: "username3",
+      avatar: "../../../../../assets/images/map/avatars/avatar3.jpg"
+    },
+    {
+      img: "../../../../../assets/images/map/gallery/img5.jpg",
+      user: "username4",
+      avatar: "../../../../../assets/images/map/avatars/avatar4.jpg"
+    },
+    {
+      img: "../../../../../assets/images/map/gallery/img6.jpg",
+      user: "username5",
+      avatar: "../../../../../assets/images/map/avatars/avatar5.jpg"
+    },
+    {
+      img: "../../../../../assets/images/map/gallery/img7.jpg",
+      user: "username6",
+      avatar: "../../../../../assets/images/map/avatars/avatar6.jpg"
+    },
+    {
+      img: "../../../../../assets/images/map/gallery/img9.jpg",
+      user: "username7",
+      avatar: "../../../../../assets/images/map/avatars/avatar7.jpg"
+    },
+    {
+      img: "../../../../../assets/images/map/gallery/img10.jpg",
+      user: "username8",
+      avatar: "../../../../../assets/images/map/avatars/avatar8.jpg"
+    },
   ];
 
   slideConfigFor = {
