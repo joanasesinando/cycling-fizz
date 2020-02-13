@@ -11,11 +11,12 @@ export class MapModalsComponent implements OnInit {
   //===== Filters Modal =====//
   @Input() filters;
 
+  //===== Map element Modal =====//
   // FIXME ir buscar à BD
   name: string = "Ciclovia da Avenida Fontes Pereira de Melo";
   lastUpdateDate: Date = new Date("2019/03/30");
   lastUpdateUser: string = "joanasesinando";
-  type: string = "store";
+  type: string = "bikelane";
   images: JSON;
   comments: JSON;
 

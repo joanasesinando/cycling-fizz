@@ -8,15 +8,6 @@
                 </nb-card-header>
                 <nb-card-body>{{ type }}</nb-card-body>
             </nb-card>
-            <nb-card>
-                <nb-card-body style="overflow: hidden">
-                    <app-map-cards-checkbox *ngFor="let info of other_info"
-                            [icon]="info.icon"
-                            [label]="info.label"
-                            [checked]="info.checked">
-                    </app-map-cards-checkbox>
-                </nb-card-body>
-            </nb-card>
         </div>
         <div class="card-col">
             <nb-card style="height: 8rem">
@@ -26,7 +17,23 @@
                 </nb-card-header>
                 <nb-card-body>{{ floor }}</nb-card-body>
             </nb-card>
+        </div>
+    </div>
+
+    <div class="card-row">
+        <div class="card-col">
             <nb-card>
+                <nb-card-body style="overflow: hidden">
+                    <app-map-cards-checkbox *ngFor="let info of other_info"
+                                            [icon]="info.icon"
+                                            [label]="info.label"
+                                            [checked]="info.checked">
+                    </app-map-cards-checkbox>
+                </nb-card-body>
+            </nb-card>
+        </div>
+        <div class="card-col">
+            <nb-card style="min-height: 14rem;">
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/notes.svg" class="mr-3">
                     Notas
