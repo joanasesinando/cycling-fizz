@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, HostListener, OnInit} from '@angular/core';
 import { faUpload } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -25,24 +25,40 @@ export class MapGalleryComponent implements OnInit {
     arrows: false,
     dots: false,
     fade: true,
-    asNavFor: '#slider-nav'
+    asNavFor: '#slider-nav',
   };
   slideConfigNav = {
-    slidesToShow: 4,
+    slidesToShow: 5,
     slidesToScroll: 1,
     asNavFor: '#slider-for',
     dots: true,
     centerMode: true,
     focusOnSelect: true,
     autoplay: true,
-    autoplaySpeed: 2000,
+    autoplaySpeed: 2500,
+  };
+  slideConfigMobile = {
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    dots: true,
+    arrows: false,
+    autoplay: true,
+    autoplaySpeed: 2500,
   };
 
   faUpload = faUpload;
+  mobileView: boolean = false;
 
-  constructor() { }
+  constructor() {
+    this.onWindowResize();
+  }
 
   ngOnInit(): void {
+  }
+
+  @HostListener('window:resize', [])
+  onWindowResize() {
+    this.mobileView = window.innerWidth <= 991.98;
   }
 
 }

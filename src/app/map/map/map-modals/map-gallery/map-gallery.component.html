@@ -2,21 +2,36 @@
     <span class="section-title mr-2">Galeria</span>
     <span class="badge badge-primary">{{ slides.length }}</span>
 </div>
-<ngx-slick-carousel class="carousel"
-                    id="slider-for"
-                    [config]="slideConfigFor">
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <img src="{{ slide.img }}" alt="" width="100%">
-    </div>
-</ngx-slick-carousel>
 
-<ngx-slick-carousel class="carousel"
-                    id="slider-nav"
-                    [config]="slideConfigNav">
-    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-        <img src="{{ slide.img }}" alt="" width="100%">
-    </div>
-</ngx-slick-carousel>
+<div *ngIf="!mobileView" class="gallery">
+    <ngx-slick-carousel class="carousel"
+                        id="slider-for"
+                        [config]="slideConfigFor"
+                        #slickModal='slick-carousel'>
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img src="{{ slide.img }}" alt="" width="100%">
+        </div>
+    </ngx-slick-carousel>
+
+    <ngx-slick-carousel class="carousel"
+                        id="slider-nav"
+                        [config]="slideConfigNav"
+                        #slickModal='slick-carousel'>
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img src="{{ slide.img }}" alt="" width="100%">
+        </div>
+    </ngx-slick-carousel>
+</div>
+
+<div *ngIf="mobileView" class="gallery">
+    <ngx-slick-carousel class="carousel"
+                        [config]="slideConfigMobile"
+                        #slickModal='slick-carousel'>
+        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+            <img src="{{ slide.img }}" alt="" width="100%">
+        </div>
+    </ngx-slick-carousel>
+</div>
 
 <div class="upload-btn-wrapper float-right">
     <button class="btn btn-primary"><fa-icon [icon]="faUpload" class="mr-2"></fa-icon>Upload</button>
