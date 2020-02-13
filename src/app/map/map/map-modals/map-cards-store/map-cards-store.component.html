@@ -34,8 +34,8 @@
             <nb-card style="height: 8rem">
                 <nb-card-header>Website & Redes sociais</nb-card-header>
                 <nb-card-body>
-                    <div class="links d-flex justify-content-center align-items-center">
-                        <a *ngFor="let item of social_media" class="social-link mr-4" href="{{item.link}}" target="_blank">
+                    <div class="links d-flex justify-content-around align-items-center">
+                        <a *ngFor="let item of social_media" class="social-link mr-4 p-0 p-md-1" href="{{item.link}}" target="_blank">
                             <img src="{{item.icon}}" alt="">
                         </a>
                     </div>

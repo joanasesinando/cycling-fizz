@@ -2,6 +2,8 @@
  *  Nebular components
  *    - switch
  *    - checkbox
+ *    - user
+ *    - chat
  *
  * ------------------------------------------------------------------- */
 
@@ -16,6 +18,9 @@
   @include nb-checkbox-theme;
   @include nb-card-theme;
   @include nb-user-theme;
+  @include nb-buttons-theme;
+  @include nb-input-theme;
+  @include nb-chat-theme;
 };
 
 /*** General ***/
@@ -58,8 +63,70 @@ nb-toggle.map-filter-toggle .toggle-label {
   color: $text;
 }
 
+
+/*** User ***/
 .nb-theme-default nb-user.map-gallery-user .user-name {
   font-family: quicksand-regular, sans-serif;
   font-weight: normal;
   color: white;
+}
+
+
+/*** Chat ***/
+.nb-theme-default nb-chat.map-comments {
+  box-shadow: none;
+
+  .header {
+    display: none;
+  }
+
+  .messages {
+    padding: 1rem 0;
+  }
+}
+
+.nb-theme-default nb-chat-message.map-comments {
+  nb-chat-message-text {
+    .text {
+      font-family: quicksand-regular, sans-serif;
+      background-color: $superLightGray;
+      color: $darkGray;
+    }
+
+    .sender {
+      font-family: quicksand-bold, sans-serif;
+      font-size: 1rem;
+      color: $header;
+
+      time {
+        font-family: quicksand-light;
+        color: $gray;
+        margin-left: .4rem;
+      }
+    }
+  }
+
+  &.not-reply .message {
+    margin-right: 0;
+  }
+}
+
+.nb-theme-default nb-chat-form.map-comments {
+  @include media-breakpoint-down(md) {
+    padding: 1rem 0;
+  }
+  .message-row input::placeholder {
+    font-size: 0; // bc there's no way to change the placeholder, so hide it and make my own
+  }
+}
+
+.nb-theme-default [nbInput].status-basic {
+  background-color: $superLightGray;
+  font-family: quicksand-regular, sans-serif;
+  color: $darkGray
+}
+
+.nb-theme-default [nbButton].appearance-filled.status-primary {
+  background: $gradient-orange;
+  border-color: #ffc46b;
 }

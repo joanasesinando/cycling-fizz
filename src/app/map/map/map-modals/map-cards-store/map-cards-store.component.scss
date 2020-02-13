@@ -42,6 +42,14 @@ nb-card-body {
   color: $text;
 }
 
-.social-link:last-of-type {
-  margin-right: 0 !important;
+.social-link {
+  &:last-of-type {
+    margin-right: 0 !important;
+  }
+  @include media-breakpoint-only(lg) {
+    &:hover {
+      transform: translateY(-.5rem);
+    }
+  }
+  transition: all 200ms ease-in-out;
 }

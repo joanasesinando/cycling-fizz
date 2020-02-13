@@ -13,13 +13,14 @@ import { MapFilterToggleComponent } from './map/map-modals/map-filter-toggle/map
 import { MapFilterCheckboxComponent } from './map/map-modals/map-filter-checkbox/map-filter-checkbox.component';
 import { MapModalsComponent } from './map/map-modals/map-modals.component';
 
-import {NbCardModule, NbCheckboxModule, NbLayoutModule, NbToggleModule, NbUserModule} from '@nebular/theme';
+import {NbCardModule, NbChatModule, NbCheckboxModule, NbLayoutModule, NbToggleModule, NbUserModule} from '@nebular/theme';
 import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/map-cards-bikelane.component';
 import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';
 import { MapCardsParkingComponent } from './map/map-modals/map-cards-parking/map-cards-parking.component';
 import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-cards-store.component';
 import { MapGalleryComponent } from './map/map-modals/map-gallery/map-gallery.component';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
+import { MapCommentsComponent } from './map/map-modals/map-comments/map-comments.component';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
       MapCardsCheckboxComponent,
       MapCardsParkingComponent,
       MapCardsStoreComponent,
-      MapGalleryComponent
+      MapGalleryComponent,
+      MapCommentsComponent
     ],
     imports: [
         CommonModule,
@@ -46,7 +48,8 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
         NbCheckboxModule,
         NbCardModule,
         SlickCarouselModule,
-        NbUserModule
+        NbUserModule,
+        NbChatModule
     ]
 })
 export class MapModule { }
