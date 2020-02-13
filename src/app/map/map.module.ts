@@ -18,6 +18,8 @@ import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/m
 import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';
 import { MapCardsParkingComponent } from './map/map-modals/map-cards-parking/map-cards-parking.component';
 import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-cards-store.component';
+import { MapGalleryComponent } from './map/map-modals/map-gallery/map-gallery.component';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,8 @@ import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-car
       MapCardsBikelaneComponent,
       MapCardsCheckboxComponent,
       MapCardsParkingComponent,
-      MapCardsStoreComponent
+      MapCardsStoreComponent,
+      MapGalleryComponent
     ],
     imports: [
         CommonModule,
@@ -41,7 +44,8 @@ import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-car
         NbLayoutModule,
         NbToggleModule,
         NbCheckboxModule,
-        NbCardModule
+        NbCardModule,
+        SlickCarouselModule
     ]
 })
 export class MapModule { }

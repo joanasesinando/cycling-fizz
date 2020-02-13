@@ -1,0 +1,12 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.section-title {
+  font-family: quicksand-bold, sans-serif;
+  font-size: 1.5rem;
+  color: $header;
+}

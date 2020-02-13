@@ -1,0 +1,19 @@
+<div class="d-flex align-items-center mb-3 mt-5">
+    <span class="section-title mr-2">Galeria</span>
+    <span class="badge badge-primary">{{ slides.length }}</span>
+</div>
+<ngx-slick-carousel class="carousel"
+                    id="slider-for"
+                    [config]="slideConfigFor">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <img src="{{ slide.img }}" alt="" width="100%">
+    </div>
+</ngx-slick-carousel>
+
+<ngx-slick-carousel class="carousel"
+                    id="slider-nav"
+                    [config]="slideConfigNav">
+    <div ngxSlickItem *ngFor="let slide of slides" class="slide">
+        <img src="{{ slide.img }}" alt="" width="100%">
+    </div>
+</ngx-slick-carousel>
