@@ -1,5 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
-import { faTrash, faEdit } from '@fortawesome/free-solid-svg-icons';
+import { faTrash, faEdit, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-map-modals',
@@ -13,15 +13,19 @@ export class MapModalsComponent implements OnInit {
 
   //===== Map element Modal =====//
   // FIXME ir buscar à BD
-  name: string = "Ciclovia da Avenida Fontes Pereira de Melo";
+  name: string = "Decathlon";
+  storeRating: number[] = [1, 1, 1, 0, 0]; //needs to be an array for *ngFor to work
+  storeRatingNumber: number = 4.1;
+  storeRatingSource: string = "Google";
   lastUpdateDate: Date = new Date("2019/03/30");
   lastUpdateUser: string = "joanasesinando";
-  type: string = "bikelane";
+  type: string = "store";
   images: JSON;
   comments: JSON;
 
   faTrash = faTrash;
   faEdit = faEdit;
+  faStar = faStar;
 
   constructor() { }
 

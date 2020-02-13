@@ -121,6 +121,27 @@ app-filter-group.filter-group-bikelanes { display: block; }
       font-family: quicksand-bold, sans-serif;
       color: white;
     }
+
+    .rating {
+      span.rating-number,
+      span.rating-source,
+      span.rating-source a {
+        color: white;
+      }
+      span.rating-number {
+        font-family: quicksand-medium, sans-serif;
+      }
+      span.rating-source {
+        font-family: quicksand-light, sans-serif;
+        font-size: .8rem;
+      }
+      .star {
+        color: white;
+        opacity: .4;
+        &.checked { opacity: 1; }
+      }
+    }
+
   }
 
   .modal-body {
