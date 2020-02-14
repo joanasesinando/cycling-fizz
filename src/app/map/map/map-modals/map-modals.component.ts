@@ -14,12 +14,13 @@ export class MapModalsComponent implements OnInit {
   //===== Map element Modal =====//
   // FIXME ir buscar à BD
   name: string = "Decathlon";
+  address: string = "Rua 25 de Abril, Nº29, Loures, Lisboa";
   storeRating: number[] = [1, 1, 1, 0, 0]; //needs to be an array for *ngFor to work
   storeRatingNumber: number = 3.1;
   storeRatingSource: string = "Google";
   lastUpdateDate: Date = new Date("2019/03/30");
   lastUpdateUser: string = "Cycling Fizz Team";
-  type: string = "store";
+  type: string = "bikelane";
   tags = [
     {
       text: "seguro",

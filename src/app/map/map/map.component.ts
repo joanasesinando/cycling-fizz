@@ -63,7 +63,7 @@ export class MapComponent implements OnInit {
               },
               {
                   category:"Geral",
-                  options: ["coberto", "espaçoso", "vigiado", "visível", "iluminação"]
+                  options: ["coberto", "espaçoso", "vigiado", "visível", "iluminado"]
               },
               {
                   category:"Etiquetas",
