@@ -24,7 +24,6 @@ import { AngularFireModule } from '@angular/fire';
 // import { AngularFirestoreModule } from '@angular/fire/firestore';/ fixme imports only needed for database features
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
-import { MustMatchDirective } from './_helpers/must-match.directive';
 
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
@@ -33,8 +32,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent,
-    MustMatchDirective
+    AppComponent
   ],
   imports: [
     BrowserModule,

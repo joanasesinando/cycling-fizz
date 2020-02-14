@@ -25,8 +25,8 @@
                     <fa-icon [icon]="faTwitter"></fa-icon>
                 </a>
             </div>
-<!-- [mustMatch]="['password', 'confirmPassword']-->
-            <form #f="ngForm" (submit)="registerClicked()">
+
+            <form #f="ngForm" (submit)="registerClicked()" [mustMatch]="['inputPassword', 'inputConfirmPassword']">
                 <div class="text-center">
                     <label class="gray-label">ou usar uma conta de e-mail:</label>
                 </div>
@@ -92,7 +92,7 @@
                 <div class="form-label-group">
                     <input type="password"
                            id="inputConfirmPassword"
-                           name="inputPassword"
+                           name="inputConfirmPassword"
                            class="form-control"
                            placeholder="Confirmar palavra-passe"
                            [(ngModel)]="formData.confirmPassword"
@@ -103,7 +103,7 @@
                     <div *ngIf="f.submitted && confirmPassword.invalid" class="invalid-feedback">
                         <!--fixme change text-->
                         <div *ngIf="confirmPassword.errors.required">Confirm password is required</div>
-                        <!--<div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div>-->
+                        <div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div>
 
                     </div>
                 </div>
