@@ -4,6 +4,7 @@
  *    - checkbox
  *    - user
  *    - chat
+ *    - popover
  *
  * ------------------------------------------------------------------- */
 
@@ -21,6 +22,7 @@
   @include nb-buttons-theme;
   @include nb-input-theme;
   @include nb-chat-theme;
+  @include nb-popover-theme;
 };
 
 /*** General ***/
@@ -137,3 +139,17 @@ nb-toggle.map-filter-toggle .toggle-label {
   border-color: #ffc46b;
 }
 
+
+/*** Popover ***/
+.nb-theme-default nb-popover {
+  background: $header;
+  color: white;
+  .arrow::after {
+    border-bottom-color: $header;
+  }
+  .primitive-overlay {
+    font-family: quicksand-regular, sans-serif;
+    font-size: unset;
+    padding: 1.5rem;
+  }
+}

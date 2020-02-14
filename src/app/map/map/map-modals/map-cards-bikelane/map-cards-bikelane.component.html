@@ -5,6 +5,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/type.svg" class="mr-3">
                     Tipologia
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ typePopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body>{{ type }}</nb-card-body>
             </nb-card>
@@ -14,6 +15,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/floor.svg" class="mr-3">
                     Estado do piso
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ floorPopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body>{{ floor }}</nb-card-body>
             </nb-card>
@@ -27,7 +29,8 @@
                     <app-map-cards-checkbox *ngFor="let info of other_info"
                                             [icon]="info.icon"
                                             [label]="info.label"
-                                            [checked]="info.checked">
+                                            [checked]="info.checked"
+                                            [popover]="info.popover">
                     </app-map-cards-checkbox>
                 </nb-card-body>
             </nb-card>

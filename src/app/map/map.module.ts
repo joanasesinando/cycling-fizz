@@ -13,7 +13,7 @@ import { MapFilterToggleComponent } from './map/map-modals/map-filter-toggle/map
 import { MapFilterCheckboxComponent } from './map/map-modals/map-filter-checkbox/map-filter-checkbox.component';
 import { MapModalsComponent } from './map/map-modals/map-modals.component';
 
-import {NbCardModule, NbChatModule, NbCheckboxModule, NbLayoutModule, NbToggleModule, NbUserModule} from '@nebular/theme';
+import {NbCardModule, NbChatModule, NbCheckboxModule, NbLayoutModule, NbPopoverModule, NbToggleModule, NbUserModule} from '@nebular/theme';
 import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/map-cards-bikelane.component';
 import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';
 import { MapCardsParkingComponent } from './map/map-modals/map-cards-parking/map-cards-parking.component';
@@ -51,7 +51,8 @@ import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
         NbCardModule,
         SlickCarouselModule,
         NbUserModule,
-        NbChatModule
+        NbChatModule,
+        NbPopoverModule
     ]
 })
 export class MapModule { }

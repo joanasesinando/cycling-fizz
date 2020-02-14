@@ -52,3 +52,10 @@ nb-card-body {
   font-family: quicksand-medium, sans-serif;
   color: $darkGray;
 }
+.info {
+  color: #d0d0d0;
+  &:hover {
+    cursor: pointer;
+    color: darken(#d0d0d0, 10);
+  }
+}

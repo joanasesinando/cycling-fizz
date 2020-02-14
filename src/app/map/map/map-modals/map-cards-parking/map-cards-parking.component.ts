@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-map-cards-parking',
@@ -9,30 +9,38 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 export class MapCardsParkingComponent implements OnInit {
 
   type: string = "U invertido ou semelhante";
+  typePopover: string = "Popover tipologia";
   places: number = 6;
+  placesPopover: string = "Popover lugares";
   security: number = 4.1;
+  securityPopover: string = "Popover segurança";
   securityArray: number[] = []; //needs to be an array for *ngFor to work
   environment: string = "Movimentado seg - sex";
+  environmentPopover: string = "Popover ambiente";
   notes: string = "Excepteur culpa duis ad sit est exercitation dolore veniam id cupidatat. Sit incididunt anim occaecat amet ipsum non.";
   other_info = [
     {
       icon: "../../../../../assets/images/map/icons/map-element/covered.svg",
       label: "Coberto",
       checked: true,
+      popover: "Popover coberto",
     },
     {
       icon: "../../../../../assets/images/map/icons/map-element/light.svg",
       label: "Iluminação",
       checked: true,
+      popover: "Popover iluminação",
     },
     {
       icon: "../../../../../assets/images/map/icons/map-element/supervised.svg",
       label: "Supervisão",
       checked: false,
+      popover: "Popover supervisão",
     }
   ];
 
   faStar = faStar;
+  faInfoCircle = faInfoCircle;
 
   constructor() { }
 

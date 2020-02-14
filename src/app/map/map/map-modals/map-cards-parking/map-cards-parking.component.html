@@ -5,6 +5,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/type.svg" class="mr-3">
                     Tipologia
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ typePopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body>{{ type }}</nb-card-body>
             </nb-card>
@@ -14,6 +15,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/parking.svg" class="mr-3">
                     Nº de lugares
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ placesPopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body>{{ places }}</nb-card-body>
             </nb-card>
@@ -25,6 +27,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/security.svg" class="mr-3">
                     Segurança
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ securityPopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body>
                     <div class="rating d-flex align-items-center">
@@ -42,6 +45,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/environment.svg" class="mr-3">
                     Ambiente
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ environmentPopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body>{{ environment }}</nb-card-body>
             </nb-card>
@@ -54,7 +58,8 @@
                     <app-map-cards-checkbox *ngFor="let info of other_info"
                                             [icon]="info.icon"
                                             [label]="info.label"
-                                            [checked]="info.checked">
+                                            [checked]="info.checked"
+                                            [popover]="info.popover">
                     </app-map-cards-checkbox>
                 </nb-card-body>
             </nb-card>
