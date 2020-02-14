@@ -37,6 +37,12 @@ nb-toggle.map-quick-filter-toggle .toggle-label {
     color: white;
   }
 }
+.nb-theme-default nb-toggle.map-quick-filter-toggle.status-control {
+  .toggle-switcher nb-icon { color: #fda74b; }
+  .toggle.checked { background-color: #fda74b; }
+  .native-input:enabled + .toggle:hover.checked { background-color: darken(#fda74b, 5); }
+  .native-input:enabled:focus + .toggle { background-color: #fda74b; }
+}
 
 nb-toggle.map-filter-toggle .toggle-label {
   justify-content: space-between;
@@ -130,3 +136,4 @@ nb-toggle.map-filter-toggle .toggle-label {
   background: $gradient-orange;
   border-color: #ffc46b;
 }
+

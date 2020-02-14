@@ -46,7 +46,7 @@ nb-card-body {
   &:last-of-type {
     margin-right: 0 !important;
   }
-  @include media-breakpoint-only(lg) {
+  @include media-breakpoint-up(lg) {
     &:hover {
       transform: translateY(-.5rem);
     }

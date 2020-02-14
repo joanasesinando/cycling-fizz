@@ -15,7 +15,7 @@ export class MapModalsComponent implements OnInit {
   // FIXME ir buscar à BD
   name: string = "Decathlon";
   storeRating: number[] = [1, 1, 1, 0, 0]; //needs to be an array for *ngFor to work
-  storeRatingNumber: number = 4.1;
+  storeRatingNumber: number = 3.1;
   storeRatingSource: string = "Google";
   lastUpdateDate: Date = new Date("2019/03/30");
   lastUpdateUser: string = "joanasesinando";
