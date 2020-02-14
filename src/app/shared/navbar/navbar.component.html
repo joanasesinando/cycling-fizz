@@ -157,7 +157,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-sm-auto text-center">
+                    <div  class="col-sm-auto text-center">
                         <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
                     </div>
                 </div>
@@ -168,7 +168,9 @@
 
     <!-- login -->
     <div *ngIf="!mobileView">
-      <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
+      <button *ngIf="!authFirebaseService.isUserLogged" class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
+      <button *ngIf="authFirebaseService.isUserLogged" class="btn btn-danger" type="button" (click)="authFirebaseService.logout()">Logout</button>
+
     </div>
 
 

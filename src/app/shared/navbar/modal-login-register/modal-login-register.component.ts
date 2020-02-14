@@ -14,4 +14,5 @@ export class ModalLoginRegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+
 }

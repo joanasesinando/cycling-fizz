@@ -1,5 +1,5 @@
 <div class="modal-body">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <button id="closeLoginBtn" type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 
@@ -19,37 +19,69 @@
                     <fa-icon [icon]="faFacebookF"></fa-icon>
                 </a>
                 <a href="#" class="mx-2" id="gg">
-                    <fa-icon [icon]="faGooglePlusG"></fa-icon>
+                    <fa-icon (click)="loginWithGoogle()" [icon]="faGooglePlusG"></fa-icon>
                 </a>
                 <a href="#" class="mx-2" id="tt">
                     <fa-icon [icon]="faTwitter"></fa-icon>
                 </a>
             </div>
 
-            <form>
+            <form #f="ngForm" (submit)="loginClicked()">
                 <div class="text-center">
                     <label class="gray-label">ou usa a tua conta de e-mail:</label>
                 </div>
 
                 <!-- E-mail address -->
                 <div class="form-label-group">
-                    <input type="email" id="inputEmail" class="form-control" placeholder="Endereço de e-mail" required autofocus>
+                    <input type="text"
+                           id="inputEmail"
+                           name="inputEmail"
+                           class="form-control"
+                           placeholder="Endereço de e-mail"
+                           [(ngModel)]="formData.email"
+                           #email="ngModel"
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                           [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                           required email autofocus>
+
+                    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                        <!--fixme change text-->
+                        <div *ngIf="email.errors.required">Email is required</div>
+                        <div *ngIf="email.errors.pattern">Email must be a valid email address</div>
+                    </div>
                 </div>
+
 
                 <!-- Password -->
                 <div class="form-label-group">
-                    <input type="password" id="inputPassword" class="form-control" placeholder="Palavra-passe" required>
+
+                    <input type="password"
+                           id="inputPassword"
+                           name="inputPassword"
+                           class="form-control"
+                           placeholder="Palavra-passe"
+                           [(ngModel)]="formData.password"
+                           #password="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
+                           required minlength="6">
+                    <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                        <!--fixme change text-->
+                        <div *ngIf="password.errors.required">Password is required</div>
+                        <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
                 </div>
 
                 <!-- Remember password checkbox -->
                 <div class="custom-control custom-checkbox mb-3">
-                    <input type="checkbox" class="custom-control-input" id="customCheck1">
+                    <input type="checkbox"
+                           class="custom-control-input"
+                           id="customCheck1">
                     <label class="custom-control-label" for="customCheck1">Lembrar palavra-passe</label>
                 </div>
 
                 <!-- Sign-in btn & forgot password -->
                 <div class="text-center">
-                    <button class="btn btn-primary btn-login font-weight-bold mb-2" type="submit">Login</button>
+                    <button class="btn btn-primary btn-login font-weight-bold mb-2">Login</button>
                 </div>
                 <div class="text-center">
                     <a class="fgt-pass small" href="#">Esqueci-me da palavra-passe</a>

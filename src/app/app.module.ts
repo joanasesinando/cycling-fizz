@@ -19,6 +19,13 @@ import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
+
+import { AngularFireModule } from '@angular/fire';
+// import { AngularFirestoreModule } from '@angular/fire/firestore';/ fixme imports only needed for database features
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import { environment } from '../environments/environment';
+import { MustMatchDirective } from './_helpers/must-match.directive';
+
 export function HttpLoaderFactory(httpClient: HttpClient) {
   return new TranslateHttpLoader(httpClient);
 }
@@ -26,7 +33,8 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    MustMatchDirective
   ],
   imports: [
     BrowserModule,
@@ -44,7 +52,10 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NbThemeModule.forRoot({ name: 'default' }),
     NbLayoutModule,
     NbEvaIconsModule,
-    SlickCarouselModule
+    SlickCarouselModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    // AngularFirestoreModule, // fixme imports firebase/firestore, only needed for database features
+    AngularFireAuthModule, // imports firebase/auth, only needed for auth features
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
   bootstrap: [AppComponent]

@@ -4,6 +4,8 @@ import { faGlobeEurope, faChevronDown,  faChevronUp, faTrafficLight,
         faRoute, faQuestion, faComments, faUsers } from '@fortawesome/free-solid-svg-icons';
 import {Router} from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
+import {AuthFirebaseService} from "../../_services/auth-firebase.service";
+
 
 @Component({
   selector: 'app-navbar',
@@ -32,7 +34,7 @@ export class NavbarComponent implements OnInit {
   navigation;
   currentActiveDropdown  = null;
 
-  constructor(private _router: Router, public translate: TranslateService) {
+  constructor(private _router: Router, public translate: TranslateService, public authFirebaseService: AuthFirebaseService) {
     this.router = _router;
     this.onWindowResize();
     this.hideMobileMenuWhenClickedOutside();
@@ -67,6 +69,7 @@ export class NavbarComponent implements OnInit {
 
     this.hideMobileMenuWhenLinkClicked();
   }
+
 
   showNavbar() {
     this.navbarToggler.addClass('is-active');

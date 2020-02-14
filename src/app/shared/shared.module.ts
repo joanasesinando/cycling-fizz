@@ -21,6 +21,7 @@ import { CreditsAccordionComponent } from './credits/credits-accordion/credits-a
 import { BadgeComponent } from './badge/badge.component';
 import { NewsletterSubscribeComponent } from './newsletter-subscribe/newsletter-subscribe.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
+import { FormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
     CommonModule,
     SharedRoutingModule,
     FontAwesomeModule,
-    TranslateModule
+    TranslateModule,
+    FormsModule
   ],
     exports: [
         NavbarComponent,
