@@ -21,6 +21,7 @@ import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-car
 import { MapGalleryComponent } from './map/map-modals/map-gallery/map-gallery.component';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import { MapCommentsComponent } from './map/map-modals/map-comments/map-comments.component';
+import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { MapCommentsComponent } from './map/map-modals/map-comments/map-comments
       MapCardsParkingComponent,
       MapCardsStoreComponent,
       MapGalleryComponent,
-      MapCommentsComponent
+      MapCommentsComponent,
+      MapTagsComponent
     ],
     imports: [
         CommonModule,

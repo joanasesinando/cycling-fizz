@@ -27,8 +27,9 @@
                     Segurança
                 </nb-card-header>
                 <nb-card-body>
-                    <div class="rating d-flex">
-                        <div *ngFor="let i of security">
+                    <div class="rating d-flex align-items-center">
+                        <span class="security-rating mr-2">{{ security }}</span>
+                        <div *ngFor="let i of securityArray">
                             <fa-icon *ngIf="i === 1" [icon]="faStar" class="star checked mr-2"></fa-icon>
                             <fa-icon *ngIf="i === 0" [icon]="faStar" class="star mr-2"></fa-icon>
                         </div>

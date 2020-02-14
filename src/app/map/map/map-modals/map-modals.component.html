@@ -90,6 +90,8 @@
                 <app-map-cards-store *ngIf="type === 'store'" class="mt-5"></app-map-cards-store>
                 <!-- TODO cards bikesharing -->
 
+                <app-map-tags *ngIf="type !== 'store'"></app-map-tags>
+
                 <app-map-gallery></app-map-gallery>
 
                 <app-map-comments></app-map-comments>

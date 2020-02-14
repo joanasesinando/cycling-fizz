@@ -10,7 +10,8 @@ export class MapCardsParkingComponent implements OnInit {
 
   type: string = "U invertido ou semelhante";
   places: number = 6;
-  security: number[] = [1, 1, 1, 0, 0]; //needs to be an array for *ngFor to work
+  security: number = 4.1;
+  securityArray: number[] = []; //needs to be an array for *ngFor to work
   environment: string = "Movimentado seg - sex";
   notes: string = "Excepteur culpa duis ad sit est exercitation dolore veniam id cupidatat. Sit incididunt anim occaecat amet ipsum non.";
   other_info = [
@@ -36,6 +37,17 @@ export class MapCardsParkingComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
+    this.securityArray = this.createSecurityArray(this.security);
+    console.log(this.securityArray);
+  }
+
+  createSecurityArray(security) {
+    let array = [];
+    let roundedSecurity = Math.round(security);
+
+    for(let i = 0; i < roundedSecurity; i++) array.push(1);
+    if(roundedSecurity < 5) for(let i = 0; i < 5-roundedSecurity; i++) array.push(0);
+    return array;
   }
 
 }
