@@ -10,9 +10,9 @@ export class MapCardsBikelaneComponent implements OnInit {
 
   type: string = "Pista unidirecional";
   typePopover: string = "Popover tipologia";
-  floor: string = "Bom estado";
+  floor: string = "Íngreme";
   floorPopover: string = "Popover piso";
-  notes: string = "Excepteur culpa duis ad sit est exercitation dolore veniam id cupidatat. Sit incididunt anim occaecat amet ipsum non.";
+  notes: string = "Carrega em “editar” para adicionar uma nota.";
   other_info = [
     {
       icon: "../../../../../assets/images/map/icons/map-element/segregated.svg",

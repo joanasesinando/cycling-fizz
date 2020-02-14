@@ -19,7 +19,7 @@ export class MapCardsParkingComponent implements OnInit {
   environmentPopover: string = "Popover ambiente";
   access: string = "Público & Fácil acesso";
   accessPopover: string = "Popover acesso";
-  notes: string = "Excepteur culpa duis ad sit est exercitation dolore veniam id cupidatat. Sit incididunt anim occaecat amet ipsum non.";
+  notes: string = "Carrega em “editar” para adicionar uma nota.";
   other_info = [
     {
       icon: "../../../../../assets/images/map/icons/map-element/covered.svg",
@@ -60,7 +60,6 @@ export class MapCardsParkingComponent implements OnInit {
 
   ngOnInit(): void {
     this.securityArray = this.createSecurityArray(this.security);
-    console.log(this.securityArray);
   }
 
   createSecurityArray(security) {

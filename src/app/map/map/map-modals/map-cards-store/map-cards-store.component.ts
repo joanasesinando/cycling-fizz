@@ -10,9 +10,7 @@ export class MapCardsStoreComponent implements OnInit {
   address: string = "Quinta Casal de Pipa EN 250, 2670-339 Loures";
   hours: string = "Seg - Sex: 10h - 23h";
   phone: string = "21 012 6060";
-  description: string = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis faucibus dolor cursus nisl aliquam, magna nibh " +
-      "morbi nunc. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Facilisis faucibus dolor cursus nisl aliquam, magna nibh " +
-      "morbi nunc.";
+  description: string = "Carrega em “editar” para adicionar uma descrição.";
   social_media = [
     {
       icon: "../../../../../assets/images/map/icons/map-element/website.svg",

@@ -1,17 +1,17 @@
 <div class="section-comments">
     <div class="d-flex justify-content-center justify-content-lg-start align-items-center mb-3 mt-5">
         <span class="section-title mr-2">Comentários</span>
-        <span class="badge badge-primary">{{ messages.length }}</span>
+        <span class="badge badge-primary">{{ comments.length }}</span>
     </div>
 
     <nb-chat class="map-comments">
-        <nb-chat-message *ngFor="let msg of messages" class="map-comments chat-message"
-                         [type]="msg.type"
-                         [message]="msg.text"
-                         [reply]="msg.reply"
-                         [sender]="msg.user.name"
-                         [date]="msg.date"
-                         [avatar]="msg.user.avatar">
+        <nb-chat-message *ngFor="let comment of comments" class="map-comments chat-message"
+                         [type]="comment.type"
+                         [message]="comment.text"
+                         [reply]="comment.reply"
+                         [sender]="comment.user.name"
+                         [date]="comment.date"
+                         [avatar]="comment.user.avatar">
         </nb-chat-message>
 
         <nb-chat-form class="map-comments" (send)="sendMessage($event)" (click)="hidePlaceholder()"></nb-chat-form>

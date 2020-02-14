@@ -53,3 +53,9 @@ nb-card-body {
   }
   transition: all 200ms ease-in-out;
 }
+
+.description {
+  @include media-breakpoint-up(lg) {
+    min-height: 17.8rem;
+  }
+}
