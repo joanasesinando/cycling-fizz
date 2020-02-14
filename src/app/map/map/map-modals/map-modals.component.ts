@@ -19,7 +19,7 @@ export class MapModalsComponent implements OnInit {
   storeRatingSource: string = "Google";
   lastUpdateDate: Date = new Date("2019/03/30");
   lastUpdateUser: string = "joanasesinando";
-  type: string = "parking";
+  type: string = "bikelane";
   images: JSON;
   comments: JSON;
 

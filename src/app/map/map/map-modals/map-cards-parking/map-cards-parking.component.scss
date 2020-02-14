@@ -59,3 +59,8 @@ nb-card-body {
     color: darken(#d0d0d0, 10);
   }
 }
+.notes {
+  @include media-breakpoint-up(lg) {
+    min-height: 27rem;
+  }
+}

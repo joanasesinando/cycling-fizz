@@ -17,6 +17,8 @@ export class MapCardsParkingComponent implements OnInit {
   securityArray: number[] = []; //needs to be an array for *ngFor to work
   environment: string = "Movimentado seg - sex";
   environmentPopover: string = "Popover ambiente";
+  access: string = "Público & Fácil acesso";
+  accessPopover: string = "Popover acesso";
   notes: string = "Excepteur culpa duis ad sit est exercitation dolore veniam id cupidatat. Sit incididunt anim occaecat amet ipsum non.";
   other_info = [
     {
@@ -26,16 +28,28 @@ export class MapCardsParkingComponent implements OnInit {
       popover: "Popover coberto",
     },
     {
+      icon: "../../../../../assets/images/map/icons/map-element/spacious.svg",
+      label: "Espaçoso",
+      checked: true,
+      popover: "Popover espaçoso",
+    },
+    {
+      icon: "../../../../../assets/images/map/icons/map-element/supervised.svg",
+      label: "Vigiado",
+      checked: false,
+      popover: "Popover vigiado",
+    },
+    {
+      icon: "../../../../../assets/images/map/icons/map-element/visible.svg",
+      label: "Visível",
+      checked: true,
+      popover: "Popover visível",
+    },
+    {
       icon: "../../../../../assets/images/map/icons/map-element/light.svg",
       label: "Iluminação",
       checked: true,
       popover: "Popover iluminação",
-    },
-    {
-      icon: "../../../../../assets/images/map/icons/map-element/supervised.svg",
-      label: "Supervisão",
-      checked: false,
-      popover: "Popover supervisão",
     }
   ];
 

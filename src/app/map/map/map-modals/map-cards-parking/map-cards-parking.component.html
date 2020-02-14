@@ -53,6 +53,14 @@
     </div>
     <div class="card-row">
         <div class="card-col">
+            <nb-card style="height: 8rem">
+                <nb-card-header>
+                    <img src="../../../../../assets/images/map/icons/map-element/access.svg" class="mr-3">
+                    Acesso
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ accessPopover }}" class="info ml-2"></fa-icon>
+                </nb-card-header>
+                <nb-card-body>{{ access }}</nb-card-body>
+            </nb-card>
             <nb-card>
                 <nb-card-body style="overflow: hidden">
                     <app-map-cards-checkbox *ngFor="let info of other_info"
@@ -65,7 +73,7 @@
             </nb-card>
         </div>
         <div class="card-col">
-            <nb-card style="min-height: 11.1rem">
+            <nb-card class="notes">
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/notes.svg" class="mr-3">
                     Notas
