@@ -57,5 +57,15 @@ nb-card-body {
 .description {
   @include media-breakpoint-up(lg) {
     min-height: 17.8rem;
+
+    textarea {
+      height: 24.5rem;
+    }
+  }
+
+  @include media-breakpoint-down(md) {
+    textarea {
+      height: 12rem;
+    }
   }
 }

@@ -1,4 +1,4 @@
-import {Component, Input, OnInit} from '@angular/core';
+import {Component, Input, OnInit, Output} from '@angular/core';
 import { faTrash, faEdit, faStar } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -12,6 +12,10 @@ export class MapModalsComponent implements OnInit {
   @Input() filters;
 
   //===== Map element Modal =====//
+  editActivated: boolean = false;
+  deleteActivated: boolean = false;
+  auxChangeCheckboxColor: number = 0;
+
   // FIXME ir buscar à BD
   name: string = "Decathlon";
   address: string = "Rua 25 de Abril, Nº29, Loures, Lisboa";
@@ -22,38 +26,14 @@ export class MapModalsComponent implements OnInit {
   lastUpdateUser: string = "Cycling Fizz Team";
   type: string = "bikelane";
   tags = [
-    {
-      text: "seguro",
-      color: "orange"
-    },
-    {
-      text: "precisa reparações",
-      color: "purple"
-    },
-    {
-      text: "perigoso",
-      color: "green"
-    },
-    {
-      text: "kids friendly",
-      color: "red"
-    },
-    {
-      text: "bom design",
-      color: "darkBlue"
-    },
-    {
-      text: "muito usado",
-      color: "blue"
-    },
-    {
-      text: "local remoto",
-      color: "yellow"
-    },
-    {
-      text: "mau design",
-      color: "pink"
-    },
+    { text: "seguro", color: "orange", id: "0" },
+    { text: "precisa reparações", color: "purple", id: "1" },
+    { text: "perigoso", color: "green", id: "2" },
+    { text: "kids friendly", color: "red", id: "3" },
+    { text: "bom design", color: "darkBlue", id: "4" },
+    { text: "muito usado", color: "blue", id: "5" },
+    { text: "local remoto", color: "yellow", id: "6" },
+    { text: "mau design", color: "pink", id: "7" },
   ];
   photos = [
     {
@@ -141,7 +121,12 @@ export class MapModalsComponent implements OnInit {
     $(function () {
       // @ts-ignore
       $('[data-toggle="tooltip"]').tooltip()
-    })
+    });
+
+    // set modal close event
+    $('#mapElementModal').on('hidden.bs.modal', () => {
+      this.changeEditMode(false);
+    });
   }
 
   toggleFilterGroups(category) {
@@ -155,6 +140,27 @@ export class MapModalsComponent implements OnInit {
     // show/hide filter groups based on switch toggled
     if(filterGroup.css('display') == 'block' || filterGroup.css('display') == 'inline') filterGroup.hide();
     else if(filterGroup.css('display') == 'none') filterGroup.show();
+  }
+
+  changeEditMode(mode) {
+    this.editActivated = mode;
+  }
+
+  saveChanges() {
+  }
+
+  ignoreChanges() {
+  }
+
+  // [Nebular Bug]: fixes by changing checkbox color manually
+  changeColor(e) {
+    let option = e.target;
+    let checkbox = option.firstElementChild;
+
+    if(this.auxChangeCheckboxColor == 0) {
+      checkbox.classList.remove("status-basic");
+      checkbox.classList.add("status-success");
+    }
   }
 
 }

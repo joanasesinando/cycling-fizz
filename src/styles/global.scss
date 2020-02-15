@@ -95,6 +95,31 @@ h5, .h5 {
   }
 }
 
+.dialog {
+  .modal-content {
+    background-color: #263238;
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+  .close {
+    font-family: quicksand-regular, sans-serif;
+    color: white;
+    opacity: .7;
+    &:hover { opacity: 1; }
+  }
+  .dialog-title {
+    font-family: quicksand-bold, sans-serif;
+    color: white;
+  }
+  .dialog-text {
+    font-family: quicksand-regular, sans-serif;
+    color: white;
+  }
+}
 
 /* ===================================================================
  *  02. buttons

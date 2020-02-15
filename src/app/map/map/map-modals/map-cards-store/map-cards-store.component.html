@@ -6,14 +6,20 @@
                     <img src="../../../../../assets/images/map/icons/map-element/address.svg" class="mr-2" alt="">
                     Morada
                 </nb-card-header>
-                <nb-card-body>{{ address }}</nb-card-body>
+                <nb-card-body *ngIf="!editMode">{{ address }}</nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <input class="w-100" type="text" nbInput value="{{ address }}" status="success">
+                </nb-card-body>
             </nb-card>
             <nb-card class="description">
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/description.svg" class="mr-2" alt="">
                     Descrição
                 </nb-card-header>
-                <nb-card-body>{{ description }}</nb-card-body>
+                <nb-card-body *ngIf="!editMode">{{ description }}</nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <textarea nbInput fullWidth status="success" value="{{ description }}"></textarea>
+                </nb-card-body>
             </nb-card>
         </div>
         <div class="card-col">
@@ -22,22 +28,40 @@
                     <img src="../../../../../assets/images/map/icons/map-element/hours.svg" class="mr-2" alt="">
                     Horário
                 </nb-card-header>
-                <nb-card-body>{{ hours }}</nb-card-body>
+                <nb-card-body *ngIf="!editMode">{{ hours }}</nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <input type="text" nbInput value="{{ hours }}" status="success">
+                </nb-card-body>
             </nb-card>
             <nb-card style="height: 8rem">
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/phone.svg" class="mr-2" alt="">
                     Contacto
                 </nb-card-header>
-                <nb-card-body>{{ phone }}</nb-card-body>
+                <nb-card-body *ngIf="!editMode">{{ phone }}</nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <input type="text" nbInput value="{{ phone }}" status="success">
+                </nb-card-body>
             </nb-card>
-            <nb-card style="height: 8rem">
+            <nb-card style="min-height: 8rem">
                 <nb-card-header>Website & Redes sociais</nb-card-header>
-                <nb-card-body>
+                <nb-card-body *ngIf="!editMode">
                     <div class="links d-flex justify-content-around align-items-center">
-                        <a *ngFor="let item of social_media" class="social-link mr-4 p-0 p-md-1" href="{{item.link}}" target="_blank">
-                            <img src="{{item.icon}}" alt="">
-                        </a>
+                        <a class="social-link mr-4 p-0 p-md-1" href="{{social_media.website.link}}" target="_blank"><img src="{{social_media.website.icon}}" alt=""></a>
+                        <a class="social-link mr-4 p-0 p-md-1" href="{{social_media.facebook.link}}" target="_blank"><img src="{{social_media.facebook.icon}}" alt=""></a>
+                        <a class="social-link mr-4 p-0 p-md-1" href="{{social_media.instagram.link}}" target="_blank"><img src="{{social_media.instagram.icon}}" alt=""></a>
+                        <a class="social-link mr-4 p-0 p-md-1" href="{{social_media.twitter.link}}" target="_blank"><img src="{{social_media.twitter.icon}}" alt=""></a>
+                        <a class="social-link mr-4 p-0 p-md-1" href="{{social_media.youtube.link}}" target="_blank"><img src="{{social_media.youtube.icon}}" alt=""></a>
+                    </div>
+                </nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <div *ngFor="let social of social_media_types" class="d-flex align-items-center mb-2">
+                        <img class="mr-3" src="../../../../../assets/images/map/icons/map-element/{{social}}.svg" alt="">
+                        <input class="w-100" *ngIf="social == 'website'" type="text" nbInput value="{{ social_media.website.link }}" status="success">
+                        <input class="w-100" *ngIf="social == 'facebook'" type="text" nbInput value="{{ social_media.facebook.link }}" status="success">
+                        <input class="w-100" *ngIf="social == 'instagram'" type="text" nbInput value="{{ social_media.instagram.link}}" status="success">
+                        <input class="w-100" *ngIf="social == 'twitter'" type="text" nbInput value="{{ social_media.twitter.link }}" status="success">
+                        <input class="w-100" *ngIf="social == 'youtube'" type="text" nbInput value="{{ social_media.youtube.link }}" status="success">
                     </div>
                 </nb-card-body>
             </nb-card>

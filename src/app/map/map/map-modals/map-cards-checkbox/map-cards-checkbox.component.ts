@@ -10,6 +10,8 @@ export class MapCardsCheckboxComponent implements OnInit {
 
   @Input() label: string;
   @Input() checked: boolean;
+  @Input() disabled: boolean;
+  @Input() status: string;
   @Input() icon: string;
   @Input() popover: string;
 

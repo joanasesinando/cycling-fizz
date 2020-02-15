@@ -1,5 +1,6 @@
-import {Component, OnInit} from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
+
 
 @Component({
   selector: 'app-map-cards-bikelane',
@@ -8,9 +9,27 @@ import { faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class MapCardsBikelaneComponent implements OnInit {
 
-  type: string = "Pista unidirecional";
+  @Input() editMode: boolean;
+
+  //FIXME colocar num JSON ?
+  types = [
+    { type: "Pista unidirecional", id: "0" },
+    { type: "Pista bidirecional", id: "1" },
+    { type: "Zona 30", id: "2" },
+    { type: "Trilho", id: "3" },
+    { type: "Parque", id: "4" },
+    { type: "Outro", id: "5" }
+  ];
+  floors = [
+    { floor: "Direito", id: "0" },
+    { floor: "Misto", id: "1" },
+    { floor: "Íngreme", id: "2" },
+  ];
+
+  //FIXME ir buscar à BD
+  type = this.types[0];
   typePopover: string = "Popover tipologia";
-  floor: string = "Íngreme";
+  floor = this.floors[0];
   floorPopover: string = "Popover piso";
   notes: string = "Carrega em “editar” para adicionar uma nota.";
   other_info = [

@@ -23,6 +23,8 @@
   @include nb-input-theme;
   @include nb-chat-theme;
   @include nb-popover-theme;
+  @include nb-icon-theme;
+  @include nb-select-theme;
 };
 
 /*** General ***/
@@ -152,4 +154,34 @@ nb-toggle.map-filter-toggle .toggle-label {
     font-size: unset;
     padding: 1.5rem;
   }
+}
+
+/*** Select ***/
+.nb-theme-default nb-select .select-button,
+.nb-theme-default nb-option, .nb-theme-default nb-option-group {
+  font-family: quicksand-regular, sans-serif;
+}
+.nb-theme-default nb-select.size-medium .select-button,
+.nb-theme-default .size-medium nb-option {
+  font-size: initial;
+}
+.nb-theme-default nb-option.success.selected,
+.nb-theme-default nb-option.success:hover {
+  color: #00d68f;
+}
+.nb-theme-default nb-option-group, .nb-theme-default nb-option.success {
+  color: #222b45;
+}
+.cdk-global-scrollblock { // when select on it would move left
+  overflow-y: hidden;
+}
+
+/*** Input ***/
+.nb-theme-default [nbInput] {
+  font-family: quicksand-regular, sans-serif;
+}
+
+/*** Button ***/
+.nb-theme-default [nbButton] {
+  font-family: quicksand-bold, sans-serif;
 }
