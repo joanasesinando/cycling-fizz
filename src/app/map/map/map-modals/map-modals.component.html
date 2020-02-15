@@ -67,9 +67,15 @@
                             </span>
                         </div>
                     </div>
+                    <div class="actions d-none d-lg-flex align-items-center ml-auto">
+                        <a href=""><img class="mr-3" data-toggle="tooltip" data-placement="top" title="Partilhar"
+                                        src="../../../../assets/images/map/icons/share.svg"></a>
+                        <a href=""><img data-toggle="tooltip" data-placement="top" title="Como chegar"
+                                        src="../../../../assets/images/map/icons/goto.svg"></a>
+                    </div>
                 </div>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">x</span>
+                    <span aria-hidden="true">&times;</span>
                 </button>
             </div>
 
@@ -85,14 +91,32 @@
                     </div>
                 </div>
 
-                <app-map-cards-bikelane *ngIf="type === 'bikelane'" class="mt-5"></app-map-cards-bikelane>
-                <app-map-cards-parking *ngIf="type === 'parking'" class="mt-5"></app-map-cards-parking>
-                <app-map-cards-store *ngIf="type === 'store'" class="mt-5"></app-map-cards-store>
+                <div class="d-flex d-lg-none justify-content-between align-items-center mt-4">
+                    <button class="share btn btn-primary" type="button">
+                        <img class="mr-0 mr-md-2" src="../../../../assets/images/map/icons/share.svg" alt="">
+                        Partilhar
+                    </button>
+                    <button class="goto btn btn-primary" type="button">
+                        <img class="mr-0 mr-md-2" src="../../../../assets/images/map/icons/goto.svg" alt="">
+                        Direções
+                    </button>
+                </div>
+
+                <div class="address d-flex align-items-center mt-5 ml-2">
+                    <img src="../../../../assets/images/map/icons/map-element/address.svg" alt="">
+                    <span class="text-dark-black ml-3">{{ address }}</span>
+                </div>
+
+                <app-map-cards-bikelane *ngIf="type === 'bikelane'" class="mt-4"></app-map-cards-bikelane>
+                <app-map-cards-parking *ngIf="type === 'parking'" class="mt-4"></app-map-cards-parking>
+                <app-map-cards-store *ngIf="type === 'store'" class="mt-4"></app-map-cards-store>
                 <!-- TODO cards bikesharing -->
 
-                <app-map-gallery></app-map-gallery>
+                <app-map-tags *ngIf="type !== 'store'" [tags]="tags"></app-map-tags>
 
-                <!-- TODO comentários -->
+                <app-map-gallery [photos]="photos"></app-map-gallery>
+
+                <app-map-comments [comments]="comments"></app-map-comments>
 
             </div>
 

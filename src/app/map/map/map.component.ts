@@ -19,15 +19,20 @@ export class MapComponent implements OnInit {
           filterGroups: [
               {
                   category:"Tipologia",
-                  options: ["pista unidirecional", "pista bidirecional", "trilho", "outro"]
+                  options: ["pista unidirecional", "pista bidirecional", "zona 30", "trilho", "parque", "outro"]
               },
               {
-                  category:"Estado do piso",
-                  options: ["maioritariamente liso", "ligeiramente abrupto", "muito abrupto"]
+                  category:"Declive",
+                  options: ["direito", "misto", "íngreme"]
               },
               {
-                  category:"",
-                  options: ["segregada", "iluminação", "cargo bike friendly", "partilhada com peões"]
+                  category:"Geral",
+                  options: ["segregada", "iluminada", "cargo bike friendly", "partilhada com peões"]
+              },
+              {
+                  category:"Etiquetas",
+                  options: ["segura", "perigosa", "precisa reparações", "adequada a crianças", "local remoto", "muito movimento",
+                      "pouco movimento"]
               }
           ]
       },
@@ -38,24 +43,31 @@ export class MapComponent implements OnInit {
           filterGroups: [
               {
                   category:"Tipologia",
-                  options: ["U invertido ou semelhante", "entorta-rodas", "poste", "outro"]
+                  options: ["U invertido", "de roda", "poste", "suspenso", "grade/vedação", "outro"]
               },
               {
                   category:"Nº de lugares",
-                  options: ["menos de 3", "4 - 8", "9 - 12", "mais de 12"]
+                  options: ["menos de 4", "4 - 8", "9 - 12", "mais de 12"]
               },
               {
                   category:"Segurança",
-                  options: ["muito seguro", "seguro", "inseguro", "muito inseguro"]
+                  options: ["seguro", "inseguro"] //seguro >4 & inseguro <2.5
               },
               {
                   category:"Ambiente",
-                  options: ["sempre movimentado", "movimentado seg-sex", "movimentado sab-dom",
-                            "deserto seg-sex", "deserto sab-dom", "sempre deserto"]
+                  options: ["sempre movimentado", "movimentado seg-sex", "movimentado sáb-dom", "pouco movimentado"]
               },
               {
-                  category:"",
-                  options: ["coberto", "iluminação", "supervisão"]
+                  category:"Acesso",
+                  options: ["público", "privado", "fácil acesso", "difícil acesso"]
+              },
+              {
+                  category:"Geral",
+                  options: ["coberto", "espaçoso", "vigiado", "visível", "iluminado"]
+              },
+              {
+                  category:"Etiquetas",
+                  options: ["precisa reparações"]
               }
           ]
       },
@@ -65,7 +77,7 @@ export class MapComponent implements OnInit {
           name: "stores",
           filterGroups: [
               {
-                  category:"",
+                  category:"Geral",
                   options: ["abertas agora"]
               }
           ]
@@ -80,7 +92,7 @@ export class MapComponent implements OnInit {
                   options: ["Gira", "Uber Jump", "Hive Bikes", "Moobi Cascais"]
               },
               {
-                  category:"",
+                  category:"Geral",
                   options: ["com bicicletas", "com lugares livres"]
               }
           ]

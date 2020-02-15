@@ -1,6 +1,6 @@
-<div class="d-flex justify-content-center justify-content-lg-start align-items-center mb-3 mt-5">
+<div class="d-flex justify-content-center justify-content-lg-start align-items-center mb-3 mt-5 pt-4">
     <span class="section-title mr-2">Galeria</span>
-    <span class="badge badge-primary">{{ slides.length }}</span>
+    <span class="badge badge-primary">{{ photos.length }}</span>
 </div>
 
 <div *ngIf="!mobileView" class="gallery">
@@ -8,9 +8,9 @@
                         id="slider-for"
                         [config]="slideConfigFor"
                         #slickModal='slick-carousel'>
-        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-            <nb-user class="map-gallery-user" name="{{ slide.user }}" picture="{{ slide.avatar }}"></nb-user>
-            <img src="{{ slide.img }}" alt="" width="100%">
+        <div ngxSlickItem *ngFor="let photo of photos" class="slide">
+            <nb-user class="map-gallery-user" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
+            <img src="{{ photo.img }}" alt="" width="100%">
         </div>
     </ngx-slick-carousel>
 
@@ -18,8 +18,8 @@
                         id="slider-nav"
                         [config]="slideConfigNav"
                         #slickModal='slick-carousel'>
-        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-            <img src="{{ slide.img }}" alt="" width="100%">
+        <div ngxSlickItem *ngFor="let photo of photos" class="slide">
+            <img src="{{ photo.img }}" alt="" width="100%">
         </div>
     </ngx-slick-carousel>
 </div>
@@ -28,9 +28,9 @@
     <ngx-slick-carousel class="carousel"
                         [config]="slideConfigMobile"
                         #slickModal='slick-carousel'>
-        <div ngxSlickItem *ngFor="let slide of slides" class="slide">
-            <nb-user class="map-gallery-user smaller" size="small" name="{{ slide.user }}" picture="{{ slide.avatar }}"></nb-user>
-            <img src="{{ slide.img }}" alt="" width="100%">
+        <div ngxSlickItem *ngFor="let photo of photos" class="slide">
+            <nb-user class="map-gallery-user smaller" size="small" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
+            <img src="{{ photo.img }}" alt="" width="100%">
         </div>
     </ngx-slick-carousel>
 </div>

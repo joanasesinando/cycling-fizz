@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
+import { faStar, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-map-cards-parking',
@@ -9,33 +9,66 @@ import { faStar } from '@fortawesome/free-solid-svg-icons';
 export class MapCardsParkingComponent implements OnInit {
 
   type: string = "U invertido ou semelhante";
+  typePopover: string = "Popover tipologia";
   places: number = 6;
-  security: number[] = [1, 1, 1, 0, 0]; //needs to be an array for *ngFor to work
+  placesPopover: string = "Popover lugares";
+  security: number = 4.1;
+  securityPopover: string = "Popover segurança";
+  securityArray: number[] = []; //needs to be an array for *ngFor to work
   environment: string = "Movimentado seg - sex";
-  notes: string = "Excepteur culpa duis ad sit est exercitation dolore veniam id cupidatat. Sit incididunt anim occaecat amet ipsum non.";
+  environmentPopover: string = "Popover ambiente";
+  access: string = "Público & Fácil acesso";
+  accessPopover: string = "Popover acesso";
+  notes: string = "Carrega em “editar” para adicionar uma nota.";
   other_info = [
     {
       icon: "../../../../../assets/images/map/icons/map-element/covered.svg",
       label: "Coberto",
       checked: true,
+      popover: "Popover coberto",
+    },
+    {
+      icon: "../../../../../assets/images/map/icons/map-element/spacious.svg",
+      label: "Espaçoso",
+      checked: true,
+      popover: "Popover espaçoso",
+    },
+    {
+      icon: "../../../../../assets/images/map/icons/map-element/supervised.svg",
+      label: "Vigiado",
+      checked: false,
+      popover: "Popover vigiado",
+    },
+    {
+      icon: "../../../../../assets/images/map/icons/map-element/visible.svg",
+      label: "Visível",
+      checked: true,
+      popover: "Popover visível",
     },
     {
       icon: "../../../../../assets/images/map/icons/map-element/light.svg",
       label: "Iluminação",
       checked: true,
-    },
-    {
-      icon: "../../../../../assets/images/map/icons/map-element/supervised.svg",
-      label: "Supervisão",
-      checked: false,
+      popover: "Popover iluminação",
     }
   ];
 
   faStar = faStar;
+  faInfoCircle = faInfoCircle;
 
   constructor() { }
 
   ngOnInit(): void {
+    this.securityArray = this.createSecurityArray(this.security);
+  }
+
+  createSecurityArray(security) {
+    let array = [];
+    let roundedSecurity = Math.round(security);
+
+    for(let i = 0; i < roundedSecurity; i++) array.push(1);
+    if(roundedSecurity < 5) for(let i = 0; i < 5-roundedSecurity; i++) array.push(0);
+    return array;
   }
 
 }

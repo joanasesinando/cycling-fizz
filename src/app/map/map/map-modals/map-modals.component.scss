@@ -106,10 +106,13 @@ app-filter-group.filter-group-bikelanes { display: block; }
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
 
+    .actions {
+      position: absolute;
+      right: 4rem;
+    }
+
     .close {
-      float: right;
       font-family: quicksand-regular, sans-serif;
-      font-size: 1.2rem;
       color: white;
       opacity: .7;
       padding-top: 2rem;
@@ -156,12 +159,21 @@ app-filter-group.filter-group-bikelanes { display: block; }
       }
     }
 
+    .share, .goto {
+      width: 45%;
+      img { height: 1.3rem; }
+    }
+
     .info {
       font-family: quicksand-regular, sans-serif;
       color: #97959F;
       @include media-breakpoint-down(sm) {
         font-size: .8rem;
       }
+    }
+
+    .address {
+      font-family: quicksand-regular, sans-serif;
     }
   }
 }

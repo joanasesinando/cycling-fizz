@@ -48,3 +48,19 @@ nb-card-body {
 .star.checked {
   color: #FFD700;
 }
+.security-rating {
+  font-family: quicksand-medium, sans-serif;
+  color: $darkGray;
+}
+.info {
+  color: #d0d0d0;
+  &:hover {
+    cursor: pointer;
+    color: darken(#d0d0d0, 10);
+  }
+}
+.notes {
+  @include media-breakpoint-up(lg) {
+    min-height: 27rem;
+  }
+}
