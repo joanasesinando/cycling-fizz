@@ -7,7 +7,12 @@
                     Tipologia
                     <fa-icon [icon]="faInfoCircle" nbPopover="{{ typePopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
-                <nb-card-body>{{ type }}</nb-card-body>
+                <nb-card-body *ngIf="!editMode">{{ type.type }}</nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <nb-select [selected]="type.id" status="success">
+                        <nb-option *ngFor="let type of types" value="{{ type.id }}" class="success">{{ type.type }}</nb-option>
+                    </nb-select>
+                </nb-card-body>
             </nb-card>
         </div>
         <div class="card-col">
@@ -17,7 +22,10 @@
                     Nº de lugares
                     <fa-icon [icon]="faInfoCircle" nbPopover="{{ placesPopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
-                <nb-card-body>{{ places }}</nb-card-body>
+                <nb-card-body *ngIf="!editMode">{{ places }}</nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <input type="text" nbInput value="{{ places }}" status="success">
+                </nb-card-body>
             </nb-card>
         </div>
     </div>
@@ -29,7 +37,7 @@
                     Segurança
                     <fa-icon [icon]="faInfoCircle" nbPopover="{{ securityPopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
-                <nb-card-body>
+                <nb-card-body *ngIf="!editMode">
                     <div class="rating d-flex align-items-center">
                         <span class="security-rating mr-2">{{ security }}</span>
                         <div *ngFor="let i of securityArray">
@@ -37,6 +45,11 @@
                             <fa-icon *ngIf="i === 0" [icon]="faStar" class="star mr-2"></fa-icon>
                         </div>
                     </div>
+                </nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <nb-select [selected]="(security-1).toString()" status="success">
+                        <nb-option *ngFor="let n of securityArray; let i = index" value="{{ i }}" class="success">{{ i+1 }}</nb-option>
+                    </nb-select>
                 </nb-card-body>
             </nb-card>
         </div>
@@ -47,7 +60,14 @@
                     Ambiente
                     <fa-icon [icon]="faInfoCircle" nbPopover="{{ environmentPopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
-                <nb-card-body>{{ environment }}</nb-card-body>
+                <nb-card-body *ngIf="!editMode">{{ environment.type }}</nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <nb-select [selected]="environment.id" status="success">
+                        <nb-option *ngFor="let environment of environments" value="{{ environment.id }}" class="success">
+                            {{ environment.type }}
+                        </nb-option>
+                    </nb-select>
+                </nb-card-body>
             </nb-card>
         </div>
     </div>
@@ -59,7 +79,14 @@
                     Acesso
                     <fa-icon [icon]="faInfoCircle" nbPopover="{{ accessPopover }}" class="info ml-2"></fa-icon>
                 </nb-card-header>
-                <nb-card-body>{{ access }}</nb-card-body>
+                <nb-card-body *ngIf="!editMode">{{ access.type }}</nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <nb-select [selected]="access.id" status="success">
+                        <nb-option *ngFor="let access of accesses" value="{{ access.id }}" class="success">
+                            {{ access.type }}
+                        </nb-option>
+                    </nb-select>
+                </nb-card-body>
             </nb-card>
             <nb-card>
                 <nb-card-body style="overflow: hidden">
@@ -67,6 +94,8 @@
                                             [icon]="info.icon"
                                             [label]="info.label"
                                             [checked]="info.checked"
+                                            [disabled]="!editMode"
+                                            [status]="editMode ? 'success' : ''"
                                             [popover]="info.popover">
                     </app-map-cards-checkbox>
                 </nb-card-body>
@@ -78,7 +107,10 @@
                     <img src="../../../../../assets/images/map/icons/map-element/notes.svg" class="mr-2">
                     Notas
                 </nb-card-header>
-                <nb-card-body>{{ notes }}</nb-card-body>
+                <nb-card-body *ngIf="!editMode">{{ notes }}</nb-card-body>
+                <nb-card-body *ngIf="editMode">
+                    <textarea nbInput fullWidth status="success" style="height: 21rem" value="{{ notes }}"></textarea>
+                </nb-card-body>
             </nb-card>
         </div>
     </div>

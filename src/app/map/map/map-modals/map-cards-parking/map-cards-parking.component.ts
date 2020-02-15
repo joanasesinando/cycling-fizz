@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
 import { faStar, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -8,16 +8,41 @@ import { faStar, faInfoCircle } from '@fortawesome/free-solid-svg-icons';
 })
 export class MapCardsParkingComponent implements OnInit {
 
-  type: string = "U invertido ou semelhante";
+  @Input() editMode: boolean;
+
+  //FIXME colocar num JSON ?
+  types = [
+    { type: "U invertido", id: "0" },
+    { type: "De roda", id: "1" },
+    { type: "Poste", id: "2" },
+    { type: "Suspenso", id: "3" },
+    { type: "Grade/Vedação", id: "4" },
+    { type: "Outro", id: "5" }
+  ];
+  environments = [
+    { type: "Sempre movimentado", id: "0" },
+    { type: "Movimentado Seg-Sex", id: "1" },
+    { type: "Movimentado Sáb-Dom", id: "2" },
+    { type: "Pouco movimentado", id: "3" }
+  ];
+  accesses = [
+    { type: "Público & Fácil acesso", id: "0" },
+    { type: "Público & Difícil acesso", id: "1" },
+    { type: "Privado & Fácil acesso", id: "2" },
+    { type: "Privado & Difícil acesso", id: "3" }
+  ];
+
+
+  type = this.types[0];
   typePopover: string = "Popover tipologia";
   places: number = 6;
   placesPopover: string = "Popover lugares";
-  security: number = 4.1;
+  security: number = 4;
   securityPopover: string = "Popover segurança";
   securityArray: number[] = []; //needs to be an array for *ngFor to work
-  environment: string = "Movimentado seg - sex";
+  environment = this.environments[0];
   environmentPopover: string = "Popover ambiente";
-  access: string = "Público & Fácil acesso";
+  access = this.accesses[0];
   accessPopover: string = "Popover acesso";
   notes: string = "Carrega em “editar” para adicionar uma nota.";
   other_info = [

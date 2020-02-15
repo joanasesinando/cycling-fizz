@@ -6,7 +6,7 @@
                 <span>{{ label }}</span>
                 <fa-icon [icon]="faInfoCircle" [nbPopover]="template" class="info ml-3 d-none d-md-flex"></fa-icon>
             </div>
-            <nb-checkbox class="map-cards-checkbox" checked="{{ checked }}" disabled
+            <nb-checkbox class="map-cards-checkbox" checked="{{ checked }}" disabled="{{ disabled }}" status="{{ status }}"
                          (checkedChange)="checkedChanged()"></nb-checkbox>
         </div>
     </nb-layout-column>
