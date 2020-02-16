@@ -15,10 +15,10 @@
 $gradient: linear-gradient(180deg, #FF923C 0%, #FFC340 100%);
 $darkGradient: linear-gradient(180deg, darken(#FF923C, 10%) 0%, darken(#FFC340, 10%) 100%);
 
-.action-button.glue-bottom { position: absolute; }
+//.action-button.glue-bottom { position: absolute; }
 
 .action-button {
-  position: fixed;
+  position: absolute;
   .ab-link {
     font-family: solway-regular, sans-serif;
     width: 3.5rem;
