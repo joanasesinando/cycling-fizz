@@ -23,6 +23,7 @@ import { NewsletterSubscribeComponent } from './newsletter-subscribe/newsletter-
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { FormsModule } from '@angular/forms';
 import {MustMatchDirective} from "../_helpers/must-match.directive";
+import {NbButtonModule} from '@nebular/theme';
 
 
 @NgModule({
@@ -50,7 +51,8 @@ import {MustMatchDirective} from "../_helpers/must-match.directive";
     SharedRoutingModule,
     FontAwesomeModule,
     TranslateModule,
-    FormsModule
+    FormsModule,
+    NbButtonModule
   ],
     exports: [
         NavbarComponent,

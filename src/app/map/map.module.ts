@@ -33,6 +33,7 @@ import { MapGalleryComponent } from './map/map-modals/map-gallery/map-gallery.co
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import { MapCommentsComponent } from './map/map-modals/map-comments/map-comments.component';
 import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -66,7 +67,8 @@ import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
         NbPopoverModule,
         NbSelectModule,
         NbInputModule,
-        NbButtonModule
+        NbButtonModule,
+        FormsModule
     ]
 })
 export class MapModule { }

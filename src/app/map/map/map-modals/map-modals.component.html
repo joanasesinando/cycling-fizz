@@ -128,8 +128,8 @@
                 <!-- TODO cards bikesharing -->
 
                 <!-- // Tags -->
-                <app-map-tags *ngIf="type !== 'bikesharing' && !editActivated" [tags]="tags"></app-map-tags>
-                <nb-select *ngIf="type !== 'bikesharing' && editActivated" multiple placeholder="Escolher etiquetas" status="success">
+                <app-map-tags *ngIf="type != 'bikesharing' && !editActivated" [tags]="tags"></app-map-tags>
+                <nb-select *ngIf="type != 'bikesharing' && editActivated" multiple placeholder="Escolher etiquetas" status="success">
                     <nb-option *ngFor="let tag of tags" value="{{ tag.id }}" (click)="changeColor($event)" class="success">{{ tag.text }}</nb-option>
                 </nb-select>
 
@@ -162,10 +162,10 @@
  *
  * =================================================================== -->
 <div class="modal fade" id="ignoreChangesModal" tabindex="-1" role="dialog" aria-labelledby="ignoreChangesModalLabel" aria-hidden="true">
-    <div class="modal-dialog dialog" role="document">
+    <div class="modal-dialog dark-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title dialog-title" id="ignoreChangesModalLabel">Descartar alterações</h5>
+                <h5 class="modal-title dialog-title" id="ignoreChangesModalLabel">⚠ Descartar alterações</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -195,10 +195,10 @@
  *
  * =================================================================== -->
 <div class="modal fade" id="saveChangesModal" tabindex="-1" role="dialog" aria-labelledby="saveChangesModalLabel" aria-hidden="true">
-    <div class="modal-dialog dialog" role="document">
+    <div class="modal-dialog dark-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title dialog-title" id="saveChangesModalLabel">Alterações guardadas!</h5>
+                <h5 class="modal-title dialog-title" id="saveChangesModalLabel">✔ Alterações guardadas!</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -227,10 +227,10 @@
  *
  * =================================================================== -->
 <div class="modal fade" id="deleteModal" tabindex="-1" role="dialog" aria-labelledby="deleteModalLabel" aria-hidden="true">
-    <div class="modal-dialog dialog" role="document">
+    <div class="modal-dialog dark-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title dialog-title" id="deleteModalLabel">Apagar elemento</h5>
+                <h5 class="modal-title dialog-title" id="deleteModalLabel">⚠ Apagar elemento</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                 </button>
@@ -243,7 +243,7 @@
                     <p class="dialog-text">Diz-nos o motivo pelo qual queres apagar este elemento?</p>
                     <nb-layout>
                         <nb-layout-column>
-                            <nb-select placeholder="Escolher uma opção">
+                            <nb-select placeholder="Escolher uma opção" required=""> <!-- FIXME make it required -->
                                 <nb-option value="">Informação errada</nb-option>
                                 <nb-option value="0">Elemento já não existe</nb-option>
                                 <nb-option value="1">Outra</nb-option>
