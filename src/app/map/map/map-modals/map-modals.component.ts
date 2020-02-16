@@ -19,6 +19,8 @@ export class MapModalsComponent implements OnInit {
   type: string = "store";
   name: string = "Decathlon";
   address: string = "Rua 25 de Abril, Nº29, Loures, Lisboa";
+  lat: number = 38.7353927;
+  lng: number = -9.1388712;
   storeRating: number = 3.1;
   storeRatingArray: number[] = []; //needs to be an array for *ngFor to work
   storeRatingSource: string = "Google";
@@ -110,6 +112,10 @@ export class MapModalsComponent implements OnInit {
     }
   ];
 
+
+  //===== Delete Modal =====//
+  deleteFormMode: boolean = false;
+
   faTrash = faTrash;
   faEdit = faEdit;
   faStar = faStar;
@@ -125,6 +131,9 @@ export class MapModalsComponent implements OnInit {
     // set modal close event
     $('#mapElementModal').on('hidden.bs.modal', () => {
       this.changeEditMode(false);
+    });
+    $('#deleteModal').on('hidden.bs.modal', () => {
+      this.changeDeleteMode(false);
     });
 
     this.storeRatingArray = this.createStoreRatingArray(this.storeRating);
@@ -154,6 +163,18 @@ export class MapModalsComponent implements OnInit {
 
   changeEditMode(mode) {
     this.editActivated = mode;
+  }
+
+  changeDeleteMode(mode) {
+    this.deleteFormMode = mode;
+  }
+
+  openModal(modal) {
+    $(modal).modal('show');
+  }
+
+  closeModal(modal) {
+    $(modal).modal('hide');
   }
 
   saveChanges() {
