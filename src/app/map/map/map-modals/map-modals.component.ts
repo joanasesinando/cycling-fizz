@@ -14,17 +14,16 @@ export class MapModalsComponent implements OnInit {
   //===== Map element Modal =====//
   editActivated: boolean = false;
   deleteActivated: boolean = false;
-  auxChangeCheckboxColor: number = 0;
 
-  // FIXME ir buscar à BD
+  // NOTE: get from DB
+  type: string = "store";
   name: string = "Decathlon";
   address: string = "Rua 25 de Abril, Nº29, Loures, Lisboa";
-  storeRating: number[] = [1, 1, 1, 0, 0]; //needs to be an array for *ngFor to work
-  storeRatingNumber: number = 3.1;
+  storeRating: number = 3.1;
+  storeRatingArray: number[] = []; //needs to be an array for *ngFor to work
   storeRatingSource: string = "Google";
   lastUpdateDate: Date = new Date("2019/03/30");
   lastUpdateUser: string = "Cycling Fizz Team";
-  type: string = "bikelane";
   tags = [
     { text: "seguro", color: "orange", id: "0" },
     { text: "precisa reparações", color: "purple", id: "1" },
@@ -127,6 +126,17 @@ export class MapModalsComponent implements OnInit {
     $('#mapElementModal').on('hidden.bs.modal', () => {
       this.changeEditMode(false);
     });
+
+    this.storeRatingArray = this.createStoreRatingArray(this.storeRating);
+  }
+
+  createStoreRatingArray(storeRating) {
+    let array = [];
+    let roundedRating = Math.round(storeRating);
+
+    for(let i = 0; i < roundedRating; i++) array.push(1);
+    if(roundedRating < 5) for(let i = 0; i < 5-roundedRating; i++) array.push(0);
+    return array;
   }
 
   toggleFilterGroups(category) {
@@ -157,10 +167,8 @@ export class MapModalsComponent implements OnInit {
     let option = e.target;
     let checkbox = option.firstElementChild;
 
-    if(this.auxChangeCheckboxColor == 0) {
-      checkbox.classList.remove("status-basic");
-      checkbox.classList.add("status-success");
-    }
+    checkbox.classList.remove("status-basic");
+    checkbox.classList.add("status-success");
   }
 
 }

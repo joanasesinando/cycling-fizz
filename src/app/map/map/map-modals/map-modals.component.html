@@ -60,8 +60,8 @@
                     <!-- store rating -->
                     <div *ngIf="type === 'store'" class="store-rating mb-2 ml-3">
                         <div class="rating d-flex align-items-center">
-                            <span class="rating-number mr-2">{{ storeRatingNumber }}</span>
-                            <div *ngFor="let i of storeRating">
+                            <span class="rating-number mr-2">{{ storeRating }}</span>
+                            <div *ngFor="let i of storeRatingArray">
                                 <fa-icon *ngIf="i === 1" [icon]="faStar" class="star checked mr-2"></fa-icon>
                                 <fa-icon *ngIf="i === 0" [icon]="faStar" class="star mr-2"></fa-icon>
                             </div>

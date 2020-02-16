@@ -11,7 +11,7 @@ export class MapComponent implements OnInit {
     //FontAwesome icons
     faFilter = faFilter;
 
-  filters = [ //FIXME completar && colocar num json
+  filters = [
       {
           category:"Ciclovias",
           checked: true,
