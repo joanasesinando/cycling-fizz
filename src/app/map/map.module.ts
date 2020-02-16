@@ -22,7 +22,8 @@ import {
     NbSelectModule,
     NbToggleModule,
     NbUserModule,
-    NbInputModule, NbButtonModule
+    NbInputModule,
+    NbButtonModule,
 } from '@nebular/theme';
 import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/map-cards-bikelane.component';
 import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';

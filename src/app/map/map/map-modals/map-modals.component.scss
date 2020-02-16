@@ -96,6 +96,7 @@ app-filter-group.filter-group-bikelanes { display: block; }
 * ===================================================================*/
 
 #mapElementModal {
+  overflow-y: auto; // so it keeps scrolling when dialogs appear
   .modal-content {
     border: none;
     border-radius: 1.5rem;
