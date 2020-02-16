@@ -20,15 +20,26 @@ export class MapCardsBikelaneComponent implements OnInit {
     { type: "Parque", id: "4" },
     { type: "Outro", id: "5" }
   ];
+  steeps = [
+    { steep: "Plano", id: "0" },
+    { steep: "Misto", id: "1" },
+    { steep: "Íngreme", id: "2" },
+  ];
   floors = [
-    { floor: "Direito", id: "0" },
-    { floor: "Misto", id: "1" },
-    { floor: "Íngreme", id: "2" },
+    { floor: "Asfalto colorido", id: "0" },
+    { floor: "Alcatrão", id: "1" },
+    { floor: "Calçada", id: "2" },
+    { floor: "Terra batida", id: "3" },
+    { floor: "Gravilha", id: "4" },
+    { floor: "Areia", id: "5" },
+    { floor: "Outro", id: "6" },
   ];
 
   //FIXME ir buscar à BD
   type = this.types[0];
   typePopover: string = "Popover tipologia";
+  steep = this.steeps[0];
+  steepPopover: string = "Popover inclinação";
   floor = this.floors[0];
   floorPopover: string = "Popover piso";
   notes: string = "Carrega em “editar” para adicionar uma nota.";

@@ -16,7 +16,7 @@ export class MapModalsComponent implements OnInit {
   deleteActivated: boolean = false;
 
   // NOTE: get from DB
-  type: string = "store";
+  type: string = "store"; //options for debug: bikelane, parking, store
   name: string = "Decathlon";
   address: string = "Rua 25 de Abril, Nº29, Loures, Lisboa";
   lat: number = 38.7353927;

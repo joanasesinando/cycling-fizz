@@ -52,6 +52,6 @@ nb-card-body {
 
 .notes {
   @include media-breakpoint-up(lg) {
-    min-height: 14rem;
+    min-height: 24rem;
   }
 }
