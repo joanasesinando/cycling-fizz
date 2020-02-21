@@ -4,8 +4,6 @@ import { faTwitter, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-
 import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
 import {NgForm} from "@angular/forms";
 
-import { FormGroup } from '@angular/forms';
-
 
 export interface FormObject {
   username: string;
@@ -30,6 +28,7 @@ export class ModalRegisterComponent implements OnInit {
   faGooglePlusG = faGooglePlusG;
 
   @Output() onSignInClicked = new EventEmitter();
+  @Output() onRegisterClicked = new EventEmitter();
 
   formData: FormObject;
   @ViewChild('f', { static: false }) f: NgForm;
@@ -51,7 +50,8 @@ export class ModalRegisterComponent implements OnInit {
 
   registerClicked() {
     if (this.f.form.valid) {
-      this.tryRegister(this.formData)
+      this.tryRegister(this.formData);
+      this.onRegisterClicked.emit();
     } else {
       console.log("invalid form");
     }
@@ -60,7 +60,13 @@ export class ModalRegisterComponent implements OnInit {
   tryRegister(value){
     this.authFirebaseService.doRegister(value)
         .then(res => {
-          console.log(res);
+          console.log("-----------------------------------");
+          console.log(res.user);
+          console.log("-----------------------------------");
+
+          // res.user.updateProfile({
+          //   displayName: value.username
+          // });
         }, err => {
           console.log(err);
         })

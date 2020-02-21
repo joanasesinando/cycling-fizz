@@ -3,8 +3,20 @@
         <div class="modal-content modal-popout-bg align-middle">
 
             <!-- body -->
-            <app-modal-login *ngIf="!showRegister" (onRegisterClicked)="showRegister=true"></app-modal-login>
-            <app-modal-register *ngIf="showRegister" (onSignInClicked)="showRegister=false"></app-modal-register>
+            <app-modal-login
+                    *ngIf="isCurrentModal(Modals.Login)"
+                    (onRegisterClicked)="setCurrentModal(Modals.Register)"
+            ></app-modal-login>
+            <app-modal-register
+                    *ngIf="isCurrentModal(Modals.Register)"
+                    (onSignInClicked)="setCurrentModal(Modals.Login)"
+                    (onRegisterClicked)="setCurrentModal(Modals.CompleteRegister)"
+            ></app-modal-register>
+            <app-modal-complete-registration
+                    *ngIf="isCurrentModal
+                    (Modals.CompleteRegister)"
+            ></app-modal-complete-registration>
+
         </div>
     </div>
 </div>

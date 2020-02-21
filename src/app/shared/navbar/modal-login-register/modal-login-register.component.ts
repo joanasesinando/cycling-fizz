@@ -1,5 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 
+export enum Modals {
+  Login = 1,
+  Register,
+  CompleteRegister
+}
 @Component({
   selector: 'app-modal-login-register',
   templateUrl: './modal-login-register.component.html',
@@ -7,12 +12,21 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ModalLoginRegisterComponent implements OnInit {
 
-  showRegister: boolean = false;
+  Modals = Modals;
+  currentModal: Modals = Modals.Login;
+
+
 
   constructor() { }
 
   ngOnInit() {
   }
 
+  setCurrentModal(modal: Modals){
+    this.currentModal = modal;
+  }
 
+  isCurrentModal(modal: Modals) {
+    return this.currentModal == modal;
+  }
 }

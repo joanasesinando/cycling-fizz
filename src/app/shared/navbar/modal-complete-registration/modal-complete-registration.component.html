@@ -1,0 +1,85 @@
+<div class="modal-body">
+  <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <span aria-hidden="true">&times;</span>
+  </button>
+
+  <div class="complete-registration d-flex flex-row align-items-center justify-content-xl-end justify-content-center py-5">
+
+    <div class="complete-registration-content col-xl-4 col-lg-7 col-10 mr-xl-4 p-xl-3 px-lg-5 px-3 py-3">
+
+      <!-- Heading -->
+      <h3 class="complete-registration-heading mb-2">Já falta pouco!</h3>
+      <div class="text-center mb-5">
+        <label class="gray-label">Completa o teu perfil.</label>
+      </div>
+
+
+      <form #f="ngForm" (submit)="completeRegistration()">
+
+
+        <!-- FirstName -->
+        <div class="form-label-group">
+          <input type="text"
+                 id="inputFirstName"
+                 name="inputFirstName"
+                 class="form-control"
+                 placeholder="Primeiro Nome"
+                 [(ngModel)]="formData.firstName"
+                 #firstName="ngModel"
+                 [ngClass]="{ 'is-invalid': f.submitted && firstName.invalid }"
+                 required autofocus>
+          <div *ngIf="f.submitted && firstName.invalid" class="invalid-feedback">
+            <!--fixme change text-->
+            <div *ngIf="firstName.errors.required">First name is required</div>
+          </div>
+        </div>
+
+        <!-- LastName -->
+        <div class="form-label-group">
+          <input type="text"
+                 id="inputLastName"
+                 name="inputLastName"
+                 class="form-control"
+                 placeholder="Ultimo Nome"
+                 [(ngModel)]="formData.lastName"
+                 #lastName="ngModel"
+                 [ngClass]="{ 'is-invalid': f.submitted && lastName.invalid }"
+                 required autofocus>
+          <div *ngIf="f.submitted && lastName.invalid" class="invalid-feedback">
+            <!--fixme change text-->
+            <div *ngIf="lastName.errors.required">Last name is required</div>
+          </div>
+        </div>
+
+        <hr>
+
+      <!-- Username -->
+      <div class="form-label-group">
+        <input type="text"
+               id="inputUsername"
+               name="inputUsername"
+               class="form-control"
+               placeholder="Nome de utilizador"
+               [(ngModel)]="formData.username"
+               #username="ngModel"
+               [ngClass]="{ 'is-invalid': f.submitted && username.invalid }"
+               required autofocus>
+        <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+          <!--fixme change text-->
+          <div *ngIf="username.errors.required">Username is required</div>
+        </div>
+      </div>
+
+        <!-- Register btn -->
+        <div class="text-center">
+          <button class="btn btn-primary btn-confirm font-weight-bold mb-2 mt-4" type="submit">Confirmar</button>
+        </div>
+      </form>
+
+
+    </div> <!-- /col -->
+
+  </div> <!-- /d-flex -->
+
+</div>
+

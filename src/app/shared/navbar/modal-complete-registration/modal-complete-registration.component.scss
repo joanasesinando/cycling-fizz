@@ -1,0 +1,68 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Register Stylesheet
+ *  27-05-2019 #FIXME
+ *
+ * =================================================================== */
+
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+
+.complete-registration {
+  @include media-breakpoint-down(lg) {
+    height: 48rem;
+  }
+
+  .complete-registration-content {
+    @include media-breakpoint-down(lg) {
+      background-color: white;
+      border-radius: 1rem;
+    }
+  }
+
+  .complete-registration-heading {
+    text-align: center;
+  }
+
+
+  .form-label-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    padding: 1.5rem 1.5rem;
+    border-radius: 3rem;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(89, 59, 254, 0.25);
+      border-color: #8280ff;
+    }
+  }
+
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    border-color: #706dfe;
+    background-color: #706dfe;
+  }
+
+  .custom-control-label {
+    a {
+      color: $text;
+
+      @include media-breakpoint-down(lg) { text-decoration: underline; }
+    }
+  }
+
+  button.btn-confirm {
+    padding: 0 3rem;
+    box-shadow: 0 4px 15px rgba(255, 195, 64, 0.46);
+  }
+
+  .gray-label {
+    color: $darkGray;
+  }
+}

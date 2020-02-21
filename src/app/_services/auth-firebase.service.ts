@@ -21,11 +21,23 @@ export class AuthFirebaseService {
 
   userChanged(user) {
     this.currentUser = user;
-    this.isUserLogged = !!this.currentUser; //Don' believe this works
+    this.isUserLogged = !!this.currentUser;
+    console.log("--------------------------------------");
+    this.getCurrentUserIdTokenPromise().then(res => {
+       console.log(res);
+    }, err => {
+      console.log(err);
+      console.log(err.message);
+    });
+    console.log("--------------------------------------");
+  }
 
-    console.log(this.currentUser);
-    console.log(this.isUserLogged);
-
+  getCurrentUserIdTokenPromise() {
+    if (!this.isUserLogged) {
+      return null;
+    } else {
+      return this.currentUser.getIdToken();
+    }
   }
 
   logout() {
