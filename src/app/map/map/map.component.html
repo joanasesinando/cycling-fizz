@@ -1,1 +1,35 @@
-<p>map works!</p>
+<section>
+    <div class="contents">
+
+        <!-- Orange Bar -->
+        <div id="orangeBar" class="container-fluid d-flex align-items-center justify-content-between">
+
+            <!-- more filters -->
+            <a href="" data-toggle="modal" data-target="#filters">
+                <fa-icon [icon]="faFilter" class="filter-icon"></fa-icon>
+            </a>
+
+            <!-- quick filters -->
+            <div id="quick-filters" class="d-none d-lg-flex justify-content-between">
+                <app-map-quick-filter-toggle *ngFor="let filter of filters" class="mr-5"
+                    [label]="filter.category"
+                    [checked]="filter.checked"
+                    [name]="filter.name"
+                    (onCheckedChange)="updateFilter(filter.name)">
+                </app-map-quick-filter-toggle>
+            </div>
+
+            <!-- search bar -->
+            <app-search></app-search>
+        </div>
+
+        <!-- Map -->
+        <div id="map">
+            <button nbButton hero status="danger" style="position: absolute; bottom: 2rem; left: 1rem;" data-toggle="modal" data-target="#mapElementModal">Abrir elemento</button>
+            <app-btn-floating></app-btn-floating>
+        </div>
+
+
+        <app-map-modals [filters]="filters"></app-map-modals>
+    </div>
+</section>

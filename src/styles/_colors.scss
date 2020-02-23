@@ -11,8 +11,12 @@
   $darkGray: #57565C;
   $gray: #838788;
   $lightGray: #F2F6F8;
+  $superLightGray: #F7F9FA;
   $beige: #F7F7F7;
+  $yellow: #FFC340;
   $orange: #FF9F3C;
+  $gradient-orange: linear-gradient(270deg, #FF923C -11.51%, #FFC340 85.97%);
+  $purple: #9790E3;
 
   /** social-list **/
   $youtube: #e5241d;
@@ -22,5 +26,20 @@
   $twitter: #0cbbff;
 
   /** utilities **/
+  $switch: #EDF0F0;
   $scrollbar: #BDBDBD;
   $likes: #ef5350;
+
+  /** badges **/
+  $badge-new: #FE4566;
+  $badge-soon: $yellow;
+
+  /** map element tags **/
+  $tag-yellow: #F9A825;
+  $tag-orange: $orange;
+  $tag-red: #EF5350;
+  $tag-pink: #F06292;
+  $tag-purple: $purple;
+  $tag-darkBlue: #5C6BC0;
+  $tag-blue: #0097A7;
+  $tag-green: #349B7A;

@@ -1,0 +1,102 @@
+@import "~styles/_colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+.container {
+  padding-top: 10rem;
+  padding-bottom: 10rem;
+  font-family: quicksand-regular, sans-serif;
+  @include media-breakpoint-up(lg) {
+    font-size: 1.2rem;
+  }
+  @include media-breakpoint-down(sm) {
+    padding-top: 8rem;
+    padding-bottom: 8rem;
+    h3 { font-size: 1.6rem; }
+  }
+}
+
+form {
+  .form-group {
+    position: relative;
+  }
+  .form-control {
+    background-color: $lightGray;
+  }
+  .form-control-lg {
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 7px 5px rgba(0, 0, 0, 0.11);
+    &.thick {
+      height: 3.3rem;
+      padding: .5rem 3.5rem;
+    }
+  }
+  label {
+    display: block;
+  }
+  .message .form-control-lg {
+    padding: .5rem 1.8rem;
+  }
+  ::placeholder {
+    font-family: quicksand-medium, sans-serif;
+    font-size: 1.1rem;
+    color: $gray;
+    position: relative;
+    left: 0;
+  }
+  input, textarea {
+    color: $text;
+    font-size: 1.1rem;
+  }
+  .icon {
+    color: $darkGray;
+    height: 1.3rem;
+    position: absolute;
+    left: 1.5rem;
+    top: 1rem;
+  }
+  .btn.btn-primary,
+  button.btn-primary,
+  input[type=submit].btn-primary,
+  input[type=reset].btn-primary,
+  input[type=button].btn-primary {
+    padding: 0 5rem;
+    @include media-breakpoint-down(md) { padding: 0 8rem; }
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      padding: 0;
+    }
+  }
+}
+
+.extra-info {
+  margin-top: 8rem;
+
+  p {
+    width: 40%;
+    @include media-breakpoint-down(sm) {
+      width: auto;
+    }
+  }
+
+  .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: $gradient-orange;
+    border-radius: 50%;
+    line-height: 3rem;
+    color: white;
+    @include transition(all 0.2s ease-in-out);
+
+    @include media-breakpoint-up(lg){
+      &:hover {
+        @include transform(translateY(-0.5rem));
+      }
+    }
+  }
+}

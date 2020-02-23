@@ -1,5 +1,6 @@
-<app-header></app-header>
+<app-navbar *ngIf="_router.url != '/404' && !(_router.url.includes('coming-soon'))"></app-navbar>
 
-<router-outlet></router-outlet>
+<router-outlet (activate)="onActivate($event)"></router-outlet>
 
-<app-footer></app-footer>
+<app-footer *ngIf="_router.url != '/404' && !(_router.url.includes('coming-soon'))"></app-footer>
+

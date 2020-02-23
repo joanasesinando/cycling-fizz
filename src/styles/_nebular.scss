@@ -1,0 +1,187 @@
+/* ===================================================================
+ *  Nebular components
+ *    - switch
+ *    - checkbox
+ *    - user
+ *    - chat
+ *    - popover
+ *
+ * ------------------------------------------------------------------- */
+
+@import "colors";
+
+@import 'nebular-themes';
+
+@import '~@nebular/theme/styles/globals';
+
+@include nb-install() {
+  @include nb-toggle-theme;
+  @include nb-checkbox-theme;
+  @include nb-card-theme;
+  @include nb-user-theme;
+  @include nb-buttons-theme;
+  @include nb-input-theme;
+  @include nb-chat-theme;
+  @include nb-popover-theme;
+  @include nb-icon-theme;
+  @include nb-select-theme;
+};
+
+/*** General ***/
+.nb-theme-default nb-toggle .text,
+.nb-theme-default nb-checkbox .text {
+  font-family: quicksand-regular, sans-serif;
+}
+
+/*** Switch ***/
+nb-toggle.map-quick-filter-toggle .toggle-label {
+  margin-bottom: 0;
+  .text {
+    font-family: quicksand-medium, sans-serif;
+    color: white;
+  }
+}
+.nb-theme-default nb-toggle.map-quick-filter-toggle.status-control {
+  .toggle-switcher nb-icon { color: #fda74b; }
+  .toggle.checked { background-color: #fda74b; }
+  .native-input:enabled + .toggle:hover.checked { background-color: darken(#fda74b, 5); }
+  .native-input:enabled:focus + .toggle { background-color: #fda74b; }
+}
+
+nb-toggle.map-filter-toggle .toggle-label {
+  justify-content: space-between;
+  width: 16rem;
+  @include media-breakpoint-down(sm) {
+    width: 15rem;
+  }
+
+  .text {
+    font-family: quicksand-medium, sans-serif;
+    color: $darkGray;
+  }
+}
+
+
+/*** Checkbox ***/
+.nb-theme-default nb-checkbox.status-basic .native-input:disabled:indeterminate + .custom-checkbox,
+.nb-theme-default nb-checkbox.status-basic .native-input:disabled:checked + .custom-checkbox {
+  background-color: $orange;
+  border-color: $orange;
+}
+
+.nb-theme-default nb-checkbox.status-basic .native-input:disabled ~ .text {
+  color: $text;
+}
+
+
+/*** User ***/
+.nb-theme-default nb-user.map-gallery-user .user-name {
+  font-family: quicksand-regular, sans-serif;
+  font-weight: normal;
+  color: white;
+}
+
+
+/*** Chat ***/
+.nb-theme-default nb-chat.map-comments {
+  box-shadow: none;
+
+  .header {
+    display: none;
+  }
+
+  .messages {
+    padding: 1rem 0;
+  }
+}
+
+.nb-theme-default nb-chat-message.map-comments {
+  nb-chat-message-text {
+    .text {
+      font-family: quicksand-regular, sans-serif;
+      background-color: $superLightGray;
+      color: $darkGray;
+    }
+
+    .sender {
+      font-family: quicksand-bold, sans-serif;
+      font-size: 1rem;
+      color: $header;
+
+      time {
+        font-family: quicksand-light;
+        color: $gray;
+        margin-left: .4rem;
+      }
+    }
+  }
+
+  &.not-reply .message {
+    margin-right: 0;
+  }
+}
+
+.nb-theme-default nb-chat-form.map-comments {
+  @include media-breakpoint-down(md) {
+    padding: 1rem 0;
+  }
+  .message-row input::placeholder {
+    font-size: 0; // bc there's no way to change the placeholder, so hide it and make my own
+  }
+}
+
+.nb-theme-default [nbInput].status-basic {
+  background-color: $superLightGray;
+  font-family: quicksand-regular, sans-serif;
+  color: $darkGray
+}
+
+.nb-theme-default [nbButton].appearance-filled.status-primary {
+  background: $gradient-orange;
+  border-color: #ffc46b;
+}
+
+
+/*** Popover ***/
+.nb-theme-default nb-popover {
+  background: $header;
+  color: white;
+  .arrow::after {
+    border-bottom-color: $header;
+  }
+  .primitive-overlay {
+    font-family: quicksand-regular, sans-serif;
+    font-size: unset;
+    padding: 1.5rem;
+  }
+}
+
+/*** Select ***/
+.nb-theme-default nb-select .select-button,
+.nb-theme-default nb-option, .nb-theme-default nb-option-group {
+  font-family: quicksand-regular, sans-serif;
+}
+.nb-theme-default nb-select.size-medium .select-button,
+.nb-theme-default .size-medium nb-option {
+  font-size: initial;
+}
+.nb-theme-default nb-option.success.selected,
+.nb-theme-default nb-option.success:hover {
+  color: #00d68f;
+}
+.nb-theme-default nb-option-group, .nb-theme-default nb-option.success {
+  color: #222b45;
+}
+.cdk-global-scrollblock { // when select on it would move left
+  overflow-y: hidden;
+}
+
+/*** Input ***/
+.nb-theme-default [nbInput] {
+  font-family: quicksand-regular, sans-serif;
+}
+
+/*** Button ***/
+.nb-theme-default [nbButton] {
+  font-family: quicksand-bold, sans-serif;
+}

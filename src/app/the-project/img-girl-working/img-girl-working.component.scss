@@ -1,0 +1,49 @@
+@import "~styles/_colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+svg {
+  width: 32rem;
+  @include media-breakpoint-down(md) { width: 20rem; }
+  @include media-breakpoint-down(sm) { width: 12rem; }
+}
+
+#leaf-bottom-left,
+#leaf-top-left {
+  -webkit-animation: leaf-swinging 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+  animation: leaf-swinging 1.2s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+  transform-origin: right;
+  transform-box: fill-box;
+}
+#leaf-top-left {
+  animation-delay: 300ms;
+}
+
+#leaf-middle-right,
+#leaf-top-right {
+  -webkit-animation: leaf-swinging 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+  animation: leaf-swinging 1.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) infinite alternate both;
+  transform-origin: left;
+  transform-box: fill-box;
+}
+#leaf-middle-right {
+  animation-delay: 400ms;
+}
+#leaf-top-right {
+  animation-delay: 500ms;
+}
+
+@keyframes leaf-swinging {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+    transform: scale(1.1);
+  }
+}
+

@@ -1,0 +1,98 @@
+<section id="section-the-project">
+    <app-banner
+            [image]="'assets/images/the-project/banner.jpg'"
+            [imagePosition]="'60% 30%'"
+            [title]="'O Projeto'"
+            [text]="'Descobre um pouco da breve história do Cycling Fizz, nomeadamente como surgiu a ideia, como foi posta em prática ' +
+             'e quais são afinal os nossos objetivos'">
+    </app-banner>
+
+    <div class="container px-4 px-md-0">
+        <!-- A ideia -->
+        <div class="text-section" data-aos="fade-left">
+            <h3>A ideia</h3>
+            <p class="mt-5">O Cycling Fizz surgiu a partir de uma necessidade cada vez mais presente em Lisboa.</p>
+            <p class="mt-5">Com o aumento de ciclovias e incentivos à mobilidade suave por toda a <br class="d-none d-lg-block">
+                cidade, falta existir um espaço digital comum a todos os ciclistas que <br class="d-none d-lg-block">agrupe
+                de forma simples todo o tipo de informações úteis.</p>
+            <p class="mt-5">A ideia é a de, não só servir de diversas formas aqueles que já <br class="d-none d-lg-block">
+                fazem um uso regular da bicicleta, como também a de mudar o <br class="d-none d-lg-block">paradigma nas
+                estradas e incentivar mais pessoas a <br class="d-none d-lg-block">moverem-se de forma sustentável por todo o país.</p>
+
+            <div class="row justify-content-end">
+                <app-img-idea class="image"></app-img-idea>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- Mãos à obra -->
+        <div class="text-section section-margin text-right" data-aos="fade-right">
+            <h3>Mãos à obra</h3>
+            <p class="mt-5">A ideia ganhou asas (ou melhor, rodas) de uma forma <br class="d-none d-lg-block">bastante
+                informal e após meses a conciliar o projeto com <br class="d-none d-lg-block">as responsabilidades
+                individuais de cada membro da <br class="d-none d-lg-block">equipa, muitas horas de pesquisa, tratamento
+                de <br class="d-none d-lg-block">informação, aprendizagem e milhares de linhas de <br class="d-none d-lg-block">
+                código, nasceu assim o Cycling Fizz!</p>
+
+            <div class="row justify-content-start">
+                <app-img-girl-working class="image"></app-img-girl-working>
+            </div>
+        </div>
+
+        <hr>
+
+        <!-- O que nos move -->
+        <div class="text-section section-margin" data-aos="fade-left">
+            <h3>O que nos move</h3>
+            <p class="mt-5">O motor de todo este projeto é servir a comunidade de ciclistas e <br class="d-none d-lg-block">
+                proporcionar-lhes o acesso a informação mais completa, organizada <br class="d-none d-lg-block">e
+                concentrada num único espaço fácil de usar, criando assim uma <br class="d-none d-lg-block">comunidade
+                digital de ciclistas.</p>
+            <p class="mt-5">Queremos também ajudar a tornar o nosso país mais verde, <br class="d-none d-lg-block">
+                promovendo o uso da bicicleta e dando as ferramentas <br class="d-none d-lg-block">necessárias a quem
+                quer começar a mover-se deste modo <br class="d-none d-lg-block">pelas cidades.</p>
+
+            <div class="row justify-content-end">
+                <app-img-guy-cycling class="image"></app-img-guy-cycling>
+            </div>
+        </div>
+
+        <hr>
+
+        <div class="extra-info">
+            <p class="text-center" data-aos="fade-up">O Cycling Fizz é um projeto em construção e temos ainda muitas ideias para colocar em prática!</p>
+            <div data-aos="fade-up" data-aos-delay="200">
+                <p class="text-subscribe text-center mt-5 mb-4"><b>Subscreve a nossa newsletter e fica sempre a par das novidades</b></p>
+                <div class="col-12 col-md-8 col-lg-6 mr-auto ml-auto">
+                    <app-newsletter-subscribe [border]="true"></app-newsletter-subscribe>
+                </div>
+            </div>
+
+            <div class="social-info d-inline-flex flex-wrap justify-content-center align-content-center mt-5 pt-5"
+                 data-aos="fade-up" data-aos-delay="400">
+                <p class="text-center d-md-none">Podes também seguir-nos nas redes sociais, ou então falar connosco e dar o teu feedback
+                    e sugestões através de <b>contacto@cyclingfizz.pt</b>.</p>
+
+                <div class="social d-flex justify-content-center mt-4 mr-md-4">
+                    <a href="#" class="mr-4">
+                        <fa-icon [icon]="faFacebookF" id="fb" ></fa-icon>
+                    </a>
+                    <a href="#" class="mr-4">
+                        <fa-icon [icon]="faTwitter" id="tt" ></fa-icon>
+                    </a>
+                    <a href="#" class="mr-4">
+                        <fa-icon [icon]="faInstagram" id="ig" ></fa-icon>
+                    </a>
+                    <a href="#">
+                        <fa-icon [icon]="faYoutube" id="yt" ></fa-icon>
+                    </a>
+                </div>
+
+                <p class="text-right d-none d-md-block">Podes também seguir-nos nas redes sociais, ou então falar connosco e dar o teu feedback e sugestões através
+                    de <b>contacto@cyclingfizz.pt</b>.</p>
+            </div>
+        </div>
+    </div>
+
+</section>

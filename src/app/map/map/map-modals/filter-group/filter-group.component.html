@@ -1,0 +1,4 @@
+<div *ngFor="let filterGroup of filterGroups" class="container-fluid pt-3 pb-1 my-3">
+    <h6 *ngIf="filterGroup.category != ''" class="mb-3">{{filterGroup.category}}</h6>
+    <app-map-filter-checkbox *ngFor="let option of filterGroup.options" [label]="option"></app-map-filter-checkbox>
+</div>

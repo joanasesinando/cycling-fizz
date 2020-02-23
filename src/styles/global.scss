@@ -1,4 +1,4 @@
-/* =================================================================== 
+/* ===================================================================
  *
  *  Cycling Fizz v1.0 Global Stylesheet
  *  27-05-2019 #FIXME
@@ -8,6 +8,9 @@
  *  01. basic styles
  *  02. buttons
  *  03. scrollbar
+ *  04. tooltips
+ *  05. badges
+ *  05. slick slider
  *
  * =================================================================== */
 
@@ -16,6 +19,7 @@
 
 @import "~styles/colors";
 @import "~styles/mixins";
+@import "~styles/nebular";
 
 @import "../../node_modules/bootstrap/scss/functions";
 @import "../../node_modules/bootstrap/scss/variables";
@@ -27,11 +31,19 @@
  *
  * ------------------------------------------------------------------- */
 
+.text-dark-black { color: $text !important;}
+.text-dark-header { color: $header !important; }
+.text-dark-gray { color: $darkGray !important; }
+.text-gray { color: $gray !important; }
+.text-light-gray { color: $lightGray !important; }
+.text-orange { color: $orange !important; }
+.text-purple {color: $purple !important;  }
+
 h1, .h1,
 h2, .h2,
 h3, .h3 {
   color: $header;
-  font-family: "martel-extraBold", serif;
+  font-family: "martel-extraBold", sans serif;
 }
 
 h1, .h1 {
@@ -83,6 +95,31 @@ h5, .h5 {
   }
 }
 
+.dark-dialog {
+  .modal-content {
+    background-color: #263238;
+  }
+  .modal-header {
+    border-bottom: none;
+  }
+  .modal-footer {
+    border-top: none;
+  }
+  .close {
+    font-family: quicksand-regular, sans-serif;
+    color: white;
+    opacity: .7;
+    &:hover { opacity: 1; }
+  }
+  .dialog-title {
+    font-family: quicksand-bold, sans-serif;
+    color: white;
+  }
+  .dialog-text {
+    font-family: quicksand-regular, sans-serif;
+    color: white;
+  }
+}
 
 /* ===================================================================
  *  02. buttons
@@ -126,7 +163,9 @@ input[type="reset"].btn-primary:focus,
 input[type="button"].btn-primary:focus {
   box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
   background-size: 100% 100%;
-  @include transform(translateY(-0.15em));  
+  @include media-breakpoint-up(lg) {
+    @include transform(translateY(-0.15em));
+  }
 }
 
 
@@ -295,34 +334,106 @@ button.read:focus {
  *
  * ------------------------------------------------------------------- */
 
-::-webkit-scrollbar {
-  width: 12px;
-  background-color: #F5F5F5;
-}
+@include media-breakpoint-up(lg){
+  ::-webkit-scrollbar {
+    width: 12px;
+    background-color: #F5F5F5;
+  }
 
-::-webkit-scrollbar-track {
-  -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-  background-color: #F5F5F5;
-  border-radius: 12px;
-}
+  ::-webkit-scrollbar-track {
+    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
+    background-color: #F5F5F5;
+    border-radius: 12px;
+  }
 
-::-webkit-scrollbar-thumb {
-  border-radius: 12px;
-  background-color: $scrollbar;
-  //background-image: -webkit-gradient(linear,
-  //        40% 0%,
-  //        85% 84%,
-  //        from(#ffd340),
-  //        to(#ff9f3c),
-  //        color-stop(.6,#ffbe3d));
-
-  &:hover {
-    background-color:darken($scrollbar, 10%);
+  ::-webkit-scrollbar-thumb {
+    border-radius: 12px;
+    background-color: $scrollbar;
     //background-image: -webkit-gradient(linear,
     //        40% 0%,
     //        85% 84%,
-    //        from(#f6cc40),
-    //        to(#f79d40),
-    //        color-stop(.6,#e6ac3b));
+    //        from(#ffd340),
+    //        to(#ff9f3c),
+    //        color-stop(.6,#ffbe3d));
+
+    &:hover {
+      background-color:darken($scrollbar, 10%);
+      //background-image: -webkit-gradient(linear,
+      //        40% 0%,
+      //        85% 84%,
+      //        from(#f6cc40),
+      //        to(#f79d40),
+      //        color-stop(.6,#e6ac3b));
+    }
   }
 }
+
+
+/* ===================================================================
+ *  04. tooltips
+ *
+ * ------------------------------------------------------------------- */
+
+.tooltip-inner {
+  max-width: 200px;
+  padding: 3px 8px;
+  color: $header;
+  text-align: center;
+  background-color: white;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+  margin-left: -3px;
+  content: "";
+  border-width: 5px 5px 0;
+  border-top-color: white;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
+  margin-top: -3px;
+  content: "";
+  border-width: 5px 5px 5px 0;
+  border-right-color: white;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
+  margin-left: -3px;
+  content: "";
+  border-width: 0 5px 5px;
+  border-bottom-color: white;
+}
+
+.tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
+  right: 0;
+  margin-top: -3px;
+  content: "";
+  border-width: 5px 0 5px 5px;
+  border-left-color: white;
+}
+
+
+
+/* ===================================================================
+ *  05. badges
+ *
+ * ------------------------------------------------------------------- */
+
+.badge {
+  font-size: 90%;
+}
+.badge-primary {
+  background: $gradient-orange;
+}
+
+
+
+/* ===================================================================
+ *  06. slick slider
+ *
+ * ------------------------------------------------------------------- */
+
+.slick-prev:before, .slick-next:before {
+  color: black;
+  opacity: .2;
+}
+

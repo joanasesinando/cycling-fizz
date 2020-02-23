@@ -1,0 +1,185 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg fixed-top px-4" id="mainNav">
+
+  <!-- logo -->
+  <a class="navbar-brand" href="#">Cycling Fizz</a>
+
+  <!-- mobile menu -->
+  <button class="navbar-toggler d-lg-none d-inline-block hamburger hamburger--spring" type="button"
+          data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMobileMenu()">
+
+    <span class="navbar-toggler-icon hamburger-box"> <!-- FIXME make component -->
+      <span class="hamburger-inner"></span>
+    </span>
+  </button>
+
+  <!-- navigation -->
+  <div class="navbar-collapse collapse" id="navbarResponsive">
+    <ul class="navbar-nav ml-lg-auto mr-4">
+
+      <!-- início -->
+      <li class="nav-item">
+        <a class="nav-link clickable-nav-link" routerLink="">{{'navbar-links.homepage' | translate}}</a>
+      </li>
+
+      <!-- mapa -->
+      <li class="nav-item">
+        <a class="nav-link clickable-nav-link" routerLink="/map">{{'navbar-links.map' | translate}}</a>
+      </li>
+
+      <!-- útil -->
+      <li class="nav-item dropdown">
+          <a class="nav-link d-lg-none d-flex justify-content-between" id="navbarDropdownUtilLink" role="button"
+           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" (click)="toggleDropdownMenu(0)">
+
+              {{'navbar-links.useful.name' | translate}}
+            <fa-icon *ngIf="!dropdownsOpen[0]" [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
+            <fa-icon *ngIf="dropdownsOpen[0]" [icon]="faChevronUp" class="fa-xs faChevronUp"></fa-icon>
+          </a>
+
+        <a class="nav-link d-none d-lg-block" id="navbarDropdownUtilLinkLarge" role="button"
+           aria-haspopup="true" aria-expanded="false">
+
+            {{'navbar-links.useful.name' | translate}}
+          <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
+        </a>
+
+        <div id="navbarDropdownUtil" class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownUtilLink">
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/traffic-rules">
+              <fa-icon [icon]="faTrafficLight"></fa-icon>
+              {{'navbar-links.useful.dropdown.traffic-rules' | translate}}</a>
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/coming-soon/routes">
+              <fa-icon [icon]="faRoute"></fa-icon>
+              {{'navbar-links.useful.dropdown.routes' | translate}}<app-badge [badgeType]="'soon'"></app-badge></a>
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/beginner">
+              <fa-icon [icon]="faQuestion"></fa-icon>
+              {{'navbar-links.useful.dropdown.beginner' | translate}}</a>
+        </div>
+      </li>
+
+      <!-- comunidade -->
+      <li class="nav-item dropdown">
+        <a class="nav-link d-lg-none d-flex justify-content-between" id="navbarDropdownComunidadeLink"
+           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+           (click)="toggleDropdownMenu(1)">
+
+            {{'navbar-links.community.name' | translate}}
+            <fa-icon *ngIf="!dropdownsOpen[1]" [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
+            <fa-icon *ngIf="dropdownsOpen[1]" [icon]="faChevronUp" class="fa-xs faChevronUp"></fa-icon>
+        </a>
+
+        <a class="nav-link d-none d-lg-block" id="navbarDropdownComunidadeLinkLarge" role="button"
+           aria-haspopup="true" aria-expanded="false">
+            {{'navbar-links.community.name' | translate}}
+          <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
+        </a>
+
+        <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownComunidadeLink">
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/coming-soon/forum">
+              <fa-icon [icon]="faComments"></fa-icon>
+              {{'navbar-links.community.dropdown.forum' | translate}}<app-badge [badgeType]="'soon'"></app-badge></a>
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/coming-soon/blog">
+              <img src="../../../assets/images/navbar/icons/blog.svg">
+              {{'navbar-links.community.dropdown.blog' | translate}}<app-badge [badgeType]="'soon'"></app-badge></a>
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/coming-soon/events">
+              <img src="../../../assets/images/navbar/icons/calendar.svg">
+              {{'navbar-links.community.dropdown.events' | translate}}<app-badge [badgeType]="'soon'"></app-badge></a>
+        </div>
+      </li>
+
+      <!-- sobre -->
+      <li class="nav-item dropdown">
+        <a class="nav-link d-lg-none d-flex justify-content-between" id="navbarDropdownSobreLink"
+           role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"
+           data-offset="100, 100, 200, 200" (click)="toggleDropdownMenu(2)">
+
+            {{'navbar-links.about.name' | translate}}
+            <fa-icon *ngIf="!dropdownsOpen[2]" [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
+            <fa-icon *ngIf="dropdownsOpen[2]" [icon]="faChevronUp" class="fa-xs faChevronUp"></fa-icon>
+        </a>
+
+        <a class="nav-link d-none d-lg-block" id="navbarDropdownSobreLinkLarge" role="button"
+           aria-haspopup="true" aria-expanded="false" data-offset="100, 100, 200, 200">
+            {{'navbar-links.about.name' | translate}}
+          <fa-icon [icon]="faChevronDown" class="fa-xs faChevronDown"></fa-icon>
+        </a>
+
+        <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownSobreLink">
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/the-project"><img src="../../../assets/images/navbar/icons/idea.svg">
+              {{'navbar-links.about.dropdown.project' | translate}}</a>
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/about-us"><fa-icon [icon]="faUsers"></fa-icon>
+              {{'navbar-links.about.dropdown.us' | translate}}</a>
+          <a class="dropdown-item clickable-nav-link" href="#" routerLink="/contact"><img src="../../../assets/images/navbar/icons/envelope.svg">
+              {{'navbar-links.about.dropdown.contact' | translate}}</a>
+        </div>
+      </li>
+
+      <!-- idioma -->
+        <div [ngSwitch]="mobileView">
+            <div *ngSwitchCase="false">
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="navbarDropdownIdiomaLink" data-toggle="dropdown">
+                        <fa-icon [icon]="faGlobeEurope" class="fa-lg"></fa-icon>
+                    </a>
+                    <div class="dropdown-menu ml-lg-4" aria-labelledby="navbarDropdownIdiomaLink">
+                        <a class="dropdown-item" (click)="translate.use('pt')">
+                            <img src="../../../assets/images/navbar/icons/portugues.svg">PT
+                        </a>
+                        <a class="dropdown-item" (click)="translate.use('en')">
+                            <img src="../../../assets/images/navbar/icons/english.svg">EN
+                        </a>
+                        <a class="dropdown-item" (click)="translate.use('fr')">
+                            <img src="../../../assets/images/navbar/icons/français.svg">FR
+                        </a>
+                    </div>
+                </li>
+            </div>
+
+            <div *ngSwitchCase="true">
+                <div class="last-mobile-row row justify-content-between py-3">
+                    <div class="col-sm-auto pb-sm-0 pb-4">
+                        <div class="row justify-content-sm-start justify-content-around">
+                            <div class="col-3">
+                                <a class="dropdown-item" (click)="translate.use('pt')">
+                                    <img src="../../../assets/images/navbar/icons/portugues.svg">PT
+                                </a>
+                            </div>
+                            <div class="col-3">
+                                <a class="dropdown-item" (click)="translate.use('en')">
+                                    <img src="../../../assets/images/navbar/icons/english.svg">EN
+                                </a>
+                            </div>
+                            <div class="col-3">
+                                <a class="dropdown-item" (click)="translate.use('fr')">
+                                    <img src="../../../assets/images/navbar/icons/français.svg">FR
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    <div  class="col-sm-auto text-center">
+                        <button class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </ul>
+
+    <!-- login -->
+    <div *ngIf="!mobileView">
+      <button *ngIf="!authFirebaseService.isUserLogged" class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
+      <button *ngIf="authFirebaseService.isUserLogged" class="btn btn-danger" type="button" (click)="authFirebaseService.logout()">Logout</button>
+
+    </div>
+
+      <button data-toggle="modal" data-target="#verifyEmailModal">oi</button>
+
+
+  </div> <!-- /navigation -->
+
+</nav>
+
+<app-modal-login-register></app-modal-login-register>
+
+

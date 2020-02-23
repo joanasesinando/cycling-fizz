@@ -1,0 +1,145 @@
+<div class="modal-body">
+    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+    </button>
+
+    <div class="register d-flex flex-row align-items-center justify-content-xl-end justify-content-center py-5">
+
+        <div class="register-content col-xl-4 col-lg-7 col-10 mr-xl-4 p-xl-3 px-lg-5 px-3 py-3">
+
+            <!-- Heading -->
+            <h3 class="register-heading mb-2">Criar conta</h3>
+            <div class="text-center">
+                <label class="gray-label">fazer o registo com:</label>
+            </div>
+
+            <!-- Sign-in alternatives -->
+            <div class="social d-flex justify-content-center mb-4">
+                <a href="#" class="mx-2" id="fb">
+                    <fa-icon [icon]="faFacebookF"></fa-icon>
+                </a>
+                <a href="#" class="mx-2" id="gg">
+                    <fa-icon [icon]="faGooglePlusG"></fa-icon>
+                </a>
+                <a href="#" class="mx-2" id="tt">
+                    <fa-icon [icon]="faTwitter"></fa-icon>
+                </a>
+            </div>
+
+            <form #f="ngForm" (submit)="registerClicked()" [mustMatch]="['inputPassword', 'inputConfirmPassword']">
+                <div class="text-center">
+                    <label class="gray-label">ou usar uma conta de e-mail:</label>
+                </div>
+
+                <!-- Username -->
+                <div class="form-label-group">
+                    <input type="text"
+                           id="inputUsername"
+                           name="inputUsername"
+                           class="form-control"
+                           placeholder="Nome de utilizador"
+                           [(ngModel)]="formData.username"
+                           #username="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && username.invalid }"
+                           required autofocus>
+                    <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
+                        <!--fixme change text-->
+                        <div *ngIf="username.errors.required">Username is required</div>
+                    </div>
+                </div>
+
+                <!-- E-mail address -->
+                <div class="form-label-group">
+                    <input type="text"
+                           id="inputEmail"
+                           name="inputEmail"
+                           class="form-control"
+                           placeholder="Endereço de e-mail"
+                           [(ngModel)]="formData.email"
+                           #email="ngModel"
+                           pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$"
+                           [ngClass]="{ 'is-invalid': f.submitted && email.invalid }"
+                           required email autofocus>
+                    <div *ngIf="f.submitted && email.invalid" class="invalid-feedback">
+                        <!--fixme change text-->
+                        <div *ngIf="email.errors.required">Email is required</div>
+                        <div *ngIf="email.errors.pattern">Email must be a valid email address</div>
+                    </div>
+                </div>
+
+                <hr>
+
+                <!-- Password -->
+                <div class="form-label-group">
+                    <input type="password"
+                           id="inputPassword"
+                           name="inputPassword"
+                           class="form-control"
+                           placeholder="Palavra-passe"
+                           [(ngModel)]="formData.password"
+                           #password="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && password.invalid }"
+                           autocomplete="new-password"
+                           required minlength="6">
+                    <div *ngIf="f.submitted && password.invalid" class="invalid-feedback">
+                        <!--fixme change text-->
+                        <div *ngIf="password.errors.required">Password is required</div>
+                        <div *ngIf="password.errors.minlength">Password must be at least 6 characters</div>
+                    </div>
+                </div>
+
+                <!-- Confirm password -->
+                <div class="form-label-group">
+                    <input type="password"
+                           id="inputConfirmPassword"
+                           name="inputConfirmPassword"
+                           class="form-control"
+                           placeholder="Confirmar palavra-passe"
+                           [(ngModel)]="formData.confirmPassword"
+                           #confirmPassword="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && confirmPassword.invalid }"
+                           autocomplete="new-password"
+                           required>
+                    <div *ngIf="f.submitted && confirmPassword.invalid" class="invalid-feedback">
+                        <!--fixme change text-->
+                        <div *ngIf="confirmPassword.errors.required">Confirm password is required</div>
+                        <div *ngIf="confirmPassword.errors.mustMatch">Passwords must match</div>
+
+                    </div>
+                </div>
+
+                <!-- Remember password checkbox -->
+                <div class="custom-control custom-checkbox mb-3">
+                    <input type="checkbox"
+                           class="custom-control-input"
+                           id="customCheck1"
+                           name="customCheck1"
+                           [(ngModel)]="formData.eula"
+                           #eulaCheckbox="ngModel"
+                           [ngClass]="{ 'is-invalid': f.submitted && eulaCheckbox.invalid }"
+                           required>
+                    <label class="custom-control-label" for="customCheck1">Li e aceito os <a href="#">Termos de Utilização</a></label>
+                    <div *ngIf="f.submitted && eulaCheckbox.invalid" class="invalid-feedback">
+                        <!--fixme change text-->
+                        <div *ngIf="eulaCheckbox.errors.required">You have to read the Terms and Conditions.</div>
+                    </div>
+                </div>
+
+                <!-- Register btn -->
+                <div class="text-center">
+                    <button class="btn btn-primary btn-register font-weight-bold mb-2" type="submit">Registar</button>
+                </div>
+            </form>
+
+            <!-- Login -->
+            <div class="signIn d-flex flex-row flex-wrap justify-content-center mt-5">
+                <label class="mr-3 my-auto">Já és membro do Cycling Fizz?</label> <!-- FIXME change name -->
+                <a role="button" (click)="signInClicked()">Faz login</a>
+            </div>
+
+        </div> <!-- /col -->
+
+    </div> <!-- /d-flex -->
+
+</div>
+

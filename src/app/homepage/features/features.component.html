@@ -1,0 +1,67 @@
+<section id="features" class="pt-5">
+    <div id="features-container" class="container-fluid" data-aos="fade-left">
+        <div class="row">
+            <div class="col-lg-5 offset-lg-2 text-right">
+                <h3 class="mt-lg-5 mr-lg-5">Psst, <br class="d-none d-lg-block"> explora as <br class="d-block d-lg-none"> nossas <br class="d-none d-lg-block"> secções.</h3>
+            </div>
+            <div class="col-lg-4">
+                <div class="row my-5 justify-content-around">
+                    <div class="col-6">
+                        <app-f-card
+                                [icon]="IconsFeatures.Map"
+                                [title]="'Mapa Informativo'"
+                                [description]="'Mapa com a localização de ciclovias, estacionamento, lojas, bicicletas partilhadas e muito mais.'"
+                                [routerLink]="'/map'">
+                        </app-f-card>
+                    </div>
+                    <div class="col-6">
+                        <app-f-card
+                                [icon]="IconsFeatures.TrafficLight"
+                                [title]="'Regras de Trânsito'"
+                                [description]="'Compilação do código da estrada relevante para ciclistas.'"
+                                [routerLink]="'/traffic-rules'">
+                        </app-f-card>
+                    </div>
+                </div>
+
+                <div class="row my-5 justify-content-around">
+                    <div class="col-6">
+                        <app-f-card
+                                [icon]="IconsFeatures.Route"
+                                [title]="'Percursos'"
+                                [description]="'Biblioteca de percursos turísticos e de lazer em bicicleta com vários níveis de dificuldade.'"
+                                [routerLink]="'/routes'">
+                        </app-f-card>
+                    </div>
+                    <div class="col-6">
+                        <app-f-card
+                                [icon]="IconsFeatures.Beginner"
+                                [title]="'Principiantes'"
+                                [description]="'Compilação de dicas úteis para quem está a dar os seus primeiros passos na bicicleta em meio urbano.'"
+                                [routerLink]="'/beginner'">
+                        </app-f-card>
+                    </div>
+                </div>
+
+                <div class="row my-5 justify-content-around">
+                    <div class="col-6">
+                        <app-f-card
+                                [icon]="IconsFeatures.Forum"
+                                [title]="'Fórum'"
+                                [description]="'Local de partilha de ideias, opiniões, dúvidas e conselhos entre a comunidade do ciclismo.'"> <!-- fixme add routerlink -->
+                        </app-f-card>
+                    </div>
+                    <div class="col-6">
+                        <app-f-card
+                                [icon]="IconsFeatures.Calendar"
+                                [title]="'Eventos'"
+                                [description]="'Calendário com eventos relativos ao mundo do ciclismo.'"> <!-- fixme add routerlink -->
+                        </app-f-card>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="background"></div>
+</section>

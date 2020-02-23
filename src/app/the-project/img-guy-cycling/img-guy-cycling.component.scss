@@ -1,0 +1,43 @@
+@import "~styles/_colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+svg {
+  width: 32rem;
+  @include media-breakpoint-down(md) { width: 20rem; }
+  @include media-breakpoint-down(sm) { width: 12rem; }
+}
+
+#right-wheel,
+#left-wheel {
+  animation: wheel-rotate 1s infinite linear;
+  transform-origin: center;
+  transform-box: fill-box;
+}
+
+#guy {
+  animation: guy-moving 700ms cubic-bezier(0.390, 0.575, 0.565, 1.000) infinite alternate both;
+  transform-origin: bottom;
+}
+
+@keyframes wheel-rotate {
+  from{
+    transform: rotateZ(0deg);
+  }
+  to{
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes guy-moving {
+  from{
+    transform: rotateX(0deg);
+  }
+  to{
+    transform: rotateX(11deg);
+  }
+}
+

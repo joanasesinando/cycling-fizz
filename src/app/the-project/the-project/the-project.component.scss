@@ -1,0 +1,84 @@
+@import "~styles/_colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+#section-the-project {
+  .container {
+    padding-top: 10rem;
+    padding-bottom: 0;
+    font-family: quicksand-regular, sans-serif;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.2rem;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 8rem;
+      h3 { font-size: 1.6rem; }
+    }
+
+    .text-section {
+      p { line-height: 35px; }
+
+      .image {
+        @include media-breakpoint-up(lg) {
+          position: relative;
+          bottom: 13rem;
+        }
+        @include media-breakpoint-down(md) {
+          margin-right: 1rem;
+          margin-left: 1rem;
+        }
+      }
+    }
+    .text-section.section-margin {
+      margin-top: 10rem;
+      @include media-breakpoint-down(md) {
+        margin-top: 6rem;
+      }
+    }
+    hr {
+      @include media-breakpoint-down(md) {
+        margin-top: 6rem;
+      }
+    }
+
+    .extra-info {
+      margin-top: 8rem;
+      margin-bottom: 10rem;
+
+      .text-subscribe {
+        font-size: 1.1rem;
+      }
+
+      .social-info {
+        p {
+          width: 40%;
+          @include media-breakpoint-down(sm) {
+            width: auto;
+          }
+        }
+      }
+      .social a {
+        text-align: center;
+        height: 3rem;
+        width: 3rem;
+        background: $gradient-orange;
+        border-radius: 50%;
+        line-height: 3rem;
+        color: white;
+        @include transition(all 0.2s ease-in-out);
+
+        @include media-breakpoint-up(lg){
+          &:hover {
+            @include transform(translateY(-0.5rem));
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

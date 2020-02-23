@@ -1,0 +1,28 @@
+@import "~styles/_colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+#section-about-us {
+  .container {
+    padding-top: 10rem;
+    padding-bottom: 10rem;
+    font-family: quicksand-regular, sans-serif;
+    @include media-breakpoint-up(lg) {
+      font-size: 1.2rem;
+    }
+    @include media-breakpoint-down(sm) {
+      padding-top: 8rem;
+      padding-bottom: 8rem;
+      h3 { font-size: 1.6rem; }
+    }
+
+    h3 span {
+      background: linear-gradient(0deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 50%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+}

@@ -1,0 +1,247 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Navbar Stylesheet
+ *  27-05-2019 #FIXME
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  01. main navigation
+ *  02. hamburger button
+ *
+ * =================================================================== */
+
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+
+
+/* ===================================================================
+ *  01. main navigation
+ *
+ * ------------------------------------------------------------------- */
+
+ nav {
+  min-height: 4rem; // when changed, update navbar-toggler margins
+  top: 0.7em;
+  z-index: 600;
+  background-color: transparent;
+  @include transition(all 0.3s ease-in-out);
+
+  .navbar-brand {
+    color: transparent;
+    width: 17rem;
+    height: 4rem;
+    background: url("../../../assets/images/navbar/logo.svg") no-repeat center;
+    background-size: 17rem 4rem;
+    @include transition(all 0.3s ease-in-out);
+
+    @include media-breakpoint-down(md) {
+      width: 11rem;
+      height: 1.7rem;
+      background: url("../../../assets/images/navbar/logo-solo-dark.svg") no-repeat center;
+      background-size: 11rem 1.7rem;
+    }
+  }
+
+  .navbar-toggler {
+    // needed for the dropdown on mobile to work seamlessly
+    margin-top: 0.7rem;
+    margin-bottom: 0.7rem;
+  }
+}
+
+nav.navbar-top {
+  top: 0;
+  background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
+  box-shadow: 0 2px 13px 0 #a5a5a57a;
+
+  .navbar-brand {
+    width: 15rem;
+    height: 3rem;
+    background-size: 15rem 3rem;
+
+   @include media-breakpoint-down(md) {
+     width: 11rem;
+     height: 1.7rem;
+     background: url("../../../assets/images/navbar/logo-solo-orange.svg") no-repeat center;
+     background-size: 11rem 1.7rem;
+   }
+  }
+}
+
+nav.navbar-top.navbar-white {
+  background: white;
+}
+
+nav.bg-white {
+    top: 0;
+    background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
+    box-shadow: 0 2px 13px 0 #a5a5a57a;
+}
+
+nav.light .navbar-nav .nav-item .nav-link{
+  @include media-breakpoint-up(lg) {
+    color: $lightGray;
+    &:hover, img:hover {
+      color: $yellow;
+    }
+  }
+}
+
+nav.light .navbar-brand {
+  width: 17rem;
+  height: 4rem;
+  background: url("../../../assets/images/navbar/logo-light.svg") no-repeat center;
+
+  background-size: 17rem 4rem;
+  @include media-breakpoint-down(md) {
+    width: 11rem;
+    height: 1.7rem;
+    background: url("../../../assets/images/navbar/logo-solo-orange.svg") no-repeat center;
+    background-size: 11rem 1.7rem;
+  }
+}
+
+#navbarResponsive {
+  @include media-breakpoint-down(md) {
+    margin-left: 1.5rem;
+    margin-top: 1rem;
+  }
+}
+
+.navbar-nav {
+  font-family: "quicksand-medium", sans-serif;
+  font-size: 1.2em;
+
+  .nav-item {
+    padding-left: 1em;
+
+    @include media-breakpoint-down(md) { border-top: 0.1rem solid $lightGray; }
+
+    .nav-link {
+      color: $header;
+      @include transition(color 0.1s ease-in-out);
+      &:hover {
+        cursor: pointer;
+      }
+
+      @include media-breakpoint-up(lg) {
+        &:hover, img:hover {
+          color: $orange;
+        }
+      }
+
+      @include media-breakpoint-down(md) {
+        padding-top: 0.8rem;
+        padding-bottom: 0.8rem;
+      }
+    }
+  }
+}
+
+.nav-link[aria-expanded="true"]{
+  color: $orange !important;
+}
+
+.dropdown-menu {
+  font-family: 'quicksand-regular', sans-serif;
+  font-size: 1.1rem;
+  line-height: 2rem;
+  border: none;
+  border-radius: 0.4rem;
+  box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+  min-width: 5rem;
+
+  @include media-breakpoint-down(md){
+    padding: 0;
+    box-shadow: none;
+  }
+
+  .dropdown-item {
+    color: $header;
+    @include media-breakpoint-down(md){
+      padding-bottom: 0.5rem;
+      padding-top: 0.5rem;
+    }
+    &:focus, &:hover {
+      background-color: #e9ecef;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  fa-icon, img { margin-right: 1rem; }
+  fa-icon { font-size: 1.3rem; }
+  img { height: 1.3rem; }
+}
+
+.dropdown:hover .dropdown-menu {
+  @include media-breakpoint-up(lg) {
+    display: block;
+    margin-top: 0; // remove the gap so it doesn't close
+  }
+}
+
+.last-mobile-row {
+  @include media-breakpoint-down(md) {
+    border-top: 0.1rem solid $lightGray;
+
+    img {
+      height: 1.3rem;
+      padding-right: 1rem;
+    }
+
+    button {
+      padding: 0 4rem;
+    }
+  }
+
+  @include media-breakpoint-down(sm) {
+    button {
+      padding: 0 40%;
+    }
+  }
+
+  @include media-breakpoint-down(xs) {
+    .dropdown-item {
+      padding: 0;
+    }
+  }
+}
+
+
+/* ===================================================================
+ *  02. hamburger button
+ *
+ * ------------------------------------------------------------------- */
+
+$hamburger-padding-x           : 0;
+$hamburger-padding-y           : 0;
+$hamburger-layer-width         : 1.7rem;
+$hamburger-layer-height        : 0.2rem;
+$hamburger-layer-spacing       : 0.3rem;
+$hamburger-layer-color         : $header;
+$hamburger-layer-border-radius : 2rem;
+$hamburger-hover-opacity       : 1;
+$hamburger-active-layer-color  : $hamburger-layer-color;
+$hamburger-active-hover-opacity: $hamburger-hover-opacity;
+
+@import "../../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
+
+@include media-breakpoint-down(md) {
+  .hamburger:focus {
+    outline: none;
+  }
+}
+
+nav.light {
+  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
+    background-color: $lightGray;
+  }
+}

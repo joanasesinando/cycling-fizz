@@ -1,0 +1,66 @@
+<section id="section-contact">
+    <app-banner
+            [image]="'assets/images/contact/banner.jpg'"
+            [imagePosition]="'10% 30%'"
+            [title]="'Contacto'"
+            [text]="'Encontraste erros? Tens sugestões ou feedback para nos dar? Queres simplesmente falar ' +
+             'connosco? Usa o formulário em baixo ou contacta-nos através de qualquer uma das nossas redes sociais ou ' +
+              'ainda por e-mail'">
+    </app-banner>
+
+    <div class="container">
+        <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center justify-content-lg-between align-items-center">
+            <app-img-email class="mb-5 mb-lg-0 mr-lg-5" data-aos="fade-up" data-aos-delay="100"></app-img-email>
+            <form class="col-12 col-md-10 col-lg-5 ml-lg-4">
+                <h3 class="text-center mb-4" data-aos="fade-up">Fala connosco</h3>
+
+                <div data-aos="fade-up" data-aos-delay="200">
+                    <!-- Name -->
+                    <div class="form-group">
+                        <label for="formName"><i class="icon" data-feather="user"></i></label>
+                        <input type="text" class="form-control form-control-lg thick" id="formName" placeholder="Nome" required>
+                    </div>
+
+                    <!-- E-mail -->
+                    <div class="form-group">
+                        <label for="formEmail"><i class="icon" data-feather="mail"></i></label>
+                        <input type="email" class="form-control form-control-lg thick" id="formEmail" placeholder="E-mail" required>
+                    </div>
+
+                    <!-- Message -->
+                    <div class="form-group message">
+                        <textarea class="form-control form-control-lg" id="formMessage" rows="7" placeholder="Mensagem" required></textarea>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <button type="submit" class="btn btn-primary">Enviar</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div class="extra-info d-flex flex-wrap justify-content-center align-content-center"
+             data-aos="fade-up" data-aos-duration="1000">
+            <p class="text-center d-md-none">Podes também seguir-nos nas redes sociais, ou então falar connosco e dar o teu feedback e sugestões através
+                de <b>contacto@cyclingfizz.pt</b>.</p>
+
+            <div class="social d-flex justify-content-center mt-4 mr-md-4">
+                <a href="#" class="mr-4">
+                    <fa-icon [icon]="faFacebookF" id="fb"></fa-icon>
+                </a>
+                <a href="#" class="mr-4">
+                    <fa-icon [icon]="faTwitter" id="tt"></fa-icon>
+                </a>
+                <a href="#" class="mr-4">
+                    <fa-icon [icon]="faInstagram" id="ig"></fa-icon>
+                </a>
+                <a href="#">
+                    <fa-icon [icon]="faYoutube" id="yt"></fa-icon>
+                </a>
+            </div>
+
+            <p class="text-right d-none d-md-block">Podes também seguir-nos nas redes sociais, ou então falar connosco e dar o teu feedback e sugestões através
+                de <b>contacto@cyclingfizz.pt</b>.</p>
+        </div>
+    </div>
+
+</section>

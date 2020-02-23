@@ -1,0 +1,58 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Map Stylesheet
+ *  27-05-2019 #FIXME
+ *  ------------------------------------------------------------------
+ *
+ *  TOC:
+ *  01.
+ *  02.
+ *
+ * =================================================================== */
+
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../node_modules/bootstrap/scss/mixins";
+
+section {
+  height: 100vh;
+  min-height: 750px;
+  //background-color: red; //FIXME tirar
+
+  .contents {
+    position: relative;
+    top: 4rem;
+    //background-color: green; //FIXME tirar
+
+    #orangeBar {
+      position: fixed;
+      background: $gradient-orange;
+      height: 3.5rem;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+      padding: 0 1.5rem;
+      z-index: 5;
+
+      .filter-icon {
+        color: white;
+        font-size: 1.2rem;
+        &:hover { color: darken(white, 5); }
+      }
+
+      app-map-quick-filter-toggle:last-of-type {
+        margin-right: 0 !important;
+      }
+    }
+
+    #map {
+      position: relative;
+      top: 3.5rem;
+      background: url(~assets/images/map/map.png) no-repeat top center;
+      background-size: cover;
+      height: calc(100vh - 4rem - 3.5rem);
+      min-height: 640px;
+    }
+  }
+}

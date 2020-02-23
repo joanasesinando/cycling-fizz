@@ -1,0 +1,30 @@
+{
+  "navbar-links": {
+    "homepage": "Início",
+    "map": "Mapa",
+    "useful": {
+      "name": "Útil",
+      "dropdown": {
+        "traffic-rules": "Regras de trânsito",
+        "routes": "Percursos",
+        "beginner": "Principiantes"
+      }
+    },
+    "community": {
+      "name": "Comunidade",
+      "dropdown": {
+        "forum": "Fórum",
+        "blog": "Blog",
+        "events": "Eventos"
+      }
+    },
+    "about": {
+      "name": "Sobre",
+      "dropdown": {
+        "project": "O projeto",
+        "us": "Quem somos",
+        "contact": "Contactos"
+      }
+    }
+  }
+}

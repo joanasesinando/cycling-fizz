@@ -1,0 +1,34 @@
+@import '../../node_modules/@nebular/theme/styles/theming';
+@import '../../node_modules/@nebular/theme/styles/themes/default';
+
+$nb-themes: nb-register-theme((
+
+    color-primary-100: #fff6f0,
+    color-primary-200: #ffe8d6,
+    color-primary-300: #ffc394,
+    color-primary-400: #fc9b4e,
+    color-primary-500: #ff923c,
+    color-primary-600: #ff8d33,
+    color-primary-700: #fc8526,
+    color-primary-800: #ff790f,
+    color-primary-900: #ff7100,
+
+    color-primary-transparent-100: rgba(255, 141, 51, 0.08),
+    color-primary-transparent-200: rgba(255, 141, 51, 0.16),
+    color-primary-transparent-300: rgba(255, 141, 51, 0.24),
+    color-primary-transparent-400: rgba(255, 141, 51, 0.32),
+    color-primary-transparent-500: rgba(255, 141, 51, 0.4),
+    color-primary-transparent-600: rgba(255, 141, 51, 0.48),
+
+    // Switch
+    toggle-height: 1.3rem,
+    toggle-width: 2.5rem,
+    toggle-switcher-size: 1.19rem,
+    toggle-text-font-size: 1rem,
+    toggle-text-font-weight: normal,
+
+    // Checkbox
+    checkbox-text-font-size: 1rem,
+    checkbox-text-font-weight: normal,
+
+), default, default);

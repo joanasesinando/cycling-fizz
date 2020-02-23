@@ -1,0 +1,41 @@
+<div class="d-flex justify-content-center justify-content-lg-start align-items-center mb-3 mt-5 pt-4">
+    <span class="section-title mr-2">Galeria</span>
+    <span class="badge badge-primary">{{ photos.length }}</span>
+</div>
+
+<div *ngIf="!mobileView" class="gallery">
+    <ngx-slick-carousel class="carousel"
+                        id="slider-for"
+                        [config]="slideConfigFor"
+                        #slickModal='slick-carousel'>
+        <div ngxSlickItem *ngFor="let photo of photos" class="slide">
+            <nb-user class="map-gallery-user" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
+            <img src="{{ photo.img }}" alt="" width="100%">
+        </div>
+    </ngx-slick-carousel>
+
+    <ngx-slick-carousel class="carousel"
+                        id="slider-nav"
+                        [config]="slideConfigNav"
+                        #slickModal='slick-carousel'>
+        <div ngxSlickItem *ngFor="let photo of photos" class="slide">
+            <img src="{{ photo.img }}" alt="" width="100%">
+        </div>
+    </ngx-slick-carousel>
+</div>
+
+<div *ngIf="mobileView" class="gallery">
+    <ngx-slick-carousel class="carousel"
+                        [config]="slideConfigMobile"
+                        #slickModal='slick-carousel'>
+        <div ngxSlickItem *ngFor="let photo of photos" class="slide">
+            <nb-user class="map-gallery-user smaller" size="small" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
+            <img src="{{ photo.img }}" alt="" width="100%">
+        </div>
+    </ngx-slick-carousel>
+</div>
+
+<div class="upload-btn-wrapper float-right">
+    <button class="btn btn-primary btn-block"><fa-icon [icon]="faUpload" class="mr-2"></fa-icon>Upload</button>
+    <input type="file" name="myfile" />
+</div>

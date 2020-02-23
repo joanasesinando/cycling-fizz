@@ -1,0 +1,25 @@
+<section id="blog">
+    <h2 class="text-center" data-aos="fade-up">Visita o nosso <span>blog</span>!</h2>
+    <h5 class="text-center mb-5 mx-3" data-aos="fade-up" data-aos-delay="200">Não percas os nossos artigos sobre ciclismo e outros assuntos relevantes <br class="d-none d-sm-block">como mobilidade, a vida urbana e muito mais.</h5>
+
+    <div data-aos="fade-up" data-aos-delay="400">
+        <app-carousel3 *ngIf="!carouselMobile" [deckArray]="cardArray"></app-carousel3>
+        <app-carousel1 *ngIf="carouselMobile" [cardArray]="cardArray"></app-carousel1>
+
+        <span class="see-more d-flex justify-content-center justify-content-lg-start" >
+            <a href="#">Ver mais <fa-icon [icon]="faArrowRight" class="ml-1"></fa-icon></a>
+        </span>
+
+        <!-- Jumping balls -->
+        <div class="jumping-balls">
+            <div class="ball-1 jumping-animation d-none d-lg-block"><img src="../../../assets/images/homepage/green-ball.png"></div>
+            <div class="ball-2 jumping-animation2 d-none d-lg-block"><img src="../../../assets/images/homepage/blue-ball.png"></div>
+            <div class="ball-3 yellow-ball jumping-animation4 d-none d-lg-block"><img src="../../../assets/images/homepage/yellow-ball.png"></div>
+            <div class="ball-4 jumping-animation3 d-none d-lg-block"><img src="../../../assets/images/homepage/blue-ball.png"></div>
+            <div class="ball-5 yellow-ball jumping-animation4"><img src="../../../assets/images/homepage/yellow-ball.png"></div>
+            <div class="ball-6 yellow-ball jumping-animation2"><img src="../../../assets/images/homepage/yellow-ball.png"></div>
+        </div>
+
+        <div id="background"></div>
+    </div>
+</section>

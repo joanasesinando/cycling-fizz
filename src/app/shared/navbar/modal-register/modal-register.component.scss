@@ -1,0 +1,104 @@
+/* ===================================================================
+ *
+ *  Cycling Fizz v1.0 Register Stylesheet
+ *  27-05-2019 #FIXME
+ *
+ * =================================================================== */
+
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+
+.register {
+  @include media-breakpoint-down(lg) {
+    height: 48rem;
+  }
+
+  .register-content {
+    @include media-breakpoint-down(lg) {
+      background-color: white;
+      border-radius: 1rem;
+    }
+  }
+
+  .register-heading {
+    text-align: center;
+  }
+
+  .social a {
+    text-align: center;
+    height: 2.5rem;
+    width: 2.5rem;
+    border-radius: 50%;
+    line-height: 2.5rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
+    @include transition(all 0.2s ease-in-out);
+
+    fa-icon {
+      font-size: 1.1rem;
+      line-height: 0;
+      color: white;
+    }
+
+    &#fb { background: $facebook; }
+    &#gg { background: $google; }
+    &#tt { background: $twitter; }
+
+    @include media-breakpoint-up(lg){
+      &:hover { @include transform(translateY(-0.5rem)); }
+    }
+  }
+
+  .form-label-group {
+    margin-bottom: 1rem;
+  }
+
+  .form-control {
+    padding: 1.5rem 1.5rem;
+    border-radius: 3rem;
+
+    &:focus {
+      box-shadow: 0 0 0 0.2rem rgba(89, 59, 254, 0.25);
+      border-color: #8280ff;
+    }
+  }
+
+  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+    border-color: #706dfe;
+    background-color: #706dfe;
+  }
+
+  .custom-control-label {
+    a {
+      color: $text;
+
+      @include media-breakpoint-down(lg) { text-decoration: underline; }
+    }
+  }
+
+  button.btn-register {
+    padding: 0 3rem;
+    box-shadow: 0 4px 15px rgba(255, 195, 64, 0.46);
+  }
+
+  .gray-label {
+    color: $darkGray;
+  }
+
+  .signIn {
+    label {
+      text-align: center;
+    }
+
+    a {
+      font-family: 'quicksand-medium', sans-serif;
+      color: $orange;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  }
+}
