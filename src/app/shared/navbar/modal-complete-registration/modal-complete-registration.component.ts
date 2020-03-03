@@ -1,12 +1,13 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewChild} from '@angular/core';
+import {NgForm} from "@angular/forms";
+import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
+import {ServerHandlerService} from "../../../_services/server-handler.service";
+import {NbComponentStatus, NbGlobalPosition, NbToastrService} from "@nebular/theme";
 
 export interface FormObject {
   username: string;
   firstName: string;
   lastName: string;
-  // avatar: string;
-  // eula: boolean;
-
 }
 
 @Component({
@@ -19,8 +20,9 @@ export class ModalCompleteRegistrationComponent implements OnInit {
 
   formData: FormObject;
 
+  @ViewChild('f', { static: false }) f: NgForm;
 
-  constructor() {
+  constructor(private serverHandlerService: ServerHandlerService, private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService) {
     this.formData = ({} as FormObject);
   }
 
@@ -28,7 +30,22 @@ export class ModalCompleteRegistrationComponent implements OnInit {
   }
 
   completeRegistration(){
-    console.log("completeRegistration")
+    if (this.f.form.valid) {
+      this.serverHandlerService.doCompleteUserProfileRegistry(this.authFirebaseService.currentUserIdToken, this.formData);
+      this.showSuccessRegistrationToster("titulo", "mensagem")
+    } else {
+      console.log("invalid form");
+    }
+  }
+
+  showSuccessRegistrationToster(title :string, msg :string) {
+    let position :NbGlobalPosition = 'top-right' as NbGlobalPosition;
+    let status :NbComponentStatus = 'top-right' as NbComponentStatus;
+
+    this.toastrService.show(
+      msg,
+      title,
+      { position, status });
   }
 
 }
