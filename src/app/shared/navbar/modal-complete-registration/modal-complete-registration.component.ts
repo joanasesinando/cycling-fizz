@@ -32,20 +32,19 @@ export class ModalCompleteRegistrationComponent implements OnInit {
   completeRegistration(){
     if (this.f.form.valid) {
       this.serverHandlerService.doCompleteUserProfileRegistry(this.authFirebaseService.currentUserIdToken, this.formData);
-      this.showSuccessRegistrationToster("titulo", "mensagem")
+      this.showSuccessRegistrationToaster("titulo", "mensagem")
     } else {
       console.log("invalid form");
     }
   }
 
-  showSuccessRegistrationToster(title :string, msg :string) {
+  showSuccessRegistrationToaster(title :string, msg :string) {
     let position :NbGlobalPosition = 'top-right' as NbGlobalPosition;
     let status :NbComponentStatus = 'top-right' as NbComponentStatus;
 
-    this.toastrService.show(
+    this.toastrService.success(
       msg,
-      title,
-      { position, status });
+      title);
   }
 
 }
