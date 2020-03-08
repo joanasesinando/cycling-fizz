@@ -5,6 +5,7 @@ import { faTwitter, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-
 import {NgForm} from "@angular/forms";
 
 import { AuthFirebaseService } from '../../../_services/auth-firebase.service';
+import {NbComponentStatus, NbGlobalPosition, NbToastrService} from '@nebular/theme';
 
 
 export interface FormObject {
@@ -35,7 +36,7 @@ export class ModalLoginComponent implements OnInit {
 
   @ViewChild('f', { static: false }) f: NgForm;
 
-  constructor(private authFirebaseService: AuthFirebaseService) {
+  constructor(private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService) {
     this.formData = ({} as FormObject);
   }
 
@@ -66,24 +67,37 @@ export class ModalLoginComponent implements OnInit {
 
   tryLoginWithGoogle(){
     this.authFirebaseService.doGoogleLogin().then(res => {
-      console.log(res);
-      console.log("Login successful");
+      // console.log(res);
+      // console.log("Login successful");
+      this.loginSuccessfulToastr();
       this.closeThisModal();
     }, err => {
-      console.log(err);
-      console.log(err.message);
+      // console.log(err.message);
+      // console.log(err);
+      this.errorInLoginToastr(err.message);
     });
   }
 
   tryLogin(value) {
     this.authFirebaseService.doLogin(value).then(res => {
-      console.log(res);
-      console.log("Login successful");
+      // console.log(res);
+      // console.log("Login successful");
+      this.loginSuccessfulToastr();
       this.closeThisModal();
       // this.onLogin.emit();
     }, err => {
-      console.log(err);
-      console.log(err.message);
+      // console.log(err);
+      // console.log(err.message);
+      this.errorInLoginToastr(err.message);
     });
   }
+
+  loginSuccessfulToastr() {
+    this.toastrService.success("Bem vindo de volta!", "Login bem sucedido");
+  }
+
+  errorInLoginToastr(errorMsg :string) {
+    this.toastrService.danger(errorMsg, "Erro no Login");
+  }
+
 }

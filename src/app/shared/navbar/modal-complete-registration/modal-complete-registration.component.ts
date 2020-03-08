@@ -3,6 +3,7 @@ import {NgForm} from "@angular/forms";
 import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
 import {ServerHandlerService} from "../../../_services/server-handler.service";
 import {NbComponentStatus, NbGlobalPosition, NbToastrService} from "@nebular/theme";
+import * as $ from 'jquery';
 
 export interface FormObject {
   username: string;
@@ -29,22 +30,26 @@ export class ModalCompleteRegistrationComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  // noinspection JSMethodCanBeStatic
+  closeThisModal() {
+    $("#closeLoginBtn")[0].click();
+  }
+
   completeRegistration(){
     if (this.f.form.valid) {
       this.serverHandlerService.doCompleteUserProfileRegistry(this.authFirebaseService.currentUserIdToken, this.formData);
-      this.showSuccessRegistrationToaster("titulo", "mensagem")
+      this.showSuccessRegistrationToaster();
+      this.closeThisModal();
     } else {
       console.log("invalid form");
     }
   }
 
-  showSuccessRegistrationToaster(title :string, msg :string) {
-    let position :NbGlobalPosition = 'top-right' as NbGlobalPosition;
-    let status :NbComponentStatus = 'top-right' as NbComponentStatus;
-
-    this.toastrService.success(
-      msg,
-      title);
+  showSuccessRegistrationToaster() {
+    this.toastrService.success("Bem vindo!", "Registo efetuado com sucesso!");
   }
 
+  errorInRegistrationToastr(errorMsg :string) {
+    this.toastrService.danger(errorMsg, "Erro a completar o registo!");
+  }
 }

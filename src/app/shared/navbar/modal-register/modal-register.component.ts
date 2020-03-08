@@ -3,6 +3,7 @@ import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core'
 import { faTwitter, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
 import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
 import {NgForm} from "@angular/forms";
+import {NbToastrService} from '@nebular/theme';
 
 
 export interface FormObject {
@@ -35,7 +36,7 @@ export class ModalRegisterComponent implements OnInit {
 
 
 
-  constructor(private authFirebaseService: AuthFirebaseService) {
+  constructor(private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService) {
     this.formData = ({} as FormObject);
   }
 
@@ -46,12 +47,13 @@ export class ModalRegisterComponent implements OnInit {
     this.onSignInClicked.emit();
   }
 
-
+  registerWithGoogle() {
+    this.tryRegisterWithGoogle();
+  }
 
   registerClicked() {
     if (this.f.form.valid) {
       this.tryRegister(this.formData);
-      this.onRegisterClicked.emit();
     } else {
       console.log("invalid form");
     }
@@ -60,15 +62,28 @@ export class ModalRegisterComponent implements OnInit {
   tryRegister(value){
     this.authFirebaseService.doRegister(value)
         .then(res => {
-          console.log("-----------------------------------");
-          console.log(res.user);
-          console.log("-----------------------------------");
-
-          // res.user.updateProfile({
-          //   displayName: value.username
-          // });
+          // console.log("-----------------------------------");
+          // console.log(res.user);
+          // console.log("-----------------------------------");
+          this.onRegisterClicked.emit();
         }, err => {
-          console.log(err);
+          this.errorInRegistrationToastr(err.message);
         })
+  }
+
+  tryRegisterWithGoogle(){
+    this.authFirebaseService.doGoogleLogin().then(res => {
+      this.onRegisterClicked.emit();
+      // console.log(res);
+      // console.log("Login successful");
+    }, err => {
+      // console.log(err.message);
+      // console.log(err);
+      this.errorInRegistrationToastr(err.message);
+    });
+  }
+
+  errorInRegistrationToastr(errorMsg :string) {
+    this.toastrService.danger(errorMsg, "Erro no Registo");
   }
 }
