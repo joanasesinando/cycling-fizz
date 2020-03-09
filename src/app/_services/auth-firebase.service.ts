@@ -9,6 +9,7 @@ import * as firebase from 'firebase/app';
 export class AuthFirebaseService {
 
   public currentUser = null;
+  public currentUserIdToken = null;
   public isUserLogged: boolean = false;
 
   constructor(public afAuth: AngularFireAuth) {
@@ -21,11 +22,23 @@ export class AuthFirebaseService {
 
   userChanged(user) {
     this.currentUser = user;
-    this.isUserLogged = !!this.currentUser; //Don' believe this works
+    this.isUserLogged = !!this.currentUser;
+    if (this.isUserLogged) {
+      this.getCurrentUserIdTokenPromise().then(res => {
+        this.currentUserIdToken = res;
+      }, err => {
+        console.log(err);
+        console.log(err.message);
+      });
+    }
+  }
 
-    console.log(this.currentUser);
-    console.log(this.isUserLogged);
-
+  private getCurrentUserIdTokenPromise() {
+    if (!this.isUserLogged) {
+      return null;
+    } else {
+      return this.currentUser.getIdToken();
+    }
   }
 
   logout() {

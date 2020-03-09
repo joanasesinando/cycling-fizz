@@ -1,5 +1,5 @@
 <div class="modal-body">
-    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+    <button id="closeRegisterBtn" type="button" class="close" data-dismiss="modal" aria-label="Close">
         <span aria-hidden="true">&times;</span>
     </button>
 
@@ -19,7 +19,7 @@
                     <fa-icon [icon]="faFacebookF"></fa-icon>
                 </a>
                 <a href="#" class="mx-2" id="gg">
-                    <fa-icon [icon]="faGooglePlusG"></fa-icon>
+                    <fa-icon (click)="registerWithGoogle()" [icon]="faGooglePlusG"></fa-icon>
                 </a>
                 <a href="#" class="mx-2" id="tt">
                     <fa-icon [icon]="faTwitter"></fa-icon>
@@ -31,22 +31,22 @@
                     <label class="gray-label">ou usar uma conta de e-mail:</label>
                 </div>
 
-                <!-- Username -->
-                <div class="form-label-group">
-                    <input type="text"
-                           id="inputUsername"
-                           name="inputUsername"
-                           class="form-control"
-                           placeholder="Nome de utilizador"
-                           [(ngModel)]="formData.username"
-                           #username="ngModel"
-                           [ngClass]="{ 'is-invalid': f.submitted && username.invalid }"
-                           required autofocus>
-                    <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
-                        <!--fixme change text-->
-                        <div *ngIf="username.errors.required">Username is required</div>
-                    </div>
-                </div>
+                <!--&lt;!&ndash; Username &ndash;&gt;-->
+                <!--<div class="form-label-group">-->
+                    <!--<input type="text"-->
+                           <!--id="inputUsername"-->
+                           <!--name="inputUsername"-->
+                           <!--class="form-control"-->
+                           <!--placeholder="Nome de utilizador"-->
+                           <!--[(ngModel)]="formData.username"-->
+                           <!--#username="ngModel"-->
+                           <!--[ngClass]="{ 'is-invalid': f.submitted && username.invalid }"-->
+                           <!--required autofocus>-->
+                    <!--<div *ngIf="f.submitted && username.invalid" class="invalid-feedback">-->
+                        <!--&lt;!&ndash;fixme change text&ndash;&gt;-->
+                        <!--<div *ngIf="username.errors.required">Username is required</div>-->
+                    <!--</div>-->
+                <!--</div>-->
 
                 <!-- E-mail address -->
                 <div class="form-label-group">

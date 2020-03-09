@@ -23,6 +23,7 @@ import { NewsletterSubscribeComponent } from './newsletter-subscribe/newsletter-
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { FormsModule } from '@angular/forms';
 import {MustMatchDirective} from "../_helpers/must-match.directive";
+import { ModalCompleteRegistrationComponent } from './navbar/modal-complete-registration/modal-complete-registration.component';
 import {NbButtonModule} from '@nebular/theme';
 
 
@@ -44,7 +45,8 @@ import {NbButtonModule} from '@nebular/theme';
     BadgeComponent,
     NewsletterSubscribeComponent,
     ComingSoonComponent,
-    MustMatchDirective
+    MustMatchDirective,
+    ModalCompleteRegistrationComponent
   ],
   imports: [
     CommonModule,
