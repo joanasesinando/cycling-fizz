@@ -4,8 +4,9 @@
 
             <!-- body -->
             <app-modal-login
-                    *ngIf="isCurrentModal(Modals.CompleteRegister)"
+                    *ngIf="isCurrentModal(Modals.Login)"
                     (onRegisterClicked)="setCurrentModal(Modals.Register)"
+                    (onNewAccount)="setCurrentModal(Modals.CompleteRegister)"
             ></app-modal-login>
             <app-modal-register
                     *ngIf="isCurrentModal(Modals.Register)"
@@ -13,7 +14,7 @@
                     (onRegisterClicked)="setCurrentModal(Modals.CompleteRegister)"
             ></app-modal-register>
             <app-modal-complete-registration
-                    *ngIf="isCurrentModal(Modals.Login)"
+                    *ngIf="isCurrentModal(Modals.CompleteRegister)"
             ></app-modal-complete-registration>
 
         </div>

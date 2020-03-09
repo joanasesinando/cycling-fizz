@@ -30,6 +30,7 @@ export class ModalLoginComponent implements OnInit {
 
   @Output() onRegisterClicked = new EventEmitter();
   @Output() onLogin = new EventEmitter();
+  @Output() onNewAccount = new EventEmitter();
 
 
   formData: FormObject;
@@ -67,10 +68,14 @@ export class ModalLoginComponent implements OnInit {
 
   tryLoginWithGoogle(){
     this.authFirebaseService.doGoogleLogin().then(res => {
-      // console.log(res);
-      // console.log("Login successful");
-      this.loginSuccessfulToastr();
-      this.closeThisModal();
+      if (res.user.metadata.a == res.user.metadata.b) {
+        this.onNewAccount.emit();
+      } else {
+        // console.log("Login successful");
+        this.loginSuccessfulToastr();
+        this.closeThisModal();
+      }
+
     }, err => {
       // console.log(err.message);
       // console.log(err);

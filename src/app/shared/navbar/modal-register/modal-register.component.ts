@@ -4,6 +4,7 @@ import { faTwitter, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-
 import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
 import {NgForm} from "@angular/forms";
 import {NbToastrService} from '@nebular/theme';
+import * as $ from 'jquery';
 
 
 export interface FormObject {
@@ -43,6 +44,10 @@ export class ModalRegisterComponent implements OnInit {
   ngOnInit() {
   }
 
+  closeThisModal() {
+    $("#closeRegisterBtn")[0].click()
+  }
+
   signInClicked() {
     this.onSignInClicked.emit();
   }
@@ -73,7 +78,12 @@ export class ModalRegisterComponent implements OnInit {
 
   tryRegisterWithGoogle(){
     this.authFirebaseService.doGoogleLogin().then(res => {
-      this.onRegisterClicked.emit();
+      if (res.additionalUserInfo.isNewUser) {
+        this.onRegisterClicked.emit();
+      } else {
+        this.loginSuccessfulToastr();
+        this.closeThisModal();
+      }
       // console.log(res);
       // console.log("Login successful");
     }, err => {
@@ -85,5 +95,9 @@ export class ModalRegisterComponent implements OnInit {
 
   errorInRegistrationToastr(errorMsg :string) {
     this.toastrService.danger(errorMsg, "Erro no Registo", {duration: 5000});
+  }
+
+  loginSuccessfulToastr() {
+    this.toastrService.success("Bem vindo de volta!", "Login bem sucedido", {duration: 5000});
   }
 }
