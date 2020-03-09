@@ -22,7 +22,8 @@ import {
     NbSelectModule,
     NbToggleModule,
     NbUserModule,
-    NbInputModule, NbButtonModule
+    NbInputModule,
+    NbButtonModule,
 } from '@nebular/theme';
 import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/map-cards-bikelane.component';
 import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';
@@ -32,6 +33,7 @@ import { MapGalleryComponent } from './map/map-modals/map-gallery/map-gallery.co
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import { MapCommentsComponent } from './map/map-modals/map-comments/map-comments.component';
 import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
+import {FormsModule} from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -65,7 +67,8 @@ import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
         NbPopoverModule,
         NbSelectModule,
         NbInputModule,
-        NbButtonModule
+        NbButtonModule,
+        FormsModule
     ]
 })
 export class MapModule { }

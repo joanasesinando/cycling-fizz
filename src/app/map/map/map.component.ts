@@ -11,7 +11,7 @@ export class MapComponent implements OnInit {
     //FontAwesome icons
     faFilter = faFilter;
 
-  filters = [ //FIXME completar && colocar num json
+  filters = [
       {
           category:"Ciclovias",
           checked: true,
@@ -22,8 +22,8 @@ export class MapComponent implements OnInit {
                   options: ["pista unidirecional", "pista bidirecional", "zona 30", "trilho", "parque", "outro"]
               },
               {
-                  category:"Declive",
-                  options: ["direito", "misto", "íngreme"]
+                  category:"Inclinação",
+                  options: ["plano", "misto", "íngreme"]
               },
               {
                   category:"Geral",
@@ -67,7 +67,7 @@ export class MapComponent implements OnInit {
               },
               {
                   category:"Etiquetas",
-                  options: ["precisa reparações"]
+                  options: ["precisa reparações", "muito usado", "pouco usado"]
               }
           ]
       },
@@ -79,6 +79,10 @@ export class MapComponent implements OnInit {
               {
                   category:"Geral",
                   options: ["abertas agora"]
+              },
+              {
+                  category:"Etiquetas",
+                  options: ["com oficina", "peças", "equipamento", "acessórios", "cadeados", "personalizar bicicleta"]
               }
           ]
       },

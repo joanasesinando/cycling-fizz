@@ -18,7 +18,7 @@ $modal-width-mobile: 280px;
 #filters.modal.left {
   .modal-dialog {
     position: fixed;
-    top: calc(4rem + 3.5rem); //navbar + darkBar
+    top: calc(4rem + 3.5rem); //navbar + orangeBar
     margin: auto;
     width: $modal-width;
     height: 100%;
@@ -96,6 +96,7 @@ app-filter-group.filter-group-bikelanes { display: block; }
 * ===================================================================*/
 
 #mapElementModal {
+  overflow-y: auto; // so it keeps scrolling when dialogs appear
   .modal-content {
     border: none;
     border-radius: 1.5rem;
