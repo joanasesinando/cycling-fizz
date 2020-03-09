@@ -1,11 +1,12 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import * as $ from 'jquery';
 
-import { faTwitter, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
-import {NgForm} from "@angular/forms";
+import {faFacebookF, faGooglePlusG, faTwitter} from '@fortawesome/free-brands-svg-icons';
+import {NgForm} from '@angular/forms';
 
-import { AuthFirebaseService } from '../../../_services/auth-firebase.service';
-import {NbComponentStatus, NbGlobalPosition, NbToastrService} from '@nebular/theme';
+import {AuthFirebaseService} from '../../../_services/auth-firebase.service';
+import {NbToastrService} from '@nebular/theme';
+import {Modals} from '../modal-login-register/modal-login-register.component';
 
 
 export interface FormObject {
@@ -28,9 +29,11 @@ export class ModalLoginComponent implements OnInit {
   faFacebookF = faFacebookF;
   faGooglePlusG = faGooglePlusG;
 
-  @Output() onRegisterClicked = new EventEmitter();
-  @Output() onLogin = new EventEmitter();
-  @Output() onNewAccount = new EventEmitter();
+  // @Output() onRegisterClicked = new EventEmitter();
+  // @Output() onLogin = new EventEmitter();
+  // @Output() onNewAccount = new EventEmitter();
+  @Output() changeCurrentModal = new EventEmitter<Modals>();
+
 
 
   formData: FormObject;
@@ -46,11 +49,13 @@ export class ModalLoginComponent implements OnInit {
 
   // noinspection JSMethodCanBeStatic
   closeThisModal() {
-    $("#closeLoginBtn")[0].click()
+    $("#closeLoginBtn")[0].click();
+    this.changeCurrentModal.emit(Modals.Login);
   }
 
   registerClicked() {
-    this.onRegisterClicked.emit();
+    // this.onRegisterClicked.emit();
+    this.changeCurrentModal.emit(Modals.Register);
   }
 
 
@@ -69,7 +74,8 @@ export class ModalLoginComponent implements OnInit {
   tryLoginWithGoogle(){
     this.authFirebaseService.doGoogleLogin().then(res => {
       if (res.user.metadata.a == res.user.metadata.b) {
-        this.onNewAccount.emit();
+        // this.onNewAccount.emit();
+        this.changeCurrentModal.emit(Modals.CompleteRegister);
       } else {
         // console.log("Login successful");
         this.loginSuccessfulToastr();
@@ -89,7 +95,6 @@ export class ModalLoginComponent implements OnInit {
       // console.log("Login successful");
       this.loginSuccessfulToastr();
       this.closeThisModal();
-      // this.onLogin.emit();
     }, err => {
       // console.log(err);
       // console.log(err.message);

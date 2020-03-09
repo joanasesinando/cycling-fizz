@@ -22,7 +22,7 @@ export class ModalLoginRegisterComponent implements OnInit {
   ngOnInit() {
   }
 
-  setCurrentModal(modal: Modals){
+  setCurrentModal(modal: Modals) {
     this.currentModal = modal;
   }
 

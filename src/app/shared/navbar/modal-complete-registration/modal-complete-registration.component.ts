@@ -1,9 +1,10 @@
-import {Component, OnInit, ViewChild} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
 import {ServerHandlerService} from "../../../_services/server-handler.service";
 import {NbComponentStatus, NbGlobalPosition, NbToastrService} from "@nebular/theme";
 import * as $ from 'jquery';
+import {Modals} from '../modal-login-register/modal-login-register.component';
 
 export interface FormObject {
   username: string;
@@ -19,6 +20,9 @@ export interface FormObject {
 
 export class ModalCompleteRegistrationComponent implements OnInit {
 
+  @Output() changeCurrentModal = new EventEmitter<Modals>();
+
+
   formData: FormObject;
 
   @ViewChild('f', { static: false }) f: NgForm;
@@ -33,6 +37,7 @@ export class ModalCompleteRegistrationComponent implements OnInit {
   // noinspection JSMethodCanBeStatic
   closeThisModal() {
     $("#closeCompleteRegisterBtn")[0].click();
+    this.changeCurrentModal.emit(Modals.Login);
   }
 
   completeRegistration(){

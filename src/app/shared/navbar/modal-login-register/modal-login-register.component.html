@@ -5,16 +5,15 @@
             <!-- body -->
             <app-modal-login
                     *ngIf="isCurrentModal(Modals.Login)"
-                    (onRegisterClicked)="setCurrentModal(Modals.Register)"
-                    (onNewAccount)="setCurrentModal(Modals.CompleteRegister)"
+                    (changeCurrentModal)="setCurrentModal($event)"
             ></app-modal-login>
             <app-modal-register
                     *ngIf="isCurrentModal(Modals.Register)"
-                    (onSignInClicked)="setCurrentModal(Modals.Login)"
-                    (onRegisterClicked)="setCurrentModal(Modals.CompleteRegister)"
+                    (changeCurrentModal)="setCurrentModal($event)"
             ></app-modal-register>
             <app-modal-complete-registration
                     *ngIf="isCurrentModal(Modals.CompleteRegister)"
+                    (changeCurrentModal)="setCurrentModal($event)"
             ></app-modal-complete-registration>
 
         </div>

@@ -5,6 +5,7 @@ import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
 import {NgForm} from "@angular/forms";
 import {NbToastrService} from '@nebular/theme';
 import * as $ from 'jquery';
+import {Modals} from '../modal-login-register/modal-login-register.component';
 
 
 export interface FormObject {
@@ -29,8 +30,10 @@ export class ModalRegisterComponent implements OnInit {
   faFacebookF = faFacebookF;
   faGooglePlusG = faGooglePlusG;
 
-  @Output() onSignInClicked = new EventEmitter();
-  @Output() onRegisterClicked = new EventEmitter();
+  // @Output() onSignInClicked = new EventEmitter();
+  // @Output() onRegisterClicked = new EventEmitter();
+  @Output() changeCurrentModal = new EventEmitter<Modals>();
+
 
   formData: FormObject;
   @ViewChild('f', { static: false }) f: NgForm;
@@ -45,11 +48,13 @@ export class ModalRegisterComponent implements OnInit {
   }
 
   closeThisModal() {
-    $("#closeRegisterBtn")[0].click()
+    $("#closeRegisterBtn")[0].click();
+    this.changeCurrentModal.emit(Modals.Login)
   }
 
   signInClicked() {
-    this.onSignInClicked.emit();
+    // this.onSignInClicked.emit();
+    this.changeCurrentModal.emit(Modals.Login);
   }
 
   registerWithGoogle() {
@@ -70,7 +75,8 @@ export class ModalRegisterComponent implements OnInit {
           // console.log("-----------------------------------");
           // console.log(res.user);
           // console.log("-----------------------------------");
-          this.onRegisterClicked.emit();
+          // this.onRegisterClicked.emit();
+          this.changeCurrentModal.emit(Modals.CompleteRegister)
         }, err => {
           this.errorInRegistrationToastr(err.message);
         })
@@ -79,7 +85,8 @@ export class ModalRegisterComponent implements OnInit {
   tryRegisterWithGoogle(){
     this.authFirebaseService.doGoogleLogin().then(res => {
       if (res.additionalUserInfo.isNewUser) {
-        this.onRegisterClicked.emit();
+        // this.onRegisterClicked.emit();
+        this.changeCurrentModal.emit(Modals.CompleteRegister)
       } else {
         this.loginSuccessfulToastr();
         this.closeThisModal();
