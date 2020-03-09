@@ -84,6 +84,6 @@ export class ModalRegisterComponent implements OnInit {
   }
 
   errorInRegistrationToastr(errorMsg :string) {
-    this.toastrService.danger(errorMsg, "Erro no Registo");
+    this.toastrService.danger(errorMsg, "Erro no Registo", {duration: 5000});
   }
 }

@@ -32,24 +32,33 @@ export class ModalCompleteRegistrationComponent implements OnInit {
 
   // noinspection JSMethodCanBeStatic
   closeThisModal() {
-    $("#closeLoginBtn")[0].click();
+    $("#closeCompleteRegisterBtn")[0].click();
   }
 
   completeRegistration(){
     if (this.f.form.valid) {
-      this.serverHandlerService.doCompleteUserProfileRegistry(this.authFirebaseService.currentUserIdToken, this.formData);
-      this.showSuccessRegistrationToaster();
-      this.closeThisModal();
+      this.serverHandlerService.doCompleteUserProfileRegistry(this.authFirebaseService.currentUserIdToken, this.formData)
+          .then(response => {
+            console.log(response);
+            if (response.status != 200) {
+              response.text()
+                  .then(msg => this.errorInRegistrationToastr(msg))
+            } else {
+              this.showSuccessRegistrationToaster();
+              this.closeThisModal();
+            }
+          })
+          .catch(err => this.errorInRegistrationToastr("Error connecting to server. Try again."));
     } else {
       console.log("invalid form");
     }
   }
 
   showSuccessRegistrationToaster() {
-    this.toastrService.success("Bem vindo!", "Registo efetuado com sucesso!");
+    this.toastrService.success("Bem vindo!", "Registo efetuado com sucesso!", {duration: 5000});
   }
 
   errorInRegistrationToastr(errorMsg :string) {
-    this.toastrService.danger(errorMsg, "Erro a completar o registo!");
+    this.toastrService.danger(errorMsg, "Erro a completar o registo!", {duration: 5000});
   }
 }

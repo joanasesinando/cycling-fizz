@@ -23,29 +23,24 @@ export class ServerHandlerService {
   constructor() { }
 
 
-  private httpPost(url: string, data:any) {
+  private httpPost(path: string, data:any) {
     let myHeaders = new Headers({
       "Content-Type": "application/json",
     });
 
 
-    fetch(url, {
+    return fetch(this.url + path, {
       method : "POST",
       headers: myHeaders,
       body : JSON.stringify(data),
-    }).then(
-      response => response.text() // .json(), etc.
-      // same as function(response) {return response.text();}
-    ).then(
-      html => console.log(html)
-    );
+    });
   }
 
 
   doCompleteUserProfileRegistry(userID, userInfo:UserBasicInfo) {
     let data: {} = this.toJson(userInfo);
     data["userID"] = userID;
-    this.httpPost(this.url + "/complete-user-profile-registry", data);
+    return this.httpPost("/complete-user-profile-registry", data)
   }
 
 
