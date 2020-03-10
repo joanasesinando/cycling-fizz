@@ -15,7 +15,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
+import {NbThemeModule, NbLayoutModule, NbToastrService, NbToastrModule} from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
 
@@ -48,6 +48,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     }),
     BrowserAnimationsModule,
     NbThemeModule.forRoot({ name: 'default' }),
+    NbToastrModule.forRoot(),
     NbLayoutModule,
     NbEvaIconsModule,
     SlickCarouselModule,
@@ -55,7 +56,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     // AngularFirestoreModule, // fixme imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt' }],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }, NbToastrService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

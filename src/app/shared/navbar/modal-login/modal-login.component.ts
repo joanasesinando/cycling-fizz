@@ -1,10 +1,12 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import * as $ from 'jquery';
 
-import { faTwitter, faFacebookF, faGooglePlusG } from '@fortawesome/free-brands-svg-icons';
-import {NgForm} from "@angular/forms";
+import {faFacebookF, faGooglePlusG, faTwitter} from '@fortawesome/free-brands-svg-icons';
+import {NgForm} from '@angular/forms';
 
-import { AuthFirebaseService } from '../../../_services/auth-firebase.service';
+import {AuthFirebaseService} from '../../../_services/auth-firebase.service';
+import {NbToastrService} from '@nebular/theme';
+import {Modals} from '../modal-login-register/modal-login-register.component';
 
 
 export interface FormObject {
@@ -27,15 +29,18 @@ export class ModalLoginComponent implements OnInit {
   faFacebookF = faFacebookF;
   faGooglePlusG = faGooglePlusG;
 
-  @Output() onRegisterClicked = new EventEmitter();
-  @Output() onLogin = new EventEmitter();
+  // @Output() onRegisterClicked = new EventEmitter();
+  // @Output() onLogin = new EventEmitter();
+  // @Output() onNewAccount = new EventEmitter();
+  @Output() changeCurrentModal = new EventEmitter<Modals>();
+
 
 
   formData: FormObject;
 
   @ViewChild('f', { static: false }) f: NgForm;
 
-  constructor(private authFirebaseService: AuthFirebaseService) {
+  constructor(private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService) {
     this.formData = ({} as FormObject);
   }
 
@@ -44,11 +49,13 @@ export class ModalLoginComponent implements OnInit {
 
   // noinspection JSMethodCanBeStatic
   closeThisModal() {
-    $("#closeLoginBtn")[0].click()
+    $("#closeLoginBtn")[0].click();
+    this.changeCurrentModal.emit(Modals.Login);
   }
 
   registerClicked() {
-    this.onRegisterClicked.emit();
+    // this.onRegisterClicked.emit();
+    this.changeCurrentModal.emit(Modals.Register);
   }
 
 
@@ -66,24 +73,41 @@ export class ModalLoginComponent implements OnInit {
 
   tryLoginWithGoogle(){
     this.authFirebaseService.doGoogleLogin().then(res => {
-      console.log(res);
-      console.log("Login successful");
-      this.closeThisModal();
+      if (res.user.metadata.a == res.user.metadata.b) {
+        // this.onNewAccount.emit();
+        this.changeCurrentModal.emit(Modals.CompleteRegister);
+      } else {
+        // console.log("Login successful");
+        this.loginSuccessfulToastr();
+        this.closeThisModal();
+      }
+
     }, err => {
-      console.log(err);
-      console.log(err.message);
+      // console.log(err.message);
+      // console.log(err);
+      this.errorInLoginToastr(err.message);
     });
   }
 
   tryLogin(value) {
     this.authFirebaseService.doLogin(value).then(res => {
-      console.log(res);
-      console.log("Login successful");
+      // console.log(res);
+      // console.log("Login successful");
+      this.loginSuccessfulToastr();
       this.closeThisModal();
-      // this.onLogin.emit();
     }, err => {
-      console.log(err);
-      console.log(err.message);
+      // console.log(err);
+      // console.log(err.message);
+      this.errorInLoginToastr(err.message);
     });
   }
+
+  loginSuccessfulToastr() {
+    this.toastrService.success("Bem vindo de volta!", "Login bem sucedido", {duration: 5000});
+  }
+
+  errorInLoginToastr(errorMsg :string) {
+    this.toastrService.danger(errorMsg, "Erro no Login", {duration: 5000});
+  }
+
 }
