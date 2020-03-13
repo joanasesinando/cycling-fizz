@@ -37,20 +37,20 @@ export class BtnFloatingComponent implements OnInit {
     });
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
-
-    // Glue btn to bottom of map on scroll
-    function btnGlue() {
-      let actionBtn = $('.action-button');
-
-      if(actionBtn.offset().top > 740) {
-        actionBtn.addClass('glue-bottom');
-      }
-    }
-
-    // Glue now if page is not at top
-    btnGlue();
-  }
+  // @HostListener('window:scroll', [])
+  // onWindowScroll() {
+  //
+  //   // Glue btn to bottom of map on scroll
+  //   function btnGlue() {
+  //     let actionBtn = $('.action-button');
+  //
+  //     if(actionBtn.offset().top > 740) {
+  //       actionBtn.addClass('glue-bottom');
+  //     }
+  //   }
+  //
+  //   // Glue now if page is not at top
+  //   btnGlue();
+  // }
 
 }
