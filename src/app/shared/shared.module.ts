@@ -22,7 +22,9 @@ import { BadgeComponent } from './badge/badge.component';
 import { NewsletterSubscribeComponent } from './newsletter-subscribe/newsletter-subscribe.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { FormsModule } from '@angular/forms';
-import {MustMatchDirective} from "../_helpers/must-match.directive";
+import { MustMatchDirective } from "../_helpers/must-match.directive";
+import { ModalCompleteRegistrationComponent } from './navbar/modal-complete-registration/modal-complete-registration.component';
+import {NbButtonModule} from '@nebular/theme';
 
 
 @NgModule({
@@ -43,14 +45,16 @@ import {MustMatchDirective} from "../_helpers/must-match.directive";
     BadgeComponent,
     NewsletterSubscribeComponent,
     ComingSoonComponent,
-    MustMatchDirective
+    MustMatchDirective,
+    ModalCompleteRegistrationComponent
   ],
   imports: [
     CommonModule,
     SharedRoutingModule,
     FontAwesomeModule,
     TranslateModule,
-    FormsModule
+    FormsModule,
+    NbButtonModule
   ],
     exports: [
         NavbarComponent,
