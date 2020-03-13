@@ -1,5 +1,6 @@
 import {Component, Input, OnInit, Output} from '@angular/core';
 import { faTrash, faEdit, faStar } from '@fortawesome/free-solid-svg-icons';
+import * as $ from 'jquery';
 
 @Component({
   selector: 'app-map-modals',
