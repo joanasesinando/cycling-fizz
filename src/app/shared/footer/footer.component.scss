@@ -14,10 +14,10 @@
 
 
 footer {
-    color: $darkGray;
+    color: $cf-darkGray;
     font-family: 'quicksand-regular', sans-serif;
     overflow-x: hidden;
-    background: $beige;
+    background: $cf-bege;
 
     section {
       width: 100vw;
@@ -33,7 +33,7 @@ footer {
         line-height: 1.9rem;
 
         a {
-            color: $darkGray;
+            color: $cf-darkGray;
         }
     } #contactar { text-align: left; }
 
@@ -42,10 +42,10 @@ footer {
     }
 
     .credits a {
-        color: $darkGray;
+        color: $cf-darkGray;
         text-decoration: underline;
         &:hover, &:focus {
-            color: $orange;
+            color: $cf-orange;
         }
     }
 
@@ -56,7 +56,7 @@ footer {
         background: #cecbc630;
         border-radius: 100%;
         line-height: 3rem;
-        color: $darkGray;
+        color: $cf-darkGray;
         @include transition(all 0.2s ease-in-out);
 
         @include media-breakpoint-up(lg){

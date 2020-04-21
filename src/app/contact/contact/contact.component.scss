@@ -24,7 +24,7 @@ form {
     position: relative;
   }
   .form-control {
-    background-color: $lightGray;
+    background-color: $cf-lightGray;
   }
   .form-control-lg {
     border-radius: 2rem;
@@ -44,16 +44,16 @@ form {
   ::placeholder {
     font-family: quicksand-medium, sans-serif;
     font-size: 1.1rem;
-    color: $gray;
+    color: $cf-gray;
     position: relative;
     left: 0;
   }
   input, textarea {
-    color: $text;
+    color: $cf-text;
     font-size: 1.1rem;
   }
   .icon {
-    color: $darkGray;
+    color: $cf-darkGray;
     height: 1.3rem;
     position: absolute;
     left: 1.5rem;
@@ -87,7 +87,7 @@ form {
     text-align: center;
     height: 3rem;
     width: 3rem;
-    background: $gradient-orange;
+    background: $cf-gradient-orange;
     border-radius: 50%;
     line-height: 3rem;
     color: white;

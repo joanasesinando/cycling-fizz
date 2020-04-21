@@ -15,7 +15,7 @@
 }
 
 .banner-text {
-  color: $lightGray;
+  color: $cf-lightGray;
   position: relative;
   top: 40%;
 
@@ -24,7 +24,7 @@
     display: block;
     margin-left: auto;
     margin-right: auto;
-    background: $gradient-orange;
+    background: $cf-gradient-orange;
     height: 3.85px;
     width: 4.5rem;
     border-radius: 1rem;

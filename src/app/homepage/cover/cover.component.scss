@@ -87,7 +87,7 @@
       &:hover { @include transform(translateY(-0.25rem)); }
     }
 
-    &:hover { color: $orange; }
+    &:hover { color: $cf-orange; }
   }
 }
 
@@ -184,7 +184,7 @@
     }
 
     a:hover{
-      color: $yellow !important;
+      color: $cf-yellow !important;
     }
   }
   .scroll-icon {

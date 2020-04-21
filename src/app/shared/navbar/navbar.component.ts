@@ -1,5 +1,4 @@
 import { Component, OnInit, HostListener } from '@angular/core';
-
 import { faGlobeEurope, faChevronDown,  faChevronUp, faTrafficLight,
         faRoute, faQuestion, faComments, faUsers } from '@fortawesome/free-solid-svg-icons';
 import {Router} from '@angular/router';

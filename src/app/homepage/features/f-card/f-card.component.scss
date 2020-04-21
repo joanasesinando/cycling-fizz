@@ -32,7 +32,7 @@
   .card-title {
     font-family: 'quicksand-bold', sans-serif;
     font-size: 1.2rem;
-    color: $header;
+    color: $cf-dark;
 
     @include media-breakpoint-down(sm) {
       font-size: 1rem;
@@ -45,6 +45,6 @@
 }
 
 a {
-  color: $text;
+  color: $cf-text;
   text-decoration: none;
 }

@@ -1,12 +1,12 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {MapComponent} from './map/map.component';
+import {CfTypographyComponent} from './cf-typography/cf-typography.component';
 
 
 const routes: Routes = [
   {
     path: '',
-    component: MapComponent
+    component: CfTypographyComponent
   }
 ];
 
@@ -14,4 +14,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class MapRoutingModule { }
+export class CfTypographyRoutingModule { }

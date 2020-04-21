@@ -50,11 +50,11 @@
     }
 
     a {
-      color: $darkGray;
+      color: $cf-darkGray;
       text-decoration: underline;
 
       &:hover {
-        color: $orange;
+        color: $cf-orange;
       }
     }
   }

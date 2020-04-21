@@ -22,13 +22,13 @@
     font-family: 'quicksand-bold', sans-serif;
     font-size: 0.9rem;
     text-transform: uppercase;
-    color: $orange;
+    color: $cf-orange;
 
     &::after {
       content: attr(data-after-content);
       font-family: 'quicksand-light', sans-serif;
       font-size: .8rem;
-      color: $gray;
+      color: $cf-gray;
       text-transform: none;
     }
   }
@@ -41,6 +41,6 @@
     font-size: 0.8rem;
   }
 
-  #comments { color: $gray; }
+  #comments { color: $cf-gray; }
   #likes { color: $likes; }
 }

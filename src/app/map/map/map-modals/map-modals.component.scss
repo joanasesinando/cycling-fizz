@@ -38,7 +38,7 @@ $modal-width-mobile: 280px;
 
   .modal-header {
     height: 3.5rem;
-    background-color: $lightGray;
+    background-color: $cf-lightGray;
     padding-left: 1.5rem;
     padding-right: 1.5rem;
     border: none;
@@ -47,7 +47,7 @@ $modal-width-mobile: 280px;
     .modal-title {
       font-family: quicksand-bold, sans-serif;
       line-height: 1.5rem;
-      color: $darkGray;
+      color: $cf-darkGray;
 
       @include media-breakpoint-down(md) {
         font-size: 1.3rem;
@@ -103,7 +103,7 @@ app-filter-group.filter-group-bikelanes { display: block; }
   }
 
   .modal-header {
-    background: $gradient-orange;
+    background: $cf-gradient-orange;
     border-top-left-radius: 1.5rem;
     border-top-right-radius: 1.5rem;
 
@@ -151,11 +151,11 @@ app-filter-group.filter-group-bikelanes { display: block; }
   .modal-body {
     .actions {
       fa-icon {
-        color: $darkGray;
+        color: $cf-darkGray;
         font-size: 1.2rem;
         &:hover, &:focus {
           cursor: pointer;
-          color: darken($darkGray, 10);
+          color: darken($cf-darkGray, 10);
         }
       }
     }

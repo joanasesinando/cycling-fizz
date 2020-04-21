@@ -33,13 +33,13 @@
 nb-card-header {
   font-family: quicksand-bold, sans-serif;
   font-size: 1.1rem;
-  color: $header;
+  color: $cf-dark;
 }
 
 nb-card-body {
   font-family: quicksand-regular, sans-serif;
   font-size: 1.1rem;
-  color: $text;
+  color: $cf-text;
 }
 
 .star {
@@ -50,7 +50,7 @@ nb-card-body {
 }
 .security-rating {
   font-family: quicksand-medium, sans-serif;
-  color: $darkGray;
+  color: $cf-darkGray;
 }
 .info {
   color: #d0d0d0;

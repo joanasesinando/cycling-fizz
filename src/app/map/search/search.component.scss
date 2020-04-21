@@ -24,7 +24,7 @@ form {
     @include transition(all 300ms ease-in-out);
 
     &:focus {
-      color: $header;
+      color: $cf-dark;
       box-shadow: none;
     }
   }
@@ -34,7 +34,7 @@ form {
     right: 2.3rem;
     background: none;
     border: none;
-    color: $gray;
+    color: $cf-gray;
 
     span {
       font-size: 1.5rem;
@@ -42,7 +42,7 @@ form {
     }
 
     &:hover {
-      color: $header;
+      color: $cf-dark;
     }
 
     &:focus {

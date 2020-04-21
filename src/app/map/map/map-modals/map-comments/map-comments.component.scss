@@ -11,7 +11,7 @@
   .section-title {
     font-family: quicksand-bold, sans-serif;
     font-size: 1.3rem;
-    color: $header;
+    color: $cf-dark;
   }
 
   .placeholder {
@@ -20,7 +20,7 @@
     left: 5.5rem;
     font-family: quicksand-regular, sans-serif;
     font-size: .9rem;
-    color: $darkGray;
+    color: $cf-darkGray;
     @include media-breakpoint-down(md) {
       left: 4.5rem;
     }

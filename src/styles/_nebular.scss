@@ -1,17 +1,5 @@
-/* ===================================================================
- *  Nebular components
- *    - switch
- *    - checkbox
- *    - user
- *    - chat
- *    - popover
- *
- * ------------------------------------------------------------------- */
-
 @import "colors";
-
 @import 'nebular-themes';
-
 @import '~@nebular/theme/styles/globals';
 
 @include nb-install() {
@@ -28,13 +16,23 @@
   @include nb-toast-theme;
 };
 
-/*** General ***/
+
+/* ===================================================================
+ *  General
+ *
+ * ------------------------------------------------------------------- */
+
 .nb-theme-default nb-toggle .text,
 .nb-theme-default nb-checkbox .text {
   font-family: quicksand-regular, sans-serif;
 }
 
-/*** Switch ***/
+
+/* ===================================================================
+ *  Switch
+ *
+ * ------------------------------------------------------------------- */
+
 nb-toggle.map-quick-filter-toggle .toggle-label {
   margin-bottom: 0;
   .text {
@@ -58,24 +56,32 @@ nb-toggle.map-filter-toggle .toggle-label {
 
   .text {
     font-family: quicksand-medium, sans-serif;
-    color: $darkGray;
+    color: $cf-darkGray;
   }
 }
 
 
-/*** Checkbox ***/
+/* ===================================================================
+ *  Checkbox
+ *
+ * ------------------------------------------------------------------- */
+
 .nb-theme-default nb-checkbox.status-basic .native-input:disabled:indeterminate + .custom-checkbox,
 .nb-theme-default nb-checkbox.status-basic .native-input:disabled:checked + .custom-checkbox {
-  background-color: $orange;
-  border-color: $orange;
+  background-color: $cf-orange;
+  border-color: $cf-orange;
 }
 
 .nb-theme-default nb-checkbox.status-basic .native-input:disabled ~ .text {
-  color: $text;
+  color: $cf-text;
 }
 
 
-/*** User ***/
+/* ===================================================================
+ *  User
+ *
+ * ------------------------------------------------------------------- */
+
 .nb-theme-default nb-user.map-gallery-user .user-name {
   font-family: quicksand-regular, sans-serif;
   font-weight: normal;
@@ -83,7 +89,11 @@ nb-toggle.map-filter-toggle .toggle-label {
 }
 
 
-/*** Chat ***/
+/* ===================================================================
+ *  Chat
+ *
+ * ------------------------------------------------------------------- */
+
 .nb-theme-default nb-chat.map-comments {
   box-shadow: none;
 
@@ -100,18 +110,18 @@ nb-toggle.map-filter-toggle .toggle-label {
   nb-chat-message-text {
     .text {
       font-family: quicksand-regular, sans-serif;
-      background-color: $superLightGray;
-      color: $darkGray;
+      background-color: $cf-superLightGray;
+      color: $cf-darkGray;
     }
 
     .sender {
       font-family: quicksand-bold, sans-serif;
       font-size: 1rem;
-      color: $header;
+      color: $cf-dark;
 
       time {
         font-family: quicksand-light;
-        color: $gray;
+        color: $cf-gray;
         margin-left: .4rem;
       }
     }
@@ -132,23 +142,27 @@ nb-toggle.map-filter-toggle .toggle-label {
 }
 
 .nb-theme-default [nbInput].status-basic {
-  background-color: $superLightGray;
+  background-color: $cf-superLightGray;
   font-family: quicksand-regular, sans-serif;
-  color: $darkGray
+  color: $cf-darkGray
 }
 
 .nb-theme-default [nbButton].appearance-filled.status-primary {
-  background: $gradient-orange;
+  background: $cf-gradient-orange;
   border-color: #ffc46b;
 }
 
 
-/*** Popover ***/
+/* ===================================================================
+ *  Popover
+ *
+ * ------------------------------------------------------------------- */
+
 .nb-theme-default nb-popover {
-  background: $header;
+  background: $cf-dark;
   color: white;
   .arrow::after {
-    border-bottom-color: $header;
+    border-bottom-color: $cf-dark;
   }
   .primitive-overlay {
     font-family: quicksand-regular, sans-serif;
@@ -157,7 +171,12 @@ nb-toggle.map-filter-toggle .toggle-label {
   }
 }
 
-/*** Select ***/
+
+/* ===================================================================
+ *  Select
+ *
+ * ------------------------------------------------------------------- */
+
 .nb-theme-default nb-select .select-button,
 .nb-theme-default nb-option, .nb-theme-default nb-option-group {
   font-family: quicksand-regular, sans-serif;
@@ -177,12 +196,22 @@ nb-toggle.map-filter-toggle .toggle-label {
   overflow-y: hidden;
 }
 
-/*** Input ***/
+
+/* ===================================================================
+ *  Input
+ *
+ * ------------------------------------------------------------------- */
+
 .nb-theme-default [nbInput] {
   font-family: quicksand-regular, sans-serif;
 }
 
-/*** Button ***/
+
+/* ===================================================================
+ *  Button
+ *
+ * ------------------------------------------------------------------- */
+
 .nb-theme-default [nbButton] {
   font-family: quicksand-bold, sans-serif;
 }

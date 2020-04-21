@@ -2,6 +2,8 @@ import {Component, Input, OnInit, Output} from '@angular/core';
 import { faTrash, faEdit, faStar } from '@fortawesome/free-solid-svg-icons';
 declare var $: any;
 
+import * as bootstrap from 'bootstrap';
+
 @Component({
   selector: 'app-map-modals',
   templateUrl: './map-modals.component.html',
@@ -17,7 +19,7 @@ export class MapModalsComponent implements OnInit {
   deleteActivated: boolean = false;
 
   // NOTE: get from DB
-  type: string = "store"; //options for debug: bikelane, parking, store
+  type: string = "bikelane"; //options for debug: bikelane, parking, store
   name: string = "Decathlon";
   address: string = "Rua 25 de Abril, Nº29, Loures, Lisboa";
   lat: number = 38.7353927;

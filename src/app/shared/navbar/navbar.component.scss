@@ -33,16 +33,16 @@
 
   .navbar-brand {
     color: transparent;
-    width: 17rem;
-    height: 4rem;
-    background: url("../../../assets/images/navbar/logo.svg") no-repeat center;
-    background-size: 17rem 4rem;
+    width: 13rem;
+    height: 3rem;
+    background: url("../../../assets/images/logo.svg") no-repeat center;
+    background-size: 13rem 3rem;
     @include transition(all 0.3s ease-in-out);
 
     @include media-breakpoint-down(md) {
       width: 11rem;
       height: 1.7rem;
-      background: url("../../../assets/images/navbar/logo-solo-dark.svg") no-repeat center;
+      background: url("../../../assets/images/logo-dark.svg") no-repeat center;
       background-size: 11rem 1.7rem;
     }
   }
@@ -60,14 +60,14 @@ nav.navbar-top {
   box-shadow: 0 2px 13px 0 #a5a5a57a;
 
   .navbar-brand {
-    width: 15rem;
-    height: 3rem;
-    background-size: 15rem 3rem;
+    width: 12rem;
+    height: 2rem;
+    background-size: 12rem 2rem;
 
    @include media-breakpoint-down(md) {
      width: 11rem;
      height: 1.7rem;
-     background: url("../../../assets/images/navbar/logo-solo-orange.svg") no-repeat center;
+     background: url("../../../assets/images/logo.svg") no-repeat center;
      background-size: 11rem 1.7rem;
    }
   }
@@ -85,9 +85,9 @@ nav.bg-white {
 
 nav.light .navbar-nav .nav-item .nav-link{
   @include media-breakpoint-up(lg) {
-    color: $lightGray;
+    color: $cf-lightGray;
     &:hover, img:hover {
-      color: $yellow;
+      color: $cf-yellow;
     }
   }
 }
@@ -95,13 +95,13 @@ nav.light .navbar-nav .nav-item .nav-link{
 nav.light .navbar-brand {
   width: 17rem;
   height: 4rem;
-  background: url("../../../assets/images/navbar/logo-light.svg") no-repeat center;
+  background: url("../../../assets/images/logo.svg") no-repeat center;
 
   background-size: 17rem 4rem;
   @include media-breakpoint-down(md) {
     width: 11rem;
     height: 1.7rem;
-    background: url("../../../assets/images/navbar/logo-solo-orange.svg") no-repeat center;
+    background: url("../../../assets/images/logo.svg") no-repeat center;
     background-size: 11rem 1.7rem;
   }
 }
@@ -120,10 +120,10 @@ nav.light .navbar-brand {
   .nav-item {
     padding-left: 1em;
 
-    @include media-breakpoint-down(md) { border-top: 0.1rem solid $lightGray; }
+    @include media-breakpoint-down(md) { border-top: 0.1rem solid $cf-lightGray; }
 
     .nav-link {
-      color: $header;
+      color: $cf-dark;
       @include transition(color 0.1s ease-in-out);
       &:hover {
         cursor: pointer;
@@ -131,7 +131,7 @@ nav.light .navbar-brand {
 
       @include media-breakpoint-up(lg) {
         &:hover, img:hover {
-          color: $orange;
+          color: $cf-orange;
         }
       }
 
@@ -144,7 +144,7 @@ nav.light .navbar-brand {
 }
 
 .nav-link[aria-expanded="true"]{
-  color: $orange !important;
+  color: $cf-orange !important;
 }
 
 .dropdown-menu {
@@ -162,7 +162,7 @@ nav.light .navbar-brand {
   }
 
   .dropdown-item {
-    color: $header;
+    color: $cf-dark;
     @include media-breakpoint-down(md){
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
@@ -190,7 +190,7 @@ nav.light .navbar-brand {
 
 .last-mobile-row {
   @include media-breakpoint-down(md) {
-    border-top: 0.1rem solid $lightGray;
+    border-top: 0.1rem solid $cf-lightGray;
 
     img {
       height: 1.3rem;
@@ -226,7 +226,7 @@ $hamburger-padding-y           : 0;
 $hamburger-layer-width         : 1.7rem;
 $hamburger-layer-height        : 0.2rem;
 $hamburger-layer-spacing       : 0.3rem;
-$hamburger-layer-color         : $header;
+$hamburger-layer-color         : $cf-dark;
 $hamburger-layer-border-radius : 2rem;
 $hamburger-hover-opacity       : 1;
 $hamburger-active-layer-color  : $hamburger-layer-color;
@@ -242,6 +242,6 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 
 nav.light {
   .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    background-color: $lightGray;
+    background-color: $cf-lightGray;
   }
 }

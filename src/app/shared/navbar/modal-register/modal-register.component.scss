@@ -74,7 +74,7 @@
 
   .custom-control-label {
     a {
-      color: $text;
+      color: $cf-text;
 
       @include media-breakpoint-down(lg) { text-decoration: underline; }
     }
@@ -86,7 +86,7 @@
   }
 
   .gray-label {
-    color: $darkGray;
+    color: $cf-darkGray;
   }
 
   .signIn {
@@ -96,7 +96,7 @@
 
     a {
       font-family: 'quicksand-medium', sans-serif;
-      color: $orange;
+      color: $cf-orange;
       text-decoration: underline;
       cursor: pointer;
     }

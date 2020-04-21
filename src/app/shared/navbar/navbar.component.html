@@ -9,7 +9,7 @@
           data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
           aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMobileMenu()">
 
-    <span class="navbar-toggler-icon hamburger-box"> <!-- FIXME make component -->
+    <span class="navbar-toggler-icon hamburger-box">
       <span class="hamburger-inner"></span>
     </span>
   </button>
@@ -170,7 +170,6 @@
     <div *ngIf="!mobileView">
       <button *ngIf="!authFirebaseService.isUserLogged" class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
       <button *ngIf="authFirebaseService.isUserLogged" class="btn btn-danger" type="button" (click)="authFirebaseService.logout()">Logout</button>
-
     </div>
 
       <button data-toggle="modal" data-target="#verifyEmailModal">oi</button>

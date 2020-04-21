@@ -11,7 +11,7 @@
             <div class="modal-header">
                 <h5 class="modal-title" id="filtering">Filtros</h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true"><img src="../../../assets/images/map/icons/close.svg" alt="Close"></span>
+                    <span aria-hidden="true"><img src="../../../../assets/images/map/icons/close.svg" alt="Close"></span>
                 </button>
             </div>
 
@@ -54,7 +54,7 @@
             <div class="modal-header pb-0 pt-1 px-1">
                 <div class="d-flex flex-wrap align-items-center">
                     <!-- // Header -->
-                    <img src="../../../../assets/images/map/icons/icon-{{type}}.svg">
+                    <img src="../../../../assets/images/map/icons/icon-{{type}}.svg" alt="">
                     <h5 class="modal-title mb-2" id="name">{{ name }}</h5>
 
                     <!-- store rating -->
@@ -73,10 +73,13 @@
 
                     <!-- share & goto -->
                     <div class="actions d-none d-lg-flex align-items-center ml-auto">
-                        <a href=""><img class="mr-3" data-toggle="tooltip" data-placement="top" title="Partilhar"
-                                        src="../../../../assets/images/map/icons/share.svg"></a>
+                        <a href="">
+                            <img class="mr-3" data-toggle="tooltip" data-placement="top" title="Partilhar"
+                                        src="../../../../assets/images/map/icons/share.svg" alt="">
+                        </a>
                         <a href="https://www.google.com/maps/place/{{lat}},{{lng}}" target="_blank">
-                            <img data-toggle="tooltip" data-placement="top" title="Como chegar" src="../../../../assets/images/map/icons/goto.svg">
+                            <img data-toggle="tooltip" data-placement="top" title="Como chegar"
+                                 src="../../../../assets/images/map/icons/goto.svg" alt="">
                         </a>
                     </div>
                 </div>
@@ -91,7 +94,7 @@
                     <!-- edit & delete -->
                     <div class="actions">
                         <fa-icon [icon]="faEdit" class="mr-3" data-toggle="tooltip" data-placement="top" title="Editar"
-                            (click)="changeEditMode(true)"></fa-icon>
+                            (click)="editActivated ? changeEditMode(false) : changeEditMode(true)"></fa-icon>
                         <fa-icon [icon]="faTrash" data-toggle="tooltip" data-placement="top" title="Apagar"
                             (click)="openModal('#deleteModal')"></fa-icon>
                     </div>

@@ -16,7 +16,7 @@
   font-family: 'quicksand-medium', sans-serif;
   color: white;
   overflow: hidden;                   /* Ensures the content is not revealed until the animation */
-  border-right: .2em solid $orange;  /* The typwriter cursor */
+  border-right: .2em solid $cf-orange;  /* The typwriter cursor */
   white-space: nowrap;                /* Keeps the content on a single line */
   margin: 1rem auto;                     /* Gives that scrolling effect as the typing happens */
   letter-spacing: .1em;              /* Adjust as needed */

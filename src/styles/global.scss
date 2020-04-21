@@ -1,98 +1,88 @@
 /* ===================================================================
  *
- *  Cycling Fizz v1.0 Global Stylesheet
- *  27-05-2019 #FIXME
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  01. basic styles
- *  02. buttons
- *  03. scrollbar
- *  04. tooltips
- *  05. badges
- *  05. slick slider
+ *   TOC:
+ *   - Basic styles
+ *   - Buttons
+ *   - Scrollbar
+ *   - Tooltips
+ *   - Badges
+ *   - Slick slider
  *
  * =================================================================== */
 
 @import 'fonts.css';
-@import '../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss';
+@import "~hamburgers/_sass/hamburgers/hamburgers";
 
-@import "~styles/colors";
-@import "~styles/mixins";
-@import "~styles/nebular";
+@import "colors";
+@import "mixins";
+@import "nebular";
 
-@import "../../node_modules/bootstrap/scss/functions";
-@import "../../node_modules/bootstrap/scss/variables";
-@import "../../node_modules/bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 
 /* ===================================================================
- *  01. basic styles
+ *  Basic styles
  *
  * ------------------------------------------------------------------- */
 
-.text-dark-black { color: $text !important;}
-.text-dark-header { color: $header !important; }
-.text-dark-gray { color: $darkGray !important; }
-.text-gray { color: $gray !important; }
-.text-light-gray { color: $lightGray !important; }
-.text-orange { color: $orange !important; }
-.text-purple {color: $purple !important;  }
+.font-mrt-xBold { font-family: "martel-extraBold", sans-serif; }
+.font-qks-bold { font-family: "quicksand-bold", sans-serif; }
+.font-qks-light { font-family: "quicksand-light", sans-serif; }
+.font-qks-medium { font-family: "quicksand-medium", sans-serif; }
+.font-qks-regular { font-family: "quicksand-regular", sans-serif; }
+.font-nycd-regular { font-family: "nycdo-regular", sans-serif; }
+.font-slw-regular { font-family: "solway-regular", sans-serif; }
+.font-slw-bold { font-family: "solway-bold", sans-serif; }
+
+.text-dark-black { color: $cf-text !important;} // FIXME: tirar !importants
+.text-dark-header { color: $cf-dark !important; }
+.text-dark-gray { color: $cf-darkGray !important; }
+.text-gray { color: $cf-gray !important; }
+.text-light-gray { color: $cf-lightGray !important; }
+.text-orange { color: $cf-orange !important; }
+.text-purple {color: $cf-purple !important;  }
+
+
+html, body {
+  scroll-behavior: smooth;
+}
+
 
 h1, .h1,
 h2, .h2,
 h3, .h3 {
-  color: $header;
+  color: $cf-dark;
   font-family: "martel-extraBold", sans serif;
 }
 
 h1, .h1 {
   font-size: 2.8rem;
   line-height: 1.4em;
-
-  @include media-breakpoint-down(md){
-    font-size: 2.3rem;
-  }
-
-  @include media-breakpoint-down(sm){
-    font-size: 1.7rem;
-  }
+  @include media-breakpoint-down(md){ font-size: 2.3rem; }
+  @include media-breakpoint-down(sm){ font-size: 1.7rem; }
 }
 
 h2, .h2 {
   font-size: 2.5rem;
-
-  @include media-breakpoint-down(md){
-    font-size: 2rem;
-  }
-
-  @include media-breakpoint-down(sm){
-    font-size: 1.6rem;
-  }
+  @include media-breakpoint-down(md){ font-size: 2rem; }
+  @include media-breakpoint-down(sm){ font-size: 1.6rem; }
 }
 
 h3, .h3 {
   font-size: 2rem;
   line-height: 3rem;
-
-  @include media-breakpoint-down(md){
-    font-size: 1.7rem;
-  }
-
-  @include media-breakpoint-down(sm){
-    font-size: 1.4rem;
-  }
+  @include media-breakpoint-down(md){ font-size: 1.7rem; }
+  @include media-breakpoint-down(sm){ font-size: 1.4rem; }
 }
 
 h5, .h5 {
-  color: $darkGray;
-  font-family: "quicksand-light", sans-serif;
+  color: $cf-darkGray;
+  font-family: "quicksand-regular", sans-serif;
   font-size: 1.2rem;
   line-height: 1.5em;
-
-  @include media-breakpoint-down(md){
-    font-size: 1.1rem;
-  }
+  @include media-breakpoint-down(md){ font-size: 1.1rem; }
 }
 
 .dark-dialog {
@@ -126,8 +116,9 @@ h5, .h5 {
   z-index: 3000;
 }
 
+
 /* ===================================================================
- *  02. buttons
+ *  Buttons
  *
  * ------------------------------------------------------------------- */
 
@@ -305,7 +296,7 @@ button.read {
     right: 0;
     bottom: 0;
     padding: 0.35rem 0;
-    color: $header;
+    color: $cf-dark;
     font-weight: 700;
     line-height: 1.6;
     text-align: center;
@@ -335,7 +326,7 @@ button.read:focus {
 
 
 /* ===================================================================
- *  03. scrollbar
+ *  Scrollbar
  *
  * ------------------------------------------------------------------- */
 
@@ -357,9 +348,9 @@ button.read:focus {
     //background-image: -webkit-gradient(linear,
     //        40% 0%,
     //        85% 84%,
-    //        from(#ffd340),
-    //        to(#ff9f3c),
-    //        color-stop(.6,#ffbe3d));
+    //        from(lighten(#ffd340, 3)),
+    //        to(lighten(#ff9f3c, 3)),
+    //        color-stop(.6,lighten(#ff9f3c, 3)));
 
     &:hover {
       background-color:darken($scrollbar, 10%);
@@ -375,14 +366,14 @@ button.read:focus {
 
 
 /* ===================================================================
- *  04. tooltips
+ *  Tooltips
  *
  * ------------------------------------------------------------------- */
 
 .tooltip-inner {
   max-width: 200px;
   padding: 3px 8px;
-  color: $header;
+  color: $cf-dark;
   text-align: center;
   background-color: white;
 }
@@ -419,7 +410,7 @@ button.read:focus {
 
 
 /* ===================================================================
- *  05. badges
+ *  Badges
  *
  * ------------------------------------------------------------------- */
 
@@ -427,13 +418,13 @@ button.read:focus {
   font-size: 90%;
 }
 .badge-primary {
-  background: $gradient-orange;
+  background: $cf-gradient-orange;
 }
 
 
 
 /* ===================================================================
- *  06. slick slider
+ *  Slick slider
  *
  * ------------------------------------------------------------------- */
 
