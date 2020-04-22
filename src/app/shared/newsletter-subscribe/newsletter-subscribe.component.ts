@@ -23,7 +23,8 @@ export class NewsletterSubscribeComponent implements OnInit {
     subscriptionEmail: new FormControl(
         '',
         [
-          Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')
+            Validators.required,
+            Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')
         ])
   });
 
@@ -44,6 +45,12 @@ export class NewsletterSubscribeComponent implements OnInit {
   changeSubBtnSize() {
     this.subscribeBtn.style.bottom = this.emailHelp.offsetHeight + this.subEmailInput.offsetHeight + "px";
     this.subscribeBtnMobile.style.bottom = this.emailHelp.offsetHeight + this.subEmailInput.offsetHeight + "px";
+  }
+
+  subscribeToNewsletter() {
+    if(this.subscriptionEmail.touched && this.subscriptionEmail.valid) {
+      alert("Subscrição registada com sucesso.");
+    }
   }
 
   @HostListener('window:resize', ['$event'])

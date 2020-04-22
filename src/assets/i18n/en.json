@@ -88,8 +88,7 @@
   "newsletter": {
     "placeholder": "Please insert your e-mail...",
     "disclaimer": "Your data will not be shared with other parties.",
-    "subscribe": "Subscribe",
-    "error": "Please insert a valid e-mail format"
+    "subscribe": "Subscribe"
   },
 
   "footer": {
@@ -105,5 +104,11 @@
     },
     "credits": "Images and ilustrations attributions",
     "author-rights": "All rights reserved"
+  },
+
+  "errors": {
+    "requiredField": "Required field",
+    "invalidName": "Invalid name. Valid format: John Smith",
+    "invalidEmail": "Invalid e-mail. Valid format: johnsmith@email.com"
   }
 }

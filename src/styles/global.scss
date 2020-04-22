@@ -148,16 +148,16 @@ input[type="button"].btn-primary {
     @include transition(all 0.3s ease-in-out);  
 }
 
-.btn.btn-primary:hover,
-button.btn-primary:hover,
-input[type="submit"].btn-primary:hover,
-input[type="reset"].btn-primary:hover,
-input[type="button"].btn-primary:hover,
-.btn.btn-primary:focus,
-button.btn-primary:focus,
-input[type="submit"].btn-primary:focus,
-input[type="reset"].btn-primary:focus,
-input[type="button"].btn-primary:focus {
+.btn.btn-primary:hover:enabled,
+button.btn-primary:hover:enabled,
+input[type="submit"].btn-primary:hover:enabled,
+input[type="reset"].btn-primary:hover:enabled,
+input[type="button"].btn-primary:hover:enabled,
+.btn.btn-primary:focus:enabled,
+button.btn-primary:focus:enabled,
+input[type="submit"].btn-primary:focus:enabled,
+input[type="reset"].btn-primary:focus:enabled,
+input[type="button"].btn-primary:focus:enabled {
   box-shadow: 0 0.5em 0.5em -0.4em #ff923cba;
   background-size: 100% 100%;
   @include media-breakpoint-up(lg) {

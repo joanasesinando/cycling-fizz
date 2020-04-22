@@ -23,7 +23,7 @@
       "dropdown": {
         "project": "O projeto",
         "us": "Quem somos",
-        "contact": "Contactos"
+        "contact": "Contacto"
       }
     }
   },
@@ -87,8 +87,7 @@
   "newsletter": {
     "placeholder": "Introduz o teu e-mail...",
     "disclaimer": "Nunca partilharemos os teus dados com mais ninguém.",
-    "subscribe": "Subscrever",
-    "error": "Escreva um formato de e-mail válido"
+    "subscribe": "Subscrever"
   },
 
   "footer": {
@@ -104,5 +103,11 @@
     },
     "credits": "Créditos de imagens e ilustrações",
     "author-rights": "Todos os direitos reservados"
+  },
+
+  "errors": {
+    "requiredField": "Campo obrigatório",
+    "invalidName": "Nome inválido. Formato válido: João Silva",
+    "invalidEmail": "E-mail inválido. Formato válido: joaosilva@email.com"
   }
 }

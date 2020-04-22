@@ -7,6 +7,8 @@ import {SharedModule} from '../shared/shared.module';
 
 import { ContactComponent } from './contact/contact.component';
 import { ImgEmailComponent } from './img-email/img-email.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 
@@ -16,7 +18,9 @@ import { ImgEmailComponent } from './img-email/img-email.component';
     CommonModule,
     ContactRoutingModule,
     FontAwesomeModule,
-    SharedModule
+    SharedModule,
+    ReactiveFormsModule,
+    TranslateModule
   ]
 })
 export class ContactModule { }

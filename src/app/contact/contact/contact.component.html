@@ -11,28 +11,56 @@
     <div class="container">
         <div class="d-flex flex-wrap flex-lg-nowrap justify-content-center justify-content-lg-between align-items-center">
             <app-img-email class="mb-5 mb-lg-0 mr-lg-5" data-aos="fade-up" data-aos-delay="100"></app-img-email>
-            <form class="col-12 col-md-10 col-lg-5 ml-lg-4">
+            <form class="col-12 col-md-10 col-lg-5 ml-lg-4" [formGroup]="contactForm">
                 <h3 class="text-center mb-4" data-aos="fade-up">Fala connosco</h3>
 
                 <div data-aos="fade-up" data-aos-delay="200">
                     <!-- Name -->
                     <div class="form-group">
                         <label for="formName"><i class="icon" data-feather="user"></i></label>
-                        <input type="text" class="form-control form-control-lg thick" id="formName" placeholder="Nome" required>
+                        <input type="text" class="form-control form-control-lg thick" id="formName" placeholder="Nome"
+                        formControlName="name" [class.is-invalid]="formName.invalid && formName.touched">
+                        <div *ngIf="(formName.invalid && formName.touched) || formName.dirty">
+                            <small *ngIf="formName.errors?.required" class="font-qks-regular text-error ml-3">
+                                ⚠ {{'errors.requiredField' | translate}}
+                            </small>
+                            <small *ngIf="formName.errors?.pattern" class="font-qks-regular text-error ml-3">
+                                ⚠ {{'errors.invalidName' | translate}}
+                            </small>
+                        </div>
                     </div>
 
                     <!-- E-mail -->
                     <div class="form-group">
                         <label for="formEmail"><i class="icon" data-feather="mail"></i></label>
-                        <input type="email" class="form-control form-control-lg thick" id="formEmail" placeholder="E-mail" required>
+                        <input type="email" class="form-control form-control-lg thick" id="formEmail" placeholder="E-mail"
+                        formControlName="email" [class.is-invalid]="formEmail.invalid && formEmail.touched">
+                        <div *ngIf="(formEmail.invalid && formEmail.touched) || formEmail.dirty">
+                            <small *ngIf="formEmail.errors?.required" class="font-qks-regular text-error ml-3">
+                                ⚠ {{'errors.requiredField' | translate}}
+                            </small>
+                            <small *ngIf="formEmail.errors?.pattern" class="font-qks-regular text-error ml-3">
+                                ⚠ {{'errors.invalidEmail' | translate}}
+                            </small>
+                        </div>
                     </div>
 
                     <!-- Message -->
                     <div class="form-group message">
-                        <textarea class="form-control form-control-lg" id="formMessage" rows="7" placeholder="Mensagem" required></textarea>
+                        <textarea class="form-control form-control-lg" id="formMessage" rows="7" placeholder="Mensagem"
+                        formControlName="message" [class.is-invalid]="formMessage.invalid && formMessage.touched"></textarea>
+                        <div *ngIf="(formMessage.invalid && formMessage.touched) || formMessage.dirty">
+                            <small *ngIf="formMessage.errors?.required" class="font-qks-regular text-error ml-3">
+                                ⚠ {{'errors.requiredField' | translate}}
+                            </small>
+                        </div>
                     </div>
                     <div class="d-flex justify-content-center">
-                        <button type="submit" class="btn btn-primary">Enviar</button>
+                        <button type="submit" class="btn btn-primary"
+                                [disabled]="!contactForm.valid && contactForm.touched"
+                                (click)="submitMessage()">
+                            Enviar
+                        </button>
                     </div>
                 </div>
             </form>
