@@ -1,7 +1,8 @@
-<form id="newsletterForm">
+<form id="newsletterForm" [formGroup]="email">
     <div id="subForm" class="form-group">
-        <input type="email" class="form-control" id="subEmailInput" aria-describedby="emailHelp"
+        <input type="email" class="form-control" id="subEmailInput" formControlName="subscriptionEmail"
                placeholder="{{'newsletter.placeholder' | translate}}"
+               [class.is-invalid]="subscriptionEmail.invalid && subscriptionEmail.touched"
                [ngStyle]="{'border-width': border ? '1.5px' : '0', 'border-color': border ? '#f2f6f8' : ''}">
         <small id="emailHelp" class="form-text text-muted">*{{'newsletter.disclaimer' | translate}}</small>
         <button id ="subscribeBtn" type="submit" class="subscribeBtn btn btn-primary px-3 float-right d-none d-sm-block">
@@ -12,3 +13,9 @@
         </button>
     </div>
 </form>
+
+<div *ngIf="(subscriptionEmail.invalid && subscriptionEmail.touched) || subscriptionEmail.dirty">
+    <small *ngIf="subscriptionEmail.errors?.pattern" class="font-qks-regular text-error float-left">
+        ⚠ {{'newsletter.error' | translate}}
+    </small>
+</div>

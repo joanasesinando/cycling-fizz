@@ -88,7 +88,8 @@
   "newsletter": {
     "placeholder": "Please insert your e-mail...",
     "disclaimer": "Your data will not be shared with other parties.",
-    "subscribe": "Subscribe"
+    "subscribe": "Subscribe",
+    "error": "Please insert a valid e-mail format"
   },
 
   "footer": {

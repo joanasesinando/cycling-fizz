@@ -1,5 +1,6 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'app-newsletter-subscribe',
@@ -18,8 +19,18 @@ export class NewsletterSubscribeComponent implements OnInit {
   subscribeBtnMobile;
   emailHelp;
 
+  email = new FormGroup({
+    subscriptionEmail: new FormControl(
+        '',
+        [
+          Validators.pattern('^[a-z0-9._%+-]+@[a-z0-9.-]+\\.[a-z]{2,4}$')
+        ])
+  });
+
   constructor() {
   }
+
+  get subscriptionEmail() { return this.email.get('subscriptionEmail'); }
 
   ngOnInit() {
     this.subEmailInput = document.getElementById('subEmailInput') as HTMLElement;
