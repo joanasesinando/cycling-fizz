@@ -45,6 +45,7 @@
 
   h1 {
     text-align: left;
+    @include media-breakpoint-only(md) { width: 60vw; }
   }
 
   h5 {

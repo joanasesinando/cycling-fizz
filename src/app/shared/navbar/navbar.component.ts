@@ -57,7 +57,7 @@ export class NavbarComponent implements OnInit {
     translate.addLangs(['pt', 'en', 'fr']);
     translate.setDefaultLang('pt');
     const browserLang = translate.getBrowserLang();
-    translate.use(browserLang.match(/pt|en|fr/) ? browserLang : 'pt');
+    translate.use(browserLang.match(/pt|en|fr/) ? browserLang : 'en');
   }
 
   ngOnInit() {
