@@ -39,6 +39,11 @@
     }
   }
 
+  h5 {
+    width: 40vw;
+    @include media-breakpoint-down(md) { width: auto; }
+  }
+
   p {
     line-height: 1.6rem;
   }

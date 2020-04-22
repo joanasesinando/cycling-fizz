@@ -1,5 +1,5 @@
 {
-  "navbar-links": {
+  "navbar": {
     "homepage": "Início",
     "map": "Mapa",
     "useful": {
@@ -26,5 +26,82 @@
         "contact": "Contactos"
       }
     }
+  },
+
+  "cover": {
+    "title": {
+      "part1": "O Ponto",
+      "part2": "De Encontro Do",
+      "part3": "Ciclismo"
+    },
+    "text": "Descobre o nosso mapa com todas as informações relevantes ao ciclista, e explora as restantes secções!",
+    "mapBtn": "Ver mapa",
+    "videoBtn": "Vídeo de apresentação",
+    "see-more": "saber mais"
+  },
+
+  "features": {
+    "header": {
+      "part1": "Psst,",
+      "part2": "explora as nossas",
+      "part3": "secções"
+    },
+    "map": {
+      "title": "Mapa Informativo",
+      "text": "Mapa com a localização de ciclovias, estacionamento, lojas, bicicletas partilhadas e muito mais."
+    },
+    "rules": {
+      "title": "Regras de Trânsito",
+      "text": "Compilação do código da estrada relevante para ciclistas."
+    },
+    "routes": {
+      "title": "Percursos",
+      "text": "Biblioteca de percursos turísticos e de lazer em bicicleta com vários níveis de dificuldade."
+    },
+    "beginner": {
+      "title": "Principiantes",
+      "text": "Compilação de dicas úteis para quem está a dar os seus primeiros passos na bicicleta em meio urbano."
+    },
+    "forum": {
+      "title": "Fórum",
+      "text": "Local de partilha de ideias, opiniões, dúvidas e conselhos entre a comunidade do ciclismo."
+    },
+    "events": {
+      "title": "Eventos",
+      "text": "Calendário com eventos relativos ao mundo do ciclismo."
+    }
+  },
+
+  "blog": {
+    "header": {
+      "part1": "Visita o nosso ",
+      "part2": "blog"
+    },
+    "sub-heading": "Não percas os nossos artigos sobre ciclismo e outros assuntos relevantes como mobilidade, a vida urbana e muito mais.",
+    "see-more": "Ver mais",
+    "comments": "Comentários",
+    "likes": "Gostos",
+    "read": "Ler artigo"
+  },
+
+  "newsletter": {
+    "placeholder": "Introduz o teu e-mail...",
+    "disclaimer": "Nunca partilharemos os teus dados com mais ninguém.",
+    "subscribe": "Subscrever"
+  },
+
+  "footer": {
+    "col1": "O Cycling Fizz é um espaço digital para ciclistas que agrupa de forma simples todo o tipo de informações úteis. Dispõe de um mapa informativo, regras de trânsito para ciclistas, percursos de bicicleta, e muito mais.",
+    "col2": {
+      "header": "Contactar",
+      "part1": "Gostavas de falar connosco?",
+      "part2": "Entra em contacto através das nossas redes sociais ou envia-nos uma mensagem para "
+    },
+    "col3": {
+      "part1": "Queres estar a par das novidades?",
+      "part2": "Deixa o teu e-mail em baixo. Prometemos não encher a tua caixa de correio!"
+    },
+    "credits": "Créditos de imagens e ilustrações",
+    "author-rights": "Todos os direitos reservados"
   }
 }

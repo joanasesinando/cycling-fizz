@@ -1,13 +1,16 @@
 <section id="blog">
-    <h2 class="text-center" data-aos="fade-up">Visita o nosso <span>blog</span>!</h2>
-    <h5 class="text-center mb-5 mx-3" data-aos="fade-up" data-aos-delay="200">Não percas os nossos artigos sobre ciclismo e outros assuntos relevantes <br class="d-none d-sm-block">como mobilidade, a vida urbana e muito mais.</h5>
+    <h2 class="text-center" data-aos="fade-up">
+        {{'blog.header.part1' | translate}}
+        <span>{{'blog.header.part2' | translate}}</span>!
+    </h2>
+    <h5 class="text-center mb-5 mx-3 d-block mx-lg-auto" data-aos="fade-up" data-aos-delay="200">{{'blog.sub-heading' | translate}}</h5>
 
     <div data-aos="fade-up" data-aos-delay="400">
         <app-carousel3 *ngIf="!carouselMobile" [deckArray]="cardArray"></app-carousel3>
         <app-carousel1 *ngIf="carouselMobile" [cardArray]="cardArray"></app-carousel1>
 
         <span class="see-more d-flex justify-content-center justify-content-lg-start" >
-            <a href="#">Ver mais <fa-icon [icon]="faArrowRight" class="ml-1"></fa-icon></a>
+            <a href="#">{{'blog.see-more' | translate}}<fa-icon [icon]="faArrowRight" class="ml-1"></fa-icon></a>
         </span>
 
         <!-- Jumping balls -->

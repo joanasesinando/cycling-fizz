@@ -14,6 +14,7 @@ import { BCardComponent } from './blog/b-card/b-card.component';
 import { QuoteComponent } from './quote/quote.component';
 import { Carousel1Component } from './blog/carousel1/carousel1.component';
 import { Carousel3Component } from './blog/carousel3/carousel3.component';
+import {TranslateModule} from '@ngx-translate/core';
 
 
 @NgModule({
@@ -23,6 +24,7 @@ import { Carousel3Component } from './blog/carousel3/carousel3.component';
         HomepageRoutingModule,
         FontAwesomeModule,
         SharedModule,
+        TranslateModule,
     ]
 })
 export class HomepageModule { }

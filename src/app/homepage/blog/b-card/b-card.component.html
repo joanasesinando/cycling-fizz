@@ -1,21 +1,24 @@
 <div class="card shadow" style="width: 18rem;">
     <img src="{{photoSrc}}" class="card-img-top" alt="Blog post image">
     <div class="card-body">
-        <h6 class="card-subtitle mb-2" attr.data-after-content=" | {{ date | date:'dd \' de \'MMMM, yyy' }}">{{topic}}</h6>
+        <h6 class="card-subtitle mb-2"
+            attr.data-after-content=" | {{ date | date:'dd/MM/yyy' }}">
+            {{topic}}
+        </h6>
         <h5 class="card-title">{{title}}</h5>
         <span class="engagement mr-2">
             <fa-icon [icon]="faComments" id="comments"></fa-icon>
-            {{nrComments}} Comentários
+            {{nrComments}} {{'blog.comments' | translate}}
         </span>
         <span class="engagement">
             <fa-icon [icon]="faHeart" id="likes"></fa-icon>
-            {{nrLikes}} Gostos
+            {{nrLikes}} {{'blog.likes' | translate}}
         </span>
         <button class="read mt-4">
             <div class="circle">
                 <span class="icon arrow"></span>
             </div>
-            <p class="button-text">Ler artigo</p>
+            <p class="button-text">{{'blog.read' | translate}}</p>
         </button>
     </div>
 </div>
