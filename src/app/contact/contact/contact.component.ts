@@ -22,7 +22,7 @@ export class ContactComponent implements OnInit, AfterViewInit {
         '',
         [
             Validators.required,
-            Validators.pattern('^[a-zA-Z]+(([\',. -][a-zA-Z ])?[a-zA-Z]*)*$')
+            Validators.pattern('^([-A-Za-z\u00C0-\u00D6\u00D8-\u00f6\u00f8-\u00ff\\s]*)$')
         ]),
     email: new FormControl(
         '',

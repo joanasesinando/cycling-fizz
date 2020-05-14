@@ -1,4 +1,4 @@
-import {Component, HostListener, Input, OnInit} from '@angular/core';
+import {AfterViewInit, Component, HostListener, Input, OnInit} from '@angular/core';
 import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -7,7 +7,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
   templateUrl: './newsletter-subscribe.component.html',
   styleUrls: ['./newsletter-subscribe.component.scss']
 })
-export class NewsletterSubscribeComponent implements OnInit {
+export class NewsletterSubscribeComponent implements OnInit, AfterViewInit {
 
   //FontAwesome icons
   faPaperPlane = faPaperPlane;
@@ -38,7 +38,9 @@ export class NewsletterSubscribeComponent implements OnInit {
     this.subscribeBtn = document.getElementById('subscribeBtn') as HTMLElement;
     this.subscribeBtnMobile = document.getElementById('subscribeBtnMobile') as HTMLElement;
     this.emailHelp = document.getElementById('emailHelp') as HTMLElement;
+  }
 
+  ngAfterViewInit() {
     this.changeSubBtnSize();
   }
 
