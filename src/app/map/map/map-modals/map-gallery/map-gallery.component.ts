@@ -13,8 +13,6 @@ export class MapGalleryComponent implements OnInit {
   slideConfigFor = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: true,
-    dots: false,
     fade: true,
     asNavFor: '#slider-nav',
     lazyLoad: 'progressive'
@@ -25,21 +23,19 @@ export class MapGalleryComponent implements OnInit {
     swipeToSlide: true,
     asNavFor: '#slider-for',
     arrows: false,
-    dots: true,
     centerMode: true,
     focusOnSelect: true,
     autoplay: true,
     infinite: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3000,
   };
   slideConfigMobile = {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: false,
-    dots: false,
     autoplay: true,
     infinite: true,
-    autoplaySpeed: 2500,
+    autoplaySpeed: 3000,
     mobileFirst: true
   };
 

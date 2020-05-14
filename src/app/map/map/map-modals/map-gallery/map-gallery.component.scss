@@ -29,8 +29,8 @@
 }
 
 img {
-  border-radius: .2rem;
   position: relative;
+  object-fit: cover;
   z-index: -2;
 }
 
@@ -44,4 +44,9 @@ nb-user {
     margin-left: .5rem;
     left: unset;
   }
+}
+
+.slide.mobile {
+  @include media-breakpoint-only(md) { height: 35vw; }
+  height: 40vw;
 }
