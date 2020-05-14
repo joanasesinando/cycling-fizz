@@ -13,28 +13,34 @@ export class MapGalleryComponent implements OnInit {
   slideConfigFor = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    arrows: false,
+    arrows: true,
     dots: false,
     fade: true,
     asNavFor: '#slider-nav',
+    lazyLoad: 'progressive'
   };
   slideConfigNav = {
     slidesToShow: 5,
     slidesToScroll: 1,
+    swipeToSlide: true,
     asNavFor: '#slider-for',
+    arrows: false,
     dots: true,
     centerMode: true,
     focusOnSelect: true,
     autoplay: true,
+    infinite: true,
     autoplaySpeed: 2500,
   };
   slideConfigMobile = {
     slidesToShow: 1,
     slidesToScroll: 1,
-    dots: true,
     arrows: false,
+    dots: false,
     autoplay: true,
+    infinite: true,
     autoplaySpeed: 2500,
+    mobileFirst: true
   };
 
   faUpload = faUpload;

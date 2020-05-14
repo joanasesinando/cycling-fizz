@@ -429,9 +429,27 @@ button.read:focus {
  *  Slick slider
  *
  * ------------------------------------------------------------------- */
+.slick-prev {
+  padding-left: 3rem;
+  z-index: 100;
+  padding-bottom: 1rem;
+}
+.slick-next {
+  padding-right: 4.5rem;
+  padding-bottom: 1rem;
+}
 
-.slick-prev:before, .slick-next:before {
-  color: black;
-  opacity: .2;
+.slick-prev:before {
+  content: "<";
+  font-family: quicksand-medium,sans-serif;
+  color: white;
+  font-size: 2.5rem;
+}
+
+.slick-next:before {
+  content: ">";
+  font-family: quicksand-medium,sans-serif;
+  color: white;
+  font-size: 2.5rem;
 }
 
