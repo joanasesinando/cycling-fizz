@@ -24,7 +24,8 @@ import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import {MustMatchDirective} from "../_helpers/must-match.directive";
 import { ModalCompleteRegistrationComponent } from './navbar/modal-complete-registration/modal-complete-registration.component';
-import {NbButtonModule} from '@nebular/theme';
+import {NbButtonModule, NbIconModule} from '@nebular/theme';
+import { GoTopComponent } from './go-top/go-top.component';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import {NbButtonModule} from '@nebular/theme';
     NewsletterSubscribeComponent,
     ComingSoonComponent,
     MustMatchDirective,
-    ModalCompleteRegistrationComponent
+    ModalCompleteRegistrationComponent,
+    GoTopComponent
   ],
     imports: [
         CommonModule,
@@ -55,6 +57,7 @@ import {NbButtonModule} from '@nebular/theme';
         TranslateModule,
         FormsModule,
         NbButtonModule,
+        NbIconModule,
         ReactiveFormsModule
     ],
     exports: [
@@ -65,7 +68,8 @@ import {NbButtonModule} from '@nebular/theme';
         CreditsComponent,
         BannerComponent,
         PageNotFoundComponent,
-        NewsletterSubscribeComponent
+        NewsletterSubscribeComponent,
+        GoTopComponent
     ]
 })
 export class SharedModule { }
