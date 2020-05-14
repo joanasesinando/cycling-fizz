@@ -27,62 +27,63 @@
       }
     }
   },
+  "homepage": {
+    "cover": {
+      "title": {
+        "part1": "The Portuguese",
+        "part2": "Cycling",
+        "part3": "Meeting Point"
+      },
+      "text": "Don't miss our map with plenty of useful cycling information, and explore the rest of the pages!",
+      "mapBtn": "Go to map",
+      "videoBtn": "Intro video",
+      "see-more": "know more"
+    },
 
-  "cover": {
-    "title": {
-      "part1": "Portuguese",
-      "part2": "Cycling",
-      "part3": "Meeting Point"
+    "features": {
+      "header": {
+        "part1": "Psst,",
+        "part2": "don't miss",
+        "part3": "these features"
+      },
+      "map": {
+        "title": "Information Map",
+        "text": "Map with the location of bikelanes, parking, stores, bikesharing and a whole lot more."
+      },
+      "rules": {
+        "title": "Traffic Rules",
+        "text": "Compilation of the most important traffic rules for cyclists."
+      },
+      "routes": {
+        "title": "Routes",
+        "text": "Library with touristic and leisure related cycling routes, organized by levels of difficulty."
+      },
+      "beginner": {
+        "title": "Beginner",
+        "text": "Compilation of useful tips directed at beginner urban cyclists."
+      },
+      "forum": {
+        "title": "Forum",
+        "text": "Common place for sharing ideas, opinions, questions and advice between the cycling community."
+      },
+      "events": {
+        "title": "Events",
+        "text": "Calendar with cycling related events."
+      }
     },
-    "text": "Don't miss our map with plenty of useful cycling information, and explore the rest of the pages!",
-    "mapBtn": "Go to map",
-    "videoBtn": "Intro video",
-    "see-more": "know more"
-  },
 
-  "features": {
-    "header": {
-      "part1": "Psst,",
-      "part2": "don't miss",
-      "part3": "these features"
-    },
-    "map": {
-      "title": "Information Map",
-      "text": "Map with the location of bikelanes, parking, stores, bikesharing and a whole lot more."
-    },
-    "rules": {
-      "title": "Traffic Rules",
-      "text": "Compilation of the most important traffic rules for cyclists."
-    },
-    "routes": {
-      "title": "Routes",
-      "text": "Library with touristic and leisure related cycling routes, organized by levels of difficulty."
-    },
-    "beginner": {
-      "title": "Beginner",
-      "text": "Compilation of useful tips directed at beginner urban cyclists."
-    },
-    "forum": {
-      "title": "Forum",
-      "text": "Common place for sharing ideas, opinions, questions and advice between the cycling community."
-    },
-    "events": {
-      "title": "Events",
-      "text": "Calendar with cycling related events."
+    "blog": {
+      "header": {
+        "part1": "Visit our ",
+        "part2": "blog",
+        "part3": "!"
+      },
+      "sub-heading": "Check out our blog posts about cycling and other relevant topics such as mobility, urban lifestyle and more.",
+      "see-more": "See more",
+      "comments": "Comments",
+      "likes": "Likes",
+      "read": "Read post"
     }
-  },
-
-  "blog": {
-    "header": {
-      "part1": "Visit our ",
-      "part2": "blog",
-      "part3": "!"
-    },
-    "sub-heading": "Check out our blog posts about cycling and other relevant topics such as mobility, urban lifestyle and more.",
-    "see-more": "See more",
-    "comments": "Comments",
-    "likes": "Likes",
-    "read": "Read post"
   },
 
   "newsletter": {

@@ -82,10 +82,34 @@ nb-toggle.map-filter-toggle .toggle-label {
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-user.map-gallery-user .user-name {
-  font-family: quicksand-regular, sans-serif;
-  font-weight: normal;
-  color: white;
+.nb-theme-default nb-user.map-gallery-user {
+  .user-name {
+    font-family: quicksand-regular, sans-serif;
+    font-weight: normal;
+    color: white;
+  }
+
+  .user-picture {
+    border-color: transparent;
+    &:before {
+      content: "";
+      width: 2.8rem;
+      height: 2.8rem;
+      background: linear-gradient(131deg, #FFd340, #FF923C, #FF923C, #FF923C);
+      position: absolute;
+      bottom: -.2rem;
+      left: -.2rem;
+      border-radius: 50%;
+      z-index: -1;
+
+      @include media-breakpoint-down(md) {
+        width: 1.7rem;
+        height: 1.7rem;
+        bottom: -.15rem;
+        left: -.15rem;
+      }
+    }
+  }
 }
 
 

@@ -30,6 +30,8 @@
 
 img {
   border-radius: .2rem;
+  position: relative;
+  z-index: -2;
 }
 
 nb-user {

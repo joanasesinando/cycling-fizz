@@ -27,61 +27,66 @@
       }
     }
   },
+  "homepage": {
+    "cover": {
+      "title": {
+        "part1": "O Ponto",
+        "part2": "De Encontro Do",
+        "part3": "Ciclismo"
+      },
+      "text": "Descobre o nosso mapa com todas as informações relevantes ao ciclista, e explora as restantes secções!",
+      "mapBtn": "Ver mapa",
+      "videoBtn": "Vídeo de apresentação",
+      "see-more": "saber mais"
+    },
 
-  "cover": {
-    "title": {
-      "part1": "O Ponto",
-      "part2": "De Encontro Do",
-      "part3": "Ciclismo"
+    "features": {
+      "header": {
+        "part1": "Psst,",
+        "part2": "explora as nossas",
+        "part3": "secções"
+      },
+      "map": {
+        "title": "Mapa Informativo",
+        "text": "Mapa com a localização de ciclovias, estacionamento, lojas, bicicletas partilhadas e muito mais."
+      },
+      "rules": {
+        "title": "Regras de Trânsito",
+        "text": "Compilação do código da estrada relevante para ciclistas."
+      },
+      "routes": {
+        "title": "Percursos",
+        "text": "Biblioteca de percursos turísticos e de lazer em bicicleta com vários níveis de dificuldade."
+      },
+      "beginner": {
+        "title": "Principiantes",
+        "text": "Compilação de dicas úteis para quem está a dar os seus primeiros passos na bicicleta em meio urbano."
+      },
+      "forum": {
+        "title": "Fórum",
+        "text": "Local de partilha de ideias, opiniões, dúvidas e conselhos entre a comunidade do ciclismo."
+      },
+      "events": {
+        "title": "Eventos",
+        "text": "Calendário com eventos relativos ao mundo do ciclismo."
+      }
     },
-    "text": "Descobre o nosso mapa com todas as informações relevantes ao ciclista, e explora as restantes secções!",
-    "mapBtn": "Ver mapa",
-    "videoBtn": "Vídeo de apresentação",
-    "see-more": "saber mais"
-  },
 
-  "features": {
-    "header": {
-      "part1": "Psst,",
-      "part2": "explora as nossas",
-      "part3": "secções"
-    },
-    "map": {
-      "title": "Mapa Informativo",
-      "text": "Mapa com a localização de ciclovias, estacionamento, lojas, bicicletas partilhadas e muito mais."
-    },
-    "rules": {
-      "title": "Regras de Trânsito",
-      "text": "Compilação do código da estrada relevante para ciclistas."
-    },
-    "routes": {
-      "title": "Percursos",
-      "text": "Biblioteca de percursos turísticos e de lazer em bicicleta com vários níveis de dificuldade."
-    },
-    "beginner": {
-      "title": "Principiantes",
-      "text": "Compilação de dicas úteis para quem está a dar os seus primeiros passos na bicicleta em meio urbano."
-    },
-    "forum": {
-      "title": "Fórum",
-      "text": "Local de partilha de ideias, opiniões, dúvidas e conselhos entre a comunidade do ciclismo."
-    },
-    "events": {
-      "title": "Eventos",
-      "text": "Calendário com eventos relativos ao mundo do ciclismo."
+    "blog": {
+      "header": {
+        "part1": "Visita o nosso ",
+        "part2": "blog"
+      },
+      "sub-heading": "Não percas os nossos artigos sobre ciclismo e outros assuntos relevantes como mobilidade, a vida urbana e muito mais.",
+      "see-more": "Ver mais",
+      "comments": "Comentários",
+      "likes": "Gostos",
+      "read": "Ler artigo"
     }
   },
 
-  "blog": {
-    "header": {
-      "part1": "Visita o nosso ",
-      "part2": "blog"
-    },
-    "sub-heading": "Não percas os nossos artigos sobre ciclismo e outros assuntos relevantes como mobilidade, a vida urbana e muito mais.",
-    "see-more": "Ver mais",
-    "comments": "Comentários",
-    "likes": "Gostos",
-    "read": "Ler artigo"
+  "team": {
+
   },
 
   "newsletter": {
