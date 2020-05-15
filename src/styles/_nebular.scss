@@ -13,6 +13,7 @@
   @include nb-popover-theme;
   @include nb-icon-theme;
   @include nb-select-theme;
+  @include nb-option-list-theme;
   @include nb-toast-theme;
 };
 
@@ -213,6 +214,7 @@ nb-toggle.map-filter-toggle .toggle-label {
 .nb-theme-default nb-option.success:hover {
   color: #00d68f;
 }
+.nb-theme-default nb-option.success.selected { background-color: white; }
 .nb-theme-default nb-option-group, .nb-theme-default nb-option.success {
   color: #222b45;
 }
