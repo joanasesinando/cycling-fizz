@@ -1,6 +1,5 @@
-import {Component, HostListener, OnInit} from '@angular/core';
+import {AfterViewInit, Component, HostListener, OnInit} from '@angular/core';
 
-import { faPaperPlane } from '@fortawesome/free-solid-svg-icons';
 import { faTwitter, faInstagram, faFacebookF, faYoutube } from '@fortawesome/free-brands-svg-icons';
 
 @Component({
@@ -8,26 +7,24 @@ import { faTwitter, faInstagram, faFacebookF, faYoutube } from '@fortawesome/fre
   templateUrl: './the-project.component.html',
   styleUrls: ['./the-project.component.scss']
 })
-export class TheProjectComponent implements OnInit {
+export class TheProjectComponent implements OnInit, AfterViewInit {
 
   //FontAwesome icons
   faTwitter = faTwitter;
   faInstagram = faInstagram;
   faFacebookF = faFacebookF;
   faYoutube = faYoutube;
-  faPaperPlane = faPaperPlane;
 
   mobileView: boolean = false;
 
-  //flag so the function doesn't run on construction bc it wouldn't be able to find #features-container
-  doChangeFading:  boolean = false;
-
   constructor() {
     this.onWindowResize();
-    this.doChangeFading = true;
   }
 
   ngOnInit() {
+  }
+
+  ngAfterViewInit() {
     this.changeFading();
   }
 
@@ -48,7 +45,6 @@ export class TheProjectComponent implements OnInit {
   @HostListener('window:resize', [])
   onWindowResize() {
     this.mobileView = window.innerWidth <= 991.98;
-    if(this.doChangeFading) this.changeFading();
   }
 
 }

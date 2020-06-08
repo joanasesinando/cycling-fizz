@@ -50,10 +50,6 @@ const routes: Routes = [
     component: PageNotFoundComponent,
   },
   {
-    path: 'typography',
-    loadChildren: () => import('./cf-typography/cf-typography.module').then(mod => mod.CfTypographyModule),
-  },
-  {
     path: '**',
     redirectTo: '/404',
     pathMatch: 'full',
