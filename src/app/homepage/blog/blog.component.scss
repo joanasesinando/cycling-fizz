@@ -1,15 +1,3 @@
-/* ===================================================================
- *
- *  Cycling Fizz v1.0 Blog Stylesheet
- *  03-11-2019 #FIXME
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  01. blog
- *  02. jumping balls
- *
- * =================================================================== */
-
 @import "~styles/colors";
 @import "~styles/mixins";
 
@@ -18,48 +6,26 @@
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
 
-/* ===================================================================
- *  01. blog
- *
- * ------------------------------------------------------------------- */
-
-#blog {
+#section-blog {
   margin-top: 10rem;
-  font-family: 'quicksand-regular', sans-serif;
-
-  @include media-breakpoint-down(sm) {
-    margin-top: 5rem;
-  }
-
-  h2 {
-    span {
-      background: linear-gradient(0deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 50%);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-    }
-  }
+  @include media-breakpoint-down(sm) { margin-top: 5rem; }
 
   h5 {
     width: 40vw;
     @include media-breakpoint-down(md) { width: auto; }
   }
 
-  p {
-    line-height: 1.6rem;
-  }
-
   .see-more {
-    @include media-breakpoint-up(lg) { //desktops, tablets & phones
+    @include media-breakpoint-up(lg) {
       position: relative;
       left: 77%;
     }
 
     a {
-      color: $cf-darkGray;
-      text-decoration: underline;
-
-      &:hover {
-        color: $cf-orange;
+      transition: all 200ms ease-in-out;
+      &:hover, &:focus { color: $cf-darkGray; }
+      @include media-breakpoint-up(lg) {
+        &:hover, &:focus { transform: translateX(.8rem); }
       }
     }
   }
@@ -96,7 +62,7 @@
 
 
 /* ===================================================================
- *  02. jumping balls
+ *  jumping balls
  *
  * ------------------------------------------------------------------- */
 

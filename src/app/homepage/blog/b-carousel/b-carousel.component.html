@@ -1,0 +1,16 @@
+<div class="wrapper">
+    <ngx-slick-carousel class="blog-carousel"
+                        #slickModal="slick-carousel"
+                        [config]="slideConfig">
+        <div ngxSlickItem *ngFor="let post of blogPosts" class="slide">
+            <app-b-card
+                    [photoSrc]="post.photoSrc"
+                    [topic]="post.topic"
+                    [date]="post.date"
+                    [title]="post.title"
+                    [nrComments]="post.nrComments"
+                    [nrLikes]="post.nrLikes">
+            </app-b-card>
+        </div>
+    </ngx-slick-carousel>
+</div>

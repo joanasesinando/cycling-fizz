@@ -1,24 +1,24 @@
 <div class="card shadow" style="width: 18rem;">
     <img src="{{photoSrc}}" class="card-img-top" alt="Blog post image">
     <div class="card-body">
-        <h6 class="card-subtitle mb-2"
-            attr.data-after-content=" | {{ date | date:'dd/MM/yyy' }}">
+        <h6 class="card-subtitle font-qks-bold text-uppercase text-orange mb-2"
+            attr.date=" | {{ date | date:'dd/MM/yyy' }}">
             {{topic}}
         </h6>
-        <h5 class="card-title">{{title}}</h5>
-        <span class="engagement mr-2">
-            <fa-icon [icon]="faComments" id="comments"></fa-icon>
+        <h5 class="card-title font-qks-bold">{{title}}</h5>
+        <span class="engagement font-qks-regular mr-2">
+            <fa-icon [icon]="faComments" id="comments" class=" text-gray"></fa-icon>
             {{nrComments}} {{'homepage.blog.comments' | translate}}
         </span>
-        <span class="engagement">
-            <fa-icon [icon]="faHeart" id="likes"></fa-icon>
+        <span class="engagement font-qks-regular">
+            <fa-icon [icon]="faHeart" id="likes" class="text-red"></fa-icon>
             {{nrLikes}} {{'homepage.blog.likes' | translate}}
         </span>
         <button class="read mt-4">
             <div class="circle">
                 <span class="icon arrow"></span>
             </div>
-            <p class="button-text">{{'homepage.blog.read' | translate}}</p>
+            <p class="button-text font-qks-regular">{{'homepage.blog.read' | translate}}</p>
         </button>
     </div>
 </div>
