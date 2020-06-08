@@ -5,12 +5,12 @@
  *
  * =================================================================== */
 
-@import "~styles/colors";
-@import "~styles/mixins";
+@import "../../../../styles/colors";
+@import "../../../../styles/mixins";
 
-@import "../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../node_modules/bootstrap/scss/variables";
-@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
 
 $gradient: linear-gradient(180deg, #FF923C 0%, #FFC340 100%);
 $darkGradient: linear-gradient(180deg, darken(#FF923C, 10%) 0%, darken(#FFC340, 10%) 100%);
