@@ -36,7 +36,8 @@ export class MapGalleryComponent implements OnInit {
     autoplay: true,
     infinite: true,
     autoplaySpeed: 3000,
-    mobileFirst: true
+    mobileFirst: true,
+    lazyLoad: 'ondemand'
   };
 
   faUpload = faUpload;

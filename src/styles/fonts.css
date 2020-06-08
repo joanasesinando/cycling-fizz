@@ -1,14 +1,14 @@
 /* ===================================================================
- *  Martel
+ *  Cooper BT
  *
  * ------------------------------------------------------------------- */
-  
+
 @font-face {
-    font-family: "martel-extraBold";
+    font-family: "cooper-medium";
     /* loads local fonts if present */
-    src: local('Martel-ExtraBold'),
-         url('~assets/fonts/Martel/Martel-ExtraBold.woff2') format('woff2'),
-         url('~assets/fonts/Martel/Martel-ExtraBold.woff') format('woff');
+    src: local('Cooper-Medium'),
+    url('~assets/fonts/Cooper BT/Cooper-Medium.woff2') format('woff2'),
+    url('~assets/fonts/Cooper BT/Cooper-Medium.woff') format('woff');
     font-style: normal;
     font-weight: normal;
     font-display: swap;
@@ -81,36 +81,6 @@
     src: local('NothingYouCouldDo-Regular'),
          url('../assets/fonts/NothingYouCouldDo/NothingYouCouldDo-Regular.woff2') format('woff2'),
          url('../assets/fonts/NothingYouCouldDo/NothingYouCouldDo-Regular.woff') format('woff');
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    unicode-range: U+000-5FF; /* load only latin glyphs */
-}
-
-
-/* ===================================================================
- *  Solway
- *
- * ------------------------------------------------------------------- */
-
-@font-face {
-    font-family: "solway-regular";
-    /* loads local fonts if present */
-    src: local('Solway-Regular'),
-         url('~assets/fonts/Solway/Solway-Regular.woff2') format('woff2'),
-         url('~assets/fonts/Solway/Solway-Regular.woff') format('woff');
-    font-style: normal;
-    font-weight: normal;
-    font-display: swap;
-    unicode-range: U+000-5FF; /* load only latin glyphs */
-}
-
-@font-face {
-    font-family: "solway-bold";
-    /* loads local fonts if present */
-    src: local('Solway-Bold'),
-    url('~assets/fonts/Solway/Solway-Bold.woff2') format('woff2'),
-    url('~assets/fonts/Solway/Solway-Bold.woff') format('woff');
     font-style: normal;
     font-weight: normal;
     font-display: swap;

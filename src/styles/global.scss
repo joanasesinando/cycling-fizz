@@ -1,12 +1,12 @@
 /* ===================================================================
  *
  *   TOC:
- *   - Basic styles
- *   - Buttons
- *   - Scrollbar
- *   - Tooltips
- *   - Badges
- *   - Slick slider
+ *    - Basic styles
+ *    - Buttons
+ *    - Scrollbar
+ *    - Tooltips
+ *    - Badges
+ *    - Slick slider
  *
  * =================================================================== */
 
@@ -23,19 +23,18 @@
 @import "~bootstrap/scss/mixins";
 
 
+
 /* ===================================================================
  *  Basic styles
  *
  * ------------------------------------------------------------------- */
 
-.font-mrt-xBold { font-family: "martel-extraBold", sans-serif; }
-.font-qks-bold { font-family: "quicksand-bold", sans-serif; }
+.font-cpr-medium { font-family: "cooper-medium", sans-serif; }
 .font-qks-light { font-family: "quicksand-light", sans-serif; }
-.font-qks-medium { font-family: "quicksand-medium", sans-serif; }
 .font-qks-regular { font-family: "quicksand-regular", sans-serif; }
+.font-qks-medium { font-family: "quicksand-medium", sans-serif; }
+.font-qks-bold { font-family: "quicksand-bold", sans-serif; }
 .font-nycd-regular { font-family: "nycdo-regular", sans-serif; }
-.font-slw-regular { font-family: "solway-regular", sans-serif; }
-.font-slw-bold { font-family: "solway-bold", sans-serif; }
 
 .text-dark-black { color: $cf-text !important;} // FIXME: tirar !importants
 .text-dark-header { color: $cf-dark !important; }
@@ -56,27 +55,27 @@ h1, .h1,
 h2, .h2,
 h3, .h3 {
   color: $cf-dark;
-  font-family: "martel-extraBold", sans serif;
+  font-family: "cooper-medium", sans serif;
 }
 
 h1, .h1 {
-  font-size: 2.8rem;
+  font-size: 3rem;
   line-height: 1.4em;
-  @include media-breakpoint-down(md){ font-size: 2.3rem; }
-  @include media-breakpoint-down(sm){ font-size: 1.7rem; }
+  @include media-breakpoint-down(md){ font-size: 2.5rem; line-height: initial; }
+  @include media-breakpoint-down(sm){ font-size: 1.9rem; }
 }
 
 h2, .h2 {
-  font-size: 2.5rem;
-  @include media-breakpoint-down(md){ font-size: 2rem; }
-  @include media-breakpoint-down(sm){ font-size: 1.6rem; }
+  font-size: 2.7rem;
+  @include media-breakpoint-down(md){ font-size: 2.2rem; line-height: initial; }
+  @include media-breakpoint-down(sm){ font-size: 1.8rem; }
 }
 
 h3, .h3 {
-  font-size: 2rem;
+  font-size: 2.2rem;
   line-height: 3rem;
-  @include media-breakpoint-down(md){ font-size: 1.7rem; }
-  @include media-breakpoint-down(sm){ font-size: 1.4rem; }
+  @include media-breakpoint-down(md){ font-size: 1.9rem; line-height: initial; }
+  @include media-breakpoint-down(sm){ font-size: 1.6rem; }
 }
 
 h5, .h5 {
