@@ -35,12 +35,6 @@ section {
       padding: 0 1.5rem;
       z-index: 5;
 
-      .filter-icon {
-        color: white;
-        font-size: 1.2rem;
-        &:hover { color: darken(white, 5); }
-      }
-
       app-map-quick-filter-toggle:last-of-type {
         margin-right: 0 !important;
       }
