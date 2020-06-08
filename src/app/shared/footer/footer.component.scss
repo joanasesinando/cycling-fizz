@@ -1,10 +1,3 @@
-/* ===================================================================
- *
- *  Cycling Fizz v1.0 Footer Stylesheet
- *  11-10-2019 #FIXME
- *
- * =================================================================== */
-
 @import "~styles/colors";
 @import "~styles/mixins";
 
@@ -14,44 +7,35 @@
 
 
 footer {
-    color: $cf-darkGray;
-    font-family: 'quicksand-regular', sans-serif;
     overflow-x: hidden;
-    background: $cf-bege;
+    background: $cf-lightGray;
 
-    section {
-      width: 100vw;
-    }
+    section { width: 100vw; }
 
     p {
         margin-top: 1.5rem;
         line-height: 1.9rem;
-
-        a {
-            color: $cf-darkGray;
-        }
-    } #contactar { text-align: left; }
+    }
 
     .sub-heading-icon {
         display: inline-flex;
-    }
 
-    .credits a {
-        color: $cf-darkGray;
-        text-decoration: underline;
-        &:hover, &:focus {
-            color: $cf-orange;
+        svg {
+            width: 1.3rem;
+            height: 1.3rem;
         }
     }
+
+    .contact a:hover, .contact a:focus,
+    .credits a:hover, .credits a:focus { color: $cf-darkGray; }
 
     .social a {
         text-align: center;
         height: 3rem;
         width: 3rem;
-        background: #cecbc630;
+        background: darken($cf-lightGray, 4);
         border-radius: 100%;
         line-height: 3rem;
-        color: $cf-darkGray;
         @include transition(all 0.2s ease-in-out);
 
         @include media-breakpoint-up(lg){

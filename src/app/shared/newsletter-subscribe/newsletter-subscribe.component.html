@@ -19,10 +19,10 @@
 </form>
 
 <div *ngIf="(subscriptionEmail.invalid && subscriptionEmail.touched) || subscriptionEmail.dirty">
-    <small *ngIf="subscriptionEmail.errors?.required" class="font-qks-regular text-error float-left">
+    <small *ngIf="subscriptionEmail.errors?.required" class="font-qks-medium text-red float-left">
         ⚠ {{'errors.requiredField' | translate}}
     </small>
-    <small *ngIf="subscriptionEmail.errors?.pattern" class="font-qks-regular text-error float-left">
+    <small *ngIf="subscriptionEmail.errors?.pattern" class="font-qks-medium text-red float-left">
         ⚠ {{'errors.invalidEmail' | translate}}
     </small>
 </div>
