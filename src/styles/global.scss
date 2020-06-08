@@ -36,14 +36,14 @@
 .font-qks-bold { font-family: "quicksand-bold", sans-serif; }
 .font-nycd-regular { font-family: "nycdo-regular", sans-serif; }
 
-.text-dark-black { color: $cf-text !important;} // FIXME: tirar !importants
-.text-dark-header { color: $cf-dark !important; }
-.text-dark-gray { color: $cf-darkGray !important; }
-.text-gray { color: $cf-gray !important; }
-.text-light-gray { color: $cf-lightGray !important; }
-.text-orange { color: $cf-orange !important; }
-.text-purple {color: $cf-purple !important;  }
-.text-error {color: $cf-error !important;  }
+.text-dark-black { color: $cf-text;}
+.text-dark-header { color: $cf-dark; }
+.text-dark-gray { color: $cf-darkGray; }
+.text-gray { color: $cf-gray; }
+.text-light-gray { color: $cf-lightGray; }
+.text-orange { color: $cf-orange; }
+.text-purple {color: $cf-purple;  }
+.text-error {color: $cf-error;  }
 
 
 html, body {
@@ -59,23 +59,23 @@ h3, .h3 {
 }
 
 h1, .h1 {
-  font-size: 3rem;
+  font-size: 2.8rem;
   line-height: 1.4em;
-  @include media-breakpoint-down(md){ font-size: 2.5rem; line-height: initial; }
-  @include media-breakpoint-down(sm){ font-size: 1.9rem; }
+  @include media-breakpoint-down(md){ font-size: 2.3rem; line-height: initial; }
+  @include media-breakpoint-down(sm){ font-size: 1.7rem; }
 }
 
 h2, .h2 {
-  font-size: 2.7rem;
-  @include media-breakpoint-down(md){ font-size: 2.2rem; line-height: initial; }
-  @include media-breakpoint-down(sm){ font-size: 1.8rem; }
+  font-size: 2.5rem;
+  @include media-breakpoint-down(md){ font-size: 2rem; line-height: initial; }
+  @include media-breakpoint-down(sm){ font-size: 1.6rem; }
 }
 
 h3, .h3 {
-  font-size: 2.2rem;
+  font-size: 2rem;
   line-height: 3rem;
-  @include media-breakpoint-down(md){ font-size: 1.9rem; line-height: initial; }
-  @include media-breakpoint-down(sm){ font-size: 1.6rem; }
+  @include media-breakpoint-down(md){ font-size: 1.7rem; line-height: initial; }
+  @include media-breakpoint-down(sm){ font-size: 1.4rem; }
 }
 
 h5, .h5 {
@@ -83,10 +83,10 @@ h5, .h5 {
   font-family: "quicksand-regular", sans-serif;
   font-size: 1.2rem;
   line-height: 1.5em;
-  @include media-breakpoint-down(md){ font-size: 1.1rem; }
+  @include media-breakpoint-down(md){ font-size: 1.1rem; line-height: initial; }
 }
 
-.dark-dialog {
+.dark-dialog { //FIXME: think of something better
   .modal-content {
     background-color: #263238;
   }

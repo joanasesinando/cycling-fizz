@@ -49,7 +49,7 @@ export class FCardComponent implements OnInit {
   @Input() description: string;
   @Input() routerLink: string = "/404";
 
-    constructor(private sanitizer: DomSanitizer) { }
+  constructor(private sanitizer: DomSanitizer) { }
 
   getDay() : string {
     let day = (new Date()).getDate().toString();

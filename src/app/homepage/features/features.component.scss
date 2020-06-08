@@ -1,10 +1,3 @@
-/* ===================================================================
- *
- *  Cycling Fizz v1.0 Features Stylesheet
- *  27-05-2019 #FIXME
-
- * =================================================================== */
-
 @import "~styles/colors";
 @import "~styles/mixins";
 
@@ -13,9 +6,7 @@
 @import "../../../../node_modules/bootstrap/scss/mixins";
 
 
-
-#features {
-  font-family: 'quicksand-regular', sans-serif;
+#section-features {
   width: 100vw;
   height: 100vh;
   min-height: 750px;
@@ -42,7 +33,7 @@
  * ------------------------------------------------------------------- */
 
 @include  media-breakpoint-down(md) { // phones & tablets
-  #features {
+  #section-features {
     margin: 0;
 
     h3 {
@@ -54,7 +45,6 @@
       background-size: contain;
       width: 60vw;
       height: 75vw;
-      //z-index: -1;
       position: relative;
     }
   }
