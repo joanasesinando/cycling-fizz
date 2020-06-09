@@ -1,5 +1,16 @@
-<section id="page-not-found" class="d-flex flex-column justify-content-center">
-    <app-svg404></app-svg404>
-    <app-text404></app-text404>
-    <button class="btn btn-primary" type="button" (click)="goBack()">Retroceder</button>
+<section id="section-404">
+    <div class="wrapper shadow-sm d-flex flex-wrap justify-content-center align-items-center py-5 py-xl-0">
+        <img class="mr-md-3 mr-lg-5" src="../../../assets/images/404/crash.svg" alt="Bike crashing">
+        <div class="contents d-flex flex-column justify-content-center align-items-center align-items-md-start
+        ml-md-3 ml-lg-5 mb-0 mb-xl-5">
+            <h1 class="mt-0 mb-3">404</h1>
+            <h3 class="font-qks-medium text-center text-md-left">{{'page404.title' | translate}}</h3>
+            <h4 class="font-qks-regular text-dark-gray text-center text-md-left">{{'page404.text' | translate}}</h4>
+
+            <button class="expansible mt-4" (click)="goBack()">
+                <div class="circle"><span class="icon arrow"></span></div>
+                <p class="button-text font-qks-regular text-dark-header">{{'page404.goBack' | translate}}</p>
+            </button>
+        </div>
+    </div>
 </section>

@@ -239,10 +239,10 @@ button.btn-outline-primary:hover svg rect {
 
 
 /* -------------------------------------------------------------------
- * button.read
+ * button.expansible
 /* ------------------------------------------------------------------- */
 
-button.read {
+button.expansible {
   position: relative;
   display: inline-block;
   outline: none;
@@ -311,7 +311,7 @@ button.read {
   }
 }
 
-button.read:hover {
+button.expansible:hover {
   .circle {
     width: 85%;
     .icon {
@@ -327,7 +327,7 @@ button.read:hover {
   }
 }
 
-button.read:focus {
+button.expansible:focus {
   outline:none;
 }
 

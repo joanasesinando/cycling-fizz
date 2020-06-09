@@ -1,0 +1,12 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/mixins";
+
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
+
+
+.badge { font-size: 80%; }
+.badge-new { background-color: $cf-pink; }
+.badge-soon { background-color: $cf-yellow; }
+.badge-primary { background: $cf-gradient-orange; }

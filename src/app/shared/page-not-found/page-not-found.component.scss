@@ -5,16 +5,53 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-#page-not-found {
+#section-404 {
   height: 100vh;
   width: 100vw;
-  background-color: $cf-dark;
+  background: $cf-gradient-orange;
 
-  button {
-    display: block;
-    margin-left: auto;
-    margin-right: auto;
-    text-transform: uppercase;
-    padding: 0 3rem;
+  .wrapper {
+    height: calc(100vh - 6rem);
+    width: calc(100vw - 6rem);
+    @include media-breakpoint-down(md) {
+      height: calc(100vh - 4rem);
+      width: calc(100vw - 4rem);
+    }
+    @include media-breakpoint-down(sm) {
+      height: calc(100vh - 3rem);
+      width: calc(100vw - 3rem);
+    }
+
+    background-color: white;
+    border-radius: 1rem;
+
+    // center vertically & horizontally
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+
+    .contents {
+      width: 40%;
+      @include media-breakpoint-down(lg) { width: 40%; }
+      @include media-breakpoint-down(sm) { width: 90%; }
+    }
+  }
+
+  h1 {
+    font-size: 10rem;
+    @include media-breakpoint-down(md) { font-size: 8rem; }
+    @include media-breakpoint-down(sm) { font-size: 6rem; }
+  }
+
+  h4 {
+    font-size: 1.4rem;
+    @include media-breakpoint-down(md) { font-size: 1.3rem; }
+    @include media-breakpoint-down(sm) { font-size: 1.1rem; }
+  }
+
+  img {
+    width: 38vw;
+    @include media-breakpoint-down(sm) { width: 60vw; }
   }
 }

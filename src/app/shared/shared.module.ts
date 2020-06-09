@@ -12,8 +12,6 @@ import { ModalLoginComponent } from './navbar/modal-login/modal-login.component'
 import { ModalRegisterComponent } from './navbar/modal-register/modal-register.component';
 import { BtnOutlineComponent } from './buttons/btn-outline/btn-outline.component';
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
-import { Svg404Component } from './page-not-found/svg404/svg404.component';
-import { Text404Component } from './page-not-found/text404/text404.component';
 import { BtnFloatingComponent } from './buttons/btn-floating/btn-floating.component';
 import { CreditsComponent } from './credits/credits.component';
 import { BannerComponent } from './banner/banner.component';
@@ -25,8 +23,8 @@ import {MustMatchDirective} from "../_helpers/must-match.directive";
 import { ModalCompleteRegistrationComponent } from './navbar/modal-complete-registration/modal-complete-registration.component';
 import {NbButtonModule, NbIconModule} from '@nebular/theme';
 import { GoTopComponent } from './go-top/go-top.component';
-import { BadgeTextComponent } from './badge-text/badge-text.component';
-import { BadgeDotComponent } from './badge-dot/badge-dot.component';
+import { BadgeTextComponent } from './badges/badge-text/badge-text.component';
+import { BadgeDotComponent } from './badges/badge-dot/badge-dot.component';
 
 
 @NgModule({
@@ -38,8 +36,6 @@ import { BadgeDotComponent } from './badge-dot/badge-dot.component';
     ModalRegisterComponent,
     BtnOutlineComponent,
     PageNotFoundComponent,
-    Svg404Component,
-    Text404Component,
     BtnFloatingComponent,
     CreditsComponent,
     BannerComponent,
