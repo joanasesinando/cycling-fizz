@@ -35,8 +35,10 @@ nav {
   }
 
   .navbar-collapse {
-    max-height: 60vh;
-    overflow-y: scroll;
+    @include media-breakpoint-down(sm) {
+      max-height: 60vh;
+      overflow-y: auto;
+    }
   }
 
   ::-webkit-scrollbar {
