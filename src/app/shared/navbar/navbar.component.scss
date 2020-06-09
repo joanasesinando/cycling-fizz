@@ -6,13 +6,12 @@
 @import "~bootstrap/scss/mixins";
 
 
-
 /* ===================================================================
  *  main navigation
  *
  * ------------------------------------------------------------------- */
 
- nav {
+nav {
   min-height: 4rem; // when changed, update navbar-toggler margins
   top: 0.7em;
   z-index: 600;
@@ -42,10 +41,14 @@
   }
 }
 
-nav.navbar-top {
+
+/* ===================================================================
+ *  navbar position
+ *
+ * ------------------------------------------------------------------- */
+
+.navbar-top {
   top: 0;
-  background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
-  box-shadow: 0 2px 13px 0 #a5a5a57a;
 
   .navbar-brand {
     width: 12rem;
@@ -61,38 +64,45 @@ nav.navbar-top {
   }
 }
 
-nav.navbar-top.navbar-white {
-  background: white;
+
+/* ===================================================================
+ *  navbar background
+ *
+ * ------------------------------------------------------------------- */
+
+.navbar-white { background: white; }
+.navbar-shadow { box-shadow: 0 2px 13px 0 #a5a5a57a; }
+
+.navbar-tinted-white {
+  background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
 }
 
-nav.bg-white {
-    top: 0;
-    background: linear-gradient(180deg, #FFFFFF 43.95%, rgba(255, 255, 255, 0.85) 100%);
-    box-shadow: 0 2px 13px 0 #a5a5a57a;
+.navbar-tinted-dark {
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.17) 0%, rgba(0, 0, 0, 0.085) 100%);
 }
 
-nav.light .navbar-nav .nav-item .nav-link{
+
+/* ===================================================================
+ *  navbar text
+ *
+ * ------------------------------------------------------------------- */
+
+.navbar-text-light {
   @include media-breakpoint-up(lg) {
-    color: $cf-lightGray;
-    &:hover, img:hover {
-      color: $cf-yellow;
+    .nav-item .nav-link {
+      color: $cf-lightGray !important;
+      &:hover, img:hover { color: $cf-yellow !important; }
     }
   }
+
+  .hamburger-inner,
+  .hamburger-inner::before,
+  .hamburger-inner::after { background-color: $cf-lightGray; }
+
+  //NOTE: importants just bc I want this rule before
 }
 
-nav.light .navbar-brand {
-  width: 17rem;
-  height: 4rem;
-  background: url("../../../assets/images/logo.svg") no-repeat center;
 
-  background-size: 17rem 4rem;
-  @include media-breakpoint-down(md) {
-    width: 11rem;
-    height: 1.7rem;
-    background: url("../../../assets/images/logo.svg") no-repeat center;
-    background-size: 11rem 1.7rem;
-  }
-}
 
 #navbarResponsive {
   @include media-breakpoint-down(md) {
@@ -102,7 +112,6 @@ nav.light .navbar-brand {
 }
 
 .navbar-nav {
-  font-family: "quicksand-medium", sans-serif;
   font-size: 1.2em;
 
   .nav-item {
@@ -113,14 +122,10 @@ nav.light .navbar-brand {
     .nav-link {
       color: $cf-dark;
       @include transition(color 0.1s ease-in-out);
-      &:hover {
-        cursor: pointer;
-      }
+      &:hover { cursor: pointer; }
 
       @include media-breakpoint-up(lg) {
-        &:hover, img:hover {
-          color: $cf-orange;
-        }
+        &:hover, img:hover { color: $cf-orange; }
       }
 
       @include media-breakpoint-down(md) {
@@ -131,9 +136,7 @@ nav.light .navbar-brand {
   }
 }
 
-.nav-link[aria-expanded="true"]{
-  color: $cf-orange !important;
-}
+.nav-link[aria-expanded="true"]{ color: $cf-orange !important; } //FIXME remove this important
 
 .dropdown-menu {
   font-family: 'quicksand-regular', sans-serif;
@@ -155,13 +158,8 @@ nav.light .navbar-brand {
       padding-bottom: 0.5rem;
       padding-top: 0.5rem;
     }
-    &:focus, &:hover {
-      background-color: #e9ecef;
-    }
-
-    &:hover {
-      cursor: pointer;
-    }
+    &:focus, &:hover { background-color: #e9ecef; }
+    &:hover { cursor: pointer; }
   }
 
   fa-icon, img { margin-right: 1rem; }
@@ -184,22 +182,15 @@ nav.light .navbar-brand {
       height: 1.3rem;
       padding-right: 1rem;
     }
-
-    button {
-      padding: 0 4rem;
-    }
+    button { padding: 0 4rem; }
   }
 
   @include media-breakpoint-down(sm) {
-    button {
-      padding: 0 40%;
-    }
+    button { padding: 0 40%; }
   }
 
   @include media-breakpoint-down(xs) {
-    .dropdown-item {
-      padding: 0;
-    }
+    .dropdown-item { padding: 0; }
   }
 }
 
@@ -223,13 +214,5 @@ $hamburger-active-hover-opacity: $hamburger-hover-opacity;
 @import "../../../../node_modules/hamburgers/_sass/hamburgers/hamburgers.scss";
 
 @include media-breakpoint-down(md) {
-  .hamburger:focus {
-    outline: none;
-  }
-}
-
-nav.light {
-  .hamburger-inner, .hamburger-inner::before, .hamburger-inner::after {
-    background-color: $cf-lightGray;
-  }
+  .hamburger:focus { outline: none; }
 }

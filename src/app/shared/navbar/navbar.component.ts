@@ -29,7 +29,6 @@ export class NavbarComponent implements OnInit {
 
   nav;
   navbarToggler;
-  navbar;
   navigation;
   currentActiveDropdown  = null;
 
@@ -40,17 +39,22 @@ export class NavbarComponent implements OnInit {
 
     // subscribe to router
     _router.events.subscribe(() => {
-      if(_router.url === '/map') {
-        this.nav.addClass("navbar-top");
-        this.nav.addClass("navbar-white");
-      }
-      else if (this.nav.hasClass("navbar-top")) {
-        this.nav.removeClass("navbar-top");
-        this.nav.removeClass("navbar-white");
-      }
-      if (_router.url != '/' && _router.url != '/map') this.nav.addClass("light");
-      else this.nav.removeClass("light");
+      if(_router.url === '/') {
+        this.unglueFromTop(this.nav);
+        this.makeBgDefault(this.nav);
+        this.makeTextDark(this.nav);
 
+      } else if(_router.url === '/map') {
+        this.glueToTop(this.nav);
+        this.makeBgWhite(this.nav);
+        this.makeTextDark(this.nav);
+
+      } else {
+        this.glueToTop(this.nav);
+        this.makeBgTintedDark(this.nav);
+        this.makeTextLight(this.nav);
+      }
+      this.removeShadow(this.nav);
     });
 
     // translation
@@ -63,7 +67,6 @@ export class NavbarComponent implements OnInit {
   ngOnInit() {
     this.nav = $('#mainNav');
     this.navbarToggler = $('.navbar-toggler');
-    this.navbar = $('.navbar');
     this.navigation = $('.navbar-collapse');
 
     this.hideMobileMenuWhenLinkClicked();
@@ -72,14 +75,37 @@ export class NavbarComponent implements OnInit {
 
   showNavbar() {
     this.navbarToggler.addClass('is-active');
-    this.navbar.addClass('bg-white');
+    this.glueToTop(this.nav);
+    this.makeBgWhite(this.nav);
+    this.addShadow(this.nav);
+    this.makeTextDark(this.nav);
     this.navigation.slideDown();
   }
 
   hideNavbar() {
     this.navigation.slideUp();
     this.navbarToggler.removeClass('is-active');
-    setTimeout(() => this.navbar.removeClass('bg-white'), 300); //gives time for the slideUp to execute
+
+    setTimeout(() => {
+      if(this.router.url === '/') {
+        if(this.nav.offset().top <= 100) {
+          this.unglueFromTop(this.nav);
+          this.makeBgDefault(this.nav);
+          this.removeShadow(this.nav);
+        }
+
+      } else if(this.router.url === '/map') {
+        this.makeBgWhite(this.nav);
+
+      } else {
+        if(this.nav.offset().top <= 100) {
+          this.makeBgTintedDark(this.nav);
+          this.makeTextLight(this.nav);
+          this.removeShadow(this.nav);
+        }
+      }
+
+    }, 300); //gives time for the slideUp to execute
 
     //reset arrows
     for(let i in this.dropdownsOpen) this.dropdownsOpen[i] = false;
@@ -107,8 +133,8 @@ export class NavbarComponent implements OnInit {
 
   hideMobileMenuWhenClickedOutside() {
     $("html").on('click', (event) => {
-      if(!this.navbar.is(event.target) // The target of the click isn't the navbar
-          && this.navbar.has(event.target).length === 0 // Nor a child element of the navbar
+      if(!this.nav.is(event.target) // The target of the click isn't the navbar
+          && this.nav.has(event.target).length === 0 // Nor a child element of the navbar
           && this.navbarToggler.hasClass('is-active')) { // And the navbar is active
 
         this.hideNavbar();
@@ -122,25 +148,67 @@ export class NavbarComponent implements OnInit {
     });
   }
 
-  @HostListener('window:scroll', [])
-  onWindowScroll() {
+  glueToTop(nav) { nav.addClass('navbar-top'); }
+  unglueFromTop(nav) { nav.removeClass('navbar-top'); }
 
-    // Glue navbar to top on scroll
-    function navbarGlue(router) {
-      let mainNav = $('#mainNav');
+  makeBgWhite(nav) {
+    nav.removeClass('navbar-tinted-white');
+    nav.removeClass('navbar-tinted-dark');
+    nav.addClass('navbar-white');
+  }
 
-      if (mainNav.offset().top > 100) {
-        mainNav.addClass('navbar-top');
-        mainNav.removeClass('light');
-      }
-      else {
-        mainNav.removeClass('navbar-top');
-        if(router != '/' && router != '/map') mainNav.addClass('light');
+  makeBgTintedWhite(nav) {
+    nav.removeClass('navbar-white');
+    nav.removeClass('navbar-tinted-dark');
+    nav.addClass('navbar-tinted-white');
+  }
+
+  makeBgTintedDark(nav) {
+    nav.removeClass('navbar-white');
+    nav.removeClass('navbar-tinted-white');
+    nav.addClass('navbar-tinted-dark');
+  }
+
+  makeBgDefault(nav) {
+    nav.removeClass('navbar-white');
+    nav.removeClass('navbar-tinted-white');
+    nav.removeClass('navbar-tinted-dark');
+  }
+
+  addShadow(nav) { nav.addClass('navbar-shadow'); }
+  removeShadow(nav) { nav.removeClass('navbar-shadow'); }
+
+  makeTextLight(nav) { nav.addClass('navbar-text-light'); }
+  makeTextDark(nav) { nav.removeClass('navbar-text-light'); }
+
+  navbarChangeOnScroll(url) {
+    let mainNav = $('#mainNav');
+
+    if(mainNav.offset().top > 100) {
+      this.glueToTop(mainNav);
+      this.makeBgTintedWhite(mainNav);
+      this.addShadow(mainNav);
+      this.makeTextDark(mainNav);
+
+    } else {
+      if(url === '/') {
+        this.unglueFromTop(mainNav);
+        this.makeBgDefault(mainNav);
+        this.removeShadow(mainNav)
+        this.makeTextDark(mainNav);
+
+      } else {
+        this.glueToTop(mainNav);
+        this.makeBgTintedDark(mainNav);
+        this.removeShadow(mainNav);
+        this.makeTextLight(mainNav);
       }
     }
+  }
 
-    // Glue now if page is not at top & is not map
-    if(this.router.url != '/map') navbarGlue(this.router.url);
+  @HostListener('window:scroll', [])
+  onWindowScroll() {
+    if(this.router.url != '/map') this.navbarChangeOnScroll(this.router.url);
   }
 
   @HostListener('window:resize', [])

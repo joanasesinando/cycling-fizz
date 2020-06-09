@@ -1,5 +1,6 @@
 @import "~styles/colors";
 @import "~styles/mixins";
+@import "~styles/shadows";
 
 @import "~bootstrap/scss/functions";
 @import "~bootstrap/scss/variables";
@@ -12,12 +13,24 @@
   background-size: cover;
   background-attachment: fixed;
   position: relative;
+
+  &:after {
+    content: "";
+    height: 6px;
+    @include media-breakpoint-down(sm) { height: 5px; }
+    background: $cf-gradient-orange;
+    box-shadow: $cf-shadow-orange;
+    width: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
 }
 
 .banner-text {
   color: $cf-lightGray;
   position: relative;
-  top: 40%;
+  top: 30%;
 
   h1:after {
     content: " ";
@@ -28,6 +41,8 @@
     height: 3.85px;
     width: 4.5rem;
     border-radius: 1rem;
+    position: relative;
+    bottom: -.3rem;
     @include media-breakpoint-down(md) { width: 4rem; }
     @include media-breakpoint-down(sm) { width: 3rem; }
   }
@@ -35,9 +50,7 @@
   p {
     font-family: quicksand-light, sans-serif;
     font-size: 1.1rem;
-    @include media-breakpoint-up(lg) {
-      width: 50rem;
-    }
+    @include media-breakpoint-up(lg) { width: 50rem; }
   }
 }
 
