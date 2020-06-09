@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import {TranslateService} from '@ngx-translate/core';
 
 @Component({
   selector: 'app-badge-text',
@@ -10,16 +11,16 @@ export class BadgeTextComponent implements OnInit {
   @Input() badgeType: string;
   @Input() badgeText: string;
 
-  constructor() { }
+  constructor(public translate: TranslateService) { }
 
   ngOnInit() {
     switch (this.badgeType) {
       case 'new':
-        this.badgeText = "Novo";
+        this.translate.stream('badges.new').subscribe((text:string) => { this.badgeText = text; });
         break;
 
       case 'soon':
-        this.badgeText = "Em Breve";
+        this.translate.stream('badges.soon').subscribe((text:string) => { this.badgeText = text; });
         break;
 
       default:

@@ -111,5 +111,10 @@
     "requiredField": "Required field",
     "invalidName": "Invalid name. Valid format: John Smith",
     "invalidEmail": "Invalid e-mail. Valid format: johnsmith@email.com"
+  },
+
+  "badges": {
+    "new": "New",
+    "soon": "Soon"
   }
 }

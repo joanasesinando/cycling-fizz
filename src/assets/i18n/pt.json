@@ -114,5 +114,10 @@
     "requiredField": "Campo obrigatório",
     "invalidName": "Nome inválido. Formato válido: João Silva",
     "invalidEmail": "E-mail inválido. Formato válido: joaosilva@email.com"
+  },
+
+  "badges": {
+    "new": "Novo",
+    "soon": "Em breve"
   }
 }
