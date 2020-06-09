@@ -1,9 +1,9 @@
-@import "~styles/_colors";
+@import "~styles/colors";
 @import "~styles/mixins";
 
-@import "../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../node_modules/bootstrap/scss/variables";
-@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 .container {
   padding-top: 10rem;
@@ -81,6 +81,7 @@ form {
     @include media-breakpoint-down(sm) {
       width: auto;
     }
+    a:hover, a:focus { color: $cf-text; }
   }
 
   .social a {
