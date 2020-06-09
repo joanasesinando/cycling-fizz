@@ -211,13 +211,11 @@ export class NavbarComponent implements OnInit {
   @HostListener('window:scroll', [])
   onWindowScroll() {
     /*------- Close NavBar on scroll (mobile) -------*/
-    const nv = $('#navbarResponsive');
-    const menuOpened = this.navbarToggler.hasClass('is-active');
-    if (menuOpened) {
+    if (this.navbarToggler.hasClass('is-active')) {
       this.hideNavbar();
     }
     /*-----------------------------------------------*/
-    if(this.router.url != '/map') this.navbarChangeOnScroll(this.router.url);
+    else if(this.router.url != '/map') this.navbarChangeOnScroll(this.router.url);
   }
 
   @HostListener('window:resize', [])

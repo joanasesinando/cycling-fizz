@@ -34,6 +34,16 @@ nav {
     }
   }
 
+  .navbar-collapse {
+    max-height: 60vh;
+    overflow-y: scroll;
+  }
+
+  ::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar space */
+    background: transparent;  /* Optional: just make scrollbar invisible */
+  }
+
   .navbar-toggler {
     // needed for the dropdown on mobile to work seamlessly
     margin-top: 0.7rem;
