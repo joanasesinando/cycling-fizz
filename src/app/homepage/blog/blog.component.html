@@ -1,16 +1,21 @@
-<section id="blog">
+<section id="section-blog">
+
     <h2 class="text-center" data-aos="fade-up">
         {{'homepage.blog.header.part1' | translate}}
-        <span>{{'homepage.blog.header.part2' | translate}}</span>!
+        <span class="text-gradient">{{'homepage.blog.header.part2' | translate}}</span>!
     </h2>
-    <h5 class="text-center mb-5 mx-3 d-block mx-lg-auto" data-aos="fade-up" data-aos-delay="200">{{'homepage.blog.sub-heading' | translate}}</h5>
+    <h5 class="text-center mb-5 mx-3 d-block mx-lg-auto" data-aos="fade-up" data-aos-delay="200">
+        {{'homepage.blog.sub-heading' | translate}}
+    </h5>
 
     <div data-aos="fade-up" data-aos-delay="400">
-        <app-carousel3 *ngIf="!carouselMobile" [deckArray]="cardArray"></app-carousel3>
-        <app-carousel1 *ngIf="carouselMobile" [cardArray]="cardArray"></app-carousel1>
+        <app-b-carousel [blogPosts]="cardArray"></app-b-carousel>
 
         <span class="see-more d-flex justify-content-center justify-content-lg-start" >
-            <a href="#">{{'homepage.blog.see-more' | translate}}<fa-icon [icon]="faArrowRight" class="ml-1"></fa-icon></a>
+            <a class="font-qks-medium text-dark-gray" href="#">
+                {{'homepage.blog.see-more' | translate}}
+                <i data-feather="arrow-right"></i>
+            </a>
         </span>
 
         <!-- Jumping balls -->
@@ -25,4 +30,5 @@
 
         <div id="background"></div>
     </div>
+
 </section>

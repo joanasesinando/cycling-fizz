@@ -1,26 +1,14 @@
-/* ===================================================================
- *
- *  Cycling Fizz v1.0 Navbar Stylesheet
- *  27-05-2019 #FIXME
- *  ------------------------------------------------------------------
- *
- *  TOC:
- *  01. main navigation
- *  02. hamburger button
- *
- * =================================================================== */
-
 @import "~styles/colors";
 @import "~styles/mixins";
 
-@import "../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../node_modules/bootstrap/scss/variables";
-@import "../../../../node_modules/bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 
 
 /* ===================================================================
- *  01. main navigation
+ *  main navigation
  *
  * ------------------------------------------------------------------- */
 
@@ -217,7 +205,7 @@ nav.light .navbar-brand {
 
 
 /* ===================================================================
- *  02. hamburger button
+ *  hamburger button
  *
  * ------------------------------------------------------------------- */
 

@@ -1,19 +1,13 @@
-import { Component, OnInit } from '@angular/core';
-import { HostListener } from "@angular/core";
-
-import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
+import * as feather from 'feather-icons';
 
 @Component({
   selector: 'app-blog',
   templateUrl: './blog.component.html',
   styleUrls: ['./blog.component.scss']
 })
-export class BlogComponent implements OnInit {
+export class BlogComponent implements OnInit, AfterViewInit {
 
-  // FontAwesome icons
-  faArrowRight = faArrowRight;
-
-  carouselMobile: boolean = false;
   cardArray = [ //FIXME max 44 caract. + ...; check if small enough, otherwise truncate
       {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog1.jpg",
@@ -89,17 +83,13 @@ export class BlogComponent implements OnInit {
       },
   ]; //FIXME ir buscar à BD
 
-  constructor() {
-    this.setCarouselMode();
-  }
+  constructor() { }
 
   ngOnInit() {
   }
 
-  @HostListener('window:resize', ['$event'])
-  setCarouselMode(event?) {
-      this.carouselMobile = window.innerWidth <= 680;
+  ngAfterViewInit() {
+      feather.replace();
   }
-
 
 }

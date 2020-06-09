@@ -4,7 +4,7 @@
             <div class="d-flex align-items-center">
                 <img src="{{ icon }}" class="mr-3">
                 <span>{{ label }}</span>
-                <fa-icon [icon]="faInfoCircle" [nbPopover]="template" class="info ml-3 d-none d-md-flex"></fa-icon>
+                <fa-icon [icon]="faInfoCircle" [nbPopover]="template" nbPopoverTrigger="hint" class="info ml-3 d-none d-md-flex"></fa-icon>
             </div>
             <nb-checkbox class="map-cards-checkbox" checked="{{ checked }}" disabled="{{ disabled }}" status="{{ status }}"
                          (checkedChange)="checkedChanged()"></nb-checkbox>

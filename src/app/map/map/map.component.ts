@@ -1,15 +1,12 @@
-import {Component, OnInit} from '@angular/core';
-import { faFilter } from '@fortawesome/free-solid-svg-icons';
+import {AfterViewInit, Component, OnInit} from '@angular/core';
+import * as eva from 'eva-icons';
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
-export class MapComponent implements OnInit {
-
-    //FontAwesome icons
-    faFilter = faFilter;
+export class MapComponent implements OnInit, AfterViewInit {
 
   filters = [
       {
@@ -108,7 +105,11 @@ export class MapComponent implements OnInit {
   ngOnInit() {
   }
 
-  updateFilter(category) {
+  ngAfterViewInit() {
+      eva.replace();
+  }
+
+    updateFilter(category) {
 
       let quickFilterSwitch = $( ".filter-" + category.toLowerCase() + " .toggle" );
 

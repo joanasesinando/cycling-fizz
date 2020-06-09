@@ -5,7 +5,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/type.svg" class="mr-2">
                     Tipologia
-                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ typePopover }}" class="info ml-2"></fa-icon>
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ typePopover }}" nbPopoverTrigger="hint" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body *ngIf="!editMode">{{ type.type }}</nb-card-body>
                 <nb-card-body *ngIf="editMode">
@@ -20,7 +20,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/parking.svg" class="mr-2">
                     Nº de lugares
-                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ placesPopover }}" class="info ml-2"></fa-icon>
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ placesPopover }}" nbPopoverTrigger="hint" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body *ngIf="!editMode">{{ places }}</nb-card-body>
                 <nb-card-body *ngIf="editMode">
@@ -35,7 +35,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/security.svg" class="mr-2">
                     Segurança
-                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ securityPopover }}" class="info ml-2"></fa-icon>
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ securityPopover }}" nbPopoverTrigger="hint" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body *ngIf="!editMode">
                     <div class="rating d-flex align-items-center">
@@ -58,7 +58,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/environment.svg" class="mr-2">
                     Ambiente
-                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ environmentPopover }}" class="info ml-2"></fa-icon>
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ environmentPopover }}" nbPopoverTrigger="hint" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body *ngIf="!editMode">{{ environment.type }}</nb-card-body>
                 <nb-card-body *ngIf="editMode">
@@ -77,7 +77,7 @@
                 <nb-card-header>
                     <img src="../../../../../assets/images/map/icons/map-element/access.svg" class="mr-2">
                     Acesso
-                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ accessPopover }}" class="info ml-2"></fa-icon>
+                    <fa-icon [icon]="faInfoCircle" nbPopover="{{ accessPopover }}" nbPopoverTrigger="hint" class="info ml-2"></fa-icon>
                 </nb-card-header>
                 <nb-card-body *ngIf="!editMode">{{ access.type }}</nb-card-body>
                 <nb-card-body *ngIf="editMode">

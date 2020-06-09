@@ -1,42 +1,25 @@
-/* ===================================================================
- *
- *  Cycling Fizz v1.0 Features Card Stylesheet
- *  03-11-2019 #FIXME
- *
- * =================================================================== */
-
 @import "~styles/colors";
 @import "~styles/mixins";
 
-@import "../../../../../node_modules/bootstrap/scss/functions";
-@import "../../../../../node_modules/bootstrap/scss/variables";
-@import "../../../../../node_modules/bootstrap/scss/mixins";
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
 
 
 .card {
-  //height: 13rem;
   border: none;
   border-radius: 1rem;
   @include transition(all 300ms ease-in-out);
 
   @include media-breakpoint-up(lg){
-    &:hover {
-      @include transform(translateY(-1rem));
-    }
+    &:hover { @include transform(translateY(-1rem)) }
   }
 
-  img {
-    height: 2.5rem;
-  }
+  img { height: 2.5rem; }
 
   .card-title {
-    font-family: 'quicksand-bold', sans-serif;
     font-size: 1.2rem;
-    color: $cf-dark;
-
-    @include media-breakpoint-down(sm) {
-      font-size: 1rem;
-    }
+    @include media-breakpoint-down(sm) { font-size: 1rem }
   }
 
   .card-body {
@@ -45,6 +28,5 @@
 }
 
 a {
-  color: $cf-text;
   text-decoration: none;
 }

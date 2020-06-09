@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { Carousel1Component } from './carousel1.component';
+import { BCarouselComponent } from './b-carousel.component';
 
-describe('Carousel1Component', () => {
-  let component: Carousel1Component;
-  let fixture: ComponentFixture<Carousel1Component>;
+describe('BCarouselComponent', () => {
+  let component: BCarouselComponent;
+  let fixture: ComponentFixture<BCarouselComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ Carousel1Component ]
+      declarations: [ BCarouselComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(Carousel1Component);
+    fixture = TestBed.createComponent(BCarouselComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

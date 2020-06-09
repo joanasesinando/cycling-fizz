@@ -1,0 +1,15 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+.wrapper {
+  margin-right: auto;
+  margin-left: auto;
+
+  @media only screen and (min-width: 1024px) { width: 65rem; }
+  @media only screen and (max-width: 1024px) { width: 43rem; }
+  @media only screen and (max-width: 650px) { width: 21rem; }
+}

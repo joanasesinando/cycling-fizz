@@ -1,31 +1,20 @@
-/* ===================================================================
- *
- *  Cycling Fizz v1.0 Blog Card Stylesheet
- *  03-11-2019 #FIXME
- *
- * =================================================================== */
-
 @import "~styles/colors";
 
 
 .card {
-  font-family: 'quicksand-regular', sans-serif;
   border: none;
   border-radius: 1rem;
 
   .card-img-top {
     height: 13rem;
-    //object-fit: cover; //FIXME isto atrasa a transição no carousel
+    //object-fit: cover; //FIXME make imgs fit
   }
 
   .card-subtitle {
-    font-family: 'quicksand-bold', sans-serif;
     font-size: 0.9rem;
-    text-transform: uppercase;
-    color: $cf-orange;
 
     &::after {
-      content: attr(data-after-content);
+      content: attr(date);
       font-family: 'quicksand-light', sans-serif;
       font-size: .8rem;
       color: $cf-gray;
@@ -33,14 +22,5 @@
     }
   }
 
-  .card-title {
-    font-family: 'quicksand-bold', sans-serif;
-  }
-
-  .engagement {
-    font-size: 0.8rem;
-  }
-
-  #comments { color: $cf-gray; }
-  #likes { color: $likes; }
+  .engagement { font-size: 0.8rem; }
 }
