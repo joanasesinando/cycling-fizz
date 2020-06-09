@@ -13,6 +13,10 @@ export class MapGalleryComponent implements OnInit {
   slideConfigFor = {
     slidesToShow: 1,
     slidesToScroll: 1,
+    arrows: true,
+    nextArrow: "<div class='nav-btn next-slide'></div>",
+    prevArrow: "<div class='nav-btn prev-slide'></div>",
+    dots: false,
     fade: true,
     asNavFor: '#slider-nav',
     lazyLoad: 'progressive'
