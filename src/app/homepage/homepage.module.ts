@@ -15,6 +15,7 @@ import { QuoteComponent } from './quote/quote.component';
 import { TranslateModule } from '@ngx-translate/core';
 import { BCarouselComponent } from './blog/b-carousel/b-carousel.component';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
+import {NbButtonModule, NbCardModule} from '@nebular/theme';
 
 
 @NgModule({
@@ -26,6 +27,8 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
         SharedModule,
         TranslateModule,
         SlickCarouselModule,
+        NbCardModule,
+        NbButtonModule,
     ]
 })
 export class HomepageModule { }

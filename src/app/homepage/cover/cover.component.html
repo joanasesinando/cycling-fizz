@@ -14,12 +14,13 @@
           <div id="cover-btns" class="d-flex flex-wrap pt-4 align-items-center"
                data-aos="fade-up" data-aos-delay="300">
             <button class="btn btn-primary mb-4 mb-md-0" type="button" routerLink="/map">{{'homepage.cover.mapBtn' | translate}}</button>
-            <a href="https://www.youtube.com/watch?v=pBFQdxA-apI" class="video-popup font-qks-medium mb-4 mb-md-0">
+            <div class="video-popup font-qks-medium mb-4 mb-md-0"
+               (click)="open(coverVideo)">
               <div class="btn-video mr-2">
                   <img src="../../../assets/images/homepage/cover/icons/play-button.svg" alt="Play video">
               </div>
                 {{'homepage.cover.videoBtn' | translate}}
-            </a>
+            </div>
           </div>
         </div>
 
@@ -55,4 +56,19 @@
     <div class="ball-5 jumping-animation4"><img src="../../../assets/images/homepage/yellow-ball.png" alt="yellow-ball"></div>
   </div>
       
-</section>      
+</section>
+
+<ng-template #coverVideo let-data let-ref="dialogRef">
+    <nb-card class="pop-up" accent="primary" (ngInit)="loadFeatherIcons()">
+        <nb-card-header>
+            <div class="d-flex justify-content-between align-items-center">
+                <h4>Vídeo de apresentação</h4>
+                <button (click)="ref.close()"><i data-feather="x"></i></button>
+            </div>
+
+        </nb-card-header>
+        <nb-card-body>
+            <iframe [src]="safeVideoUrl" frameborder="0"></iframe>
+        </nb-card-body>
+    </nb-card>
+</ng-template>

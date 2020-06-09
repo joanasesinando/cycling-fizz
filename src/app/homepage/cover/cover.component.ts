@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, TemplateRef} from '@angular/core';
 
 import {faTwitter, faInstagram, faFacebookF, faYoutube} from '@fortawesome/free-brands-svg-icons';
 import { faArrowRight } from '@fortawesome/free-solid-svg-icons';
+import {NbDialogService} from '@nebular/theme';
+import {DomSanitizer, SafeResourceUrl} from '@angular/platform-browser';
+import * as feather from 'feather-icons';
 
 @Component({
   selector: 'app-cover',
@@ -17,9 +20,18 @@ export class CoverComponent implements OnInit {
   faYoutube = faYoutube;
   faArrowRight = faArrowRight;
 
-  constructor() { }
+  videoUrl: string = "https://www.youtube.com/embed/dQw4w9WgXcQ";
+  safeVideoUrl: SafeResourceUrl;
+
+  constructor(private dialogService: NbDialogService, private sanitizer: DomSanitizer) {
+    this.safeVideoUrl = this.sanitizeUrl(this.videoUrl);
+  }
 
   ngOnInit() {
+  }
+
+  loadFeatherIcons() {
+    feather.replace();
   }
 
   smoothScroll(event){
@@ -30,4 +42,11 @@ export class CoverComponent implements OnInit {
     });
   };
 
+  open(dialog: TemplateRef<any>) {
+    this.dialogService.open(dialog);
+  }
+
+  sanitizeUrl(url) {
+    return this.sanitizer.bypassSecurityTrustResourceUrl(url);
+  }
 }

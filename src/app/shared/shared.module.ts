@@ -25,6 +25,7 @@ import {NbButtonModule, NbIconModule} from '@nebular/theme';
 import { GoTopComponent } from './go-top/go-top.component';
 import { BadgeTextComponent } from './badges/badge-text/badge-text.component';
 import { BadgeDotComponent } from './badges/badge-dot/badge-dot.component';
+import {NgInitDirective} from '../_directives/ng-init.directive';
 
 
 @NgModule({
@@ -46,7 +47,8 @@ import { BadgeDotComponent } from './badges/badge-dot/badge-dot.component';
     MustMatchDirective,
     ModalCompleteRegistrationComponent,
     GoTopComponent,
-    BadgeDotComponent
+    BadgeDotComponent,
+    NgInitDirective
   ],
     imports: [
         CommonModule,
@@ -68,7 +70,8 @@ import { BadgeDotComponent } from './badges/badge-dot/badge-dot.component';
         PageNotFoundComponent,
         NewsletterSubscribeComponent,
         GoTopComponent,
-        BadgeTextComponent
+        BadgeTextComponent,
+        NgInitDirective
     ]
 })
 export class SharedModule { }

@@ -77,7 +77,35 @@
       &:hover { @include transform(translateY(-0.25rem)); }
     }
 
-    &:hover { color: $cf-orange; }
+    &:hover { color: $cf-orange; cursor: pointer; }
+  }
+}
+
+.pop-up {
+  iframe {
+    width: 50vw;
+    height: 28.125vw;
+
+    @include media-breakpoint-down(md) {
+      width: 70vw;
+      height: 39.375vw;
+    }
+  }
+
+  button {
+    border: none;
+    background: none;
+    &:focus { outline: none; }
+
+    svg {
+      color: $cf-gray;
+      &:hover, &:focus { color: darken($cf-gray, 10); }
+    }
+  }
+
+  h4 {
+    @include media-breakpoint-down(md) { font-size: 1.3rem; }
+    @include media-breakpoint-down(sm) { font-size: 1.1rem; }
   }
 }
 

@@ -15,6 +15,7 @@
   @include nb-select-theme;
   @include nb-option-list-theme;
   @include nb-toast-theme;
+  @include nb-overlay-theme;
 };
 
 
@@ -240,4 +241,15 @@ nb-toggle.map-filter-toggle .toggle-label {
 
 .nb-theme-default [nbButton] {
   font-family: quicksand-bold, sans-serif;
+}
+
+
+/* ===================================================================
+ *  Card
+ *
+ * ------------------------------------------------------------------- */
+
+.nb-theme-default nb-card-header {
+  font-family: quicksand-medium, sans-serif;
+  color: $cf-dark;
 }
