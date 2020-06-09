@@ -1,12 +1,18 @@
 /* ===================================================================
  *
  *   TOC:
- *   - Social
- *   - Utilities
- *   - Badges
- *   - Map element tags
+ *    - Primary
+ *    - Additional
+ *    - Utilities
+ *    - Social networks
  *
  * =================================================================== */
+
+
+/* =============================
+ *  Primary
+ *
+ * ----------------------------- */
 
 $cf-text: #212529;
 $cf-dark: #2F373D;
@@ -14,23 +20,20 @@ $cf-darkGray: #57565C;
 $cf-gray: #838788;
 $cf-lightGray: #F2F6F8;
 $cf-superLightGray: #F7F9FA;
-$cf-purple: #9790E3;
-$cf-yellow: #FFC340;
 $cf-orange: #FF9F3C;
-$cf-gradient-orange: linear-gradient(270deg, #FF923C -11.51%, $cf-yellow 85.97%);
-$cf-red: #EF5350;
+$cf-gradient-orange: linear-gradient(270deg, #FF923C -11.51%, #FFC340 85.97%);
 
 
 /* =============================
- *  Social
+ *  Additional
  *
  * ----------------------------- */
 
-$youtube: #e5241d;
-$google: #FB3B2E;
-$instagram: #ce2f89;
-$facebook: #3b68c6;
-$twitter: #0cbbff;
+$cf-red: #EF5350;
+$cf-yellow: #FFC340;
+$cf-green: #00C785;
+$cf-blue: #52A1FF;
+$cf-pink: #FF5986;
 
 
 /* =============================
@@ -43,24 +46,12 @@ $scrollbar: #BDBDBD;
 
 
 /* =============================
- *  Badges
+ *  Social
  *
  * ----------------------------- */
 
-$badge-new: #FE4566;
-$badge-soon: $cf-yellow;
-
-
-/* =============================
- *  Map element tags
- *
- * ----------------------------- */
-
-$tag-yellow: #F9A825;
-$tag-orange: $cf-orange;
-$tag-red: #EF5350;
-$tag-pink: #F06292;
-$tag-purple: $cf-purple;
-$tag-darkBlue: #5C6BC0;
-$tag-blue: #0097A7;
-$tag-green: #349B7A;
+$youtube: #e5241d;
+$google: #FB3B2E;
+$instagram: #ce2f89;
+$facebook: #3b68c6;
+$twitter: #0cbbff;

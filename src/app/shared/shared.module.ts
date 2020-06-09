@@ -18,7 +18,6 @@ import { BtnFloatingComponent } from './buttons/btn-floating/btn-floating.compon
 import { CreditsComponent } from './credits/credits.component';
 import { BannerComponent } from './banner/banner.component';
 import { CreditsAccordionComponent } from './credits/credits-accordion/credits-accordion.component';
-import { BadgeComponent } from './badge/badge.component';
 import { NewsletterSubscribeComponent } from './newsletter-subscribe/newsletter-subscribe.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
@@ -26,6 +25,8 @@ import {MustMatchDirective} from "../_helpers/must-match.directive";
 import { ModalCompleteRegistrationComponent } from './navbar/modal-complete-registration/modal-complete-registration.component';
 import {NbButtonModule, NbIconModule} from '@nebular/theme';
 import { GoTopComponent } from './go-top/go-top.component';
+import { BadgeTextComponent } from './badge-text/badge-text.component';
+import { BadgeDotComponent } from './badge-dot/badge-dot.component';
 
 
 @NgModule({
@@ -43,12 +44,13 @@ import { GoTopComponent } from './go-top/go-top.component';
     CreditsComponent,
     BannerComponent,
     CreditsAccordionComponent,
-    BadgeComponent,
+    BadgeTextComponent,
     NewsletterSubscribeComponent,
     ComingSoonComponent,
     MustMatchDirective,
     ModalCompleteRegistrationComponent,
-    GoTopComponent
+    GoTopComponent,
+    BadgeDotComponent
   ],
     imports: [
         CommonModule,
@@ -69,7 +71,8 @@ import { GoTopComponent } from './go-top/go-top.component';
         BannerComponent,
         PageNotFoundComponent,
         NewsletterSubscribeComponent,
-        GoTopComponent
+        GoTopComponent,
+        BadgeTextComponent
     ]
 })
 export class SharedModule { }

@@ -1,14 +1,14 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-badge',
-  templateUrl: './badge.component.html',
-  styleUrls: ['./badge.component.scss']
+  selector: 'app-badge-text',
+  templateUrl: './badge-text.component.html',
+  styleUrls: ['./badge-text.component.scss']
 })
-export class BadgeComponent implements OnInit {
+export class BadgeTextComponent implements OnInit {
 
   @Input() badgeType: string;
-  badgeText: string;
+  @Input() badgeText: string;
 
   constructor() { }
 
@@ -23,7 +23,6 @@ export class BadgeComponent implements OnInit {
         break;
 
       default:
-        this.badgeText = "";
         break;
     }
   }

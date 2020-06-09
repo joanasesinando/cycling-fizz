@@ -5,7 +5,6 @@
  *    - Buttons
  *    - Scrollbar
  *    - Tooltips
- *    - Badges
  *    - Slick sliders
  *
  * =================================================================== */
@@ -42,13 +41,16 @@
 .text-gray { color: $cf-gray; }
 .text-light-gray { color: $cf-lightGray; }
 .text-orange { color: $cf-orange; }
-.text-red {color: $cf-red;  }
-.text-purple {color: $cf-purple;  }
 .text-gradient {
   background: linear-gradient(0deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 50%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+.text-red { color: $cf-red; }
+.text-yellow { color: $cf-yellow; }
+.text-green { color: $cf-green; }
+.text-blue { color: $cf-blue; }
+.text-pink { color: $cf-pink; }
 
 
 html, body {
@@ -416,33 +418,20 @@ button.read:focus {
 
 
 /* ===================================================================
- *  Badges
- *
- * ------------------------------------------------------------------- */
-
-.badge {
-  font-size: 90%;
-}
-.badge-primary {
-  background: $cf-gradient-orange;
-}
-
-
-
-/* ===================================================================
  *  Slick sliders
  *
  * ------------------------------------------------------------------- */
 
 #section-map, #section-blog {
+  .slide:focus { outline: none; }
+  .prev-slide, .next-slide { background-repeat: no-repeat; }
+
   .nav-btn {
     width: 2rem;
     height: 2rem;
     position: absolute;
     cursor: pointer;
   }
-
-  .prev-slide, .next-slide { background-repeat: no-repeat; }
 }
 
 #section-map {
@@ -464,7 +453,6 @@ button.read:focus {
 
 #section-blog {
   .slick-track { padding: 1.5rem; }
-  .slide:focus { outline: none; }
   .nav-btn { top: 40% !important; }
 
   .prev-slide {

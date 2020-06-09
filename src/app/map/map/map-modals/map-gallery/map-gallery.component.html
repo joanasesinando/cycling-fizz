@@ -1,6 +1,6 @@
 <div class="d-flex justify-content-center justify-content-lg-start align-items-center mb-3 mt-5 pt-4">
     <span class="section-title font-qks-bold text-dark-header mr-2">Galeria</span>
-    <span class="badge badge-primary">{{ photos.length }}</span>
+    <app-badge-text [badgeType]="'primary'" [badgeText]="photos.length.toString()" ></app-badge-text>
 </div>
 
 <div *ngIf="!mobileView" class="gallery">
