@@ -1,7 +1,7 @@
-<h1 align="center">Cycling Fizz | account</h1>
+<h1 align="center">Cycling Fizz</h1>
 
 <p align="center">
-  <img width="877" height="250" src="https://drive.google.com/uc?id=1tDo6vF-Gn7Z1vG2s7tz09P2of6Kgg8w6">
+  <img width="526" height="150" src="https://drive.google.com/uc?id=1tDo6vF-Gn7Z1vG2s7tz09P2of6Kgg8w6">
 </p>
 
 <p align="center">
