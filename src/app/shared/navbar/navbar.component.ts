@@ -5,6 +5,8 @@ import {Router} from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import {AuthFirebaseService} from "../../_services/auth-firebase.service";
 
+declare let $: any;
+
 
 @Component({
   selector: 'app-navbar',
@@ -194,7 +196,7 @@ export class NavbarComponent implements OnInit {
       if(url === '/') {
         this.unglueFromTop(mainNav);
         this.makeBgDefault(mainNav);
-        this.removeShadow(mainNav)
+        this.removeShadow(mainNav);
         this.makeTextDark(mainNav);
 
       } else {
@@ -208,7 +210,12 @@ export class NavbarComponent implements OnInit {
 
   @HostListener('window:scroll', [])
   onWindowScroll() {
-    if(this.router.url != '/map') this.navbarChangeOnScroll(this.router.url);
+    /*------- Close NavBar on scroll (mobile) -------*/
+    if (this.navbarToggler.hasClass('is-active')) {
+      this.hideNavbar();
+    }
+    /*-----------------------------------------------*/
+    else if(this.router.url != '/map') this.navbarChangeOnScroll(this.router.url);
   }
 
   @HostListener('window:resize', [])
