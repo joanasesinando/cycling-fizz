@@ -19,9 +19,13 @@
   <a href="#acknowledgments">Acknowledgments</a>
 </p>
 
+<br>
+
 ## About
 
 [Cycling Fizz](https://cyclingfizz.pt) is a community-oriented Web App built with Angular for cyclists in Portugal. Its goal is to give cyclists useful tools, as well as promoting city cycling in general and creating a central cycling network.
+
+<br>
 
 ## Getting Started
 
@@ -41,6 +45,8 @@ npm install -g @angular/cli
 
 See more information on [Angular CLI](https://angular.io/guide/setup-local).
 
+<br>
+
 ## Built With
 
 * [Bootstrap](https://getbootstrap.com/) - Web framework used
@@ -53,10 +59,14 @@ See more information on [Angular CLI](https://angular.io/guide/setup-local).
 * [Slick Carousel](https://kenwheeler.github.io/slick/) - Smooth sliding carousel
 * [Firebase](https://firebase.google.com/) - App development platform
 
+<br>
+
 ## Authors
 
 * **[Joana Sesinando](https://www.linkedin.com/in/joanasesinando/)**
 * **[Bernardo Marques](https://www.linkedin.com/in/bernardo-marques-aa241b134/)**
+
+<br>
 
 ## Acknowledgments
 
