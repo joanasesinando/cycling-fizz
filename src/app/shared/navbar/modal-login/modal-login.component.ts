@@ -78,8 +78,7 @@ export class ModalLoginComponent implements OnInit {
         this.changeCurrentModal.emit(Modals.CompleteRegister);
       } else {
         // console.log("Login successful");
-        this.loginSuccessfulToastr();
-        this.closeThisModal();
+        this.loginSuccessful();
       }
 
     }, err => {
@@ -93,13 +92,23 @@ export class ModalLoginComponent implements OnInit {
     this.authFirebaseService.doLogin(value).then(res => {
       // console.log(res);
       // console.log("Login successful");
-      this.loginSuccessfulToastr();
-      this.closeThisModal();
+      this.loginSuccessful();
     }, err => {
       // console.log(err);
       // console.log(err.message);
       this.errorInLoginToastr(err.message);
     });
+  }
+
+
+  loginSuccessful() {
+    if (!this.authFirebaseService.isEmailVerified()) {
+      this.authFirebaseService.sendEmailVerification();
+      console.log("Email não verificado");
+
+    }
+    this.loginSuccessfulToastr();
+    this.closeThisModal();
   }
 
   loginSuccessfulToastr() {

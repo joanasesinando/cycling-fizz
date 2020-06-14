@@ -20,6 +20,16 @@ export class AuthFirebaseService {
 
   }
 
+  sendEmailVerification() {
+    if (!this.isUserLogged) return;
+    this.currentUser.sendEmailVerification();
+  }
+
+  isEmailVerified() {
+    if (!this.isUserLogged) return false;
+    return this.currentUser.emailVerified;
+  }
+
   userChanged(user) {
     this.currentUser = user;
     this.isUserLogged = !!this.currentUser;
