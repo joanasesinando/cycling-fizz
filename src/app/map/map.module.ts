@@ -8,7 +8,6 @@ import {SharedModule} from '../shared/shared.module';
 import { MapComponent } from './map/map.component';
 import { SearchComponent } from './search/search.component';
 import { FilterGroupComponent } from './map/map-modals/filter-group/filter-group.component';
-import { MapFilterCheckboxComponent } from './map/map-modals/map-filter-checkbox/map-filter-checkbox.component';
 import { MapModalsComponent } from './map/map-modals/map-modals.component';
 
 import {
@@ -39,7 +38,6 @@ import {TranslateModule} from '@ngx-translate/core';
       MapComponent,
       SearchComponent,
       FilterGroupComponent,
-      MapFilterCheckboxComponent,
       MapModalsComponent,
       MapCardsBikelaneComponent,
       MapCardsCheckboxComponent,
