@@ -15,7 +15,9 @@
                          [avatar]="comment.user.avatar">
         </nb-chat-message>
 
-        <nb-chat-form class="map-comments" (send)="sendMessage($event)" (click)="hidePlaceholder()"></nb-chat-form>
+        <nb-chat-form class="map-comments"
+                      [messagePlaceholder]="'leaveComment' | translate"
+                      (send)="sendMessage($event)" (click)="hidePlaceholder()">
+        </nb-chat-form>
     </nb-chat>
-    <span class="placeholder">Deixar um comentário...</span>
 </div>

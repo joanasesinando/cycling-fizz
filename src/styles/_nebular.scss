@@ -94,63 +94,39 @@
  *
  * ------------------------------------------------------------------- */
 
-//.nb-theme-default nb-chat.map-comments {
-//  box-shadow: none;
-//
-//  .header {
-//    display: none;
-//  }
-//
-//  .messages {
-//    padding: 1rem 0;
-//  }
-//}
-//
-//.nb-theme-default nb-chat-message.map-comments {
-//  nb-chat-message-text {
-//    .text {
-//      font-family: quicksand-regular, sans-serif;
-//      background-color: $cf-superLightGray;
-//      color: $cf-darkGray;
-//    }
-//
-//    .sender {
-//      font-family: quicksand-bold, sans-serif;
-//      font-size: 1rem;
-//      color: $cf-dark;
-//
-//      time {
-//        font-family: quicksand-light, sans-serif;
-//        color: $cf-gray;
-//        margin-left: .4rem;
-//      }
-//    }
-//  }
-//
-//  &.not-reply .message {
-//    margin-right: 0;
-//  }
-//}
-//
-//.nb-theme-default nb-chat-form.map-comments {
-//  @include media-breakpoint-down(md) {
-//    padding: 1rem 0;
-//  }
-//  .message-row input::placeholder {
-//    font-size: 0; // bc there's no way to change the placeholder, so hide it and make my own
-//  }
-//}
-//
-//.nb-theme-default [nbInput].status-basic {
-//  background-color: $cf-superLightGray;
-//  font-family: quicksand-regular, sans-serif;
-//  color: $cf-darkGray
-//}
-//
-//.nb-theme-default [nbButton].appearance-filled.status-primary {
-//  background: $cf-gradient-orange;
-//  border-color: #ffc46b;
-//}
+.nb-theme-default nb-chat.map-comments {
+  box-shadow: none;
+  .header { display: none; }
+  .messages { padding: 1rem 0; }
+}
+
+.nb-theme-default nb-chat-message.map-comments {
+  nb-chat-message-text {
+    .text {
+      background-color: $cf-superLightGray;
+      color: $cf-darkGray;
+    }
+
+    .sender {
+      font-family: quicksand-bold, sans-serif;
+      font-size: 1rem;
+      color: $cf-dark;
+
+      time {
+        font-family: quicksand-light, sans-serif;
+        font-size: .9rem;
+        color: $cf-gray;
+        margin-left: 0.2rem;
+      }
+    }
+  }
+  &.not-reply .message { margin-right: 0; }
+}
+
+.nb-theme-default [nbButton].appearance-filled.status-primary {
+  background: $cf-gradient-orange;
+  border-color: #ffc46b;
+}
 
 
 /* ===================================================================
