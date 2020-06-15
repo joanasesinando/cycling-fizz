@@ -333,6 +333,8 @@ button.expansible:focus {
  *
  * ------------------------------------------------------------------- */
 
+$scrollbarColor: #BDBDBD;
+
 @include media-breakpoint-up(lg){
   ::-webkit-scrollbar {
     width: 12px;
@@ -347,7 +349,7 @@ button.expansible:focus {
 
   ::-webkit-scrollbar-thumb {
     border-radius: 12px;
-    background-color: $scrollbar;
+    background-color: $scrollbarColor;
     //background-image: -webkit-gradient(linear,
     //        40% 0%,
     //        85% 84%,
@@ -356,7 +358,7 @@ button.expansible:focus {
     //        color-stop(.6,lighten(#ff9f3c, 3)));
 
     &:hover {
-      background-color:darken($scrollbar, 10%);
+      background-color:darken($scrollbarColor, 10%);
       //background-image: -webkit-gradient(linear,
       //        40% 0%,
       //        85% 84%,
