@@ -9,7 +9,7 @@
                         [config]="slideConfigFor"
                         #slickModal='slick-carousel'>
         <div ngxSlickItem *ngFor="let photo of photos" class="slide" style="width: 100%; height: 29rem;">
-            <nb-user class="map-gallery-user" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
+            <nb-user class="map-gallery-user gradient text-white" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
             <img class="main-img" src="{{ photo.img }}" alt="" width="100%">
         </div>
     </ngx-slick-carousel>
@@ -29,7 +29,7 @@
                         [config]="slideConfigMobile"
                         #slickModal='slick-carousel'>
         <div ngxSlickItem *ngFor="let photo of photos" class="slide mobile" style="width: 100%">
-            <nb-user class="map-gallery-user smaller" size="small" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
+            <nb-user class="map-gallery-user smaller gradient text-white" size="small" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
             <img class="main-img" src="{{ photo.img }}" alt="" width="100%">
         </div>
     </ngx-slick-carousel>
