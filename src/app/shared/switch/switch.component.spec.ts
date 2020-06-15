@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { MapFilterToggleComponent } from './map-filter-toggle.component';
+import { SwitchComponent } from './switch.component';
 
-describe('MapFilterToggleComponent', () => {
-  let component: MapFilterToggleComponent;
-  let fixture: ComponentFixture<MapFilterToggleComponent>;
+describe('SwitchComponent', () => {
+  let component: SwitchComponent;
+  let fixture: ComponentFixture<SwitchComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ MapFilterToggleComponent ]
+      declarations: [ SwitchComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(MapFilterToggleComponent);
+    fixture = TestBed.createComponent(SwitchComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

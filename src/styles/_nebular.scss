@@ -19,48 +19,28 @@
 };
 
 
+
 /* ===================================================================
- *  General
+ *  switch
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-toggle .text,
-.nb-theme-default nb-checkbox .text {
-  font-family: quicksand-regular, sans-serif;
+.nb-theme-default nb-toggle { user-select: none; }
+
+.nb-theme-default nb-toggle.text-white .text { color: white; }
+.nb-theme-default nb-toggle.text-dark .text { color: $cf-dark; }
+
+.nb-theme-default nb-toggle.status-control {
+  .toggle-switcher nb-icon { color: $cf-orange; }
+  .toggle.checked { background-color: $cf-orange; }
 }
 
-
-/* ===================================================================
- *  Switch
- *
- * ------------------------------------------------------------------- */
-
-nb-toggle.map-quick-filter-toggle .toggle-label {
-  margin-bottom: 0;
-  .text {
-    font-family: quicksand-medium, sans-serif;
-    color: white;
-  }
-}
-.nb-theme-default nb-toggle.map-quick-filter-toggle.status-control {
-  .toggle-switcher nb-icon { color: #fda74b; }
-  .toggle.checked { background-color: #fda74b; }
-  .native-input:enabled + .toggle:hover.checked { background-color: darken(#fda74b, 5); }
-  .native-input:enabled:focus + .toggle { background-color: #fda74b; }
-}
-
-nb-toggle.map-filter-toggle .toggle-label {
+.nb-theme-default nb-toggle.filter-switch .toggle-label {
   justify-content: space-between;
   width: 16rem;
-  @include media-breakpoint-down(sm) {
-    width: 15rem;
-  }
-
-  .text {
-    font-family: quicksand-medium, sans-serif;
-    color: $cf-darkGray;
-  }
+  @include media-breakpoint-down(sm) { width: 14.5rem; }
 }
+
 
 
 /* ===================================================================
@@ -68,15 +48,13 @@ nb-toggle.map-filter-toggle .toggle-label {
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-checkbox.status-basic .native-input:disabled:indeterminate + .custom-checkbox,
-.nb-theme-default nb-checkbox.status-basic .native-input:disabled:checked + .custom-checkbox {
-  background-color: $cf-orange;
-  border-color: $cf-orange;
-}
+.nb-theme-default nb-checkbox { user-select: none; }
 
-.nb-theme-default nb-checkbox.status-basic .native-input:disabled ~ .text {
-  color: $cf-text;
-}
+.nb-theme-default nb-checkbox.text-white .text { color: white; }
+.nb-theme-default nb-checkbox.text-dark .text { color: $cf-dark; }
+
+.nb-theme-default nb-checkbox.filter-group .text { font-weight: 500; }
+
 
 
 /* ===================================================================
@@ -84,35 +62,35 @@ nb-toggle.map-filter-toggle .toggle-label {
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-user.map-gallery-user {
-  .user-name {
-    font-family: quicksand-regular, sans-serif;
-    font-weight: normal;
-    color: white;
-  }
-
-  .user-picture {
-    border-color: transparent;
-    &:before {
-      content: "";
-      width: 2.8rem;
-      height: 2.8rem;
-      background: linear-gradient(131deg, #FFd340, #FF923C, #FF923C, #FF923C);
-      position: absolute;
-      bottom: -.2rem;
-      left: -.2rem;
-      border-radius: 50%;
-      z-index: -1;
-
-      @include media-breakpoint-down(md) {
-        width: 1.7rem;
-        height: 1.7rem;
-        bottom: -.15rem;
-        left: -.15rem;
-      }
-    }
-  }
-}
+//.nb-theme-default nb-user.map-gallery-user {
+//  .user-name {
+//    font-family: quicksand-regular, sans-serif;
+//    font-weight: normal;
+//    color: white;
+//  }
+//
+//  .user-picture {
+//    border-color: transparent;
+//    &:before {
+//      content: "";
+//      width: 2.8rem;
+//      height: 2.8rem;
+//      background: linear-gradient(131deg, #FFd340, #FF923C, #FF923C, #FF923C);
+//      position: absolute;
+//      bottom: -.2rem;
+//      left: -.2rem;
+//      border-radius: 50%;
+//      z-index: -1;
+//
+//      @include media-breakpoint-down(md) {
+//        width: 1.7rem;
+//        height: 1.7rem;
+//        bottom: -.15rem;
+//        left: -.15rem;
+//      }
+//    }
+//  }
+//}
 
 
 /* ===================================================================
@@ -120,63 +98,63 @@ nb-toggle.map-filter-toggle .toggle-label {
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-chat.map-comments {
-  box-shadow: none;
-
-  .header {
-    display: none;
-  }
-
-  .messages {
-    padding: 1rem 0;
-  }
-}
-
-.nb-theme-default nb-chat-message.map-comments {
-  nb-chat-message-text {
-    .text {
-      font-family: quicksand-regular, sans-serif;
-      background-color: $cf-superLightGray;
-      color: $cf-darkGray;
-    }
-
-    .sender {
-      font-family: quicksand-bold, sans-serif;
-      font-size: 1rem;
-      color: $cf-dark;
-
-      time {
-        font-family: quicksand-light;
-        color: $cf-gray;
-        margin-left: .4rem;
-      }
-    }
-  }
-
-  &.not-reply .message {
-    margin-right: 0;
-  }
-}
-
-.nb-theme-default nb-chat-form.map-comments {
-  @include media-breakpoint-down(md) {
-    padding: 1rem 0;
-  }
-  .message-row input::placeholder {
-    font-size: 0; // bc there's no way to change the placeholder, so hide it and make my own
-  }
-}
-
-.nb-theme-default [nbInput].status-basic {
-  background-color: $cf-superLightGray;
-  font-family: quicksand-regular, sans-serif;
-  color: $cf-darkGray
-}
-
-.nb-theme-default [nbButton].appearance-filled.status-primary {
-  background: $cf-gradient-orange;
-  border-color: #ffc46b;
-}
+//.nb-theme-default nb-chat.map-comments {
+//  box-shadow: none;
+//
+//  .header {
+//    display: none;
+//  }
+//
+//  .messages {
+//    padding: 1rem 0;
+//  }
+//}
+//
+//.nb-theme-default nb-chat-message.map-comments {
+//  nb-chat-message-text {
+//    .text {
+//      font-family: quicksand-regular, sans-serif;
+//      background-color: $cf-superLightGray;
+//      color: $cf-darkGray;
+//    }
+//
+//    .sender {
+//      font-family: quicksand-bold, sans-serif;
+//      font-size: 1rem;
+//      color: $cf-dark;
+//
+//      time {
+//        font-family: quicksand-light, sans-serif;
+//        color: $cf-gray;
+//        margin-left: .4rem;
+//      }
+//    }
+//  }
+//
+//  &.not-reply .message {
+//    margin-right: 0;
+//  }
+//}
+//
+//.nb-theme-default nb-chat-form.map-comments {
+//  @include media-breakpoint-down(md) {
+//    padding: 1rem 0;
+//  }
+//  .message-row input::placeholder {
+//    font-size: 0; // bc there's no way to change the placeholder, so hide it and make my own
+//  }
+//}
+//
+//.nb-theme-default [nbInput].status-basic {
+//  background-color: $cf-superLightGray;
+//  font-family: quicksand-regular, sans-serif;
+//  color: $cf-darkGray
+//}
+//
+//.nb-theme-default [nbButton].appearance-filled.status-primary {
+//  background: $cf-gradient-orange;
+//  border-color: #ffc46b;
+//}
 
 
 /* ===================================================================
@@ -184,18 +162,18 @@ nb-toggle.map-filter-toggle .toggle-label {
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-popover {
-  background: $cf-dark;
-  color: white;
-  .arrow::after {
-    border-bottom-color: $cf-dark;
-  }
-  .primitive-overlay {
-    font-family: quicksand-regular, sans-serif;
-    font-size: unset;
-    padding: 1.5rem;
-  }
-}
+//.nb-theme-default nb-popover {
+//  background: $cf-dark;
+//  color: white;
+//  .arrow::after {
+//    border-bottom-color: $cf-dark;
+//  }
+//  .primitive-overlay {
+//    font-family: quicksand-regular, sans-serif;
+//    font-size: unset;
+//    padding: 1.5rem;
+//  }
+//}
 
 
 /* ===================================================================
@@ -203,25 +181,25 @@ nb-toggle.map-filter-toggle .toggle-label {
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-select .select-button,
-.nb-theme-default nb-option, .nb-theme-default nb-option-group {
-  font-family: quicksand-regular, sans-serif;
-}
-.nb-theme-default nb-select.size-medium .select-button,
-.nb-theme-default .size-medium nb-option {
-  font-size: initial;
-}
-.nb-theme-default nb-option.success.selected,
-.nb-theme-default nb-option.success:hover {
-  color: #00d68f;
-}
-.nb-theme-default nb-option.success.selected { background-color: white; }
-.nb-theme-default nb-option-group, .nb-theme-default nb-option.success {
-  color: #222b45;
-}
-.cdk-global-scrollblock { // when select on it would move left
-  overflow-y: hidden;
-}
+//.nb-theme-default nb-select .select-button,
+//.nb-theme-default nb-option, .nb-theme-default nb-option-group {
+//  font-family: quicksand-regular, sans-serif;
+//}
+//.nb-theme-default nb-select.size-medium .select-button,
+//.nb-theme-default .size-medium nb-option {
+//  font-size: initial;
+//}
+//.nb-theme-default nb-option.success.selected,
+//.nb-theme-default nb-option.success:hover {
+//  color: #00d68f;
+//}
+//.nb-theme-default nb-option.success.selected { background-color: white; }
+//.nb-theme-default nb-option-group, .nb-theme-default nb-option.success {
+//  color: #222b45;
+//}
+//.cdk-global-scrollblock { // when select on it would move left
+//  overflow-y: hidden;
+//}
 
 
 /* ===================================================================
@@ -229,9 +207,9 @@ nb-toggle.map-filter-toggle .toggle-label {
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default [nbInput] {
-  font-family: quicksand-regular, sans-serif;
-}
+//.nb-theme-default [nbInput] {
+//  font-family: quicksand-regular, sans-serif;
+//}
 
 
 /* ===================================================================
@@ -239,9 +217,9 @@ nb-toggle.map-filter-toggle .toggle-label {
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default [nbButton] {
-  font-family: quicksand-bold, sans-serif;
-}
+//.nb-theme-default [nbButton] {
+//  font-family: quicksand-bold, sans-serif;
+//}
 
 
 /* ===================================================================
@@ -249,7 +227,7 @@ nb-toggle.map-filter-toggle .toggle-label {
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-card-header {
-  font-family: quicksand-medium, sans-serif;
-  color: $cf-dark;
-}
+//.nb-theme-default nb-card-header {
+//  font-family: quicksand-medium, sans-serif;
+//  color: $cf-dark;
+//}

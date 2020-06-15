@@ -12,13 +12,16 @@
             </a>
 
             <!-- quick filters -->
-            <div id="quick-filters" class="d-none d-lg-flex justify-content-between">
-                <app-map-quick-filter-toggle *ngFor="let filter of filters" class="mr-5"
+            <div id="quick-filters" class="d-none d-xl-flex justify-content-between">
+                <app-switch *ngFor="let filter of filters; let last = last;" [ngClass]="{'mr-0': last, 'mr-5': !last}"
+                    [name]="'filter-'+ filter.name"
                     [label]="filter.category"
+                    [labelPosition]="'right'"
+                    [labelColor]="'white'"
                     [checked]="filter.checked"
-                    [name]="filter.name"
-                    (onCheckedChange)="updateFilter(filter.name)">
-                </app-map-quick-filter-toggle>
+                    [status]="'control'"
+                    (checkedChange)="updateFilter(filter.name)">
+                </app-switch>
             </div>
 
             <!-- search bar -->

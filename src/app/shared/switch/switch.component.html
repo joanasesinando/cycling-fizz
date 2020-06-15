@@ -1,0 +1,14 @@
+<nb-layout>
+    <nb-layout-column>
+        <nb-toggle
+                status="{{status}}"
+                labelPosition="{{labelPosition}}"
+                [checked]="checked"
+                class="{{name}} text-{{labelColor}}"
+                (checkedChange)="checkedChanged()">
+
+            {{label}}
+
+        </nb-toggle>
+    </nb-layout-column>
+</nb-layout>

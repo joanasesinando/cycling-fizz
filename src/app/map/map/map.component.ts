@@ -109,12 +109,9 @@ export class MapComponent implements OnInit, AfterViewInit {
       eva.replace();
   }
 
-    updateFilter(category) {
-
-      let quickFilterSwitch = $( ".filter-" + category.toLowerCase() + " .toggle" );
-
-      // trigger a click on the corresponding switch
-      quickFilterSwitch.trigger( "click" );
+  updateFilter(category) {
+    let quickFilterSwitch = $( ".filter-" + category.toLowerCase() + " .toggle" );
+    quickFilterSwitch.trigger( "click" );
   }
 
 }
