@@ -8,9 +8,6 @@ import {SharedModule} from '../shared/shared.module';
 import { MapComponent } from './map/map.component';
 import { SearchComponent } from './search/search.component';
 import { FilterGroupComponent } from './map/map-modals/filter-group/filter-group.component';
-import { MapQuickFilterToggleComponent } from './map/map-quick-filter-toggle/map-quick-filter-toggle.component';
-import { MapFilterToggleComponent } from './map/map-modals/map-filter-toggle/map-filter-toggle.component';
-import { MapFilterCheckboxComponent } from './map/map-modals/map-filter-checkbox/map-filter-checkbox.component';
 import { MapModalsComponent } from './map/map-modals/map-modals.component';
 
 import {
@@ -34,15 +31,13 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
 import { MapCommentsComponent } from './map/map-modals/map-comments/map-comments.component';
 import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
 import {FormsModule} from '@angular/forms';
+import {TranslateModule} from '@ngx-translate/core';
 
 @NgModule({
   declarations: [
       MapComponent,
       SearchComponent,
       FilterGroupComponent,
-      MapQuickFilterToggleComponent,
-      MapFilterToggleComponent,
-      MapFilterCheckboxComponent,
       MapModalsComponent,
       MapCardsBikelaneComponent,
       MapCardsCheckboxComponent,
@@ -68,7 +63,8 @@ import {FormsModule} from '@angular/forms';
         NbSelectModule,
         NbInputModule,
         NbButtonModule,
-        FormsModule
+        FormsModule,
+        TranslateModule
     ]
 })
 export class MapModule { }

@@ -51,7 +51,7 @@ footer {
 }
 
 
-@include  media-breakpoint-down(md) {
+@include  media-breakpoint-down(lg) {
     .row p {
         text-align: center;
     }

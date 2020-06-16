@@ -152,7 +152,6 @@ export class MapModalsComponent implements OnInit {
   }
 
   toggleFilterGroups(category) {
-
     let quickFilterSwitch = $( ".filter-" + category.toLowerCase() + " .toggle" );
     let filterGroup = $(".filter-group-" + category.toLowerCase());
 

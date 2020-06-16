@@ -53,9 +53,8 @@
 .text-pink { color: $cf-pink; }
 
 
-html, body {
-  scroll-behavior: smooth;
-}
+html, body { scroll-behavior: smooth; }
+button:focus { outline: none; }
 
 
 h1, .h1,
@@ -333,21 +332,24 @@ button.expansible:focus {
  *
  * ------------------------------------------------------------------- */
 
+$scrollbarColor: #BDBDBD;
+$scrollbarWidth: 10px;
+
 @include media-breakpoint-up(lg){
   ::-webkit-scrollbar {
-    width: 12px;
+    width: $scrollbarWidth;
     background-color: #F5F5F5;
   }
 
   ::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
     background-color: #F5F5F5;
-    border-radius: 12px;
+    border-radius: $scrollbarWidth;
   }
 
   ::-webkit-scrollbar-thumb {
-    border-radius: 12px;
-    background-color: $scrollbar;
+    border-radius: $scrollbarWidth;
+    background-color: $scrollbarColor;
     //background-image: -webkit-gradient(linear,
     //        40% 0%,
     //        85% 84%,
@@ -356,7 +358,7 @@ button.expansible:focus {
     //        color-stop(.6,lighten(#ff9f3c, 3)));
 
     &:hover {
-      background-color:darken($scrollbar, 10%);
+      background-color:darken($scrollbarColor, 10%);
       //background-image: -webkit-gradient(linear,
       //        40% 0%,
       //        85% 84%,

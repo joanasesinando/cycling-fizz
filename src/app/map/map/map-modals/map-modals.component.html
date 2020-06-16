@@ -17,12 +17,16 @@
 
             <div class="modal-body">
                 <div *ngFor="let filter of filters" class="mb-3">
-                    <app-map-filter-toggle
+                    <app-switch
+                            [name]="'filter-switch filter-'+ filter.name"
                             [label]="filter.category"
+                            [labelPosition]="'left'"
+                            [labelColor]="'dark'"
                             [checked]="filter.checked"
-                            [name]="filter.name"
-                            (onCheckedChange)="toggleFilterGroups(filter.name)">
-                    </app-map-filter-toggle>
+                            [status]="'primary'"
+                            (checkedChange)="toggleFilterGroups(filter.name)">
+                    </app-switch>
+
                     <app-filter-group
                             [filterGroups]="filter.filterGroups"
                             class="filter-group-{{filter.name}}">
