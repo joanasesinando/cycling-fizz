@@ -11,18 +11,36 @@ export class AuthFirebaseService {
   public currentUser = null;
   public currentUserIdToken = null;
   public isUserLogged: boolean = false;
+  public auth = null;
 
   constructor(public afAuth: AngularFireAuth) {
     let thisObj = this;
-    firebase.auth().onAuthStateChanged(function(user) {
+    this.auth = firebase.auth();
+    this.auth.onAuthStateChanged(function(user) {
       thisObj.userChanged(user);
     });
 
   }
 
+  setLanguageCode(code) {
+    this.auth.languageCode = code;
+  }
+
   sendEmailVerification() {
     if (!this.isUserLogged) return;
-    this.currentUser.sendEmailVerification();
+    this.currentUser.sendEmailVerification().then(function() {
+      console.log("Email Sent");
+    }).catch(function(error) {
+      console.log("An error happened.");
+    });
+  }
+
+  recoverPassword(email: string) {
+    this.auth.sendPasswordResetEmail(email).then(function() {
+      console.log("Email Sent");
+    }).catch(function(error) {
+      console.log("An error happened.");
+    });
   }
 
   isEmailVerified() {
