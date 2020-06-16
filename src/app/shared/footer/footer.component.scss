@@ -42,7 +42,6 @@ footer {
             &:hover {
                 #fb { color: $facebook; }
                 #tt { color: $twitter; }
-                #ig { color: $instagram; }
                 #yt { color: $youtube; }
                 @include transform(translateY(-0.5rem));
             }

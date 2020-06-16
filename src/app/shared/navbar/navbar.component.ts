@@ -74,6 +74,11 @@ export class NavbarComponent implements OnInit {
     this.hideMobileMenuWhenLinkClicked();
   }
 
+  changeLanguage(code) {
+    this.translate.use(code);
+    this.authFirebaseService.setLanguageCode(code);
+  }
+
 
   showNavbar() {
     this.navbarToggler.addClass('is-active');
