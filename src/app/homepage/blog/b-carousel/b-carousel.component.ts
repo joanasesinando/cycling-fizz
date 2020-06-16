@@ -7,7 +7,7 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class BCarouselComponent implements OnInit {
 
-  @Input() blogPosts : [{}];
+  @Input() blogPosts : {photoSrc: string, topic: string, date: Date, title: string, nrComments: number, nrLikes: number}[];
 
   slideConfig = {
     slidesToShow: 3,
