@@ -1,0 +1,23 @@
+@import "~styles/colors";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+nb-card {
+  width: 30rem;
+  @include media-breakpoint-down(xs) { width: 90vw; }
+}
+
+nb-card-body { padding: 2.5rem 1.5rem; }
+nb-card-footer { background-color: $cf-superLightGray; }
+
+.close-btn:hover {
+  cursor: pointer;
+  opacity: .7;
+}
+
+.status-icon {
+  font-size: 1.5rem;
+}

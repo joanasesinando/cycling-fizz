@@ -1,0 +1,21 @@
+<nb-layout-column>
+    <nb-card status="{{status}}">
+        <nb-card-header class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <nb-icon class="status-icon mr-2" icon="{{headerIcon}}"></nb-icon>
+                {{headerTitle}}
+            </div>
+
+            <nb-icon class="close-btn" icon="close-outline" (click)="closeBtnClicked()"></nb-icon>
+        </nb-card-header>
+
+        <nb-card-body>
+            <p class="mb-0">{{text}}</p>
+        </nb-card-body>
+
+        <nb-card-footer class="d-flex justify-content-end align-items-center">
+            <button *ngIf="leftButton" nbButton status="basic" class="mr-2" (click)="leftBtnClicked()">{{leftButton}}</button>
+            <button nbButton hero status="{{status}}" (click)="rightBtnClicked()">{{rightButton}}</button>
+        </nb-card-footer>
+    </nb-card>
+</nb-layout-column>
