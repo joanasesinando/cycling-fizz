@@ -67,6 +67,7 @@
         <div *ngIf="f.submitted && username.invalid" class="invalid-feedback">
           <!--fixme change text-->
           <div *ngIf="username.errors.required">Username is required</div>
+          <div *ngIf="username.errors.nonUnique">Username already in use!</div>
         </div>
       </div>
 

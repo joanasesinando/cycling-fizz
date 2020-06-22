@@ -21,7 +21,7 @@ import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 
 import { AngularFireModule } from '@angular/fire';
-// import { AngularFirestoreModule } from '@angular/fire/firestore';/ fixme imports only needed for database features
+import { AngularFirestoreModule } from '@angular/fire/firestore';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from '../environments/environment';
 
@@ -54,7 +54,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NbEvaIconsModule,
     SlickCarouselModule,
     AngularFireModule.initializeApp(environment.firebase),
-    // AngularFirestoreModule, // fixme imports firebase/firestore, only needed for database features
+    AngularFirestoreModule, // fixme imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
   ],
   providers: [{ provide: LOCALE_ID, useValue: 'pt' }, NbToastrService, NbDialogService],

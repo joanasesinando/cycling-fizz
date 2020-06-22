@@ -12,10 +12,12 @@ export class AuthFirebaseService {
   public currentUserIdToken = null;
   public isUserLogged: boolean = false;
   public auth = null;
+  public db = null;
 
   constructor(public afAuth: AngularFireAuth) {
     let thisObj = this;
     this.auth = firebase.auth();
+    this.db = firebase.firestore();
     this.auth.onAuthStateChanged(function(user) {
       thisObj.userChanged(user);
     });
@@ -80,18 +82,18 @@ export class AuthFirebaseService {
   doRegister(value){
     return new Promise<any>((resolve, reject) => {
       this.afAuth.auth.createUserWithEmailAndPassword(value.email, value.password)
-          .then(res => {
-            resolve(res);
-          }, err => reject(err))
+        .then(res => {
+          resolve(res);
+        }, err => reject(err))
     })
   }
 
   doLogin(value){
     return new Promise<any>((resolve, reject) => {
       this.afAuth.auth.signInWithEmailAndPassword(value.email, value.password)
-          .then(res => {
-            resolve(res);
-          }, err => reject(err))
+        .then(res => {
+          resolve(res);
+        }, err => reject(err))
     })
   }
 
@@ -101,10 +103,24 @@ export class AuthFirebaseService {
       provider.addScope('profile');
       provider.addScope('email');
       this.afAuth.auth
-          .signInWithPopup(provider)
-          .then(res => {
-            resolve(res);
-          })
+        .signInWithPopup(provider)
+        .then(res => {
+          resolve(res);
+        })
     })
+  }
+
+
+
+  checkIfUsernameExists = async(username) => {
+    let userdata = this.db.collection("userdata");
+
+    return userdata.where("username", "==", username).get()
+      .then(querySnapshot => {
+        return querySnapshot.size > 0;
+      })
+      .catch(error => {
+        return null;
+      });
   }
 }

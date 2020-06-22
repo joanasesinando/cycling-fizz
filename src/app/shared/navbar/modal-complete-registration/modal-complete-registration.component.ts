@@ -40,8 +40,14 @@ export class ModalCompleteRegistrationComponent implements OnInit {
     this.changeCurrentModal.emit(Modals.Login);
   }
 
-  completeRegistration(){
+  completeRegistration = async() => {
+
     if (this.f.form.valid) {
+      if(await this.authFirebaseService.checkIfUsernameExists(this.formData.username)) {
+        //name already exists
+        this.f.form.controls["inputUsername"].setErrors({ nonUnique: true });
+        return;
+      }
       this.serverHandlerService.doCompleteUserProfileRegistry(this.authFirebaseService.currentUserIdToken, this.formData)
           .then(response => {
             console.log(response);
@@ -57,7 +63,7 @@ export class ModalCompleteRegistrationComponent implements OnInit {
     } else {
       console.log("invalid form");
     }
-  }
+  };
 
   showSuccessRegistrationToaster() {
     this.toastrService.success("Bem vindo!", "Registo efetuado com sucesso!", {duration: 5000});
