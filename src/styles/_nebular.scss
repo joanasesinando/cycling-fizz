@@ -129,6 +129,7 @@
 }
 
 
+
 /* ===================================================================
  *  popover
  *
@@ -148,6 +149,7 @@
 //}
 
 
+
 /* ===================================================================
  *  select
  *
@@ -164,3 +166,22 @@
 
 // when select on, it would move left
 .cdk-global-scrollblock { overflow-y: hidden; }
+
+
+
+/* ===================================================================
+ *  card
+ *
+ * ------------------------------------------------------------------- */
+
+.nb-theme-default nb-card.status-success nb-card-header,
+.nb-theme-default nb-card.status-warning nb-card-header,
+.nb-theme-default nb-card.status-danger nb-card-header,
+.nb-theme-default nb-card.status-info nb-card-header {
+  font-family: quicksand-regular, sans-serif;
+}
+
+.nb-theme-default nb-card.status-success nb-card-header { background-color: $cf-green; }
+.nb-theme-default nb-card.status-warning nb-card-header { background-color: $cf-yellow; }
+.nb-theme-default nb-card.status-danger nb-card-header { background-color: $cf-pink; }
+.nb-theme-default nb-card.status-info nb-card-header { background-color: $cf-blue; }

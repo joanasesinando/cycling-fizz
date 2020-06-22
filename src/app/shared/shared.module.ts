@@ -19,6 +19,7 @@ import { CheckboxComponent } from './checkbox/checkbox.component';
 import { ComingSoonComponent } from './coming-soon/coming-soon.component';
 import { CreditsComponent } from './credits/credits.component';
 import { CreditsAccordionComponent } from './credits/credits-accordion/credits-accordion.component';
+import { DialogComponent } from './dialog/dialog.component';
 import { FooterComponent } from './footer/footer.component';
 import { GoTopComponent } from './go-top/go-top.component';
 import { NavbarComponent } from './navbar/navbar.component';
@@ -32,7 +33,7 @@ import { ModalRegisterComponent } from './navbar/modal-register/modal-register.c
 import { ModalCompleteRegistrationComponent } from './navbar/modal-complete-registration/modal-complete-registration.component';
 
 import {
-    NbButtonModule, NbCheckboxModule,
+    NbButtonModule, NbCardModule, NbCheckboxModule,
     NbIconModule,
     NbLayoutModule,
     NbToggleModule
@@ -62,7 +63,8 @@ import {
     BadgeDotComponent,
     NgInitDirective,
     SwitchComponent,
-    CheckboxComponent
+    CheckboxComponent,
+    DialogComponent
   ],
     imports: [
         CommonModule,
@@ -75,7 +77,8 @@ import {
         ReactiveFormsModule,
         NbLayoutModule,
         NbToggleModule,
-        NbCheckboxModule
+        NbCheckboxModule,
+        NbCardModule
     ],
     exports: [
         NavbarComponent,
@@ -90,7 +93,8 @@ import {
         BadgeTextComponent,
         NgInitDirective,
         SwitchComponent,
-        CheckboxComponent
+        CheckboxComponent,
+        DialogComponent
     ]
 })
 export class SharedModule { }

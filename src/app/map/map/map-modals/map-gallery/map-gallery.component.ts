@@ -10,7 +10,7 @@ export class MapGalleryComponent implements OnInit {
 
   @Input() photos;
 
-  slideConfigFor = {
+  slideConfig = {
     slidesToShow: 1,
     slidesToScroll: 1,
     arrows: true,
@@ -19,29 +19,39 @@ export class MapGalleryComponent implements OnInit {
     dots: false,
     fade: true,
     asNavFor: '#slider-nav',
-    lazyLoad: 'progressive'
+    lazyLoad: 'progressive',
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          mobileFirst: true,
+          slidesToShow: 1,
+          arrows: false,
+          asNavFor: null,
+          lazyload: "ondemand",
+        }
+      }
+    ]
   };
   slideConfigNav = {
     slidesToShow: 5,
     slidesToScroll: 1,
     swipeToSlide: true,
-    asNavFor: '#slider-for',
+    asNavFor: '#slider',
     arrows: false,
     centerMode: true,
     focusOnSelect: true,
     autoplay: true,
     infinite: true,
     autoplaySpeed: 3000,
-  };
-  slideConfigMobile = {
-    slidesToShow: 1,
-    slidesToScroll: 1,
-    arrows: false,
-    autoplay: true,
-    infinite: true,
-    autoplaySpeed: 3000,
-    mobileFirst: true,
-    lazyLoad: 'ondemand'
+    responsive: [
+      {
+        breakpoint: 800,
+        settings: {
+          asNavFor: null,
+        }
+      }
+    ]
   };
 
   faUpload = faUpload;

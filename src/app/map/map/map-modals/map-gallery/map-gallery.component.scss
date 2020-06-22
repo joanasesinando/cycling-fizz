@@ -43,7 +43,13 @@ nb-user {
   }
 }
 
-.slide.mobile {
-  @include media-breakpoint-only(md) { height: 35vw; }
-  height: 40vw;
+#slider .slide {
+  width: 100%;
+  height: 29rem;
+  @include media-breakpoint-down(md){ height: 100%; }
+}
+
+#slider-nav .slide {
+  width: 100%;
+  height: 5rem;
 }

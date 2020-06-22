@@ -3,34 +3,23 @@
     <app-badge-text [badgeType]="'primary'" [badgeText]="photos.length.toString()" ></app-badge-text>
 </div>
 
-<div *ngIf="!mobileView" class="gallery">
+<div class="gallery">
     <ngx-slick-carousel class="carousel"
-                        id="slider-for"
-                        [config]="slideConfigFor"
+                        id="slider"
+                        [config]="slideConfig"
                         #slickModal='slick-carousel'>
-        <div ngxSlickItem *ngFor="let photo of photos" class="slide" style="width: 100%; height: 29rem;">
-            <nb-user class="map-gallery-user gradient text-white" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
+        <div ngxSlickItem *ngFor="let photo of photos" class="slide">
+            <nb-user class="map-gallery-user d-none d-sm-block gradient text-white" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
             <img class="main-img" src="{{ photo.img }}" alt="" width="100%">
         </div>
     </ngx-slick-carousel>
 
-    <ngx-slick-carousel class="carousel"
+    <ngx-slick-carousel class="carousel d-none d-lg-block"
                         id="slider-nav"
                         [config]="slideConfigNav"
                         #slickModal='slick-carousel'>
-        <div ngxSlickItem *ngFor="let photo of photos" class="slide" style="width: 100%; height: 5rem;">
+        <div ngxSlickItem *ngFor="let photo of photos" class="slide">
             <img class="nav-img"src="{{ photo.img }}" alt="" width="100%">
-        </div>
-    </ngx-slick-carousel>
-</div>
-
-<div *ngIf="mobileView" class="gallery">
-    <ngx-slick-carousel class="carousel"
-                        [config]="slideConfigMobile"
-                        #slickModal='slick-carousel'>
-        <div ngxSlickItem *ngFor="let photo of photos" class="slide mobile" style="width: 100%">
-            <nb-user class="map-gallery-user smaller gradient text-white" size="small" name="{{ photo.user }}" picture="{{ photo.avatar }}"></nb-user>
-            <img class="main-img" src="{{ photo.img }}" alt="" width="100%">
         </div>
     </ngx-slick-carousel>
 </div>
