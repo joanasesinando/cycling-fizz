@@ -28,11 +28,14 @@
             <app-search></app-search>
         </div>
 
-        <!-- Map -->
-        <div id="map">
-            <button nbButton hero status="danger" style="position: absolute; bottom: 2rem; left: 1rem;" data-toggle="modal" data-target="#mapElementModal">Abrir elemento</button>
-            <app-btn-floating></app-btn-floating>
+        <div id="mapbox">
+            <app-mapbox></app-mapbox>
         </div>
+<!--        &lt;!&ndash; Map &ndash;&gt;-->
+<!--        <div id="map">-->
+<!--            <button nbButton hero status="danger" style="position: absolute; bottom: 2rem; left: 1rem;" data-toggle="modal" data-target="#mapElementModal">Abrir elemento</button>-->
+<!--            <app-btn-floating></app-btn-floating>-->
+<!--        </div>-->
 
 
         <app-map-modals [filters]="filters"></app-map-modals>

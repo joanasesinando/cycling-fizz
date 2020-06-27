@@ -36,5 +36,12 @@ section {
       height: calc(100vh - 4rem - 3.5rem);
       min-height: 640px;
     }
+
+    #mapbox {
+      position: relative;
+      top: 3.5rem;
+      height: calc(100vh - 4rem - 3.5rem);
+      min-height: 640px;
+    }
   }
 }

@@ -1,0 +1,4987 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-02-07T12:57:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5449270",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Poeta 1850 - 1923. Início: Alameda Dom Afonso Henriques. Fim: Praça de Londres.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Guerra Junqueiro",
+        "old_name": "Avenida Dr. António José de Almeida",
+        "oneway": "yes",
+        "oneway:bicycle": "no",
+        "parking:condition:both": "ticket",
+        "parking:condition:both:default": "free",
+        "parking:condition:both:time_interval": "Mo-Fr 09:00-19:00",
+        "parking:lane:left": "parallel",
+        "parking:lane:right": "diagonal",
+        "sidewalk": "both",
+        "smoothness": "good",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2140",
+        "start_date": "1933-07-18",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.13678,
+            38.7399615
+          ],
+          [
+            -9.1366471,
+            38.7399063
+          ],
+          [
+            -9.1365216,
+            38.739822
+          ],
+          [
+            -9.1355032,
+            38.7387862
+          ],
+          [
+            -9.1352193,
+            38.7384878
+          ],
+          [
+            -9.1343554,
+            38.73758
+          ],
+          [
+            -9.1343434,
+            38.7375008
+          ]
+        ]
+      },
+      "id": 5449270
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/5449341",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Cidades, zonas estrangeiras. Início: Avenida Almirante Reis. Fim: Praça de Londres.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida de Paris",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1152",
+        "start_date": "1948-08-03"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1357632,
+            38.7411577
+          ],
+          [
+            -9.1360731,
+            38.7411786
+          ],
+          [
+            -9.1363162,
+            38.7411802
+          ],
+          [
+            -9.1366088,
+            38.7411434
+          ],
+          [
+            -9.1368804,
+            38.7410718
+          ],
+          [
+            -9.1370651,
+            38.7410054
+          ],
+          [
+            -9.1372388,
+            38.7409425
+          ]
+        ]
+      },
+      "id": 5449341
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23659378",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Escritor. Início: Avenida Fontes Pereira de Melo. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rua Pinheiro Chagas",
+        "oneway": "yes",
+        "sidewalk": "right",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1978",
+        "start_date": "1902-11-29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1521352,
+            38.734847
+          ],
+          [
+            -9.1520524,
+            38.7348203
+          ],
+          [
+            -9.1519506,
+            38.7347823
+          ],
+          [
+            -9.1516774,
+            38.7346804
+          ],
+          [
+            -9.1506673,
+            38.7343034
+          ],
+          [
+            -9.150579,
+            38.7342704
+          ],
+          [
+            -9.1503822,
+            38.734197
+          ],
+          [
+            -9.1498902,
+            38.7340133
+          ],
+          [
+            -9.1497835,
+            38.7339735
+          ],
+          [
+            -9.1496568,
+            38.7339262
+          ],
+          [
+            -9.1495499,
+            38.7338863
+          ],
+          [
+            -9.148826,
+            38.7336161
+          ],
+          [
+            -9.1487477,
+            38.7335869
+          ],
+          [
+            -9.1486457,
+            38.7335488
+          ],
+          [
+            -9.1485305,
+            38.7335058
+          ],
+          [
+            -9.1477986,
+            38.7332327
+          ],
+          [
+            -9.1477287,
+            38.7332066
+          ],
+          [
+            -9.1476227,
+            38.733167
+          ],
+          [
+            -9.1475409,
+            38.7331365
+          ],
+          [
+            -9.1469452,
+            38.7329141
+          ],
+          [
+            -9.1468575,
+            38.7328814
+          ],
+          [
+            -9.1467644,
+            38.7328465
+          ],
+          [
+            -9.1467219,
+            38.7328306
+          ],
+          [
+            -9.1466713,
+            38.7328116
+          ],
+          [
+            -9.1458038,
+            38.7324865
+          ],
+          [
+            -9.1457555,
+            38.7324457
+          ],
+          [
+            -9.1457261,
+            38.7324038
+          ]
+        ]
+      },
+      "id": 23659378
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23659389",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Escritor, Politico, Republicano. Início: Avenida Fontes Pereira de Melo. Fim: Rua Dr. António Cândido.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rua Latino Coelho",
+        "oneway": "yes",
+        "sidewalk": "right",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2362",
+        "start_date": "1902-11-29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1513046,
+            38.7334947
+          ],
+          [
+            -9.1512015,
+            38.7334563
+          ],
+          [
+            -9.1510266,
+            38.7333913
+          ],
+          [
+            -9.1504003,
+            38.7331584
+          ],
+          [
+            -9.1502941,
+            38.7331188
+          ],
+          [
+            -9.1501605,
+            38.7330697
+          ],
+          [
+            -9.1500776,
+            38.7330378
+          ],
+          [
+            -9.1493337,
+            38.7327561
+          ],
+          [
+            -9.1492619,
+            38.7327288
+          ],
+          [
+            -9.1491624,
+            38.7326913
+          ],
+          [
+            -9.1490727,
+            38.7326575
+          ],
+          [
+            -9.1483586,
+            38.732388
+          ],
+          [
+            -9.1482471,
+            38.7323459
+          ],
+          [
+            -9.1481404,
+            38.7323073
+          ],
+          [
+            -9.1480404,
+            38.732272
+          ],
+          [
+            -9.1472944,
+            38.7320001
+          ],
+          [
+            -9.1472692,
+            38.7319909
+          ],
+          [
+            -9.1471513,
+            38.731948
+          ]
+        ]
+      },
+      "id": 23659389
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23695615",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Naturalista e Zoólogo 1823 - 1907. Início: Rua do Arco do Cego. Fim: Avenida Marquês de Tomar.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Barbosa du Bocage",
+        "old_name": "Rua Barbosa du Bocage",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2597",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1461681,
+            38.74031
+          ],
+          [
+            -9.1461027,
+            38.7403197
+          ],
+          [
+            -9.1448378,
+            38.740517
+          ],
+          [
+            -9.1447774,
+            38.7405264
+          ],
+          [
+            -9.1446118,
+            38.7405523
+          ],
+          [
+            -9.1445003,
+            38.7405697
+          ],
+          [
+            -9.1430452,
+            38.7407968
+          ],
+          [
+            -9.142914,
+            38.7408176
+          ]
+        ]
+      },
+      "id": 23695615
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/23695632",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Jornalista, Maçonaria. Início: Rua do Arco Cego. Fim: Rua Brás Pacheco.",
+        "highway": "residential",
+        "lit": "yes",
+        "maxspeed": "30",
+        "maxspeed:type": "PT:zone30",
+        "name": "Rua Brito Aranha",
+        "oneway": "no",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "203",
+        "start_date": "1933-07-18",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1426479,
+            38.7402805
+          ],
+          [
+            -9.1424878,
+            38.7403257
+          ],
+          [
+            -9.1422843,
+            38.7403838
+          ],
+          [
+            -9.1417926,
+            38.7405241
+          ],
+          [
+            -9.141769,
+            38.7405308
+          ],
+          [
+            -9.1416513,
+            38.7405644
+          ],
+          [
+            -9.1412405,
+            38.7406817
+          ],
+          [
+            -9.1409323,
+            38.7407697
+          ],
+          [
+            -9.1407364,
+            38.7408256
+          ],
+          [
+            -9.1402333,
+            38.7409692
+          ],
+          [
+            -9.1401508,
+            38.7409927
+          ],
+          [
+            -9.1400376,
+            38.7410251
+          ],
+          [
+            -9.1397182,
+            38.7411162
+          ]
+        ]
+      },
+      "id": 23695632
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46157580",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Escritor, Médico. Início: Rua Stuart Carvalhais. Fim: Rua Costa Goodolfim.",
+        "highway": "residential",
+        "name": "Rua Nunes Claro",
+        "old_name": "Rua Arnaldo Gama",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2453",
+        "start_date": "1956-01-14"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1421878,
+            38.7397961
+          ],
+          [
+            -9.1418474,
+            38.7398932
+          ]
+        ]
+      },
+      "id": 46157580
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46157590",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Dramaturgo, Escritor, Jornalista, Militar, Professor, Ensaísta. Início: Rua Stuart Carvalhais. Fim: Rua Brito Aranha.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "20",
+        "name": "Rua Reis Gomes",
+        "old_name": "Rua Barbosa Colen",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2311",
+        "start_date": "1956-01-14"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1405952,
+            38.7405257
+          ],
+          [
+            -9.1407915,
+            38.7404697
+          ],
+          [
+            -9.1410997,
+            38.7403817
+          ],
+          [
+            -9.1415106,
+            38.7402645
+          ],
+          [
+            -9.1414627,
+            38.7401624
+          ],
+          [
+            -9.1419134,
+            38.7400338
+          ]
+        ]
+      },
+      "id": 46157590
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46157591",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Outros. Início: Rua Xavier Cordeiro. Fim: Rua Brito Aranha.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "20",
+        "name": "Rua Gomes da Silva",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "237",
+        "start_date": "1933-01-21"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1405581,
+            38.7399722
+          ],
+          [
+            -9.1406777,
+            38.7402271
+          ],
+          [
+            -9.1407915,
+            38.7404697
+          ],
+          [
+            -9.1409211,
+            38.7407458
+          ],
+          [
+            -9.1409323,
+            38.7407697
+          ]
+        ]
+      },
+      "id": 46157591
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46157604",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "20",
+        "name": "Rua Fernando Pedroso",
+        "oneway": "yes",
+        "oneway:bicycle": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1393441,
+            38.7403188
+          ],
+          [
+            -9.1389937,
+            38.7404188
+          ],
+          [
+            -9.1385916,
+            38.7405335
+          ],
+          [
+            -9.1384888,
+            38.7405633
+          ]
+        ]
+      },
+      "id": 46157604
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46157682",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Nobre, Politico. Início: Rua Costa Goodolfim. Fim: Avenida Conde de Valbom.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Visconde de Valmor",
+        "old_name": "Rua Visconde de Valmor",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2098",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1442965,
+            38.7385547
+          ],
+          [
+            -9.1443851,
+            38.7385402
+          ],
+          [
+            -9.1444161,
+            38.7385356
+          ],
+          [
+            -9.1455235,
+            38.73837
+          ],
+          [
+            -9.1455903,
+            38.7383601
+          ],
+          [
+            -9.1456964,
+            38.7383441
+          ]
+        ]
+      },
+      "id": 46157682
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46157683",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Nobre, Politico. Início: Rua Costa Goodolfim. Fim: Avenida Conde de Valbom.",
+        "highway": "residential",
+        "lanes": "1",
+        "name": "Avenida Visconde de Valmor",
+        "old_name": "Rua Visconde de Valmor",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2098",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1424243,
+            38.7390693
+          ],
+          [
+            -9.1425588,
+            38.7390298
+          ],
+          [
+            -9.1428591,
+            38.7389415
+          ],
+          [
+            -9.1440237,
+            38.7385991
+          ],
+          [
+            -9.1441361,
+            38.7385808
+          ]
+        ]
+      },
+      "id": 46157683
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46834172",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Escritor, Médico. Início: Rua Stuart Carvalhais. Fim: Rua Costa Goodolfim.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "20",
+        "name": "Rua Nunes Claro",
+        "old_name": "Rua Arnaldo Gama",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2453",
+        "start_date": "1956-01-14"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1418474,
+            38.7398932
+          ],
+          [
+            -9.1409859,
+            38.7401391
+          ],
+          [
+            -9.1406777,
+            38.7402271
+          ],
+          [
+            -9.1404814,
+            38.7402831
+          ]
+        ]
+      },
+      "id": 46834172
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46834173",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Outros. Início: Avenida António José de Almeida. Fim: Rua Nunes Claro.",
+        "highway": "residential",
+        "maxspeed": "20",
+        "name": "Rua Bacelar e Silva",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1906",
+        "start_date": "1933-01-21"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1419134,
+            38.7400338
+          ],
+          [
+            -9.1418985,
+            38.7400021
+          ],
+          [
+            -9.1418474,
+            38.7398932
+          ]
+        ]
+      },
+      "id": 46834173
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46834181",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Outros. Início: Avenida António José de Almeida. Fim: Rua Nunes Claro.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "20",
+        "name": "Rua Bacelar e Silva",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1906",
+        "start_date": "1933-01-21"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1410207,
+            38.738131
+          ],
+          [
+            -9.1410649,
+            38.7382254
+          ],
+          [
+            -9.141185,
+            38.7384812
+          ],
+          [
+            -9.1413053,
+            38.7387378
+          ],
+          [
+            -9.1414233,
+            38.7389892
+          ],
+          [
+            -9.1415276,
+            38.7392115
+          ],
+          [
+            -9.1415692,
+            38.7393003
+          ],
+          [
+            -9.1416229,
+            38.7394147
+          ],
+          [
+            -9.1417279,
+            38.7396383
+          ],
+          [
+            -9.1418474,
+            38.7398932
+          ]
+        ]
+      },
+      "id": 46834181
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/46834197",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Movimento Associativo. Início: Avenida do México. Fim: Rua Brito Aranha.",
+        "highway": "residential",
+        "lanes": "1",
+        "lit": "yes",
+        "maxspeed": "20",
+        "name": "Rua Brás Pacheco",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2561",
+        "start_date": "1933-01-21",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1384888,
+            38.7405633
+          ],
+          [
+            -9.1385173,
+            38.7406241
+          ],
+          [
+            -9.1386055,
+            38.7408119
+          ],
+          [
+            -9.1387286,
+            38.7410743
+          ],
+          [
+            -9.138848,
+            38.7413288
+          ],
+          [
+            -9.138863,
+            38.7413607
+          ]
+        ]
+      },
+      "id": 46834197
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/96748344",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Escritor. Início: Avenida Fontes Pereira de Melo. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rua Pinheiro Chagas",
+        "oneway": "yes",
+        "sidewalk": "right",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1978",
+        "start_date": "1902-11-29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.146879,
+            38.7329747
+          ],
+          [
+            -9.1470539,
+            38.7330406
+          ],
+          [
+            -9.14723,
+            38.7331069
+          ],
+          [
+            -9.1475047,
+            38.7332104
+          ],
+          [
+            -9.1475795,
+            38.7332386
+          ],
+          [
+            -9.1476854,
+            38.7332785
+          ],
+          [
+            -9.1477507,
+            38.7333031
+          ],
+          [
+            -9.1485058,
+            38.7335876
+          ],
+          [
+            -9.1487028,
+            38.7336619
+          ],
+          [
+            -9.1487911,
+            38.7336951
+          ],
+          [
+            -9.1495083,
+            38.7339653
+          ],
+          [
+            -9.1496113,
+            38.7340041
+          ],
+          [
+            -9.1497371,
+            38.7340516
+          ],
+          [
+            -9.149833,
+            38.7340877
+          ],
+          [
+            -9.1503219,
+            38.7342719
+          ],
+          [
+            -9.1503666,
+            38.7342887
+          ],
+          [
+            -9.1505035,
+            38.7343403
+          ],
+          [
+            -9.1506086,
+            38.7343799
+          ],
+          [
+            -9.1506291,
+            38.7343876
+          ],
+          [
+            -9.1516233,
+            38.7347584
+          ],
+          [
+            -9.1518272,
+            38.7348402
+          ],
+          [
+            -9.1518294,
+            38.7348753
+          ],
+          [
+            -9.1518327,
+            38.7349313
+          ]
+        ]
+      },
+      "id": 96748344
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/97473685",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Naturalista e Zoólogo 1823 - 1907. Início: Rua do Arco do Cego. Fim: Avenida Marquês de Tomar.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Barbosa du Bocage",
+        "old_name": "Rua Barbosa du Bocage",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2597",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1429556,
+            38.7408924
+          ],
+          [
+            -9.1430931,
+            38.7408725
+          ],
+          [
+            -9.1445201,
+            38.7406515
+          ],
+          [
+            -9.1446313,
+            38.7406341
+          ],
+          [
+            -9.1447974,
+            38.7406085
+          ],
+          [
+            -9.144857,
+            38.7405993
+          ],
+          [
+            -9.1461154,
+            38.7404044
+          ],
+          [
+            -9.1461875,
+            38.7403937
+          ]
+        ]
+      },
+      "id": 97473685
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/97571121",
+        "highway": "cycleway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1426014,
+            38.7397845
+          ],
+          [
+            -9.1426368,
+            38.739915
+          ],
+          [
+            -9.1426501,
+            38.7399776
+          ],
+          [
+            -9.142536,
+            38.7399994
+          ],
+          [
+            -9.1424928,
+            38.7400075
+          ]
+        ]
+      },
+      "id": 97571121
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/97571126",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Nobre, Politico. Início: Rua Costa Goodolfim. Fim: Avenida Conde de Valbom.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Visconde de Valmor",
+        "old_name": "Rua Visconde de Valmor",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2098",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1456766,
+            38.7382562
+          ],
+          [
+            -9.1455673,
+            38.7382728
+          ],
+          [
+            -9.1455025,
+            38.7382826
+          ],
+          [
+            -9.1443966,
+            38.7384515
+          ]
+        ]
+      },
+      "id": 97571126
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/109122021",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Cientista, Estrangeiros. Início: Avenida de Roma. Fim: Avenida de Madrid.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rua Edison",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1149",
+        "start_date": "1948-08-03"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1390657,
+            38.7440608
+          ],
+          [
+            -9.1390099,
+            38.7440792
+          ],
+          [
+            -9.1388994,
+            38.7441151
+          ]
+        ]
+      },
+      "id": 109122021
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/109122037",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Grande Herói da Aviação (*). Início: Avenida de Roma. Fim: Campo Pequeno.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Sacadura Cabral",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "599",
+        "start_date": "1926-09-14"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1443981,
+            38.7433945
+          ],
+          [
+            -9.1442689,
+            38.7434393
+          ],
+          [
+            -9.1430011,
+            38.7438793
+          ],
+          [
+            -9.1420711,
+            38.7442176
+          ],
+          [
+            -9.1411523,
+            38.7445454
+          ],
+          [
+            -9.1400739,
+            38.7447439
+          ]
+        ]
+      },
+      "id": 109122037
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/109122043",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Grande Herói da Aviação (*). Início: Avenida de Roma. Fim: Campo Pequeno.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Sacadura Cabral",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "599",
+        "start_date": "1926-09-14"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1400739,
+            38.7447439
+          ],
+          [
+            -9.1400907,
+            38.744784
+          ],
+          [
+            -9.14013,
+            38.7448064
+          ],
+          [
+            -9.1401741,
+            38.7448106
+          ],
+          [
+            -9.1402576,
+            38.7448019
+          ],
+          [
+            -9.1411918,
+            38.744623
+          ],
+          [
+            -9.1421103,
+            38.7442952
+          ],
+          [
+            -9.1430423,
+            38.743964
+          ],
+          [
+            -9.1432482,
+            38.7438908
+          ],
+          [
+            -9.1443082,
+            38.743514
+          ],
+          [
+            -9.1444417,
+            38.7434666
+          ]
+        ]
+      },
+      "id": 109122043
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/137826396",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1243743,
+            38.7428352
+          ],
+          [
+            -9.1245257,
+            38.7428986
+          ],
+          [
+            -9.1245547,
+            38.742941
+          ],
+          [
+            -9.1245894,
+            38.7429678
+          ],
+          [
+            -9.124643,
+            38.7429745
+          ],
+          [
+            -9.1247191,
+            38.7429656
+          ],
+          [
+            -9.1248062,
+            38.742976
+          ],
+          [
+            -9.1248608,
+            38.7430005
+          ],
+          [
+            -9.1248892,
+            38.743039
+          ],
+          [
+            -9.1249068,
+            38.7430806
+          ],
+          [
+            -9.1249604,
+            38.7431277
+          ],
+          [
+            -9.1250223,
+            38.7431612
+          ],
+          [
+            -9.1250945,
+            38.7431695
+          ],
+          [
+            -9.1251452,
+            38.7431659
+          ],
+          [
+            -9.1252095,
+            38.7431447
+          ],
+          [
+            -9.125272,
+            38.7431204
+          ],
+          [
+            -9.1253308,
+            38.7431353
+          ],
+          [
+            -9.1253733,
+            38.7431697
+          ],
+          [
+            -9.1253843,
+            38.7432034
+          ],
+          [
+            -9.1253934,
+            38.7432355
+          ],
+          [
+            -9.1253752,
+            38.7432681
+          ]
+        ]
+      },
+      "id": 137826396
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/137826398",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1243061,
+            38.744411
+          ],
+          [
+            -9.1241828,
+            38.7445446
+          ],
+          [
+            -9.1240932,
+            38.7446492
+          ],
+          [
+            -9.1240717,
+            38.7446795
+          ]
+        ]
+      },
+      "id": 137826398
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/137826402",
+        "bicycle": "designated",
+        "bridge": "yes",
+        "foot": "designated",
+        "highway": "path",
+        "layer": "1",
+        "lit": "yes",
+        "name": "Ponte da Belavista",
+        "segregated": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1253083,
+            38.7433326
+          ],
+          [
+            -9.1243061,
+            38.744411
+          ]
+        ]
+      },
+      "id": 137826402
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/137829010",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Cientista, Estrangeiros. Início: Avenida de Roma. Fim: Avenida de Madrid.",
+        "highway": "residential",
+        "maxheight": "2.8",
+        "maxspeed": "30",
+        "name": "Rua Edison",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1149",
+        "start_date": "1948-08-03",
+        "tunnel": "building_passage"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1388994,
+            38.7441151
+          ],
+          [
+            -9.1387922,
+            38.7441505
+          ]
+        ]
+      },
+      "id": 137829010
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/137829011",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Cientista, Estrangeiros. Início: Avenida de Roma. Fim: Avenida de Madrid.",
+        "highway": "residential",
+        "maxheight": "2.8",
+        "maxspeed": "30",
+        "name": "Rua Edison",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1149",
+        "start_date": "1948-08-03",
+        "tunnel": "building_passage"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1380072,
+            38.7444108
+          ],
+          [
+            -9.1378917,
+            38.7444475
+          ]
+        ]
+      },
+      "id": 137829011
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/137829012",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Cientista, Estrangeiros. Início: Avenida de Roma. Fim: Avenida de Madrid.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rua Edison",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1149",
+        "start_date": "1948-08-03"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1387922,
+            38.7441505
+          ],
+          [
+            -9.1380072,
+            38.7444108
+          ]
+        ]
+      },
+      "id": 137829012
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/137829013",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Cientista, Estrangeiros. Início: Avenida de Roma. Fim: Avenida de Madrid.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rua Edison",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1149",
+        "start_date": "1948-08-03"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1378917,
+            38.7444475
+          ],
+          [
+            -9.137817,
+            38.744472
+          ],
+          [
+            -9.1377425,
+            38.7444965
+          ]
+        ]
+      },
+      "id": 137829013
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/138255981",
+        "alt_name": "Avenida Duque d'Ávila",
+        "highway": "cycleway",
+        "lit": "yes",
+        "name": "Avenida Duque de Ávila",
+        "oneway": "no",
+        "segregated": "yes",
+        "surface": "paved"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.152115,
+            38.7350067
+          ],
+          [
+            -9.1519493,
+            38.7349905
+          ],
+          [
+            -9.1491326,
+            38.7350737
+          ],
+          [
+            -9.1489952,
+            38.7350768
+          ],
+          [
+            -9.1481209,
+            38.7350968
+          ],
+          [
+            -9.1473766,
+            38.7351139
+          ],
+          [
+            -9.1472109,
+            38.7351195
+          ],
+          [
+            -9.1455222,
+            38.735156
+          ],
+          [
+            -9.1454267,
+            38.7351582
+          ],
+          [
+            -9.1453544,
+            38.7351603
+          ],
+          [
+            -9.1452545,
+            38.7351619
+          ],
+          [
+            -9.1451133,
+            38.7351652
+          ],
+          [
+            -9.1449474,
+            38.7351692
+          ],
+          [
+            -9.144835,
+            38.7351718
+          ],
+          [
+            -9.1434738,
+            38.7352052
+          ],
+          [
+            -9.1433243,
+            38.7352058
+          ],
+          [
+            -9.143204,
+            38.7352087
+          ],
+          [
+            -9.1422524,
+            38.7352316
+          ],
+          [
+            -9.1415993,
+            38.7352514
+          ]
+        ]
+      },
+      "id": 138255981
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/154015834",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Datas. Início: Rua de Dona Estefânia. Fim: Avenida 5 de Outubro.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Praia da Vitória",
+        "oneway": "yes",
+        "sidewalk": "right",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2104",
+        "start_date": "1906-06-28",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1414028,
+            38.7342958
+          ],
+          [
+            -9.1415565,
+            38.7342737
+          ],
+          [
+            -9.1429444,
+            38.7340746
+          ],
+          [
+            -9.1430506,
+            38.7340594
+          ],
+          [
+            -9.143195,
+            38.7340387
+          ],
+          [
+            -9.1433089,
+            38.7340223
+          ],
+          [
+            -9.1438881,
+            38.7339392
+          ],
+          [
+            -9.1438788,
+            38.7338999
+          ],
+          [
+            -9.1438679,
+            38.7338537
+          ]
+        ]
+      },
+      "id": 154015834
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/166113168",
+        "foot": "yes",
+        "highway": "cycleway",
+        "segregated": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1242532,
+            38.7505836
+          ],
+          [
+            -9.1246635,
+            38.7509239
+          ],
+          [
+            -9.1250553,
+            38.7512138
+          ],
+          [
+            -9.1253592,
+            38.7515136
+          ],
+          [
+            -9.125572,
+            38.7517545
+          ],
+          [
+            -9.1256824,
+            38.7518796
+          ],
+          [
+            -9.1263489,
+            38.7526233
+          ],
+          [
+            -9.1262818,
+            38.7526616
+          ],
+          [
+            -9.1261935,
+            38.752712
+          ],
+          [
+            -9.1261035,
+            38.7527634
+          ],
+          [
+            -9.1263275,
+            38.7530238
+          ],
+          [
+            -9.1263286,
+            38.7531171
+          ],
+          [
+            -9.1263172,
+            38.7532091
+          ],
+          [
+            -9.1262736,
+            38.7532567
+          ],
+          [
+            -9.1261576,
+            38.7533773
+          ],
+          [
+            -9.1258831,
+            38.7536603
+          ],
+          [
+            -9.125796,
+            38.7537868
+          ],
+          [
+            -9.1257973,
+            38.7538768
+          ],
+          [
+            -9.125795,
+            38.7539456
+          ],
+          [
+            -9.1258174,
+            38.7540525
+          ],
+          [
+            -9.1258711,
+            38.7541884
+          ],
+          [
+            -9.1259633,
+            38.7541626
+          ],
+          [
+            -9.1260451,
+            38.7541427
+          ],
+          [
+            -9.1261675,
+            38.7544462
+          ],
+          [
+            -9.1261859,
+            38.754538
+          ],
+          [
+            -9.1261847,
+            38.7546067
+          ],
+          [
+            -9.1260654,
+            38.7550878
+          ],
+          [
+            -9.1261253,
+            38.7551874
+          ],
+          [
+            -9.1261555,
+            38.7552138
+          ],
+          [
+            -9.1261926,
+            38.7552357
+          ],
+          [
+            -9.1264264,
+            38.7553202
+          ],
+          [
+            -9.1265006,
+            38.7553887
+          ],
+          [
+            -9.1266535,
+            38.7554514
+          ],
+          [
+            -9.1268461,
+            38.7555476
+          ],
+          [
+            -9.1270317,
+            38.7557233
+          ],
+          [
+            -9.1271658,
+            38.7559492
+          ],
+          [
+            -9.1272409,
+            38.7561208
+          ],
+          [
+            -9.1273643,
+            38.7565935
+          ],
+          [
+            -9.127493,
+            38.7571875
+          ],
+          [
+            -9.1276271,
+            38.7576602
+          ],
+          [
+            -9.1276808,
+            38.7580743
+          ],
+          [
+            -9.1276861,
+            38.7582877
+          ],
+          [
+            -9.1276057,
+            38.758639
+          ],
+          [
+            -9.1274662,
+            38.7589319
+          ],
+          [
+            -9.1273589,
+            38.7591368
+          ],
+          [
+            -9.127096,
+            38.7593962
+          ],
+          [
+            -9.1266776,
+            38.7596974
+          ],
+          [
+            -9.126097,
+            38.7601679
+          ],
+          [
+            -9.1260283,
+            38.7602335
+          ],
+          [
+            -9.1259984,
+            38.7602905
+          ],
+          [
+            -9.1260069,
+            38.76036
+          ],
+          [
+            -9.12603,
+            38.7604208
+          ],
+          [
+            -9.1260748,
+            38.7604874
+          ],
+          [
+            -9.1260405,
+            38.7605394
+          ],
+          [
+            -9.126,
+            38.7605707
+          ],
+          [
+            -9.1260809,
+            38.7606295
+          ],
+          [
+            -9.1261197,
+            38.7607282
+          ]
+        ]
+      },
+      "id": 166113168
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/171955768",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "footway",
+        "lit": "yes",
+        "segregated": "yes",
+        "surface": "asphalt",
+        "wheelchair": "limited"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1268485,
+            38.7407237
+          ],
+          [
+            -9.1268234,
+            38.7408099
+          ],
+          [
+            -9.1267918,
+            38.7409469
+          ],
+          [
+            -9.1267842,
+            38.7409759
+          ],
+          [
+            -9.1267786,
+            38.7410526
+          ],
+          [
+            -9.1267705,
+            38.7411624
+          ],
+          [
+            -9.1268072,
+            38.74135
+          ],
+          [
+            -9.1268525,
+            38.7415284
+          ],
+          [
+            -9.1269102,
+            38.74174
+          ],
+          [
+            -9.126909,
+            38.7418274
+          ],
+          [
+            -9.126877,
+            38.7419116
+          ],
+          [
+            -9.1268127,
+            38.7419967
+          ],
+          [
+            -9.1266877,
+            38.7421063
+          ],
+          [
+            -9.1263966,
+            38.7423051
+          ],
+          [
+            -9.1262868,
+            38.7423984
+          ],
+          [
+            -9.1261904,
+            38.7425157
+          ],
+          [
+            -9.1261169,
+            38.7426298
+          ],
+          [
+            -9.1259542,
+            38.7429012
+          ],
+          [
+            -9.1259002,
+            38.7429619
+          ],
+          [
+            -9.1258084,
+            38.7430473
+          ],
+          [
+            -9.125732,
+            38.7431088
+          ],
+          [
+            -9.1256296,
+            38.743172
+          ],
+          [
+            -9.125444,
+            38.7432656
+          ],
+          [
+            -9.1253752,
+            38.7432681
+          ]
+        ]
+      },
+      "id": 171955768
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/233873739",
+        "highway": "cycleway",
+        "lit": "yes",
+        "surface": "paved"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1458403,
+            38.7453711
+          ],
+          [
+            -9.145803,
+            38.7453935
+          ],
+          [
+            -9.1456198,
+            38.7451917
+          ],
+          [
+            -9.1450635,
+            38.745234
+          ],
+          [
+            -9.1447017,
+            38.7452638
+          ],
+          [
+            -9.1446249,
+            38.745245
+          ],
+          [
+            -9.1427804,
+            38.7453294
+          ],
+          [
+            -9.1419872,
+            38.7453794
+          ],
+          [
+            -9.1400733,
+            38.7455001
+          ],
+          [
+            -9.1400886,
+            38.7455588
+          ],
+          [
+            -9.1401524,
+            38.745671
+          ],
+          [
+            -9.1400577,
+            38.7457234
+          ],
+          [
+            -9.1399447,
+            38.7457567
+          ],
+          [
+            -9.1398735,
+            38.745784
+          ],
+          [
+            -9.1397715,
+            38.7457202
+          ],
+          [
+            -9.1397554,
+            38.7456651
+          ],
+          [
+            -9.1397105,
+            38.745571
+          ],
+          [
+            -9.1396913,
+            38.7455375
+          ],
+          [
+            -9.1394014,
+            38.7455612
+          ],
+          [
+            -9.1388397,
+            38.7456045
+          ],
+          [
+            -9.1376354,
+            38.745684
+          ],
+          [
+            -9.1370836,
+            38.7457262
+          ],
+          [
+            -9.1367596,
+            38.7457479
+          ],
+          [
+            -9.1366476,
+            38.7457562
+          ],
+          [
+            -9.1365328,
+            38.7457688
+          ],
+          [
+            -9.1363962,
+            38.7457874
+          ],
+          [
+            -9.1363056,
+            38.7457955
+          ],
+          [
+            -9.1360981,
+            38.7458075
+          ],
+          [
+            -9.1349574,
+            38.7458833
+          ]
+        ]
+      },
+      "id": 233873739
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/321046508",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Escritor, Politico, Republicano. Início: Avenida Fontes Pereira de Melo. Fim: Rua Dr. António Cândido.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rua Latino Coelho",
+        "oneway": "yes",
+        "sidewalk": "right",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2362",
+        "start_date": "1902-11-29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1473445,
+            38.7321234
+          ],
+          [
+            -9.1479936,
+            38.7323559
+          ],
+          [
+            -9.1480902,
+            38.7323906
+          ],
+          [
+            -9.1481968,
+            38.7324293
+          ],
+          [
+            -9.1483072,
+            38.7324724
+          ],
+          [
+            -9.1490174,
+            38.7327498
+          ],
+          [
+            -9.1491063,
+            38.7327844
+          ],
+          [
+            -9.1492054,
+            38.7328232
+          ],
+          [
+            -9.1492794,
+            38.73285
+          ],
+          [
+            -9.1500278,
+            38.7331212
+          ],
+          [
+            -9.1501122,
+            38.7331518
+          ],
+          [
+            -9.1502432,
+            38.7332041
+          ],
+          [
+            -9.1503365,
+            38.7332394
+          ],
+          [
+            -9.150968,
+            38.7334776
+          ],
+          [
+            -9.1511327,
+            38.7335397
+          ],
+          [
+            -9.1512209,
+            38.733573
+          ]
+        ]
+      },
+      "id": 321046508
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/336162416",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Republicano. Início: Rua Costa Goodolfim. Fim: Rua Ladislau Piçarra.",
+        "highway": "residential",
+        "maxspeed": "20",
+        "name": "Avenida Magalhães Lima",
+        "oneway": "no",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "3326",
+        "start_date": "1932-03-12"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1407077,
+            38.7395462
+          ],
+          [
+            -9.1409347,
+            38.7394814
+          ],
+          [
+            -9.1411333,
+            38.7394247
+          ],
+          [
+            -9.1413624,
+            38.7393593
+          ],
+          [
+            -9.1415692,
+            38.7393003
+          ],
+          [
+            -9.1419096,
+            38.7392031
+          ],
+          [
+            -9.1420062,
+            38.7391755
+          ],
+          [
+            -9.1421093,
+            38.7391466
+          ]
+        ]
+      },
+      "id": 336162416
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391115694",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1464046,
+            38.7391876
+          ],
+          [
+            -9.1463526,
+            38.7391981
+          ],
+          [
+            -9.1462603,
+            38.7392112
+          ],
+          [
+            -9.1460957,
+            38.7392382
+          ]
+        ]
+      },
+      "id": 391115694
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391115695",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1459566,
+            38.7393837
+          ],
+          [
+            -9.1461244,
+            38.7393578
+          ],
+          [
+            -9.1462879,
+            38.7393326
+          ]
+        ]
+      },
+      "id": 391115695
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391115696",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1443922,
+            38.7396342
+          ],
+          [
+            -9.1445531,
+            38.7396084
+          ],
+          [
+            -9.144623,
+            38.7395972
+          ],
+          [
+            -9.1458183,
+            38.7394058
+          ],
+          [
+            -9.1459566,
+            38.7393837
+          ]
+        ]
+      },
+      "id": 391115696
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391115697",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1459235,
+            38.7392652
+          ],
+          [
+            -9.1457912,
+            38.7392859
+          ],
+          [
+            -9.1445945,
+            38.7394733
+          ],
+          [
+            -9.1445228,
+            38.7394845
+          ],
+          [
+            -9.1443622,
+            38.7395096
+          ]
+        ]
+      },
+      "id": 391115697
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391261416",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1462879,
+            38.7393326
+          ],
+          [
+            -9.1463824,
+            38.7393181
+          ],
+          [
+            -9.1464356,
+            38.7393099
+          ]
+        ]
+      },
+      "id": 391261416
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391261417",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1464356,
+            38.7393099
+          ],
+          [
+            -9.1465614,
+            38.7392908
+          ],
+          [
+            -9.1480448,
+            38.7390656
+          ],
+          [
+            -9.1481503,
+            38.7390496
+          ]
+        ]
+      },
+      "id": 391261417
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391586129",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Naturalista e Zoólogo 1823 - 1907. Início: Rua do Arco do Cego. Fim: Avenida Marquês de Tomar.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Barbosa du Bocage",
+        "old_name": "Rua Barbosa du Bocage",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2597",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1466895,
+            38.7403095
+          ],
+          [
+            -9.1467705,
+            38.7402953
+          ],
+          [
+            -9.148274,
+            38.7400672
+          ],
+          [
+            -9.1483716,
+            38.7400524
+          ]
+        ]
+      },
+      "id": 391586129
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391586130",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Naturalista e Zoólogo 1823 - 1907. Início: Rua do Arco do Cego. Fim: Avenida Marquês de Tomar.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Barbosa du Bocage",
+        "old_name": "Rua Barbosa du Bocage",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2597",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1485206,
+            38.7399514
+          ],
+          [
+            -9.1483541,
+            38.739977
+          ],
+          [
+            -9.1482499,
+            38.739993
+          ],
+          [
+            -9.1467543,
+            38.7402233
+          ],
+          [
+            -9.1466713,
+            38.7402375
+          ]
+        ]
+      },
+      "id": 391586130
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391590536",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1481242,
+            38.7389315
+          ],
+          [
+            -9.1480209,
+            38.7389468
+          ],
+          [
+            -9.146528,
+            38.7391692
+          ],
+          [
+            -9.1464046,
+            38.7391876
+          ]
+        ]
+      },
+      "id": 391590536
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391593638",
+        "alt_name": "Avenida Visconde Valmor",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Nobre, Politico. Início: Rua Costa Goodolfim. Fim: Avenida Conde de Valbom.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Visconde de Valmor",
+        "old_name": "Rua Visconde de Valmor",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2098",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1479044,
+            38.7380102
+          ],
+          [
+            -9.1480682,
+            38.7379859
+          ]
+        ]
+      },
+      "id": 391593638
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391593639",
+        "alt_name": "Avenida Visconde Valmor",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Nobre, Politico. Início: Rua Costa Goodolfim. Fim: Avenida Conde de Valbom.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Visconde de Valmor",
+        "old_name": "Rua Visconde de Valmor",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2098",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1461863,
+            38.73827
+          ],
+          [
+            -9.1462804,
+            38.7382558
+          ],
+          [
+            -9.1463723,
+            38.7382419
+          ],
+          [
+            -9.1477765,
+            38.7380295
+          ],
+          [
+            -9.1479044,
+            38.7380102
+          ]
+        ]
+      },
+      "id": 391593639
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391593640",
+        "alt_name": "Avenida Visconde Valmor",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Nobre, Politico. Início: Rua Costa Goodolfim. Fim: Avenida Conde de Valbom.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Visconde de Valmor",
+        "old_name": "Rua Visconde de Valmor",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2098",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1480488,
+            38.7378956
+          ],
+          [
+            -9.147883,
+            38.7379208
+          ],
+          [
+            -9.1477474,
+            38.7379414
+          ],
+          [
+            -9.1463515,
+            38.7381536
+          ],
+          [
+            -9.1462633,
+            38.738167
+          ],
+          [
+            -9.1461624,
+            38.7381824
+          ]
+        ]
+      },
+      "id": 391593640
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391617561",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1425265,
+            38.7399319
+          ],
+          [
+            -9.1426368,
+            38.739915
+          ],
+          [
+            -9.144228,
+            38.7396604
+          ],
+          [
+            -9.1443922,
+            38.7396342
+          ]
+        ]
+      },
+      "id": 391617561
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/391617562",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1443622,
+            38.7395096
+          ],
+          [
+            -9.1442024,
+            38.7395345
+          ],
+          [
+            -9.1431346,
+            38.7397017
+          ],
+          [
+            -9.1428638,
+            38.7397448
+          ],
+          [
+            -9.1426014,
+            38.7397845
+          ],
+          [
+            -9.1425413,
+            38.7397942
+          ]
+        ]
+      },
+      "id": 391617562
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/392160375",
+        "alt_name": "Avenida Visconde Valmor",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Nobre, Politico. Início: Rua Costa Goodolfim. Fim: Avenida Conde de Valbom.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Visconde de Valmor",
+        "old_name": "Rua Visconde de Valmor",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2098",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1495953,
+            38.737667
+          ],
+          [
+            -9.1494792,
+            38.7376842
+          ],
+          [
+            -9.1481306,
+            38.7378835
+          ],
+          [
+            -9.1480488,
+            38.7378956
+          ]
+        ]
+      },
+      "id": 392160375
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/406186124",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Datas. Início: Rua de Dona Estefânia. Fim: Avenida 5 de Outubro.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida Praia da Vitória",
+        "oneway": "yes",
+        "sidewalk": "right",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2104",
+        "start_date": "1906-06-28",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1438679,
+            38.7338537
+          ],
+          [
+            -9.1432886,
+            38.7339368
+          ],
+          [
+            -9.143177,
+            38.7339528
+          ],
+          [
+            -9.1430315,
+            38.7339737
+          ],
+          [
+            -9.1429242,
+            38.7339891
+          ],
+          [
+            -9.1415363,
+            38.7341882
+          ],
+          [
+            -9.1413853,
+            38.7342099
+          ]
+        ]
+      },
+      "id": 406186124
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/432383511",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Escritor, Politico, Republicano. Início: Avenida Fontes Pereira de Melo. Fim: Rua Dr. António Cândido.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rua Latino Coelho",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2362",
+        "start_date": "1902-11-29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1461686,
+            38.7316843
+          ],
+          [
+            -9.1462159,
+            38.7317021
+          ],
+          [
+            -9.1464533,
+            38.7317894
+          ],
+          [
+            -9.1465016,
+            38.7318061
+          ],
+          [
+            -9.1465302,
+            38.731817
+          ],
+          [
+            -9.1469998,
+            38.7319951
+          ],
+          [
+            -9.1471014,
+            38.7320343
+          ],
+          [
+            -9.1471693,
+            38.7320582
+          ]
+        ]
+      },
+      "id": 432383511
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/438018997",
+        "highway": "cycleway",
+        "lit": "yes",
+        "surface": "paved"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1349574,
+            38.7458833
+          ],
+          [
+            -9.1339965,
+            38.7459517
+          ],
+          [
+            -9.1323112,
+            38.7460501
+          ],
+          [
+            -9.1321539,
+            38.7461655
+          ],
+          [
+            -9.1321567,
+            38.7462117
+          ],
+          [
+            -9.1317047,
+            38.7462431
+          ],
+          [
+            -9.1314875,
+            38.7463853
+          ],
+          [
+            -9.1314378,
+            38.7463417
+          ]
+        ]
+      },
+      "id": 438018997
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/445520463",
+        "highway": "cycleway",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1456964,
+            38.7383441
+          ],
+          [
+            -9.1458719,
+            38.7383176
+          ],
+          [
+            -9.1460322,
+            38.7382933
+          ],
+          [
+            -9.1461406,
+            38.7382771
+          ],
+          [
+            -9.1461863,
+            38.73827
+          ]
+        ]
+      },
+      "id": 445520463
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/448822362",
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "no",
+        "surface": "paved"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1415993,
+            38.7352514
+          ],
+          [
+            -9.1406267,
+            38.7352774
+          ],
+          [
+            -9.1404942,
+            38.7352793
+          ]
+        ]
+      },
+      "id": 448822362
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/448826617",
+        "highway": "cycleway",
+        "lit": "yes",
+        "oneway": "no",
+        "surface": "paved"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1404942,
+            38.7352793
+          ],
+          [
+            -9.1404006,
+            38.735281
+          ],
+          [
+            -9.1400265,
+            38.7352879
+          ],
+          [
+            -9.1395164,
+            38.7353032
+          ],
+          [
+            -9.1388576,
+            38.735321
+          ],
+          [
+            -9.1387723,
+            38.7353244
+          ],
+          [
+            -9.1383509,
+            38.7353591
+          ],
+          [
+            -9.1379339,
+            38.7354424
+          ],
+          [
+            -9.1374163,
+            38.7356359
+          ],
+          [
+            -9.1369496,
+            38.7359089
+          ],
+          [
+            -9.136902,
+            38.7358816
+          ]
+        ]
+      },
+      "id": 448826617
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/468785787",
+        "highway": "cycleway",
+        "lanes": "2",
+        "name": "Ciclovia Avenida da República",
+        "oneway": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1451456,
+            38.7341855
+          ],
+          [
+            -9.1451661,
+            38.7342756
+          ],
+          [
+            -9.145201,
+            38.7344273
+          ],
+          [
+            -9.1451883,
+            38.7344778
+          ],
+          [
+            -9.1453406,
+            38.7350986
+          ],
+          [
+            -9.1453544,
+            38.7351603
+          ],
+          [
+            -9.1453642,
+            38.7352044
+          ],
+          [
+            -9.1454341,
+            38.7355188
+          ],
+          [
+            -9.1455764,
+            38.7360805
+          ],
+          [
+            -9.1455815,
+            38.7361011
+          ],
+          [
+            -9.1456045,
+            38.7361948
+          ],
+          [
+            -9.1456238,
+            38.7362732
+          ],
+          [
+            -9.1456343,
+            38.7363159
+          ],
+          [
+            -9.1457969,
+            38.7370571
+          ],
+          [
+            -9.1458039,
+            38.7370865
+          ],
+          [
+            -9.1458338,
+            38.7372112
+          ],
+          [
+            -9.1458689,
+            38.7373509
+          ],
+          [
+            -9.1458742,
+            38.7373722
+          ],
+          [
+            -9.146051,
+            38.7380853
+          ],
+          [
+            -9.1460994,
+            38.7381208
+          ],
+          [
+            -9.1461177,
+            38.7381894
+          ],
+          [
+            -9.1461285,
+            38.7382308
+          ],
+          [
+            -9.1461406,
+            38.7382771
+          ],
+          [
+            -9.1461547,
+            38.7383352
+          ],
+          [
+            -9.1461325,
+            38.738377
+          ],
+          [
+            -9.1463286,
+            38.7391012
+          ],
+          [
+            -9.1463526,
+            38.7391981
+          ],
+          [
+            -9.1463824,
+            38.7393181
+          ],
+          [
+            -9.146398,
+            38.739381
+          ],
+          [
+            -9.1464046,
+            38.7394076
+          ],
+          [
+            -9.1464764,
+            38.7396971
+          ],
+          [
+            -9.1465818,
+            38.7402129
+          ],
+          [
+            -9.1465908,
+            38.7402484
+          ],
+          [
+            -9.1466092,
+            38.7403209
+          ],
+          [
+            -9.1468195,
+            38.7411485
+          ],
+          [
+            -9.1468307,
+            38.7411934
+          ],
+          [
+            -9.1468433,
+            38.741241
+          ],
+          [
+            -9.1468745,
+            38.7413424
+          ],
+          [
+            -9.1468971,
+            38.7414203
+          ],
+          [
+            -9.1469043,
+            38.7414473
+          ],
+          [
+            -9.1471075,
+            38.742305
+          ],
+          [
+            -9.1472909,
+            38.7430764
+          ],
+          [
+            -9.1473044,
+            38.7431347
+          ],
+          [
+            -9.1473299,
+            38.7432406
+          ],
+          [
+            -9.1473621,
+            38.7433762
+          ],
+          [
+            -9.147372,
+            38.7434182
+          ],
+          [
+            -9.1476618,
+            38.7446343
+          ]
+        ]
+      },
+      "id": 468785787
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/468785788",
+        "highway": "cycleway",
+        "lanes": "2",
+        "name": "Ciclovia Praça do Duque de Saldanha",
+        "oneway": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1449887,
+            38.7333097
+          ],
+          [
+            -9.1448805,
+            38.7332993
+          ],
+          [
+            -9.144772,
+            38.733303
+          ],
+          [
+            -9.1446661,
+            38.7333218
+          ],
+          [
+            -9.1445661,
+            38.733355
+          ],
+          [
+            -9.1444766,
+            38.7334003
+          ],
+          [
+            -9.1443765,
+            38.7334796
+          ],
+          [
+            -9.1443291,
+            38.7335223
+          ],
+          [
+            -9.1442543,
+            38.7336963
+          ],
+          [
+            -9.1442555,
+            38.7338458
+          ],
+          [
+            -9.1442815,
+            38.7339297
+          ],
+          [
+            -9.1443496,
+            38.7340352
+          ],
+          [
+            -9.144449,
+            38.7341243
+          ],
+          [
+            -9.1445737,
+            38.7341913
+          ],
+          [
+            -9.1447157,
+            38.7342322
+          ],
+          [
+            -9.1448682,
+            38.7342442
+          ],
+          [
+            -9.1450334,
+            38.7342229
+          ],
+          [
+            -9.1451456,
+            38.7341855
+          ],
+          [
+            -9.1451911,
+            38.7341638
+          ],
+          [
+            -9.1452954,
+            38.7340945
+          ],
+          [
+            -9.1453771,
+            38.7340086
+          ],
+          [
+            -9.145432,
+            38.7339106
+          ],
+          [
+            -9.1454572,
+            38.7338055
+          ],
+          [
+            -9.1454515,
+            38.7336989
+          ],
+          [
+            -9.1454288,
+            38.7336372
+          ],
+          [
+            -9.1454041,
+            38.7335753
+          ],
+          [
+            -9.1453158,
+            38.7334666
+          ],
+          [
+            -9.1451924,
+            38.7333816
+          ],
+          [
+            -9.145146,
+            38.7333652
+          ],
+          [
+            -9.1450214,
+            38.7333181
+          ],
+          [
+            -9.1449887,
+            38.7333097
+          ]
+        ]
+      },
+      "id": 468785788
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/469487235",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Escritor, Politico, Republicano. Início: Avenida Fontes Pereira de Melo. Fim: Rua Dr. António Cândido.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Rua Latino Coelho",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2362",
+        "start_date": "1902-11-29"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1471693,
+            38.7320582
+          ],
+          [
+            -9.1472139,
+            38.7320748
+          ],
+          [
+            -9.1473445,
+            38.7321234
+          ]
+        ]
+      },
+      "id": 469487235
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/473441810",
+        "highway": "cycleway",
+        "lit": "yes",
+        "name": "Ciclovia da Avenida Fontes Pereira de Melo",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "1.60"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1494965,
+            38.7258777
+          ],
+          [
+            -9.1494582,
+            38.7259395
+          ],
+          [
+            -9.1493554,
+            38.7261076
+          ],
+          [
+            -9.1490266,
+            38.726636
+          ],
+          [
+            -9.1486237,
+            38.7272863
+          ],
+          [
+            -9.1484508,
+            38.7275653
+          ],
+          [
+            -9.1481411,
+            38.7280651
+          ],
+          [
+            -9.1475379,
+            38.7290684
+          ],
+          [
+            -9.1470466,
+            38.7298856
+          ],
+          [
+            -9.1468796,
+            38.7301633
+          ],
+          [
+            -9.1466222,
+            38.7306186
+          ],
+          [
+            -9.1465703,
+            38.7307101
+          ],
+          [
+            -9.1465479,
+            38.7307499
+          ],
+          [
+            -9.1464277,
+            38.7308196
+          ],
+          [
+            -9.1460653,
+            38.7313949
+          ],
+          [
+            -9.1460448,
+            38.731544
+          ],
+          [
+            -9.1460061,
+            38.7316077
+          ],
+          [
+            -9.1459667,
+            38.7316703
+          ],
+          [
+            -9.1459528,
+            38.7316937
+          ],
+          [
+            -9.1453641,
+            38.7326661
+          ],
+          [
+            -9.1453066,
+            38.73276
+          ],
+          [
+            -9.1450345,
+            38.7332285
+          ],
+          [
+            -9.1449887,
+            38.7333097
+          ]
+        ]
+      },
+      "id": 473441810
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/473443626",
+        "highway": "cycleway",
+        "lit": "yes",
+        "name": "Ciclovia da Avenida Fontes Pereira de Melo",
+        "oneway": "yes",
+        "surface": "asphalt",
+        "width": "1.60"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1451924,
+            38.7333816
+          ],
+          [
+            -9.145238,
+            38.7332995
+          ],
+          [
+            -9.1456661,
+            38.7325895
+          ],
+          [
+            -9.1456963,
+            38.7325417
+          ],
+          [
+            -9.1457555,
+            38.7324457
+          ],
+          [
+            -9.146128,
+            38.731844
+          ],
+          [
+            -9.1462159,
+            38.7317021
+          ],
+          [
+            -9.1462407,
+            38.7316621
+          ],
+          [
+            -9.1462667,
+            38.7316201
+          ],
+          [
+            -9.1464163,
+            38.7314854
+          ],
+          [
+            -9.1467335,
+            38.7310024
+          ],
+          [
+            -9.1467361,
+            38.7308478
+          ],
+          [
+            -9.1467376,
+            38.7308259
+          ],
+          [
+            -9.1467613,
+            38.7307884
+          ],
+          [
+            -9.1468246,
+            38.7306884
+          ],
+          [
+            -9.1472821,
+            38.7299651
+          ],
+          [
+            -9.1473309,
+            38.729888
+          ],
+          [
+            -9.1477798,
+            38.7291599
+          ],
+          [
+            -9.1483643,
+            38.7282118
+          ],
+          [
+            -9.1484091,
+            38.7281628
+          ],
+          [
+            -9.1484498,
+            38.7281182
+          ],
+          [
+            -9.1484989,
+            38.7280645
+          ],
+          [
+            -9.1485968,
+            38.7279573
+          ],
+          [
+            -9.1488015,
+            38.727668
+          ],
+          [
+            -9.1489083,
+            38.7275612
+          ],
+          [
+            -9.149012,
+            38.7274733
+          ],
+          [
+            -9.1493902,
+            38.7268627
+          ],
+          [
+            -9.1494724,
+            38.7267937
+          ],
+          [
+            -9.1495593,
+            38.7266482
+          ],
+          [
+            -9.1498072,
+            38.7262332
+          ],
+          [
+            -9.1498545,
+            38.7261786
+          ],
+          [
+            -9.1499441,
+            38.7260741
+          ],
+          [
+            -9.1499538,
+            38.7260397
+          ]
+        ]
+      },
+      "id": 473443626
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/493717868",
+        "cycleway": "shared_lane",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "20",
+        "name": "Rua Bernardo Passos",
+        "oneway": "yes",
+        "oneway:bicycle": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1397182,
+            38.7411162
+          ],
+          [
+            -9.1397078,
+            38.741094
+          ],
+          [
+            -9.1395838,
+            38.7408298
+          ],
+          [
+            -9.1394607,
+            38.7405674
+          ],
+          [
+            -9.1393441,
+            38.7403188
+          ]
+        ]
+      },
+      "id": 493717868
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/501431684",
+        "highway": "cycleway",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1443966,
+            38.7384515
+          ],
+          [
+            -9.1442846,
+            38.7384981
+          ],
+          [
+            -9.1441193,
+            38.7385234
+          ],
+          [
+            -9.1424127,
+            38.7390225
+          ],
+          [
+            -9.1419903,
+            38.7391439
+          ],
+          [
+            -9.1420062,
+            38.7391755
+          ]
+        ]
+      },
+      "id": 501431684
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/501431685",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Nobre, Politico. Início: Rua Costa Goodolfim. Fim: Avenida Conde de Valbom.",
+        "highway": "residential",
+        "name": "Avenida Visconde de Valmor",
+        "old_name": "Rua Visconde de Valmor",
+        "oneway": "no",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2098",
+        "start_date": "1925-06-08"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1441361,
+            38.7385808
+          ],
+          [
+            -9.1442965,
+            38.7385547
+          ]
+        ]
+      },
+      "id": 501431685
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/502128583",
+        "highway": "cycleway",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1461624,
+            38.7381824
+          ],
+          [
+            -9.1461177,
+            38.7381894
+          ],
+          [
+            -9.1460107,
+            38.7382054
+          ],
+          [
+            -9.1458487,
+            38.7382301
+          ],
+          [
+            -9.1456766,
+            38.7382562
+          ]
+        ]
+      },
+      "id": 502128583
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533483639",
+        "highway": "cycleway",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1466713,
+            38.7402375
+          ],
+          [
+            -9.1465908,
+            38.7402484
+          ]
+        ]
+      },
+      "id": 533483639
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533483640",
+        "highway": "cycleway",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1466092,
+            38.7403209
+          ],
+          [
+            -9.1466895,
+            38.7403095
+          ]
+        ]
+      },
+      "id": 533483640
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533907336",
+        "foot": "yes",
+        "highway": "cycleway",
+        "segregated": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1264109,
+            38.7531205
+          ],
+          [
+            -9.1263286,
+            38.7531171
+          ]
+        ]
+      },
+      "id": 533907336
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533919595",
+        "highway": "cycleway",
+        "note": "DESIGNACAO=Parque Vale de Chelas - Parque Vale Fundão. EIXO=Benfica - Braço de Prata. TIPOLOGIA=Pista Ciclavel Bidirecional"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1175535,
+            38.7528925
+          ],
+          [
+            -9.117502,
+            38.7527178
+          ],
+          [
+            -9.1174301,
+            38.7526659
+          ]
+        ]
+      },
+      "id": 533919595
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533919597",
+        "highway": "cycleway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1140142,
+            38.7512854
+          ],
+          [
+            -9.113923,
+            38.7512827
+          ],
+          [
+            -9.1135942,
+            38.751287
+          ],
+          [
+            -9.1135219,
+            38.7512892
+          ],
+          [
+            -9.1135189,
+            38.751243
+          ]
+        ]
+      },
+      "id": 533919597
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533919599",
+        "foot": "yes",
+        "highway": "cycleway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.108942,
+            38.7504589
+          ],
+          [
+            -9.1088569,
+            38.7503853
+          ],
+          [
+            -9.1087423,
+            38.7502839
+          ],
+          [
+            -9.1085518,
+            38.7502672
+          ],
+          [
+            -9.1083385,
+            38.7503203
+          ]
+        ]
+      },
+      "id": 533919599
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533919605",
+        "foot": "yes",
+        "highway": "cycleway",
+        "note": "DESIGNACAO=Parque Vale de Chelas-Parque Vale Fundão EIXO=Benfica-Braço de Prata"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1083385,
+            38.7503203
+          ],
+          [
+            -9.1084087,
+            38.7503992
+          ],
+          [
+            -9.1084244,
+            38.7504608
+          ],
+          [
+            -9.1082274,
+            38.7508815
+          ]
+        ]
+      },
+      "id": 533919605
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533919606",
+        "foot": "yes",
+        "highway": "cycleway",
+        "note": "Ciclovia Parque Vale de Chelas - Parque Vale Fundão"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1135189,
+            38.751243
+          ],
+          [
+            -9.1134994,
+            38.7506949
+          ],
+          [
+            -9.113464,
+            38.7506199
+          ],
+          [
+            -9.1133891,
+            38.7505521
+          ],
+          [
+            -9.1132933,
+            38.7505162
+          ],
+          [
+            -9.1131623,
+            38.7505116
+          ],
+          [
+            -9.1120567,
+            38.7505357
+          ],
+          [
+            -9.1119415,
+            38.7505294
+          ],
+          [
+            -9.1118336,
+            38.7504805
+          ],
+          [
+            -9.1115238,
+            38.7502924
+          ],
+          [
+            -9.1112666,
+            38.7502472
+          ],
+          [
+            -9.1107655,
+            38.7502754
+          ],
+          [
+            -9.1100442,
+            38.7503754
+          ],
+          [
+            -9.108942,
+            38.7504589
+          ]
+        ]
+      },
+      "id": 533919606
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533919607",
+        "foot": "yes",
+        "highway": "cycleway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1174301,
+            38.7526659
+          ],
+          [
+            -9.1174174,
+            38.7526146
+          ]
+        ]
+      },
+      "id": 533919607
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533919608",
+        "bridge": "yes",
+        "foot": "yes",
+        "highway": "cycleway",
+        "layer": "1",
+        "note": "DESIGNACAO=Parque Vale de Chelas - Parque Vale Fundão. EIXO=Benfica - Braço de Prata. TIPOLOGIA=Pista Ciclavel Bidirecional"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1191031,
+            38.7526678
+          ],
+          [
+            -9.1177636,
+            38.7528676
+          ]
+        ]
+      },
+      "id": 533919608
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/533919612",
+        "highway": "cycleway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1173411,
+            38.7523071
+          ],
+          [
+            -9.1173045,
+            38.7522922
+          ],
+          [
+            -9.1172694,
+            38.7523395
+          ],
+          [
+            -9.1172358,
+            38.7523649
+          ],
+          [
+            -9.1171769,
+            38.7523675
+          ],
+          [
+            -9.1168853,
+            38.7521792
+          ],
+          [
+            -9.1166674,
+            38.7520775
+          ],
+          [
+            -9.1163823,
+            38.7518898
+          ],
+          [
+            -9.1162482,
+            38.7518408
+          ],
+          [
+            -9.1160853,
+            38.7518315
+          ],
+          [
+            -9.1159545,
+            38.7518459
+          ],
+          [
+            -9.1158768,
+            38.751829
+          ],
+          [
+            -9.1155592,
+            38.7515912
+          ],
+          [
+            -9.1154198,
+            38.751533
+          ],
+          [
+            -9.1152325,
+            38.7514937
+          ],
+          [
+            -9.1149303,
+            38.7514928
+          ],
+          [
+            -9.1144037,
+            38.7515125
+          ],
+          [
+            -9.1142283,
+            38.7516392
+          ],
+          [
+            -9.1141606,
+            38.7516315
+          ],
+          [
+            -9.1141188,
+            38.7515581
+          ],
+          [
+            -9.1140142,
+            38.7512854
+          ]
+        ]
+      },
+      "id": 533919612
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/535287146",
+        "foot": "yes",
+        "highway": "cycleway",
+        "note": "DESIGNACAO=Parque Vale de Chelas - Parque Vale Fundão. EIXO=Benfica - Braço de Prata. TIPOLOGIA=Pista Ciclavel Bidirecional"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1192412,
+            38.7523568
+          ],
+          [
+            -9.1193866,
+            38.7524643
+          ],
+          [
+            -9.1193765,
+            38.7525626
+          ],
+          [
+            -9.119292,
+            38.7526253
+          ],
+          [
+            -9.1192052,
+            38.7526586
+          ],
+          [
+            -9.1191031,
+            38.7526678
+          ]
+        ]
+      },
+      "id": 535287146
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/586132886",
+        "highway": "cycleway",
+        "incline": "up",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1343554,
+            38.73758
+          ],
+          [
+            -9.1343108,
+            38.7376238
+          ],
+          [
+            -9.136525,
+            38.7398586
+          ],
+          [
+            -9.1365627,
+            38.7398711
+          ],
+          [
+            -9.1366335,
+            38.739921
+          ],
+          [
+            -9.1367696,
+            38.7399801
+          ]
+        ]
+      },
+      "id": 586132886
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/631182918",
+        "foot": "yes",
+        "highway": "cycleway"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1174174,
+            38.7526146
+          ],
+          [
+            -9.117384,
+            38.7524802
+          ],
+          [
+            -9.1173709,
+            38.7524274
+          ],
+          [
+            -9.1173561,
+            38.7523675
+          ],
+          [
+            -9.1173411,
+            38.7523071
+          ]
+        ]
+      },
+      "id": 631182918
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/677752612",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Cidades, zonas estrangeiras. Início: Avenida Almirante Reis. Fim: Praça de Londres.",
+        "highway": "residential",
+        "name": "Avenida de Paris",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1152",
+        "start_date": "1948-08-03"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1355632,
+            38.7411421
+          ],
+          [
+            -9.1357632,
+            38.7411577
+          ]
+        ]
+      },
+      "id": 677752612
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/677880337",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Cidades, zonas estrangeiras. Início: Avenida Almirante Reis. Fim: Praça de Londres.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida de Paris",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1152",
+        "start_date": "1948-08-03"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1353775,
+            38.7411277
+          ],
+          [
+            -9.1336848,
+            38.7410405
+          ],
+          [
+            -9.1335908,
+            38.7410357
+          ],
+          [
+            -9.1334958,
+            38.7410308
+          ]
+        ]
+      },
+      "id": 677880337
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/677880338",
+        "highway": "cycleway",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1372163,
+            38.7409026
+          ],
+          [
+            -9.1370459,
+            38.7409654
+          ],
+          [
+            -9.1368533,
+            38.7410345
+          ],
+          [
+            -9.1365932,
+            38.7411049
+          ],
+          [
+            -9.1363134,
+            38.7411443
+          ],
+          [
+            -9.1362232,
+            38.7411467
+          ],
+          [
+            -9.1360777,
+            38.7411475
+          ],
+          [
+            -9.1357665,
+            38.7411238
+          ],
+          [
+            -9.1355632,
+            38.7411421
+          ]
+        ]
+      },
+      "id": 677880338
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/679683283",
+        "highway": "cycleway",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1336232,
+            38.741069
+          ],
+          [
+            -9.1353496,
+            38.7411824
+          ],
+          [
+            -9.1355632,
+            38.7411421
+          ]
+        ]
+      },
+      "id": 679683283
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/682179938",
+        "highway": "cycleway",
+        "lanes": "2",
+        "name": "Ciclovia Avenida da República",
+        "oneway": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1477403,
+            38.7449528
+          ],
+          [
+            -9.147997,
+            38.7460208
+          ],
+          [
+            -9.1479994,
+            38.7461115
+          ],
+          [
+            -9.1480008,
+            38.746164
+          ],
+          [
+            -9.1484043,
+            38.7479241
+          ],
+          [
+            -9.1484133,
+            38.7479604
+          ]
+        ]
+      },
+      "id": 682179938
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/682179940",
+        "highway": "cycleway",
+        "lanes": "2",
+        "layer": "-1",
+        "name": "Ciclovia Avenida da República",
+        "oneway": "no",
+        "tunnel": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1476618,
+            38.7446343
+          ],
+          [
+            -9.1477403,
+            38.7449528
+          ]
+        ]
+      },
+      "id": 682179940
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/682213665",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Cidades, zonas estrangeiras. Início: Avenida Almirante Reis. Fim: Praça de Londres.",
+        "highway": "residential",
+        "maxspeed": "30",
+        "name": "Avenida de Paris",
+        "oneway": "yes",
+        "sidewalk": "both",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "1152",
+        "start_date": "1948-08-03"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1355632,
+            38.7411421
+          ],
+          [
+            -9.1353775,
+            38.7411277
+          ]
+        ]
+      },
+      "id": 682213665
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/682214147",
+        "highway": "cycleway",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1377517,
+            38.7445168
+          ],
+          [
+            -9.1390756,
+            38.7440794
+          ]
+        ]
+      },
+      "id": 682214147
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/694847489",
+        "highway": "cycleway",
+        "oneway": "no"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1334921,
+            38.7410624
+          ],
+          [
+            -9.1335853,
+            38.7410673
+          ],
+          [
+            -9.1336232,
+            38.741069
+          ]
+        ]
+      },
+      "id": 694847489
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/694847490",
+        "highway": "cycleway",
+        "oneway": "yes"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1336848,
+            38.7410405
+          ],
+          [
+            -9.1336232,
+            38.741069
+          ]
+        ]
+      },
+      "id": 694847490
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/743557022",
+        "bicycle": "designated",
+        "foot": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "yes",
+        "surface": "asphalt"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1253752,
+            38.7432681
+          ],
+          [
+            -9.1253083,
+            38.7433326
+          ]
+        ]
+      },
+      "id": 743557022
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/743557036",
+        "cycleway": "shared_lane",
+        "description": "Toponímia: Politico, Presidente da CML, Maçonaria, Republicano. Início: Esquina com a Rua do Arco do Cego. Fim: Rua Marquês de Sá da Bandeira.",
+        "highway": "residential",
+        "lanes": "1",
+        "maxspeed": "30",
+        "name": "Avenida Elias Garcia",
+        "old_name": "Avenida José Luciano",
+        "oneway": "yes",
+        "source:description": "dadosabertos.cm-lisboa.pt",
+        "source:pkey": "2070",
+        "start_date": "1910-11-05"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1460957,
+            38.7392382
+          ],
+          [
+            -9.1459235,
+            38.7392652
+          ]
+        ]
+      },
+      "id": 743557036
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "way/743590169",
+        "bicycle": "designated",
+        "highway": "path",
+        "lit": "yes",
+        "segregated": "no",
+        "surface": "gravel"
+      },
+      "geometry": {
+        "type": "LineString",
+        "coordinates": [
+          [
+            -9.1220653,
+            38.7554312
+          ],
+          [
+            -9.1219618,
+            38.7553256
+          ],
+          [
+            -9.1217114,
+            38.7551155
+          ],
+          [
+            -9.1213998,
+            38.7549009
+          ],
+          [
+            -9.1208826,
+            38.754578
+          ],
+          [
+            -9.12029,
+            38.7542912
+          ],
+          [
+            -9.1197912,
+            38.7540696
+          ],
+          [
+            -9.1195337,
+            38.7538646
+          ],
+          [
+            -9.1193593,
+            38.7536429
+          ],
+          [
+            -9.1192655,
+            38.7534505
+          ],
+          [
+            -9.1191715,
+            38.7530363
+          ],
+          [
+            -9.1190862,
+            38.7527665
+          ],
+          [
+            -9.119056,
+            38.7526515
+          ],
+          [
+            -9.1190648,
+            38.7525631
+          ],
+          [
+            -9.1191311,
+            38.7524455
+          ],
+          [
+            -9.1192412,
+            38.7523568
+          ],
+          [
+            -9.1192961,
+            38.7523126
+          ],
+          [
+            -9.1194288,
+            38.7521871
+          ],
+          [
+            -9.1195267,
+            38.7519905
+          ],
+          [
+            -9.1195603,
+            38.7518399
+          ],
+          [
+            -9.1195871,
+            38.7516548
+          ],
+          [
+            -9.1196955,
+            38.7515246
+          ]
+        ]
+      },
+      "id": 743590169
+    }
+  ]
+}

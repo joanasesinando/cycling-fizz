@@ -1,0 +1,1198 @@
+{
+  "type": "FeatureCollection",
+  "generator": "overpass-ide",
+  "copyright": "The data included in this document is from www.openstreetmap.org. The data is made available under ODbL.",
+  "timestamp": "2020-06-27T15:10:02Z",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5308583067",
+        "addr:street": "Avenida Fontes Pereira de Melo",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 403",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 403 - Av. Fontes Pereira de Melo",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "403",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.146528,
+          38.7315544
+        ]
+      },
+      "id": "node/5308583067"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5412234974",
+        "addr:street": "Rua Aboim Ascensão",
+        "amenity": "bicycle_rental",
+        "capacity": "10",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 457",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 457 - Rua Aboim Ascensão",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "457",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1472321,
+          38.7497134
+        ]
+      },
+      "id": "node/5412234974"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5420790053",
+        "addr:street": "Praça Duque de Saldanha",
+        "amenity": "bicycle_rental",
+        "capacity": "17",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 406",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 406 - Praça Duque de Saldanha",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "406",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1453187,
+          38.7341649
+        ]
+      },
+      "id": "node/5420790053"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5427721785",
+        "addr:street": "Avenida Duque de Ávila",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 415",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "415 - Av. Duque de Ávila / Av. Conde Valbom",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "415",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1484812,
+          38.7351802
+        ]
+      },
+      "id": "node/5427721785"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5604281827",
+        "addr:street": "Alameda Dom Afonso Henriques",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 421",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 421 - Alameda D. Afonso Henriques",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "421",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1341517,
+          38.7374142
+        ]
+      },
+      "id": "node/5604281827"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5682067228",
+        "addr:street": "Av. António Augusto Aguiar",
+        "amenity": "bicycle_rental",
+        "capacity": "10",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 413",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 413 - Av. Ressano Garcia / Av. António Augusto de Aguiar",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "413",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1543296,
+          38.7344855
+        ]
+      },
+      "id": "node/5682067228"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5707844529",
+        "addr:city": "Lisboa",
+        "addr:street": "Campo Grande",
+        "amenity": "bicycle_rental",
+        "capacity": "41",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 456",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "456 - Entrecampos / Av. das Forças Armadas",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "456",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1487526,
+          38.7488077
+        ]
+      },
+      "id": "node/5707844529"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/5707844530",
+        "amenity": "bicycle_rental",
+        "capacity": "14",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 426",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "426 - Av. Elias Garcia / Av. 5 de Outubro",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "426",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1479546,
+          38.7391043
+        ]
+      },
+      "id": "node/5707844530"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355763552",
+        "addr:street": "Rua Martens Ferrão",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 401",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 401 - Rua Martens Ferrão / Av. Fontes Pereira de Melo",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "401",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.147398,
+          38.7289844
+        ]
+      },
+      "id": "node/6355763552"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355769892",
+        "addr:street": "Praça Duque de Saldanha",
+        "amenity": "bicycle_rental",
+        "capacity": "17",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 407",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 407 - Praça Duque de Saldanha",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "407",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.144638,
+          38.7342927
+        ]
+      },
+      "id": "node/6355769892"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355769893",
+        "addr:street": "Praça Duque de Saldanha",
+        "amenity": "bicycle_rental",
+        "capacity": "10",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 408",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 408 - Praça Duque de Saldanha",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "408",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1442022,
+          38.7337351
+        ]
+      },
+      "id": "node/6355769893"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355774451",
+        "addr:street": "Av. António Augusto Aguiar",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 412",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 412 - Av. Ressano Garcia / Av. António Augusto de Aguiar",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "412",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1546514,
+          38.73446
+        ]
+      },
+      "id": "node/6355774451"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355776037",
+        "addr:street": "Av. António Augusto Aguiar",
+        "amenity": "bicycle_rental",
+        "capacity": "19",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 414",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 414 - Av. Duque de Ávila / Rua Pinheiro Chagas",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "414",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1513519,
+          38.7350812
+        ]
+      },
+      "id": "node/6355776037"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355785999",
+        "addr:street": "Avenida Duque de Ávila",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 416",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 416 - Av. República / Avenida Duque de Ávila",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "416",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1454871,
+          38.7353074
+        ]
+      },
+      "id": "node/6355785999"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355794829",
+        "addr:street": "Avenida Duque de Ávila",
+        "amenity": "bicycle_rental",
+        "capacity": "23",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 417",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 417 - Av. Duque de Ávila / Jardim Arco Do Cego",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "417",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1426907,
+          38.7353396
+        ]
+      },
+      "id": "node/6355794829"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355797546",
+        "addr:street": "Avenida Rovisco Pais",
+        "amenity": "bicycle_rental",
+        "capacity": "26",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 420",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 420 - Av. Rovisco Pais / Av. Manuel da Maia",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "420",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1367897,
+          38.7362043
+        ]
+      },
+      "id": "node/6355797546"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355799276",
+        "addr:street": "Avenida Conde Valbom",
+        "amenity": "bicycle_rental",
+        "capacity": "10",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 423",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 423 - Av. Conde Valbom / Rua Marquês Sá da Bandeira",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "423",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1523258,
+          38.7379231
+        ]
+      },
+      "id": "node/6355799276"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355801925",
+        "addr:street": "Avenida da República",
+        "amenity": "bicycle_rental",
+        "capacity": "12",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 427",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 427 - Av. República / Av. Visconde Valmor",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "427",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1461446,
+          38.7380203
+        ]
+      },
+      "id": "node/6355801925"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355802902",
+        "addr:street": "Avenida da República",
+        "amenity": "bicycle_rental",
+        "capacity": "12",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 428",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 428 - Av. República / Avenida Barbosa Du Bocage",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "428",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1467536,
+          38.7404729
+        ]
+      },
+      "id": "node/6355802902"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355804971",
+        "addr:street": "Avenida da República",
+        "amenity": "bicycle_rental",
+        "capacity": "40",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 446",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 446 - Av. República / Interface Entrecampos",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "446",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1478117,
+          38.7447667
+        ]
+      },
+      "id": "node/6355804971"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355808431",
+        "addr:street": "Avenida 5 de Outubro",
+        "amenity": "bicycle_rental",
+        "capacity": "14",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 449",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 449 - Av. 5 de Outubro / Rua da Cruz Vermelha",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "449",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1500869,
+          38.7468901
+        ]
+      },
+      "id": "node/6355808431"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355808432",
+        "addr:street": "Campo Grande",
+        "amenity": "bicycle_rental",
+        "capacity": "29",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 462",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "Gira 462 - Campo Grande / Biblioteca Nacional",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "462",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1502384,
+          38.7502449
+        ]
+      },
+      "id": "node/6355808432"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355815894",
+        "addr:street": "Avenida da Igreja",
+        "amenity": "bicycle_rental",
+        "capacity": "14",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 464",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "464 - Av. da Igreja / Rua Afonso Lopes Vieira",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "464",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.148379,
+          38.7516024
+        ]
+      },
+      "id": "node/6355815894"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355817476",
+        "addr:street": "Avenida Rio de Janeiro",
+        "amenity": "bicycle_rental",
+        "capacity": "15",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 460",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "460 - Av. Rio de Janeiro / Parque de Jogos 1º de Maio",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "460",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1375496,
+          38.7517635
+        ]
+      },
+      "id": "node/6355817476"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355817478",
+        "addr:street": "Avenida do Brasil",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 459",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "459 - Rua Maria Amália Vaz de Carvalho / ES Rainha D. Leonor",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "459",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1417362,
+          38.7514701
+        ]
+      },
+      "id": "node/6355817478"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355823103",
+        "addr:street": "Avenida António José de Almeida",
+        "amenity": "bicycle_rental",
+        "capacity": "25",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 419",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "419 - Av. António José de Almeida / Instituto Superior Técnico",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "419",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1395151,
+          38.7380578
+        ]
+      },
+      "id": "node/6355823103"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355826189",
+        "addr:street": "Rua do Arco do Cego",
+        "amenity": "bicycle_rental",
+        "capacity": "14",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 431",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "431 - Rua do Arco Cego / Av. Magalhães Lima",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "431",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1420885,
+          38.7393666
+        ]
+      },
+      "id": "node/6355826189"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355827361",
+        "addr:street": "Avenida Barbosa du Bocage",
+        "amenity": "bicycle_rental",
+        "capacity": "20",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 430",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "430 - Av. Barbosa Du Bocage / Rua Arco do Cego",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "430",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1433482,
+          38.740852
+        ]
+      },
+      "id": "node/6355827361"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355828156",
+        "addr:street": "Campo Pequeno",
+        "amenity": "bicycle_rental",
+        "capacity": "16",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 442",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "442 - Campo Pequeno",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "442",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.145209,
+          38.7433698
+        ]
+      },
+      "id": "node/6355828156"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355829066",
+        "addr:street": "Rua Alfredo Cortês",
+        "amenity": "bicycle_rental",
+        "capacity": "10",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 450",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "450 - Rua Alfredo Cortês",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "450",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1440241,
+          38.7462593
+        ]
+      },
+      "id": "node/6355829066"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355830293",
+        "addr:street": "Praça de Londres",
+        "amenity": "bicycle_rental",
+        "capacity": "10",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 432",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "432 - Praça de Londres",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "432",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1377061,
+          38.7407181
+        ]
+      },
+      "id": "node/6355830293"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355837069",
+        "addr:street": "Avenida de Roma",
+        "amenity": "bicycle_rental",
+        "capacity": "14",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 443",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "443 - Av. de Roma / Fórum Lisboa",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "443",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.138579,
+          38.7435453
+        ]
+      },
+      "id": "node/6355837069"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355837070",
+        "addr:street": "Rua Teixeira de Pascoais",
+        "amenity": "bicycle_rental",
+        "capacity": "10",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 452",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "452 - Rua Teixeira de Pascoais / Rua Dr. Gama Barros",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "452",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1367954,
+          38.7478385
+        ]
+      },
+      "id": "node/6355837070"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6355843001",
+        "addr:street": "Avenida de Roma",
+        "amenity": "bicycle_rental",
+        "capacity": "14",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 453",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "453 - Av. Roma / Av. EUA",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "453",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1420257,
+          38.7487035
+        ]
+      },
+      "id": "node/6355843001"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6813398182",
+        "addr:city": "Lisboa",
+        "addr:street": "Avenida de Paris",
+        "amenity": "bicycle_rental",
+        "capacity": "14",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 433",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "433 - Av. Paris / Av. Almirante Reis",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "433",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1341182,
+          38.7410319
+        ]
+      },
+      "id": "node/6813398182"
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "@id": "node/6813424429",
+        "addr:city": "Lisboa",
+        "addr:street": "Rua da Mesquita",
+        "amenity": "bicycle_rental",
+        "capacity": "40",
+        "description": "Gira. Bicicletas de Lisboa",
+        "email": "gira@emel.pt",
+        "fixme": "Work in progress;Trabalhos a decorrer",
+        "internet_access": "wlan",
+        "internet_access:fee": "no",
+        "name": "Bicicletas Gira Estação 410",
+        "network": "Gira",
+        "note": "Sistema de Bicicletas Públicas Partilhadas",
+        "official_name": "410 - Rua da Mesquita / Universidade Nova de Lisboa",
+        "opening_hours": "24/7",
+        "operator": "EMEL",
+        "payment:paypal": "yes",
+        "payment:wire_transfer": "yes",
+        "phone": "+351 211 163 060",
+        "ref": "410",
+        "website": "https://www.gira-bicicletasdelisboa.pt"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -9.1602256,
+          38.7348703
+        ]
+      },
+      "id": "node/6813424429"
+    }
+  ]
+}
