@@ -35,6 +35,8 @@
   .toggle.checked { background-color: $cf-orange; }
 }
 
+.nb-theme-default nb-toggle.quick-filters .toggle-label { margin-bottom: 0; }
+
 .nb-theme-default nb-toggle.filter-switch .toggle-label {
   justify-content: space-between;
   width: 16rem;
@@ -187,17 +189,54 @@
 .nb-theme-default nb-card.status-info nb-card-header { background-color: $cf-blue; }
 
 
+.nb-theme-default nb-card.card-filters {
+  border: none;
+  border-radius: 0;
+
+  nb-card-header {
+    background-color: $cf-lightGray;
+    color: $cf-darkGray;
+    font-family: quicksand-bold, sans-serif;
+    font-size: 1.1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+
 
 /* ===================================================================
  *  sidebar
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-sidebar.map-filters {
-  background-color: red;
+$sidebar-width: 300px;
+$sidebar-width-mobile: 280px;
+
+.nb-theme-default nb-sidebar.expanded.map-filters {
   position: absolute;
   height: calc(100vh - 4rem - 3.5rem);
-  z-index: 1;
+  width: $sidebar-width;
+  @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
+  z-index: 5;
 
-  .main-container { height: calc(100vh - 4rem - 3.5rem); }
+  .main-container {
+    height: calc(100vh - 4rem - 3.5rem);
+    width: $sidebar-width;
+    @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
+  }
+
+  .scrollable { padding: 0; }
+}
+
+
+
+/* ===================================================================
+ *  icon
+ *
+ * ------------------------------------------------------------------- */
+
+.nb-theme-default nb-icon.hoverStyle:hover {
+  cursor: pointer;
+  opacity: .7;
 }

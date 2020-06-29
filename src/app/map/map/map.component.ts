@@ -1,6 +1,6 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, OnInit, TemplateRef} from '@angular/core';
 import * as eva from 'eva-icons';
-import {NbSidebarService} from '@nebular/theme';
+import {NbDialogService, NbSidebarService} from '@nebular/theme';
 
 @Component({
   selector: 'app-map',
@@ -101,21 +101,29 @@ export class MapComponent implements OnInit, AfterViewInit {
       }
   ];
 
-  constructor(private sidebarService: NbSidebarService) { }
+  constructor(private sidebarService: NbSidebarService, private dialogService: NbDialogService) { }
 
   ngOnInit() {
   }
 
-  ngAfterViewInit() {
+    ngAfterViewInit() {
       eva.replace();
-  }
+    }
 
-  updateFilter(category) {
-    let quickFilterSwitch = $( ".filter-" + category.toLowerCase() + " .toggle" );
-    quickFilterSwitch.trigger( "click" );
-  }
+    updateFilter(category) {
+      let quickFilterSwitch = $( ".filter-" + category.toLowerCase() + " .toggle" );
+      quickFilterSwitch.trigger( "click" );
+    }
 
-    toggle() {
-        this.sidebarService.toggle(false, 'left');
+    toggleSidebar() {
+      this.sidebarService.toggle(false, 'left');
+    }
+
+    openWithData(dialog: TemplateRef<any>, date: Date, imgSrc: string) {
+      this.dialogService.open(dialog, { context: {date, imgSrc} });
+    }
+
+    open(dialog: TemplateRef<any>) {
+      this.dialogService.open(dialog);
     }
 }

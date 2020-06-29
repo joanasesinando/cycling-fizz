@@ -9,6 +9,7 @@ import { MapComponent } from './map/map.component';
 import { SearchComponent } from './search/search.component';
 import { FilterGroupComponent } from './map/map-modals/filter-group/filter-group.component';
 import { MapModalsComponent } from './map/map-modals/map-modals.component';
+import { MapboxComponent } from './mapbox/mapbox.component';
 
 import {
     NbCardModule,
@@ -20,19 +21,21 @@ import {
     NbToggleModule,
     NbUserModule,
     NbInputModule,
-    NbButtonModule, NbSidebarModule,
+    NbButtonModule, NbSidebarModule, NbIconModule,
 } from '@nebular/theme';
+
 import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/map-cards-bikelane.component';
 import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';
 import { MapCardsParkingComponent } from './map/map-modals/map-cards-parking/map-cards-parking.component';
 import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-cards-store.component';
 import { MapGalleryComponent } from './map/map-modals/map-gallery/map-gallery.component';
-import {SlickCarouselModule} from 'ngx-slick-carousel';
 import { MapCommentsComponent } from './map/map-modals/map-comments/map-comments.component';
 import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
+import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {FormsModule} from '@angular/forms';
 import {TranslateModule} from '@ngx-translate/core';
-import { MapboxComponent } from './map/mapbox/mapbox.component';
+import { FiltersComponent } from './filters/filters.component';
+
 
 @NgModule({
   declarations: [
@@ -47,7 +50,8 @@ import { MapboxComponent } from './map/mapbox/mapbox.component';
       MapGalleryComponent,
       MapCommentsComponent,
       MapTagsComponent,
-      MapboxComponent
+      MapboxComponent,
+      FiltersComponent
     ],
     imports: [
         CommonModule,
@@ -67,7 +71,8 @@ import { MapboxComponent } from './map/mapbox/mapbox.component';
         NbButtonModule,
         NbSidebarModule,
         FormsModule,
-        TranslateModule
+        TranslateModule,
+        NbIconModule
     ]
 })
 export class MapModule { }
