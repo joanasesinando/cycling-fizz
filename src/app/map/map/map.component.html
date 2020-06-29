@@ -6,10 +6,14 @@
         <div id="orangeBar" class="container-fluid d-flex align-items-center justify-content-between">
 
             <!-- more filters -->
-            <a href="" data-toggle="modal" data-target="#filters">
-                <i class="filter-icon" data-eva="funnel" data-eva-fill="white"
-                   data-toggle="tooltip" data-placement="top" title="Filtrar"></i>
-            </a>
+            <div class="cursorOnHover" (click)="toggle()">
+                <i class="filter-icon"
+                   data-eva="funnel" data-eva-fill="white"
+                   data-toggle="tooltip" data-placement="top"
+                   title="Filtrar"
+                   >
+                </i>
+            </div>
 
             <!-- quick filters -->
             <div id="quick-filters" class="d-none d-xl-flex justify-content-between">
@@ -24,13 +28,50 @@
                 </app-switch>
             </div>
 
-            <!-- search bar -->
+            <!-- search -->
             <app-search></app-search>
         </div>
 
-        <div id="mapbox">
-            <app-mapbox></app-mapbox>
-        </div>
+
+        <!-- Map -->
+        <nb-layout>
+            <nb-sidebar class="map-filters" state="collapsed" [containerFixed]="false">
+                <nb-card>
+                    <nb-card-body style="height: 150vh;">
+                        A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way. A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way. A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way. A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way. A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way. A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way. A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way. A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way. A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way. A nebula is an interstellar cloud of dust, hydrogen, helium and other ionized gases.
+                        Originally, nebula was a name for any diffuse astronomical object,
+                        including galaxies beyond the Milky Way.
+                    </nb-card-body>
+                </nb-card>
+            </nb-sidebar>
+
+            <nb-layout-column>
+                <div id="mapbox">
+                    <app-mapbox></app-mapbox>
+                    <button nbButton hero status="danger" style="position: absolute; bottom: 2rem; left: 1rem;" data-toggle="modal" data-target="#mapElementModal">Abrir elemento</button>
+                    <app-btn-floating></app-btn-floating>
+                </div>
+            </nb-layout-column>
+        </nb-layout>
+
 <!--        &lt;!&ndash; Map &ndash;&gt;-->
 <!--        <div id="map">-->
 <!--            <button nbButton hero status="danger" style="position: absolute; bottom: 2rem; left: 1rem;" data-toggle="modal" data-target="#mapElementModal">Abrir elemento</button>-->
@@ -38,7 +79,7 @@
 <!--        </div>-->
 
 
-        <app-map-modals [filters]="filters"></app-map-modals>
+<!--        <app-map-modals [filters]="filters"></app-map-modals>-->
     </div>
 
 </section>

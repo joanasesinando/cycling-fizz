@@ -16,8 +16,8 @@
   @include nb-option-list-theme;
   @include nb-toast-theme;
   @include nb-overlay-theme;
+  @include nb-sidebar-theme;
 };
-
 
 
 /* ===================================================================
@@ -185,3 +185,19 @@
 .nb-theme-default nb-card.status-warning nb-card-header { background-color: $cf-yellow; }
 .nb-theme-default nb-card.status-danger nb-card-header { background-color: $cf-pink; }
 .nb-theme-default nb-card.status-info nb-card-header { background-color: $cf-blue; }
+
+
+
+/* ===================================================================
+ *  sidebar
+ *
+ * ------------------------------------------------------------------- */
+
+.nb-theme-default nb-sidebar.map-filters {
+  background-color: red;
+  position: absolute;
+  height: calc(100vh - 4rem - 3.5rem);
+  z-index: 1;
+
+  .main-container { height: calc(100vh - 4rem - 3.5rem); }
+}

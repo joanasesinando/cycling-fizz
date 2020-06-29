@@ -20,7 +20,7 @@ import {
     NbToggleModule,
     NbUserModule,
     NbInputModule,
-    NbButtonModule,
+    NbButtonModule, NbSidebarModule,
 } from '@nebular/theme';
 import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/map-cards-bikelane.component';
 import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';
@@ -65,6 +65,7 @@ import { MapboxComponent } from './map/mapbox/mapbox.component';
         NbSelectModule,
         NbInputModule,
         NbButtonModule,
+        NbSidebarModule,
         FormsModule,
         TranslateModule
     ]

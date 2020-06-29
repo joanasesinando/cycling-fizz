@@ -1,5 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 import * as eva from 'eva-icons';
+import {NbSidebarService} from '@nebular/theme';
 
 @Component({
   selector: 'app-map',
@@ -100,7 +101,7 @@ export class MapComponent implements OnInit, AfterViewInit {
       }
   ];
 
-  constructor() { }
+  constructor(private sidebarService: NbSidebarService) { }
 
   ngOnInit() {
   }
@@ -114,4 +115,7 @@ export class MapComponent implements OnInit, AfterViewInit {
     quickFilterSwitch.trigger( "click" );
   }
 
+    toggle() {
+        this.sidebarService.toggle(false, 'left');
+    }
 }
