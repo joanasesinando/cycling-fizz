@@ -25,7 +25,10 @@
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-toggle { user-select: none; }
+.nb-theme-default nb-toggle {
+  user-select: none;
+  display: block;
+}
 
 .nb-theme-default nb-toggle.text-white .text { color: white; }
 .nb-theme-default nb-toggle.text-dark .text { color: $cf-dark; }
@@ -50,7 +53,10 @@
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-checkbox { user-select: none; }
+.nb-theme-default nb-checkbox {
+  user-select: none;
+  display: block;
+}
 
 .nb-theme-default nb-checkbox.text-white .text { color: white; }
 .nb-theme-default nb-checkbox.text-dark .text { color: $cf-dark; }

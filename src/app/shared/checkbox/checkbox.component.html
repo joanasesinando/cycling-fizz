@@ -1,13 +1,9 @@
-<nb-layout>
-    <nb-layout-column>
-        <nb-checkbox
-                status="{{status}}"
-                [checked]="checked"
-                class="{{name}} text-{{labelColor}}"
-                (checkedChange)="checkedChanged()">
+<nb-checkbox
+        status="{{status}}"
+        [checked]="checked"
+        class="{{name}} text-{{labelColor}}"
+        (checkedChange)="checkedChanged()">
 
-            {{label}}
+    {{label}}
 
-        </nb-checkbox>
-    </nb-layout-column>
-</nb-layout>
+</nb-checkbox>

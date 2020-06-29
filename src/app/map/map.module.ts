@@ -7,7 +7,7 @@ import {SharedModule} from '../shared/shared.module';
 
 import { MapComponent } from './map/map.component';
 import { SearchComponent } from './search/search.component';
-import { FilterGroupComponent } from './map/map-modals/filter-group/filter-group.component';
+import { FilterGroupComponent } from './filters/filter-group/filter-group.component';
 import { MapModalsComponent } from './map/map-modals/map-modals.component';
 import { MapboxComponent } from './mapbox/mapbox.component';
 
