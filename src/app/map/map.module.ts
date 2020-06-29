@@ -32,7 +32,7 @@ import { MapCommentsComponent } from './map/map-modals/map-comments/map-comments
 import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
 import {FormsModule} from '@angular/forms';
 import {TranslateModule} from '@ngx-translate/core';
-import { MapboxComponent } from './map/mapbox/mapbox.component';
+import { MapboxComponent } from './mapbox/mapbox.component';
 
 @NgModule({
   declarations: [
