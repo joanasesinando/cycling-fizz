@@ -5,6 +5,6 @@
     </nb-card-header>
     <nb-card-body *ngIf="!editMode">{{ notes }}</nb-card-body>
     <nb-card-body *ngIf="editMode">
-        <textarea nbInput fullWidth status="success" style="'height: ' + {{height}} + 'rem'" value="{{ notes }}"></textarea>
+        <textarea nbInput fullWidth rows="7" status="success" value="{{ notes }}"></textarea>
     </nb-card-body>
 </nb-card>

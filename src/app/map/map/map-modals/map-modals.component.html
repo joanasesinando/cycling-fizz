@@ -82,8 +82,8 @@
                 </div>
 
                 <!-- // Cards -->
-                <app-map-cards-bikelane *ngIf="type === 'bikelane'" [editMode]="editActivated" class="mt-4"></app-map-cards-bikelane>
-                <app-map-cards-parking *ngIf="type === 'parking'" [editMode]="editActivated" class="mt-4"></app-map-cards-parking>
+                <app-map-bikelane *ngIf="type === 'bikelane'" [editMode]="editActivated" class="mt-4"></app-map-bikelane>
+                <app-map-parking *ngIf="type === 'parking'" [editMode]="editActivated" class="mt-4"></app-map-parking>
                 <app-map-cards-store *ngIf="type === 'store'" [editMode]="editActivated" class="mt-4"></app-map-cards-store>
                 <!-- TODO cards bikesharing -->
 

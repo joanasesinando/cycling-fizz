@@ -2,7 +2,6 @@ import {Component, Input, OnInit, Output} from '@angular/core';
 import { faTrash, faEdit, faStar } from '@fortawesome/free-solid-svg-icons';
 declare var $: any;
 
-import * as bootstrap from 'bootstrap';
 
 @Component({
   selector: 'app-map-modals',

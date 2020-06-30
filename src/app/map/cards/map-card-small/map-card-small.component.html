@@ -8,12 +8,30 @@
         <nb-icon class="cursor-hover ml-2" icon="info" nbPopover="{{ hint }}" nbPopoverTrigger="hint"></nb-icon>
     </nb-card-header>
 
-    <nb-card-body *ngIf="!editMode">{{ option.label }}</nb-card-body>
+    <nb-card-body *ngIf="!editMode">
+        <span *ngIf="type === 'text'">{{ option.label }}</span>
+        <span *ngIf="type === 'number'">{{ option }}</span>
+        <div *ngIf="type === 'stars'">
+            <div class="rating d-flex align-items-center">
+                <div *ngFor="let i of options">
+                    <nb-icon *ngIf="i" class="star mr-1" icon="star"></nb-icon>
+                    <nb-icon *ngIf="!i" class="star not-filled mr-1" icon="star"></nb-icon>
+                </div>
+            </div>
+        </div>
+    </nb-card-body>
 
     <nb-card-body *ngIf="editMode">
-        <nb-select [selected]="option.id.toString()" status="success">
-            <nb-option *ngFor="let option of options" value="{{ option.id.toString() }}" class="success">{{ option.label }}</nb-option>
+        <nb-select *ngIf="type === 'text'" [selected]="option.id.toString()" status="success">
+            <nb-option *ngFor="let option of options" value="{{ option.id }}" class="success">{{ option.label }}</nb-option>
         </nb-select>
+
+        <input *ngIf="type === 'number'" type="text" nbInput value="{{ option }}" status="success">
+
+        <nb-select *ngIf="type === 'stars'" [selected]="(option-1).toString()" status="success">
+            <nb-option *ngFor="let n of options; let i = index" value="{{ i }}" class="success">{{ i+1 }}</nb-option>
+        </nb-select>
+
     </nb-card-body>
 
 </nb-card>

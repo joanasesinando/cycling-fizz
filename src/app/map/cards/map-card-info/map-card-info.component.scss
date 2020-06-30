@@ -11,3 +11,7 @@ nb-card-body {
   font-size: 1.1rem;
   color: $cf-text;
 }
+
+nb-card {
+  @include media-breakpoint-up(lg) { margin-bottom: 0; }
+}
