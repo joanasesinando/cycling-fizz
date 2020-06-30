@@ -1,0 +1,13 @@
+@import "../../../../styles/colors";
+@import "../../../../styles/mixins";
+
+.container-fluid {
+  background-color: #F7F9FA;
+
+  h6 {
+    font-family: quicksand-medium, sans-serif;
+    text-transform: uppercase;
+    text-align: center;
+    color: $cf-darkGray;
+  }
+}

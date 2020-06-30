@@ -1,4 +1,5 @@
 @import "colors";
+@import "shadows";
 @import 'nebular-themes';
 @import '~@nebular/theme/styles/globals';
 
@@ -16,8 +17,8 @@
   @include nb-option-list-theme;
   @include nb-toast-theme;
   @include nb-overlay-theme;
+  @include nb-sidebar-theme;
 };
-
 
 
 /* ===================================================================
@@ -25,7 +26,10 @@
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-toggle { user-select: none; }
+.nb-theme-default nb-toggle {
+  user-select: none;
+  display: block;
+}
 
 .nb-theme-default nb-toggle.text-white .text { color: white; }
 .nb-theme-default nb-toggle.text-dark .text { color: $cf-dark; }
@@ -34,6 +38,8 @@
   .toggle-switcher nb-icon { color: $cf-orange; }
   .toggle.checked { background-color: $cf-orange; }
 }
+
+.nb-theme-default nb-toggle.quick-filters .toggle-label { margin-bottom: 0; }
 
 .nb-theme-default nb-toggle.filter-switch .toggle-label {
   justify-content: space-between;
@@ -48,12 +54,21 @@
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-checkbox { user-select: none; }
+.nb-theme-default nb-checkbox {
+  user-select: none;
+  display: block;
+}
 
 .nb-theme-default nb-checkbox.text-white .text { color: white; }
 .nb-theme-default nb-checkbox.text-dark .text { color: $cf-dark; }
 
 .nb-theme-default nb-checkbox.filter-group .text { font-weight: 500; }
+
+.nb-theme-default nb-checkbox.map-cards-checkbox .native-input:disabled:indeterminate + .custom-checkbox,
+.nb-theme-default nb-checkbox.map-cards-checkbox .native-input:disabled:checked + .custom-checkbox {
+  background: $cf-gradient-orange;
+  border-color: transparent;
+}
 
 
 
@@ -93,6 +108,8 @@
  *  chat
  *
  * ------------------------------------------------------------------- */
+
+.nb-theme-default nb-chat-form { padding: 1rem 0; }
 
 .nb-theme-default nb-chat.map-comments {
   box-shadow: none;
@@ -178,10 +195,88 @@
 .nb-theme-default nb-card.status-warning nb-card-header,
 .nb-theme-default nb-card.status-danger nb-card-header,
 .nb-theme-default nb-card.status-info nb-card-header {
-  font-family: quicksand-regular, sans-serif;
+  font-family: quicksand-bold, sans-serif;
+  font-size: 1rem;
 }
 
+.nb-theme-default nb-card.status-primary nb-card-header { background: $cf-gradient-orange; }
 .nb-theme-default nb-card.status-success nb-card-header { background-color: $cf-green; }
 .nb-theme-default nb-card.status-warning nb-card-header { background-color: $cf-yellow; }
 .nb-theme-default nb-card.status-danger nb-card-header { background-color: $cf-pink; }
 .nb-theme-default nb-card.status-info nb-card-header { background-color: $cf-blue; }
+
+
+.nb-theme-default nb-card.card-filters {
+  border: none;
+  border-radius: 0;
+
+  nb-card-header {
+    background-color: $cf-lightGray;
+    color: $cf-darkGray;
+    font-family: quicksand-bold, sans-serif;
+    font-size: 1.1rem;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+  }
+}
+
+.nb-theme-default nb-card.map-element {
+  $border-radius: 1.5rem;
+
+  border: none;
+  border-radius: $border-radius;
+  height: 95vh;
+
+  nb-card-header.map-element-header {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    font-size: 1.1rem;
+    @include media-breakpoint-down(sm) { font-size: 1rem; }
+
+    nb-icon:not(.star) { font-size: 1.5rem; }
+    nb-icon.star { font-size: .9rem; }
+  }
+}
+
+.nb-theme-default nb-card.inside-card {
+  $border-radius: .6rem;
+  border-radius: $border-radius;
+
+  nb-card-header {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    background: $cf-lightGray;
+    color: $cf-dark;
+  }
+
+  nb-icon {
+    font-size: 1.1rem;
+    color: #8f9bb3;
+  }
+}
+
+
+
+/* ===================================================================
+ *  sidebar
+ *
+ * ------------------------------------------------------------------- */
+
+$sidebar-width: 300px;
+$sidebar-width-mobile: 280px;
+
+.nb-theme-default nb-sidebar.expanded.map-filters {
+  position: absolute;
+  height: calc(100vh - 4rem - 3.5rem);
+  width: $sidebar-width;
+  @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
+  z-index: 5;
+
+  .main-container {
+    height: calc(100vh - 4rem - 3.5rem);
+    width: $sidebar-width;
+    @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
+  }
+
+  .scrollable { padding: 0; }
+}

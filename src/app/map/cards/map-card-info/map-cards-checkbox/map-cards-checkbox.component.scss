@@ -1,0 +1,7 @@
+.info {
+  color: #d0d0d0;
+  &:hover {
+    cursor: pointer;
+    color: darken(#d0d0d0, 10);
+  }
+}

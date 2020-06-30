@@ -8,40 +8,25 @@
 section {
   height: 100vh;
   min-height: 750px;
-  //background-color: red; //FIXME tirar
 
   .contents {
     position: relative;
     top: 4rem;
-    //background-color: green; //FIXME tirar
 
     #orangeBar {
-      position: fixed;
+      position: relative;
       background: $cf-gradient-orange;
       height: 3.5rem;
       box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
       padding: 0 1.5rem;
       z-index: 5;
 
-      app-map-quick-filter-toggle:last-of-type {
-        margin-right: 0 !important;
-      }
-    }
-
-    #map {
-      position: relative;
-      top: 3.5rem;
-      background: url(~assets/images/map/map.png) no-repeat top center;
-      background-size: cover;
-      height: calc(100vh - 4rem - 3.5rem);
-      min-height: 640px;
+      .filter-icon { font-size: 1.5rem; }
     }
 
     #mapbox {
       position: relative;
-      top: 3.5rem;
       height: calc(100vh - 4rem - 3.5rem);
-      min-height: 640px;
     }
   }
 }

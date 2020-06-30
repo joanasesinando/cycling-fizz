@@ -1,0 +1,141 @@
+<nb-card class="map-element" status="primary">
+
+    <!-- Header -->
+    <nb-card-header class="map-element-header d-flex justify-content-between align-items-center">
+        <div class="d-flex flex-wrap align-items-center font-qks-bold">
+            <div class="element-icon mr-3"><img src="{{icon}}" alt="Map element icon"></div>
+            {{name}}
+
+            <!-- store rating -->
+            <div *ngIf="type === 'str'" class="store-rating ml-3">
+                <div class="rating d-flex align-items-center">
+                    <span class="rating-number font-qks-medium mr-2">{{ strRating }}</span>
+                    <div *ngFor="let i of strRatingArray">
+                        <nb-icon *ngIf="i" class="star mb-2 mr-1" icon="star"></nb-icon>
+                        <nb-icon *ngIf="!i" class="star not-filled mb-2 mr-1" icon="star-outline"></nb-icon>
+                    </div>
+                    <span class="rating-source font-qks-light">(fonte:
+                        <a href="https://google.com" target="_blank">{{strRatingSource}}</a>)
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <!-- right actions -->
+        <div class="actions d-flex align-items-center">
+            <nb-icon class="cursor-hover d-none d-sm-block mr-2"
+                     icon="share-outline"
+                     data-toggle="tooltip" data-placement="top" title="Partilhar">
+            </nb-icon>
+            <a href="https://www.google.com/maps/place/{{lat}},{{lng}}" target="_blank">
+                <nb-icon class="cursor-hover d-none d-sm-block mr-2"
+                         icon="navigation-2-outline"
+                         data-toggle="tooltip" data-placement="top" title="Direções">
+                </nb-icon>
+            </a>
+            <nb-icon class="cursor-hover" icon="close-outline" (click)="closeBtnClicked()"></nb-icon>
+        </div>
+    </nb-card-header>
+
+
+    <!-- Body -->
+    <nb-card-body class="map-element-body">
+        <!-- // Sub-header -->
+        <div class="sub-header d-flex justify-content-between">
+            <!-- edit & delete -->
+            <div class="actions">
+                <nb-icon class="text-dark-gray cursor-hover mr-3" icon="edit-2"
+                         data-toggle="tooltip" data-placement="top" title="Editar"
+                         (click)="editMode = !editMode">
+                </nb-icon>
+                <nb-icon class="text-dark-gray cursor-hover mr-3" icon="trash-2"
+                         data-toggle="tooltip" data-placement="top" title="Apagar"
+                         (click)="open(deleteDialog)">
+                </nb-icon>
+            </div>
+
+            <!-- last update -->
+            <div class="info d-flex flex-column align-items-end justify-content-center">
+                <span>Última atualiação: {{ lastUpdated.date | date:'dd/MM/yyy' }}</span>
+                <span>por {{ lastUpdated.by }}</span>
+            </div>
+        </div>
+
+        <!-- share & goto [mobile] -->
+        <div class="actions d-flex d-sm-none justify-content-around align-items-center mt-4">
+            <button nbButton status="primary" class="w-100 mr-4"><nb-icon icon="share-outline"></nb-icon>Partilhar</button>
+            <button nbButton status="primary" class="w-100"><nb-icon icon="navigation-2-outline"></nb-icon>Direções</button>
+        </div>
+
+
+        <div class="p-0 p-md-3">
+            <!-- // Address -->
+            <div *ngIf="type != 'str'" class="address d-flex align-items-center mt-4">
+                <nb-icon icon="pin" class="text-dark-header"></nb-icon>
+                <span class="text-dark-black ml-3">{{ address }}</span>
+            </div>
+
+
+            <!-- // Cards -->
+            <app-map-cards-bikelane *ngIf="type === 'bkl'" [editMode]="editMode" class="mt-4"></app-map-cards-bikelane>
+    <!--        <app-map-cards-parking *ngIf="type === 'prk'" [editMode]="editMode" class="mt-4"></app-map-cards-parking>-->
+    <!--        <app-map-cards-store *ngIf="type === 'str'" [editMode]="editMode" class="mt-4"></app-map-cards-store>-->
+    <!--        &lt;!&ndash; TODO cards bikesharing &ndash;&gt;-->
+
+
+            <!-- // Buttons [edit mode] -->
+            <div *ngIf="editMode" class="d-flex justify-content-end align-items-center mt-4">
+                <button nbButton outline status="success" class="mr-3" (click)="open(editWarningDialog)">Descartar</button>
+                <button nbButton hero status="success" (click)="sendEditChanges(); editMode = false">Guardar</button>
+            </div>
+
+
+            <!-- // Gallery -->
+            <app-map-gallery [photos]="photos"></app-map-gallery>
+
+
+            <!-- // Comments -->
+            <app-map-comments [comments]="comments"></app-map-comments>
+        </div>
+    </nb-card-body>
+
+</nb-card>
+
+
+<!-- Dialogs -->
+<ng-template #deleteDialog let-data let-ref="dialogRef">
+    <app-dialog
+            [status]="'danger'"
+            [text]="'Tens a certeza que queres apagar este elemento?'"
+            [leftButton]="'Cancelar'"
+            [rightButton]="'Sim, apagar!'"
+            (onLeftBtnClicked)="ref.close()"
+            (onRightBtnClicked)="ref.close(); open(deleteFormDialog)"
+            (onCloseBtnClicked)="ref.close()"
+    ></app-dialog>
+</ng-template>
+
+<ng-template #deleteFormDialog let-data let-ref="dialogRef">
+    <app-dialog
+            [status]="'info'"
+            [text]="'Diz-nos o motivo pelo qual queres apagar este elemento:'"
+            [leftButton]="'Cancelar'"
+            [rightButton]="'Apagar!'"
+            (onLeftBtnClicked)="ref.close()"
+            (onRightBtnClicked)="ref.close();"
+            (onCloseBtnClicked)="ref.close()"
+    ></app-dialog>
+</ng-template>
+
+<ng-template #editWarningDialog let-data let-ref="dialogRef">
+    <app-dialog
+            [status]="'warning'"
+            [text]="'Tens a certeza que queres sair sem guardar as alterações efetuadas?'"
+            [leftButton]="'Cancelar'"
+            [rightButton]="'Sair sem guardar'"
+            (onLeftBtnClicked)="ref.close()"
+            (onRightBtnClicked)="ref.close(); editMode = false;"
+            (onCloseBtnClicked)="ref.close()"
+    ></app-dialog>
+</ng-template>
+

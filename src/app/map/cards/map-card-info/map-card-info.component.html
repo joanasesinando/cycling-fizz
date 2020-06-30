@@ -1,0 +1,12 @@
+<nb-card class="inside-card">
+    <nb-card-body style="overflow: hidden">
+        <app-map-cards-checkbox *ngFor="let inf of infos; let i = index"
+                                [icon]="inf.icon"
+                                [label]="inf.label"
+                                [checked]="info[i]"
+                                [disabled]="!editMode"
+                                [status]="editMode ? 'success' : 'primary'"
+                                [hint]="inf.hint">
+        </app-map-cards-checkbox>
+    </nb-card-body>
+</nb-card>

@@ -57,6 +57,11 @@
 html, body { scroll-behavior: smooth; }
 button:focus { outline: none; }
 
+.cursor-hover:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
 
 h1, .h1,
 h2, .h2,
@@ -341,18 +346,18 @@ $scrollbarColor: #BDBDBD;
 $scrollbarWidth: 10px;
 
 @include media-breakpoint-up(lg){
-  ::-webkit-scrollbar {
+  body::-webkit-scrollbar {
     width: $scrollbarWidth;
     background-color: #F5F5F5;
   }
 
-  ::-webkit-scrollbar-track {
+  body::-webkit-scrollbar-track {
     -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
     background-color: #F5F5F5;
     border-radius: $scrollbarWidth;
   }
 
-  ::-webkit-scrollbar-thumb {
+  body::-webkit-scrollbar-thumb {
     border-radius: $scrollbarWidth;
     background-color: $scrollbarColor;
     //background-image: -webkit-gradient(linear,
@@ -372,6 +377,10 @@ $scrollbarWidth: 10px;
       //        color-stop(.6,#e6ac3b));
     }
   }
+}
+
+.map-element-body::-webkit-scrollbar-button:end:increment {
+  height: 3.5%;
 }
 
 

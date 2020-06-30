@@ -6,10 +6,10 @@
         <div id="orangeBar" class="container-fluid d-flex align-items-center justify-content-between">
 
             <!-- more filters -->
-            <a href="" data-toggle="modal" data-target="#filters">
-                <i class="filter-icon" data-eva="funnel" data-eva-fill="white"
-                   data-toggle="tooltip" data-placement="top" title="Filtrar"></i>
-            </a>
+            <nb-icon class="filter-icon text-white cursor-hover" icon="funnel"
+                     data-toggle="tooltip" data-placement="top" title="Filtrar"
+                     (click)="toggleSidebar()">
+            </nb-icon>
 
             <!-- quick filters -->
             <div id="quick-filters" class="d-none d-xl-flex justify-content-between">
@@ -24,21 +24,41 @@
                 </app-switch>
             </div>
 
-            <!-- search bar -->
+            <!-- search -->
             <app-search></app-search>
         </div>
 
-        <div id="mapbox">
-            <app-mapbox></app-mapbox>
-        </div>
-<!--        &lt;!&ndash; Map &ndash;&gt;-->
-<!--        <div id="map">-->
-<!--            <button nbButton hero status="danger" style="position: absolute; bottom: 2rem; left: 1rem;" data-toggle="modal" data-target="#mapElementModal">Abrir elemento</button>-->
-<!--            <app-btn-floating></app-btn-floating>-->
-<!--        </div>-->
 
+        <!-- Map -->
+        <nb-layout>
+            <nb-sidebar class="map-filters" state="collapsed" [containerFixed]="false">
+                <app-filters [filters]="filters" (onCloseBtnClicked)="toggleSidebar()"></app-filters>
+            </nb-sidebar>
 
-        <app-map-modals [filters]="filters"></app-map-modals>
+            <nb-layout-column>
+                <div id="mapbox">
+                    <app-mapbox></app-mapbox>
+                    <button nbButton hero status="danger" style="position: absolute; bottom: 2rem; left: 1rem;"
+                            (click)="open(mapElementDialog)">Abrir elemento</button>
+                    <app-btn-floating></app-btn-floating>
+                </div>
+            </nb-layout-column>
+        </nb-layout>
+
     </div>
 
 </section>
+
+<ng-template #mapElementDialog let-data let-ref="dialogRef">
+    <app-map-element
+            [type]="type"
+            [name]="name"
+            [lat]="lat"
+            [lng]="lng"
+            [lastUpdated]="lastUpdated"
+            [address]="address"
+            [photos]="photos"
+            [comments]="comments"
+        (onCloseBtnClicked)="ref.close()">
+    </app-map-element>
+</ng-template>

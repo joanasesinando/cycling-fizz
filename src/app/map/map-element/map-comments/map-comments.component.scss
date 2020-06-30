@@ -1,0 +1,32 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+.section-comments {
+  margin-top: 8rem;
+
+  .section-title {
+    font-family: quicksand-bold, sans-serif;
+    font-size: 1.3rem;
+    color: $cf-dark;
+  }
+
+  .placeholder {
+    position: absolute;
+    bottom: 3rem;
+    left: 5.5rem;
+    font-family: quicksand-regular, sans-serif;
+    font-size: .9rem;
+    color: $cf-darkGray;
+    @include media-breakpoint-down(md) {
+      left: 4.5rem;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: .8rem;
+    }
+  }
+}

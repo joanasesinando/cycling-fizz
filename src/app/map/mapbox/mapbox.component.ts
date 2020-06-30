@@ -1,7 +1,6 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
-import {MapModalsComponent} from "../map/map-modals/map-modals.component";
 import {MapServerHandlerService} from "../../_services/map-server-handler.service";
 
 @Component({
@@ -199,7 +198,8 @@ export class MapboxComponent implements OnInit, AfterViewInit {
       layout: {
         'text-field': '{point_count_abbreviated}',
         'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-        'text-size': 12
+        'text-
+   ': 12
       }
     });
 
