@@ -16,8 +16,8 @@ export interface UserBasicInfo {
 export class ServerHandlerService {
 
 
-  // url :String = "https://cfservertest.cf";
-  url :String = "http://localhost:5000";
+  url :String = "http://cfservertest.cf";
+  // url :String = "http://localhost:5000";
 
 
   constructor() { }

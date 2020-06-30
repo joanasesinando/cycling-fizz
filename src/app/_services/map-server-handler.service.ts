@@ -8,7 +8,7 @@ export class MapServerHandlerService {
 
 
   // url :String = "https://cfservertest.cf";
-  private url = "http://localhost:8080";
+  private url = "http://map.cfservertest.cf";
   public giraURL = this.url + "/get-gira";
   public mobiCascaisURL = this.url + "/get-mobi-cascais";
 
@@ -16,7 +16,7 @@ export class MapServerHandlerService {
   constructor() { }
 
   isLocal() {
-    return true;
+    return false;
   }
 
 }
