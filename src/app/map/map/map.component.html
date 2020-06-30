@@ -18,7 +18,7 @@
                     [label]="filter.category"
                     [labelPosition]="'right'"
                     [labelColor]="'white'"
-                    [checked]="filter.checked"
+                    [checked]="filter.initChecked"
                     [status]="'control'"
                     (checkedChange)="updateFilter(filter.name)">
                 </app-switch>

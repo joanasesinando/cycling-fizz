@@ -1,0 +1,38 @@
+{
+  "types": [
+    { "label": "U invertido", "id": 0 },
+    { "label": "De roda", "id": 1 },
+    { "label": "Poste", "id": 2 },
+    { "label": "Suspenso", "id": 3 },
+    { "label": "Grade/Vedação", "id": 4 },
+    { "label": "Outro", "id": 5 }
+  ],
+  "typeHint": "Popover tipologia",
+
+  "placesHint": "Popover lugares",
+  "securityHint": "Popover segurança",
+
+  "environments": [
+    { "label": "Sempre movimentado", "id": 0 },
+    { "label": "Movimentado Seg-Sex", "id": 1 },
+    { "label": "Movimentado Sáb-Dom", "id": 2 },
+    { "label": "Pouco movimentado", "id": 3 }
+  ],
+  "environmentHint": "Popover ambiente",
+
+  "accesses": [
+    { "label": "Público & Fácil acesso", "id": 0 },
+    { "label": "Público & Difícil acesso", "id": 1 },
+    { "label": "Privado & Fácil acesso", "id": 2 },
+    { "label": "Privado & Difícil acesso", "id": 3 }
+  ],
+  "accessHint": "Popover acesso",
+
+  "infos": [
+    { "label": "Coberto", "icon": "../../../../assets/images/map/icons/map-element/covered.svg", "hint": "Popover coberto" },
+    { "label": "Espaçoso", "icon": "../../../../assets/images/map/icons/map-element/spacious.svg", "hint": "Popover espaçoso" },
+    { "label": "Vigiado", "icon": "../../../../assets/images/map/icons/map-element/supervised.svg", "hint": "Popover vigiado" },
+    { "label": "Visível", "icon": "../../../../assets/images/map/icons/map-element/visible.svg", "hint": "Popover visível" },
+    { "label": "Iluminação", "icon": "../../../../assets/images/map/icons/map-element/light.svg", "hint": "Popover iluminação" }
+  ]
+}

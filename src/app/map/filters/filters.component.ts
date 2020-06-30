@@ -7,7 +7,7 @@ import {Component, EventEmitter, Input, OnInit, Output} from '@angular/core';
 })
 export class FiltersComponent implements OnInit {
 
-  @Input() filters: {category: string, checked: boolean, name: string, filterGroups: {category: string, options: string[]}[]}[];
+  @Input() filters: {category: string, initChecked: boolean, name: string, filterGroups: {category: string, options: string[]}[]}[];
 
   @Output() onCloseBtnClicked = new EventEmitter<boolean>();
 

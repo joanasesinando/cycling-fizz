@@ -1,4 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
+import bikelanesInfo from 'assets/map/map-element/bikelanes.json';
 
 @Component({
   selector: 'app-map-bikelane',
@@ -9,47 +10,20 @@ export class MapBikelaneComponent implements OnInit {
 
   @Input() editMode: boolean;
 
-  //FIXME colocar num JSON ?
-  types = [
-    { label: "Pista unidirecional", id: 0 },
-    { label: "Pista bidirecional", id: 1 },
-    { label: "Zona 30", id: 2 },
-    { label: "Trilho", id: 3 },
-    { label: "Parque", id: 4 },
-    { label: "Outro", id: 5 }
-  ];
-  typeHint: string = "Popover tipologia";
+  types: { label: string, id: number }[] = bikelanesInfo.types;
+  steeps: { label: string, id: number }[] = bikelanesInfo.steeps;
+  floors: { label: string, id: number }[] = bikelanesInfo.floors;
+  infos: { label: string, id: number }[] = bikelanesInfo.infos;
 
-  steeps = [
-    { label: "Plano", id: 0 },
-    { label: "Misto", id: 1 },
-    { label: "Íngreme", id: 2 },
-  ];
-  steepHint: string = "Popover inclinação";
+  typeHint: string = bikelanesInfo.typeHint;
+  steepHint: string = bikelanesInfo.steepHint;
+  floorHint: string = bikelanesInfo.floorHint;
 
-  floors = [
-    { label: "Asfalto colorido", id: 0 },
-    { label: "Alcatrão", id: 1 },
-    { label: "Calçada", id: 2 },
-    { label: "Terra batida", id: 3 },
-    { label: "Gravilha", id: 4 },
-    { label: "Areia", id: 5 },
-    { label: "Outro", id: 6 },
-  ];
-  floorHint: string = "Popover piso";
-
-  infos = [
-    { label: "Segregada", icon: "../../../../assets/images/map/icons/map-element/segregated.svg", hint: "Popover segregada" },
-    { label: "Iluminação", icon: "../../../../assets/images/map/icons/map-element/light.svg", hint: "Popover iluminação" },
-    { label: "Cargo bike friendly", icon: "../../../../assets/images/map/icons/map-element/cargo.svg", hint: "Popover cargo" },
-    { label: "Partilhada com peões", icon: "../../../../assets/images/map/icons/map-element/shared.svg", hint: "Popover partilhada" },
-  ]
-
-  //FIXME ir buscar à BD
-  type = this.types[0];
-  steep = this.steeps[0];
-  floor = this.floors[0];
-  info = [true, true, false, false];
+  //FIXME: ir buscar à BD
+  type: { label: string, id: number } = bikelanesInfo.types[0];
+  steep: { label: string, id: number } = bikelanesInfo.steeps[0];
+  floor: { label: string, id: number } = bikelanesInfo.floors[0];
+  info: boolean[] = [true, true, false, false];
   notes: string = "Carrega em “editar” para adicionar uma nota.";
 
   constructor() { }

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
-import * as $ from 'jquery';
+// import * as $ from 'jquery';
 
 import {faFacebookF, faGooglePlusG, faTwitter} from '@fortawesome/free-brands-svg-icons';
 import {NgForm} from '@angular/forms';

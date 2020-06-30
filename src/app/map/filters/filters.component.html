@@ -11,7 +11,7 @@
                     [label]="filter.category"
                     [labelPosition]="'left'"
                     [labelColor]="'dark'"
-                    [checked]="filter.checked"
+                    [checked]="filter.initChecked"
                     [status]="'primary'"
                     (checkedChange)="toggleFilterGroups(filter.name)">
             </app-switch>

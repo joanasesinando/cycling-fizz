@@ -1,0 +1,36 @@
+{
+  "types": [
+    { "label": "Pista unidirecional", "id": 0 },
+    { "label": "Pista bidirecional", "id": 1 },
+    { "label": "Zona 30", "id": 2 },
+    { "label": "Trilho", "id": 3 },
+    { "label": "Parque", "id": 4 },
+    { "label": "Outro", "id": 5 }
+  ],
+  "typeHint": "Popover tipologia",
+
+  "steeps": [
+    { "label": "Plano", "id": 0 },
+    { "label": "Misto", "id": 1 },
+    { "label": "Íngreme", "id": 2 }
+  ],
+  "steepHint": "Popover inclinação",
+
+  "floors": [
+    { "label": "Asfalto colorido", "id": 0 },
+    { "label": "Alcatrão", "id": 1 },
+    { "label": "Calçada", "id": 2 },
+    { "label": "Terra batida", "id": 3 },
+    { "label": "Gravilha", "id": 4 },
+    { "label": "Areia", "id": 5 },
+    { "label": "Outro", "id": 6 }
+  ],
+  "floorHint": "Popover piso",
+
+  "infos": [
+    { "label": "Segregada", "icon": "../../../../assets/images/map/icons/map-element/segregated.svg", "hint": "Popover segregada" },
+    { "label": "Iluminação", "icon": "../../../../assets/images/map/icons/map-element/light.svg", "hint": "Popover iluminação" },
+    { "label": "Cargo bike friendly", "icon": "../../../../assets/images/map/icons/map-element/cargo.svg", "hint": "Popover cargo" },
+    { "label": "Partilhada com peões", "icon": "../../../../assets/images/map/icons/map-element/shared.svg", "hint": "Popover partilhada" }
+  ]
+}
