@@ -10,6 +10,7 @@
               {{'homepage.cover.title.part2' | translate}} <br class="d-none d-lg-block">
               {{'homepage.cover.title.part3' | translate}}
           </h1>
+            <button (click)="open(verifyEmailDialog)">Abrir verificação de e-mail</button>
           <h5 class="text-center text-lg-left" data-aos="fade-up" data-aos-delay="200">{{'homepage.cover.text' | translate}}</h5>
           <div id="cover-btns" class="d-flex flex-wrap pt-4 align-items-center"
                data-aos="fade-up" data-aos-delay="300">
@@ -71,4 +72,17 @@
             <iframe [src]="safeVideoUrl" frameborder="0"></iframe>
         </nb-card-body>
     </nb-card>
+</ng-template>
+
+<ng-template #verifyEmailDialog let-data let-ref="dialogRef">
+    <app-dialog
+            [status]="'warning'"
+            [text]="'Para poderes usar a tua conta do Cycling Fizz, tens que verificar o teu e-mail primeiro.'+
+                    'Procura na tua caixa de correio o e-mail de verificação, ou clica em baixo para te enviarmos um novo.'"
+            [leftButton]="'Cancelar'"
+            [rightButton]="'Reenviar e-mail'"
+            (onLeftBtnClicked)="ref.close()"
+            (onRightBtnClicked)="ref.close();"
+            (onCloseBtnClicked)="ref.close()"
+    ></app-dialog> <!-- FIXME: send email again onRightBtnClicked-->
 </ng-template>

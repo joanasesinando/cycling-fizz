@@ -15,8 +15,6 @@ export class ModalLoginRegisterComponent implements OnInit {
   Modals = Modals;
   currentModal: Modals = Modals.Login;
 
-
-
   constructor() { }
 
   ngOnInit() {
