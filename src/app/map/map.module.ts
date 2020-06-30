@@ -28,8 +28,8 @@ import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/m
 import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';
 import { MapCardsParkingComponent } from './map/map-modals/map-cards-parking/map-cards-parking.component';
 import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-cards-store.component';
-import { MapGalleryComponent } from './map/map-modals/map-gallery/map-gallery.component';
-import { MapCommentsComponent } from './map/map-modals/map-comments/map-comments.component';
+import { MapGalleryComponent } from './map-gallery/map-gallery.component';
+import { MapCommentsComponent } from './map-comments/map-comments.component';
 import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
 import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {FormsModule} from '@angular/forms';

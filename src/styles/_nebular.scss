@@ -210,11 +210,12 @@
   }
 }
 
-.nb-theme-default nb-card.map-element {
+.nb-theme-default nb-card.map-element:not(.default-card) {
   $border-radius: 1.5rem;
 
   border: none;
   border-radius: $border-radius;
+  height: 95vh;
 
   nb-card-header {
     border-top-left-radius: $border-radius;

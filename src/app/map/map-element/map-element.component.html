@@ -39,7 +39,7 @@
 
 
     <!-- Body -->
-    <nb-card-body>
+    <nb-card-body class="map-element-body">
         <!-- // Sub-header -->
         <div class="sub-header d-flex justify-content-between">
             <!-- edit & delete -->
@@ -76,6 +76,10 @@
 
 
         <!-- // Cards -->
+<!--        <app-map-cards-bikelane *ngIf="type === 'bkl'" [editMode]="editMode" class="mt-4"></app-map-cards-bikelane>-->
+<!--        <app-map-cards-parking *ngIf="type === 'prk'" [editMode]="editMode" class="mt-4"></app-map-cards-parking>-->
+<!--        <app-map-cards-store *ngIf="type === 'str'" [editMode]="editMode" class="mt-4"></app-map-cards-store>-->
+<!--        &lt;!&ndash; TODO cards bikesharing &ndash;&gt;-->
 
 
         <!-- // Buttons [edit mode] -->
@@ -83,6 +87,14 @@
             <button nbButton outline status="success" class="mr-3" (click)="open(editDangerDialog)">Descartar</button>
             <button nbButton hero status="success" (click)="sendEditChanges(); editMode = false">Guardar</button>
         </div>
+
+
+        <!-- // Gallery -->
+        <app-map-gallery [photos]="photos"></app-map-gallery>
+
+
+        <!-- // Comments -->
+        <app-map-comments [comments]="comments"></app-map-comments>
     </nb-card-body>
 
 </nb-card>
