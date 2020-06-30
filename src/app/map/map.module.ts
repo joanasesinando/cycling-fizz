@@ -2,13 +2,26 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MapRoutingModule } from './map-routing.module';
-import {FontAwesomeModule} from '@fortawesome/angular-fontawesome';
-import {SharedModule} from '../shared/shared.module';
+import { FormsModule } from '@angular/forms';
+import { TranslateModule } from '@ngx-translate/core';
+import { SharedModule } from '../shared/shared.module';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { SlickCarouselModule } from 'ngx-slick-carousel';
 
 import { MapComponent } from './map/map.component';
 import { SearchComponent } from './search/search.component';
 import { FilterGroupComponent } from './filters/filter-group/filter-group.component';
+import { FiltersComponent } from './filters/filters.component';
+import { MapElementComponent } from './map-element/map-element.component';
+import { MapCardSmallComponent } from './cards/map-card-small/map-card-small.component';
+import { MapCardInfoComponent } from './cards/map-card-info/map-card-info.component';
 import { MapModalsComponent } from './map/map-modals/map-modals.component';
+import { MapBikelaneComponent } from './map-element/map-bikelane/map-bikelane.component';
+import { MapCardsCheckboxComponent } from './cards/map-card-info/map-cards-checkbox/map-cards-checkbox.component';
+import { MapCardsParkingComponent } from './map/map-modals/map-cards-parking/map-cards-parking.component';
+import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-cards-store.component';
+import { MapGalleryComponent } from './map-element/map-gallery/map-gallery.component';
+import { MapCommentsComponent } from './map-element/map-comments/map-comments.component';
 import { MapboxComponent } from './mapbox/mapbox.component';
 
 import {
@@ -16,26 +29,15 @@ import {
     NbChatModule,
     NbCheckboxModule,
     NbLayoutModule,
-    NbPopoverModule, // FIXME: tirar?
+    NbPopoverModule,
     NbSelectModule,
     NbToggleModule,
     NbUserModule,
     NbInputModule,
     NbButtonModule, NbSidebarModule, NbIconModule,
 } from '@nebular/theme';
+import { MapCardNotesComponent } from './cards/map-card-notes/map-card-notes.component';
 
-import { MapCardsBikelaneComponent } from './map/map-modals/map-cards-bikelane/map-cards-bikelane.component';
-import { MapCardsCheckboxComponent } from './map/map-modals/map-cards-checkbox/map-cards-checkbox.component';
-import { MapCardsParkingComponent } from './map/map-modals/map-cards-parking/map-cards-parking.component';
-import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-cards-store.component';
-import { MapGalleryComponent } from './map-gallery/map-gallery.component';
-import { MapCommentsComponent } from './map-comments/map-comments.component';
-import { MapTagsComponent } from './map/map-modals/map-tags/map-tags.component';
-import {SlickCarouselModule} from 'ngx-slick-carousel';
-import {FormsModule} from '@angular/forms';
-import {TranslateModule} from '@ngx-translate/core';
-import { FiltersComponent } from './filters/filters.component';
-import { MapElementComponent } from './map-element/map-element.component';
 
 
 @NgModule({
@@ -44,16 +46,18 @@ import { MapElementComponent } from './map-element/map-element.component';
       SearchComponent,
       FilterGroupComponent,
       MapModalsComponent,
-      MapCardsBikelaneComponent,
+      MapBikelaneComponent,
       MapCardsCheckboxComponent,
       MapCardsParkingComponent,
       MapCardsStoreComponent,
       MapGalleryComponent,
       MapCommentsComponent,
-      MapTagsComponent,
       MapboxComponent,
       FiltersComponent,
-      MapElementComponent
+      MapElementComponent,
+      MapCardSmallComponent,
+      MapCardInfoComponent,
+      MapCardNotesComponent
     ],
     imports: [
         CommonModule,

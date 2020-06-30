@@ -1,0 +1,13 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+.notes {
+  @include media-breakpoint-up(lg) {
+    min-height: 24.3rem;
+  }
+}

@@ -1,4 +1,5 @@
 @import "colors";
+@import "shadows";
 @import 'nebular-themes';
 @import '~@nebular/theme/styles/globals';
 
@@ -63,6 +64,12 @@
 
 .nb-theme-default nb-checkbox.filter-group .text { font-weight: 500; }
 
+.nb-theme-default nb-checkbox.map-cards-checkbox .native-input:disabled:indeterminate + .custom-checkbox,
+.nb-theme-default nb-checkbox.map-cards-checkbox .native-input:disabled:checked + .custom-checkbox {
+  background: $cf-gradient-orange;
+  border-color: transparent;
+}
+
 
 
 /* ===================================================================
@@ -101,6 +108,8 @@
  *  chat
  *
  * ------------------------------------------------------------------- */
+
+.nb-theme-default nb-chat-form { padding: 1rem 0; }
 
 .nb-theme-default nb-chat.map-comments {
   box-shadow: none;
@@ -186,7 +195,8 @@
 .nb-theme-default nb-card.status-warning nb-card-header,
 .nb-theme-default nb-card.status-danger nb-card-header,
 .nb-theme-default nb-card.status-info nb-card-header {
-  font-family: quicksand-regular, sans-serif;
+  font-family: quicksand-bold, sans-serif;
+  font-size: 1rem;
 }
 
 .nb-theme-default nb-card.status-primary nb-card-header { background: $cf-gradient-orange; }
@@ -210,14 +220,14 @@
   }
 }
 
-.nb-theme-default nb-card.map-element:not(.default-card) {
+.nb-theme-default nb-card.map-element {
   $border-radius: 1.5rem;
 
   border: none;
   border-radius: $border-radius;
   height: 95vh;
 
-  nb-card-header {
+  nb-card-header.map-element-header {
     border-top-left-radius: $border-radius;
     border-top-right-radius: $border-radius;
     font-size: 1.1rem;
@@ -225,6 +235,23 @@
 
     nb-icon:not(.star) { font-size: 1.5rem; }
     nb-icon.star { font-size: .9rem; }
+  }
+}
+
+.nb-theme-default nb-card.inside-card {
+  $border-radius: .6rem;
+  border-radius: $border-radius;
+
+  nb-card-header {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    background: $cf-lightGray;
+    color: $cf-dark;
+  }
+
+  nb-icon {
+    font-size: 1.1rem;
+    color: #8f9bb3;
   }
 }
 
@@ -252,16 +279,4 @@ $sidebar-width-mobile: 280px;
   }
 
   .scrollable { padding: 0; }
-}
-
-
-
-/* ===================================================================
- *  icon
- *
- * ------------------------------------------------------------------- */
-
-.nb-theme-default nb-icon.cursor-hover:hover {
-  cursor: pointer;
-  opacity: .8;
 }

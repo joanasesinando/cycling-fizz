@@ -1,0 +1,19 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+nb-card-header {
+  font-family: quicksand-bold, sans-serif;
+  font-size: 1.1rem;
+  color: $cf-dark;
+}
+
+nb-card-body {
+  font-family: quicksand-regular, sans-serif;
+  font-size: 1.1rem;
+  color: $cf-text;
+}

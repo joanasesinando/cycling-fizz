@@ -57,6 +57,11 @@
 html, body { scroll-behavior: smooth; }
 button:focus { outline: none; }
 
+.cursor-hover:hover {
+  cursor: pointer;
+  opacity: .8;
+}
+
 
 h1, .h1,
 h2, .h2,

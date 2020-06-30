@@ -1,0 +1,76 @@
+<div class="map-cards">
+
+    <!-- Row #1 -->
+    <div class="card-row">
+
+        <!-- Col #1 -->
+        <div class="card-col">
+
+            <!-- type -->
+            <app-map-cards-small
+                [iconSrc]="'../../../../assets/images/map/icons/map-element/type.svg'"
+                [title]="'Tipologia'"
+                [hint]="typeHint"
+                [editMode]="editMode"
+                [option]="type"
+                [options]="types">
+            </app-map-cards-small>
+
+        </div>
+
+        <!-- Col #2 -->
+        <div class="card-col">
+
+            <!-- steep -->
+            <app-map-cards-small
+                    [iconSrc]="'../../../../assets/images/map/icons/map-element/incline.svg'"
+                    [title]="'Inclinação'"
+                    [hint]="steepHint"
+                    [editMode]="editMode"
+                    [option]="steep"
+                    [options]="steeps">
+            </app-map-cards-small>
+
+        </div>
+    </div>
+
+    <!-- Row #2 -->
+    <div class="card-row">
+
+        <!-- Col #1 -->
+        <div class="card-col">
+
+            <!-- floor -->
+            <app-map-cards-small
+                    [iconSrc]="'../../../../../assets/images/map/icons/map-element/floor.svg'"
+                    [title]="'Piso'"
+                    [hint]="floorHint"
+                    [editMode]="editMode"
+                    [option]="floor"
+                    [options]="floors">
+            </app-map-cards-small>
+
+            <!-- info -->
+            <app-map-cards-info
+                    [editMode]="editMode"
+                    [info]="info"
+                    [infos]="infos">
+            </app-map-cards-info>
+
+        </div>
+
+        <!-- Col #2 -->
+        <div class="card-col">
+
+            <!-- notes -->
+            <app-map-card-notes
+                [iconSrc]="'../../../assets/images/map/icons/map-element/notes.svg'"
+                [notes]="notes"
+                [height]="18"
+                [editMode]="editMode">
+            </app-map-card-notes>
+
+        </div>
+    </div>
+</div>
+

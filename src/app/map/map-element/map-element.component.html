@@ -1,7 +1,7 @@
 <nb-card class="map-element" status="primary">
 
     <!-- Header -->
-    <nb-card-header class="d-flex justify-content-between align-items-center"> <!-- FIXME: put responsive -->
+    <nb-card-header class="map-element-header d-flex justify-content-between align-items-center">
         <div class="d-flex flex-wrap align-items-center font-qks-bold">
             <div class="element-icon mr-3"><img src="{{icon}}" alt="Map element icon"></div>
             {{name}}
@@ -68,33 +68,35 @@
         </div>
 
 
-        <!-- // Address -->
-        <div *ngIf="type != 'str'" class="address d-flex align-items-center mt-5">
-            <nb-icon icon="pin" class="text-dark-header"></nb-icon>
-            <span class="text-dark-black ml-3">{{ address }}</span>
+        <div class="p-0 p-md-3">
+            <!-- // Address -->
+            <div *ngIf="type != 'str'" class="address d-flex align-items-center mt-4">
+                <nb-icon icon="pin" class="text-dark-header"></nb-icon>
+                <span class="text-dark-black ml-3">{{ address }}</span>
+            </div>
+
+
+            <!-- // Cards -->
+            <app-map-cards-bikelane *ngIf="type === 'bkl'" [editMode]="editMode" class="mt-4"></app-map-cards-bikelane>
+    <!--        <app-map-cards-parking *ngIf="type === 'prk'" [editMode]="editMode" class="mt-4"></app-map-cards-parking>-->
+    <!--        <app-map-cards-store *ngIf="type === 'str'" [editMode]="editMode" class="mt-4"></app-map-cards-store>-->
+    <!--        &lt;!&ndash; TODO cards bikesharing &ndash;&gt;-->
+
+
+            <!-- // Buttons [edit mode] -->
+            <div *ngIf="editMode" class="d-flex justify-content-end align-items-center mt-4">
+                <button nbButton outline status="success" class="mr-3" (click)="open(editWarningDialog)">Descartar</button>
+                <button nbButton hero status="success" (click)="sendEditChanges(); editMode = false">Guardar</button>
+            </div>
+
+
+            <!-- // Gallery -->
+            <app-map-gallery [photos]="photos"></app-map-gallery>
+
+
+            <!-- // Comments -->
+            <app-map-comments [comments]="comments"></app-map-comments>
         </div>
-
-
-        <!-- // Cards -->
-<!--        <app-map-cards-bikelane *ngIf="type === 'bkl'" [editMode]="editMode" class="mt-4"></app-map-cards-bikelane>-->
-<!--        <app-map-cards-parking *ngIf="type === 'prk'" [editMode]="editMode" class="mt-4"></app-map-cards-parking>-->
-<!--        <app-map-cards-store *ngIf="type === 'str'" [editMode]="editMode" class="mt-4"></app-map-cards-store>-->
-<!--        &lt;!&ndash; TODO cards bikesharing &ndash;&gt;-->
-
-
-        <!-- // Buttons [edit mode] -->
-        <div *ngIf="editMode" class="d-flex justify-content-end align-items-center mt-4">
-            <button nbButton outline status="success" class="mr-3" (click)="open(editDangerDialog)">Descartar</button>
-            <button nbButton hero status="success" (click)="sendEditChanges(); editMode = false">Guardar</button>
-        </div>
-
-
-        <!-- // Gallery -->
-        <app-map-gallery [photos]="photos"></app-map-gallery>
-
-
-        <!-- // Comments -->
-        <app-map-comments [comments]="comments"></app-map-comments>
     </nb-card-body>
 
 </nb-card>
@@ -125,14 +127,14 @@
     ></app-dialog>
 </ng-template>
 
-<ng-template #editDangerDialog let-data let-ref="dialogRef">
+<ng-template #editWarningDialog let-data let-ref="dialogRef">
     <app-dialog
-            [status]="'danger'"
+            [status]="'warning'"
             [text]="'Tens a certeza que queres sair sem guardar as alterações efetuadas?'"
             [leftButton]="'Cancelar'"
             [rightButton]="'Sair sem guardar'"
             (onLeftBtnClicked)="ref.close()"
-            (onRightBtnClicked)="ref.close();"
+            (onRightBtnClicked)="ref.close(); editMode = false;"
             (onCloseBtnClicked)="ref.close()"
     ></app-dialog>
 </ng-template>

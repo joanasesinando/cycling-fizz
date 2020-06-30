@@ -88,7 +88,6 @@
                 <!-- TODO cards bikesharing -->
 
                 <!-- // Tags -->
-                <app-map-tags *ngIf="type != 'bikesharing' && !editActivated" [tags]="tags"></app-map-tags>
                 <nb-select *ngIf="type != 'bikesharing' && editActivated" multiple placeholder="Escolher etiquetas" status="success">
                     <nb-option *ngFor="let tag of tags" value="{{ tag.id }}" (click)="changeColor($event)" class="success">{{ tag.text }}</nb-option>
                 </nb-select>

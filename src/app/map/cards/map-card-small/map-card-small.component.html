@@ -1,0 +1,19 @@
+<nb-card class="inside-card" style="height: 8rem">
+
+    <nb-card-header class="d-flex justify-content-between align-items-center">
+        <div>
+            <img src="{{iconSrc}}" class="mr-2" alt="icon">
+            {{title}}
+        </div>
+        <nb-icon class="cursor-hover ml-2" icon="info" nbPopover="{{ hint }}" nbPopoverTrigger="hint"></nb-icon>
+    </nb-card-header>
+
+    <nb-card-body *ngIf="!editMode">{{ option.label }}</nb-card-body>
+
+    <nb-card-body *ngIf="editMode">
+        <nb-select [selected]="option.id.toString()" status="success">
+            <nb-option *ngFor="let option of options" value="{{ option.id.toString() }}" class="success">{{ option.label }}</nb-option>
+        </nb-select>
+    </nb-card-body>
+
+</nb-card>
