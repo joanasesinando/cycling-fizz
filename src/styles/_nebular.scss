@@ -189,6 +189,7 @@
   font-family: quicksand-regular, sans-serif;
 }
 
+.nb-theme-default nb-card.status-primary nb-card-header { background: $cf-gradient-orange; }
 .nb-theme-default nb-card.status-success nb-card-header { background-color: $cf-green; }
 .nb-theme-default nb-card.status-warning nb-card-header { background-color: $cf-yellow; }
 .nb-theme-default nb-card.status-danger nb-card-header { background-color: $cf-pink; }
@@ -206,6 +207,23 @@
     font-size: 1.1rem;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
+  }
+}
+
+.nb-theme-default nb-card.map-element {
+  $border-radius: 1.5rem;
+
+  border: none;
+  border-radius: $border-radius;
+
+  nb-card-header {
+    border-top-left-radius: $border-radius;
+    border-top-right-radius: $border-radius;
+    font-size: 1.1rem;
+    @include media-breakpoint-down(sm) { font-size: 1rem; }
+
+    nb-icon:not(.star) { font-size: 1.5rem; }
+    nb-icon.star { font-size: .9rem; }
   }
 }
 
@@ -242,7 +260,7 @@ $sidebar-width-mobile: 280px;
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-icon.hoverStyle:hover {
+.nb-theme-default nb-icon.cursor-hover:hover {
   cursor: pointer;
-  opacity: .7;
+  opacity: .8;
 }

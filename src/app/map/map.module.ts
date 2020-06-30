@@ -16,7 +16,7 @@ import {
     NbChatModule,
     NbCheckboxModule,
     NbLayoutModule,
-    NbPopoverModule,
+    NbPopoverModule, // FIXME: tirar?
     NbSelectModule,
     NbToggleModule,
     NbUserModule,
@@ -35,6 +35,7 @@ import {SlickCarouselModule} from 'ngx-slick-carousel';
 import {FormsModule} from '@angular/forms';
 import {TranslateModule} from '@ngx-translate/core';
 import { FiltersComponent } from './filters/filters.component';
+import { MapElementComponent } from './map-element/map-element.component';
 
 
 @NgModule({
@@ -51,7 +52,8 @@ import { FiltersComponent } from './filters/filters.component';
       MapCommentsComponent,
       MapTagsComponent,
       MapboxComponent,
-      FiltersComponent
+      FiltersComponent,
+      MapElementComponent
     ],
     imports: [
         CommonModule,

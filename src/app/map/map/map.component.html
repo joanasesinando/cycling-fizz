@@ -6,7 +6,7 @@
         <div id="orangeBar" class="container-fluid d-flex align-items-center justify-content-between">
 
             <!-- more filters -->
-            <nb-icon class="filter-icon text-white hoverStyle" icon="funnel"
+            <nb-icon class="filter-icon text-white cursor-hover" icon="funnel"
                      data-toggle="tooltip" data-placement="top" title="Filtrar"
                      (click)="toggleSidebar()">
             </nb-icon>
@@ -51,13 +51,13 @@
 </section>
 
 <ng-template #dangerDialog let-data let-ref="dialogRef">
-    <app-dialog
-            [status]="'danger'"
-            [text]="'Tens a certeza que queres eliminar estas fotos? Esta ação não é reversível.'"
-            [leftButton]="'Cancelar'"
-            [rightButton]="'Sim, eliminar!'"
-            (onLeftBtnClicked)="ref.close()"
-            (onRightBtnClicked)="ref.close()"
-            (onCloseBtnClicked)="ref.close()"
-    ></app-dialog>
+    <app-map-element
+            [type]="type"
+            [name]="name"
+            [lat]="lat"
+            [lng]="lng"
+            [lastUpdated]="lastUpdated"
+            [address]="address"
+        (onCloseBtnClicked)="ref.close()">
+    </app-map-element>
 </ng-template>

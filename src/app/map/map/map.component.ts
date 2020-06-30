@@ -9,7 +9,7 @@ import {NbDialogService, NbSidebarService} from '@nebular/theme';
 })
 export class MapComponent implements OnInit, AfterViewInit {
 
-  filters = [
+  filters = [ // FIXME: put in a json file
       {
           category:"Ciclovias",
           checked: true,
@@ -101,10 +101,53 @@ export class MapComponent implements OnInit, AfterViewInit {
       }
   ];
 
-  constructor(private sidebarService: NbSidebarService, private dialogService: NbDialogService) { }
+    // General
+    type: string = "";
+    name: string = "Name not found";
+    lat: number = null;
+    lng: number = null;
+    lastUpdated: {date: Date, by: string} = {date: null, by: ""};
+    address: string = "Address not found";
+    photos: {img: string, user: {name: string, avatar: string}}[] = [];
+    comments: {text: string, user: {name: string, avatar: string}, date: Date}[] = [];
 
-  ngOnInit() {
+    // Bikelanes
+    bklType: string = "Type not found";
+    bklSteep: string = "Steep not found";
+    bklFloor: string = "Floor not found";
+    bklNotes: string = "";
+    bklInfo: {icon: string, label: string, checked: boolean}[] = [];
+
+    // Parking
+    prkType: string = "Type not found";
+    prkPlaces: string = "Number of places not found";
+    prkSecurity: number = null;
+    prkEnvironment: string = "Environment not found";
+    prkAccess: string = "Access not found";
+    prkNotes: string = "";
+    prkInfo: {icon: string, label: string, checked: boolean}[] = [];
+
+    // Stores
+    strRating: number = null;
+    strRatingSource: string = "Source not found";
+    strAddress: string = "Address not found";
+    strHours: string = "Working hours not found";
+    strPhone: string = "Phone number not found";
+    strDescription: string = "";
+    strLinks: {type: string, link: string}[] = [];
+
+  constructor(private sidebarService: NbSidebarService, private dialogService: NbDialogService) {
+      // FIXME: retirar isto após ligação ao server done
+      this.type = "bkl";
+      this.name = "Avenida Fontes Pereira de Melo"
+      this.lat = 38.7353927;
+      this.lng = -9.1388712;
+      this.lastUpdated.date = new Date("2019/03/30");
+      this.lastUpdated.by = "Cycling Fizz Team";
+      this.address = "Rua 25 de Abril, Nº29, Loures, Lisboa";
   }
+
+  ngOnInit() { }
 
     ngAfterViewInit() {
       eva.replace();
@@ -117,10 +160,6 @@ export class MapComponent implements OnInit, AfterViewInit {
 
     toggleSidebar() {
       this.sidebarService.toggle(false, 'left');
-    }
-
-    openWithData(dialog: TemplateRef<any>, date: Date, imgSrc: string) {
-      this.dialogService.open(dialog, { context: {date, imgSrc} });
     }
 
     open(dialog: TemplateRef<any>) {

@@ -1,0 +1,57 @@
+@import "~styles/colors";
+@import "~styles/shadows";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+nb-card {
+  width: 50rem;
+  @include media-breakpoint-down(md) { width: 90vw; }
+}
+
+
+nb-card-header {
+  .element-icon {
+    position: relative;
+    background-color: white;
+    border-radius: 50%;
+    width: 2.3rem;
+    height: 2.3rem;
+    box-shadow: $cf-shadow-intense;
+
+    img {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .rating {
+    .rating-number { font-size: .8rem; }
+    .rating-source { font-size: .6rem; }
+    .star.not-filled { opacity: 1; }
+  }
+}
+
+
+nb-card-body {
+  padding: 1.5rem;
+
+  .actions {
+    button { text-transform: none; }
+  }
+
+  .info {
+    color: #97959F;
+    font-size: .8rem;
+  }
+}
+
+
+.cursor-hover:hover {
+  cursor: pointer;
+  opacity: .8;
+}
