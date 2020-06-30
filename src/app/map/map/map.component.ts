@@ -1,17 +1,22 @@
-import {AfterViewInit, Component, OnInit, TemplateRef} from '@angular/core';
+import {AfterViewInit, Component, Input, OnInit, TemplateRef, ViewChild} from '@angular/core';
 import * as eva from 'eva-icons';
 import {NbDialogService, NbSidebarService} from '@nebular/theme';
+import {BikelaneInfo} from "../map.interfaces";
 
 @Component({
   selector: 'app-map',
   templateUrl: './map.component.html',
   styleUrls: ['./map.component.scss']
 })
+
 export class MapComponent implements OnInit, AfterViewInit {
+
+  @ViewChild('mapElementDialog') mapElementDialog: TemplateRef<any>;
+
 
   filters = [ // FIXME: put in a json file
       {
-          category:"Ciclovias",
+          category: "Ciclovias",
           checked: true,
           name: "bikelanes",
           filterGroups: [
@@ -138,8 +143,8 @@ export class MapComponent implements OnInit, AfterViewInit {
 
   constructor(private sidebarService: NbSidebarService, private dialogService: NbDialogService) {
       // FIXME: retirar isto após ligação ao server done
-      this.type = "str";
-      this.name = "Avenida Fontes Pereira de Melo"
+      this.type = "bkl";
+      this.name = "Avenida Fontes Pereira de Melo";
       this.lat = 38.7353927;
       this.lng = -9.1388712;
       this.lastUpdated.date = new Date("2019/03/30");
@@ -249,5 +254,26 @@ export class MapComponent implements OnInit, AfterViewInit {
 
     open(dialog: TemplateRef<any>) {
       this.dialogService.open(dialog);
+    }
+
+    openBikelaneDialog(info) {
+      // General
+      this.type = "bkl";
+      this.name = info.name;
+      this.lat = null;
+      this.lng = null;
+      this.lastUpdated = {date: null, by: ""};
+      this.address = info.address;
+      this.photos = [];
+      this.comments = [];
+
+      // Bikelanes
+      this.bklType  = "Type not found";
+      this.bklSteep = "Steep not found";
+      this.bklFloor = "Floor not found";
+      this.bklNotes = "";
+      this.bklInfo = [];
+
+      this.open(this.mapElementDialog);
     }
 }
