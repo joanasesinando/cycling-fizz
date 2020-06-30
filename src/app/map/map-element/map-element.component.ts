@@ -67,8 +67,6 @@ export class MapElementComponent implements OnInit {
     }
   }
 
-  closeBtnClicked() { this.onCloseBtnClicked.emit(true); }
-
   createStoreRatingArray(storeRating) {
     let array = [];
     let roundedRating = Math.round(storeRating);
@@ -103,5 +101,7 @@ export class MapElementComponent implements OnInit {
         'Obrigada por contribuíres e ajudares a melhorar o mapa. A comunidade de ciclistas agradece! 👏',
         'Alterações guardadas');
   }
+
+  closeBtnClicked() { this.onCloseBtnClicked.emit(true); }
 
 }

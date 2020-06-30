@@ -46,7 +46,7 @@
             <div class="actions">
                 <nb-icon class="text-dark-gray cursor-hover mr-3" icon="edit-2"
                          data-toggle="tooltip" data-placement="top" title="Editar"
-                         (click)="editMode = !editMode">
+                         (click)="editMode ? open(editWarningDialog) : editMode = true">
                 </nb-icon>
                 <nb-icon class="text-dark-gray cursor-hover mr-3" icon="trash-2"
                          data-toggle="tooltip" data-placement="top" title="Apagar"
@@ -86,7 +86,7 @@
             <!-- // Buttons [edit mode] -->
             <div *ngIf="editMode" class="d-flex justify-content-end align-items-center mt-4">
                 <button nbButton outline status="success" class="mr-3" (click)="open(editWarningDialog)">Descartar</button>
-                <button nbButton hero status="success" (click)="sendEditChanges(); editMode = false">Guardar</button>
+                <button nbButton hero status="success" (click)="sendEditChanges(); editMode = false; closeBtnClicked()">Guardar</button>
             </div>
 
 
@@ -115,7 +115,7 @@
     ></app-dialog>
 </ng-template>
 
-<ng-template #deleteFormDialog let-data let-ref="dialogRef">
+<ng-template #deleteFormDialog let-data let-ref="dialogRef"> <!-- FIXME: meter select -->
     <app-dialog
             [status]="'info'"
             [text]="'Diz-nos o motivo pelo qual queres apagar este elemento:'"
@@ -134,7 +134,7 @@
             [leftButton]="'Cancelar'"
             [rightButton]="'Sair sem guardar'"
             (onLeftBtnClicked)="ref.close()"
-            (onRightBtnClicked)="ref.close(); editMode = false;"
+            (onRightBtnClicked)="ref.close(); editMode = false; closeBtnClicked()"
             (onCloseBtnClicked)="ref.close()"
     ></app-dialog>
 </ng-template>
