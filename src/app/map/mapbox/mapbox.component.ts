@@ -198,8 +198,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
       layout: {
         'text-field': '{point_count_abbreviated}',
         'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-        'text-
-   ': 12
+        'text-size': 12
       }
     });
 
