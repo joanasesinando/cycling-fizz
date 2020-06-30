@@ -1,13 +1,12 @@
-@import "~styles/colors";
-@import "~styles/mixins";
+@import "../../../../styles/colors";
+@import "../../../../styles/mixins";
 
-@import "~bootstrap/scss/functions";
-@import "~bootstrap/scss/variables";
-@import "~bootstrap/scss/mixins";
+@import "../../../../../node_modules/bootstrap/scss/functions";
+@import "../../../../../node_modules/bootstrap/scss/variables";
+@import "../../../../../node_modules/bootstrap/scss/mixins";
 
-.map-cards {
-  height: fit-content;
-}
+
+.map-cards { height: fit-content; }
 
 :host {
   display: block;
@@ -42,30 +41,19 @@ nb-card-body {
   color: $cf-text;
 }
 
-.social-link {
-  &:last-of-type {
-    margin-right: 0 !important;
-  }
-  @include media-breakpoint-up(lg) {
-    &:hover {
-      transform: translateY(-.5rem);
-    }
-  }
-  transition: all 200ms ease-in-out;
-}
-
 .description {
   @include media-breakpoint-up(lg) {
     min-height: 17.8rem;
-
-    textarea {
-      height: 24.5rem;
-    }
+    textarea { height: 24.5rem; }
   }
 
   @include media-breakpoint-down(md) {
-    textarea {
-      height: 12rem;
-    }
+    textarea { height: 12rem; }
   }
 }
+
+.web { color: $cf-gray; }
+.fb { color: $facebook; }
+.tt { color: $twitter; }
+.yt { color: $youtube; }
+.web:hover, .fb:hover, .ig:hover, .tt:hover, .yt:hover { opacity: .8; }
