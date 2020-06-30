@@ -20,17 +20,17 @@ nav {
 
   .navbar-brand {
     color: transparent;
-    width: 13rem;
+    width: 15rem;
     height: 3rem;
     background: url("../../../assets/images/logo.svg") no-repeat center;
-    background-size: 13rem 3rem;
+    background-size: 15rem 3rem;
     @include transition(all 0.3s ease-in-out);
 
     @include media-breakpoint-down(md) {
-      width: 11rem;
+      width: 11.5rem;
       height: 1.7rem;
       background: url("../../../assets/images/logo-dark.svg") no-repeat center;
-      background-size: 11rem 1.7rem;
+      background-size: 11.5rem 1.7rem;
     }
   }
 
@@ -63,9 +63,9 @@ nav {
   top: 0;
 
   .navbar-brand {
-    width: 12rem;
-    height: 2rem;
-    background-size: 12rem 2rem;
+    width: 13rem;
+    height: 2.5rem;
+    background-size: 13rem 2.5rem;
 
    @include media-breakpoint-down(md) {
      width: 11rem;
