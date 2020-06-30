@@ -1,0 +1,1628 @@
+{
+  "features": [
+    {
+      "geometry": {
+        "coordinates": [
+          -9.386136, 
+          38.701123
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5227321177, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Esta\u00e7\u00e3o S. Jo\u00e3o Estoril", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.39197, 
+          38.702462
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5227321178, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Praia da Po\u00e7a", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.398911, 
+          38.703402
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5227321179, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Esta\u00e7\u00e3o Estoril", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.418199, 
+          38.700467
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5227321181, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Esta\u00e7\u00e3o Cascais", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.419718, 
+          38.697596
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5227321182, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Ba\u00eda", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.441539, 
+          38.695714
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5256833731, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "36", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Guia", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.406148, 
+          38.704721
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5258402910, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Intercontinental", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.368175, 
+          38.693228
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5260255032, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "10", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Praia S. Pedro", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.38405, 
+          38.729374
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5261186581, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Bicesse", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.380209, 
+          38.704712
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5289202438, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "8", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Areias", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.395668, 
+          38.737186
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 5293970458, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Av. Rep\u00fablica", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.474618, 
+          38.72805
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6212962228, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Guincho", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.42045, 
+          38.713612
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960408, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "8", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Travessa Girassol", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.410024, 
+          38.729276
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960409, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "10", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Muralha", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.412175, 
+          38.726706
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960410, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "DNA", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.410106, 
+          38.732575
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960411, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Centro Alcabideche", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.409655, 
+          38.719455
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960412, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Amoreira", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.371757, 
+          38.713182
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960413, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Livramento", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.430118, 
+          38.69133
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960414, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Boca do Inferno", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.440359, 
+          38.706366
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960415, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Torre", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.420928, 
+          38.701711
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960416, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Mercado da Vila", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.396427, 
+          38.706861
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960417, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Centro de Congressos", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.465892, 
+          38.721751
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960418, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Areia", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.3607271, 
+          38.7372306
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960419, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Salesianos Manique", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.4205913, 
+          38.7094263
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960420, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Fontainhas", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.4137356, 
+          38.7099265
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960421, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Castelhana", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.4237536, 
+          38.7152237
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960422, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Alvide", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.340583, 
+          38.692172
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960423, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "8", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Alagoa Sul", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.346496, 
+          38.689299
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960424, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Bairro Escola T\u00e9cnica", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.3268883, 
+          38.679086
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960425, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "36", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Nova SBE", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.337839, 
+          38.687592
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960426, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "36", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Esta\u00e7\u00e3o CP de Carcavelos", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.379179, 
+          38.745748
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960427, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Bairro Adroana", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.329258, 
+          38.677739
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960428, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "32", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Carcavelos Este", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.344294, 
+          38.715062
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960429, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Lidl Tires", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.440058, 
+          38.731322
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960430, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Murches", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.314594, 
+          38.740725
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960431, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Tala\u00edde", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.312675, 
+          38.737403
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960432, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Igreja de Tala\u00edde", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.339525, 
+          38.738283
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960433, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Centro de Trajouce", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.3409699, 
+          38.6987198
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960434, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Conde Riba d'Ave", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.4456727, 
+          38.7146482
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960435, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Birre", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.330514, 
+          38.726244
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960436, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Piscinas Ab\u00f3boda", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.366172, 
+          38.73575
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960437, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Centro Manique", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.322136, 
+          38.725086
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960438, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Centro Polima", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.347244, 
+          38.707869
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960439, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Mercado Tires", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.331806, 
+          38.719244
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960440, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Bairro Cabe\u00e7o do Mouro", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.350433, 
+          38.706878
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960441, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Escola Matilde Rosa Ara\u00fajo", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.326261, 
+          38.713378
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960442, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Jardim Outeiro Polima", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.342756, 
+          38.719064
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960443, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Biblioteca SDR", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.336811, 
+          38.712672
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960444, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Centro de Sa\u00fade SDR", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.349144, 
+          38.714264
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960445, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "1 de Maio", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.330469, 
+          38.711169
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960446, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "E.Leclerc SDR", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.3971354, 
+          38.7389587
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960447, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "20", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "CascaisShopping", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.405558, 
+          38.709533
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960448, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Museu Verdades de Faria", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.434402, 
+          38.710047
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960449, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "E\u00e7a de Queir\u00f3s", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.432094, 
+          38.696997
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960450, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Pra\u00e7a de Touros", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.380596, 
+          38.699112
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960451, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Centro Sa\u00fade S. Jo\u00e3o", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.355442, 
+          38.704752
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960452, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Matarraque", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.338836, 
+          38.681247
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960453, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "32", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Carcavelos Oeste", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.366532, 
+          38.695989
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960454, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Jardins da Parede", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.342822, 
+          38.695655
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960455, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Lidl Rebelva", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.346747, 
+          38.692328
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960456, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Torres", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.348813, 
+          38.686113
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960457, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Sant\u00b4Ana", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.336613, 
+          38.690662
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960458, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Rem\u00e9dios", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.356625, 
+          38.690694
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960459, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Esta\u00e7\u00e3o Parede", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.338642, 
+          38.694953
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960460, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "8", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Alagoa Norte", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.353156, 
+          38.696595
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960461, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Escola Secund\u00e1ria Fernando Lopes Gra\u00e7a", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.329481, 
+          38.682211
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960462, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Quinta de S. Gon\u00e7alo", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.343181, 
+          38.6848
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960463, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Riviera Hotel Carcavelos", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.352531, 
+          38.685136
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960464, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Praia da Parede", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.323889, 
+          38.698653
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960465, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Quinta da Bela Vista", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.332517, 
+          38.689258
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960466, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Mercado de Carcavelos", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.382037, 
+          38.716196
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960467, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "6", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Quinta da Graciosa", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.405771, 
+          38.734999
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960468, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Ibn Mucana Alcabideche", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }, 
+    {
+      "geometry": {
+        "coordinates": [
+          -9.386713, 
+          38.736046
+        ], 
+        "type": "Point"
+      }, 
+      "properties": {
+        "id": 6509960469, 
+        "tags": {
+          "amenity": "bicycle_rental", 
+          "capacity": "12", 
+          "description:pt": "Bicicletas partilhadas e estacionamento de bicicletas particulares.", 
+          "name": "Municipal", 
+          "network": "BiCas", 
+          "operator": "MobiCascais"
+        }, 
+        "type": "node"
+      }, 
+      "type": "Feature"
+    }
+  ], 
+  "type": "FeatureCollection"
+}

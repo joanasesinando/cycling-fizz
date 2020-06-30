@@ -1,6 +1,7 @@
 import {AfterViewInit, Component, OnInit} from '@angular/core';
 
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
+import {MapServerHandlerService} from "../../_services/map-server-handler.service";
 
 @Component({
   selector: 'app-mapbox',
@@ -12,7 +13,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
   map: mapboxgl.Map;
   clickedStateId = null;
 
-  constructor() { }
+  constructor(private mapServerHandlerService: MapServerHandlerService) { }
 
   ngOnInit() {
 
@@ -45,6 +46,8 @@ export class MapboxComponent implements OnInit, AfterViewInit {
     this.addCyclewaysLayer();
     this.addGiraSource();
     this.addGiraLayer();
+    this.addMobiCascaisSource();
+    this.addMobiCascaisLayer();
     this.zoomTest();
   }
 
@@ -62,6 +65,13 @@ export class MapboxComponent implements OnInit, AfterViewInit {
         if (error) throw error;
         this.map.addImage('gira', image);
       });
+
+    this.map.loadImage(
+      'assets/map/mobiCascais_502x502.png',
+      (error, image) => {
+        if (error) throw error;
+        this.map.addImage('mobiCascais', image);
+      });
   }
 
   addCyclewaysSource(){
@@ -74,14 +84,44 @@ export class MapboxComponent implements OnInit, AfterViewInit {
     });
   }
 
-  addGiraSource(){
-    this.map.addSource('giraData', {
-      type: 'geojson',
-      data: 'assets/map/gira.geojson',
-      cluster: true,
-      clusterMaxZoom: 14, // Max zoom to cluster points on
-      clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
-    });
+  addGiraSource() {
+    if (this.mapServerHandlerService.isLocal()) {
+      this.map.addSource('giraData', {
+        type: 'geojson',
+        data: 'assets/map/gira.geojson',
+        cluster: true,
+        clusterMaxZoom: 14, // Max zoom to cluster points on
+        clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+      });
+    } else {
+      this.map.addSource('giraData', {
+        type: 'geojson',
+        data: this.mapServerHandlerService.giraURL,
+        cluster: true,
+        clusterMaxZoom: 14, // Max zoom to cluster points on
+        clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+      });
+    }
+  }
+
+    addMobiCascaisSource() {
+      if (this.mapServerHandlerService.isLocal()) {
+        this.map.addSource('mobiCascaisData', {
+          type: 'geojson',
+          data: 'assets/map/mobi-cascais.geojson',
+          cluster: true,
+          clusterMaxZoom: 14, // Max zoom to cluster points on
+          clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+        });
+      } else {
+        this.map.addSource('mobiCascaisData', {
+          type: 'geojson',
+          data: this.mapServerHandlerService.mobiCascaisURL,
+          cluster: true,
+          clusterMaxZoom: 14, // Max zoom to cluster points on
+          clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+        });
+      }
   }
 
   addCyclewaysLayer() {
@@ -138,13 +178,13 @@ export class MapboxComponent implements OnInit, AfterViewInit {
         'circle-radius': [
           'step',
           ['get', 'point_count'],
-          20,
-          5, // count
           25,
-          10, // count
+          5, // count
           35,
-          20, // count
+          10, // count
           45,
+          20, // count
+          55,
         ]
       }
     });
@@ -158,7 +198,8 @@ export class MapboxComponent implements OnInit, AfterViewInit {
       layout: {
         'text-field': '{point_count_abbreviated}',
         'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-        'text-size': 12
+        'text-
+   ': 12
       }
     });
 
@@ -169,7 +210,57 @@ export class MapboxComponent implements OnInit, AfterViewInit {
       filter: ['!', ['has', 'point_count']],
       'layout': {
         'icon-image': 'gira',
-        'icon-size': 0.05,
+        'icon-size': 0.075,
+        "icon-allow-overlap": true
+
+      }
+    });
+  }
+
+  addMobiCascaisLayer() {
+    this.map.addLayer({
+      'id': 'mobiCascaisClustersLayer',
+      'type': 'circle',
+      'source': 'mobiCascaisData',
+      filter: ['has', 'point_count'],
+      paint: {
+        "circle-opacity": 0.7,
+        'circle-color': '#1db2c1',
+        'circle-radius': [
+          'step',
+          ['get', 'point_count'],
+          25,
+          5, // count
+          35,
+          10, // count
+          45,
+          20, // count
+          55,
+        ]
+      }
+    });
+
+
+    this.map.addLayer({
+      id: 'mobiCascaisClustersCounterLayer',
+      type: 'symbol',
+      source: 'mobiCascaisData',
+      filter: ['has', 'point_count'],
+      layout: {
+        'text-field': '{point_count_abbreviated}',
+        'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
+        'text-size': 12
+      }
+    });
+
+    this.map.addLayer({
+      'id': 'mobiCascaisLayer',
+      'type': 'symbol',
+      'source': 'mobiCascaisData',
+      filter: ['!', ['has', 'point_count']],
+      'layout': {
+        'icon-image': 'mobiCascais',
+        'icon-size': 0.075,
         "icon-allow-overlap": true
 
       }
@@ -177,7 +268,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
   }
 
   onCyclewaysLayerClick(e) {
-
+    $("mapElementModal").modal('show');
     let feature = e.features[0];
 
 

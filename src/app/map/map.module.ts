@@ -15,6 +15,7 @@ import { FiltersComponent } from './filters/filters.component';
 import { MapElementComponent } from './map-element/map-element.component';
 import { MapCardSmallComponent } from './cards/map-card-small/map-card-small.component';
 import { MapCardInfoComponent } from './cards/map-card-info/map-card-info.component';
+import { MapCardNotesComponent } from './cards/map-card-notes/map-card-notes.component';
 import { MapModalsComponent } from './map/map-modals/map-modals.component';
 import { MapBikelaneComponent } from './map-element/map-bikelane/map-bikelane.component';
 import { MapCardsCheckboxComponent } from './cards/map-card-info/map-cards-checkbox/map-cards-checkbox.component';
@@ -36,8 +37,6 @@ import {
     NbInputModule,
     NbButtonModule, NbSidebarModule, NbIconModule,
 } from '@nebular/theme';
-import { MapCardNotesComponent } from './cards/map-card-notes/map-card-notes.component';
-
 
 
 @NgModule({
