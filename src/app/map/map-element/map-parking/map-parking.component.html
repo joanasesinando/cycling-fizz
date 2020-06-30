@@ -1,0 +1,110 @@
+<div class="map-cards">
+
+    <!-- Row #1 -->
+    <div class="card-row">
+
+        <!-- Col #1 -->
+        <div class="card-col">
+
+            <!-- type -->
+            <app-map-cards-small
+                    [iconSrc]="'../../../../assets/images/map/icons/map-element/type.svg'"
+                    [title]="'Tipologia'"
+                    [hint]="typeHint"
+                    [editMode]="editMode"
+                    [option]="type"
+                    [options]="types">
+            </app-map-cards-small>
+
+        </div>
+
+        <!-- Col #2 -->
+        <div class="card-col">
+
+            <!-- places -->
+            <app-map-cards-small
+                    [type]="'number'"
+                    [iconSrc]="'../../../../assets/images/map/icons/map-element/parking.svg'"
+                    [title]="'Nº de lugares'"
+                    [hint]="placesHint"
+                    [editMode]="editMode"
+                    [option]="places">
+            </app-map-cards-small>
+
+        </div>
+    </div>
+
+    <!-- Row #2 -->
+    <div class="card-row">
+
+        <!-- Col #1 -->
+        <div class="card-col">
+
+            <!-- security -->
+            <app-map-cards-small
+                    [type]="'stars'"
+                    [iconSrc]="'../../../../assets/images/map/icons/map-element/security.svg'"
+                    [title]="'Segurança'"
+                    [hint]="securityHint"
+                    [editMode]="editMode"
+                    [option]="security"
+                    [options]="securityArray">
+            </app-map-cards-small>
+
+        </div>
+
+        <!-- Col #2 -->
+        <div class="card-col">
+
+            <!-- environment -->
+            <app-map-cards-small
+                    [iconSrc]="'../../../../assets/images/map/icons/map-element/environment.svg'"
+                    [title]="'Ambiente'"
+                    [hint]="environmentHint"
+                    [editMode]="editMode"
+                    [option]="environment"
+                    [options]="environments">
+            </app-map-cards-small>
+
+        </div>
+    </div>
+
+    <!-- Row #3 -->
+    <div class="card-row">
+
+        <!-- Col #1 -->
+        <div class="card-col">
+
+            <!-- access -->
+            <app-map-cards-small
+                    [iconSrc]="'../../../../assets/images/map/icons/map-element/access.svg'"
+                    [title]="'Acesso'"
+                    [hint]="accessHint"
+                    [editMode]="editMode"
+                    [option]="access"
+                    [options]="accesses">
+            </app-map-cards-small>
+
+            <!-- info -->
+            <app-map-cards-info
+                    [editMode]="editMode"
+                    [info]="info"
+                    [infos]="infos">
+            </app-map-cards-info>
+
+        </div>
+
+        <!-- Col #2 -->
+        <div class="card-col">
+
+            <!-- notes -->
+            <app-map-card-notes
+                    [iconSrc]="'../../../assets/images/map/icons/map-element/notes.svg'"
+                    [notes]="notes"
+                    [editMode]="editMode">
+            </app-map-card-notes>
+
+        </div>
+    </div>
+</div>
+

@@ -7,12 +7,13 @@ import {Component, Input, OnInit} from '@angular/core';
 })
 export class MapCardSmallComponent implements OnInit {
 
+  @Input() type?: string = "text"; // types: text, number, stars
   @Input() iconSrc: string;
   @Input() title: string;
   @Input() hint: string;
   @Input() editMode: boolean;
-  @Input() option: {id: number, label: string};
-  @Input() options: {id: number, label: string}[];
+  @Input() option: any;
+  @Input() options: any;
 
   constructor() { }
 

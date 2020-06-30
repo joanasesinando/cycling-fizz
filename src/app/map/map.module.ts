@@ -16,11 +16,10 @@ import { MapElementComponent } from './map-element/map-element.component';
 import { MapCardSmallComponent } from './cards/map-card-small/map-card-small.component';
 import { MapCardInfoComponent } from './cards/map-card-info/map-card-info.component';
 import { MapCardNotesComponent } from './cards/map-card-notes/map-card-notes.component';
-import { MapModalsComponent } from './map/map-modals/map-modals.component';
 import { MapBikelaneComponent } from './map-element/map-bikelane/map-bikelane.component';
 import { MapCardsCheckboxComponent } from './cards/map-card-info/map-cards-checkbox/map-cards-checkbox.component';
-import { MapCardsParkingComponent } from './map/map-modals/map-cards-parking/map-cards-parking.component';
-import { MapCardsStoreComponent } from './map/map-modals/map-cards-store/map-cards-store.component';
+import { MapParkingComponent } from './map-element/map-parking/map-parking.component';
+import { MapStoreComponent } from './map-element/map-store/map-store.component';
 import { MapGalleryComponent } from './map-element/map-gallery/map-gallery.component';
 import { MapCommentsComponent } from './map-element/map-comments/map-comments.component';
 import { MapboxComponent } from './mapbox/mapbox.component';
@@ -44,11 +43,10 @@ import {
       MapComponent,
       SearchComponent,
       FilterGroupComponent,
-      MapModalsComponent,
       MapBikelaneComponent,
       MapCardsCheckboxComponent,
-      MapCardsParkingComponent,
-      MapCardsStoreComponent,
+      MapParkingComponent,
+      MapStoreComponent,
       MapGalleryComponent,
       MapCommentsComponent,
       MapboxComponent,

@@ -252,6 +252,8 @@
   nb-icon {
     font-size: 1.1rem;
     color: #8f9bb3;
+    &.star { color: $cf-yellow; }
+    &.star.not-filled { color: #DDDDDD; }
   }
 }
 

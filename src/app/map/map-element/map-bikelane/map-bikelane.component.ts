@@ -1,7 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'app-map-cards-bikelane',
+  selector: 'app-map-bikelane',
   templateUrl: './map-bikelane.component.html',
   styleUrls: ['./map-bikelane.component.scss']
 })

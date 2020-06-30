@@ -10,7 +10,6 @@ export class MapCardNotesComponent implements OnInit {
   @Input() iconSrc: string;
   @Input() notes: string;
   @Input() editMode: boolean;
-  @Input() height: number;
 
   constructor() { }
 

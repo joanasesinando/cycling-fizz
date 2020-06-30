@@ -202,7 +202,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
       layout: {
         'text-field': '{point_count_abbreviated}',
         'text-font': ['DIN Offc Pro Medium', 'Arial Unicode MS Bold'],
-        'text-size': 12
+        'text-size' : 12,
       }
     });
 
@@ -271,11 +271,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
   }
 
   onCyclewaysLayerClick(e) {
-
-
     let feature = e.features[0];
-
-
     let id = feature.properties["@id"];
 
 
