@@ -1,7 +1,8 @@
-import {AfterViewInit, Component, OnInit} from '@angular/core';
+import {AfterViewInit, Component, EventEmitter, OnInit, Output} from '@angular/core';
 
 import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import {MapServerHandlerService} from "../../_services/map-server-handler.service";
+import {BikelaneInfo} from "../map.interfaces";
 
 @Component({
   selector: 'app-mapbox',
@@ -12,6 +13,9 @@ export class MapboxComponent implements OnInit, AfterViewInit {
 
   map: mapboxgl.Map;
   clickedStateId = null;
+
+  @Output() bikeLaneClicked = new EventEmitter<{}>();
+
 
   constructor(private mapServerHandlerService: MapServerHandlerService) { }
 
@@ -267,17 +271,18 @@ export class MapboxComponent implements OnInit, AfterViewInit {
   }
 
   onCyclewaysLayerClick(e) {
-    $("mapElementModal").modal('show');
+
+
     let feature = e.features[0];
 
 
     let id = feature.properties["@id"];
 
 
-    new mapboxgl.Popup()
-      .setLngLat(e.lngLat)
-      .setHTML(id)
-      .addTo(this.map);
+    // new mapboxgl.Popup()
+    //   .setLngLat(e.lngLat)
+    //   .setHTML(id)
+    //   .addTo(this.map);
 
     if (this.clickedStateId) {
       this.map.setFeatureState(
@@ -291,6 +296,28 @@ export class MapboxComponent implements OnInit, AfterViewInit {
       { source: 'cyclewaysData', id: this.clickedStateId },
       { hover: true }
     );
+
+    let data = feature.properties;
+
+    let info = {
+      // General
+      name: data.name,
+      // lat: number,
+      // lng: number,
+      // lastUpdated: {date: Date, by: string},
+      address: data.name,
+      // photos: {img: string, user: {name: string, avatar: string}}[],
+      // comments: {text: string, user: {name: string, avatar: string}, date: Date}[],
+
+      // Bikelanes
+      // bklType?: string,
+      // bklSteep?: string,
+      // bklFloor?: string,
+      // bklNotes?: string,
+      // bklInfo?: {icon: string, label: string, checked: boolean}[],
+    };
+
+    this.bikeLaneClicked.emit(info);
 
     console.log(feature);
 
