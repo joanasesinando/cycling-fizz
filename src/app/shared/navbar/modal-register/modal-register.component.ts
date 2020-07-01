@@ -101,15 +101,15 @@ export class ModalRegisterComponent implements OnInit {
     });
   }
 
-  errorInRegistrationToastr(errorMsg :string) {
+  errorInRegistrationToastr(errorMsg :string) { //fixme translate
     this.toastrService.danger(errorMsg, "Erro no Registo", {duration: 5000});
   }
 
-  loginSuccessfulToastr() {
+  loginSuccessfulToastr() { //fixme translate
     this.toastrService.success("Bem vindo de volta!", "Login bem sucedido", {duration: 5000});
   }
 
-  verifyEmail() {
+  verifyEmail() {  //fixme translate
     this.authFirebaseService.sendEmailVerification();
     this.toastrService.warning("Verifica a tua conta através do e-mail que te enviámos", "Email de verificação enviado", {duration: 5000});
   }

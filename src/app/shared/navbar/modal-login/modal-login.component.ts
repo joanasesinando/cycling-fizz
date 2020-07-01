@@ -110,11 +110,11 @@ export class ModalLoginComponent implements OnInit {
     this.closeThisModal();
   }
 
-  loginSuccessfulToastr() {
+  loginSuccessfulToastr() { //fixme translate
     this.toastrService.success("Bem vindo de volta!", "Login bem sucedido", {duration: 5000});
   }
 
-  errorInLoginToastr(errorMsg :string) {
+  errorInLoginToastr(errorMsg :string) { //fixme translate
     this.toastrService.danger(errorMsg, "Erro no Login", {duration: 5000});
   }
 

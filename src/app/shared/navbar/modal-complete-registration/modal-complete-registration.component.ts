@@ -59,17 +59,17 @@ export class ModalCompleteRegistrationComponent implements OnInit {
               this.closeThisModal();
             }
           })
-          .catch(err => this.errorInRegistrationToastr("Error connecting to server. Try again."));
+          .catch(err => this.errorInRegistrationToastr("Error connecting to server. Try again.")); //fixme translate
     } else {
       console.log("invalid form");
     }
   };
 
-  showSuccessRegistrationToaster() {
+  showSuccessRegistrationToaster() { //fixme translate
     this.toastrService.success("Bem vindo!", "Registo efetuado com sucesso!", {duration: 5000});
   }
 
-  errorInRegistrationToastr(errorMsg :string) {
+  errorInRegistrationToastr(errorMsg :string) { //fixme translate
     this.toastrService.danger(errorMsg, "Erro a completar o registo!", {duration: 5000});
   }
 }
