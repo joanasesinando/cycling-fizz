@@ -33,6 +33,7 @@ export class ModalLoginComponent implements OnInit {
   // @Output() onLogin = new EventEmitter();
   // @Output() onNewAccount = new EventEmitter();
   @Output() changeCurrentModal = new EventEmitter<Modals>();
+  @Output() verifyEmail = new EventEmitter();
 
 
 
@@ -103,9 +104,7 @@ export class ModalLoginComponent implements OnInit {
 
   loginSuccessful() {
     if (!this.authFirebaseService.isEmailVerified()) {
-      this.authFirebaseService.sendEmailVerification();
-      console.log("Email não verificado");
-
+      this.verifyEmail.emit();
     }
     this.loginSuccessfulToastr();
     this.closeThisModal();

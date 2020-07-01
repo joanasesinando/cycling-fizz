@@ -1,4 +1,6 @@
-import {Component, EventEmitter, OnInit, Output} from '@angular/core';
+import {Component, EventEmitter, OnInit, Output, TemplateRef} from '@angular/core';
+import {NbDialogService} from "@nebular/theme";
+import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
 
 export enum Modals {
   Login = 1,
@@ -15,7 +17,7 @@ export class ModalAuthGeneralComponent implements OnInit {
   Modals = Modals;
   currentModal: Modals = Modals.Login;
 
-  constructor() { }
+  constructor(private authFirebaseService: AuthFirebaseService, private dialogService: NbDialogService) { }
 
   ngOnInit() {
   }
@@ -26,5 +28,9 @@ export class ModalAuthGeneralComponent implements OnInit {
 
   isCurrentModal(modal: Modals) {
     return this.currentModal == modal;
+  }
+
+  open(dialog: TemplateRef<any>) {
+    this.dialogService.open(dialog);
   }
 }

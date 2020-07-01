@@ -6,6 +6,7 @@
             <app-modal-login
                     *ngIf="isCurrentModal(Modals.Login)"
                     (changeCurrentModal)="setCurrentModal($event)"
+                    (verifyEmail)="open(verifyEmailDialog)"
             ></app-modal-login>
             <app-modal-register
                     *ngIf="isCurrentModal(Modals.Register)"
@@ -19,3 +20,15 @@
         </div>
     </div>
 </div>
+<ng-template #verifyEmailDialog let-data let-ref="dialogRef"> <!--Fixme: translate-->
+    <app-dialog
+            [status]="'warning'"
+            [text]="'Para poderes usar a tua conta do Cycling Fizz, tens que verificar o teu e-mail primeiro.'+
+                    'Procura na tua caixa de correio o e-mail de verificação, ou clica em baixo para te enviarmos um novo.'"
+            [leftButton]="'Cancelar'"
+            [rightButton]="'Reenviar e-mail'"
+            (onLeftBtnClicked)="ref.close()"
+            (onRightBtnClicked)="authFirebaseService.sendEmailVerification(); ref.close();"
+            (onCloseBtnClicked)="ref.close()"
+    ></app-dialog> <!-- FIXME: send email again onRightBtnClicked-->
+</ng-template>
