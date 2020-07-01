@@ -131,9 +131,11 @@
             <form id="deleteForm" [formGroup]="reason">
                 <textarea class="form-control form-control-lg" formControlName="deletingReason"
                           nbInput fullWidth rows="7" status="info" placeholder="Escrever aqui..."
-                          [class.is-invalid]="deletingReason.invalid && deletingReason.touched"></textarea>
+                          [class.is-invalid]="deletingReason.invalid && deletingReason.touched"
+                          style="position: relative"></textarea>
 
-                <div *ngIf="(deletingReason.invalid && deletingReason.touched) || deletingReason.dirty">
+                <div *ngIf="(deletingReason.invalid && deletingReason.touched) || deletingReason.dirty"
+                     style="position: fixed">
                     <small *ngIf="deletingReason.errors?.required" class="font-qks-medium text-red ml-3">
                         ⚠ {{'errors.requiredField' | translate}}
                     </small>
