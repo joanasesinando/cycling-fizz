@@ -33,4 +33,8 @@ export class ModalAuthGeneralComponent implements OnInit {
   open(dialog: TemplateRef<any>) {
     this.dialogService.open(dialog);
   }
+
+  sendEmailVerification() {
+    this.authFirebaseService.sendEmailVerification()
+  }
 }

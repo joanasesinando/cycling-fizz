@@ -28,7 +28,7 @@
             [leftButton]="'Cancelar'"
             [rightButton]="'Reenviar e-mail'"
             (onLeftBtnClicked)="ref.close()"
-            (onRightBtnClicked)="authFirebaseService.sendEmailVerification(); ref.close();"
+            (onRightBtnClicked)="sendEmailVerification(); ref.close();"
             (onCloseBtnClicked)="ref.close()"
     ></app-dialog> <!-- FIXME: send email again onRightBtnClicked-->
 </ng-template>
