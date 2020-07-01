@@ -19,7 +19,7 @@
     <ul class="navbar-nav font-qks-medium ml-lg-auto mr-4">
 
         <div *ngIf="mobileView && authFirebaseService.isUserLogged" class="d-flex align-items-center" style="height: 5rem;">
-            <nb-user *ngIf="authFirebaseService.isUserLogged" class="gradient ml-3" onlyPicture picture="../../../assets/images/demo/avatar.jpg"
+            <nb-user *ngIf="authFirebaseService.isUserLogged" class="gradient ml-3" onlyPicture picture="../../../assets/images/demo/avatars/avatar2.jpg"
             (click)="accountClicked()"></nb-user>
             <nb-icon class="nav text-gray ml-2" icon="settings-outline" (click)="settingsClicked()"></nb-icon>
             <nb-icon class="nav text-gray ml-2" icon="log-out-outline" (click)="logoutClicked()"></nb-icon>
@@ -186,7 +186,7 @@
     <!-- login -->
     <div *ngIf="!mobileView">
       <button *ngIf="!authFirebaseService.isUserLogged" class="btn btn-primary" type="button" tabIndex="-1" data-toggle="modal" data-target="#sign-in">Login</button>
-      <nb-user *ngIf="authFirebaseService.isUserLogged" class="gradient" onlyPicture picture="../../../assets/images/demo/avatar.jpg"
+      <nb-user *ngIf="authFirebaseService.isUserLogged" class="gradient" onlyPicture picture="../../../assets/images/demo/avatars/avatar2.jpg"
                [nbContextMenu]="menuItems" [nbContextMenuTag]="'menu'"></nb-user>
     </div>
 

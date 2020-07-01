@@ -8,14 +8,14 @@
 .avatar {
   width: 12rem;
   height: 12rem;
-  background: url("../../../assets/images/about-us/avatar.jpg") no-repeat;
+  background: url("../../../assets/images/demo/avatars/avatar11.jpg") no-repeat;
   background-size: cover;
   border-radius: 50%;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   transition: all 300ms ease-in-out;
 
   &:hover {
-    background-image: url("../../../assets/images/about-us/avatar-hover.jpg");
+    background-image: url("../../../assets/images/demo/avatars/avatar9.jpg");
   }
 }
 

@@ -62,59 +62,59 @@ export class MapComponent implements OnInit, AfterViewInit {
       this.address = "Rua 25 de Abril, Nº29, Loures, Lisboa";
       this.photos = [
           {
-              img: "../../../../../assets/images/map/gallery/img1.jpg",
+              img: "../../../../../assets/images/demo/photos/img1.jpg",
               user: {
                   name: "username1",
-                  avatar: "../../../../../assets/images/map/avatars/avatar1.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar1.jpg"
               }
           },
           {
-              img: "../../../../../assets/images/map/gallery/img2.jpg",
+              img: "../../../../../assets/images/demo/photos/img2.jpg",
               user: {
                   name: "username2",
-                  avatar: "../../../../../assets/images/map/avatars/avatar2.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar2.jpg"
               }
           },
           {
-              img: "../../../../../assets/images/map/gallery/img3.jpg",
+              img: "../../../../../assets/images/demo/photos/img3.jpg",
               user: {
                   name: "username3",
-                  avatar: "../../../../../assets/images/map/avatars/avatar3.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar3.jpg"
               }
           },
           {
-              img: "../../../../../assets/images/map/gallery/img4.jpg",
+              img: "../../../../../assets/images/demo/photos/img4.jpg",
               user: {
                   name: "username4",
-                  avatar: "../../../../../assets/images/map/avatars/avatar4.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar4.jpg"
               }
           },
           {
-              img: "../../../../../assets/images/map/gallery/img5.jpg",
+              img: "../../../../../assets/images/demo/photos/img5.jpg",
               user: {
                   name: "username5",
-                  avatar: "../../../../../assets/images/map/avatars/avatar5.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar5.jpg"
               }
           },
           {
-              img: "../../../../../assets/images/map/gallery/img6.jpg",
+              img: "../../../../../assets/images/demo/photos/img6.jpg",
               user: {
                   name: "username6",
-                  avatar: "../../../../../assets/images/map/avatars/avatar6.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar6.jpg"
               }
           },
           {
-              img: "../../../../../assets/images/map/gallery/img7.jpg",
+              img: "../../../../../assets/images/demo/photos/img7.jpg",
               user: {
                   name: "username7",
-                  avatar: "../../../../../assets/images/map/avatars/avatar7.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar7.jpg"
               }
           },
           {
-              img: "../../../../../assets/images/map/gallery/img8.jpg",
+              img: "../../../../../assets/images/demo/photos/img8.jpg",
               user: {
                   name: "username8",
-                  avatar: "../../../../../assets/images/map/avatars/avatar8.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar8.jpg"
               }
           },
       ];
@@ -123,7 +123,7 @@ export class MapComponent implements OnInit, AfterViewInit {
               text: "Et id magna amet nostrud quis nulla irure ad et laborum.",
               user: {
                   name: "username1",
-                  avatar: "../../../../../assets/images/map/avatars/avatar1.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar1.jpg"
               },
               date: new Date()
           },
@@ -131,7 +131,7 @@ export class MapComponent implements OnInit, AfterViewInit {
               text: "Ipsum esse culpa ea non cupidatat nisi dolor occaecat laboris culpa aute deserunt in.",
               user: {
                   name: "username4",
-                  avatar: "../../../../../assets/images/map/avatars/avatar4.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar4.jpg"
               },
               date: new Date()
           },
@@ -140,7 +140,7 @@ export class MapComponent implements OnInit, AfterViewInit {
                   "sunt cupidatat. Eiusmod elit sit cupidatat dolore mollit. Aliquip voluptate in ad officia nostrud proident.",
               user: {
                   name: "username8",
-                  avatar: "../../../../../assets/images/map/avatars/avatar8.jpg"
+                  avatar: "../../../../../assets/images/demo/avatars/avatar8.jpg"
               },
               date: new Date(1996, 5, 21, 12, 44, 20)
           }
