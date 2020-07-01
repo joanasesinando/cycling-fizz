@@ -76,6 +76,7 @@ export class ModalRegisterComponent implements OnInit {
           // console.log(res.user);
           // console.log("-----------------------------------");
           // this.onRegisterClicked.emit();
+          this.verifyEmail();
           this.changeCurrentModal.emit(Modals.CompleteRegister)
         }, err => {
           this.errorInRegistrationToastr(err.message);
@@ -106,5 +107,10 @@ export class ModalRegisterComponent implements OnInit {
 
   loginSuccessfulToastr() {
     this.toastrService.success("Bem vindo de volta!", "Login bem sucedido", {duration: 5000});
+  }
+
+  verifyEmail() {
+    this.authFirebaseService.sendEmailVerification();
+    this.toastrService.warning("Verifica a tua conta através do e-mail que te enviámos", "Email de verificação enviado", {duration: 5000});
   }
 }
