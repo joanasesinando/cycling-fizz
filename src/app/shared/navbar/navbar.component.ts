@@ -1,9 +1,11 @@
-import {Component, OnInit, HostListener, TemplateRef} from '@angular/core';
+import {Component, OnInit, HostListener} from '@angular/core';
 import { faGlobeEurope, faChevronDown,  faChevronUp, faTrafficLight,
         faRoute, faQuestion, faComments, faUsers } from '@fortawesome/free-solid-svg-icons';
 import {Router} from '@angular/router';
 import { TranslateService } from '@ngx-translate/core';
 import {AuthFirebaseService} from "../../_services/auth-firebase.service";
+import {NbMenuService} from '@nebular/theme';
+import {filter, map} from 'rxjs/operators';
 
 declare let $: any;
 
@@ -34,7 +36,14 @@ export class NavbarComponent implements OnInit {
   navigation;
   currentActiveDropdown  = null;
 
-  constructor(private _router: Router, public translate: TranslateService, public authFirebaseService: AuthFirebaseService) {
+  menuItems = [
+    { title: 'Conta' },
+    { title: 'Definições' },
+    { title: 'Terminar sessão' },
+  ];
+
+  constructor(private _router: Router, public translate: TranslateService, public authFirebaseService: AuthFirebaseService,
+              private nbMenuService: NbMenuService) {
     this.router = _router;
     this.onWindowResize();
     this.hideMobileMenuWhenClickedOutside();
@@ -72,11 +81,34 @@ export class NavbarComponent implements OnInit {
     this.navigation = $('.navbar-collapse');
 
     this.hideMobileMenuWhenLinkClicked();
+
+    this.nbMenuService.onItemClick()
+        .pipe(
+            filter(({ tag }) => tag === 'menu'),
+            map(({ item: { title } }) => title),
+        )
+        .subscribe(title => {
+          if(title === 'Conta') this.accountClicked();
+          else if(title === 'Definições') this.settingsClicked();
+          else if(title === 'Terminar sessão') this.logoutClicked();
+        });
   }
 
   changeLanguage(code) {
     this.translate.use(code);
     this.authFirebaseService.setLanguageCode(code);
+  }
+
+  accountClicked() {
+    console.log("Go to account"); // FIXME: goto
+  }
+
+  settingsClicked() {
+    console.log("Go to settings"); // FIXME: goto
+  }
+
+  logoutClicked() {
+    this.authFirebaseService.logout();
   }
 
 

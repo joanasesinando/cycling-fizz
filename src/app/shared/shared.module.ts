@@ -33,10 +33,14 @@ import { ModalRegisterComponent } from './navbar/modal-register/modal-register.c
 import { ModalCompleteRegistrationComponent } from './navbar/modal-complete-registration/modal-complete-registration.component';
 
 import {
-    NbButtonModule, NbCardModule, NbCheckboxModule,
+    NbButtonModule,
+    NbCardModule,
+    NbCheckboxModule,
     NbIconModule,
     NbLayoutModule,
-    NbToggleModule
+    NbToggleModule,
+    NbUserModule,
+    NbContextMenuModule
 } from '@nebular/theme';
 
 
@@ -78,7 +82,9 @@ import {
         NbLayoutModule,
         NbToggleModule,
         NbCheckboxModule,
-        NbCardModule
+        NbCardModule,
+        NbUserModule,
+        NbContextMenuModule
     ],
     exports: [
         NavbarComponent,

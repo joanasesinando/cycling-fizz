@@ -18,6 +18,8 @@
   @include nb-toast-theme;
   @include nb-overlay-theme;
   @include nb-sidebar-theme;
+  @include nb-menu-theme;
+  @include nb-context-menu-theme;
 };
 
 
@@ -289,6 +291,8 @@ $sidebar-width-mobile: 280px;
  * ------------------------------------------------------------------- */
 
 .nb-theme-default nb-icon.close-btn { font-size: 1.5rem; }
+
+.nb-theme-default nb-icon.nav { font-size: 1.8rem; }
 
 
 

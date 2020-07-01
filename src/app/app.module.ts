@@ -22,7 +22,10 @@ import {
   NbToastrModule,
   NbDialogService,
   NbDialogModule,
-  NbSidebarModule, NbSidebarService
+  NbSidebarModule,
+  NbSidebarService,
+  NbMenuModule,
+  NbMenuService
 } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SlickCarouselModule } from 'ngx-slick-carousel';
@@ -59,6 +62,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     NbToastrModule.forRoot(),
     NbDialogModule.forRoot(),
     NbSidebarModule.forRoot(),
+    NbMenuModule.forRoot(),
     NbLayoutModule,
     NbEvaIconsModule,
     SlickCarouselModule,
@@ -66,7 +70,7 @@ export function HttpLoaderFactory(httpClient: HttpClient) {
     AngularFirestoreModule, // fixme imports firebase/firestore, only needed for database features
     AngularFireAuthModule, // imports firebase/auth, only needed for auth features
   ],
-  providers: [{ provide: LOCALE_ID, useValue: 'pt' }, NbToastrService, NbDialogService, NbSidebarService],
+  providers: [{ provide: LOCALE_ID, useValue: 'pt' }, NbToastrService, NbDialogService, NbSidebarService, NbMenuService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
