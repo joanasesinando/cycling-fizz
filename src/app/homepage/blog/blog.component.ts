@@ -13,7 +13,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog1.jpg",
         topic: "Ciclismo",
         date: new Date(1996, 5-1, 21),
-        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum".substring(0, 44) + "...",
+        title: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum",
         nrComments: 5,
         nrLikes: 21
       },
@@ -21,7 +21,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog2.jpg",
         topic: "Mobilidade",
         date: new Date(1997, 12-1, 27),
-        title: "Curabitur interdum posuere mattis. Integer vehicula".substring(0, 44) + "...",
+        title: "Curabitur interdum posuere mattis. Integer vehicula",
         nrComments: 12,
         nrLikes: 27
       },
@@ -29,7 +29,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog3.jpg",
         topic: "Vida urbana",
         date: new Date(1996, 2-1, 11),
-        title: "Donec congue ex et nibh tincidunt sollicitudin. Cras quis euismod urna. Praesent".substring(0, 44) + "...",
+        title: "Donec congue ex et nibh tincidunt sollicitudin. Cras quis euismod urna. Praesent",
         nrComments: 3,
         nrLikes: 11
       },
@@ -37,7 +37,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog4.jpg",
         topic: "Mobilidade",
         date: new Date(1996, 4-1, 15),
-        title: "Nullam sed interdum ex. Curabitur lectus nibh, suscipit porttitor quam".substring(0, 44) + "...",
+        title: "Nullam sed interdum ex. Curabitur lectus nibh, suscipit porttitor quam",
         nrComments: 34,
         nrLikes: 12
       },
@@ -45,7 +45,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog5.jpg",
         topic: "Vida urbana",
         date: new Date(1996, 3-1, 20),
-        title: "Sed vel sem at arcu blandit suscipit sit amet et massa. Pellentesque".substring(0, 44) + "...",
+        title: "Sed vel sem at arcu blandit suscipit sit amet et massa. Pellentesque",
         nrComments: 3,
         nrLikes: 100
       },
@@ -53,7 +53,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog6.jpg",
         topic: "Ciclismo",
         date: new Date(1996, 3-1, 11),
-        title: "Duis nec tellus suscipit, blandit ligula ut, hendrerit purus".substring(0, 44) + "...",
+        title: "Duis nec tellus suscipit, blandit ligula ut, hendrerit purus",
         nrComments: 3,
         nrLikes: 11
       },
@@ -61,7 +61,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog7.jpg",
         topic: "Vida urbana",
         date: new Date(1996, 3-1, 11),
-        title: "Phasellus pretium gravida felis et fringilla. Suspendisse potenti".substring(0, 44) + "...",
+        title: "Phasellus pretium gravida felis et fringilla. Suspendisse potenti",
         nrComments: 3,
         nrLikes: 11
       },
@@ -69,7 +69,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog8.jpg",
         topic: "Mobilidade",
         date: new Date(1996, 3-1, 11),
-        title: "Etiam nec massa sit amet eros auctor porta commodo at ex. Proin eget".substring(0, 44) + "...",
+        title: "Etiam nec massa sit amet eros auctor porta commodo at ex. Proin eget",
         nrComments: 3,
         nrLikes: 11
       },
@@ -77,7 +77,7 @@ export class BlogComponent implements OnInit, AfterViewInit {
         photoSrc: "../../../assets/images/homepage/blog/photos/blog9.jpg",
         topic: "Ciclismo",
         date: new Date(1996, 3-1, 11),
-        title: "Vivamus erat mauris, ultricies non lectus".substring(0, 44),
+        title: "Vivamus erat mauris, ultricies non lectus",
         nrComments: 3,
         nrLikes: 200
       },
@@ -86,10 +86,19 @@ export class BlogComponent implements OnInit, AfterViewInit {
   constructor() { }
 
   ngOnInit() {
+      this.truncateTitle(this.cardArray);
   }
 
   ngAfterViewInit() {
       feather.replace();
+  }
+
+  truncateTitle(array) {
+      for(let i = 0; i < array.length ; i++) {
+          let length = array[i].title.length;
+          array[i].title = array[i].title.substring(0, 55);
+          if(length > 55) array[i].title += "...";
+      }
   }
 
 }

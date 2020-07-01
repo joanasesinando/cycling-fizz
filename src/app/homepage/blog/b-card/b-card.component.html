@@ -5,9 +5,9 @@
             attr.date=" | {{ date | date:'dd/MM/yyy' }}">
             {{topic}}
         </h6>
-        <h5 class="card-title font-qks-bold">{{title}}</h5>
+        <h6 class="card-title font-qks-bold text-dark-gray">{{title}}</h6>
         <span class="engagement font-qks-regular mr-2">
-            <fa-icon [icon]="faComments" id="comments" class=" text-gray"></fa-icon>
+            <fa-icon [icon]="faComments" id="comments" class="text-gray"></fa-icon>
             {{nrComments}} {{'homepage.blog.comments' | translate}}
         </span>
         <span class="engagement font-qks-regular">
