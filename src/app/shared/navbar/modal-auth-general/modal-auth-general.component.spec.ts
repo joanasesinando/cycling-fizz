@@ -1,20 +1,20 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
-import { ModalLoginRegisterComponent } from './modal-login-register.component';
+import { ModalAuthGeneralComponent } from './modal-auth-general.component';
 
 describe('ModalLoginRegisterComponent', () => {
-  let component: ModalLoginRegisterComponent;
-  let fixture: ComponentFixture<ModalLoginRegisterComponent>;
+  let component: ModalAuthGeneralComponent;
+  let fixture: ComponentFixture<ModalAuthGeneralComponent>;
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ModalLoginRegisterComponent ]
+      declarations: [ ModalAuthGeneralComponent ]
     })
     .compileComponents();
   }));
 
   beforeEach(() => {
-    fixture = TestBed.createComponent(ModalLoginRegisterComponent);
+    fixture = TestBed.createComponent(ModalAuthGeneralComponent);
     component = fixture.componentInstance;
     fixture.detectChanges();
   });

@@ -6,7 +6,7 @@ import {NgForm} from '@angular/forms';
 
 import {AuthFirebaseService} from '../../../_services/auth-firebase.service';
 import {NbToastrService} from '@nebular/theme';
-import {Modals} from '../modal-login-register/modal-login-register.component';
+import {Modals} from '../modal-auth-general/modal-auth-general.component';
 
 
 export interface FormObject {

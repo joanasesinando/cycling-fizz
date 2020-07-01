@@ -27,7 +27,7 @@ import { NewsletterSubscribeComponent } from './newsletter-subscribe/newsletter-
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import { SwitchComponent } from './switch/switch.component';
 
-import { ModalLoginRegisterComponent } from './navbar/modal-login-register/modal-login-register.component';
+import { ModalAuthGeneralComponent } from './navbar/modal-auth-general/modal-auth-general.component';
 import { ModalLoginComponent } from './navbar/modal-login/modal-login.component';
 import { ModalRegisterComponent } from './navbar/modal-register/modal-register.component';
 import { ModalCompleteRegistrationComponent } from './navbar/modal-complete-registration/modal-complete-registration.component';
@@ -49,7 +49,7 @@ import {
   declarations: [
     NavbarComponent,
     FooterComponent,
-    ModalLoginRegisterComponent,
+    ModalAuthGeneralComponent,
     ModalLoginComponent,
     ModalRegisterComponent,
     BtnOutlineComponent,

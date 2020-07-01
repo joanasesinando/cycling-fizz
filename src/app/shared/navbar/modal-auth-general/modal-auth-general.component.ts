@@ -6,11 +6,11 @@ export enum Modals {
   CompleteRegister
 }
 @Component({
-  selector: 'app-modal-login-register',
-  templateUrl: './modal-login-register.component.html',
-  styleUrls: ['./modal-login-register.component.scss']
+  selector: 'app-modal-auth-general',
+  templateUrl: './modal-auth-general.component.html',
+  styleUrls: ['./modal-auth-general.component.scss']
 })
-export class ModalLoginRegisterComponent implements OnInit {
+export class ModalAuthGeneralComponent implements OnInit {
 
   Modals = Modals;
   currentModal: Modals = Modals.Login;

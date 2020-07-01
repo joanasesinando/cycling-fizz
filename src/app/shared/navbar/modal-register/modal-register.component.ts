@@ -5,7 +5,7 @@ import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
 import {NgForm} from "@angular/forms";
 import {NbToastrService} from '@nebular/theme';
 // import * as $ from 'jquery';
-import {Modals} from '../modal-login-register/modal-login-register.component';
+import {Modals} from '../modal-auth-general/modal-auth-general.component';
 
 
 export interface FormObject {
