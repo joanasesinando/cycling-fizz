@@ -10,11 +10,11 @@
               {{'homepage.cover.title.part2' | translate}} <br class="d-none d-lg-block">
               {{'homepage.cover.title.part3' | translate}}
           </h1>
-            <button (click)="open(verifyEmailDialog)">Abrir verificação de e-mail</button>
+            <button (click)="open(verifyEmailDialog)" tabIndex="-1">Abrir verificação de e-mail</button>
           <h5 class="text-center text-lg-left" data-aos="fade-up" data-aos-delay="200">{{'homepage.cover.text' | translate}}</h5>
           <div id="cover-btns" class="d-flex flex-wrap pt-4 align-items-center"
                data-aos="fade-up" data-aos-delay="300">
-            <button class="btn btn-primary mb-4 mb-md-0" type="button" routerLink="/map">{{'homepage.cover.mapBtn' | translate}}</button>
+            <button class="btn btn-primary mb-4 mb-md-0" type="button" tabIndex="-1" routerLink="/map">{{'homepage.cover.mapBtn' | translate}}</button>
             <div class="video-popup font-qks-medium mb-4 mb-md-0"
                (click)="open(coverVideo)">
               <div class="btn-video mr-2">
@@ -64,7 +64,7 @@
         <nb-card-header>
             <div class="d-flex justify-content-between align-items-center">
                 <h4>Vídeo de apresentação</h4>
-                <button (click)="ref.close()"><i data-feather="x"></i></button>
+                <button (click)="ref.close()" tabIndex="-1"><i data-feather="x"></i></button>
             </div>
 
         </nb-card-header>

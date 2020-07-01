@@ -63,8 +63,8 @@
 
         <!-- share & goto [mobile] -->
         <div class="actions d-flex d-sm-none justify-content-around align-items-center mt-4">
-            <button nbButton status="primary" class="w-100 mr-4"><nb-icon icon="share-outline"></nb-icon>Partilhar</button>
-            <button nbButton status="primary" class="w-100"><nb-icon icon="navigation-2-outline"></nb-icon>Direções</button>
+            <button nbButton status="primary" class="w-100 mr-4"><nb-icon icon="share-outline" tabIndex="-1"></nb-icon>Partilhar</button>
+            <button nbButton status="primary" class="w-100"><nb-icon icon="navigation-2-outline" tabIndex="-1"></nb-icon>Direções</button>
         </div>
 
 
@@ -85,8 +85,8 @@
 
             <!-- // Buttons [edit mode] -->
             <div *ngIf="editMode" class="d-flex justify-content-end align-items-center mt-4">
-                <button nbButton outline status="success" class="mr-3" (click)="open(editWarningDialog)">Descartar</button>
-                <button nbButton hero status="success" (click)="sendEditChanges(); editMode = false; closeBtnClicked()">Guardar</button>
+                <button nbButton outline status="success" class="mr-3" (click)="open(editWarningDialog)" tabIndex="-1">Descartar</button>
+                <button nbButton hero status="success" (click)="sendEditChanges(); editMode = false; closeBtnClicked()" tabIndex="-1">Guardar</button>
             </div>
 
 
@@ -132,8 +132,8 @@
         </nb-card-body>
 
         <nb-card-footer class="d-flex justify-content-end align-items-center">
-            <button nbButton status="basic" class="mr-2" (click)="ref.close()">Cancelar</button>
-            <button nbButton hero status="info" (click)="ref.close(); submitDeletionRequest(); closeBtnClicked()">Submeter</button>
+            <button nbButton status="basic" class="mr-2" (click)="ref.close()" tabIndex="-1">Cancelar</button>
+            <button nbButton hero status="info" (click)="ref.close(); submitDeletionRequest(); closeBtnClicked()" tabIndex="-1">Submeter</button>
         </nb-card-footer>
     </nb-card>
 

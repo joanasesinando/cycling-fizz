@@ -5,12 +5,12 @@
                [class.is-invalid]="subscriptionEmail.invalid && subscriptionEmail.touched"
                [ngStyle]="{'border-width': border ? '1.5px' : '0', 'border-color': border ? '#f2f6f8' : ''}">
         <small id="emailHelp" class="form-text text-muted">*{{'newsletter.disclaimer' | translate}}</small>
-        <button id ="subscribeBtn" type="submit" class="subscribeBtn btn btn-primary px-3 float-right d-none d-sm-block"
+        <button id ="subscribeBtn" type="submit" tabIndex="-1" class="subscribeBtn btn btn-primary px-3 float-right d-none d-sm-block"
                 [disabled]="!subscriptionEmail.valid && subscriptionEmail.touched"
                 (click)="subscribeToNewsletter()">
             {{'newsletter.subscribe' | translate}}
         </button>
-        <button id ="subscribeBtnMobile" type="submit" class="subscribeBtn btn btn-primary px-3 float-right d-sm-none"
+        <button id ="subscribeBtnMobile" type="submit" tabIndex="-1" class="subscribeBtn btn btn-primary px-3 float-right d-sm-none"
                 [disabled]="!subscriptionEmail.valid && subscriptionEmail.touched"
                 (click)="subscribeToNewsletter()">
             <fa-icon [icon]="faPaperPlane" class="fa-md"></fa-icon>

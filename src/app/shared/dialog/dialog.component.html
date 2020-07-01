@@ -13,7 +13,7 @@
     </nb-card-body>
 
     <nb-card-footer class="d-flex justify-content-end align-items-center">
-        <button *ngIf="leftButton" nbButton status="basic" class="mr-2" (click)="leftBtnClicked()">{{leftButton}}</button>
-        <button nbButton hero status="{{status}}" (click)="rightBtnClicked()">{{rightButton}}</button>
+        <button *ngIf="leftButton" nbButton status="basic" class="mr-2" (click)="leftBtnClicked()" tabIndex="-1">{{leftButton}}</button>
+        <button nbButton hero status="{{status}}" (click)="rightBtnClicked()" tabIndex="-1">{{rightButton}}</button>
     </nb-card-footer>
 </nb-card>

@@ -5,7 +5,7 @@
   <a class="navbar-brand" href="#">Cycling Fizz</a>
 
   <!-- mobile menu -->
-  <button class="navbar-toggler d-lg-none d-inline-block hamburger hamburger--spring" type="button"
+  <button class="navbar-toggler d-lg-none d-inline-block hamburger hamburger--spring" type="button" tabIndex="-1"
           data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive"
           aria-expanded="false" aria-label="Toggle navigation" (click)="toggleMobileMenu()">
 
@@ -175,7 +175,7 @@
                     </div>
 
                     <div class="col-sm-auto text-center">
-                        <button *ngIf="!authFirebaseService.isUserLogged" class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
+                        <button *ngIf="!authFirebaseService.isUserLogged" class="btn btn-primary" type="button" tabIndex="-1" data-toggle="modal" data-target="#sign-in">Login</button>
                     </div>
                 </div>
             </div>
@@ -185,7 +185,7 @@
 
     <!-- login -->
     <div *ngIf="!mobileView">
-      <button *ngIf="!authFirebaseService.isUserLogged" class="btn btn-primary" type="button" data-toggle="modal" data-target="#sign-in">Login</button>
+      <button *ngIf="!authFirebaseService.isUserLogged" class="btn btn-primary" type="button" tabIndex="-1" data-toggle="modal" data-target="#sign-in">Login</button>
       <nb-user *ngIf="authFirebaseService.isUserLogged" class="gradient" onlyPicture picture="../../../assets/images/demo/avatar.jpg"
                [nbContextMenu]="menuItems" [nbContextMenuTag]="'menu'"></nb-user>
     </div>
