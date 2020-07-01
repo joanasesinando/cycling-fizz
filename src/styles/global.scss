@@ -7,6 +7,7 @@
  *    - Tooltips
  *    - Slick sliders
  *    - MapBox
+ *    - Preloader
  *
  * =================================================================== */
 
@@ -473,6 +474,99 @@ $scrollbarWidth: 10px;
 
 a.mapboxgl-ctrl-logo{
   display: none;
+}
+
+
+
+/* ===================================================================
+ *  Preloader
+ *
+ * ------------------------------------------------------------------- */
+
+.preloader {
+  background-color: white;
+  width: 100vw;
+  height: 100vh;
+}
+
+.bubbles {
+  width: 90px;
+  height: 90px;
+}
+
+#yellow-top { animation: blink-float-right 2.5s ease-in-out infinite; }
+#yellow-top { animation-delay: 600ms; }
+
+#yellow-bottom { animation: blink-float-left 2.5s ease-in-out infinite; }
+#yellow-bottom { animation-delay: 100ms; }
+
+#blue-top { animation: float 3s ease-in-out infinite; }
+#blue-top { animation-delay: 800ms; }
+
+#blue-bottom { animation: float 3s ease-in-out infinite; }
+#blue-bottom { animation-delay: 200ms; }
+
+#green { animation: float2 3s ease-in-out infinite; }
+#green { animation-delay: 100ms; }
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes float2 {
+  0% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translate(3px, -8px);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+@keyframes blink-float-left {
+  0% {
+    opacity: .8;
+    transform: translateY(0px);
+  }
+  25% {
+    opacity: .5;
+  }
+  50% {
+    opacity: .75;
+    transform: translateY(-6px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+@keyframes blink-float-right
+{
+  0% {
+    opacity: .8;
+    transform: translateY(0px);
+  }
+  25% {
+    opacity: .5;
+  }
+  50% {
+    opacity: .75;
+    transform: translate(2px, -4px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
+  }
 }
 
 

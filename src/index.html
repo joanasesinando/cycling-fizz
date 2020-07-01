@@ -32,7 +32,43 @@
 </head>
 
 <body>
-    <app-root></app-root>
+    <app-root>
+        <div class="preloader d-flex flex-column justify-content-center align-items-center">
+            <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" viewBox="0 0 210 210" fill="none">
+                <g id="bubbles">
+                    <path id="green" d="M139.854 65.5401C139.854 78.7972 129.108 89.5437 115.851 89.5437C102.593 89.5437 91.8469 78.7972 91.8469 65.5401C91.8469 52.283 102.593 41.5365 115.851 41.5365C129.108 41.5365 139.854 52.283 139.854 65.5401Z" fill="url(#paint0_linear)"/>
+                    <path id="blue-top" d="M93.6091 117.596C93.6091 125.329 87.339 131.599 79.6057 131.599C71.8724 131.599 65.6023 125.329 65.6023 117.596C65.6023 109.862 71.8724 103.592 79.6057 103.592C87.339 103.592 93.6091 109.862 93.6091 117.596Z" fill="url(#paint1_linear)"/>
+                    <path id="blue-bottom" d="M140.329 140.353C140.329 148.086 134.059 154.356 126.325 154.356C118.592 154.356 112.322 148.086 112.322 140.353C112.322 132.619 118.592 126.349 126.325 126.349C134.059 126.349 140.329 132.619 140.329 140.353Z" fill="url(#paint2_linear)"/>
+                    <path id="yellow-bottom" d="M105.791 171.622C105.791 174.716 103.283 177.224 100.189 177.224C97.0962 177.224 94.5881 174.716 94.5881 171.622C94.5881 168.529 97.0962 166.021 100.189 166.021C103.283 166.021 105.791 168.529 105.791 171.622Z" fill="url(#paint3_linear)"/>
+                    <path id="yellow-top" d="M69.3907 70.1215C69.3907 73.2148 66.8827 75.7229 63.7893 75.7229C60.696 75.7229 58.188 73.2148 58.188 70.1215C58.188 67.0282 60.696 64.5201 63.7893 64.5201C66.8827 64.5201 69.3907 67.0282 69.3907 70.1215Z" fill="url(#paint4_linear)"/>
+                </g>
+
+                <defs>
+                    <linearGradient id="paint0_linear" x1="128.905" y1="79.8581" x2="91.8469" y2="59.6445" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#73D9C1"/>
+                        <stop offset="1" stop-color="#E6F9DC"/>
+                    </linearGradient>
+                    <linearGradient id="paint1_linear" x1="87.2216" y1="125.948" x2="65.6023" y2="114.156" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#27CECE"/>
+                        <stop offset="1" stop-color="#BCF5F7"/>
+                    </linearGradient>
+                    <linearGradient id="paint2_linear" x1="133.941" y1="148.706" x2="112.322" y2="136.913" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#27CECE"/>
+                        <stop offset="1" stop-color="#BCF5F7"/>
+                    </linearGradient>
+                    <linearGradient id="paint3_linear" x1="103.236" y1="174.964" x2="94.5881" y2="170.247" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF9F3C"/>
+                        <stop offset="1" stop-color="#FFE5B6"/>
+                    </linearGradient>
+                    <linearGradient id="paint4_linear" x1="66.8357" y1="73.4627" x2="58.188" y2="68.7457" gradientUnits="userSpaceOnUse">
+                        <stop stop-color="#FF9F3C"/>
+                        <stop offset="1" stop-color="#FFE5B6"/>
+                    </linearGradient>
+                </defs>
+            </svg>
+            <h5 class="loading font-qks-bold text-gradient">loading...</h5>
+        </div>
+    </app-root>
 </body>
 
 <!-- element for instagram gradient -->
@@ -46,5 +82,6 @@
     </radialGradient>
 </svg>
 <!-- element for instagram gradient (end) -->
+
 </html>
 
