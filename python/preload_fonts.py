@@ -2,7 +2,7 @@ import os
 
 CURRENT_SCRIPT_PATH = os.path.abspath(os.path.dirname(__file__))
 
-path = CURRENT_SCRIPT_PATH + "\\..\\dist\\rocketsite"
+path = CURRENT_SCRIPT_PATH + "\\..\\dist\\cycling-fizz"
 font_formats = ["woff", "woff2", "ttf"]
 
 fonts_string = ""
