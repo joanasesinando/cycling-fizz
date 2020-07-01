@@ -92,14 +92,21 @@ export class MapElementComponent implements OnInit {
     this.toastrService.danger('Ocorreu um erro. Por favor tenta de novo.', 'Ups...', {duration: 3000});
   }
 
-  sendEditChanges() { // TODO: enviar alterações para pasta específica de e-mail,
+  sendEditChanges() { // TODO: enviar alterações para pasta específica de e-mail
     console.log("Alterações enviadas com sucesso");
     this.showInfoToast('🏆 Verifica o teu nível de contribuições na tua conta de utilizador ' +
         'e vê que prémios podes ganhar.','Participa e ganha!');
 
     this.showSuccessToast('As tuas alterações vão ser revistas antes de serem colocadas online.\n\n' +
         'Obrigada por contribuíres e ajudares a melhorar o mapa. A comunidade de ciclistas agradece! 👏',
-        'Alterações guardadas');
+        'Alterações enviadas');
+  }
+
+  submitDeletionRequest() { // TODO: enviar alterações para pasta específica de e-mail,
+    console.log("Pedido para apagar elemento enviado com sucesso");
+    this.showSuccessToast('O teu pedido para eliminar este elemento vai ser revisto antes de ser colocado online.\n\n' +
+        'Obrigada por contribuíres e ajudares a melhorar o mapa. A comunidade de ciclistas agradece! 👏',
+        'Pedido enviado');
   }
 
   closeBtnClicked() { this.onCloseBtnClicked.emit(true); }

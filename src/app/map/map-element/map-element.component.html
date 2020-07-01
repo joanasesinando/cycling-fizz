@@ -108,23 +108,35 @@
             [status]="'danger'"
             [text]="'Tens a certeza que queres apagar este elemento?'"
             [leftButton]="'Cancelar'"
-            [rightButton]="'Sim, apagar!'"
+            [rightButton]="'Sim, apagar'"
             (onLeftBtnClicked)="ref.close()"
             (onRightBtnClicked)="ref.close(); open(deleteFormDialog)"
             (onCloseBtnClicked)="ref.close()"
     ></app-dialog>
 </ng-template>
 
-<ng-template #deleteFormDialog let-data let-ref="dialogRef"> <!-- FIXME: meter select -->
-    <app-dialog
-            [status]="'info'"
-            [text]="'Diz-nos o motivo pelo qual queres apagar este elemento:'"
-            [leftButton]="'Cancelar'"
-            [rightButton]="'Apagar!'"
-            (onLeftBtnClicked)="ref.close()"
-            (onRightBtnClicked)="ref.close();"
-            (onCloseBtnClicked)="ref.close()"
-    ></app-dialog>
+<ng-template #deleteFormDialog let-data let-ref="dialogRef">
+    <nb-card class="deleteFormDialog" status="info">
+        <nb-card-header class="d-flex justify-content-between align-items-center">
+            <div class="d-flex align-items-center">
+                <nb-icon class="status-icon mr-2" icon="question-mark-outline"></nb-icon>
+                Informação
+            </div>
+
+            <nb-icon class="close-btn" icon="close-outline" (click)="ref.close()"></nb-icon>
+        </nb-card-header>
+
+        <nb-card-body>
+            <p class="font-qks-medium">Diz-nos o motivo pelo qual queres apagar este elemento:</p>
+            <textarea nbInput fullWidth rows="7" status="info" placeholder="Escrever aqui..."></textarea>
+        </nb-card-body>
+
+        <nb-card-footer class="d-flex justify-content-end align-items-center">
+            <button nbButton status="basic" class="mr-2" (click)="ref.close()">Cancelar</button>
+            <button nbButton hero status="info" (click)="ref.close(); submitDeletionRequest(); closeBtnClicked()">Submeter</button>
+        </nb-card-footer>
+    </nb-card>
+
 </ng-template>
 
 <ng-template #editWarningDialog let-data let-ref="dialogRef">
