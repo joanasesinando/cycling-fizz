@@ -127,13 +127,25 @@
         </nb-card-header>
 
         <nb-card-body>
-            <p class="font-qks-medium">Diz-nos o motivo pelo qual queres apagar este elemento:</p>
-            <textarea nbInput fullWidth rows="7" status="info" placeholder="Escrever aqui..."></textarea>
+            <p class="font-qks-medium">Diz-nos o motivo pelo qual queres apagar este elemento:<span class="text-red">*</span></p>
+            <form id="deleteForm" [formGroup]="reason">
+                <textarea class="form-control form-control-lg" formControlName="deletingReason"
+                          nbInput fullWidth rows="7" status="info" placeholder="Escrever aqui..."
+                          [class.is-invalid]="deletingReason.invalid && deletingReason.touched"></textarea>
+
+                <div *ngIf="(deletingReason.invalid && deletingReason.touched) || deletingReason.dirty">
+                    <small *ngIf="deletingReason.errors?.required" class="font-qks-medium text-red ml-3">
+                        ⚠ {{'errors.requiredField' | translate}}
+                    </small>
+                </div>
+            </form>
         </nb-card-body>
 
         <nb-card-footer class="d-flex justify-content-end align-items-center">
             <button nbButton status="basic" class="mr-2" (click)="ref.close()" tabIndex="-1">Cancelar</button>
-            <button nbButton hero status="info" (click)="ref.close(); submitDeletionRequest(); closeBtnClicked()" tabIndex="-1">Submeter</button>
+            <button nbButton hero status="info"
+                    [disabled]="!deletingReason.valid"
+                    (click)="ref.close(); submitDeletionRequest(); closeBtnClicked()" type="submit" tabIndex="-1">Submeter</button>
         </nb-card-footer>
     </nb-card>
 

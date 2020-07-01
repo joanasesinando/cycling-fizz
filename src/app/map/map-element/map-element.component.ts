@@ -1,5 +1,7 @@
 import {Component, EventEmitter, Input, OnInit, Output, TemplateRef} from '@angular/core';
 import {NbDialogService, NbToastrService} from '@nebular/theme';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
+
 
 @Component({
   selector: 'app-map-element',
@@ -48,8 +50,17 @@ export class MapElementComponent implements OnInit {
   @Output() onCloseBtnClicked = new EventEmitter<boolean>();
 
   editMode: boolean = false;
+  reason = new FormGroup({
+    deletingReason: new FormControl(
+        '',
+        [
+          Validators.required
+        ])
+  });
 
   constructor(private dialogService: NbDialogService, private toastrService: NbToastrService) { }
+
+  get deletingReason() { return this.reason.get('deletingReason'); }
 
   ngOnInit(): void {
     if(this.type == "bkl") {
@@ -104,7 +115,7 @@ export class MapElementComponent implements OnInit {
 
   submitDeletionRequest() { // TODO: enviar alterações para pasta específica de e-mail,
     console.log("Pedido para apagar elemento enviado com sucesso");
-    this.showSuccessToast('O teu pedido para eliminar este elemento vai ser revisto antes de ser colocado online.\n\n' +
+    this.showSuccessToast('O teu pedido vai ser revisto antes de ser colocado online.\n\n' +
         'Obrigada por contribuíres e ajudares a melhorar o mapa. A comunidade de ciclistas agradece! 👏',
         'Pedido enviado');
   }

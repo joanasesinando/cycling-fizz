@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { MapRoutingModule } from './map-routing.module';
-import { FormsModule } from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 import { TranslateModule } from '@ngx-translate/core';
 import { SharedModule } from '../shared/shared.module';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -75,7 +75,8 @@ import {
         NbSidebarModule,
         FormsModule,
         TranslateModule,
-        NbIconModule
+        NbIconModule,
+        ReactiveFormsModule
     ]
 })
 export class MapModule { }
