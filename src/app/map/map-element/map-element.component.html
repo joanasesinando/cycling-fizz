@@ -23,14 +23,14 @@
 
         <!-- right actions -->
         <div class="actions d-flex align-items-center">
-            <nb-icon class="cursor-hover d-none d-sm-block mr-2"
+            <nb-icon class="oi cursor-hover d-none d-sm-block mr-2"
                      icon="share-outline"
-                     data-toggle="tooltip" data-placement="top" title="Partilhar">
+                     nbPopover="Partilhar" [nbPopoverPlacement]="'left'" nbPopoverTrigger="hint">
             </nb-icon>
             <a href="https://www.google.com/maps/place/{{lat}},{{lng}}" target="_blank">
-                <nb-icon class="cursor-hover d-none d-sm-block mr-2"
+                <nb-icon class="oi cursor-hover d-none d-sm-block mr-2"
                          icon="navigation-2-outline"
-                         data-toggle="tooltip" data-placement="top" title="Direções">
+                         nbPopover="Como chegar" [nbPopoverPlacement]="'right'" nbPopoverTrigger="hint">
                 </nb-icon>
             </a>
             <nb-icon class="cursor-hover" icon="close-outline" (click)="closeBtnClicked()"></nb-icon>
@@ -45,11 +45,11 @@
             <!-- edit & delete -->
             <div class="actions">
                 <nb-icon class="text-dark-gray cursor-hover mr-3" icon="edit-2"
-                         data-toggle="tooltip" data-placement="top" title="Editar"
+                         nbPopover="Editar" [nbPopoverPlacement]="'left'" nbPopoverTrigger="hint"
                          (click)="editMode ? open(editWarningDialog) : editMode = true">
                 </nb-icon>
                 <nb-icon class="text-dark-gray cursor-hover mr-3" icon="trash-2"
-                         data-toggle="tooltip" data-placement="top" title="Apagar"
+                         nbPopover="Apagar" [nbPopoverPlacement]="'right'" nbPopoverTrigger="hint"
                          (click)="open(deleteDialog)">
                 </nb-icon>
             </div>

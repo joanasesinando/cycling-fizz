@@ -152,18 +152,16 @@
  *
  * ------------------------------------------------------------------- */
 
-//.nb-theme-default nb-popover {
-//  background: $cf-dark;
-//  color: white;
-//  .arrow::after {
-//    border-bottom-color: $cf-dark;
-//  }
-//  .primitive-overlay {
-//    font-family: quicksand-regular, sans-serif;
-//    font-size: unset;
-//    padding: 1.5rem;
-//  }
-//}
+.nb-theme-default nb-popover.nb-overlay-left,
+.nb-theme-default nb-popover.nb-overlay-right {
+  color: $cf-text;
+  opacity: .8;
+
+  .primitive-overlay {
+    font-family: quicksand-regular, sans-serif;
+    padding: 3px 8px;
+  }
+}
 
 
 
