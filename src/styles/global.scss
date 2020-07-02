@@ -102,8 +102,8 @@ h5, .h5 {
 
 // rule to apply gradient in instagram icon
 footer a:hover #ig svg *,
-#section-cover a:hover #ig svg * { fill: url(#ig-gradient) }
-.ig svg * { fill: url(#ig-gradient) };
+#section-cover a:hover #ig svg *,
+.ig svg * { fill: url(#ig-gradient); }
 
 
 
