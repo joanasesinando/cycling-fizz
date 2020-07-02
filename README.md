@@ -1,7 +1,7 @@
 <h1 align="center">Cycling Fizz</h1>
 
 <p align="center">
-  <img width="526" height="150" src="https://drive.google.com/uc?id=1tDo6vF-Gn7Z1vG2s7tz09P2of6Kgg8w6">
+  <img width="1052" height="150" src="https://drive.google.com/uc?id=1OBR4isWunhHnZbfsrcz03hFzjo3W3oV-">
 </p>
 
 <p align="center">
