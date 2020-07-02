@@ -17,7 +17,7 @@ $gradient: linear-gradient(180deg, #FF923C 0%, #FFC340 100%);
 $darkGradient: linear-gradient(180deg, darken(#FF923C, 10%) 0%, darken(#FFC340, 10%) 100%);
 
 .action-button {
-  position: absolute;
+  position: fixed;
   .ab-link {
     width: 3.3rem;
     height: 3.3rem;
