@@ -123,6 +123,10 @@ export class MapElementComponent implements OnInit {
         'Pedido enviado');
   }
 
+  showDirections() {
+    window.open('https://www.google.com/maps/place/' + this.lat + ',' + this.lng, '_blank');
+  }
+
   closeBtnClicked() { this.onCloseBtnClicked.emit(true); }
 
   @HostListener('window:resize', [])

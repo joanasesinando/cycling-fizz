@@ -29,14 +29,14 @@
             </nb-icon>
             <nb-icon *ngIf="mobileView" class="cursor-hover d-none d-sm-block mr-2" icon="share-outline"></nb-icon>
 
-            <a href="https://www.google.com/maps/place/{{lat}},{{lng}}" target="_blank">
-                <nb-icon *ngIf="!mobileView" class="cursor-hover d-none d-sm-block mr-2"
-                         icon="navigation-2-outline"
-                         nbPopover="Como chegar" [nbPopoverPlacement]="'right'" nbPopoverTrigger="hint">
-                </nb-icon>
-                <nb-icon *ngIf="mobileView" class="cursor-hover d-none d-sm-block mr-2"
-                         icon="navigation-2-outline"></nb-icon>
-            </a>
+            <nb-icon *ngIf="!mobileView" class="cursor-hover d-none d-sm-block mr-2"
+                     icon="navigation-2-outline"
+                     nbPopover="Como chegar" [nbPopoverPlacement]="'right'" nbPopoverTrigger="hint"
+                    (click)="showDirections()">
+            </nb-icon>
+            <nb-icon *ngIf="mobileView" class="cursor-hover d-none d-sm-block mr-2"
+                         icon="navigation-2-outline" (click)="showDirections()"></nb-icon>
+
             <nb-icon class="cursor-hover" icon="close-outline" (click)="closeBtnClicked()"></nb-icon>
         </div>
     </nb-card-header>
@@ -74,8 +74,9 @@
 
         <!-- share & goto [mobile] -->
         <div class="actions d-flex d-sm-none justify-content-around align-items-center mt-4">
-            <button nbButton status="primary" class="w-100 mr-4"><nb-icon icon="share-outline" tabIndex="-1"></nb-icon>Partilhar</button>
-            <button nbButton status="primary" class="w-100"><nb-icon icon="navigation-2-outline" tabIndex="-1"></nb-icon>Direções</button>
+            <button nbButton status="primary" class="w-100 mr-4" tabIndex="-1"><nb-icon icon="share-outline"></nb-icon>Partilhar</button>
+            <button nbButton status="primary" class="w-100" tabIndex="-1"
+            (click)="showDirections()"><nb-icon icon="navigation-2-outline"></nb-icon>Direções</button>
         </div>
 
 
