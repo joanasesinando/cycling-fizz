@@ -1,4 +1,4 @@
-import {Component, EventEmitter, Input, OnInit, Output, TemplateRef} from '@angular/core';
+import {Component, EventEmitter, HostListener, Input, OnInit, Output, TemplateRef} from '@angular/core';
 import {NbDialogService, NbToastrService} from '@nebular/theme';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 
@@ -57,6 +57,7 @@ export class MapElementComponent implements OnInit {
           Validators.required
         ])
   });
+  mobileView: boolean;
 
   constructor(private dialogService: NbDialogService, private toastrService: NbToastrService) { }
 
@@ -76,6 +77,8 @@ export class MapElementComponent implements OnInit {
     } else if(this.type == "bks") {
       this.icon = "../../../assets/images/map/icons/icon-bikesharing.svg";
     }
+
+    this.onWindowResize();
   }
 
   createStoreRatingArray(storeRating) {
@@ -121,5 +124,10 @@ export class MapElementComponent implements OnInit {
   }
 
   closeBtnClicked() { this.onCloseBtnClicked.emit(true); }
+
+  @HostListener('window:resize', [])
+  onWindowResize() {
+    this.mobileView = window.innerWidth <= 991.98;
+  }
 
 }

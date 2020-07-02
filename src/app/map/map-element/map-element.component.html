@@ -23,15 +23,19 @@
 
         <!-- right actions -->
         <div class="actions d-flex align-items-center">
-            <nb-icon class="oi cursor-hover d-none d-sm-block mr-2"
+            <nb-icon *ngIf="!mobileView" class="cursor-hover d-none d-sm-block mr-2"
                      icon="share-outline"
                      nbPopover="Partilhar" [nbPopoverPlacement]="'left'" nbPopoverTrigger="hint">
             </nb-icon>
+            <nb-icon *ngIf="mobileView" class="cursor-hover d-none d-sm-block mr-2" icon="share-outline"></nb-icon>
+
             <a href="https://www.google.com/maps/place/{{lat}},{{lng}}" target="_blank">
-                <nb-icon class="oi cursor-hover d-none d-sm-block mr-2"
+                <nb-icon *ngIf="!mobileView" class="cursor-hover d-none d-sm-block mr-2"
                          icon="navigation-2-outline"
                          nbPopover="Como chegar" [nbPopoverPlacement]="'right'" nbPopoverTrigger="hint">
                 </nb-icon>
+                <nb-icon *ngIf="mobileView" class="cursor-hover d-none d-sm-block mr-2"
+                         icon="navigation-2-outline"></nb-icon>
             </a>
             <nb-icon class="cursor-hover" icon="close-outline" (click)="closeBtnClicked()"></nb-icon>
         </div>
@@ -44,12 +48,19 @@
         <div class="sub-header d-flex justify-content-between">
             <!-- edit & delete -->
             <div class="actions">
-                <nb-icon class="text-dark-gray cursor-hover mr-3" icon="edit-2"
+                <nb-icon *ngIf="!mobileView" class="text-dark-gray cursor-hover mr-3" icon="edit-2"
                          nbPopover="Editar" [nbPopoverPlacement]="'left'" nbPopoverTrigger="hint"
                          (click)="editMode ? open(editWarningDialog) : editMode = true">
                 </nb-icon>
-                <nb-icon class="text-dark-gray cursor-hover mr-3" icon="trash-2"
+                <nb-icon *ngIf="mobileView" class="text-dark-gray cursor-hover mr-3" icon="edit-2"
+                         (click)="editMode ? open(editWarningDialog) : editMode = true">
+                </nb-icon>
+
+                <nb-icon *ngIf="!mobileView" class="text-dark-gray cursor-hover mr-3" icon="trash-2"
                          nbPopover="Apagar" [nbPopoverPlacement]="'right'" nbPopoverTrigger="hint"
+                         (click)="open(deleteDialog)">
+                </nb-icon>
+                <nb-icon *ngIf="mobileView" class="text-dark-gray cursor-hover mr-3" icon="trash-2"
                          (click)="open(deleteDialog)">
                 </nb-icon>
             </div>

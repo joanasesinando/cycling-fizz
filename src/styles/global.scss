@@ -373,6 +373,7 @@ $scrollbarWidth: 10px;
   color: $cf-dark;
   text-align: center;
   background-color: white;
+  @include media-breakpoint-down(md) { display: none; }
 }
 
 .tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
@@ -380,6 +381,7 @@ $scrollbarWidth: 10px;
   content: "";
   border-width: 5px 5px 0;
   border-top-color: white;
+  @include media-breakpoint-down(md) { display: none; }
 }
 
 .tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
@@ -387,6 +389,7 @@ $scrollbarWidth: 10px;
   content: "";
   border-width: 5px 5px 5px 0;
   border-right-color: white;
+  @include media-breakpoint-down(md) { display: none; }
 }
 
 .tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
@@ -394,6 +397,7 @@ $scrollbarWidth: 10px;
   content: "";
   border-width: 0 5px 5px;
   border-bottom-color: white;
+  @include media-breakpoint-down(md) { display: none; }
 }
 
 .tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
@@ -402,6 +406,7 @@ $scrollbarWidth: 10px;
   content: "";
   border-width: 5px 0 5px 5px;
   border-left-color: white;
+  @include media-breakpoint-down(md) { display: none; }
 }
 
 
