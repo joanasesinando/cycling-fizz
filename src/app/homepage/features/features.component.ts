@@ -35,8 +35,4 @@ export class FeaturesComponent implements OnInit {
     this.mobileView = window.innerWidth <= 991.98;
     if(this.doChangeFading) this.changeFading();
   }
-
-  public getDay() {
-    return (new Date()).getDate();
-  }
 }

@@ -1,5 +1,4 @@
 import {Component, Input, OnInit} from '@angular/core';
-import {DomSanitizer, SafeUrl} from '@angular/platform-browser';
 
 
 export enum IconsFeaturesEnum {
@@ -19,22 +18,14 @@ export enum IconsFeaturesEnum {
 
 export class FCardComponent implements OnInit {
 
-  safeIconSrc : SafeUrl;
-  @Input()
-  set icon(icon : IconsFeaturesEnum) {
-    if (icon == IconsFeaturesEnum.Calendar) {
-      this.safeIconSrc = this.sanitizer.bypassSecurityTrustUrl(icon.replace("[day]", this.getDay()));
-    } else {
-      this.safeIconSrc = this.sanitizer.bypassSecurityTrustUrl(icon);
-    }
-  }
+  IconsFeatures = IconsFeaturesEnum;
 
-  @Input() img : any;
+  @Input() icon: IconsFeaturesEnum;
   @Input() title : string;
   @Input() description: string;
   @Input() routerLink: string = "/404";
 
-  constructor(private sanitizer: DomSanitizer) { }
+  constructor() { }
 
   getDay() : string {
     let day = (new Date()).getDate().toString();

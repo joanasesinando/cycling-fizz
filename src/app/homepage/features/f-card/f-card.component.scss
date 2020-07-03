@@ -30,3 +30,12 @@
 a {
   text-decoration: none;
 }
+
+.calendar-number span {
+  font-family: quicksand-bold, sans-serif;
+  font-size: 1.5rem;
+  position: absolute;
+  margin-top: .3rem;
+  letter-spacing: .1rem;
+  color: #40596B;
+}
