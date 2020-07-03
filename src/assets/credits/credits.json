@@ -5,8 +5,7 @@
       "by": "pikisuperstar",
       "byUrl": "https://www.freepik.com/pikisuperstar",
       "from": "www.freepik.com",
-      "fromUrl": "https://www.freepik.com/free-vector/outdoor-activities-landing-page-template_4862843.htm",
-      "circle": true
+      "fromUrl": "https://www.freepik.com/free-vector/outdoor-activities-landing-page-template_4862843.htm"
     }
   ],
 
@@ -16,56 +15,49 @@
       "by": "flaticon",
       "byUrl": "https://www.flaticon.com",
       "from": "www.freepik.com",
-      "fromUrl": "https://www.freepik.com/free-icon/blogger-logo_749187.htm#query=blog&position=6",
-      "circle": false
+      "fromUrl": "https://www.freepik.com/free-icon/blogger-logo_749187.htm#query=blog&position=6"
     },
     {
       "img": "../../../../assets/images/navbar/icons/calendar.svg",
       "by": "freepik",
       "byUrl": "https://www.freepik.com",
       "from": "www.flaticon.com",
-      "fromUrl": "https://www.flaticon.com/free-icon/calendar_833593",
-      "circle": false
+      "fromUrl": "https://www.flaticon.com/free-icon/calendar_833593"
     },
     {
       "img": "../../../../assets/images/navbar/icons/idea.svg",
       "by": "freepik",
       "byUrl": "https://www.freepik.com",
       "from": "www.flaticon.com",
-      "fromUrl": "https://www.flaticon.com/free-icon/idea_107788",
-      "circle": false
+      "fromUrl": "https://www.flaticon.com/free-icon/idea_107788"
     },
     {
       "img": "../../../../assets/images/navbar/icons/envelope.svg",
       "by": "Those Icons",
       "byUrl": "https://www.flaticon.com/authors/those-icons",
       "from": "www.flaticon.com",
-      "fromUrl": "https://www.flaticon.com/free-icon/envelope_481658",
-      "circle": false
+      "fromUrl": "https://www.flaticon.com/free-icon/envelope_481658"
     },
     {
       "img": "../../../../assets/images/navbar/icons/portugues.svg",
       "by": "freepik",
       "byUrl": "https://www.freepik.com",
       "from": "www.flaticon.com",
-      "fromUrl": "https://www.flaticon.com/free-icon/portugal_197463",
-      "circle": false
+      "fromUrl": "https://www.flaticon.com/free-icon/portugal_197463"
     },
     {
       "img": "../../../../assets/images/navbar/icons/english.svg",
       "by": "freepik",
       "byUrl": "https://www.freepik.com",
       "from": "www.flaticon.com",
-      "fromUrl": "https://www.flaticon.com/free-icon/united-kingdom_197374",
-      "circle": false
+      "fromUrl": "https://www.flaticon.com/free-icon/united-kingdom_197374"
     },
     {
       "img": "../../../../assets/images/navbar/icons/français.svg",
       "by": "freepik",
       "byUrl": "https://www.freepik.com",
       "from": "www.flaticon.com",
-      "fromUrl": "https://www.flaticon.com/free-icon/france_197560",
-      "circle": false
+      "fromUrl": "https://www.flaticon.com/free-icon/france_197560"
     }
   ],
 
@@ -130,28 +122,88 @@
 
   "map": [
     {
-      "img": "../../../../assets/images/map/icons/bikelane.svg",
+      "img": "../../../../assets/images/map/icons/icon-bikelane.svg",
       "by": "freepik",
       "byUrl": "https://www.freepik.com",
       "from": "www.flaticon.com",
-      "fromUrl": "https://www.flaticon.com/free-icon/racing_383515",
-      "circle": false
+      "fromUrl": "https://www.flaticon.com/free-icon/bikes_1866499"
     },
     {
-      "img": "../../../../assets/images/map/icons/parking.svg",
+      "img": "../../../../assets/images/map/icons/icon-parking.svg",
       "by": "freepik",
       "byUrl": "https://www.freepik.com",
       "from": "www.flaticon.com",
-      "fromUrl": "https://www.flaticon.com/free-icon/bike-parking_382315",
-      "circle": false
+      "fromUrl": "https://www.flaticon.com/free-icon/bike-parking_382315"
     },
     {
-      "img": "../../../../assets/images/map/icons/store.svg",
+      "img": "../../../../assets/images/map/icons/icon-store.svg",
       "by": "Smashicons",
       "byUrl": "https://www.flaticon.com/authors/smashicons",
       "from": "www.flaticon.com",
-      "fromUrl": "https://www.flaticon.com/free-icon/bike-shop_1818802",
-      "circle": false
+      "fromUrl": "https://www.flaticon.com/free-icon/bike-shop_1818802"
+    },
+    {
+      "img": "../../../../assets/images/map/icons/map-element/parking.svg",
+      "by": "monkik",
+      "byUrl": "https://www.flaticon.com/authors/monkik",
+      "from": "www.flaticon.com",
+      "fromUrl": "https://www.flaticon.com/free-icon/parking_1575941"
+    },
+    {
+      "img": "../../../../assets/images/map/icons/map-element/security.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.flaticon.com",
+      "fromUrl": "https://www.flaticon.com/free-icon/padlock_747305"
+    },
+    {
+      "img": "../../../../assets/images/map/icons/map-element/environment.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.flaticon.com",
+      "fromUrl": "https://www.flaticon.com/free-icon/bike_896977"
+    },
+    {
+      "img": "../../../../assets/images/map/icons/map-element/access.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.flaticon.com",
+      "fromUrl": "https://www.flaticon.com/free-icon/access_1725528"
+    },
+    {
+      "img": "../../../../assets/images/map/icons/map-element/covered.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.flaticon.com",
+      "fromUrl": "https://www.flaticon.com/free-icon/parking_1286823"
+    },
+    {
+      "img": "../../../../assets/images/map/icons/map-element/spacious.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.flaticon.com",
+      "fromUrl": "https://www.flaticon.com/free-icon/width_815509"
+    },
+    {
+      "img": "../../../../assets/images/map/icons/map-element/supervised.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.flaticon.com",
+      "fromUrl": "https://www.flaticon.com/free-icon/casino-cctv_82669"
+    },
+    {
+      "img": "../../../../assets/images/map/icons/map-element/visible.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.flaticon.com",
+      "fromUrl": "https://www.flaticon.com/free-icon/witness_2210317"
+    },
+    {
+      "img": "../../../../assets/images/map/icons/map-element/light.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.flaticon.com",
+      "fromUrl": "https://www.flaticon.com/free-icon/idea_107788"
     }
   ],
 
@@ -161,24 +213,31 @@
       "by": "freepik",
       "byUrl": "https://www.freepik.com",
       "from": "www.freepik.com",
-      "fromUrl": "https://www.freepik.com/free-vector/brainstorming-concept-landing-page_5754890.htm",
-      "circle": false
+      "fromUrl": "https://www.freepik.com/free-vector/brainstorming-concept-landing-page_5754890.htm"
     },
     {
       "img": "../../../../assets/images/the-project/girl-working.svg",
       "by": "pikisuperstar",
       "byUrl": "https://www.freepik.com/pikisuperstar",
       "from": "www.freepik.com",
-      "fromUrl": "https://www.freepik.com/free-vector/programmer-desktop-working-illustration_5694682.htm",
-      "circle": false
+      "fromUrl": "https://www.freepik.com/free-vector/programmer-desktop-working-illustration_5694682.htm"
     },
     {
       "img": "../../../../assets/images/the-project/guy-cycling.svg",
       "by": "freepik",
       "byUrl": "https://www.freepik.com",
       "from": "www.freepik.com",
-      "fromUrl": "https://www.freepik.com/free-vector/flat-delivery-boy-bike-background_4424625.htm",
-      "circle": false
+      "fromUrl": "https://www.freepik.com/free-vector/flat-delivery-boy-bike-background_4424625.htm"
+    }
+  ],
+
+  "contact": [
+    {
+      "img": "../../../../assets/images/contact/contact.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.freepik.com",
+      "fromUrl": "https://www.freepik.com/free-vector/brainstorming-concehttps://www.freepik.com/free-vector/new-message-concept-landing-page_5777076.htm"
     }
   ]
 }
