@@ -16,6 +16,7 @@ export class CreditsAccordionComponent implements OnInit {
 
   login: {img: string, by: string, byUrl: string, from: string, fromUrl: string}[] = creditsInfo.login;
   navbar: {img: string, by: string, byUrl: string, from: string, fromUrl: string}[] = creditsInfo.navbar;
+  page_not_found: {img: string, by: string, byUrl: string, from: string, fromUrl: string}[] = creditsInfo.pageNotFound;
 
   orderedItems;
 
@@ -29,6 +30,7 @@ export class CreditsAccordionComponent implements OnInit {
       ['navbar.about.dropdown.contact', this.contact],
       ['Login', this.login],
       ['Navbar', this.navbar],
+      ['page404.title', this.page_not_found],
     ];
   }
 

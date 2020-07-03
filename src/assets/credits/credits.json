@@ -239,5 +239,15 @@
       "from": "www.freepik.com",
       "fromUrl": "https://www.freepik.com/free-vector/brainstorming-concehttps://www.freepik.com/free-vector/new-message-concept-landing-page_5777076.htm"
     }
+  ],
+
+  "pageNotFound": [
+    {
+      "img": "../../../../assets/images/404/crash.svg",
+      "by": "freepik",
+      "byUrl": "https://www.freepik.com",
+      "from": "www.freepik.com",
+      "fromUrl": "https://www.freepik.com/free-vector/hand-drawn-people-floating-background_3891390.htm"
+    }
   ]
 }
