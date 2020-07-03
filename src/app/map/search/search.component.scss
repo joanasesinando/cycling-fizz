@@ -16,7 +16,7 @@ form {
   }
 
   .form-control {
-    font-family: quicksand-regular, sans-serif;
+    font-family: quicksand-regular, sans-serif, sans-serif;
     width: 15rem;
     padding: 1rem 2.5rem 1rem 2.5rem;
     border-radius: 3rem;
@@ -31,23 +31,7 @@ form {
 
   .clear {
     position: absolute;
-    right: 2.3rem;
-    background: none;
-    border: none;
-    color: $cf-gray;
-
-    span {
-      font-size: 1.5rem;
-      line-height: 1.5rem;
-    }
-
-    &:hover {
-      color: $cf-dark;
-    }
-
-    &:focus {
-      outline: none;
-    }
+    right: 2rem;
   }
 }
 
