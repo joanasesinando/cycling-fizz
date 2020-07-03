@@ -34,7 +34,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
     });
 
     let t = this;
-    this.map.on('load', () => { t.onMapLoaded();} );
+    this.map.on('load', () => {this.map.resize(); t.onMapLoaded();} );
     this.map.on('click', 'cyclewaysLayer',(e) => { t.onCyclewaysLayerClick(e) });
     this.map.on('mouseenter', 'cyclewaysLayer',() => { t.onMouseEnterCyclewaysLayer() });
     this.map.on('mouseleave', 'cyclewaysLayer',() => { t.onMouseExitCyclewaysLayer() });
