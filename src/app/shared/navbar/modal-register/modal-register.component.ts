@@ -111,6 +111,6 @@ export class ModalRegisterComponent implements OnInit {
 
   verifyEmail() {  //fixme translate
     this.authFirebaseService.sendEmailVerification();
-    this.toastrService.warning("Verifica a tua conta através do e-mail que te enviámos", "Email de verificação enviado", {duration: 5000});
+    this.toastrService.warning("Verifica a tua conta através do e-mail que te enviámos", "Email de verificação enviado", {duration: 0});
   }
 }
