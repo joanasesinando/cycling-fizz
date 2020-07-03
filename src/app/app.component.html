@@ -1,5 +1,5 @@
 <app-navbar *ngIf="_router.url != '/404' && !(_router.url.includes('coming-soon'))"></app-navbar>
 <nb-layout></nb-layout>
 <router-outlet (activate)="onActivate($event)"></router-outlet>
-<!--<app-footer *ngIf="_router.url != '/404' && _router.url != '/map' && !(_router.url.includes('coming-soon'))"></app-footer>-->
+<app-footer *ngIf="_router.url != '/404' && _router.url != '/map' && !(_router.url.includes('coming-soon'))"></app-footer>
 

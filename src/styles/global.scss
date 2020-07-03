@@ -55,7 +55,11 @@
 .text-pink { color: $cf-pink; }
 
 
-html, body { scroll-behavior: smooth; }
+html, body {
+  scroll-behavior: smooth;
+  height: 100%;
+}
+
 button:focus { outline: none; }
 
 .cursor-hover:hover {

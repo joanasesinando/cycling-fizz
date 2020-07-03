@@ -226,7 +226,7 @@
 
   border: none;
   border-radius: $border-radius;
-  //height: 95vh;
+  height: 95vh;
 
   nb-card-header.map-element-header {
     border-top-left-radius: $border-radius;
@@ -275,12 +275,12 @@ $sidebar-width-mobile: 280px;
 
 
 .nb-theme-default nb-sidebar.expanded.map-filters {
-  //position: absolute;
   width: $sidebar-width;
   @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
   z-index: 5;
 
   .main-container {
+    height: 100%;
     width: $sidebar-width;
     @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
   }

@@ -6,22 +6,17 @@
 @import "~bootstrap/scss/mixins";
 
 section {
-  //height: 100vh;
   position: relative;
   height: calc(100% - 4rem);
-  width: 100%;
   top: 4rem;
-  background-color: red;
+
 
 
   .contents {
     position: relative;
-    height: calc(100%);
-    width: 100%;
-    background-color: green;
+    height: 100%;
 
     #orangeBar {
-      //visibility: hidden; //fixme remove
       position: relative;
       background: $cf-gradient-orange;
       height: 3.5rem;
@@ -32,17 +27,15 @@ section {
       .filter-icon { font-size: 1.5rem; }
     }
 
-    #mapStuff {
-      top: 3.5rem;
-      height: calc(100% - 3.5rem);
-      background-color: orange;
 
+    .map-filters {
+      position: absolute;
+      height: 100%
     }
-
 
     #mapbox {
       position: relative;
-      height: 100%;
+      height: calc(100% - 3.5rem);
     }
   }
 }
