@@ -1,6 +1,4 @@
 import {Component, HostListener, Input, OnInit} from '@angular/core';
-import { IconsFeaturesEnum } from './f-card/f-card.component';
-
 
 
 @Component({
@@ -10,7 +8,6 @@ import { IconsFeaturesEnum } from './f-card/f-card.component';
 })
 export class FeaturesComponent implements OnInit {
 
-  IconsFeatures = IconsFeaturesEnum;
   mobileView: boolean = false;
 
   //flag so the function doesn't run on construction bc it wouldn't be able to find #features-container

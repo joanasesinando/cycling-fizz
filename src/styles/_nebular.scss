@@ -20,6 +20,7 @@
   @include nb-sidebar-theme;
   @include nb-menu-theme;
   @include nb-context-menu-theme;
+  @include nb-accordion-theme;
 };
 
 
@@ -302,3 +303,23 @@ $sidebar-width-mobile: 280px;
  * ------------------------------------------------------------------- */
 
 .nb-theme-default .cdk-overlay-container { z-index: 1050; }
+
+
+
+/* ===================================================================
+ *  accordion
+ *
+ * ------------------------------------------------------------------- */
+
+.nb-theme-default nb-accordion {
+  box-shadow: none;
+
+  nb-accordion-item {
+    background-color: $cf-lightGray;
+    border: none;
+    border-radius: .25rem;
+    margin-bottom: .5rem;
+  }
+
+  //nb-accordion-item-header { border: none; }
+}

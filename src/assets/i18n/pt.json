@@ -89,6 +89,11 @@
 
   },
 
+  "credits": {
+    "by": "Por",
+    "from": "de"
+  },
+
   "newsletter": {
     "placeholder": "Introduz o teu e-mail...",
     "disclaimer": "Nunca partilharemos os teus dados com mais ninguém.",

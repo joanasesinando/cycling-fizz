@@ -86,6 +86,11 @@
     }
   },
 
+  "credits": {
+    "by": "By",
+    "from": "from"
+  },
+
   "newsletter": {
     "placeholder": "Please insert your e-mail...",
     "disclaimer": "Your data will not be shared with other parties.",

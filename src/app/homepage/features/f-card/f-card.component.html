@@ -1,6 +1,19 @@
-<a routerLink="{{routerLink}}">
+<a *ngIf="id != 'calendar'" routerLink="{{routerLink}}">
     <div class="card pt-4 shadow h-100">
-        <img [src]="safeIconSrc" class="card-img-top " alt="Section icon">
+        <img src="{{iconSrc}}" class="card-img-top " alt="Section icon">
+        <div class="card-body text-center">
+            <h5 class="card-title font-qks-bold text-dark-header">{{title}}</h5>
+            <p class="card-text font-qks-regular text-dark-black d-none d-lg-block">{{description}}</p>
+        </div>
+    </div>
+</a>
+
+<a *ngIf="id === 'calendar'" routerLink="{{routerLink}}">
+    <div class="card pt-4 shadow h-100">
+        <div class="calendar-number d-flex justify-content-center align-items-center">
+            <span>{{day}}</span>
+            <img src="{{iconSrc}}" class="card-img-top " alt="Section icon">
+        </div>
         <div class="card-body text-center">
             <h5 class="card-title font-qks-bold text-dark-header">{{title}}</h5>
             <p class="card-text font-qks-regular text-dark-black d-none d-lg-block">{{description}}</p>
