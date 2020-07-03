@@ -29,24 +29,26 @@
         </div>
 
 
-        <!-- Map -->
-        <nb-layout>
-            <nb-sidebar class="map-filters" state="collapsed" [containerFixed]="false">
-                <app-filters [filters]="filters" (onCloseBtnClicked)="toggleSidebar()"></app-filters>
-            </nb-sidebar>
+        <div>
+            <app-filters [filters]="filters" (onCloseBtnClicked)="toggleSidebar()"></app-filters>
+        </div>
 
-            <nb-layout-column>
-                <div id="mapbox">
-                    <app-mapbox
-                        (bikeLaneClicked)="openBikelaneDialog($event)"
 
-                    ></app-mapbox>
-                    <button nbButton hero status="danger" style="position: absolute; bottom: 2rem; left: 1rem;" tabIndex="-1"
-                            (click)="open(mapElementDialog)">Abrir elemento</button>
-                    <app-btn-floating></app-btn-floating>
-                </div>
-            </nb-layout-column>
-        </nb-layout>
+<!--        <div id="mapStuff">-->
+<!--            &lt;!&ndash; Map &ndash;&gt;-->
+<!--            <div id="mapbox">-->
+<!--                <app-mapbox-->
+<!--                        (bikeLaneClicked)="openBikelaneDialog($event)"-->
+
+<!--                ></app-mapbox>-->
+<!--                <button nbButton hero status="danger" style="position: absolute; bottom: 2rem; left: 1rem;" tabIndex="-1"-->
+<!--                        (click)="open(mapElementDialog)">Abrir elemento</button>-->
+<!--                <app-btn-floating></app-btn-floating>-->
+<!--            </div>-->
+<!--        </div>-->
+
+
+
 
     </div>
 
