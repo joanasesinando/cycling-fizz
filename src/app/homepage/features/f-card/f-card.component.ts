@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 
-
 export enum IconsFeaturesEnum {
   Beginner = "../../../assets/images/homepage/features/icons/beginner.svg",
   Calendar = "../../../assets/images/homepage/features/icons/calendar.svg",
@@ -9,6 +8,7 @@ export enum IconsFeaturesEnum {
   Route = "../../../assets/images/homepage/features/icons/route.svg",
   TrafficLight = "../../../assets/images/homepage/features/icons/traffic-light.svg"
 }
+
 
 @Component({
   selector: 'app-f-card',
@@ -32,7 +32,6 @@ export class FCardComponent implements OnInit {
     return (day.length == 1) ? "0" + day : day;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

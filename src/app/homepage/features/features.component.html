@@ -12,7 +12,7 @@
                 <div class="row my-5 justify-content-around">
                     <div class="col-6">
                         <app-f-card
-                                [icon]="IconsFeatures.Map"
+                                [id]="'map'"
                                 [title]="'homepage.features.map.title' | translate"
                                 [description]="'homepage.features.map.text' | translate"
                                 [routerLink]="'/map'">
@@ -20,7 +20,7 @@
                     </div>
                     <div class="col-6">
                         <app-f-card
-                                [icon]="IconsFeatures.TrafficLight"
+                                [id]="'traffic-rules'"
                                 [title]="'homepage.features.rules.title' | translate"
                                 [description]="'homepage.features.rules.text' | translate"
                                 [routerLink]="'/traffic-rules'">
@@ -31,7 +31,7 @@
                 <div class="row my-5 justify-content-around">
                     <div class="col-6">
                         <app-f-card
-                                [icon]="IconsFeatures.Route"
+                                [id]="'routes'"
                                 [title]="'homepage.features.routes.title' | translate"
                                 [description]="'homepage.features.routes.text' | translate"
                                 [routerLink]="'/routes'">
@@ -39,7 +39,7 @@
                     </div>
                     <div class="col-6">
                         <app-f-card
-                                [icon]="IconsFeatures.Beginner"
+                                [id]="'beginner'"
                                 [title]="'homepage.features.beginner.title' | translate"
                                 [description]="'homepage.features.beginner.text' | translate"
                                 [routerLink]="'/beginner'">
@@ -50,14 +50,14 @@
                 <div class="row my-5 justify-content-around">
                     <div class="col-6">
                         <app-f-card
-                                [icon]="IconsFeatures.Forum"
+                                [id]="'forum'"
                                 [title]="'homepage.features.forum.title' | translate"
                                 [description]="'homepage.features.forum.text' | translate"> <!-- fixme add routerlink -->
                         </app-f-card>
                     </div>
                     <div class="col-6">
                         <app-f-card
-                                [icon]="IconsFeatures.Calendar"
+                                [id]="'calendar'"
                                 [title]="'homepage.features.events.title' | translate"
                                 [description]="'homepage.features.events.text' | translate"> <!-- fixme add routerlink -->
                         </app-f-card>

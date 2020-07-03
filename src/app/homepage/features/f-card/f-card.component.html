@@ -1,4 +1,4 @@
-<a routerLink="{{routerLink}}">
+<a *ngIf="id != 'calendar'" routerLink="{{routerLink}}">
     <div class="card pt-4 shadow h-100">
 
         <img *ngIf="icon != IconsFeatures.Calendar" [src]="icon" class="card-img-top " alt="Section icon">
