@@ -1,0 +1,11 @@
+@import "~styles/colors";
+@import "~styles/mixins";
+
+@import "~bootstrap/scss/functions";
+@import "~bootstrap/scss/variables";
+@import "~bootstrap/scss/mixins";
+
+
+img { width: 2rem; }
+
+a:hover { color: $cf-orange; }

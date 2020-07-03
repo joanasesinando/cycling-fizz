@@ -40,8 +40,9 @@ import {
     NbLayoutModule,
     NbToggleModule,
     NbUserModule,
-    NbContextMenuModule
+    NbContextMenuModule, NbAccordionModule
 } from '@nebular/theme';
+import { CreditsItemComponent } from './credits/credits-item/credits-item.component';
 
 
 
@@ -68,7 +69,8 @@ import {
     NgInitDirective,
     SwitchComponent,
     CheckboxComponent,
-    DialogComponent
+    DialogComponent,
+    CreditsItemComponent
   ],
     imports: [
         CommonModule,
@@ -84,7 +86,8 @@ import {
         NbCheckboxModule,
         NbCardModule,
         NbUserModule,
-        NbContextMenuModule
+        NbContextMenuModule,
+        NbAccordionModule
     ],
     exports: [
         NavbarComponent,
