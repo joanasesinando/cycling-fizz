@@ -6,13 +6,15 @@
 @import "~bootstrap/scss/mixins";
 
 section {
-  height: 100vh;
-  min-height: 750px;
-  overflow: hidden;
+  position: relative;
+  height: calc(100% - 4rem);
+  top: 4rem;
+
+
 
   .contents {
     position: relative;
-    top: 4rem;
+    height: 100%;
 
     #orangeBar {
       position: relative;
@@ -25,9 +27,15 @@ section {
       .filter-icon { font-size: 1.5rem; }
     }
 
+
+    .map-filters {
+      position: absolute;
+      height: 100%
+    }
+
     #mapbox {
       position: relative;
-      height: calc(100vh - 4rem - 3.5rem);
+      height: calc(100% - 3.5rem);
     }
   }
 }

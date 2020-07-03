@@ -272,15 +272,15 @@
 $sidebar-width: 300px;
 $sidebar-width-mobile: 280px;
 
+
+
 .nb-theme-default nb-sidebar.expanded.map-filters {
-  position: absolute;
-  height: calc(100vh - 4rem - 3.5rem);
   width: $sidebar-width;
   @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
   z-index: 5;
 
   .main-container {
-    height: calc(100vh - 4rem - 3.5rem);
+    height: 100%;
     width: $sidebar-width;
     @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
   }
