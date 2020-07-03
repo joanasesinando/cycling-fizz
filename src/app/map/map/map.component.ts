@@ -53,7 +53,7 @@ export class MapComponent implements OnInit, AfterViewInit {
 
   constructor(private sidebarService: NbSidebarService, private dialogService: NbDialogService) {
       // FIXME: retirar isto após ligação ao server done
-      this.type = "bkl";
+      this.type = "prk";
       this.name = "Avenida Fontes Pereira de Melo";
       this.lat = 38.7353927;
       this.lng = -9.1388712;

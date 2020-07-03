@@ -250,12 +250,16 @@
     color: $cf-dark;
   }
 
-  nb-icon {
+  nb-icon.help,
+  nb-icon.star {
     font-size: 1.1rem;
-    color: #8f9bb3;
-    &.star { color: $cf-yellow; }
-    &.star.not-filled { color: #DDDDDD; }
   }
+
+  nb-icon.help { color: #8f9bb3; }
+  nb-icon.star { color: $cf-yellow; }
+  nb-icon.star.not-filled { color: #DDDDDD; }
+
+  nb-icon { font-size: 1.5rem; }
 }
 
 
