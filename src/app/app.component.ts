@@ -1,5 +1,6 @@
 import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
+import * as $ from 'jquery'; //don't delete... believe me
 import * as AOS from 'aos';
 
 @Component({
