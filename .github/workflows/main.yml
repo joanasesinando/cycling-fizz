@@ -32,16 +32,13 @@ jobs:
 #      - name: Push Build to Releases
 #        uses: ncipollo/release-action@v1
 #        with:
-#          artifacts: "dist/cycling-fizz/*"
+#          artifacts: "dist/angular-githubaction/*"
 #          token: ${{ secrets.TOKEN }}
 
       - name: FTP-Deploy-Action
-          uses: SamKirkland/FTP-Deploy-Action@3.1.1
-          env:
-            FTP_SERVER: ${{ secrets.FTP_SERVER }}
-            FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
-            FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
-            LOCAL_DIR: "dist/angular-githubaction/*"
-            METHOD: ftp
-            PORT: 21
-
+        uses: SamKirkland/FTP-Deploy-Action@3.1.1
+        with:
+          ftp-server: ftp://ftp.samkirkland.com/
+          ftp-username: myFtpUserName
+          ftp-password: ${{ secrets.FTP_PASSWORD }}
+          local-dir: "dist/angular-githubaction/*"
