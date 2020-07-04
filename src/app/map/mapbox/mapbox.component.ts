@@ -16,6 +16,8 @@ export class MapboxComponent implements OnInit, AfterViewInit {
 
   @Output() bikeLaneClicked = new EventEmitter<{}>();
 
+  clusterRadius = 35;
+
 
   constructor(private mapServerHandlerService: MapServerHandlerService) { }
 
@@ -95,7 +97,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
         data: 'assets/map/gira.geojson',
         cluster: true,
         clusterMaxZoom: 14, // Max zoom to cluster points on
-        clusterRadius: 10 // Radius of each cluster when clustering points (defaults to 50)
+        clusterRadius: this.clusterRadius // Radius of each cluster when clustering points (defaults to 50)
       });
     } else {
       this.map.addSource('giraData', {
@@ -103,7 +105,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
         data: this.mapServerHandlerService.giraURL,
         cluster: true,
         clusterMaxZoom: 14, // Max zoom to cluster points on
-        clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+        clusterRadius: this.clusterRadius // Radius of each cluster when clustering points (defaults to 50)
       });
     }
   }
@@ -115,7 +117,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
           data: 'assets/map/mobi-cascais.geojson',
           cluster: true,
           clusterMaxZoom: 14, // Max zoom to cluster points on
-          clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+          clusterRadius: this.clusterRadius // Radius of each cluster when clustering points (defaults to 50)
         });
       } else {
         this.map.addSource('mobiCascaisData', {
@@ -123,7 +125,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
           data: this.mapServerHandlerService.mobiCascaisURL,
           cluster: true,
           clusterMaxZoom: 14, // Max zoom to cluster points on
-          clusterRadius: 50 // Radius of each cluster when clustering points (defaults to 50)
+          clusterRadius: this.clusterRadius // Radius of each cluster when clustering points (defaults to 50)
         });
       }
   }
