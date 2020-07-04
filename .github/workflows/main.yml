@@ -27,7 +27,7 @@ jobs:
           npm run build --prod
 
       - name: List output files
-        run: ls
+        run: ls dist
 
 #      - name: Push Build to Releases
 #        uses: ncipollo/release-action@v1
@@ -38,7 +38,7 @@ jobs:
       - name: FTP-Deploy-Action
         uses: SamKirkland/FTP-Deploy-Action@3.1.1
         with:
-          ftp-server: ftp://ftp.samkirkland.com/
-          ftp-username: myFtpUserName
+          ftp-server: ${{ secrets.FTP_SERVER }}
+          ftp-username: ${{ secrets.FTP_USERNAME }}
           ftp-password: ${{ secrets.FTP_PASSWORD }}
           local-dir: "dist/cycling-fizz/*"
