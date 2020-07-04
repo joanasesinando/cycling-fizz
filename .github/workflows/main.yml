@@ -25,8 +25,23 @@ jobs:
         run: |
           npm i
           npm run build --prod
-      - name: Push Build to Releases
-        uses: ncipollo/release-action@v1
-        with:
-          artifacts: "dist/angular-githubaction/*"
-          token: ${{ secrets.TOKEN }}
+
+      - name: List output files
+        run: ls
+
+#      - name: Push Build to Releases
+#        uses: ncipollo/release-action@v1
+#        with:
+#          artifacts: "dist/angular-githubaction/*"
+#          token: ${{ secrets.TOKEN }}
+
+#      - name: FTP-Deploy-Action
+#          uses: SamKirkland/FTP-Deploy-Action@2.0.0
+#          env:
+#            FTP_SERVER: ${{ secrets.FTP_SERVER }}
+#            FTP_USERNAME: ${{ secrets.FTP_USERNAME }}
+#            FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+#            LOCAL_DIR: "dist/angular-githubaction/*"
+#            METHOD: ftp
+#            PORT: 21
+#            ARGS: --delete
