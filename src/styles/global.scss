@@ -420,7 +420,7 @@ $scrollbarWidth: 10px;
  *
  * ------------------------------------------------------------------- */
 
-#section-map, #section-blog {
+#section-gallery, #section-blog {
   .slide:focus { outline: none; }
   .prev-slide, .next-slide { background-repeat: no-repeat; }
 
@@ -432,7 +432,7 @@ $scrollbarWidth: 10px;
   }
 }
 
-#section-map {
+#section-gallery {
   .nav-btn { top: 45% !important; }
   .prev-slide, .next-slide { opacity: .5; }
   .prev-slide:hover, .next-slide:hover { opacity: 1; }
