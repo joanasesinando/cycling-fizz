@@ -6,69 +6,63 @@
 @import "~bootstrap/scss/mixins";
 
 
-.side-image {
-  width: 50vw;
+#section-coming-soon {
   height: 100vh;
-  background-image: url("~assets/images/coming-soon/side-img.jpg");
-  background-size: cover;
-  background-position: 50% 100%;
-  background-repeat: no-repeat;
+  width: 100vw;
+  background: $cf-gradient-orange;
 
-  p {
-    font-family: quicksand-medium, sans-serif;
-    font-size: 1.2rem;
-    letter-spacing: 0.3rem;
+  .wrapper {
+    height: calc(100vh - 6rem);
+    width: calc(100vw - 6rem);
+    @include media-breakpoint-down(md) {
+      height: calc(100vh - 4rem);
+      width: calc(100vw - 4rem);
+    }
+    @include media-breakpoint-down(sm) {
+      height: calc(100vh - 3rem);
+      width: calc(100vw - 3rem);
+    }
+
+    background-color: white;
+    border-radius: 1rem;
+
+    // center vertically & horizontally
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    @include transform(translate(-50%, -50%));
+
+    .contents {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 35vw;
+      padding-left: 5rem;
+
+      @include media-breakpoint-down(sm) {
+        left: 0;
+        transform: translate(-50%, -50%);
+        padding-left: 0;
+      }
+    }
   }
 }
 
-.countdown {
-  position: relative;
-  top: 20%;
-
-  .countdown-number,
-  .countdown-text {
-    font-family: quicksand-bold, sans-serif;
-    color: $cf-green;
-  }
-
-  .countdown-number {
-    font-size: 4rem;
-  }
-}
-
-.right-side {
+.paint {
+  position: absolute;
+  top: -.1rem;
+  right: -.6rem;
   width: 50vw;
-  height: 100vh;
-  padding-top: 4rem !important;
-
-  .logo {
-    width: 15rem;
+  @include media-breakpoint-down(md) {
+    right: -.5rem;
+    width: 70vw;
   }
-
-  .p1, .p3 {
-    font-family: quicksand-regular, sans-serif;
-  }
-  .p1, .p2 {
-    color: $cf-darkGray
-  }
-  .p1 {
-    font-size: 1.2rem;
-    letter-spacing: 0.3rem;
-    margin-top: 8rem;
-  }
-  .p2 {
-    font-family: cooper-medium, sans-serif;
-    font-size: 3.3rem;
-    letter-spacing: .2rem;
-  }
-  .p3 {
-    color: $cf-gray;
-    letter-spacing: .1rem;
-  }
+  z-index: 15;
 }
 
-.subscribeForm {
-  width: 70%;
+.title {
+  font-size: 2.7rem;
+  letter-spacing: 0.05em;
 }
 
 .social a {
@@ -94,53 +88,8 @@
 
 .email {
   font-family: quicksand-regular, sans-serif;
+  font-size: .9rem;
   letter-spacing: .1rem;
-}
 
-.mobile {
-  .side-image {
-    width: 100vw;
-    height: 75vh;
-  }
-
-  .countdown {
-    top: 5%;
-    @include media-breakpoint-only(md) {
-      top: 10%;
-    }
-    .countdown-div {
-      width: 70%;
-    }
-    .countdown-number {
-      font-size: 2.9rem;
-    }
-  }
-
-  .right-side {
-    width: 100vw;
-    height: auto;
-    .logo {
-      width: 13rem;
-    }
-    .p1 {
-      font-size: 1.1rem;
-      margin-top: 0;
-    }
-    .p2 {
-      font-size: 2rem;
-    }
-  }
-
-  .subscribeForm {
-    @include media-breakpoint-down(md) {
-      width: 80%;
-    }
-    @include media-breakpoint-down(sm) {
-      width: auto;
-    }
-  }
-
-  .email {
-    font-size: .8rem;
-  }
+  a:hover { color: $cf-orange; }
 }

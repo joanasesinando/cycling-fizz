@@ -12,7 +12,7 @@ export class NewsletterSubscribeComponent implements OnInit, AfterViewInit {
   //FontAwesome icons
   faPaperPlane = faPaperPlane;
 
-  @Input() border: boolean;
+  @Input() border: boolean = true;
 
   subEmailInput;
   subscribeBtn;

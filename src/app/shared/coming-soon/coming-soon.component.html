@@ -1,55 +1,24 @@
 <section id="section-coming-soon">
-    <div id="mainDiv" class="d-flex justify-content-between">
-        <div class="side-image">
-            <div class="countdown">
-                <p class="text-center text-purple">Faltam</p>
-                <div class="countdown-div d-flex flex-wrap justify-content-center align-items-center mr-auto ml-auto mr-lg-0 ml-lg-0">
-                    <div class="countdown-element d-flex flex-column align-items-center mx-4">
-                        <h4 id="countdown-days" class="countdown-number">00</h4>
-                        <h5 class="countdown-text">Dias</h5>
-                    </div>
-                    <div class="countdown-element d-flex flex-column align-items-center mx-4">
-                        <h4 id="countdown-hours" class="countdown-number">00</h4>
-                        <h5 class="countdown-text">Horas</h5>
-                    </div>
-                    <div class="countdown-element d-flex flex-column align-items-center mx-4">
-                        <h4 id="countdown-min" class="countdown-number">00</h4>
-                        <h5 class="countdown-text">Min</h5>
-                    </div>
-                    <div class="countdown-element d-flex flex-column align-items-center mx-4">
-                        <h4 id="countdown-seg" class="countdown-number">00</h4>
-                        <h5 class="countdown-text">Seg</h5>
-                    </div>
-                </div>
+    <div class="wrapper shadow-sm py-5 py-xl-0">
+
+        <img class="paint" src="assets/images/coming-soon/paint.svg" alt="paint">
+
+        <div class="contents d-flex flex-column align-items-center">
+            <p class="title text-dark-header font-qks-bold text-center text-uppercase">
+                <span class="text-gradient">Under<br></span>construction</p>
+
+            <p class="font-qks-regular text-gray text-center mt-5">Não percas o lançamento! Subscreve já e recebe um e-mail quando estiver disponível.</p>
+            <app-newsletter-subscribe class="w-100"></app-newsletter-subscribe>
+
+            <div class="social d-flex justify-content-center justify-content-lg-start mt-5">
+                <a href="#" class="mx-2"><fa-icon [icon]="faFacebookF" id="fb" class="fa-lg"></fa-icon></a>
+                <a href="#" class="mx-2"><fa-icon [icon]="faTwitter" id="tt" class="fa-lg"></fa-icon></a>
+                <a href="#" class="mx-2"><fa-icon [icon]="faInstagram" id="ig" class="fa-lg"></fa-icon></a>
+                <a href="#" class="mx-2"><fa-icon [icon]="faYoutube" id="yt" class="fa-lg"></fa-icon></a>
             </div>
+            <p class="email text-gray text-center mt-4"><b>O nosso e-mail: </b>
+                <a class="text-dark-gray" href="mailto:contacto@cyclingfizz.pt">contacto@cyclingfizz.pt</a></p>
         </div>
-        <div class="right-side d-flex flex-column align-items-center p-3 p-lg-0">
-            <a *ngIf="!mobileView" href="#" routerLink="/"><img class="logo" src="../../../assets/images/coming-soon/logo.svg" alt="Cycling Fizz logo"></a>
-            <p class="p1 text-center mb-1" data-aos="fade-up">Fica atento</p>
-            <p class="p2 text-center" data-aos="zoom-in-up" data-aos-duration="500" data-aos-delay="500">Vem aí algo novo</p>
-            <p class="p3 text-center mt-4 mt-lg-0" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500">Não percas o lançamento! Subscreve já e recebe <br class="d-none d-lg-block">um
-                e-mail quando estiver disponível.</p>
 
-            <div class="subscribeForm mt-4" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1700">
-                <app-newsletter-subscribe [border]="true"></app-newsletter-subscribe>
-            </div>
-
-            <div class="social d-flex justify-content-center justify-content-lg-start pt-3 mt-5">
-                <a href="#" class="mx-2">
-                    <fa-icon [icon]="faFacebookF" id="fb" class="fa-lg"></fa-icon>
-                </a>
-                <a href="#" class="mx-2">
-                    <fa-icon [icon]="faTwitter" id="tt" class="fa-lg"></fa-icon>
-                </a>
-                <a href="#" class="mx-2">
-                    <fa-icon [icon]="faInstagram" id="ig" class="fa-lg"></fa-icon>
-                </a>
-                <a href="#" class="mx-2">
-                    <fa-icon [icon]="faYoutube" id="yt" class="fa-lg"></fa-icon>
-                </a>
-            </div>
-
-            <p class="email text-gray text-center mt-4"><b>O nosso e-mail:</b> contacto@cyclingfizz.pt</p>
-        </div>
     </div>
 </section>

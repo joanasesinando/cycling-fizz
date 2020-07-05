@@ -42,7 +42,7 @@ const routes: Routes = [
     component: CreditsComponent,
   },
   {
-    path: 'coming-soon/:page',
+    path: 'coming-soon',
     component: ComingSoonComponent,
   },
   {
