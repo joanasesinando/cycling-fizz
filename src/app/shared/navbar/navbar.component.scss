@@ -103,7 +103,11 @@ nav {
   @include media-breakpoint-up(lg) {
     .nav-item .nav-link {
       color: $cf-lightGray !important;
-      &:hover, img:hover { color: $cf-yellow !important; }
+      &:hover, img:hover {
+        background: $cf-gradient-orange;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+      }
     }
   }
 
@@ -137,7 +141,11 @@ nav {
       &:hover { cursor: pointer; }
 
       @include media-breakpoint-up(lg) {
-        &:hover, img:hover { color: $cf-orange; }
+        &:hover, img:hover {
+          background: $cf-gradient-orange;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+        }
       }
 
       @include media-breakpoint-down(md) {
@@ -148,7 +156,11 @@ nav {
   }
 }
 
-.nav-link[aria-expanded="true"]{ color: $cf-orange !important; } //FIXME remove this important
+.nav-link[aria-expanded="true"]{
+  background: $cf-gradient-orange;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
 .dropdown-menu {
   font-family: 'quicksand-regular', sans-serif;

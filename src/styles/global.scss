@@ -44,7 +44,7 @@
 .text-light-gray { color: $cf-lightGray; }
 .text-orange { color: $cf-orange; }
 .text-gradient {
-  background: linear-gradient(0deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 50%);
+  background: $cf-gradient-orange;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
