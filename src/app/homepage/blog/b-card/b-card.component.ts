@@ -14,6 +14,7 @@ export class BCardComponent implements OnInit {
   @Input() title : string;
   @Input() nrComments : number;
   @Input() nrLikes : number;
+  @Input() link : string;
 
   //FontAwesome icons
   faComments = faComments;
