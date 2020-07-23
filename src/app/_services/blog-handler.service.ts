@@ -5,7 +5,7 @@ import { Injectable } from '@angular/core';
 })
 export class BlogHandlerService {
 
-  url: String = "http://admin.blog.cyclingfizz.pt/";
+  url: String = "https://admin.blog.cyclingfizz.pt/";
 
 
   constructor() { }
