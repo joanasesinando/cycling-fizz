@@ -73,8 +73,8 @@ export class AuthFirebaseService {
   }
 
   logout() {
-    this.afAuth.auth.signOut().then(function() {
-      // Sign-out successful.
+    this.afAuth.auth.signOut().then(() => {
+      this.serverHandlerService.logoutServer();
     }).catch(function(error) {
       // An error happened.
     });

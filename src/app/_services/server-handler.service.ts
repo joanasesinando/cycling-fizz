@@ -45,6 +45,11 @@ export class ServerHandlerService {
   }
 
 
+  logoutServer() {
+    return this.httpPost("/sessionLogout", {})
+  }
+
+
   doCompleteUserProfileRegistry(userID, userInfo:UserBasicInfo) {
     let data: {} = this.toJson(userInfo);
     data["userID"] = userID;
