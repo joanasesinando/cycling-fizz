@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
+import {ServerHandlerService} from "./server-handler.service";
 
 @Injectable({
   providedIn: 'root'
@@ -14,7 +15,7 @@ export class AuthFirebaseService {
   public auth = null;
   public db = null;
 
-  constructor(public afAuth: AngularFireAuth) {
+  constructor(public afAuth: AngularFireAuth, private serverHandlerService: ServerHandlerService) {
     let thisObj = this;
     this.auth = firebase.auth();
     this.db = firebase.firestore();
@@ -88,7 +89,7 @@ export class AuthFirebaseService {
     })
   }
 
-  doLogin(value){
+  doLoginOld(value){
     return new Promise<any>((resolve, reject) => {
       this.afAuth.auth.signInWithEmailAndPassword(value.email, value.password)
         .then(res => {
@@ -97,14 +98,24 @@ export class AuthFirebaseService {
     })
   }
 
+  doLogin(value){
+    return new Promise<any>((resolve, reject) => {
+      this.afAuth.auth.signInWithEmailAndPassword(value.email, value.password)
+        .then(res => resolve(res), err => reject(err))})
+      .then(user => {
+        return user.getIdToken().then(idToken => {
+          return this.serverHandlerService.setSessionTokenFromServer(idToken);
+      });
+      })
+  }
+  
+
   doGoogleLogin(){
     return new Promise<any>((resolve, reject) => {
       let provider = new firebase.auth.GoogleAuthProvider();
       provider.addScope('profile');
       provider.addScope('email');
-      this.afAuth.auth
-        .signInWithPopup(provider)
-        .then(res => {
+      this.afAuth.auth.signInWithPopup(provider).then(res => {
           resolve(res);
         })
     })

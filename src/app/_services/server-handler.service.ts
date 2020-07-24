@@ -37,6 +37,14 @@ export class ServerHandlerService {
   }
 
 
+
+  setSessionTokenFromServer(idToken) {
+    let data: {} = {idToken: idToken};
+
+    return this.httpPost("/sessionLogin", data)
+  }
+
+
   doCompleteUserProfileRegistry(userID, userInfo:UserBasicInfo) {
     let data: {} = this.toJson(userInfo);
     data["userID"] = userID;
