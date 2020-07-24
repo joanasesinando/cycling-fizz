@@ -90,7 +90,7 @@ export class ModalLoginComponent implements OnInit {
   }
 
   tryLogin(value) {
-    this.authFirebaseService.doLoginOld(value).then(res => {
+    this.authFirebaseService.doLogin(value).then(res => {
       // console.log(res);
       // console.log("Login successful");
       this.loginSuccessful();
