@@ -9,7 +9,7 @@ export class MapServerHandlerService {
 
   // url :String = "https://cfservertest.cf";
   // private url = "https://map.cfservertest.cf";
-  private url: String = "https://map.server.cyclingfizz.py";
+  private url: String = "https://map.server.cyclingfizz.pt";
   public giraURL = this.url + "/get-gira";
   public mobiCascaisURL = this.url + "/get-mobi-cascais";
 

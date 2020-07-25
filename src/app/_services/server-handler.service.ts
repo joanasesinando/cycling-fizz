@@ -16,7 +16,7 @@ export interface UserBasicInfo {
 export class ServerHandlerService {
 
 
-  url: String = "https://auth.server.cyclingfizz.py";
+  url: String = "https://auth.server.cyclingfizz.pt";
   // url :String = "https://localhost:5000";
 
 
