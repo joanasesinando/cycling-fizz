@@ -69,36 +69,36 @@ export class ModalRegisterComponent implements OnInit {
     }
   }
 
-  tryRegister(value){
-    this.authFirebaseService.doRegister(value)
-        .then(res => {
-          // console.log("-----------------------------------");
-          // console.log(res.user);
-          // console.log("-----------------------------------");
-          // this.onRegisterClicked.emit();
-          this.verifyEmail();
-          this.changeCurrentModal.emit(Modals.CompleteRegister)
-        }, err => {
-          this.errorInRegistrationToastr(err.message);
-        })
+  tryRegister(value){ //todo activate
+    // this.authFirebaseService.doRegister(value)
+    //     .then(res => {
+    //       // console.log("-----------------------------------");
+    //       // console.log(res.user);
+    //       // console.log("-----------------------------------");
+    //       // this.onRegisterClicked.emit();
+    //       this.verifyEmail();
+    //       this.changeCurrentModal.emit(Modals.CompleteRegister)
+    //     }, err => {
+    //       this.errorInRegistrationToastr(err.message);
+    //     })
   }
 
-  tryRegisterWithGoogle(){
-    this.authFirebaseService.doGoogleLogin().then(res => {
-      if (res.additionalUserInfo.isNewUser) {
-        // this.onRegisterClicked.emit();
-        this.changeCurrentModal.emit(Modals.CompleteRegister)
-      } else {
-        this.loginSuccessfulToastr();
-        this.closeThisModal();
-      }
-      // console.log(res);
-      // console.log("Login successful");
-    }, err => {
-      // console.log(err.message);
-      // console.log(err);
-      this.errorInRegistrationToastr(err.message);
-    });
+  tryRegisterWithGoogle(){ //todo activate
+    // this.authFirebaseService.doGoogleLogin().then(res => {
+    //   if (res.additionalUserInfo.isNewUser) {
+    //     // this.onRegisterClicked.emit();
+    //     this.changeCurrentModal.emit(Modals.CompleteRegister)
+    //   } else {
+    //     this.loginSuccessfulToastr();
+    //     this.closeThisModal();
+    //   }
+    //   // console.log(res);
+    //   // console.log("Login successful");
+    // }, err => {
+    //   // console.log(err.message);
+    //   // console.log(err);
+    //   this.errorInRegistrationToastr(err.message);
+    // });
   }
 
   errorInRegistrationToastr(errorMsg :string) { //fixme translate
@@ -110,7 +110,7 @@ export class ModalRegisterComponent implements OnInit {
   }
 
   verifyEmail() {  //fixme translate
-    this.authFirebaseService.sendEmailVerification();
+    // this.authFirebaseService.sendEmailVerification(); //todo activate
     this.toastrService.warning("Verifica a tua conta através do e-mail que te enviámos", "Email de verificação enviado", {duration: 0});
   }
 }

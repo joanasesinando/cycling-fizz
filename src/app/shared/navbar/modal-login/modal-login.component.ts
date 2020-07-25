@@ -73,20 +73,20 @@ export class ModalLoginComponent implements OnInit {
   }
 
   tryLoginWithGoogle(){
-    this.authFirebaseService.doGoogleLogin().then(res => {
-      if (res.user.metadata.a == res.user.metadata.b) {
-        // this.onNewAccount.emit();
-        this.changeCurrentModal.emit(Modals.CompleteRegister);
-      } else {
-        // console.log("Login successful");
-        this.loginSuccessful();
-      }
-
-    }, err => {
-      // console.log(err.message);
-      // console.log(err);
-      this.errorInLoginToastr(err.message);
-    });
+    // this.authFirebaseService.doGoogleLogin().then(res => { //todo activate
+    //   if (res.user.metadata.a == res.user.metadata.b) {
+    //     // this.onNewAccount.emit();
+    //     this.changeCurrentModal.emit(Modals.CompleteRegister);
+    //   } else {
+    //     // console.log("Login successful");
+    //     this.loginSuccessful();
+    //   }
+    //
+    // }, err => {
+    //   // console.log(err.message);
+    //   // console.log(err);
+    //   this.errorInLoginToastr(err.message);
+    // });
   }
 
   tryLogin(value) {
@@ -103,9 +103,9 @@ export class ModalLoginComponent implements OnInit {
 
 
   loginSuccessful() {
-    if (!this.authFirebaseService.isEmailVerified()) {
-      this.verifyEmail.emit();
-    }
+    // if (!this.authFirebaseService.isEmailVerified()) { //todo activate
+    //   this.verifyEmail.emit();
+    // }
     this.loginSuccessfulToastr();
     this.closeThisModal();
   }

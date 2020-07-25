@@ -16,8 +16,8 @@ export interface UserBasicInfo {
 export class ServerHandlerService {
 
 
-  url :String = "https://cfservertest.cf";
-  // url :String = "http://localhost:5000";
+  // url :String = "https://cfservertest.cf";
+  url :String = "https://localhost:5000";
 
 
   constructor() { }
@@ -36,12 +36,32 @@ export class ServerHandlerService {
     });
   }
 
+  private httpPostCookies(path: string, data:any) {
+    let myHeaders = new Headers({
+      "Content-Type": "application/json",
+    });
+
+
+    return fetch(this.url + path, {
+      method : "POST",
+      headers: myHeaders,
+      body : JSON.stringify(data),
+      credentials: 'include',
+      mode: "cors"
+    });
+  }
+
 
 
   setSessionTokenFromServer(idToken) {
     let data: {} = {idToken: idToken};
 
-    return this.httpPost("/sessionLogin", data)
+    return this.httpPostCookies("/sessionLogin", data)
+      .then(res => {
+        console.log(res.headers.get('set-cookie')); // undefined
+        console.log(document.cookie); // nope
+        return res;
+      });
   }
 
 

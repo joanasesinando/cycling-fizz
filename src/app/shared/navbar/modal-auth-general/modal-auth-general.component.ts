@@ -35,6 +35,6 @@ export class ModalAuthGeneralComponent implements OnInit {
   }
 
   sendEmailVerification() {
-    this.authFirebaseService.sendEmailVerification()
+    // this.authFirebaseService.sendEmailVerification() //todo activate
   }
 }

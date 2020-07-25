@@ -19,9 +19,13 @@ export class AuthFirebaseService {
     let thisObj = this;
     this.auth = firebase.auth();
     this.db = firebase.firestore();
-    this.auth.onAuthStateChanged(function(user) {
-      thisObj.userChanged(user);
-    });
+
+    this.auth.setPersistence(firebase.auth.Auth.Persistence.NONE);
+
+
+    // this.auth.onAuthStateChanged(function(user) {
+    //   thisObj.userChanged(user);
+    // });
 
   }
 
@@ -29,48 +33,48 @@ export class AuthFirebaseService {
     this.auth.languageCode = code;
   }
 
-  sendEmailVerification() {
-    if (!this.isUserLogged) return;
-    this.currentUser.sendEmailVerification().then(function() {
-      console.log("Email Sent");
-    }).catch(function(error) {
-      console.log("An error happened.");
-    });
-  }
+  // sendEmailVerification() {
+  //   if (!this.isUserLogged) return;
+  //   this.currentUser.sendEmailVerification().then(function() {
+  //     console.log("Email Sent");
+  //   }).catch(function(error) {
+  //     console.log("An error happened.");
+  //   });
+  // }
+  //
+  // recoverPassword(email: string) {
+  //   this.auth.sendPasswordResetEmail(email).then(function() {
+  //     console.log("Email Sent");
+  //   }).catch(function(error) {
+  //     console.log("An error happened.");
+  //   });
+  // }
+  //
+  // isEmailVerified() {
+  //   if (!this.isUserLogged) return false;
+  //   return this.currentUser.emailVerified;
+  // }
 
-  recoverPassword(email: string) {
-    this.auth.sendPasswordResetEmail(email).then(function() {
-      console.log("Email Sent");
-    }).catch(function(error) {
-      console.log("An error happened.");
-    });
-  }
+  // userChanged(user) {
+  //   this.currentUser = user;
+  //   this.isUserLogged = !!this.currentUser;
+  //   if (this.isUserLogged) {
+  //     this.getCurrentUserIdTokenPromise().then(res => {
+  //       this.currentUserIdToken = res;
+  //     }, err => {
+  //       console.log(err);
+  //       console.log(err.message);
+  //     });
+  //   }
+  // }
 
-  isEmailVerified() {
-    if (!this.isUserLogged) return false;
-    return this.currentUser.emailVerified;
-  }
-
-  userChanged(user) {
-    this.currentUser = user;
-    this.isUserLogged = !!this.currentUser;
-    if (this.isUserLogged) {
-      this.getCurrentUserIdTokenPromise().then(res => {
-        this.currentUserIdToken = res;
-      }, err => {
-        console.log(err);
-        console.log(err.message);
-      });
-    }
-  }
-
-  private getCurrentUserIdTokenPromise() {
-    if (!this.isUserLogged) {
-      return null;
-    } else {
-      return this.currentUser.getIdToken();
-    }
-  }
+  // private getCurrentUserIdTokenPromise() {
+  //   if (!this.isUserLogged) {
+  //     return null;
+  //   } else {
+  //     return this.currentUser.getIdToken();
+  //   }
+  // }
 
   logout() {
     this.afAuth.auth.signOut().then(() => {
@@ -80,46 +84,50 @@ export class AuthFirebaseService {
     });
   }
 
-  doRegister(value){
-    return new Promise<any>((resolve, reject) => {
-      this.afAuth.auth.createUserWithEmailAndPassword(value.email, value.password)
-        .then(res => {
-          resolve(res);
-        }, err => reject(err))
-    })
-  }
+  // doRegister(value){
+  //   return new Promise<any>((resolve, reject) => {
+  //     this.afAuth.auth.createUserWithEmailAndPassword(value.email, value.password)
+  //       .then(res => {
+  //         resolve(res);
+  //       }, err => reject(err))
+  //   })
+  // }
 
-  doLoginOld(value){
-    return new Promise<any>((resolve, reject) => {
-      this.afAuth.auth.signInWithEmailAndPassword(value.email, value.password)
-        .then(res => {
-          resolve(res);
-        }, err => reject(err))
-    })
-  }
+  // doLoginOld(value){
+  //   return new Promise<any>((resolve, reject) => {
+  //     this.afAuth.auth.signInWithEmailAndPassword(value.email, value.password)
+  //       .then(res => {
+  //         resolve(res);
+  //       }, err => reject(err))
+  //   })
+  // }
 
-  doLogin(value){
+  doLogin(value) {
+    console.log("doLogin");
     return new Promise<any>((resolve, reject) => {
       this.afAuth.auth.signInWithEmailAndPassword(value.email, value.password)
         .then(res => resolve(res), err => reject(err))})
-      .then(user => {
-        return user.getIdToken().then(idToken => {
+      .then(login => {
+        console.log({"login": login});
+
+        return login.user.getIdToken().then(idToken => {
+          console.log({"idToken": idToken});
           return this.serverHandlerService.setSessionTokenFromServer(idToken);
       });
       })
   }
   
 
-  doGoogleLogin(){
-    return new Promise<any>((resolve, reject) => {
-      let provider = new firebase.auth.GoogleAuthProvider();
-      provider.addScope('profile');
-      provider.addScope('email');
-      this.afAuth.auth.signInWithPopup(provider).then(res => {
-          resolve(res);
-        })
-    })
-  }
+  // doGoogleLogin(){
+  //   return new Promise<any>((resolve, reject) => {
+  //     let provider = new firebase.auth.GoogleAuthProvider();
+  //     provider.addScope('profile');
+  //     provider.addScope('email');
+  //     this.afAuth.auth.signInWithPopup(provider).then(res => {
+  //         resolve(res);
+  //       })
+  //   })
+  // }
 
 
 
