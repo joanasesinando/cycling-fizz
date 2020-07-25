@@ -56,12 +56,7 @@ export class ServerHandlerService {
   setSessionTokenFromServer(idToken) {
     let data: {} = {idToken: idToken};
 
-    return this.httpPostCookies("/sessionLogin", data)
-      .then(res => {
-        console.log(res.headers.get('set-cookie')); // undefined
-        console.log(document.cookie); // nope
-        return res;
-      });
+    return this.httpPostCookies("/sessionLogin", data);
   }
 
 
