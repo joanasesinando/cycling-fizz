@@ -9,8 +9,8 @@ import {ServerHandlerService} from "./server-handler.service";
 })
 export class AuthFirebaseService {
 
-  public currentUser = null;
-  public currentUserIdToken = null;
+  // public currentUser = null;
+  // public currentUserIdToken = null;
   private userLogged: boolean = false;
   public auth = null;
   public db = null;

@@ -48,7 +48,7 @@ export class ModalCompleteRegistrationComponent implements OnInit {
         this.f.form.controls["inputUsername"].setErrors({ nonUnique: true });
         return;
       }
-      this.serverHandlerService.doCompleteUserProfileRegistry(this.authFirebaseService.currentUserIdToken, this.formData)
+      this.serverHandlerService.doCompleteUserProfileRegistry(this.formData)
           .then(response => {
             console.log(response);
             if (response.status != 200) {
