@@ -108,7 +108,19 @@ export class NavbarComponent implements OnInit {
   }
 
   logoutClicked() {
-    this.authFirebaseService.logout();
+    this.authFirebaseService.logout()
+      .then(res => {
+        if (res.status == "success") {
+          // success todo toastr
+        } else if (res.status == "error") {
+          if (res.code != 302) {
+            console.log(res.msg); // fail todo toastr
+          } else {
+            console.log(res.msg); // fail todo toastr
+            // window.location.href = res.link;
+          }
+        }
+      });
   }
 
 

@@ -2,6 +2,8 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import * as $ from 'jquery'; //don't delete... believe me
 import * as AOS from 'aos';
+import {ServerHandlerService} from "./_services/server-handler.service";
+import {AuthFirebaseService} from "./_services/auth-firebase.service";
 
 @Component({
   selector: 'app-root',
@@ -12,25 +14,8 @@ import * as AOS from 'aos';
 export class AppComponent implements OnInit {
   title = 'cycling-fizz';
 
-  constructor(public _router: Router){
-
-
-    let myHeaders = new Headers({
-      "Content-Type": "application/json",
-    });
-
-
-    fetch("https://auth.server.cyclingfizz.pt/checkCookie", {
-      method : "POST",
-      headers: myHeaders,
-      body : JSON.stringify({}),
-      credentials: 'include',
-      mode: "cors"
-    });
-
-
-
-
+  constructor(public _router: Router, private authFirebaseService: AuthFirebaseService){
+    this.authFirebaseService.tryLoginByCookie().then(r => console.log(r));
   }
 
   ngOnInit() {

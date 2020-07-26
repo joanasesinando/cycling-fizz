@@ -11,7 +11,7 @@ export class AuthFirebaseService {
 
   public currentUser = null;
   public currentUserIdToken = null;
-  public isUserLogged: boolean = false;
+  private userLogged: boolean = false;
   public auth = null;
   public db = null;
 
@@ -29,12 +29,16 @@ export class AuthFirebaseService {
 
   }
 
+  isUserLogged() {
+    return this.userLogged;
+  }
+
   setLanguageCode(code) {
     this.auth.languageCode = code;
   }
 
   // sendEmailVerification() {
-  //   if (!this.isUserLogged) return;
+  //   if (!this.isUserLogged()) return;
   //   this.currentUser.sendEmailVerification().then(function() {
   //     console.log("Email Sent");
   //   }).catch(function(error) {
@@ -51,14 +55,14 @@ export class AuthFirebaseService {
   // }
   //
   // isEmailVerified() {
-  //   if (!this.isUserLogged) return false;
+  //   if (!this.isUserLogged()) return false;
   //   return this.currentUser.emailVerified;
   // }
 
   // userChanged(user) {
   //   this.currentUser = user;
-  //   this.isUserLogged = !!this.currentUser;
-  //   if (this.isUserLogged) {
+  //   this.isUserLogged() = !!this.currentUser;
+  //   if (this.isUserLogged()) {
   //     this.getCurrentUserIdTokenPromise().then(res => {
   //       this.currentUserIdToken = res;
   //     }, err => {
@@ -69,7 +73,7 @@ export class AuthFirebaseService {
   // }
 
   // private getCurrentUserIdTokenPromise() {
-  //   if (!this.isUserLogged) {
+  //   if (!this.isUserLogged()) {
   //     return null;
   //   } else {
   //     return this.currentUser.getIdToken();
@@ -77,10 +81,16 @@ export class AuthFirebaseService {
   // }
 
   logout() {
-    this.afAuth.auth.signOut().then(() => {
-      this.serverHandlerService.logoutServer();
+    return this.afAuth.auth.signOut().then(() => {
+      return this.serverHandlerService.logoutServer()
+        .then(res => {
+          if (res.status == "success") {
+            this.userLogged = false;
+          }
+          return res;
+        });
     }).catch(function(error) {
-      // An error happened.
+      console.log(error);
     });
   }
 
@@ -102,19 +112,31 @@ export class AuthFirebaseService {
   //   })
   // }
 
+  tryLoginByCookie() {
+    return this.serverHandlerService.checkCookie()
+      .then(res => {
+        if (res.status == "success") {
+          this.userLogged = true;
+        }
+        return res;
+      });
+  }
+
   doLogin(value) {
-    console.log("doLogin");
     return new Promise<any>((resolve, reject) => {
       this.afAuth.auth.signInWithEmailAndPassword(value.email, value.password)
         .then(res => resolve(res), err => reject(err))})
       .then(login => {
-        console.log({"login": login});
-
         return login.user.getIdToken().then(idToken => {
-          console.log({"idToken": idToken});
-          return this.serverHandlerService.setSessionTokenFromServer(idToken);
+          return this.serverHandlerService.setSessionTokenFromServer(idToken)
+            .then(res => {
+              if (res.status == "success") {
+                this.userLogged = true;
+              }
+              return res;
+            });
+        });
       });
-      })
   }
   
 

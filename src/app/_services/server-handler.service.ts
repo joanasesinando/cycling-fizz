@@ -16,11 +16,11 @@ export interface UserBasicInfo {
 export class ServerHandlerService {
 
 
-  url: String = "https://auth.server.cyclingfizz.pt";
-  // url :String = "https://localhost:5000";
+  // url: String = "https://auth.server.cyclingfizz.pt";
+  url: String = "https://localhost:5000";
 
 
-  constructor() { }
+  constructor() {}
 
 
   private httpPost(path: string, data:any) {
@@ -52,23 +52,28 @@ export class ServerHandlerService {
   }
 
 
+  checkCookie() {
+    return this.httpPostCookies("/checkCookie", {}).then(r => r.json());
+  }
+
+
 
   setSessionTokenFromServer(idToken) {
     let data: {} = {idToken: idToken};
 
-    return this.httpPostCookies("/sessionLogin", data);
+    return this.httpPostCookies("/sessionLogin", data).then(r => r.json());
   }
 
 
   logoutServer() {
-    return this.httpPost("/sessionLogout", {})
+    return this.httpPostCookies("/sessionLogout", {}).then(r => r.json());
   }
 
 
   doCompleteUserProfileRegistry(userID, userInfo:UserBasicInfo) {
     let data: {} = this.toJson(userInfo);
     data["userID"] = userID;
-    return this.httpPost("/complete-user-profile-registry", data)
+    return this.httpPost("/complete-user-profile-registry", data);
   }
 
 

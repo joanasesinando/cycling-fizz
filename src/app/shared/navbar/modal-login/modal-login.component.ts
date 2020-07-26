@@ -7,6 +7,7 @@ import {NgForm} from '@angular/forms';
 import {AuthFirebaseService} from '../../../_services/auth-firebase.service';
 import {NbToastrService} from '@nebular/theme';
 import {Modals} from '../modal-auth-general/modal-auth-general.component';
+import {ServerHandlerService} from "../../../_services/server-handler.service";
 
 
 export interface FormObject {
@@ -41,7 +42,7 @@ export class ModalLoginComponent implements OnInit {
 
   @ViewChild('f', { static: false }) f: NgForm;
 
-  constructor(private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService) {
+  constructor(private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService, private serverHandlerService: ServerHandlerService) {
     this.formData = ({} as FormObject);
   }
 
@@ -90,19 +91,22 @@ export class ModalLoginComponent implements OnInit {
   }
 
   tryLogin(value) {
-    this.authFirebaseService.doLogin(value).then(res => {
-      // console.log(res);
-      // console.log("Login successful");
-      this.loginSuccessful();
-    }, err => {
-      // console.log(err);
-      // console.log(err.message);
-      this.errorInLoginToastr(err.message);
-    });
+    this.authFirebaseService.doLogin(value)
+      .then(res => {
+        if (res.status == "success") {
+          this.loginSuccessful();
+        } else if (res.status == "error") {
+          this.errorInLoginToastr(res.msg);
+        }
+        }, err => {
+        this.errorInLoginToastr(err.message);
+      });
   }
 
 
   loginSuccessful() {
+    this.serverHandlerService.checkCookie().then(r => console.log({r: r}));
+
     // if (!this.authFirebaseService.isEmailVerified()) { //todo activate
     //   this.verifyEmail.emit();
     // }
