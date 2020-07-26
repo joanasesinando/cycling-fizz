@@ -72,8 +72,7 @@ export class ServerHandlerService {
 
   doCompleteUserProfileRegistry(userID, userInfo:UserBasicInfo) {
     let data: {} = this.toJson(userInfo);
-    data["userID"] = userID;
-    return this.httpPost("/complete-user-profile-registry", data);
+    return this.httpPostCookies("/complete-user-profile-registry", data);
   }
 
 

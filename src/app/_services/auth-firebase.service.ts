@@ -94,14 +94,24 @@ export class AuthFirebaseService {
     });
   }
 
-  // doRegister(value){
-  //   return new Promise<any>((resolve, reject) => {
-  //     this.afAuth.auth.createUserWithEmailAndPassword(value.email, value.password)
-  //       .then(res => {
-  //         resolve(res);
-  //       }, err => reject(err))
-  //   })
-  // }
+  doRegister(value){
+    return new Promise<any>((resolve, reject) => {
+      this.afAuth.auth.createUserWithEmailAndPassword(value.email, value.password)
+        .then(res => {
+          resolve(res);
+        }, err => reject(err))
+    }).then(login => {
+      return login.user.getIdToken().then(idToken => {
+        return this.serverHandlerService.setSessionTokenFromServer(idToken)
+          .then(res => {
+            if (res.status == "success") {
+              this.userLogged = true;
+            }
+            return res;
+          });
+      });
+    });
+  }
 
   // doLoginOld(value){
   //   return new Promise<any>((resolve, reject) => {

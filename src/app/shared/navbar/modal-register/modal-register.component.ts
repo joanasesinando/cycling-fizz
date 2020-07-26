@@ -69,18 +69,14 @@ export class ModalRegisterComponent implements OnInit {
     }
   }
 
-  tryRegister(value){ //todo activate
-    // this.authFirebaseService.doRegister(value)
-    //     .then(res => {
-    //       // console.log("-----------------------------------");
-    //       // console.log(res.user);
-    //       // console.log("-----------------------------------");
-    //       // this.onRegisterClicked.emit();
-    //       this.verifyEmail();
-    //       this.changeCurrentModal.emit(Modals.CompleteRegister)
-    //     }, err => {
-    //       this.errorInRegistrationToastr(err.message);
-    //     })
+  tryRegister(value){
+    this.authFirebaseService.doRegister(value)
+        .then(res => {
+          this.verifyEmail();
+          this.changeCurrentModal.emit(Modals.CompleteRegister)
+        }, err => {
+          this.errorInRegistrationToastr(err.message);
+        })
   }
 
   tryRegisterWithGoogle(){ //todo activate
