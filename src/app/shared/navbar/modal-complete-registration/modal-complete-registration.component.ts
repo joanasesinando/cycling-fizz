@@ -1,7 +1,7 @@
 import {Component, EventEmitter, OnInit, Output, ViewChild} from '@angular/core';
 import {NgForm} from "@angular/forms";
 import {AuthFirebaseService} from "../../../_services/auth-firebase.service";
-import {ServerHandlerService} from "../../../_services/server-handler.service";
+import {AuthServerHandlerService} from "../../../_services/auth-server-handler.service";
 import {NbComponentStatus, NbGlobalPosition, NbToastrService} from "@nebular/theme";
 // import * as $ from 'jquery';
 import {Modals} from '../modal-auth-general/modal-auth-general.component';
@@ -27,7 +27,7 @@ export class ModalCompleteRegistrationComponent implements OnInit {
 
   @ViewChild('f', { static: false }) f: NgForm;
 
-  constructor(private serverHandlerService: ServerHandlerService, private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService) {
+  constructor(private authServerHandlerService: AuthServerHandlerService, private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService) {
     this.formData = ({} as FormObject);
   }
 
@@ -48,7 +48,7 @@ export class ModalCompleteRegistrationComponent implements OnInit {
         this.f.form.controls["inputUsername"].setErrors({ nonUnique: true });
         return;
       }
-      this.serverHandlerService.doCompleteUserProfileRegistry(this.formData)
+      this.authServerHandlerService.doCompleteUserProfileRegistry(this.formData)
           .then(response => {
             console.log(response);
             if (response.status != 200) {

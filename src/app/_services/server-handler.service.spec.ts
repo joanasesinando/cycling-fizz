@@ -1,13 +1,13 @@
 import { TestBed } from '@angular/core/testing';
 
-import { ServerHandlerService } from './server-handler.service';
+import { AuthServerHandlerService } from './auth-server-handler.service';
 
-describe('ServerHandlerService', () => {
-  let service: ServerHandlerService;
+describe('AuthServerHandlerService', () => {
+  let service: AuthServerHandlerService;
 
   beforeEach(() => {
     TestBed.configureTestingModule({});
-    service = TestBed.inject(ServerHandlerService);
+    service = TestBed.inject(AuthServerHandlerService);
   });
 
   it('should be created', () => {

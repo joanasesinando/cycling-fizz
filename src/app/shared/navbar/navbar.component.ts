@@ -6,6 +6,7 @@ import { TranslateService } from '@ngx-translate/core';
 import {AuthFirebaseService} from "../../_services/auth-firebase.service";
 import {NbMenuService} from '@nebular/theme';
 import {filter, map} from 'rxjs/operators';
+import {AuthServerHandlerService} from "../../_services/auth-server-handler.service";
 
 declare let $: any;
 
@@ -42,7 +43,9 @@ export class NavbarComponent implements OnInit {
     { title: 'Terminar sessão' },
   ];
 
-  constructor(private _router: Router, public translate: TranslateService, public authFirebaseService: AuthFirebaseService,
+  constructor(private _router: Router, public translate: TranslateService,
+              public authServerHandlerService: AuthServerHandlerService,
+              public authFirebaseService: AuthFirebaseService,
               private nbMenuService: NbMenuService) {
     this.router = _router;
     this.onWindowResize();
@@ -108,7 +111,7 @@ export class NavbarComponent implements OnInit {
   }
 
   logoutClicked() {
-    this.authFirebaseService.logout()
+    this.authServerHandlerService.logout()
       .then(res => {
         if (res.status == "success") {
           // success todo toastr

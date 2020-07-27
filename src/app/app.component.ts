@@ -2,7 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {Router} from '@angular/router';
 import * as $ from 'jquery'; //don't delete... believe me
 import * as AOS from 'aos';
-import {ServerHandlerService} from "./_services/server-handler.service";
+import {AuthServerHandlerService} from "./_services/auth-server-handler.service";
 import {AuthFirebaseService} from "./_services/auth-firebase.service";
 
 @Component({
@@ -14,8 +14,9 @@ import {AuthFirebaseService} from "./_services/auth-firebase.service";
 export class AppComponent implements OnInit {
   title = 'cycling-fizz';
 
-  constructor(public _router: Router, private authFirebaseService: AuthFirebaseService){
-    this.authFirebaseService.tryLoginByCookie().then(r => console.log(r));
+  constructor(public _router: Router, private authServerHandlerService: AuthServerHandlerService,){
+    this.authServerHandlerService.tryLoginByCookie()
+      .then(r => console.log(r));
   }
 
   ngOnInit() {

@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import {UserBasicInfo} from "./server-handler.service";
+import {UserBasicInfo} from "./auth-server-handler.service";
 
 @Injectable({
   providedIn: 'root'

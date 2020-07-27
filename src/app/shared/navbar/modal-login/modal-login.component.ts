@@ -7,7 +7,7 @@ import {NgForm} from '@angular/forms';
 import {AuthFirebaseService} from '../../../_services/auth-firebase.service';
 import {NbToastrService} from '@nebular/theme';
 import {Modals} from '../modal-auth-general/modal-auth-general.component';
-import {ServerHandlerService} from "../../../_services/server-handler.service";
+import {AuthServerHandlerService} from "../../../_services/auth-server-handler.service";
 
 
 export interface FormObject {
@@ -42,7 +42,7 @@ export class ModalLoginComponent implements OnInit {
 
   @ViewChild('f', { static: false }) f: NgForm;
 
-  constructor(private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService, private serverHandlerService: ServerHandlerService) {
+  constructor(private authFirebaseService: AuthFirebaseService, private toastrService: NbToastrService, private authServerHandlerService: AuthServerHandlerService) {
     this.formData = ({} as FormObject);
   }
 
@@ -105,11 +105,11 @@ export class ModalLoginComponent implements OnInit {
 
 
   loginSuccessful() {
-    this.serverHandlerService.checkCookie().then(r => console.log({r: r}));
+    this.authServerHandlerService.checkCookie().then(r => console.log({r: r}));
 
-    // if (!this.authFirebaseService.isEmailVerified()) { //todo activate
-    //   this.verifyEmail.emit();
-    // }
+    if (!this.authServerHandlerService.isEmailVerified()) {
+      this.verifyEmail.emit();
+    }
     this.loginSuccessfulToastr();
     this.closeThisModal();
   }

@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 
 import { AngularFireAuth } from '@angular/fire/auth';
 import * as firebase from 'firebase/app';
-import {ServerHandlerService} from "./server-handler.service";
+import {AuthServerHandlerService} from "./auth-server-handler.service";
 
 @Injectable({
   providedIn: 'root'
@@ -11,11 +11,10 @@ export class AuthFirebaseService {
 
   // public currentUser = null;
   // public currentUserIdToken = null;
-  private userLogged: boolean = false;
   public auth = null;
   public db = null;
 
-  constructor(public afAuth: AngularFireAuth, private serverHandlerService: ServerHandlerService) {
+  constructor(public afAuth: AngularFireAuth, private authServerHandlerService: AuthServerHandlerService) {
     let thisObj = this;
     this.auth = firebase.auth();
     this.db = firebase.firestore();
@@ -29,13 +28,10 @@ export class AuthFirebaseService {
 
   }
 
-  isUserLogged() {
-    return this.userLogged;
-  }
-
   setLanguageCode(code) {
     this.auth.languageCode = code;
   }
+
 
   // sendEmailVerification() {
   //   if (!this.isUserLogged()) return;
@@ -54,10 +50,7 @@ export class AuthFirebaseService {
   //   });
   // }
   //
-  // isEmailVerified() {
-  //   if (!this.isUserLogged()) return false;
-  //   return this.currentUser.emailVerified;
-  // }
+
 
   // userChanged(user) {
   //   this.currentUser = user;
@@ -80,19 +73,19 @@ export class AuthFirebaseService {
   //   }
   // }
 
-  logout() {
-    return this.afAuth.auth.signOut().then(() => {
-      return this.serverHandlerService.logoutServer()
-        .then(res => {
-          if (res.status == "success") {
-            this.userLogged = false;
-          }
-          return res;
-        });
-    }).catch(function(error) {
-      console.log(error);
-    });
-  }
+  // logout() {
+  //   return this.afAuth.auth.signOut().then(() => {
+  //     return this.authServerHandlerService.logoutServer()
+  //       .then(res => {
+  //         if (res.status == "success") {
+  //           this.userLogged = false;
+  //         }
+  //         return res;
+  //       });
+  //   }).catch(function(error) {
+  //     console.log(error);
+  //   });
+  // }
 
   doRegister(value){
     return new Promise<any>((resolve, reject) => {
@@ -102,10 +95,10 @@ export class AuthFirebaseService {
         }, err => reject(err))
     }).then(login => {
       return login.user.getIdToken().then(idToken => {
-        return this.serverHandlerService.setSessionTokenFromServer(idToken)
+        return this.authServerHandlerService.setSessionTokenFromServer(idToken)
           .then(res => {
             if (res.status == "success") {
-              this.userLogged = true;
+              this.authServerHandlerService.onSuccessLogin();
             }
             return res;
           });
@@ -113,24 +106,6 @@ export class AuthFirebaseService {
     });
   }
 
-  // doLoginOld(value){
-  //   return new Promise<any>((resolve, reject) => {
-  //     this.afAuth.auth.signInWithEmailAndPassword(value.email, value.password)
-  //       .then(res => {
-  //         resolve(res);
-  //       }, err => reject(err))
-  //   })
-  // }
-
-  tryLoginByCookie() {
-    return this.serverHandlerService.checkCookie()
-      .then(res => {
-        if (res.status == "success") {
-          this.userLogged = true;
-        }
-        return res;
-      });
-  }
 
   doLogin(value) {
     return new Promise<any>((resolve, reject) => {
@@ -138,10 +113,10 @@ export class AuthFirebaseService {
         .then(res => resolve(res), err => reject(err))})
       .then(login => {
         return login.user.getIdToken().then(idToken => {
-          return this.serverHandlerService.setSessionTokenFromServer(idToken)
+          return this.authServerHandlerService.setSessionTokenFromServer(idToken)
             .then(res => {
               if (res.status == "success") {
-                this.userLogged = true;
+                this.authServerHandlerService.onSuccessLogin();
               }
               return res;
             });
