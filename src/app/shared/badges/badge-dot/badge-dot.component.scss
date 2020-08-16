@@ -5,16 +5,23 @@
 @import "../../../../../node_modules/bootstrap/scss/variables";
 @import "../../../../../node_modules/bootstrap/scss/mixins";
 
-
 .badge {
   height: 8px;
   width: 8px;
-  border-radius: 50%;
+  @include border-radius(50%);
   top: -10px;
   left: 4px;
-  @include media-breakpoint-down(md) { left: 0; }
+  @include media-breakpoint-down(md) {
+    left: 0;
+  }
 }
 
-.badge-new { background-color: $cf-pink; }
-.badge-soon { background-color: $cf-yellow; }
-.badge-primary { background: $cf-gradient-orange; }
+.badge-new {
+  background-color: $cf-pink;
+}
+.badge-soon {
+  background-color: $cf-yellow;
+}
+.badge-primary {
+  background: $cf-gradient-orange;
+}

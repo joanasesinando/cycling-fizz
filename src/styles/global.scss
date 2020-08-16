@@ -11,7 +11,7 @@
  *
  * =================================================================== */
 
-@import 'fonts.css';
+@import "fonts.css";
 @import "~hamburgers/_sass/hamburgers/hamburgers";
 
 @import "colors";
@@ -23,93 +23,150 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
-
 /* ===================================================================
  *  Basic styles
  *
  * ------------------------------------------------------------------- */
 
-.font-cpr-medium { font-family: "cooper-medium", sans-serif; }
-.font-qks-light { font-family: "quicksand-light", sans-serif; }
-.font-qks-regular { font-family: "quicksand-regular", sans-serif; }
-.font-qks-medium { font-family: "quicksand-medium", sans-serif; }
-.font-qks-bold { font-family: "quicksand-bold", sans-serif; }
-.font-nycd-regular { font-family: "nycdo-regular", sans-serif; }
+.font-cpr-medium {
+  font-family: "cooper-medium", sans-serif;
+}
+.font-qks-light {
+  font-family: "quicksand-light", sans-serif;
+}
+.font-qks-regular {
+  font-family: "quicksand-regular", sans-serif;
+}
+.font-qks-medium {
+  font-family: "quicksand-medium", sans-serif;
+}
+.font-qks-bold {
+  font-family: "quicksand-bold", sans-serif;
+}
+.font-nycd-regular {
+  font-family: "nycdo-regular", sans-serif;
+}
 
-.text-dark-black { color: $cf-text;}
-.text-dark-header { color: $cf-dark; }
-.text-dark-gray { color: $cf-darkGray; }
-.text-gray { color: $cf-gray; }
-.text-light-gray { color: $cf-lightGray; }
-.text-orange { color: $cf-orange; }
+.text-dark-black {
+  color: $cf-text;
+}
+.text-dark-header {
+  color: $cf-dark;
+}
+.text-dark-gray {
+  color: $cf-darkGray;
+}
+.text-gray {
+  color: $cf-gray;
+}
+.text-light-gray {
+  color: $cf-lightGray;
+}
+.text-orange {
+  color: $cf-orange;
+}
 .text-gradient {
   background: $cf-gradient-orange;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
-.text-red { color: $cf-red; }
-.text-yellow { color: $cf-yellow; }
-.text-green { color: $cf-green; }
-.text-blue { color: $cf-blue; }
-.text-pink { color: $cf-pink; }
+.text-red {
+  color: $cf-red;
+}
+.text-yellow {
+  color: $cf-yellow;
+}
+.text-green {
+  color: $cf-green;
+}
+.text-blue {
+  color: $cf-blue;
+}
+.text-pink {
+  color: $cf-pink;
+}
 
-
-html, body {
+html,
+body {
   scroll-behavior: smooth;
   height: 100%;
 }
 
-button:focus { outline: none; }
+button:focus {
+  outline: none;
+}
 
 .cursor-hover:hover {
   cursor: pointer;
-  opacity: .8;
+  opacity: 0.8;
 }
 
-
-h1, .h1,
-h2, .h2,
-h3, .h3 {
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3 {
   color: $cf-dark;
   font-family: "cooper-medium", sans serif;
 }
 
-h1, .h1 {
+h1,
+.h1 {
   font-size: 2.8rem;
   line-height: 1.4em;
-  @include media-breakpoint-down(md){ font-size: 2.3rem; line-height: initial; }
-  @include media-breakpoint-down(sm){ font-size: 1.7rem; }
+  @include media-breakpoint-down(md) {
+    font-size: 2.3rem;
+    line-height: initial;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 1.7rem;
+  }
 }
 
-h2, .h2 {
+h2,
+.h2 {
   font-size: 2.5rem;
-  @include media-breakpoint-down(md){ font-size: 2rem; line-height: initial; }
-  @include media-breakpoint-down(sm){ font-size: 1.6rem; }
+  @include media-breakpoint-down(md) {
+    font-size: 2rem;
+    line-height: initial;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 1.6rem;
+  }
 }
 
-h3, .h3 {
+h3,
+.h3 {
   font-size: 2rem;
   line-height: 3rem;
-  @include media-breakpoint-down(md){ font-size: 1.7rem; line-height: initial; }
-  @include media-breakpoint-down(sm){ font-size: 1.4rem; }
+  @include media-breakpoint-down(md) {
+    font-size: 1.7rem;
+    line-height: initial;
+  }
+  @include media-breakpoint-down(sm) {
+    font-size: 1.4rem;
+  }
 }
 
-h5, .h5 {
+h5,
+.h5 {
   color: $cf-darkGray;
   font-family: "quicksand-regular", sans-serif;
   font-size: 1.2rem;
   line-height: 1.5em;
-  @include media-breakpoint-down(md){ font-size: 1.1rem; line-height: initial; }
+  @include media-breakpoint-down(md) {
+    font-size: 1.1rem;
+    line-height: initial;
+  }
 }
-
 
 // rule to apply gradient in instagram icon
 footer a:hover #ig svg *,
 #section-cover a:hover #ig svg *,
-.ig svg * { fill: url(#ig-gradient); }
-
-
+.ig svg * {
+  fill: url(#ig-gradient);
+}
 
 /* ===================================================================
  *  Buttons
@@ -119,7 +176,7 @@ footer a:hover #ig svg *,
 $height: 2.5rem;
 $padding: 0 2rem;
 $border-radius: 3rem;
-$gradient: linear-gradient(131deg, #FFd340, #FF923C, #FF923C, #FF923C);
+$gradient: linear-gradient(131deg, #ffd340, #ff923c, #ff923c, #ff923c);
 
 /* -------------------------------------------------------------------
  * btn-primary
@@ -130,15 +187,15 @@ button.btn-primary,
 input[type="submit"].btn-primary,
 input[type="reset"].btn-primary,
 input[type="button"].btn-primary {
-    font-family: quicksand-bold, sans-serif;
-    height: $height;
-    line-height: $height;
-    padding: $padding;
-    border: 0;
-    border-radius: $border-radius;
-    background-image: $gradient;
-    background-size: 300% 100%;
-    @include transition(all 0.3s ease-in-out);  
+  font-family: quicksand-bold, sans-serif;
+  height: $height;
+  line-height: $height;
+  padding: $padding;
+  border: 0;
+  @include border-radius($border-radius);
+  background-image: $gradient;
+  background-size: 300% 100%;
+  @include transition(all 0.3s ease-in-out);
 }
 
 .btn.btn-primary:hover:enabled,
@@ -158,14 +215,13 @@ input[type="button"].btn-primary:focus:enabled {
   }
 }
 
-
 /* -------------------------------------------------------------------
  * btn-outline-primary
 /* ------------------------------------------------------------------- */
 
 .btn.btn-outline-primary,
 button.btn-outline-primary {
-  font-family: 'quicksand-bold', sans-serif;
+  font-family: "quicksand-bold", sans-serif;
   position: relative;
   width: 151px;
   height: 40px;
@@ -188,7 +244,7 @@ button.btn-outline-primary {
   }
 
   span {
-    background: linear-gradient(to right,  #FFd340 -30%,#FF923C 100%);
+    background: linear-gradient(to right, #ffd340 -30%, #ff923c 100%);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   }
@@ -196,17 +252,13 @@ button.btn-outline-primary {
 
 .btn-outline-primary:hover,
 button.btn-outline-primary:hover,
-
 .btn-outline-primary:focus,
 button.btn-outline-primary:focus,
-
 .btn-outline-primary:active,
 button.btn-outline-primary:active,
-
 .btn-outline-primary:not(:disabled):not(.disabled).active,
 .btn-outline-primary:not(:disabled):not(.disabled):active,
 .show > .btn-outline-primary.dropdown-toggle,
-
 .btn-outline-primary:not(:disabled):not(.disabled):active:focus,
 .btn-outline-primary:not(:disabled):not(.disabled).active:focus,
 .show > .btn-outline-primary.dropdown-toggle:focus {
@@ -218,11 +270,10 @@ button.btn-outline-primary:active,
 
 .btn.btn-outline-primary:hover svg rect,
 button.btn-outline-primary:hover svg rect {
-    stroke-width: 2;
-    stroke-dasharray: 96, 543;
-    stroke-dashoffset: 475;
+  stroke-width: 2;
+  stroke-dasharray: 96, 543;
+  stroke-dashoffset: 475;
 }
-
 
 /* -------------------------------------------------------------------
  * button.expansible
@@ -244,16 +295,20 @@ button.expansible {
   height: auto;
 
   .circle {
-    @include transition(all 0.45s cubic-bezier(0.65,0,.076,1));
+    @include transition(all 0.45s cubic-bezier(0.65, 0, 0.076, 1));
     position: relative;
     margin: 0;
     width: 2.3rem;
     height: 2.3rem;
-    background: linear-gradient(131deg, rgba(255,211,64,1) 0%, rgba(255,159,60,1) 47%);
-    border-radius: 1.625rem;
+    background: linear-gradient(
+      131deg,
+      rgba(255, 211, 64, 1) 0%,
+      rgba(255, 159, 60, 1) 47%
+    );
+    @include border-radius(1.625rem);
 
     .icon {
-      @include transition(all 0.45s cubic-bezier(0.65,0,.076,1));
+      @include transition(all 0.45s cubic-bezier(0.65, 0, 0.076, 1));
       position: absolute;
       top: 0;
       bottom: 0;
@@ -261,7 +316,7 @@ button.expansible {
       background: white;
 
       &.arrow {
-        @include transition(all 0.45s cubic-bezier(0.65,0,.076,1));
+        @include transition(all 0.45s cubic-bezier(0.65, 0, 0.076, 1));
         left: 0.325rem;
         width: 1.125rem;
         height: 0.125rem;
@@ -269,7 +324,7 @@ button.expansible {
 
         &::before {
           position: absolute;
-          content: '';
+          content: "";
           top: -0.25rem;
           right: 0.0625rem;
           width: 0.625rem;
@@ -283,7 +338,7 @@ button.expansible {
   }
 
   .button-text {
-    @include transition(all 0.45s cubic-bezier(0.65,0,.076,1));
+    @include transition(all 0.45s cubic-bezier(0.65, 0, 0.076, 1));
     position: absolute;
     top: 0;
     left: 0;
@@ -314,33 +369,31 @@ button.expansible:hover {
 }
 
 button.expansible:focus {
-  outline:none;
+  outline: none;
 }
-
-
 
 /* ===================================================================
  *  Scrollbar
  *
  * ------------------------------------------------------------------- */
 
-$scrollbarColor: #BDBDBD;
+$scrollbarColor: #bdbdbd;
 $scrollbarWidth: 10px;
 
-@include media-breakpoint-up(lg){
+@include media-breakpoint-up(lg) {
   body::-webkit-scrollbar {
     width: $scrollbarWidth;
-    background-color: #F5F5F5;
+    background-color: #f5f5f5;
   }
 
   body::-webkit-scrollbar-track {
-    -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.1);
-    background-color: #F5F5F5;
-    border-radius: $scrollbarWidth;
+    -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+    background-color: #f5f5f5;
+    @include border-radius($scrollbarWidth);
   }
 
   body::-webkit-scrollbar-thumb {
-    border-radius: $scrollbarWidth;
+    @include border-radius($scrollbarWidth);
     background-color: $scrollbarColor;
     //background-image: -webkit-gradient(linear,
     //        40% 0%,
@@ -350,7 +403,7 @@ $scrollbarWidth: 10px;
     //        color-stop(.6,lighten(#ff9f3c, 3)));
 
     &:hover {
-      background-color:darken($scrollbarColor, 10%);
+      background-color: darken($scrollbarColor, 10%);
       //background-image: -webkit-gradient(linear,
       //        40% 0%,
       //        85% 84%,
@@ -365,7 +418,6 @@ $scrollbarWidth: 10px;
   height: 3.5%;
 }
 
-
 /* ===================================================================
  *  Tooltips
  *
@@ -377,52 +429,70 @@ $scrollbarWidth: 10px;
   color: $cf-dark;
   text-align: center;
   background-color: white;
-  @include media-breakpoint-down(md) { display: none; }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
-.tooltip.bs-tooltip-auto[x-placement^=top] .arrow::before, .tooltip.bs-tooltip-top .arrow::before {
+.tooltip.bs-tooltip-auto[x-placement^="top"] .arrow::before,
+.tooltip.bs-tooltip-top .arrow::before {
   margin-left: -3px;
   content: "";
   border-width: 5px 5px 0;
   border-top-color: white;
-  @include media-breakpoint-down(md) { display: none; }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
-.tooltip.bs-tooltip-auto[x-placement^=right] .arrow::before, .tooltip.bs-tooltip-right .arrow::before {
+.tooltip.bs-tooltip-auto[x-placement^="right"] .arrow::before,
+.tooltip.bs-tooltip-right .arrow::before {
   margin-top: -3px;
   content: "";
   border-width: 5px 5px 5px 0;
   border-right-color: white;
-  @include media-breakpoint-down(md) { display: none; }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
-.tooltip.bs-tooltip-auto[x-placement^=bottom] .arrow::before, .tooltip.bs-tooltip-bottom .arrow::before {
+.tooltip.bs-tooltip-auto[x-placement^="bottom"] .arrow::before,
+.tooltip.bs-tooltip-bottom .arrow::before {
   margin-left: -3px;
   content: "";
   border-width: 0 5px 5px;
   border-bottom-color: white;
-  @include media-breakpoint-down(md) { display: none; }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
 
-.tooltip.bs-tooltip-auto[x-placement^=left] .arrow::before, .tooltip.bs-tooltip-left .arrow::before {
+.tooltip.bs-tooltip-auto[x-placement^="left"] .arrow::before,
+.tooltip.bs-tooltip-left .arrow::before {
   right: 0;
   margin-top: -3px;
   content: "";
   border-width: 5px 0 5px 5px;
   border-left-color: white;
-  @include media-breakpoint-down(md) { display: none; }
+  @include media-breakpoint-down(md) {
+    display: none;
+  }
 }
-
-
 
 /* ===================================================================
  *  Slick sliders
  *
  * ------------------------------------------------------------------- */
 
-#section-gallery, #section-blog {
-  .slide:focus { outline: none; }
-  .prev-slide, .next-slide { background-repeat: no-repeat; }
+#section-gallery,
+#section-blog {
+  .slide:focus {
+    outline: none;
+  }
+  .prev-slide,
+  .next-slide {
+    background-repeat: no-repeat;
+  }
 
   .nav-btn {
     width: 2rem;
@@ -433,9 +503,17 @@ $scrollbarWidth: 10px;
 }
 
 #section-gallery {
-  .nav-btn { top: 45% !important; }
-  .prev-slide, .next-slide { opacity: .5; }
-  .prev-slide:hover, .next-slide:hover { opacity: 1; }
+  .nav-btn {
+    top: 45% !important;
+  }
+  .prev-slide,
+  .next-slide {
+    opacity: 0.5;
+  }
+  .prev-slide:hover,
+  .next-slide:hover {
+    opacity: 1;
+  }
 
   .prev-slide {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-left' class='svg-inline--fa fa-chevron-left fa-w-10' role='img' viewBox='0 0 320 512'%3E%3Cpath fill='white' d='M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z'/%3E%3C/svg%3E") !important;
@@ -450,8 +528,12 @@ $scrollbarWidth: 10px;
 }
 
 #section-blog {
-  .slick-track { padding: 1.5rem; }
-  .nav-btn { top: 40% !important; }
+  .slick-track {
+    padding: 1.5rem;
+  }
+  .nav-btn {
+    top: 40% !important;
+  }
 
   .prev-slide {
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' aria-hidden='true' focusable='false' data-prefix='fas' data-icon='chevron-left' class='svg-inline--fa fa-chevron-left fa-w-10' role='img' viewBox='0 0 320 512'%3E%3Cpath fill='silver' d='M34.52 239.03L228.87 44.69c9.37-9.37 24.57-9.37 33.94 0l22.67 22.67c9.36 9.36 9.37 24.52.04 33.9L131.49 256l154.02 154.75c9.34 9.38 9.32 24.54-.04 33.9l-22.67 22.67c-9.37 9.37-24.57 9.37-33.94 0L34.52 272.97c-9.37-9.37-9.37-24.57 0-33.94z'/%3E%3C/svg%3E") !important;
@@ -472,8 +554,6 @@ $scrollbarWidth: 10px;
   }
 }
 
-
-
 /* ===================================================================
  *  MapBox
  *
@@ -481,15 +561,13 @@ $scrollbarWidth: 10px;
 
 @import "https://api.mapbox.com/mapbox-gl-js/v1.7.0/mapbox-gl.css";
 
-a.mapboxgl-ctrl-logo{
+a.mapboxgl-ctrl-logo {
   display: none;
 }
 
 .mapboxgl-ctrl-bottom-right {
   //right: 10px;
 }
-
-
 
 /* ===================================================================
  *  Preloader
@@ -507,20 +585,40 @@ a.mapboxgl-ctrl-logo{
   height: 90px;
 }
 
-#yellow-top { animation: blink-float-right 2.5s ease-in-out infinite; }
-#yellow-top { animation-delay: 600ms; }
+#yellow-top {
+  animation: blink-float-right 2.5s ease-in-out infinite;
+}
+#yellow-top {
+  animation-delay: 600ms;
+}
 
-#yellow-bottom { animation: blink-float-left 2.5s ease-in-out infinite; }
-#yellow-bottom { animation-delay: 100ms; }
+#yellow-bottom {
+  animation: blink-float-left 2.5s ease-in-out infinite;
+}
+#yellow-bottom {
+  animation-delay: 100ms;
+}
 
-#blue-top { animation: float 3s ease-in-out infinite; }
-#blue-top { animation-delay: 800ms; }
+#blue-top {
+  animation: float 3s ease-in-out infinite;
+}
+#blue-top {
+  animation-delay: 800ms;
+}
 
-#blue-bottom { animation: float 3s ease-in-out infinite; }
-#blue-bottom { animation-delay: 200ms; }
+#blue-bottom {
+  animation: float 3s ease-in-out infinite;
+}
+#blue-bottom {
+  animation-delay: 200ms;
+}
 
-#green { animation: float2 3s ease-in-out infinite; }
-#green { animation-delay: 100ms; }
+#green {
+  animation: float2 3s ease-in-out infinite;
+}
+#green {
+  animation-delay: 100ms;
+}
 
 @keyframes float {
   0% {
@@ -548,14 +646,14 @@ a.mapboxgl-ctrl-logo{
 
 @keyframes blink-float-left {
   0% {
-    opacity: .8;
+    opacity: 0.8;
     transform: translateY(0px);
   }
   25% {
-    opacity: .5;
+    opacity: 0.5;
   }
   50% {
-    opacity: .75;
+    opacity: 0.75;
     transform: translateY(-6px);
   }
   100% {
@@ -563,17 +661,16 @@ a.mapboxgl-ctrl-logo{
     transform: translateY(0px);
   }
 }
-@keyframes blink-float-right
-{
+@keyframes blink-float-right {
   0% {
-    opacity: .8;
+    opacity: 0.8;
     transform: translateY(0px);
   }
   25% {
-    opacity: .5;
+    opacity: 0.5;
   }
   50% {
-    opacity: .75;
+    opacity: 0.75;
     transform: translate(2px, -4px);
   }
   100% {
@@ -581,5 +678,3 @@ a.mapboxgl-ctrl-logo{
     transform: translateY(0px);
   }
 }
-
-

@@ -1,9 +1,8 @@
 @import "~styles/colors";
 
-
 .card {
   border: none;
-  border-radius: 1rem;
+  @include border-radius(1rem);
 
   .card-img-top {
     height: 13rem;
@@ -15,12 +14,14 @@
 
     &::after {
       content: attr(date);
-      font-family: 'quicksand-light', sans-serif;
-      font-size: .8rem;
+      font-family: "quicksand-light", sans-serif;
+      font-size: 0.8rem;
       color: $cf-gray;
       text-transform: none;
     }
   }
 
-  .engagement { font-size: 0.8rem; }
+  .engagement {
+    font-size: 0.8rem;
+  }
 }

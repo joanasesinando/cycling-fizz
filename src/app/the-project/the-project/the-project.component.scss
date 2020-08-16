@@ -10,14 +10,20 @@
     padding-top: 10rem;
     padding-bottom: 0;
     font-family: quicksand-regular, sans-serif;
-    @include media-breakpoint-up(lg) { font-size: 1.2rem; }
+    @include media-breakpoint-up(lg) {
+      font-size: 1.2rem;
+    }
     @include media-breakpoint-down(sm) {
       padding-top: 8rem;
-      h3 { font-size: 1.6rem; }
+      h3 {
+        font-size: 1.6rem;
+      }
     }
 
     .text-section {
-      p { line-height: 35px; }
+      p {
+        line-height: 35px;
+      }
 
       .image {
         @include media-breakpoint-up(lg) {
@@ -57,7 +63,8 @@
             width: auto;
           }
 
-          a:hover, a:focus {
+          a:hover,
+          a:focus {
             color: $cf-text;
           }
         }
@@ -67,12 +74,12 @@
         height: 3rem;
         width: 3rem;
         background: $cf-gradient-orange;
-        border-radius: 50%;
+        @include border-radius(50%);
         line-height: 3rem;
         color: white;
         @include transition(all 0.2s ease-in-out);
 
-        @include media-breakpoint-up(lg){
+        @include media-breakpoint-up(lg) {
           &:hover {
             @include transform(translateY(-0.5rem));
           }
@@ -81,6 +88,3 @@
     }
   }
 }
-
-
-

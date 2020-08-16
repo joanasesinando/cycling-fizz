@@ -5,21 +5,26 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
 .card {
   border: none;
-  border-radius: 1rem;
+  @include border-radius(1rem);
   @include transition(all 300ms ease-in-out);
 
-  @include media-breakpoint-up(lg){
-    &:hover { @include transform(translateY(-1rem)) }
+  @include media-breakpoint-up(lg) {
+    &:hover {
+      @include transform(translateY(-1rem));
+    }
   }
 
-  img { height: 2.5rem; }
+  img {
+    height: 2.5rem;
+  }
 
   .card-title {
     font-size: 1.2rem;
-    @include media-breakpoint-down(sm) { font-size: 1rem }
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
   }
 
   .card-body {
@@ -35,7 +40,7 @@ a {
   font-family: quicksand-bold, sans-serif;
   font-size: 1.5rem;
   position: absolute;
-  margin-top: .3rem;
-  letter-spacing: .1rem;
-  color: #40596B;
+  margin-top: 0.3rem;
+  letter-spacing: 0.1rem;
+  color: #40596b;
 }

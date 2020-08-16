@@ -6,7 +6,6 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
 #banner-image {
   height: 70vh;
   background-repeat: no-repeat;
@@ -17,7 +16,9 @@
   &:after {
     content: "";
     height: 6px;
-    @include media-breakpoint-down(sm) { height: 5px; }
+    @include media-breakpoint-down(sm) {
+      height: 5px;
+    }
     background: $cf-gradient-orange;
     box-shadow: $cf-shadow-orange;
     width: 100%;
@@ -40,17 +41,23 @@
     background: $cf-gradient-orange;
     height: 3.85px;
     width: 4.5rem;
-    border-radius: 1rem;
+    @include border-radius(1rem);
     position: relative;
-    bottom: -.3rem;
-    @include media-breakpoint-down(md) { width: 4rem; }
-    @include media-breakpoint-down(sm) { width: 3rem; }
+    bottom: -0.3rem;
+    @include media-breakpoint-down(md) {
+      width: 4rem;
+    }
+    @include media-breakpoint-down(sm) {
+      width: 3rem;
+    }
   }
 
   p {
     font-family: quicksand-light, sans-serif;
     font-size: 1.1rem;
-    @include media-breakpoint-up(lg) { width: 50rem; }
+    @include media-breakpoint-up(lg) {
+      width: 50rem;
+    }
   }
 }
 

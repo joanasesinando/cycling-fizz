@@ -6,14 +6,13 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
 .go-top {
   position: fixed;
   bottom: 5%;
   right: 1.5%;
   height: 3rem;
   width: 3rem;
-  border-radius: 50%;
+  @include border-radius(50%);
   background: $cf-gradient-orange;
   box-shadow: $cf-shadow-orange;
   transition: all 200ms ease-in-out;
@@ -26,10 +25,13 @@
     top: 28%;
   }
 
-  &.make-visible { opacity: 1; }
+  &.make-visible {
+    opacity: 1;
+  }
 
-  &:hover, &:focus {
+  &:hover,
+  &:focus {
     cursor: pointer;
-    transform: translateY(-.6rem);
+    transform: translateY(-0.6rem);
   }
 }

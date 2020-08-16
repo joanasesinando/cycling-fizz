@@ -5,7 +5,6 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
 #section-coming-soon {
   height: 100vh;
   width: 100vw;
@@ -24,7 +23,7 @@
     }
 
     background-color: white;
-    border-radius: 1rem;
+    @include border-radius(1rem);
 
     // center vertically & horizontally
     position: absolute;
@@ -50,11 +49,11 @@
 
 .paint {
   position: absolute;
-  top: -.1rem;
-  right: -.6rem;
+  top: -0.1rem;
+  right: -0.6rem;
   width: 50vw;
   @include media-breakpoint-down(md) {
-    right: -.5rem;
+    right: -0.5rem;
     width: 70vw;
   }
   z-index: 15;
@@ -70,17 +69,25 @@
   height: 3rem;
   width: 3rem;
   background: $cf-lightGray;
-  border-radius: 100%;
+  @include border-radius(100%);
   line-height: 3rem;
   color: $cf-darkGray;
   @include transition(all 0.2s ease-in-out);
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     &:hover {
-      #fb { color: $facebook; }
-      #tt { color: $twitter; }
-      #ig { color: $instagram; }
-      #yt { color: $youtube; }
+      #fb {
+        color: $facebook;
+      }
+      #tt {
+        color: $twitter;
+      }
+      #ig {
+        color: $instagram;
+      }
+      #yt {
+        color: $youtube;
+      }
       @include transform(translateY(-0.5rem));
     }
   }
@@ -88,8 +95,10 @@
 
 .email {
   font-family: quicksand-regular, sans-serif;
-  font-size: .9rem;
-  letter-spacing: .1rem;
+  font-size: 0.9rem;
+  letter-spacing: 0.1rem;
 
-  a:hover { color: $cf-orange; }
+  a:hover {
+    color: $cf-orange;
+  }
 }

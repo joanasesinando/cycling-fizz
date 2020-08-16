@@ -19,7 +19,7 @@ form {
     font-family: quicksand-regular, sans-serif, sans-serif;
     width: 15rem;
     padding: 1rem 2.5rem 1rem 2.5rem;
-    border-radius: 3rem;
+    @include border-radius(3rem);
     border: 0 none;
     @include transition(all 300ms ease-in-out);
 
@@ -40,4 +40,3 @@ form {
     width: 20rem;
   }
 }
-

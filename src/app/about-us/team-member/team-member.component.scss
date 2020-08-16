@@ -10,7 +10,7 @@
   height: 12rem;
   background: url("../../../assets/images/demo/avatars/avatar11.jpg") no-repeat;
   background-size: cover;
-  border-radius: 50%;
+  @include border-radius(50%);
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
   transition: all 300ms ease-in-out;
 
@@ -25,7 +25,7 @@
 }
 .job {
   font-family: quicksand-bold, sans-serif;
-  font-size: .9rem;
+  font-size: 0.9rem;
 }
 .text {
   font-family: quicksand-regular, sans-serif;
@@ -37,12 +37,12 @@
   height: 2.2rem;
   width: 2.2rem;
   background: $cf-gradient-orange;
-  border-radius: 50%;
+  @include border-radius(50%);
   line-height: 2.2rem;
   color: white;
   @include transition(all 0.2s ease-in-out);
 
-  @include media-breakpoint-up(lg){
+  @include media-breakpoint-up(lg) {
     &:hover {
       @include transform(translateY(-0.3rem));
     }

@@ -5,12 +5,11 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
 #credits-accordion {
   .card {
     background-color: $cf-lightGray;
     border: none;
-    border-radius: 8px;
+    @include border-radius(8px);
 
     .card-header {
       background-color: transparent;
@@ -40,7 +39,7 @@
         }
         img.circle {
           width: 3rem;
-          border-radius: 50%;
+          @include border-radius(50%);
         }
       }
     }

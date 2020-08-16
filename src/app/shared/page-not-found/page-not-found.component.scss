@@ -23,7 +23,7 @@
     }
 
     background-color: white;
-    border-radius: 1rem;
+    @include border-radius(1rem);
 
     // center vertically & horizontally
     position: absolute;
@@ -33,25 +33,39 @@
 
     .contents {
       width: 40%;
-      @include media-breakpoint-down(lg) { width: 40%; }
-      @include media-breakpoint-down(sm) { width: 90%; }
+      @include media-breakpoint-down(lg) {
+        width: 40%;
+      }
+      @include media-breakpoint-down(sm) {
+        width: 90%;
+      }
     }
   }
 
   h1 {
     font-size: 10rem;
-    @include media-breakpoint-down(md) { font-size: 8rem; }
-    @include media-breakpoint-down(sm) { font-size: 6rem; }
+    @include media-breakpoint-down(md) {
+      font-size: 8rem;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 6rem;
+    }
   }
 
   h4 {
     font-size: 1.4rem;
-    @include media-breakpoint-down(md) { font-size: 1.3rem; }
-    @include media-breakpoint-down(sm) { font-size: 1.1rem; }
+    @include media-breakpoint-down(md) {
+      font-size: 1.3rem;
+    }
+    @include media-breakpoint-down(sm) {
+      font-size: 1.1rem;
+    }
   }
 
   img {
     width: 38vw;
-    @include media-breakpoint-down(sm) { width: 60vw; }
+    @include media-breakpoint-down(sm) {
+      width: 60vw;
+    }
   }
 }

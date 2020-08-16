@@ -5,7 +5,6 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
 .complete-registration {
   @include media-breakpoint-down(lg) {
     height: 48rem;
@@ -14,7 +13,7 @@
   .complete-registration-content {
     @include media-breakpoint-down(lg) {
       background-color: white;
-      border-radius: 1rem;
+      @include border-radius(1rem);
     }
   }
 
@@ -22,14 +21,13 @@
     text-align: center;
   }
 
-
   .form-label-group {
     margin-bottom: 1rem;
   }
 
   .form-control {
     padding: 1.5rem 1.5rem;
-    border-radius: 3rem;
+    @include border-radius(3rem);
 
     &:focus {
       box-shadow: 0 0 0 0.2rem rgba(89, 59, 254, 0.25);
@@ -37,7 +35,9 @@
     }
   }
 
-  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  .custom-checkbox
+    .custom-control-input:checked
+    ~ .custom-control-label::before {
     border-color: #706dfe;
     background-color: #706dfe;
   }
@@ -46,7 +46,9 @@
     a {
       color: $cf-text;
 
-      @include media-breakpoint-down(lg) { text-decoration: underline; }
+      @include media-breakpoint-down(lg) {
+        text-decoration: underline;
+      }
     }
   }
 

@@ -5,12 +5,11 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
 #newsletterForm {
   font-family: quicksand-regular, sans-serif;
   .form-control {
     padding: 1.5rem 9rem 1.5rem 1.5rem;
-    border-radius: 3rem;
+    @include border-radius(3rem);
     border-width: 0;
     border-color: transparent;
 
@@ -37,14 +36,14 @@
   }
 
   #subEmailInput {
-    @include  media-breakpoint-down(sm) {
+    @include media-breakpoint-down(sm) {
       font-size: 0.9rem;
     }
   }
 }
 
 // removes X
-.form-control.is-invalid, .was-validated .form-control:invalid { background-image: none; }
-
-
-
+.form-control.is-invalid,
+.was-validated .form-control:invalid {
+  background-image: none;
+}

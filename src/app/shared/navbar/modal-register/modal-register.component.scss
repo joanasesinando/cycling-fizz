@@ -5,7 +5,6 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
 .register {
   @include media-breakpoint-down(lg) {
     height: 48rem;
@@ -14,7 +13,7 @@
   .register-content {
     @include media-breakpoint-down(lg) {
       background-color: white;
-      border-radius: 1rem;
+      @include border-radius(1rem);
     }
   }
 
@@ -26,7 +25,7 @@
     text-align: center;
     height: 2.5rem;
     width: 2.5rem;
-    border-radius: 50%;
+    @include border-radius(50%);
     line-height: 2.5rem;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.25);
     @include transition(all 0.2s ease-in-out);
@@ -37,12 +36,20 @@
       color: white;
     }
 
-    &#fb { background: $facebook; }
-    &#gg { background: $google; }
-    &#tt { background: $twitter; }
+    &#fb {
+      background: $facebook;
+    }
+    &#gg {
+      background: $google;
+    }
+    &#tt {
+      background: $twitter;
+    }
 
-    @include media-breakpoint-up(lg){
-      &:hover { @include transform(translateY(-0.5rem)); }
+    @include media-breakpoint-up(lg) {
+      &:hover {
+        @include transform(translateY(-0.5rem));
+      }
     }
   }
 
@@ -52,7 +59,7 @@
 
   .form-control {
     padding: 1.5rem 1.5rem;
-    border-radius: 3rem;
+    @include border-radius(3rem);
 
     &:focus {
       box-shadow: 0 0 0 0.2rem rgba(89, 59, 254, 0.25);
@@ -60,7 +67,9 @@
     }
   }
 
-  .custom-checkbox .custom-control-input:checked~.custom-control-label::before {
+  .custom-checkbox
+    .custom-control-input:checked
+    ~ .custom-control-label::before {
     border-color: #706dfe;
     background-color: #706dfe;
   }
@@ -69,7 +78,9 @@
     a {
       color: $cf-text;
 
-      @include media-breakpoint-down(lg) { text-decoration: underline; }
+      @include media-breakpoint-down(lg) {
+        text-decoration: underline;
+      }
     }
   }
 
@@ -88,7 +99,7 @@
     }
 
     a {
-      font-family: 'quicksand-medium', sans-serif;
+      font-family: "quicksand-medium", sans-serif;
       color: $cf-orange;
       text-decoration: underline;
       cursor: pointer;

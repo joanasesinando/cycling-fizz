@@ -44,7 +44,7 @@ footer {
     height: 3rem;
     width: 3rem;
     background: darken($cf-lightGray, 4);
-    border-radius: 100%;
+    @include border-radius(100%);
     line-height: 3rem;
     @include transition(all 0.2s ease-in-out);
 

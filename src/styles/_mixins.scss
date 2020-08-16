@@ -2,7 +2,6 @@
   -moz-transition: $property;
   -o-transition: $property;
   -webkit-transition: $property;
-  -ms-transition: $property;
   transition: $property;
 }
 
@@ -12,6 +11,36 @@
   -webkit-transform: $property;
   -ms-transform: $property;
   transform: $property;
+}
+
+@mixin border-radius($property) {
+  -moz-border-radius: $property;
+  -webkit-border-radius: $property;
+  border-radius: $property;
+}
+
+@mixin border-top-right-radius($property) {
+  -moz-border-radius-topright: $property;
+  -webkit-border-top-right-radius: $property;
+  border-top-right-radius: $property;
+}
+
+@mixin border-top-left-radius($property) {
+  -moz-border-radius-topleft: $property;
+  -webkit-border-top-left-radius: $property;
+  border-top-left-radius: $property;
+}
+
+@mixin border-bottom-right-radius($property) {
+  -moz-border-radius-bottomright: $property;
+  -webkit-border-bottom-right-radius: $property;
+  border-bottom-right-radius: $property;
+}
+
+@mixin border-bottom-left-radius($property) {
+  -moz-border-radius-bottomleft: $property;
+  -webkit-border-bottom-left-radius: $property;
+  border-bottom-left-radius: $property;
 }
 
 @mixin jumping-animation($animation-property, $transition-property) {

@@ -1,7 +1,7 @@
 @import "colors";
 @import "shadows";
-@import 'nebular-themes';
-@import '~@nebular/theme/styles/globals';
+@import "nebular-themes";
+@import "~@nebular/theme/styles/globals";
 
 @include nb-install() {
   @include nb-toggle-theme;
@@ -21,8 +21,7 @@
   @include nb-menu-theme;
   @include nb-context-menu-theme;
   @include nb-accordion-theme;
-};
-
+}
 
 /* ===================================================================
  *  switch
@@ -34,23 +33,33 @@
   display: block;
 }
 
-.nb-theme-default nb-toggle.text-white .text { color: white; }
-.nb-theme-default nb-toggle.text-dark .text { color: $cf-dark; }
-
-.nb-theme-default nb-toggle.status-control {
-  .toggle-switcher nb-icon { color: $cf-orange; }
-  .toggle.checked { background-color: $cf-orange; }
+.nb-theme-default nb-toggle.text-white .text {
+  color: white;
+}
+.nb-theme-default nb-toggle.text-dark .text {
+  color: $cf-dark;
 }
 
-.nb-theme-default nb-toggle.quick-filters .toggle-label { margin-bottom: 0; }
+.nb-theme-default nb-toggle.status-control {
+  .toggle-switcher nb-icon {
+    color: $cf-orange;
+  }
+  .toggle.checked {
+    background-color: $cf-orange;
+  }
+}
+
+.nb-theme-default nb-toggle.quick-filters .toggle-label {
+  margin-bottom: 0;
+}
 
 .nb-theme-default nb-toggle.filter-switch .toggle-label {
   justify-content: space-between;
   width: 16rem;
-  @include media-breakpoint-down(sm) { width: 14.5rem; }
+  @include media-breakpoint-down(sm) {
+    width: 14.5rem;
+  }
 }
-
-
 
 /* ===================================================================
  *  checkbox
@@ -62,18 +71,28 @@
   display: block;
 }
 
-.nb-theme-default nb-checkbox.text-white .text { color: white; }
-.nb-theme-default nb-checkbox.text-dark .text { color: $cf-dark; }
+.nb-theme-default nb-checkbox.text-white .text {
+  color: white;
+}
+.nb-theme-default nb-checkbox.text-dark .text {
+  color: $cf-dark;
+}
 
-.nb-theme-default nb-checkbox.filter-group .text { font-weight: 500; }
+.nb-theme-default nb-checkbox.filter-group .text {
+  font-weight: 500;
+}
 
-.nb-theme-default nb-checkbox.map-cards-checkbox .native-input:disabled:indeterminate + .custom-checkbox,
-.nb-theme-default nb-checkbox.map-cards-checkbox .native-input:disabled:checked + .custom-checkbox {
+.nb-theme-default
+  nb-checkbox.map-cards-checkbox
+  .native-input:disabled:indeterminate
+  + .custom-checkbox,
+.nb-theme-default
+  nb-checkbox.map-cards-checkbox
+  .native-input:disabled:checked
+  + .custom-checkbox {
   background: $cf-gradient-orange;
   border-color: transparent;
 }
-
-
 
 /* ===================================================================
  *  user
@@ -81,7 +100,9 @@
  * ------------------------------------------------------------------- */
 
 .nb-theme-default nb-user {
-  .user-container { cursor: pointer; }
+  .user-container {
+    cursor: pointer;
+  }
 }
 
 .nb-theme-default nb-user.gradient {
@@ -96,28 +117,36 @@
       top: 50%;
       left: 50%;
       transform: translate(-50%, -50%);
-      border-radius: 50%;
+      @include border-radius(50%);
       z-index: -1;
     }
   }
 }
 
-.nb-theme-default nb-user.text-white .user-name { color: white; }
-.nb-theme-default nb-user.text-dark .user-name { color: $cf-dark; }
-
-
+.nb-theme-default nb-user.text-white .user-name {
+  color: white;
+}
+.nb-theme-default nb-user.text-dark .user-name {
+  color: $cf-dark;
+}
 
 /* ===================================================================
  *  chat
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-chat-form { padding: 1rem 0; }
+.nb-theme-default nb-chat-form {
+  padding: 1rem 0;
+}
 
 .nb-theme-default nb-chat.map-comments {
   box-shadow: none;
-  .header { display: none; }
-  .messages { padding: 1rem 0; }
+  .header {
+    display: none;
+  }
+  .messages {
+    padding: 1rem 0;
+  }
 }
 
 .nb-theme-default nb-chat-message.map-comments {
@@ -134,21 +163,21 @@
 
       time {
         font-family: quicksand-light, sans-serif;
-        font-size: .9rem;
+        font-size: 0.9rem;
         color: $cf-gray;
         margin-left: 0.2rem;
       }
     }
   }
-  &.not-reply .message { margin-right: 0; }
+  &.not-reply .message {
+    margin-right: 0;
+  }
 }
 
 .nb-theme-default [nbButton].appearance-filled.status-primary {
   background: $cf-gradient-orange;
   border-color: #ffc46b;
 }
-
-
 
 /* ===================================================================
  *  popover
@@ -158,7 +187,7 @@
 .nb-theme-default nb-popover.nb-overlay-left,
 .nb-theme-default nb-popover.nb-overlay-right {
   color: $cf-text;
-  opacity: .9;
+  opacity: 0.9;
 
   .primitive-overlay {
     font-family: quicksand-regular, sans-serif;
@@ -166,26 +195,33 @@
   }
 }
 
-
-
 /* ===================================================================
  *  select
  *
  * ------------------------------------------------------------------- */
 
 .nb-theme-default nb-select.size-medium .select-button,
-.nb-theme-default .size-medium nb-option { font-size: initial; }
+.nb-theme-default .size-medium nb-option {
+  font-size: initial;
+}
 
 .nb-theme-default nb-option.success.selected,
-.nb-theme-default nb-option.success:hover { color: #00d68f; }
+.nb-theme-default nb-option.success:hover {
+  color: #00d68f;
+}
 
-.nb-theme-default nb-option.success.selected { background-color: white; }
-.nb-theme-default nb-option-group, .nb-theme-default nb-option.success { color: $cf-dark; }
+.nb-theme-default nb-option.success.selected {
+  background-color: white;
+}
+.nb-theme-default nb-option-group,
+.nb-theme-default nb-option.success {
+  color: $cf-dark;
+}
 
 // when select on, it would move left
-.cdk-global-scrollblock { overflow-y: hidden; }
-
-
+.cdk-global-scrollblock {
+  overflow-y: hidden;
+}
 
 /* ===================================================================
  *  card
@@ -200,24 +236,33 @@
   font-size: 1rem;
 }
 
-.nb-theme-default nb-card.status-primary nb-card-header { background: $cf-gradient-orange; }
-.nb-theme-default nb-card.status-success nb-card-header { background-color: $cf-green; }
-.nb-theme-default nb-card.status-warning nb-card-header { background-color: $cf-yellow; }
-.nb-theme-default nb-card.status-danger nb-card-header { background-color: $cf-pink; }
-.nb-theme-default nb-card.status-info nb-card-header { background-color: $cf-blue; }
-
+.nb-theme-default nb-card.status-primary nb-card-header {
+  background: $cf-gradient-orange;
+}
+.nb-theme-default nb-card.status-success nb-card-header {
+  background-color: $cf-green;
+}
+.nb-theme-default nb-card.status-warning nb-card-header {
+  background-color: $cf-yellow;
+}
+.nb-theme-default nb-card.status-danger nb-card-header {
+  background-color: $cf-pink;
+}
+.nb-theme-default nb-card.status-info nb-card-header {
+  background-color: $cf-blue;
+}
 
 .nb-theme-default nb-card.card-filters {
   border: none;
-  border-radius: 0;
+  @include border-radius(0);
 
   nb-card-header {
     background-color: $cf-lightGray;
     color: $cf-darkGray;
     font-family: quicksand-bold, sans-serif;
     font-size: 1.1rem;
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
+    @include border-top-right-radius(0);
+    @include border-top-left-radius(0);
   }
 }
 
@@ -225,27 +270,33 @@
   $border-radius: 1.5rem;
 
   border: none;
-  border-radius: $border-radius;
+  @include border-radius($border-radius);
   height: 95vh;
 
   nb-card-header.map-element-header {
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+    @include border-top-left-radius($border-radius);
+    @include border-top-right-radius($border-radius);
     font-size: 1.1rem;
-    @include media-breakpoint-down(sm) { font-size: 1rem; }
+    @include media-breakpoint-down(sm) {
+      font-size: 1rem;
+    }
 
-    nb-icon:not(.star) { font-size: 1.5rem; }
-    nb-icon.star { font-size: .9rem; }
+    nb-icon:not(.star) {
+      font-size: 1.5rem;
+    }
+    nb-icon.star {
+      font-size: 0.9rem;
+    }
   }
 }
 
 .nb-theme-default nb-card.inside-card {
-  $border-radius: .6rem;
-  border-radius: $border-radius;
+  $border-radius: 0.6rem;
+  @include border-radius($border-radius);
 
   nb-card-header {
-    border-top-left-radius: $border-radius;
-    border-top-right-radius: $border-radius;
+    @include border-top-left-radius($border-radius);
+    @include border-top-right-radius($border-radius);
     background: $cf-lightGray;
     color: $cf-dark;
   }
@@ -255,14 +306,20 @@
     font-size: 1.1rem;
   }
 
-  nb-icon.help { color: #8f9bb3; }
-  nb-icon.star { color: $cf-yellow; }
-  nb-icon.star.not-filled { color: #DDDDDD; }
+  nb-icon.help {
+    color: #8f9bb3;
+  }
+  nb-icon.star {
+    color: $cf-yellow;
+  }
+  nb-icon.star.not-filled {
+    color: #dddddd;
+  }
 
-  nb-icon { font-size: 1.5rem; }
+  nb-icon {
+    font-size: 1.5rem;
+  }
 }
-
-
 
 /* ===================================================================
  *  sidebar
@@ -272,43 +329,47 @@
 $sidebar-width: 300px;
 $sidebar-width-mobile: 280px;
 
-
-
 .nb-theme-default nb-sidebar.expanded.map-filters {
   width: $sidebar-width;
-  @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
+  @include media-breakpoint-down(sm) {
+    width: $sidebar-width-mobile;
+  }
   z-index: 5;
 
   .main-container {
     height: 100%;
     width: $sidebar-width;
-    @include media-breakpoint-down(sm) { width: $sidebar-width-mobile; }
+    @include media-breakpoint-down(sm) {
+      width: $sidebar-width-mobile;
+    }
   }
 
-  .scrollable { padding: 0; }
+  .scrollable {
+    padding: 0;
+  }
 }
-
-
 
 /* ===================================================================
  *  icon
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default nb-icon.close-btn { font-size: 1.5rem; }
+.nb-theme-default nb-icon.close-btn {
+  font-size: 1.5rem;
+}
 
-.nb-theme-default nb-icon.nav { font-size: 1.8rem; }
-
-
+.nb-theme-default nb-icon.nav {
+  font-size: 1.8rem;
+}
 
 /* ===================================================================
  *  overlays
  *
  * ------------------------------------------------------------------- */
 
-.nb-theme-default .cdk-overlay-container { z-index: 1050; }
-
-
+.nb-theme-default .cdk-overlay-container {
+  z-index: 1050;
+}
 
 /* ===================================================================
  *  accordion
@@ -321,8 +382,8 @@ $sidebar-width-mobile: 280px;
   nb-accordion-item {
     background-color: $cf-lightGray;
     border: none;
-    border-radius: .25rem;
-    margin-bottom: .5rem;
+    @include border-radius(0.25rem);
+    margin-bottom: 0.5rem;
   }
 
   //nb-accordion-item-header { border: none; }
