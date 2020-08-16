@@ -5,55 +5,71 @@
 @import "~bootstrap/scss/variables";
 @import "~bootstrap/scss/mixins";
 
-
 footer {
-    overflow-x: hidden;
-    background: $cf-lightGray;
+  overflow-x: hidden;
+  background: $cf-lightGray;
 
-    section { width: 100vw; }
+  section {
+    width: 100vw;
+  }
 
-    .logo { width: 11rem; }
+  .logo {
+    width: 11rem;
+  }
 
-    p {
-        margin-top: 1.5rem;
-        line-height: 1.9rem;
+  p {
+    margin-top: 1.5rem;
+    line-height: 1.9rem;
+  }
+
+  .sub-heading-icon {
+    display: flex;
+    align-items: center;
+
+    svg {
+      width: 1.3rem;
+      height: 1.3rem;
     }
+  }
 
-    .sub-heading-icon {
-        display: inline-flex;
+  .contact a:hover,
+  .contact a:focus,
+  .credits a:hover,
+  .credits a:focus {
+    color: $cf-darkGray;
+  }
 
-        svg {
-            width: 1.3rem;
-            height: 1.3rem;
+  .social a {
+    text-align: center;
+    height: 3rem;
+    width: 3rem;
+    background: darken($cf-lightGray, 4);
+    border-radius: 100%;
+    line-height: 3rem;
+    @include transition(all 0.2s ease-in-out);
+
+    @include media-breakpoint-up(lg) {
+      &:hover {
+        #fb {
+          color: $facebook;
         }
-    }
-
-    .contact a:hover, .contact a:focus,
-    .credits a:hover, .credits a:focus { color: $cf-darkGray; }
-
-    .social a {
-        text-align: center;
-        height: 3rem;
-        width: 3rem;
-        background: darken($cf-lightGray, 4);
-        border-radius: 100%;
-        line-height: 3rem;
-        @include transition(all 0.2s ease-in-out);
-
-        @include media-breakpoint-up(lg){
-            &:hover {
-                #fb { color: $facebook; }
-                #tt { color: $twitter; }
-                #yt { color: $youtube; }
-                @include transform(translateY(-0.5rem));
-            }
+        #tt {
+          color: $twitter;
         }
+        #yt {
+          color: $youtube;
+        }
+        @include transform(translateY(-0.5rem));
+      }
     }
+  }
 }
 
-
-@include  media-breakpoint-down(lg) {
-    .row p {
-        text-align: center;
-    }
+@include media-breakpoint-down(lg) {
+  .row p {
+    text-align: center;
+  }
+  .sub-heading-icon {
+    justify-content: center;
+  }
 }
