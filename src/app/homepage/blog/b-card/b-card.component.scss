@@ -1,4 +1,5 @@
 @import "~styles/colors";
+@import "~styles/mixins";
 
 .card {
   border: none;
@@ -6,7 +7,7 @@
 
   .card-img-top {
     height: 13rem;
-    //object-fit: cover; //FIXME make imgs fit
+    object-fit: cover;
   }
 
   .card-subtitle {
