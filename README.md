@@ -6,7 +6,7 @@
 
 <p align="center">
   <a href="https://cyclingfizz.pt/">
-    <img src="https://img.shields.io/website?down_message=offline&style=flat-square&up_color=green&up_message=online&url=https%3A%2F%2Fcyclingfizz.pt" alt="Website">
+    <img src="https://img.shields.io/website?down_message=offline&style=flat-square&up_color=green&up_message=online&url=https%3A%2F%2Fcycling-fizz-pt.web.app" alt="Website">
   </a>
 </p>
 
