@@ -4,6 +4,8 @@ import mapboxgl from 'mapbox-gl/dist/mapbox-gl.js';
 import {MapServerHandlerService} from "../../_services/map-server-handler.service";
 import {BikelaneInfo} from "../map.interfaces";
 
+import * as PRIVATE_KEYS from '../../../../PRIVATE_KEYS.json';
+
 @Component({
   selector: 'app-mapbox',
   templateUrl: './mapbox.component.html',
@@ -27,7 +29,7 @@ export class MapboxComponent implements OnInit, AfterViewInit {
 
 
   ngAfterViewInit() {
-    mapboxgl.accessToken = 'pk.eyJ1IjoiYmVycmUiLCJhIjoiY2s2YmYzNmxlMGhiZjNubXZ2YzJtY3kxZyJ9.mKwbVWXuigynJ_m2ePSRFA';
+    mapboxgl.accessToken = PRIVATE_KEYS.mapbox;
     this.map = new mapboxgl.Map({
       container: 'map',
       style: 'mapbox://styles/mapbox/streets-v11',
